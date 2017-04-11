@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: U.S. Web Design Standards + Jekyll
 description: > # this means to ignore newlines until "baseurl:"
-  A boilerplate site for building prototypes and static sites with 
+  A boilerplate site for building prototypes and static sites with
   the U.S. Web Design Standards. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
@@ -29,6 +29,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-babel
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -46,3 +47,5 @@ exclude:
   - /css
   - /screenshots
   - /sketch-files
+
+babel_js_extensions: 'es6, babel, jsx' # Do not process .js files
