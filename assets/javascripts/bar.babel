@@ -1,60 +1,22 @@
 ---
 ---
 
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-);
-
-class Reservation extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isGoing: false,
-      numberOfGuests: 2
-    };
-
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
-
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value
-    });
-  }
-
-  render() {
-    return (
-      <form>
-        <input
-          id="d"
-          name="isGoing"
-          type="checkbox"
-          checked={this.state.isGoing}
-          onChange={this.handleInputChange} />
-        <label htmlFor="d">
-          Is going:
-
-        </label>
-        <br />
-        <label>
-          Number of guests:
-          <input
-            name="numberOfGuests"
-            type="number"
-            value={this.state.numberOfGuests}
-            onChange={this.handleInputChange} />
-        </label>
-      </form>
-    );
-  }
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
 }
 
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+
 ReactDOM.render(
-  <Reservation />,
-  document.getElementById('form')
+  element,
+  document.getElementById('root')
 );
