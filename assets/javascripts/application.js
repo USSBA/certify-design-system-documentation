@@ -7,4 +7,5 @@
  -{% include_relative vendor/uswds.min.js %}
 
  // Add your JS sripts here
-  -{% include_relative foo.js %}
+  -{% include_relative components/prep-storage.js %}
+  -{% include_relative components/session-storage.js %}
