@@ -29,7 +29,6 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
-  - jekyll-babel
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -47,5 +46,3 @@ exclude:
   - /css
   - /screenshots
   - /sketch-files
-
-babel_js_extensions: 'es6, babel, jsx' # Do not process .js files

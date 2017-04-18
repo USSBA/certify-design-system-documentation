@@ -4,7 +4,7 @@ layout: application
 
 <div class="usa-grid">
   <div class="usa-grid-full">
-    <h1 id="foo">Hi, print <span data-print="fn"></span> <span data-print="ln"></span></h1>
+    <h1 id="foo">Hi, <span data-print="fn"></span> <span data-print="ln"></span></h1>
     <form action="#">
       <ul>
         <li>
@@ -22,7 +22,6 @@ layout: application
 
 <script>
   $(document).ready(function() {
-
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
