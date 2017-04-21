@@ -13,6 +13,17 @@ $(document).ready(function() {
     }
   });
 
+  // Preload Data from a JSON file
+  preloadData = function(src) {
+    $.getJSON( src, function( data ) {
+      var items = [];
+      $.each( data, function( key, val ) {
+        sessionStorage.setItem(key, val);
+      });
+    });
+    getData();
+  }
+
   // Can get previously stored data to run events
   getData = function() {
     for (i = 0; i < sessionStorage.length; i++) {
@@ -48,7 +59,12 @@ $(document).ready(function() {
     $("input[type='checkbox']:checked").each(function(){
         var value = "yes";
         var key = $(this).attr('id');
+        var set = $(this).attr('name');
         sessionStorage.setItem(key, value);
+        var selections = $("input[type='checkbox']:checked").map(function(){
+          return $(this).attr('value');
+        }).get();
+        sessionStorage.setItem(set, selections);
     });
   }
 
@@ -68,10 +84,24 @@ $(document).ready(function() {
 
       var element_type = $(this).prop('nodeName').toLowerCase();
 
-      if ($(element_type).is('input[type="tel"], input[type="number"], input[type="text"], input[type="email"], input[type="password"], select')) {
-        $(this).attr('data-print', placeholder_key).val(printed_text);
+      if ($(element_type).is('input')) {
+        if ($(this).attr("type") == "radio") {
+          if ($(this).attr("value") == printed_text) {
+            $(this).prop('checked', true);
+          }
+        }
+        if ($(this).attr("type") == "checkbox") {
+          if ( printed_text == "yes") {
+            $(this).prop('checked', true);
+          }
+        }
+        else {
+          $(this).attr('data-print', placeholder_key).val(printed_text);
+        }
       }
-
+      else if ($(element_type).is('select')) {
+        $(this).find('option[value='+ printed_text +']').prop('selected', true);
+      }
       else {
         $(this).attr('data-print', placeholder_key).text(printed_text);
       }

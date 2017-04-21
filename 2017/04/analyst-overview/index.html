@@ -1,0 +1,81 @@
+---
+layout: analyst-left-nav
+---
+
+
+
+<div class="usa-width-one-whole">
+  <div class="usa-width-two-thirds">
+    <h1>Overview</h1>
+    <h3>Screening Review</h3>
+    <div class="usa-width-one-whole">
+      <div class="usa-width-one-half">
+        <p>
+          <strong>Start Date</strong><br>
+          January 10, 2017
+        </p>
+        <p>
+          <strong>Due Date</strong><br>
+          February 10, 2017
+        </p>
+      </div>
+      <div class="usa-width-one-half">
+        <p>
+          <strong>Current Reviewer</strong><br>
+          Frank Apple
+        </p>
+        <p>
+          <strong>Primary Reviewer</strong><br>
+          Jane Doe
+        </p>
+      </div>
+    </div>
+    <br>
+    <h3>Activity Log <smal><a href="#">View All</a></small></h3>
+      <h4>Today</h4>
+      <ul class="usa-unstyled-list">
+        <li>10:45am  Jane Doe change the status to In Progress</li>
+        <li>7:45am  Karen Smith changed the review status to Assigned</li>
+      </ul>
+      <h4>Tues</h4>
+      <ul class="usa-unstyled-list">
+        <li>10:45am  Karen Smith changed the start date to January 10, 2017</li>
+        <li>7:45am  Karen Smith changed the due date to February 10, 2017</li>
+      </ul>
+  </div>
+  <div class="usa-width-one-third">
+    <h3>Case Actions</h3>
+    <ul class="usa-unstyled-list">
+      <li><a href="#">Update Case Status</a></li>
+      <li><a href="#">Change current reviewer</a></li>
+      <li><a href="#">Return Application to firm</a></li>
+    </ul>
+    <h3>Case Actions</h3>
+    <ul class="usa-unstyled-list">
+      <li><a href="#">Change reviewer assignments</a></li>
+      <li><a href="#">Manually adjust dates</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+
+        if (fn == "James") {
+          nextPage("index3.html");
+        }
+        else {
+          nextPage("index2.html");
+        }
+        return false;
+      }
+    });
+  });
+</script>
