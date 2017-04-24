@@ -1,0 +1,101 @@
+---
+layout: analyst-left-nav
+top_nav_highlight: cases
+left_nav_hightlight: overview
+---
+
+<div class="usa-width-one-whole">
+  <div class="section-block">
+    <h1>Overview</h1>
+    <div class="status-summary">
+      <div class="status-summary__primary">
+        <strong>Current Status:</strong><br>
+        <h3>Screening Review</h3>
+        <strong>Primary Reviewer: </strong> Jane Doe
+        <div class="status-summary__actions">
+          <a href="#">change</a>
+        </div>
+      </div>
+
+      <div class="status-summary__secondary">
+        <div class="status-summary__block">
+          <p>
+            <strong>Start Date</strong><br>
+            January 10, 2017 <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true" title="edit"></i><span class="usa-sr-only">edit</span></a>
+          </p>
+          <p>
+            <strong>Due Date</strong><br>
+            February 10, 2017 <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true" title="edit"></i><span class="usa-sr-only">edit</span></a>
+          </p>
+        </div>
+        <div>
+          <p>
+            <strong>Current Reviewer:</strong> Frank Apple <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true" title="edit"></i><span class="usa-sr-only">edit</span></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-block">
+    <div class="section-block__header">
+      <h2 class="section-block__heading">Activity Log</h2>
+      <p><a href="#">View All</a></p>
+    </div>
+    <div class="notification-log">
+      <h4 class="notification-log__list-header">Today</h4>
+      <ol class="notification-log__list">
+        <li class="notification-log__list-item">
+          <p>10:45am</p>
+          <p>Jane Doe change the status to In Progress</p>
+        </li>
+        <li class="notification-log__list-item">
+          <p>7:45am</p>
+          <p>Karen Smith changed the review status to Assigned</p>
+        </li>
+      </ol>
+      <h4 class="notification-log__list-header">Today</h4>
+      <ol class="notification-log__list">
+        <li class="notification-log__list-item">
+          <p>10:45am</p>
+          <p>Karen Smith changed the start date to January 10, 2017</p>
+        </li>
+        <li class="notification-log__list-item">
+          <p>10:45am</p>
+          <p>Karen Smith changed the due date to February 10, 2017</p>
+        </li>
+      </ol>
+      <h4 class="notification-log__list-header">Last Week</h4>
+      <ol class="notification-log__list">
+        <li class="notification-log__list-item">
+          <p>02/16 10:45am</p>
+          <p>Karen Smith changed the start date to January 10, 2017</p>
+        </li>
+        <li class="notification-log__list-item">
+          <p>02/15 10:45am</p>
+          <p>Karen Smith changed the due date to February 10, 2017</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+
+        if (fn == "James") {
+          nextPage("index3.html");
+        }
+        else {
+          nextPage("index2.html");
+        }
+        return false;
+      }
+    });
+  });
+</script>

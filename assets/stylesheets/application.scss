@@ -7,3 +7,11 @@
 
 // Demo Delete this line and import statement when you begin
 @import "certify/certify";
+
+// Stylesheets here are specific to the prototype
+@import "prototype/base/buttons";
+@import "prototype/base/typography";
+@import "prototype/components/context-banner";
+@import "prototype/components/notification-logs";
+@import "prototype/components/section-blocks";
+@import "prototype/components/status-summary";

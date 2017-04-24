@@ -1,0 +1,43 @@
+.status-summary {
+  align-items: top;
+  background: $color-gray-lightest;
+  border: 1px solid $color-gray-lighter;
+  display: flex;
+
+  h3 {
+    margin: 0 0 1.5rem;
+  }
+}
+
+.status-summary__primary {
+  border-right: 1px solid $color-gray-lighter;
+  padding: 2rem;
+  position: relative;
+  width: 50%
+}
+
+.status-summary__secondary {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 50%;
+
+  p {
+    margin: 0;
+  }
+}
+
+.status-summary__block {
+  display: flex;
+  margin-bottom: 1.7rem;
+
+  p {
+    width: 50%;
+  }
+}
+
+.status-summary__actions {
+  position: absolute;
+  right: 3rem;
+  top: 2rem;
+}
