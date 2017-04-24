@@ -9,29 +9,29 @@ left_nav_hightlight: overview
     <h1>Overview</h1>
     <div class="status-summary">
       <div class="status-summary__primary">
-        <strong>Current Status:</strong><br>
-        <h3>Screening Review</h3>
-        <strong>Primary Reviewer: </strong> Jane Doe
+        <div>
+          <span class="status-summary__flag">Application Status</span>
+          <h2>Screening Review</h2>
+        </div>
         <div class="status-summary__actions">
-          <a href="#">change</a>
+          <a href="#" class="usa-button">Change Status</a>
         </div>
       </div>
 
       <div class="status-summary__secondary">
         <div class="status-summary__block">
-          <p>
-            <strong>Start Date</strong><br>
-            January 10, 2017 <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true" title="edit"></i><span class="usa-sr-only">edit</span></a>
-          </p>
-          <p>
-            <strong>Due Date</strong><br>
-            February 10, 2017 <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true" title="edit"></i><span class="usa-sr-only">edit</span></a>
-          </p>
+          <span class="status-summary__flag">Next Due Date</span>
+          <p>Screening | Mar. 17, 2017 <a href="#" class="status-summary__edit" title="edit dates"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Edit</a></p>
+          <small>2 days remaining</small>
         </div>
-        <div>
-          <p>
-            <strong>Current Reviewer:</strong> Frank Apple <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true" title="edit"></i><span class="usa-sr-only">edit</span></a>
-          </p>
+        <div class="status-summary__block">
+          <span class="status-summary__flag">Primary Reviewer</span>
+          <p>Frank Apple <a href="#" class="status-summary__edit" title="edit primary reviewer"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Edit</a></p>
+        </div>
+        <div class="status-summary__block">
+          <span class="status-summary__flag">Current Reviewer</span>
+          <p>Frank Apple <a href="#" class="status-summary__edit" title=
+            "edit current reviewer"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Edit</a></p>
         </div>
       </div>
     </div>

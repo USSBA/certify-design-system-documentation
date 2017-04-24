@@ -1,26 +1,29 @@
 .status-summary {
   align-items: top;
-  background: $color-gray-lightest;
   border: 1px solid $color-gray-lighter;
   display: flex;
+  flex-direction: column;
+  max-width: 76rem;
 
-  h3 {
+  h2 {
+    font-size: 2.4rem;
     margin: 0 0 1.5rem;
   }
 }
 
 .status-summary__primary {
-  border-right: 1px solid $color-gray-lighter;
-  padding: 2rem;
+  border-bottom: 1px solid $color-gray-lighter;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem 0;
   position: relative;
-  width: 50%
+  width: 100%;
 }
 
 .status-summary__secondary {
   display: flex;
-  flex-direction: column;
   padding: 2rem;
-  width: 50%;
+  width: 100%;
 
   p {
     margin: 0;
@@ -28,16 +31,21 @@
 }
 
 .status-summary__block {
-  display: flex;
-  margin-bottom: 1.7rem;
+  width: percentage(3.5/12);
 
-  p {
-    width: 50%;
+  &:first-child {
+    width: percentage(5/12);
   }
 }
 
-.status-summary__actions {
-  position: absolute;
-  right: 3rem;
-  top: 2rem;
+.status-summary__flag {
+  color: $color-gray-dark;
+  font-size: 1.4rem;
+  font-weight: $font-bold;
+}
+
+.status-summary__edit {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-left: .5em;
 }
