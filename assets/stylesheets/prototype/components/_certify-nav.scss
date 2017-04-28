@@ -1,3 +1,4 @@
+/* Nav Bar ===================================*/
 .certify-navbar {
   background-color: white;
 
@@ -11,37 +12,77 @@
   width: 20rem;
 }
 
-
-
+/* Primary and Secondary Navigation Container ===================================*/
 .certify-nav {
 
   @include media($nav-width) {
     @include transform(none);
     background: transparent;
     float: none;
+    padding-top: 2rem;
     position: static;
-
   }
 }
 
+.certify-nav .certify-logo{
+  display: none;
+
+  @include media($nav-width) {
+    @include flex-grow(0);
+    display: block;
+    height:.5rem;
+    margin-right: 3rem
+  }
+
+  @include media($nav-width + 100) {
+    height: 2.2rem;
+  }
+}
+
+/* Analyst Navigation ===================================*/
 .certify-analyst-nav {
 
   @include media($nav-width) {
-    background: $color-gray-dark;
+    background: $color-primary-darkest;
     font-size: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
   }
+}
 
+.certify-analyst-nav .usa-grid-full {
 
+  @include media($nav-width) {
+    @include align-items(flex-end);
+    @include display(flex);
+    @include justify-content(space-between);
+  }
+}
+
+.certify-analyst-nav__primary {
+  @include align-items(center);
+  @include display(flex);
+}
+
+.certify-analyst-nav .usa-nav-primary {
+  @include media($nav-width) {
+    @include flex-grow(1);
+    width: auto;
+  }
+}
+
+.certify-analyst-nav .usa-nav-primary:last-child {
+  @include media($nav-width) {
+    @include flex-grow(0);
+  }
 }
 
 .certify-analyst-nav .usa-nav-submenu {
 
   @include media($nav-width) {
-    background: black;
+    background: $color-primary-darker;
   }
 }
 
@@ -52,22 +93,60 @@
     color: white;
 
     &:hover {
-      color: $color-gray-light;
+      background-color: $color-primary-darker;
+      color: white;
 
-
+      span {
+        border: none;
+      }
     }
   }
-}
-
-.usa-nav-primary button[aria-expanded=true],
-.usa-nav-primary button[aria-expanded=false] {
-  padding-right: 3.2rem;
 }
 
 .certify-analyst-nav .usa-nav-primary button[aria-expanded=true],
 .certify-analyst-nav .usa-nav-primary button[aria-expanded=true]:hover {
 
   @include media($nav-width) {
-    background: black;
+    background: $color-primary-darker;
+  }
+}
+
+/* U.S. Web Design Standards Overrides ===================================*/
+.usa-nav-primary button[aria-expanded=true],
+.usa-nav-primary button[aria-expanded=false] {
+  padding-right: 3.2rem;
+}
+
+
+
+// Search ===================================*/
+.certify-case-search {
+
+  @include media($nav-width) {
+    margin: -.5rem 5rem 0 1rem;
+  }
+}
+
+.certify-case-search .usa-search-small {
+
+  @include media($nav-width) {
+    position: relative;
+    top: 1.3rem;
+    width: 100%;
+  }
+}
+
+// Application Nav ===================================*/
+.certify-application-nav .usa-nav-primary {
+
+  @include media($nav-width) {
+    margin-left: -12px;
+  }
+}
+
+.certify-application-nav .certify-current {
+
+  @include media($nav-width) {
+    color: $color-primary;
   }
 }
