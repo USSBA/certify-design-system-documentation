@@ -1,0 +1,73 @@
+.certify-navbar {
+  background-color: white;
+
+  @include media($nav-width) {
+    background-color: transparent;
+  }
+}
+
+.certify-navbar .certify-logo {
+  margin-top: .4rem;
+  width: 20rem;
+}
+
+
+
+.certify-nav {
+
+  @include media($nav-width) {
+    @include transform(none);
+    background: transparent;
+    float: none;
+    position: static;
+
+  }
+}
+
+.certify-analyst-nav {
+
+  @include media($nav-width) {
+    background: $color-gray-dark;
+    font-size: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+
+}
+
+.certify-analyst-nav .usa-nav-submenu {
+
+  @include media($nav-width) {
+    background: black;
+  }
+}
+
+.certify-analyst-nav .usa-nav-primary > li > a,
+.certify-analyst-nav .usa-nav-primary button {
+
+  @include media($nav-width) {
+    color: white;
+
+    &:hover {
+      color: $color-gray-light;
+
+
+    }
+  }
+}
+
+.usa-nav-primary button[aria-expanded=true],
+.usa-nav-primary button[aria-expanded=false] {
+  padding-right: 3.2rem;
+}
+
+.certify-analyst-nav .usa-nav-primary button[aria-expanded=true],
+.certify-analyst-nav .usa-nav-primary button[aria-expanded=true]:hover {
+
+  @include media($nav-width) {
+    background: black;
+  }
+}
