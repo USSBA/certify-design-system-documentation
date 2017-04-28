@@ -1,3 +1,13 @@
 .usa-color-text-primary {
     color: $color-primary;
 }
+
+
+
+.hide {
+  visibility: hidden;
+
+  &.haha-jk {
+    visibility: visible;
+  }
+}
