@@ -1,40 +1,42 @@
-<header class="context-banner">
+<header class="masthead">
   <div class="usa-navbar certify-navbar">
     <div class="usa-logo certify-logo" id="logo">
-      <img alt="certify.SBA.gov logo" src="{{ relative }}assets/img/certify-sba-gov-logo_on-white.png" />
+      <img alt="certify.SBA.gov logo" src="{{ relative }}assets/img/certify-sba-gov-logo_on-dark.png" />
     </div>
     <button class="usa-menu-btn">Menu</button>
   </div>
-  <div class="usa-grid-full">
-    <div class="usa-width-two-thirds">
-      <h1 class="context-banner__primary-heading">Mike's Garage</h1>
-      <h2 class="context-banner__secondary-heading">8(a) Initial Application</h2>
+  <div class="usa-grid-full masthead__content">
+    <div class="usa-width-one-fourth masthead__content__primary">
+      <h1 class="masthead__primary-heading">Mike's Garage</h1>
+      <h2 class="masthead__secondary-heading">8(a) Initial Application</h2>
     </div>
-    <div class="usa-width-one-third">
-      <div class="usa-width-one-whole">
-        <div class="usa-width-one-third">
-          <p>
-            <strong>Owner</strong><br>
-            Mike Jones <br>
-            703-555-3232
-          </p>
-        </div>
-        <div class="context-banner__actions">
-          <a href="#" class="usa-button usa-button-knockout">Firm Info</a>
-        </div>
-      </div>
+    <div class="usa-width-one-sixth masthead__content__secondary">
+      <p>
+        <strong>Application Status</strong><br>
+        Screening Review<br>
+        <a href="#">change</a>
+      </p>
+    </div>
+    <div class="usa-width-one-sixth masthead__content__secondary">
+      <p>
+        <strong>Owner</strong><br>
+        Mike Jones <br>
+        703-555-3232
+      </p>
+    </div>
+    <div class="usa-width-one-sixth masthead__content__tertiary">
+      <a href="#" class="usa-button usa-button-knockout">Firm Info</a>
     </div>
   </div>
 
   <nav role="navigation" class="usa-nav certify-nav">
-
     <div class="usa-nav-inner">
       <button class="usa-nav-close">
         <img src="{{ site.baseurl }}/assets/img/close.svg" alt="close">
       </button>
-      <div class="certify-analyst-nav">
+      <div class="certify-global-nav">
         <div class="usa-grid-full">
-          <div class="certify-analyst-nav__primary">
+          <div class="certify-global-nav__primary">
             <a href="#">
               <img class="certify-logo" alt="certify.SBA.gov logo" src="{{ relative }}assets/img/certify-sba-gov-logo_on-dark.png" />
             </a>
@@ -89,10 +91,13 @@
               </button>
               <ul id="side-nav-2" class="usa-nav-submenu">
                 <li>
-                  <a href="#">My Cases</a>
+                  <a href="#">Edit</a>
                 </li>
                 <li>
-                  <a href="#">All Cases</a>
+                  <a href="#">Settings</a>
+                </li>
+                <li>
+                  <a href="#">Log Out</a>
                 </li>
               </ul>
             </li>
@@ -104,8 +109,9 @@
           </ul>
         </div>
       </div>
-      <div class="certify-application-nav">
+      <div class="certify-local-nav">
         <div class="usa-grid-full">
+          <h2 class="certify-local-nav__heading">Mike's Gararage – 8(a) Initial Application</h2>
           <ul class="usa-nav-primary usa-accordion">
             <li>
               <a class="usa-nav-link {% if page.left_nav_active contains "Overview" %} certify-current {% endif %}" href="#">
@@ -154,7 +160,6 @@
           </ul>
         </div>
       </div>
-
     </div>
   </nav>
 </header>

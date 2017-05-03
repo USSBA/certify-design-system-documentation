@@ -1,9 +1,11 @@
 /* Nav Bar ===================================*/
 .certify-navbar {
-  background-color: white;
+  background: $color-primary-darkest;
+  border-bottom: 1px solid $color-primary-darkest;
 
   @include media($nav-width) {
     background-color: transparent;
+    display: none;
   }
 }
 
@@ -19,8 +21,13 @@
     @include transform(none);
     background: transparent;
     float: none;
-    padding-top: 2rem;
+    padding-top: 0;
     position: static;
+  }
+
+  &.is-visible .usa-grid-full {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -30,7 +37,7 @@
   @include media($nav-width) {
     @include flex-grow(0);
     display: block;
-    height:.5rem;
+    height:.9rem;
     margin-right: 3rem
   }
 
@@ -39,20 +46,29 @@
   }
 }
 
-/* Analyst Navigation ===================================*/
-.certify-analyst-nav {
+.certify-nav .usa-nav-inner {
+  margin-top: 0;
+}
+
+/* Global Navigation ===================================*/
+.certify-global-nav {
+
+  margin-bottom: 2rem;
+  margin-top: 6rem;
 
   @include media($nav-width) {
     background: $color-primary-darkest;
     font-size: 100%;
     left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
     position: absolute;
     top: 0;
     width: 100%;
   }
 }
 
-.certify-analyst-nav .usa-grid-full {
+.certify-global-nav .usa-grid-full {
 
   @include media($nav-width) {
     @include align-items(flex-end);
@@ -61,33 +77,58 @@
   }
 }
 
-.certify-analyst-nav__primary {
+.certify-global-nav__primary {
   @include align-items(center);
   @include display(flex);
 }
 
-.certify-analyst-nav .usa-nav-primary {
+.certify-global-nav .usa-nav-primary {
+  @include display(flex);
+  @include flex-direction(column);
+
   @include media($nav-width) {
     @include flex-grow(1);
+    display: block;
     width: auto;
   }
 }
 
-.certify-analyst-nav .usa-nav-primary:last-child {
+.certify-global-nav .usa-nav-primary:last-child {
   @include media($nav-width) {
     @include flex-grow(0);
   }
 }
 
-.certify-analyst-nav .usa-nav-submenu {
+.certify-global-nav .usa-nav-submenu {
 
   @include media($nav-width) {
     background: $color-primary-darker;
   }
 }
 
-.certify-analyst-nav .usa-nav-primary > li > a,
-.certify-analyst-nav .usa-nav-primary button {
+.certify-global-nav .usa-nav-primary > li {
+  @include order(2);
+  border-top: 1px solid $color-gray-light;
+  margin-left: 0;
+
+  @include media($nav-width) {
+    border-top: none;
+    margin-left: -5px
+  }
+
+  &.certify-case-search {
+    @include order(1);
+    border-top: none;
+    margin-bottom: 3rem;
+
+    @include media($nav-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.certify-global-nav .usa-nav-primary > li > a,
+.certify-global-nav .usa-nav-primary button {
 
   @include media($nav-width) {
     color: white;
@@ -103,27 +144,54 @@
   }
 }
 
-.certify-analyst-nav .usa-nav-primary button[aria-expanded=true],
-.certify-analyst-nav .usa-nav-primary button[aria-expanded=true]:hover {
+.certify-global-nav .usa-nav-primary button[aria-expanded] {
+  @include media($nav-width) {
+  height: 4.8rem
+}
+}
+
+.certify-global-nav .usa-nav-primary button[aria-expanded=false],
+.certify-global-nav .usa-nav-primary button[aria-expanded=false]:hover {
 
   @include media($nav-width) {
-    background: $color-primary-darker;
+    background-image: url('uswds-0.14.0/img/angle-arrow-down-white.svg');
   }
 }
 
-/* U.S. Web Design Standards Overrides ===================================*/
-.usa-nav-primary button[aria-expanded=true],
-.usa-nav-primary button[aria-expanded=false] {
-  padding-right: 3.2rem;
+.certify-global-nav .usa-nav-primary button[aria-expanded=true],
+.certify-global-nav .usa-nav-primary button[aria-expanded=true]:hover {
+
+  @include media($nav-width) {
+    background-color: $color-primary-darker;
+    background-image: url('uswds-0.14.0/img/angle-arrow-down-white.svg');
+  }
 }
 
+.certify-global-nav .usa-nav-link {
+  font-size: 1.4rem;
+  padding: 1rem 0;
 
+  @include media($nav-width) {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+}
 
-// Search ===================================*/
+// Search */
 .certify-case-search {
 
   @include media($nav-width) {
     margin: -.5rem 5rem 0 1rem;
+  }
+
+  .usa-search {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .usa-search.usa-search-small [type="submit"],
+  .usa-search.usa-search-small .usa-search-submit {
+    background-color: $color-primary-darkest;
   }
 }
 
@@ -136,15 +204,63 @@
   }
 }
 
-// Application Nav ===================================*/
-.certify-application-nav .usa-nav-primary {
+/* U.S. Web Design Standards Overrides ===================================*/
+.usa-nav-primary button[aria-expanded=true],
+.usa-nav-primary button[aria-expanded=false] {
+  background-position: right 1.5rem top 50%;
+  padding-right: 3.2rem;
+}
 
+// Local Nav ===================================*/
+.certify-local-nav {
   @include media($nav-width) {
-    margin-left: -12px;
+    padding-top: 4.8rem;
   }
 }
 
-.certify-application-nav .certify-current {
+.certify-local-nav__heading {
+  font-size: 1.6rem;
+  font-family: $font-sans;
+
+  @include media($nav-width) {
+    display: none;
+  }
+}
+
+.certify-local-nav .usa-nav-link {
+  font-size: 1.4rem;
+  padding: 1rem 0;
+
+  @include media($nav-width) {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+.certify-local-nav .usa-nav-primary {
+
+  @include media($nav-width) {
+    margin-left: -22px;
+  }
+}
+
+.certify-local-nav .usa-nav-primary > li {
+  margin-left: 0;
+
+  @include media($nav-width) {
+    margin-left: -5px
+  }
+}
+
+.certify-local-nav .usa-nav-primary button[aria-expanded=true],
+.certify-local-nav .usa-nav-primary button[aria-expanded=true]:hover {
+
+  @include media($nav-width) {
+    background-image: url('uswds-0.14.0/img/angle-arrow-down-white.svg');
+  }
+}
+
+.certify-local-nav .certify-current {
 
   @include media($nav-width) {
     color: $color-primary;
