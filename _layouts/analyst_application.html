@@ -5,18 +5,14 @@
     {% include _head.html %}
   </head>
   <body class="public mainscreen">
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
-  {% include _analyst-header.html %}
-
-  {% include _analyst_masthead_old.html %}
+  {% include _analyst_masthead_full.html %}
 
   <section class="usa-grid-full">
     <article id="main-content">
       <section class="usa-width-one-whole">
-        <aside class="usa-width-one-fourth">
-          {% include _analyst_left-nav.html %}
-        </aside>
-        <article class="usa-width-three-fourths">
+        <article>
           {{ content }}
           <script>
             $(function() {

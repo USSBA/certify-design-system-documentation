@@ -9,9 +9,11 @@
 @import "certify/certify";
 
 // Stylesheets here are specific to the prototype
+@import "prototype/base/variables";
 @import "prototype/base/buttons";
 @import "prototype/base/typography";
-@import "prototype/components/context-banner";
+@import "prototype/components/certify-nav";
+@import "prototype/components/masthead";
 @import "prototype/components/notification-logs";
 @import "prototype/components/section-blocks";
 @import "prototype/components/status-summary";
