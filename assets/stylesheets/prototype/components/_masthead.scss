@@ -54,8 +54,19 @@
 .masthead__content__primary,
 .masthead__content__secondary,
 .masthead__content__tertiary {
+
   @include media($article-max-width) {
     @include flex-grow(1);
+  }
+
+  @include media($nav-width) {
+    @include flex-basis(15%);
+  }
+}
+
+.masthead__content__primary {
+  @include media($nav-width) {
+    @include flex-grow(8);
   }
 }
 
