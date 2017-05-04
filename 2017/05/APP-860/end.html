@@ -1,6 +1,17 @@
 ---
 layout: analyst
 ---
+
+<!-- Designer Note - I didn't get to see what the messaging was -->
+<div class="usa-alert usa-alert-info">
+  <div class="usa-alert-body">
+    <h3 class="usa-alert-heading">Update</h3>
+    <p class="usa-alert-text">Legal Business Name's MPP Application has been returned.</p>
+  </div>
+</div>
+
+<br>
+
 <div class="div" id="business_search">
   <div class="usa-width-one-whole">
     <div class="usa-width-three-fourths">
@@ -32,12 +43,10 @@ layout: analyst
         <td>
 
         </td>
-        <td> Pending</td>
+        <td> Draft</td>
         <td></td>
         <td>
-          <a href="/questionnaires/mpp/organizations/17/sba_applications/2">View summary</a><br>
-          <a id="return1" href="/sba_analyst/sba_applications/2/dashboard/return_for_modification">Return to Vendor</a><br>
-          <a target="_blank" href="/sba_analyst/sba_applications/2/dashboard/download_zip">Download Zip</a>
+
         </td>
       </tr>
     </tbody>
@@ -125,17 +134,3 @@ layout: analyst
 </div>
 </div>
 </div>
-
-<!-- This script will mimic the interaction we want to see -->
-<script>
-
-$( document ).ready(function() {
-  $("#return1").on("click", function(){
-    var r = confirm("Return Legal Business Name's MPP Application to the vendor?");
-    if (r == true) {
-      nextPage("end.html");
-    }
-    return false;
-  })
-});
-</script>
