@@ -1,6 +1,5 @@
 ---
 layout: analyst_application
-local_nav_active: Overview
 ---
 
 <article class="usa-width-one-whole">
@@ -86,7 +85,7 @@ local_nav_active: Overview
         nextPage("confirm.html")
       }
     });
-    
+
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
         return false;
