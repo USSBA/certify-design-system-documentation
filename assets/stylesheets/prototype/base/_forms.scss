@@ -1,0 +1,26 @@
+// Prevents pseudo elements from getting cut-off
+[type="checkbox"] + label, [type="radio"] + label {
+  margin-left: 8px;
+}
+
+// Followup quesitons
+.certify-followup {
+  border-left: 3px solid $color-gray-lighter;
+  margin-left: 3.5rem;
+  padding-left: 2rem;
+}
+
+.actions {
+  @include align-items(baseline);
+  @include clearfix;
+  @include display(flex);
+  @include justify-content(space-between);
+}
+
+.actions__main {
+  float: left;
+}
+
+.actions__alt {
+  float: right;
+}

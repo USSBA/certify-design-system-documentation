@@ -1,0 +1,25 @@
+/* Boxed Groups */
+
+.boxed-group {
+  border: 1px solid $color-gray-lighter;
+  border-radius: .4rem;
+  margin-bottom: 1.7rem;
+  overflow: hidden;
+}
+
+.boxed-group__heading {
+  background: $color-cool-blue-lightest;
+  border-bottom: 1px solid $color-gray-lighter;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.boxed-group__inner {
+  @include clearfix;
+  padding: 1rem 2rem;
+
+  .usa-button {
+    float: right;
+  }
+}

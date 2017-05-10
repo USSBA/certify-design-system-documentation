@@ -3,3 +3,9 @@
   border: 1px solid $color-primary;
   color: $color-primary;
 }
+
+.usa-button.usa-button-knockout:hover,
+.usa-button.usa-button-knockout:focus {
+  background-color: $color-primary;
+  color: white;
+}

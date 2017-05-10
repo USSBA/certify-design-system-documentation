@@ -1,0 +1,47 @@
+---
+layout: analyst_application
+local_nav_active: Overview
+---
+
+<article class="usa-width-one-whole">
+  <div class="section-block">
+
+    <h1>Confirm Status Change</h1>
+
+    <p class="usa-font-lead">Press submit to change the status of this application from <strong>screening</strong> to <strong>SBA Review</strong>.</p>
+    </p>
+
+    <p><strong>Primary reviewer change:</strong> None</p>
+    <p><strong>Current review change:</strong> None</p>
+    <p><strong>Note change:</strong> None</p>
+    <!-- Note to developer: this should not actually be a form.  -->
+    <form action="#" class="usa-form">
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Submit Status Change</button>
+          <a href="#" id="cancel">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</article>
+
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        if (to_sba_review == "yes") {
+          nextPage("screening-overview.html")
+        }
+        else {
+          nextPage("#");
+        }
+        return false;
+      }
+    });
+  });
+</script>

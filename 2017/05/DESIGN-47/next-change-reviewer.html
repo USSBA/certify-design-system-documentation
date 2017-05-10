@@ -1,0 +1,52 @@
+---
+layout: analyst_application
+local_nav_active: Overview
+---
+
+<article class="usa-width-one-whole">
+  <div class="section-block">
+    <p class="subheading">Update Status: Step 1 of 2</p>
+    <h1>Change Assignment</h1>
+    <p class="usa-font-lead">If you need to change assignments, please do it now. If you wish you leave assignments as is, [INSERT REASON]</p>
+
+    <!-- Note to developer: this should not actually be a form.  -->
+    <form action="#" class="usa-form">
+      <div class="boxed-group">
+        <h2 class="boxed-group__heading">Current reviewer</h2>
+        <div class="boxed-group__inner">
+          <a href="#" class="usa-button usa-button-knockout">Change</a>
+          <p>Frank Apple - CODS San Fransisco</p>
+        </div>
+      </div>
+      <div class="boxed-group">
+        <h2 class="boxed-group__heading">Primary reviewer</h2>
+        <div class="boxed-group__inner">
+          <a href="#" class="usa-button usa-button-knockout">Change</a>
+            <p>Jane Doe - CODS San Fransisco</p>
+        </div>
+      </div>
+      <button type="submit">Next</button>
+      <a href="#" id="cancel" class="cancel">Cancel</a>
+    </form>
+  </div>
+</article>
+
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        if (to_sba_review == "yes") {
+          nextPage("next-add-note.html")
+        }
+        else {
+          nextPage("#");
+        }
+        return false;
+      }
+    });
+  });
+</script>
