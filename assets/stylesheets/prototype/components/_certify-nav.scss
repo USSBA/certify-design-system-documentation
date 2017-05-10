@@ -266,6 +266,11 @@
 .certify-local-nav .current {
 
   @include media($nav-width) {
+    background-color: white;
     color: $color-primary;
+
+    &:hover {
+      background-color: white;
+    }
   }
 }
