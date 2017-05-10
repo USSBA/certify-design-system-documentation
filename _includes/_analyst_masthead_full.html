@@ -14,7 +14,12 @@
       <p>
         <strong>Application Status</strong><br>
         Screening Review<br>
-        <a href="#">change</a>
+        <a href="
+        {% if page.change_status_link %}
+          {{ page.change_status_link }}
+        {% else %}
+          #
+        {% endif %}">change</a>
       </p>
     </div>
     <div class="usa-width-one-sixth masthead__content__secondary">
@@ -36,7 +41,7 @@
       </button>
 
       {% include _analyst_global_nav.html %}
-      
+
       <div class="certify-local-nav">
         <div class="usa-grid-full">
           <h2 class="certify-local-nav__heading">Mike's Gararage – 8(a) Initial Application</h2>

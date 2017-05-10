@@ -2,6 +2,17 @@
     color: $color-primary;
 }
 
+.subheading {
+  font-family: $font-sans;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: $color-gray;
+  display: block;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.6rem;
+  margin-top: 0;
+}
+
 
 
 .hide {

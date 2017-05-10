@@ -11,19 +11,15 @@
 
   <section class="usa-grid-full">
     <article id="main-content">
-      <section class="usa-width-one-whole">
-        <article>
           {{ content }}
-          <script>
-            $(function() {
-              $('.expander-view-more-trigger').click(function () {
-                $(this).toggleClass("expander-view-more-hidden");
-              });
-            })
-          </script>
-        </article>
-      </section>
     </article>
+    <script>
+      $(function() {
+        $('.expander-view-more-trigger').click(function () {
+          $(this).toggleClass("expander-view-more-hidden");
+        });
+      })
+    </script>
     <div class="usa-one-whole">
       <a class="return_to_top" href="#top">Return to top</a>
     </div>

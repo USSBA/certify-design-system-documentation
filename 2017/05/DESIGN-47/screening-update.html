@@ -1,0 +1,69 @@
+---
+layout: analyst_application
+---
+
+<article class="usa-width-one-whole">
+  <div class="section-block">
+    <h1>Change Case Status</h1>
+    <form action="#" class="usa-form">
+      <div class="questions">
+        <fieldset>
+          <h4>Is this case ready to proceed to SBA Review? </h4>
+          <ul class="usa-unstyled-list">
+            <li>
+              <input id="to-sba-review--yes" type="radio" name="to_sba_review" value="yes">
+              <label for="to-sba-review--yes">Yes, send to SBA Review</label>
+            </li>
+            <li>
+              <input id="to-sba-review--no" type="radio" name="to_sba_review" data-followup="return-type" data-followup-required="true" value="no">
+              <label for="to-sba-review--no">No <em>(requires additional information)</em></label>
+              <div id="return-type" aria-hidden="true" class="usa-extend--hidden certify-followup">
+                  <h5>Please indicate why</h5>
+                  <ul class="usa-unstyled-list">
+                    <li>
+                      <input id="more-info" type="radio" name="more-info-request" value="Requires some additional information from vendor">
+                      <label for="more-info">Requires some additional information from vendor</label>
+                    </li>
+                    <li>
+                      <input id="return" type="radio" name="more-info-request" value="Application incomplete. Needs to be returned to vendor">
+                      <label for="return">Application incomplete. Needs to be returned to vendor.</label>
+                    </li>
+                  </ul>
+              </div>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <button type="submit">Next</button>
+    </form>
+
+    <h2>Status History</h2>
+    <ul>
+      <li>Screening Review</li>
+      <li>Assigned for screening - 1/10/17</li>
+      <li>Application submitted - 1/1/17</li>
+      <li>Draft Created - 1/1/17</li>
+    </ul>
+  </div>
+</article>
+
+
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        if (to_sba_review == "yes") {
+          nextPage("next-change-reviewer.html");
+        }
+        else {
+          nextPage("#");
+        }
+        return false;
+      }
+    });
+  });
+</script>
