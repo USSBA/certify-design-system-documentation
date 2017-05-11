@@ -12,8 +12,11 @@
         <img src="{{ site.baseurl }}/assets/img/close.svg" alt="close">
       </button>
 
-      {% include _analyst_global_nav.html %}
-
+      {% if page.new_analyst == true %}
+        {% include _analyst-new_global_nav.html %}
+      {% else %}
+        {% include _analyst_global_nav.html %}
+      {% endif %}
     </div>
   </nav>
 </header>

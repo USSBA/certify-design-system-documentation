@@ -1,0 +1,36 @@
+---
+layout: analyst
+new_analyst: true
+---
+
+<h1>Where is your duty station?</h1>
+
+<form action="" class="usa-form">
+  <div class="questions">
+    <label for="options">Duty Station</label>
+    <select name="options" id="options">
+      <option value="value1">Option A</option>
+      <option value="value2">Option B</option>
+      <option value="value3">Option C</option>
+    </select>
+  </div>
+
+  <button class="usa-button">Next</button>
+</form>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("send-request.html");
+        return false;
+      }
+    });
+  });
+</script>
