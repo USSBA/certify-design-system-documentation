@@ -1,0 +1,29 @@
+---
+layout: analyst
+new_analyst: true
+---
+
+<h1>You are about to request access as:</h1>
+<h2 data-print="access_role"></h2>
+<form action="#" class="usa-form">
+  <button>Submit Request</button>
+  <a href="#" class="usa-button usa-button-knockout">Go Back</a>
+</form>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+
+          nextPage("confirm.html");
+        return false;
+      }
+    });
+  });
+</script>

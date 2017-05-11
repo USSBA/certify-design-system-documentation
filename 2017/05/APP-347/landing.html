@@ -1,0 +1,51 @@
+---
+layout: analyst
+new_analyst: true
+---
+
+<h1>Welcome to certify.SBA.gov!</h1>
+<p class="usa-font-lead">To get started, we'll need to know a little more about your role and responsibilities to grant you access.</p>
+
+<form action="#" class="usa-form">
+  <div class="questions">
+  <fieldset>
+    <legend>What best describes you?</legend>
+    <ul class="usa-unstyled-list">
+      <li>
+        <input id="role-employee" type="radio" name="access_role" value="SBA employee" required>
+        <label for="role-employee">I am an SBA employee</label>
+      </li>
+      <li>
+        <input id="role-contracting-officer" type="radio" name="access_role" value="Contracting Officer" required>
+        <label for="role-contracting-officer">I am an Contracting Officer</label>
+      </li>
+      <li>
+    </ul>
+  </fieldset>
+  </div>
+  <button class="usa-button">Next</button>
+</form>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+
+        if (access_role == "Contracting Officer") {
+          nextPage("send-request.html");
+        }
+
+        else {
+          nextPage("sba-employee1.html")
+        }
+        return false;
+      }
+    });
+  });
+</script>
