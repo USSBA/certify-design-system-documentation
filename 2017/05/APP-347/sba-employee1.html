@@ -11,44 +11,26 @@ new_analyst: true
       <legend>What program will you be supporting?</legend>
       <ul class="usa-unstyled-list">
         <li>
-          <input id="program-8a" type="radio" name="program" value="8(a) Business Development Program" required>
-          <label for="program-8a">8(a) Business Development Program</label>
+          <input id="program_8a" type="radio" name="program" value="8(a) Business Development Program" required>
+          <label for="program_8a">8(a) Business Development Program</label>
         </li>
         <li>
-          <input id="program-HUBZone" type="radio" name="program" value="HUBZone" required>
-          <label for="program-HUBZone">HUBZone</label>
+          <input id="program_HUBZone" type="radio" name="program" value="HUBZone" required>
+          <label for="program_HUBZone">HUBZone</label>
         </li>
         <li>
-          <input id="program-WOSB" type="radio" name="program" value="Women Owned Small Business (WOSB)" required>
-          <label for="program-WOSB">Women Owned Small Business (WOSB)</label>
+          <input id="program_WOSB" type="radio" name="program" value="Women Owned Small Business (WOSB)" required>
+          <label for="program_WOSB">Women Owned Small Business (WOSB)</label>
         </li>
         <li>
-          <input id="program-MPP" type="radio" name="program" value="Mentor-Protégé Program (MPP)" required>
-          <label for="program-MPP">Mentor-Protégé Program (MPP)</label>
+          <input id="program_MPP" type="radio" name="program" value="Mentor-Protégé Program (MPP)" required>
+          <label for="program_MPP">Mentor-Protégé Program (MPP)</label>
         </li>
       </ul>
     </fieldset>
   </div>
-  <div class="questions">
-    <fieldset>
-      <legend>What is your business unit?</legend>
-      <ul class="usa-unstyled-list">
-        <li>
-          <input id="bu-cods" type="radio" name="business-unit" value="CODS" required>
-          <label for="bu-cods">CODS</label>
-        </li>
-        <li>
-          <input id="bu-hqs" type="radio" name="business-unit" value="HQ" required>
-          <label for="bu-hq">HQ</label>
-        </li>
-        <li>
-          <input id="bu-hqs" type="radio" name="business-unit" value="HQ" required>
-          <label for="bu-hq">HQ</label>
-        </li>
-      </ul>
-    </fieldset>
-  </div>
-  <button class="usa-button">Next</button>
+  <button type="submit" class="usa-button">Next</button>
+  <a href="#" onclick="javascript:window.history.back();" class="usa-button usa-button-knockout">Go Back</a>
 </form>
 
 <!-- This script will mimic the interaction we want to see -->
@@ -57,6 +39,7 @@ new_analyst: true
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
+
         return false;
       }
       else {

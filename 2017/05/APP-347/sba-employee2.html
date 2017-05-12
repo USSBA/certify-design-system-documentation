@@ -7,15 +7,39 @@ new_analyst: true
 
 <form action="" class="usa-form">
   <div class="questions">
-    <label for="options">Duty Station</label>
-    <select name="options" id="options">
-      <option value="value1">Option A</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
-    </select>
+    <fieldset>
+      <legend>What is your business unit?</legend>
+      <ul class="usa-unstyled-list">
+        <li>
+          <input id="bu_area-office" type="checkbox" name="business-unit" value="Area Office">
+          <label for="bu_do">Area Office</label>
+        </li>
+        <li>
+          <input id="bu_cods" type="checkbox" name="business-unit" value="CODS">
+          <label for="bu_cods">CODS</label>
+        </li>
+        <li>
+          <input id="bu_do" type="checkbox" name="business-unit" value="District Office">
+          <label for="bu_do">District Office</label>
+        </li>
+        <li>
+          <input id="bu_hq" type="checkbox" name="business-unit" value="HQ">
+          <label for="bu_hq">HQ</label>
+        </li>
+        <li>
+          <input id="bu_ogc" type="checkbox" name="business-unit" value="Office of General Council (OGC)">
+          <label for="bu_ogc">Office of General Council (OGC)</label>
+        </li>
+        <li>
+          <input id="bu_ogc" type="checkbox" name="business-unit" value="Office of General Council (OGC)">
+          <label for="bu_ogc">Women Owned Small Business (WOSB)</label>
+        </li>
+      </ul>
+    </fieldset>
   </div>
 
-  <button class="usa-button">Next</button>
+  <button type="submit" class="usa-button">Next</button>
+  <a href="#" class="usa-button usa-button-knockout" onclick="javascript:window.history.back();">Go Back</a>
 </form>
 
 <!-- This script will mimic the interaction we want to see -->
@@ -28,7 +52,7 @@ new_analyst: true
       }
       else {
         updateStoredData();
-        nextPage("send-request.html");
+        nextPage("sba-employee3.html");
         return false;
       }
     });
