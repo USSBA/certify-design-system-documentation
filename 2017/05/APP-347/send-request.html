@@ -3,16 +3,28 @@ layout: analyst
 new_analyst: true
 ---
 
-<h1>You are about to request access as:</h1>
-<h2 data-print="access_role"></h2>
-<form action="#" class="usa-form">
-  <button>Submit Request</button>
-  <a href="#" class="usa-button usa-button-knockout">Go Back</a>
-</form>
+<div class="usa-width-one-half standalone-card">
+  <p class="subheading">Requesting Access</p>
+  <h1>You would like to use certify.SBA.gov as:</h1>
+  <p class="usa-font-lead usa-color-green"><strong data-print="access_role"></strong></p>
+  <div id="employee_only">
+    <p><strong>Program:</strong> <span data-print="program"></span></p>
+    <p><strong>Business Unit:</strong> <span data-print="business_unit"></span></p>
+    <p><strong>Duty Station:</strong> <span data-print="duty_station"></span></p>
+  </div>
+  <form action="#" class="usa-form">
+    <button type="submit">Submit Request</button>
+    <a href="#" onclick="javascript:window.history.back();" class="usa-button usa-button-knockout">Go Back</a>
+  </form>
+</div>
 
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
+
+    if (access_role == "Contracting Officer") {
+      $("#employee_only").remove();
+    }
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {

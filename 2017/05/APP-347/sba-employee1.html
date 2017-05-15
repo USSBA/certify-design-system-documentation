@@ -3,35 +3,37 @@ layout: analyst
 new_analyst: true
 ---
 
-<h1>Please tell us a little more about yourself</h1>
-
-<form action="" class="usa-form">
-  <div class="questions">
-    <fieldset>
-      <legend>What program will you be supporting?</legend>
-      <ul class="usa-unstyled-list">
-        <li>
-          <input id="program_8a" type="radio" name="program" value="8(a) Business Development Program" required>
-          <label for="program_8a">8(a) Business Development Program</label>
-        </li>
-        <li>
-          <input id="program_HUBZone" type="radio" name="program" value="HUBZone" required>
-          <label for="program_HUBZone">HUBZone</label>
-        </li>
-        <li>
-          <input id="program_WOSB" type="radio" name="program" value="Women Owned Small Business (WOSB)" required>
-          <label for="program_WOSB">Women Owned Small Business (WOSB)</label>
-        </li>
-        <li>
-          <input id="program_MPP" type="radio" name="program" value="Mentor-Protégé Program (MPP)" required>
-          <label for="program_MPP">Mentor-Protégé Program (MPP)</label>
-        </li>
-      </ul>
-    </fieldset>
-  </div>
-  <button type="submit" class="usa-button">Next</button>
-  <a href="#" onclick="javascript:window.history.back();" class="usa-button usa-button-knockout">Go Back</a>
-</form>
+<div class="usa-width-one-half standalone-card">
+  <p class="subheading">Requesting Access</p>
+  <h1>What program will you be supporting?</h1>
+  <form action="" class="usa-form">
+    <div class="questions">
+      <fieldset>
+        <legend class="usa-sr-only">Choose your SBA Program</legend>
+        <ul class="usa-unstyled-list">
+          <li>
+            <input id="program_8a" type="radio" name="program" value="8(a) Business Development Program" required>
+            <label for="program_8a">8(a) Business Development Program</label>
+          </li>
+          <li>
+            <input id="program_HUBZone" type="radio" name="program" value="HUBZone" required>
+            <label for="program_HUBZone">HUBZone</label>
+          </li>
+          <li>
+            <input id="program_WOSB" type="radio" name="program" value="Women Owned Small Business (WOSB)" required>
+            <label for="program_WOSB">Women Owned Small Business (WOSB)</label>
+          </li>
+          <li>
+            <input id="program_MPP" type="radio" name="program" value="Mentor-Protégé Program (MPP)" required>
+            <label for="program_MPP">Mentor-Protégé Program (MPP)</label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+    <button type="submit" class="usa-button">Next</button>
+    <a href="#" onclick="javascript:window.history.back();" class="usa-button usa-button-knockout">Go Back</a>
+  </form>
+</div>
 
 <!-- This script will mimic the interaction we want to see -->
 <script>

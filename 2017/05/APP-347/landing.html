@@ -3,29 +3,31 @@ layout: analyst
 new_analyst: true
 ---
 
-<h1>Welcome to certify.SBA.gov!</h1>
-<p class="usa-font-lead">To get started, we'll need to know a little more about your role and responsibilities to grant you access.</p>
+<div class="usa-width-one-half standalone-card">
+  <p class="subheading">Requesting Access</p>
+  <h1>Welcome to certify.SBA.gov!</h1>
+  <p class="usa-font-lead">To get started, we'll need to know a little more about your role and responsibilities to grant you access.</p>
 
-<form action="#" class="usa-form">
-  <div class="questions">
-  <fieldset>
-    <legend>What best describes you?</legend>
-    <ul class="usa-unstyled-list">
-      <li>
-        <input id="role-employee" type="radio" name="access_role" value="SBA employee" required>
-        <label for="role-employee">I am an SBA employee</label>
-      </li>
-      <li>
-        <input id="role-contracting-officer" type="radio" name="access_role" value="Contracting Officer" required>
-        <label for="role-contracting-officer">I am an Contracting Officer</label>
-      </li>
-      <li>
-    </ul>
-  </fieldset>
-  </div>
-  <button type="submit" class="usa-button">Next</button>
-</form>
-
+  <form action="#" class="usa-form">
+    <div class="questions">
+    <fieldset>
+      <legend>What best describes you?</legend>
+      <ul class="usa-unstyled-list">
+        <li>
+          <input id="role-employee" type="radio" name="access_role" value="SBA employee" required>
+          <label for="role-employee">I am an SBA employee</label>
+        </li>
+        <li>
+          <input id="role-contracting-officer" type="radio" name="access_role" value="Contracting Officer" required>
+          <label for="role-contracting-officer">I am an Contracting Officer</label>
+        </li>
+        <li>
+      </ul>
+    </fieldset>
+    </div>
+    <button type="submit" class="usa-button">Next</button>
+  </form>
+</div>
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {

@@ -1,0 +1,74 @@
+.action-item {
+  @include align-items(center);
+  @include display(flex);
+  @include justify-content(space-between);
+  @include transition(background-color 1s ease-in-out, border-color 1s ease-in-out);
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-gray-lighter;
+  overflow: hidden;
+  padding: 15px;
+  margin-bottom: 10px;
+
+  &:first-child {
+    margin-top: 4rem;
+  }
+
+  &.approved {
+    background-color: $color-green-lightest;
+    border-color: $color-green;
+  }
+
+  &.rejected {
+    background-color: $color-secondary-lightest;
+    border-color: $color-secondary;
+  }
+
+  &.empty {
+    background-color: $color-gray-lightest;
+  }
+
+  &.approved .action-item__actions a,
+  &.rejected .action-item__actions a{
+    @include transform(translateX(100%));
+    opacity: 0;
+  }
+
+  &.approved .action-item__feedback {
+    color: $color-green;
+  }
+
+  &.rejected .action-item__feedback {
+    color: $color-secondary;
+  }
+
+}
+
+.action-item__actions a {
+  @include transition(all .3s ease-in-out);
+}
+
+.action-item__feedback {
+  @include animation(slideFeedbackIn .2s ease-in-out);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 54px;
+}
+
+.action-item h4,
+.action-item p {
+  margin: 0;
+}
+
+
+@keyframes slideFeedbackIn {
+  from {
+    @include transform(translateX(100%));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateX(0));
+    opacity: 1;
+  }
+}

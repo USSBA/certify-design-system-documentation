@@ -8,12 +8,15 @@
 // Demo Delete this line and import statement when you begin
 @import "certify/certify";
 
-// Stylesheets here are specific to the prototype
+// Stylesheets here are base styles specific to the prototype
 @import "prototype/base/variables";
 @import "prototype/base/utilities";
 @import "prototype/base/buttons";
 @import "prototype/base/forms";
 @import "prototype/base/typography";
+
+// CSS for individual components
+@import "prototype/components/action-items";
 @import "prototype/components/cards";
 @import "prototype/components/boxed-group";
 @import "prototype/components/certify-nav";

@@ -2,6 +2,10 @@
     color: $color-primary;
 }
 
+.usa-color-green {
+  color: $color-green;
+}
+
 .subheading {
   font-family: $font-sans;
   font-size: 1.3rem;
@@ -11,6 +15,10 @@
   letter-spacing: 0.5px;
   margin-bottom: 0.6rem;
   margin-top: 0;
+
+  + h1 {
+    margin-top: 0;
+  }
 }
 
 
