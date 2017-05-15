@@ -15,11 +15,11 @@ layout: analyst
   </ul>
 </section>
 
-<section class="card">
+<section class="card" id="access_requests">
   <header class="card__header">
     <h2 class="card__heading">Access Requests</h2>
   </header>
-  <p>You have received <strong>2</strong> requests to access to certify.SBA.gov</p>
+  <p>You have received <strong>1</strong> request to access to certify.SBA.gov</p>
   <a href="supervisor-access-requests.html" class="usa-button">View requests</a>
 </section>
 
@@ -71,7 +71,8 @@ layout: analyst
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
-
-    
+    if (action_taken == "true") {
+      $('#access_requests').remove();
+    }
   });
 </script>

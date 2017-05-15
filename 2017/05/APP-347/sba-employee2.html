@@ -3,44 +3,47 @@ layout: analyst
 new_analyst: true
 ---
 
-<h1>Where is your duty station?</h1>
+<div class="usa-width-one-half standalone-card">
+  <p class="subheading">Requesting Access</p>
+  <h1>What is your business unit?</h1>
+  <p class="usa-text-small">Select all that apply</p>
+  <form action="" class="usa-form">
+    <div class="questions">
+      <fieldset>
+        <legend class="usa-sr-only">Select your business unit(s)</legend>
+        <ul class="usa-unstyled-list">
+          <li>
+            <input id="bu_area-office" type="checkbox" name="business_unit" value="Area Office">
+            <label for="bu_do">Area Office</label>
+          </li>
+          <li>
+            <input id="bu_cods" type="checkbox" name="business_unit" value="CODS">
+            <label for="bu_cods">CODS</label>
+          </li>
+          <li>
+            <input id="bu_do" type="checkbox" name="business_unit" value="District Office">
+            <label for="bu_do">District Office</label>
+          </li>
+          <li>
+            <input id="bu_hq" type="checkbox" name="business_unit" value="HQ">
+            <label for="bu_hq">HQ</label>
+          </li>
+          <li>
+            <input id="bu_ogc" type="checkbox" name="business_unit" value="Office of General Council (OGC)">
+            <label for="bu_ogc">Office of General Council (OGC)</label>
+          </li>
+          <li>
+            <input id="bu_ogc" type="checkbox" name="business_unit" value="Office of General Council (OGC)">
+            <label for="bu_ogc">Women Owned Small Business (WOSB)</label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
 
-<form action="" class="usa-form">
-  <div class="questions">
-    <fieldset>
-      <legend>What is your business unit?</legend>
-      <ul class="usa-unstyled-list">
-        <li>
-          <input id="bu_area-office" type="checkbox" name="business-unit" value="Area Office">
-          <label for="bu_do">Area Office</label>
-        </li>
-        <li>
-          <input id="bu_cods" type="checkbox" name="business-unit" value="CODS">
-          <label for="bu_cods">CODS</label>
-        </li>
-        <li>
-          <input id="bu_do" type="checkbox" name="business-unit" value="District Office">
-          <label for="bu_do">District Office</label>
-        </li>
-        <li>
-          <input id="bu_hq" type="checkbox" name="business-unit" value="HQ">
-          <label for="bu_hq">HQ</label>
-        </li>
-        <li>
-          <input id="bu_ogc" type="checkbox" name="business-unit" value="Office of General Council (OGC)">
-          <label for="bu_ogc">Office of General Council (OGC)</label>
-        </li>
-        <li>
-          <input id="bu_ogc" type="checkbox" name="business-unit" value="Office of General Council (OGC)">
-          <label for="bu_ogc">Women Owned Small Business (WOSB)</label>
-        </li>
-      </ul>
-    </fieldset>
-  </div>
-
-  <button type="submit" class="usa-button">Next</button>
-  <a href="#" class="usa-button usa-button-knockout" onclick="javascript:window.history.back();">Go Back</a>
-</form>
+    <button type="submit" class="usa-button">Next</button>
+    <a href="#" class="usa-button usa-button-knockout" onclick="javascript:window.history.back();">Go Back</a>
+  </form>
+</div>
 
 <!-- This script will mimic the interaction we want to see -->
 <script>
