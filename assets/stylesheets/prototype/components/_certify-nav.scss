@@ -41,12 +41,13 @@
   @include media($nav-width) {
     @include flex-grow(0);
     display: block;
-    height:.9rem;
-    margin-right: 3rem
+    height: 1.7rem;
+    margin-right: 1rem;
   }
 
   @include media($nav-width + 100) {
     height: 2.2rem;
+    margin-right: 3rem
   }
 }
 
@@ -127,6 +128,7 @@
 
     @include media($nav-width) {
       margin-bottom: 0;
+      margin-right: 0;
     }
   }
 }
