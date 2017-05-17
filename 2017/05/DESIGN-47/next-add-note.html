@@ -14,16 +14,16 @@ layout: analyst_application
     <form action="#" class="usa-form">
       <div class="questions">
       <fieldset>
-        <legend class="usa-sr-only">Message</legend>
+        <legend>Your Note</legend>
         <label for="note-subject">Subject</label>
-        <input type="text" id="note-subject" value="Screening Assesment"/>
-        <label for="note-message" class="usa-sr-only">Message</label>
+        <input type="text" id="note-subject" value="Screening Assessment"/>
+        <label for="note-message">Message</label>
         <textarea id="note-message" placeholder="Write message here"></textarea>
       </fieldset>
       <fieldset class="question">
-        <h4>Tags</h4>
+        <legend>Tags</legend>
           <div class="usa-width-one-half">
-            <ul class="usa-unstyled-list">
+            <ul class="tag-selection-list">
               <li>
                 <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
                 <label for="note-tag--BOS-Analysis">BOS Analysis</label>
@@ -47,7 +47,7 @@ layout: analyst_application
             </ul>
           </div>
           <div class="usa-width-one-half">
-            <ul class="usa-unstyled-list">
+            <ul class="tag-selection-list">
               <li>
                 <input id="note-tag--Potential-for-Success" type="checkbox" name="note-tags" value="Potential for Success">
                 <label for="note-tag--Potential-for-Success">Potential for Success</label>
