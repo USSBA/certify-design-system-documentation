@@ -31,8 +31,7 @@
 
   @include media($nav-width) {
     @include flex-wrap(nowrap);
-    margin-bottom: -2rem;
-    padding-bottom: 0;
+    padding-bottom: 3.2rem;
     padding-top: 8rem;
   }
 }

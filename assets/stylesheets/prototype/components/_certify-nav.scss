@@ -140,6 +140,14 @@
   }
 }
 
+.certify-global-nav .usa-nav-primary > li.current > a,
+.certify-global-nav .usa-nav-primary > li.current button {
+  
+  @include media($nav-width) {
+    background-color: rgba(255,255,255, .1);
+  }
+}
+
 .certify-global-nav .usa-nav-primary > li > a,
 .certify-global-nav .usa-nav-primary button {
 
@@ -160,6 +168,8 @@
     }
   }
 }
+
+
 
 .certify-global-nav .usa-nav-primary button[aria-expanded] {
   @include media($nav-width) {
@@ -228,6 +238,12 @@
   }
 }
 
+.vendor-global-nav {
+  @include media($nav-width) {
+    background-color: $color-base;
+  }
+}
+
 /* U.S. Web Design Standards Overrides ===================================*/
 .usa-nav-primary button[aria-expanded=true],
 .usa-nav-primary button[aria-expanded=false] {
@@ -238,7 +254,7 @@
 // Local Nav ===================================*/
 .certify-local-nav {
   @include media($nav-width) {
-    padding-top: 4.8rem;
+    margin-top: -1rem;
   }
 }
 
