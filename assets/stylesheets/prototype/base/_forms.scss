@@ -3,6 +3,13 @@
   margin-left: 8px;
 }
 
+// Links inside labels {
+label a {
+  position: relative;
+  z-index: 1000;
+}
+
+
 // Followup quesitons
 .certify-followup {
   border-left: 3px solid $color-gray-lighter;
@@ -25,4 +32,50 @@
 
 .actions__alt {
   float: right;
+}
+
+// Password Meter
+.password-strength {
+  padding-top: .2rem;
+  p {
+    margin-top: .2rem;
+  }
+}
+
+.password-meter {
+  @include display(flex);
+  @include justify-content(space-between);
+  max-width: 46rem;
+
+
+}
+
+.password-meter--1,
+.password-meter--2,
+.password-meter--3 {
+  background-color: $color-gray-lighter;
+  display: inline-block;
+  height: 5px;
+  width: 33%;
+}
+
+.very-weak {
+  .password-meter--1 {
+    background-color: $color-secondary;
+  }
+}
+
+.weak {
+  .password-meter--1,
+  .password-meter--2 {
+    background-color: $color-gold;
+  }
+}
+
+.strong {
+  .password-meter--1,
+  .password-meter--2,
+  .password-meter--3 {
+    background-color: $color-green;
+  }
 }
