@@ -4,10 +4,11 @@ layout: application
 
 <div class="usa-grid-full">
   <h1>Thank you, <span data-print="user_first_name"></span>!</h1>
-  <p class="usa-font-lead">You will recieve an email with a verification link at <strong data-print="user_email"></strong> in the next 24 hours.</p>
-  <p>If you do not receive an email from us:</p>
+  <p class="usa-font-lead">You will recieve an email with a verification link at <strong data-print="user_email"></strong> in the next 48 hours.</p>
+
+  <h2>If you don’t get an email from us…</h2>
   <ul>
-    <li>Check that your email address above. If it is not typed correctly, please <a href="create-account.html">create a new account</a>.</li>
+    <li>Check your email address above. If it is not typed correctly, please <a href="create-account.html">create a new account</a>.</li>
     <li>Check your spam folder</li>
     <li>Add <strong>certify@sba.gov</strong> to your contacts or approved list.</li>
   </ul>
@@ -17,8 +18,6 @@ layout: application
 </div>
   <script>
     $(document).ready(function() {
-
-
 
       $('form').on('submit', function() {
         if (!checkValidityIfSupported($('form').get(0))) {

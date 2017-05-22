@@ -4,8 +4,8 @@ layout: application
 
 <div class="usa-grid-full">
   <h1>Create certify.SBA.gov Account</h1>
-  <p class="usa-font-lead">Before you get started, make sure your business has a <a href="https://sam.gov">SAM.gov</a> account. We will need your information from <a href="https://sam.gov">SAM.gov</a> in order to associate your business with certify.SBA.gov.</p>
-
+  <p class="usa-font-lead">Before you get started, make sure your business has a <a href="https://sam.gov">SAM.gov</a> account. We will need your information from <a href="https://sam.gov">SAM.gov</a> in order to connect your business with certify.SBA.gov.</p>
+  <p>You must be an owner or legal representative of the firm registering for certify.SBA.gov and have signature authority on the firm’s behalf.</p>
   <div class="usa-width-two-thirds">
     <form action="#" class="usa-form">
       <div class="questions">
@@ -24,6 +24,10 @@ layout: application
               <label for="user_email">Email Address</label>
               <input type="email" id="user_email" required>
             </li>
+            <li>
+              <label for="user_email_confirmation">Confirm Email Address</label>
+              <input type="email" id="user_email_confirmation" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off required>
+            </li>
           </ul>
         </fieldset>
 
@@ -32,7 +36,7 @@ layout: application
       <div class="actions">
         <div class="actions__main">
           <button type="submit">Continue</button>
-          <p>Next you will create a passphrase</p>
+          <p class="actions__next">Next you will create a password.</p>
         </div>
       </div>
     </form>
