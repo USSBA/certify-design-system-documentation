@@ -1,0 +1,62 @@
+---
+layout: application
+---
+
+<div class="usa-grid-full">
+  <h1>Create New Account</h1>
+  <p class="usa-font-lead">Before you get started, make sure your business has a <a href="https://sam.gov">SAM.gov</a> account. We will need your information from <a href="https://sam.gov">SAM.gov</a> in order to associate your business with certify.SBA.gov.</p>
+
+  <div class="usa-width-two-thirds">
+    <form action="#" class="usa-form">
+      <div class="questions">
+        <fieldset>
+          <legend class="usa-sr-only">Name and email</legend>
+          <ul class="usa-unstyled-list">
+            <li>
+              <label for="user_first_name">First Name</label>
+              <input type="text" id="user_first_name" required>
+            </li>
+            <li>
+              <label for="user_last_name">Last Name</label>
+              <input type="text" id="user_last_name" required>
+            </li>
+            <li>
+              <label for="user_email">Email Address</label>
+              <input type="email" id="user_email" required>
+            </li>
+          </ul>
+        </fieldset>
+
+        <p>[RECAPTHCA HERE]</p>
+      </div>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Continue</button>
+          <p>Next you will create a passphrase</p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <aside class="usa-width-one-third">
+    <h2>Are you a federal employee?</h2>
+    <p>If you are a federal government employee or SBA contracting officer, please visit the <a href="#">employee account page</a>.</p>
+    <h2>Already have an account?</h2>
+    <p>If you have already registered for a certify.SBA.gov account, please <a href="#">sign in</a>.</p>
+  </aside>
+
+</div>
+  <script>
+    $(document).ready(function() {
+      $('form').on('submit', function() {
+        if (!checkValidityIfSupported($('form').get(0))) {
+          return false;
+        }
+        else {
+          updateStoredData();
+          nextPage("email-passphrase.html");
+          return false;
+        }
+      });
+    });
+  </script>

@@ -8,7 +8,16 @@
 
     {% include _header.html %}
 
-    {{ content }}
+    <section class="usa-grid-full">
+      <article id="main-content">
+        {{ content }}
+      </article>
+    </section>
+
+
+    <div class="usa-one-whole">
+      <a class="return_to_top" href="#top">Return to top</a>
+    </div>
 
     {% include _footer.html %}
 

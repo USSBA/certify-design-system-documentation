@@ -1,0 +1,34 @@
+---
+layout: application
+---
+
+<div class="usa-grid-full">
+  <h1>Thank you, <span data-print="user_first_name"></span>!</h1>
+  <p class="usa-font-lead">You will recieve an email with a verification link at <strong data-print="user_email"></strong> in the next 24 hours.</p>
+  <p>If you do not recieve an email from us:</p>
+  <ul>
+    <li>Check your spam folder</li>
+    <li>Add certify@sba.gov to your contacts or approved list.</li>
+    <li>Double check that your email address above is typed correctly. If it contains an error, you may resubmit the application.</li>
+  </ul>
+
+
+
+</div>
+  <script>
+    $(document).ready(function() {
+
+
+
+      $('form').on('submit', function() {
+        if (!checkValidityIfSupported($('form').get(0))) {
+          return false;
+        }
+        else {
+          updateStoredData();
+          nextPage("confirm.html");
+          return false;
+        }
+      });
+    });
+  </script>
