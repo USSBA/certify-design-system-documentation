@@ -13,7 +13,7 @@ layout: application
           <ul class="usa-unstyled-list">
             <li>
               <label for="user_password">Password</label>
-              <a aria-controls="password" class="usa-show_multipassword pass-margin-left" href="#" title="Show my typing">Show my typing</a>
+              <a aria-controls="user_password" class="usa-show_multipassword pass-margin-left" href="#" title="Show my typing">Show my typing</a>
               <input autocomplete="off" id="user_password" name="user[password]" type="password" required>
               <div class="password-strength">
                 <div id="password-meter" class="password-meter" aria-hidden="true">
@@ -51,6 +51,7 @@ layout: application
   </div>
 
   <aside class="usa-width-one-third">
+    <!-- DEVS: I'm not sure guidelines for the passwords. Please me know the requirements-->
     <h2>How to create a strong password</h2>
     <ul>
       <li>Use a minimum of 19 characters</li>
@@ -63,6 +64,8 @@ layout: application
 </div>
   <script>
     $(document).ready(function() {
+
+      /* DEVS: This mocks the validation behavior but doesn't actually do it*/
 
      $('#user_password').on("keydown", function(){
        if ( $(this).val().length < 9 ) {
