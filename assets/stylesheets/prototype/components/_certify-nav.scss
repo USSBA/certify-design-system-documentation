@@ -92,9 +92,15 @@
   @include flex-direction(column);
 
   @include media($nav-width) {
-    @include flex-grow(1);
-    display: block;
+    // Non flexbox
     width: auto;
+    display: block;
+
+    // For flexbox
+    @include align-items(center);
+    @include display(flex);
+    @include flex-grow(1);
+    @include flex-direction(row);
   }
 }
 
@@ -127,6 +133,7 @@
     margin-bottom: 3rem;
 
     @include media($nav-width) {
+      @include order(3);
       margin-bottom: 0;
       margin-right: 0;
     }
@@ -138,6 +145,10 @@
 
   @include media($nav-width) {
     color: white;
+
+    span {
+      line-height: 1.2;
+    }
 
     &:hover {
       background-color: $color-primary-darker;
@@ -189,12 +200,19 @@
 .certify-case-search {
 
   @include media($nav-width) {
+    height: 4.8rem;
     margin: -.5rem 5rem 0 1rem;
+    max-width: 21rem;
   }
 
   .usa-search {
     margin-right: 0;
+    top: 1rem;
     width: 100%;
+
+    div[role="search"] {
+      height: 3.3rem
+    }
   }
 
   .usa-search.usa-search-small [type="submit"],
@@ -206,8 +224,6 @@
 .certify-case-search .usa-search-small {
 
   @include media($nav-width) {
-    position: relative;
-    top: 1.3rem;
     width: 100%;
   }
 }
