@@ -9,6 +9,16 @@
   }
 }
 
+.masthead--vendor .certify-navbar {
+  background: $color-base;
+  border-bottom: 1px solid $color-base;
+
+  @include media($nav-width) {
+    background-color: transparent;
+    display: none;
+  }
+}
+
 .certify-navbar .certify-logo {
   margin-top: .4rem;
   width: 20rem;
@@ -70,6 +80,13 @@
     position: absolute;
     top: 0;
     width: 100%;
+  }
+}
+
+// Global Nav for Vendors
+.masthead--vendor .certify-global-nav{
+  @include media($nav-width) {
+    background-color: $color-base;
   }
 }
 
@@ -140,6 +157,14 @@
   }
 }
 
+.certify-global-nav .usa-nav-primary > li.current > a,
+.certify-global-nav .usa-nav-primary > li.current button {
+
+  @include media($nav-width) {
+    background-color: rgba(255,255,255, .1);
+  }
+}
+
 .certify-global-nav .usa-nav-primary > li > a,
 .certify-global-nav .usa-nav-primary button {
 
@@ -160,6 +185,8 @@
     }
   }
 }
+
+
 
 .certify-global-nav .usa-nav-primary button[aria-expanded] {
   @include media($nav-width) {
@@ -238,7 +265,7 @@
 // Local Nav ===================================*/
 .certify-local-nav {
   @include media($nav-width) {
-    padding-top: 4.8rem;
+    margin-top: -1rem;
   }
 }
 

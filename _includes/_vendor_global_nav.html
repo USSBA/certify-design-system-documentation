@@ -1,4 +1,4 @@
-<div class="certify-global-nav">
+<div class="certify-global-nav vendor-global-nav">
   <div class="usa-grid-full">
     <div class="certify-global-nav__primary">
       <a href="#" class="certify-logo__link">
@@ -11,42 +11,12 @@
           {% else %}
             #
           {% endif %}">
-            <span>Dashboard</span>
+            <span>My Dashboard</span>
           </a>
-        </li>
-        <li>
-          <button class="
-          usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="side-nav-1">
-            <span>Cases</span>
-          </button>
-          <ul id="side-nav-1" class="usa-nav-submenu">
-            <li>
-              <a href="#">My Cases</a>
-            </li>
-            <li>
-              <a href="#">All Cases</a>
-            </li>
-          </ul>
-        </li>
-        <li class="certify-case-search">
-          <form class="usa-search usa-search-small">
-            <div role="search">
-              <label class="usa-sr-only" for="search-field-small">Search small</label>
-              <input id="search-field-small" type="search" name="search">
-              <button type="submit">
-                <span class="usa-sr-only">Search</span>
-              </button>
-            </div>
-          </form>
         </li>
       </ul>
     </div>
     <ul class="usa-nav-primary usa-accordion">
-      <li>
-        <a class="usa-nav-link" href="#">
-          <span>Admin</span>
-        </a>
-      </li>
       <li>
         <a class="usa-nav-link" href="#">
           <span>Notifications</span>
@@ -59,7 +29,16 @@
         </button>
         <ul id="side-nav-2" class="usa-nav-submenu">
           <li>
-            <a href="#">Edit</a>
+            <a href="{% if page.my_business_link %}
+              {{ page.my_business_link }}
+            {% else %}
+              #
+            {% endif %}">
+              <span>My Business</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">Document Library</a>
           </li>
           <li>
             <a href="#">Settings</a>
