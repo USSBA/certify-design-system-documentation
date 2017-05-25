@@ -7,7 +7,18 @@
 
 .masthead__primary-heading {
   font-family: $font-sans;
-  margin: 0;
+  font-size: 2.6rem;
+  padding-top: 2rem;
+
+  @include media($article-max-width) {
+    font-size: 3rem;
+    padding-top: 1rem;
+  }
+
+  @include media($nav-width) {
+    font-size: 4rem;
+    padding-top: 0;
+  }
 }
 
 .masthead__secondary-heading {
