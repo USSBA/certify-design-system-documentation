@@ -7,15 +7,8 @@ new_analyst: true
   <p class="subheading">Requesting Access</p>
   <h1>You would like to use certify.SBA.gov as:</h1>
   <p class="usa-font-lead usa-color-green"><strong data-print="access_role"></strong></p>
-
-  <p><strong>Program:</strong> <span data-print="program"></span></p>
-  <div id="8a_only">
-    <p><strong>Business Unit:</strong> <span data-print="business_unit"></span></p>
-    <p><strong>Duty Station:</strong> <span data-print="duty_station"></span></p>
-  </div>
-
   <form action="#" class="usa-form">
-    <button type="submit">Submit Request</button>
+    <button type="submit">Submit</button>
     <a href="#" onclick="javascript:window.history.back();" class="usa-button usa-button-knockout">Go Back</a>
   </form>
 </div>
@@ -23,10 +16,6 @@ new_analyst: true
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
-
-    if ((typeof program_8a == "undefined") || (program_8a == "no")) {
-      $("#8a_only").remove();
-    }
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {

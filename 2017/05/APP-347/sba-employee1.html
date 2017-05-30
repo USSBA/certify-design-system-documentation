@@ -12,19 +12,21 @@ new_analyst: true
         <legend class="usa-sr-only">Choose your SBA Program</legend>
         <ul class="usa-unstyled-list">
           <li>
-            <input id="program_8a" type="radio" name="program" value="8(a) Business Development Program" required>
+            <input id="program_8a" type="checkbox" name="program" value="8(a) Business Development Program">
             <label for="program_8a">8(a) Business Development Program</label>
           </li>
+          <!--
           <li>
-            <input id="program_HUBZone" type="radio" name="program" value="HUBZone" required>
+            <input id="program_HUBZone" type="checkbox" name="program" value="HUBZone">
             <label for="program_HUBZone">HUBZone</label>
           </li>
+          -->
           <li>
-            <input id="program_WOSB" type="radio" name="program" value="Women Owned Small Business (WOSB)" required>
+            <input id="program_WOSB" type="checkbox" name="program" value="Women Owned Small Business (WOSB)">
             <label for="program_WOSB">Women Owned Small Business (WOSB)</label>
           </li>
           <li>
-            <input id="program_MPP" type="radio" name="program" value="Mentor-Protégé Program (MPP)" required>
+            <input id="program_MPP" type="checkbox" name="program" value="Mentor-Protégé Program (MPP)">
             <label for="program_MPP">Mentor-Protégé Program (MPP)</label>
           </li>
         </ul>
@@ -46,7 +48,13 @@ new_analyst: true
       }
       else {
         updateStoredData();
-        nextPage("sba-employee2.html");
+
+        if (program_8a == "yes") {
+          nextPage("sba-employee2.html");
+        }
+        else {
+          nextPage("send-request.html");
+        }
         return false;
       }
     });

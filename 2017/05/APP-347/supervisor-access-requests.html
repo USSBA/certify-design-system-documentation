@@ -14,11 +14,12 @@ dashboard_link: supervisor-dashboard.html
     <div class="action-item__context">
       <h4 class="action-item__title">Lindsey Summers</h4>
       <p><strong>Role:</strong> <span data-print="access_role"></span></p>
-      <div id="employee_only">
-        <p><strong>Program:</strong> <span data-print="program"></span></p>
+      <p><strong>Program:</strong> <span data-print="program"></span></p>
+
+      <div id="program8a_only">
         <p><strong>Business Unit:</strong> <span data-print="business_unit"></span></p>
         <p><strong>Duty Station:</strong> <span data-print="duty_station"></span></p>
-      </div>
+        </div>
     </div>
     <div class="action-item__actions">
       <a id="reject" class="usa-button usa-button-secondary" href="#">Reject</a>
@@ -39,8 +40,8 @@ dashboard_link: supervisor-dashboard.html
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
-    if (access_role == "Contracting Officer") {
-      $("#employee_only").remove();
+    if (program_8a == "no") {
+      $("#program8a_only").remove();
     };
 
     if ((typeof action_taken != 'undefined') && (action_taken == "true")) {
