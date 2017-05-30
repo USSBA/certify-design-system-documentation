@@ -14,12 +14,16 @@ new_analyst: true
       <legend>What best describes you?</legend>
       <ul class="usa-unstyled-list">
         <li>
-          <input id="role-employee" type="radio" name="access_role" value="SBA employee" required>
-          <label for="role-employee">I am an SBA employee</label>
+          <input id="role-employee" type="radio" name="access_role" value="SBA Supervisor" required>
+          <label for="role-employee">I am a SBA Supervisor</label>
+        </li>
+        <li>
+          <input id="role-employee" type="radio" name="access_role" value="SBA Analyst" required>
+          <label for="role-employee">I am a SBA Analyst</label>
         </li>
         <li>
           <input id="role-contracting-officer" type="radio" name="access_role" value="Contracting Officer" required>
-          <label for="role-contracting-officer">I am an Contracting Officer</label>
+          <label for="role-contracting-officer">I am a Contracting Officer</label>
         </li>
         <li>
       </ul>
@@ -40,7 +44,7 @@ new_analyst: true
         updateStoredData();
 
         if (access_role == "Contracting Officer") {
-          nextPage("send-request.html");
+          nextPage("send-request-co.html");
         }
 
         else {
