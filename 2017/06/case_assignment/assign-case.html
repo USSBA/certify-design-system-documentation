@@ -1,0 +1,122 @@
+---
+layout: analyst_application
+---
+
+<h1>Assign This Application</h1>
+<p class="usa-font-lead">Select a CODS Analyst to review this case</p>
+
+<form action="#" class="usa-form">
+  <fieldset>
+    <legend>CODS Analysts</legend>
+    <div class="usa-width-one-half">
+      <ul class="usa-unstyled-list">
+        <li>
+          <input id="Frank_Apple" type="radio" name="cods_analyst" value="Frank Apple" required>
+          <label for="Frank_Apple">Frank Apple</label>
+        </li>
+        <li>
+          <input id="Alana_Butterfield" type="radio" name="cods_analyst" value="Alana Butterfield" required>
+          <label for="Alana_Butterfield">Alana Butterfield</label>
+        </li>
+        <li>
+          <input id="Sally_Christiansen" type="radio" name="cods_analyst" value="Sally Christiansen" required>
+          <label for="Sally_Christiansen">Sally Christiansen</label>
+        </li>
+        <li>
+          <input id="Bud_Dvorak" type="radio" name="cods_analyst" value="Bud Dvorak" required>
+          <label for="Bud_Dvorak">Bud Dvorak</label>
+        </li>
+        <li>
+          <input id="Sam_Ecker" type="radio" name="cods_analyst" value="Sam Ecker" required>
+          <label for="Sam_Ecker">Sam Ecker</label>
+        </li>
+        <li>
+          <input id="Bradley_Faustino" type="radio" name="cods_analyst" value="Bradley Faustino" required>
+          <label for="Bradley_Faustino">Bradley Faustino</label>
+        </li>
+        <li>
+          <input id="Mary_Guttenburg" type="radio" name="cods_analyst" value="Mary Guttenburg" required>
+          <label for="Mary_Guttenburg">Mary Guttenburg</label>
+        </li>
+        <li>
+          <input id="Fred_Hair" type="radio" name="cods_analyst" value="Fred Hair" required>
+          <label for="Fred_Hair">Fred Hair</label>
+        </li>
+        <li>
+          <input id="Theresa_Ipsum" type="radio" name="cods_analyst" value="Theresa Ipsum" required>
+          <label for="Theresa_Ipsum">Theresa Ipsum</label>
+        </li>
+        <li>
+          <input id="George_Janker" type="radio" name="cods_analyst" value="George Janker" required>
+          <label for="George_Janker">George Janker</label>
+        </li>
+      </ul>
+    </div>
+    <div class="usa-width-one-half">
+      <ul class="usa-unstyled-list">
+        <li>
+          <input id="Kris_Kerfuffle" type="radio" name="cods_analyst" value="Kris Kerfuffle" required>
+          <label for="Kris_Kerfuffle">Kris Kerfuffle</label>
+        </li>
+        <li>
+          <input id="Bart_Limey" type="radio" name="cods_analyst" value="Bart Limey" required>
+          <label for="Bart_Limey">Bart Limey</label>
+        </li>
+        <li>
+          <input id="Allie_Melver" type="radio" name="cods_analyst" value="Allie Melver" required>
+          <label for="Allie_Melver">Allie Melver</label>
+        </li>
+        <li>
+          <input id="John_Nickleson" type="radio" name="cods_analyst" value="John Nickleson" required>
+          <label for="John_Nickleson">John Nickleson</label>
+        </li>
+        <li>
+          <input id="Steve_Operasinger" type="radio" name="cods_analyst" value="Steve Operasinger" required>
+          <label for="Steve_Operasinger">Steve Operasinger</label>
+        </li>
+        <li>
+          <input id="Marcella_Pips" type="radio" name="cods_analyst" value="Marcella Pips" required>
+          <label for="Marcella_Pips">Marcella Pips</label>
+        </li>
+        <li>
+          <input id="Sal_Quints" type="radio" name="cods_analyst" value="Sal Quints" required>
+          <label for="Sal_Quints">Sal Quints</label>
+        </li>
+        <li>
+          <input id="Telly_Raspa" type="radio" name="cods_analyst" value="Telly Raspa" required>
+          <label for="Telly_Raspa">Telly Raspa</label>
+        </li>
+        <li>
+          <input id="Bo_Smith" type="radio" name="cods_analyst" value="Bo Smith" required>
+          <label for="Bo_Smith">Bo Smith</label>
+        </li>
+        <li>
+          <input id="Flip_Tock" type="radio" name="cods_analyst" value="Flip Tock" required>
+          <label for="Flip_Tock">Flip Tock</label>
+        </li>
+      </ul>
+    </div>
+  </fieldset>
+  <div class="actions">
+    <div class="actions__main">
+      <button type="submit" class="usa-button">Select</button>
+    </div>
+  </div>
+</form>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("assign-confirm.html");
+        return false;
+      }
+    });
+  });
+</script>

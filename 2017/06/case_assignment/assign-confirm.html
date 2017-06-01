@@ -1,0 +1,28 @@
+---
+layout: analyst_application
+---
+
+<h1>Assign to <span data-print="cods_analyst"></span>?</h1>
+<p class="usa-font-lead">Something that describes what happens next.</p>
+
+<!-- Form here is just for the prototype functionality. Should not be form here -->
+<form action="#" class="usa-form">
+      <button type="submit" class="usa-button">Assign Case</span> </button>
+</form>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("cods-analyst-card.html");
+        return false;
+      }
+    });
+  });
+</script>
