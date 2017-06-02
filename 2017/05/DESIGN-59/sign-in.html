@@ -8,7 +8,7 @@ layout: application
       <div class="usa-alert usa-alert-info hidden">
         <div class="usa-alert-body">
           <h3 class="usa-alert-heading">Verify Your Account</h3>
-          <p class="usa-alert-text">Check your inbox at <strong data-print="email"></strong> for a verfication email from certify.SBA.gov. If you did not recieve it, you can <a href="resend-verification.html">resend verification link</a></p>
+          <p class="usa-alert-text">To sign in, you must first verify your email address. Check your <strong data-print="email"></strong> inbox for an email with a verification link. If you did not receive it, you can <a href="resend-verification.html">send a new verification link</a>.</p>
         </div>
       </div>
 
@@ -19,19 +19,19 @@ layout: application
           <input type="hidden" name="authenticity_token" value="hf98hyn4PKgvVeed48VP15ZF1IRiCGrf6Vt/cNwOfh7+CGBJNJehfh2xIMKFLT5P8NQmzE+hssImQcbvmu+yLw=="><fieldset>
             <label for="email">Email</label>
             <input type="email" name="user[email]" id="email">
-            <label for="password">Passpword</label>
+            <label for="password">Password</label>
             <input type="password" name="user[password]" id="password">
-            <input type="submit" name="commit" value="Sign-in" id="business_signin">
+            <input type="submit" name="commit" value="Sign in" id="business_signin">
           </fieldset>
         </form>
         <p><a href="forgot-password.html">Forgot your password?</a></p>
-        <p> For your security, there is a maximum of 3 invalid login attempts before you will be automatically locked out and have to wait 15 minutes before attempting again.</p>
+        <p> For your security, after 3 failed login attempts you’ll be automatically locked out and must wait 15 minutes before you try to sign in again.</p>
       </div>
       <aside class="usa-width-one-third">
-        <h2>Are you a Federal employee?</h2>
-        <p>If you are a Federal employee or an SBA contracting officer, please visit the <a href="#">employee account page</a>.</p>
+        <h2>Are you a federal employee?</h2>
+        <p>If you are a federal employee or an SBA contracting officer, please visit the <a href="#">employee account page</a>.</p>
         <h2>New to certify.SBA.gov?</h2>
-        <p>If you are new to certify.SBA.gov account, please <a href="sign-in.html">create an account</a>.</p>
+        <p>If you are new to certify.SBA.gov, please <a href="sign-in.html">create an account</a>.</p>
       </aside>
     </article>
   </section>
