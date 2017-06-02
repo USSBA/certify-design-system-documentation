@@ -12,12 +12,14 @@
 
   @include media($article-max-width) {
     font-size: 3rem;
+    margin-bottom: 0;
     padding-top: 1rem;
   }
 
   @include media($nav-width) {
     font-size: 4rem;
     padding-top: 0;
+
   }
 }
 
