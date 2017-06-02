@@ -1,0 +1,59 @@
+---
+layout: application
+---
+
+<div id="login-new">
+  <section class="usa-width-one-whole">
+    <article>
+      <div class="usa-alert usa-alert-info hidden">
+        <div class="usa-alert-body">
+          <h3 class="usa-alert-heading">Verify Your Account</h3>
+          <p class="usa-alert-text">Check your inbox at <strong data-print="email"></strong> for a verfication email from certify.SBA.gov. If you did not recieve it, you can <a href="resend-verification.html">resend verification link</a></p>
+        </div>
+      </div>
+
+      <h1>Sign in to certify.SBA.gov</h1>
+      <div class="usa-width-two-thirds">
+        <form class="new_user" id="new_user" action="#" accept-charset="UTF-8" method="post">
+          <input name="utf8" type="hidden" value="✓">
+          <input type="hidden" name="authenticity_token" value="hf98hyn4PKgvVeed48VP15ZF1IRiCGrf6Vt/cNwOfh7+CGBJNJehfh2xIMKFLT5P8NQmzE+hssImQcbvmu+yLw=="><fieldset>
+            <label for="email">Email</label>
+            <input type="email" name="user[email]" id="email">
+            <label for="password">Passpword</label>
+            <input type="password" name="user[password]" id="password">
+            <input type="submit" name="commit" value="Sign-in" id="business_signin">
+          </fieldset>
+        </form>
+        <p><a href="forgot-password.html">Forgot your password?</a></p>
+        <p> For your security, there is a maximum of 3 invalid login attempts before you will be automatically locked out and have to wait 15 minutes before attempting again.</p>
+      </div>
+      <aside class="usa-width-one-third">
+        <h2>Are you a Federal employee?</h2>
+        <p>If you are a Federal employee or an SBA contracting officer, please visit the <a href="#">employee account page</a>.</p>
+        <h2>New to certify.SBA.gov?</h2>
+        <p>If you are new to certify.SBA.gov account, please <a href="sign-in.html">create an account</a>.</p>
+      </aside>
+    </article>
+  </section>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        if (email == "") {
+          return false;
+        }
+        else {
+          $('.usa-alert').removeClass('hidden');
+        }
+
+        return false;
+      }
+    });
+  });
+</script>
