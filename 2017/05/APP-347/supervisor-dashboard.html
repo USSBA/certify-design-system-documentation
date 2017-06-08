@@ -3,70 +3,103 @@ layout: analyst
 global_nav_active: Dashboard
 ---
 
-<h1>Dashboard</h1>
+<!-- See the alerts.scss for small modification on the web design standards alerts -->
+<div class="usa-alert usa-alert-info" id="access_requests">
+  <div class="usa-alert-body">
+    <h3 class="usa-alert-heading">New Access Requests</h3>
+    <p class="usa-alert-text">You have received <strong>1</strong> request to access to certify.SBA.gov</p>
+  </div>
+  <div class="usa-alert-action">
+    <a href="supervisor-access-requests.html" class="usa-button">View requests</a>
+  </div>
+</div>
+
+<h1>My Dashboard</h1>
 
 <section class="card">
   <header class="card__header">
-    <h2 class="card__heading">My Tasks</h2>
-  </header>
-  <ul class="usa-unstyled-list">
-    <li><a href="#">Sunsystems Inc. - 8(a) Initial</a> was due last month (01/23/17)</li>
-    <li><a href="#">Mike's Garage - 8(a) Inital</a> was due last week (02/14/17)</li>
-    <li><a href="#">American Drilling - 8(a) Initial</a> is due tomorrow (02/27/17)</li>
-  </ul>
-</section>
-
-<section class="card" id="access_requests">
-  <header class="card__header">
-    <h2 class="card__heading">Access Requests</h2>
-  </header>
-  <p>You have received <strong>1</strong> request to access to certify.SBA.gov</p>
-  <a href="supervisor-access-requests.html" class="usa-button">View requests</a>
-</section>
-
-<section class="card">
-  <header class="card__header">
-    <h2 class="card__heading">My Recent Cases</h2>
+    <h2 class="card__heading">My Workload</h2>
+    <p>You are either the case owner or are working on the cases below.</p>
   </header>
   <table>
     <thead>
       <tr>
-        <th>Case</th>
-        <th>DUNS</th>
+        <th>Firm Name</th>
         <th>Status</th>
-        <th>Due Date</th>
-        <th>Current Reviewer</th>
-        <th>Office</th>
+        <th>Date Submitted</th>
+        <th>DUNS</th>
+        <th>Case Owner</th>
+        <th>Currently With</th>
+        <th>Next Due Date</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
-        <td>183123821</td>
         <td>Screening</td>
-        <td>01/23/17</td>
+        <td>03/15/17</td>
+        <td>7483928472</td>
         <td>Frank Apple</td>
-        <td>PA CODS</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
       </tr>
       <tr>
-        <th><a href="#">American Drilling - 8(a) Initial</a></th>
-        <td>183123821</td>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
-        <td>01/23/17</td>
-        <td>Mary Watson</td>
-        <td>PA CODS</td>
+        <td>03/15/17</td>
+        <td>7483928472</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
       </tr>
       <tr>
-        <th><a href="#">Sunsystems Inc. - 8(a) Initial</a></th>
-        <td>183123821</td>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
-        <td>01/23/17</td>
-        <td>Hank Smith</td>
-        <td>PA CODS</td>
+        <td>03/15/17</td>
+        <td>7483928472</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>7483928472</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>7483928472</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>7483928472</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>7483928472</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
       </tr>
     </tbody>
   </table>
-  <a href="#">View all of my cases</a>
+  <a href="#" class="usa-button usa-button-big">View all cases</a>
 </section>
 
 <!-- This script will mimic the interaction we want to see -->

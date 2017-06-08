@@ -1,0 +1,6 @@
+.usa-alert {
+  @include media($article-max-width) {
+    @include display(flex);
+    @include justify-content(space-between);
+  }
+}
