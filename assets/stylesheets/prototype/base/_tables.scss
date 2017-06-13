@@ -2,3 +2,27 @@ tr.highlight--blue > th,
 tr.highlight--blue > td {
   background-color: $color-primary-alt-lightest;
 }
+
+thead .sorting {
+  background-image: url('../img/sortable.png');
+  background-image: url('../img/sortable.svg');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: auto 18px;
+}
+
+thead .sorting_asc {
+  background-image: url('../img/sort-up.png');
+  background-image: url('../img/sort-up.svg');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: auto 9px;
+}
+
+thead .sorting_desc {
+  background-image: url('../img/sort-down.png');
+  background-image: url('../img/sort-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: auto 9px;
+}
