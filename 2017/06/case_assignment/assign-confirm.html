@@ -1,0 +1,44 @@
+---
+layout: analyst
+---
+
+<h1>This case been assigned to <span data-print="cods_analyst"></span></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Screening Due Date</th>
+      <th>Applicant Firm Location</th>
+      <th>Applicant Firm Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>06/21/17</td>
+      <td>Seattle, WA</td>
+      <td><a href="#">Televares Software Development</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Form here is just for the prototype functionality. Should not be form here -->
+<form action="#" class="usa-form">
+  <button type="submit" class="usa-button">Back to Dashboard</button>
+</form>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("cods-analyst-card.html");
+        return false;
+      }
+    });
+  });
+</script>

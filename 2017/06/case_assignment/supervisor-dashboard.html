@@ -1,0 +1,120 @@
+---
+layout: analyst
+global_nav_active: Dashboard
+---
+
+<h1>Dashboard</h1>
+
+<section class="card">
+  <header class="card__header">
+    <h2 class="card__heading">Unassigned Cases</h2>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th>Screening Due Date</th>
+        <th>Applicant Firm Location</th>
+        <th>Applicant Firm Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>06/21/17</td>
+        <td>Seattle, WA</td>
+        <td><a href="#">Televares Software Development</a></td>
+        <td><a href="assign-case.html">Assign</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="card">
+  <header class="card__header">
+    <h2 class="card__heading">My Current Workload</h2>
+  </header>
+  <table id="workload">
+    <thead>
+      <tr>
+        <th>Firm Name</th>
+        <th>Status</th>
+        <th>Date Submitted</th>
+        <th>Case Owner</th>
+        <th>Currently With</th>
+        <th>Next Due Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+      <tr>
+        <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
+        <td>Screening</td>
+        <td>03/15/17</td>
+        <td>Frank Apple</td>
+        <td>Betty Smith</td>
+        <td>03/23/12</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="#" class="usa-button usa-button-big">View all cases</a>
+</section>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('#workload').DataTable( {
+      "aaSorting": [],
+      "info":     false,
+      "paging":   false,
+      "searching":   false
+    } );
+    $("#workload").removeClass('dataTable');
+  });
+</script>
