@@ -33,13 +33,12 @@ global_nav_active: Dashboard
   <header class="card__header">
     <h2 class="card__heading">My Current Workload</h2>
   </header>
-  <table>
+  <table id="workload">
     <thead>
       <tr>
         <th>Firm Name</th>
         <th>Status</th>
         <th>Date Submitted</th>
-        <th>DUNS</th>
         <th>Case Owner</th>
         <th>Currently With</th>
         <th>Next Due Date</th>
@@ -50,7 +49,6 @@ global_nav_active: Dashboard
         <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
         <td>03/15/17</td>
-        <td>7483928472</td>
         <td>Frank Apple</td>
         <td>Betty Smith</td>
         <td>03/23/12</td>
@@ -59,7 +57,6 @@ global_nav_active: Dashboard
         <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
         <td>03/15/17</td>
-        <td>7483928472</td>
         <td>Frank Apple</td>
         <td>Betty Smith</td>
         <td>03/23/12</td>
@@ -68,7 +65,6 @@ global_nav_active: Dashboard
         <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
         <td>03/15/17</td>
-        <td>7483928472</td>
         <td>Frank Apple</td>
         <td>Betty Smith</td>
         <td>03/23/12</td>
@@ -77,7 +73,6 @@ global_nav_active: Dashboard
         <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
         <td>03/15/17</td>
-        <td>7483928472</td>
         <td>Frank Apple</td>
         <td>Betty Smith</td>
         <td>03/23/12</td>
@@ -86,7 +81,6 @@ global_nav_active: Dashboard
         <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
         <td>03/15/17</td>
-        <td>7483928472</td>
         <td>Frank Apple</td>
         <td>Betty Smith</td>
         <td>03/23/12</td>
@@ -95,7 +89,6 @@ global_nav_active: Dashboard
         <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
         <td>03/15/17</td>
-        <td>7483928472</td>
         <td>Frank Apple</td>
         <td>Betty Smith</td>
         <td>03/23/12</td>
@@ -104,7 +97,6 @@ global_nav_active: Dashboard
         <th><a href="#">Mikes Garage - 8(a) Initial</a></th>
         <td>Screening</td>
         <td>03/15/17</td>
-        <td>7483928472</td>
         <td>Frank Apple</td>
         <td>Betty Smith</td>
         <td>03/23/12</td>
@@ -117,6 +109,12 @@ global_nav_active: Dashboard
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
-
+    $('#workload').DataTable( {
+      "aaSorting": [],
+      "info":     false,
+      "paging":   false,
+      "searching":   false
+    } );
+    $("#workload").removeClass('dataTable');
   });
 </script>
