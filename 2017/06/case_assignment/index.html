@@ -4,11 +4,65 @@ layout: card
 
 
 <h1>Case Assignment</h1>
-<p class="usa-font-lead">A supervisor can assign cases to an analyst.</p>
+<p class="usa-font-lead">A supervisor can assign unassigned cases to an analyst.</p>
 
 <p><em>Note: Return to this page to clear session data.</em></p>
 
+<h2>About this prototype</h2>
+
+<p>Part One of this prototype will showcase how a supervisor will asign an unassigned case to a CODS analyst. Part 2 will be a single page to demonstrate what the newly assigned case looks like in the selected analyst's dashboard. This will also demonstrate an analyst's dashboard in general.</p>
+
+<ol>
+  <li>Click "Assign" on the unassigned case.</li>
+  <li>Select an analyst (doesn't matter which CODS office)</li>
+  <li>Press the OK button in the confirmation dialog box</li>
+  <li>Click "Back to Dashboard" (This won't actually go back to dashboard, though it should in production. For the prototype, it brings us to the card for the Part 2)</li>
+  <li>This will show the dashboard for the selected analyst. The table sortable for all columns.</li>
+</ol>
+
 <p><a href="supervisor-dashboard.html" class="usa-button usa-button-big">View Prototype</a></p>
+
+<h3>Notes for Certify Team</h3>
+
+<h4>Notes in general</h4>
+<ul>
+  <li>The "Cases" menu item has been removed. This was done because "My Cases" has been moved into the Dashboard with the heading "My Current Workload." The link to all cases is now a button underneatht the current workload table.</li>
+  <li>The "View all cases" page is not in scope</li>
+</ul>
+
+<h4>Notes for unassigned cases (supervisor-dashboard.html):</h4>
+<ul>
+  <li>If there are no unassigned cases, the table will be replaced with the following paragraph: "There are currently no unassigned cases."</li>
+  <li>The applicant firm name will link to the application</li>
+  <li>Unassigned cases table is not sortable</li>
+</ul>
+
+<h4>Nortes for case assignment (assign-case.html)</h4>
+<ul>
+  <li>The applicant firm name will link to the application</li>
+  <li>The list of CODS analysts will be broken down into two sets: Philadelphia CODS and SF CODS</li>
+  <li>The names should appear alphabetically by last name</li>
+  <li>The "case load" feature is a nice to have, but does not need to be in scope for initial release. That number should be calculated by whether that person is a primary reviewer or current reviewer. If the person is both a primary reviewer</li>
+  <li>The cancel button will take the supervisor back to the dashboard</li>
+</ul>
+
+<h4>Notes for confirmation (assign-confirm.html)</h4>
+<ul>
+  <li>The applicant firm name will link to the application</li>
+  <li>The back to dashboard button will return the supervisor to the dashboard</li>
+</ul>
+
+<h4>Notes for analyst dashboard</h4>
+<ul>
+  <li>The alert is a flash message. It should appear after a refresh or the next the time the user visits the page.</li>
+  <li>The "NEW" flag and blue highlight will continue to appear until the user opens the application. Then, both will disappear after returning to the dashboard.</li>
+  <li>Apply consistent formatting to phone numbers</li>
+  <li>The applicant firm name will link to the application. This will need to be updated to include program and application type once certify starts to handle more programs.</li>
+  <li>The initial sort on the table is by due date, from closest to farthers</li>
+  <li>The "days left" text turns red when the number is less than 5</li>
+  <li>All columns are sortable</li>
+  <li>"View all cases" is not in scope</li>
+</ul>
 
 <script>
 sessionStorage.clear();
