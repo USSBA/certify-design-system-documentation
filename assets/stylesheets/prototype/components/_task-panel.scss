@@ -1,0 +1,111 @@
+.task-panel {
+  position: relative;
+  z-index: 5000;
+}
+
+.task-panel-menu {
+  background: #fff;
+  border: 1px solid $color-gray-lighter;
+  box-shadow: 0 5px 10px rgba(0,0,0,.15);
+  display: none;
+  list-style: none;
+  padding: 1rem 0;
+  position: absolute;
+  right: .5rem;
+  text-align: left;
+  top: 3rem;
+  width: 26rem;
+  z-index:10000;
+}
+
+// Pointer
+.task-panel-menu::before {
+    top: -32px;
+    right: 18px;
+    left: auto;
+}
+.task-panel-menu::before {
+    border: 16px solid transparent;
+    border-bottom-color: $color-gray-lighter;
+}
+.task-panel-menu::before,
+.task-panel-menu::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    pointer-events: none;
+}
+
+.task-panel-menu::after {
+    top: -28px;
+    right: 20px;
+    left: auto;
+}
+
+.task-panel-menu::after {
+    border: 14px solid transparent;
+    border-bottom-color: #fff;
+}
+.task-panel-menu::before,
+.task-panel-menu::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+}
+
+.task-panel-menu__item {
+  margin: 0;
+  padding: 0;
+}
+
+.task-panel-menu__link,
+.task-panel-menu__link--emergency {
+  display: block;
+  padding: .5rem 2rem;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    background-color: $color-cool-blue-lightest;
+  }
+
+  &:visited {
+    color: $color-primary;
+  }
+}
+
+.task-panel-menu__link--emergency {
+  color: $color-secondary;
+
+  &:visited {
+    color: $color-secondary;
+  }
+
+  &:hover {
+    background-color: $color-secondary-lightest;
+  }
+}
+
+.task-panel-menu.visible {
+  display: block;
+}
+
+.task-panel-toggle {
+  background-image: url('../img/dots-blue.png');
+  background-image: url('../img/dots-blue.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 28px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  height: 44px;
+  position: relative;
+  text-indent: -9999em;
+  width: 44px;
+
+  &:hover {
+    background-color: $color-primary;
+    background-image: url('../img/dots-white.png');
+    background-image: url('../img/dots-white.svg');
+  }
+}

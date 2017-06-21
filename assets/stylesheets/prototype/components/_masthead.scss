@@ -59,31 +59,13 @@
   @include media($nav-width) {
     border-right: 1px dashed $color-gray-light;
     margin-bottom: 0;
+    padding-right: 10rem;
     width: auto;
   }
 }
 
-.masthead__content__primary,
-.masthead__content__secondary,
-.masthead__content__tertiary {
-
-  @include media($article-max-width) {
-    @include flex-grow(1);
-  }
-
+.masthead__content__secondary {
   @include media($nav-width) {
-    @include flex-basis(15%);
-  }
-}
-
-.masthead__content__primary {
-  @include media($nav-width) {
-    @include flex-grow(8);
-  }
-}
-
-.masthead__content__secondary:nth-child(2) {
-  @include media($article-max-width) {
-    border-right: 1px dashed $color-gray-light;
+    @include align-self(center);
   }
 }
