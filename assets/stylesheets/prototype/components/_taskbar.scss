@@ -1,0 +1,58 @@
+.taskbar-wrap.fixed {
+  @include transition(all .5s ease-in-out);
+  background: rgba(255,255,255,.95);
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  left: 0;
+  padding: .5em 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .taskbar {
+    border: none;
+    margin: 0 auto;
+    max-width: 1250px;
+  }
+}
+
+.taskbar {
+  border: 1px solid $color-gray-lighter;
+  border-radius: 4px;
+  display: table;
+  width: 100%;
+}
+
+.taskbar-section {
+  border-right: 1px solid $color-gray-lighter;
+  display: table-cell;
+  padding: 1.2rem 2rem;
+
+  &.hide-mobile {
+    display: none;
+
+    @include media($article-max-width) {
+      display: table-cell;
+    }
+  }
+}
+
+.taskbar-section__text {
+  font-size: 1.8rem;
+  font-weight: $font-bold;
+  line-height: 1;
+  margin: 0;
+}
+
+.taskbar-section__subhead {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: $font-normal;
+}
+
+.taskbar-actions {
+  display: table-cell;
+  text-align: center;
+  width: 8rem;
+  vertical-align: middle;
+}
