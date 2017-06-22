@@ -1,11 +1,13 @@
 
 $(document).ready(function(){
-  var $taskbar_wrap = $('#taskbar-wrap'),
-      elementOffset = $taskbar_wrap.offset().top,
-      taskbar_height = $taskbar_wrap.height(),
-      placeholder = '<div class="taskbar-placeholder" style="height:'+taskbar_height+'px"></div>';
+  var $taskbar_wrap = $('#taskbar-wrap');
 
-  $(window).on('scroll', function () {
+  if ($taskbar_wrap.length) {
+    var elementOffset = $taskbar_wrap.offset().top,
+    taskbar_height = $taskbar_wrap.height(),
+    placeholder = '<div class="taskbar-placeholder" style="height:'+taskbar_height+'px"></div>';
+
+    $(window).on('scroll', function () {
       var scrollTop     = $(window).scrollTop(),
           distance      = (elementOffset - scrollTop);
 
@@ -20,5 +22,8 @@ $(document).ready(function(){
         $taskbar_wrap.removeClass("fixed");
         $('.taskbar-placeholder').remove();
       }
-  });
+    });
+  }
+
+
 });
