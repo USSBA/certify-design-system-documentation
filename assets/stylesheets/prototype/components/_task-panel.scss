@@ -3,54 +3,62 @@
   z-index: 5000;
 }
 
-.task-panel-menu {
+.task-panel-content {
   background: #fff;
   border: 1px solid $color-gray-lighter;
   box-shadow: 0 5px 10px rgba(0,0,0,.15);
   display: none;
-  list-style: none;
-  padding: 1rem 0;
   position: absolute;
   right: .5rem;
   text-align: left;
-  top: 3rem;
+  top: 5rem;
   width: 26rem;
   z-index:10000;
 }
 
+.task-panel-content.visible {
+  display: block;
+}
+
 // Pointer
-.task-panel-menu::before {
+.task-panel-content::before {
     top: -32px;
     right: 18px;
     left: auto;
 }
-.task-panel-menu::before {
+.task-panel-content::before {
     border: 16px solid transparent;
     border-bottom-color: $color-gray-lighter;
 }
-.task-panel-menu::before,
-.task-panel-menu::after {
+.task-panel-content::before,
+.task-panel-content::after {
     position: absolute;
     display: inline-block;
     content: "";
     pointer-events: none;
 }
 
-.task-panel-menu::after {
+.task-panel-content::after {
     top: -28px;
     right: 20px;
     left: auto;
 }
 
-.task-panel-menu::after {
+.task-panel-content::after {
     border: 14px solid transparent;
     border-bottom-color: #fff;
 }
-.task-panel-menu::before,
-.task-panel-menu::after {
+.task-panel-content::before,
+.task-panel-content::after {
     position: absolute;
     display: inline-block;
     content: "";
+}
+
+.task-panel-menu {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
 }
 
 .task-panel-menu__item {
@@ -86,10 +94,6 @@
   }
 }
 
-.task-panel-menu.visible {
-  display: block;
-}
-
 .task-panel-toggle {
   background-image: url('../img/dots-blue.png');
   background-image: url('../img/dots-blue.svg');
@@ -108,4 +112,12 @@
     background-image: url('../img/dots-white.png');
     background-image: url('../img/dots-white.svg');
   }
+}
+
+.task-panel-content hr {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $color-gray-lighter;
+  border-bottom: none;
+  margin: 0 2rem;
 }
