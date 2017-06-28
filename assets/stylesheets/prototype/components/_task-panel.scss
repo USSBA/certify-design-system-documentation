@@ -3,6 +3,10 @@
   position: relative;
   width: auto;
   z-index: 5000;
+
+  &.open {
+    z-index: 8000;
+  }
 }
 
 .task-panel-content {
@@ -18,7 +22,7 @@
   text-align: left;
   top: 6rem;
   width: 26rem;
-  z-index:10000;
+  z-index:1000000;
 }
 
 .task-panel-content.visible {
@@ -101,6 +105,7 @@
 
   &:hover {
     background-color: $color-secondary-lightest;
+    color: $color-secondary-darkest;
   }
 }
 
