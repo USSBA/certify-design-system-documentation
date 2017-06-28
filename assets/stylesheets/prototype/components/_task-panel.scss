@@ -131,6 +131,11 @@
   width: 30px;
 }
 
+.task-panel-toggle--small + .task-panel-content {
+  right: -2rem;
+  top: 4.75rem;
+}
+
 .task-panel-toggle--vertical {
   @include transform(rotate(90deg));
 }
