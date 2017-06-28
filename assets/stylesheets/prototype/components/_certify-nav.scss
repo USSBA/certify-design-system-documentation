@@ -321,5 +321,9 @@
     &:hover {
       background-color: white;
     }
+
+    &[aria-expanded=false] {
+      padding-bottom: 1.7rem;
+    }
   }
 }

@@ -1,0 +1,69 @@
+---
+layout: analyst_application
+local_nav_active: Documents
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+---
+
+
+{% include _taskbar.html %}
+
+<h1>Analyst Documents</h1>
+
+<p class="usa-font-lead">Documents in the table below have been added to this application by SBA analysts.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Document Name</th>
+      <th>Uploaded By</th>
+      <th>Type</th>
+      <th>Upload Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><a href="#">Review_Notification_Letter.pdf</th>
+      <td>Karen Smith</td>
+      <td>Offical Letter</td>
+      <td>05/23/17</td>
+      <td>
+        <div class="task-panel">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel2">actions</button>
+          <div id="task-panel2" class="task-panel-content">
+            <ul class="task-panel-menu">
+              <li class="task-panel-menu__item">
+                <a href="#" class="task-panel-menu__link">View document</a>
+                <a href="#" class="task-panel-menu__link--emergency">Archive this document</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><a href="#">ExperianReport_MikeJones.pdf</th>
+      <td>Karen Smith</td>
+      <td>3rd Party Report</td>
+      <td>05/28/17</td>
+      <td>
+        <div class="task-panel">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel3">actions</button>
+          <div id="task-panel3" class="task-panel-content">
+            <ul class="task-panel-menu">
+              <li class="task-panel-menu__item">
+                <a href="#" class="task-panel-menu__link">View document</a>
+                <a href="#" class="task-panel-menu__link--emergency">Archive this document</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

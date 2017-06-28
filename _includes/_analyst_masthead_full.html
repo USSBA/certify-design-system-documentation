@@ -17,7 +17,7 @@
         703-555-3232
       </p>
     </div>
-    
+
   </div>
 
   <nav role="navigation" class="usa-nav certify-nav">
@@ -40,7 +40,11 @@
             </li>
             -->
             <li>
-              <a class="usa-nav-link {% if page.local_nav_active contains "Application" %} current {% endif %}" href="#">
+              <a class="usa-nav-link {% if page.local_nav_active contains "Application" %} current {% endif %}" href="{% if page.application_link %}
+                {{ page.application_link }}
+              {% else %}
+                #
+              {% endif %}">
                 <span>Application</span>
               </a>
             </li>
@@ -51,25 +55,45 @@
               </button>
               <ul id="side-nav-3" class="usa-nav-submenu">
                 <li>
-                  <a href="#">Firm Documents</a>
+                  <a href="{% if page.firm_documents_link %}
+                    {{ page.firm_documents_link }}
+                  {% else %}
+                    #
+                  {% endif %}">Firm Documents</a>
                 </li>
                 <li>
-                  <a href="#">Analyst Documents</a>
+                  <a href="{% if page.analyst_documents_link %}
+                    {{ page.analyst_documents_link }}
+                  {% else %}
+                    #
+                  {% endif %}">Analyst Documents</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a class="usa-nav-link {% if page.local_nav_active contains "Notes" %} current {% endif %}" href="#">
+              <a class="usa-nav-link {% if page.local_nav_active contains "Notes" %} current {% endif %}" href="{% if page.notes_link %}
+                {{ page.notes_link }}
+              {% else %}
+                #
+              {% endif %}">
                 <span>Notes</span>
               </a>
             </li>
             <li>
-              <a class="usa-nav-link {% if page.local_nav_active contains "Messages" %} current {% endif %}" href="#">
+              <a class="usa-nav-link {% if page.local_nav_active contains "Messages" %} current {% endif %}" href="{% if page.messages_link %}
+                {{ page.messages_link }}
+              {% else %}
+                #
+              {% endif %}">
                 <span>Messages</span>
               </a>
             </li>
             <li>
-              <a class="usa-nav-link {% if page.local_nav_active contains "Log" %} current {% endif %}" href="#">
+              <a class="usa-nav-link {% if page.local_nav_active contains "Log" %} current {% endif %}" href="{% if page.activity_log_link %}
+                {{ page.activity_log_link }}
+              {% else %}
+                #
+              {% endif %}">
                 <span>Activity Log</span>
               </a>
             </li>
