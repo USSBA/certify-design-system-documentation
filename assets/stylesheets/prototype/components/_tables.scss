@@ -1,0 +1,39 @@
+.quick-details {
+  border: none;
+  margin: 0;
+
+  tr:last-child th,
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  th, td {
+  border: none;
+  border-bottom: 1px solid $color-gray-lighter;
+  font-size: 1.5rem;
+  margin: 0 0 .5rem 0;
+  padding: .5rem 0;
+  }
+
+  th {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  td {
+    text-align: right;
+  }
+
+  tr.larger th,
+  tr.larger td {
+    font-size: 1.7rem;
+  }
+}
+
+.application-section-description {
+  margin-bottom: 9rem;
+
+  p {
+    margin: 0;
+  }
+}

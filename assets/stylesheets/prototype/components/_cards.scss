@@ -1,3 +1,45 @@
+.card-set {
+  @include display(flex);
+  @include flex-direction(column);
+  @include flex-wrap(wrap);
+}
+
+.card {
+  border: 1px solid $color-gray-light;
+  border-radius: 2px;
+  margin: 0 0 6rem 0;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+// Shows two cards in a row arranged horizontally and flows downward
+.card-set--halves {
+  @include flex-direction(row);
+}
+
+.card-set--halves .card {
+
+  @include media($nav-width) {
+    width: 50%;
+    width: calc(50% - 3rem);
+    margin: 0 0 6rem 0;
+    margin: 0 calc(3rem) 6rem 0;
+  }
+}
+
+// Card Headings
+.card__heading {
+  margin-top: 0;
+}
+
+.card__bulk-actions {
+  position: absolute;
+  right: .5rem;
+  top: 1rem;
+}
+
+// Standalone Cards
 .standalone-card {
 
   @include media($nav-width) {

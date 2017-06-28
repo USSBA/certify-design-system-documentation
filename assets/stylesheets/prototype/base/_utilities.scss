@@ -6,7 +6,6 @@
 }
 
 .overview-wrap {
-  height: 1%;
+  @include clearfix;
   margin-top: 5rem;
-  overflow: hidden;
 }
