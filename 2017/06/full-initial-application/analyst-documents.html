@@ -16,13 +16,28 @@ activity_log_link: activity-log.html
 
 <p class="usa-font-lead">Documents in the table below have been added to this application by the SBA.</p>
 
+<div class="table-header">
+  <div class="table-info">
+    <p><strong>Currently showing 25 of 50 documents</strong></p>
+  </div>
+  <form class="usa-search usa-search-small">
+    <div role="search">
+      <label class="usa-sr-only" for="search-field-small">Search documents</label>
+      <input id="search-field-small" type="search" name="search" placeholder="Search documents table">
+      <button type="submit">
+        <span class="usa-sr-only">Search</span>
+      </button>
+    </div>
+  </form>
+</div>
+
 <table>
   <thead>
     <tr>
       <th>Document Name</th>
       <th>Uploaded By</th>
       <th>Type</th>
-      <th>Upload Date</th>
+      <th>Date Uploaded</th>
       <th>Actions</th>
     </tr>
   </thead>

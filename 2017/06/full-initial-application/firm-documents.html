@@ -16,74 +16,72 @@ activity_log_link: activity-log.html
 
 <div class="usa-grid-full">
 
-  <div class="usa-width-two-thirds">
+  <div class="usa-width-three-fourths">
+    <div class="table-header">
+      <div class="table-info">
+        <p><strong>Currently showing 25 of 50 documents</strong></p>
+      </div>
+      <form class="usa-search usa-search-small">
+        <div role="search">
+          <label class="usa-sr-only" for="search-field-small">Search documents</label>
+          <input id="search-field-small" type="search" name="search" placeholder="Search documents table">
+          <button type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
+    </div>
     <table>
       <thead>
         <tr>
           <th>Document Name</th>
           <th>Uploaded By</th>
           <th>Type</th>
-          <th>Upload Date</th>
-          <th>Actions</th>
+          <th>Date Uploaded</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th><a href="#">Review_Notification_Letter.pdf</th>
-          <td>Karen Smith</td>
-          <td>Offical Letter</td>
-          <td>06/29/17</td>
-          <td>
-            <div class="task-panel">
-              <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel2">actions</button>
-              <div id="task-panel2" class="task-panel-content">
-                <ul class="task-panel-menu">
-                  <li class="task-panel-menu__item">
-                    <a href="#" class="task-panel-menu__link">View document</a>
-                    <a href="#" class="task-panel-menu__link--emergency">Archive this document</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </td>
+          <th><a href="#">Articlesofincorporation.pdf</th>
+          <td>Mike Jones</td>
+          <td>Articles of Incorporation</td>
+          <td>06/15/17</td>
         </tr>
         <tr>
-          <th><a href="#">ExperianReport_MikeJones.pdf</th>
-          <td>Karen Smith</td>
-          <td>3rd Party Report</td>
-          <td>06/28/17</td>
-          <td>
-            <div class="task-panel">
-              <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel3">actions</button>
-              <div id="task-panel3" class="task-panel-content">
-                <ul class="task-panel-menu">
-                  <li class="task-panel-menu__item">
-                    <a href="#" class="task-panel-menu__link">View document</a>
-                    <a href="#" class="task-panel-menu__link--emergency">Archive this document</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </td>
+          <th><a href="#">Taxes2015.pdf</th>
+          <td>Mike Jones</td>
+          <td>Tax</td>
+          <td>06/12/17</td>
         </tr>
         <tr>
-          <th><a href="#">ZillowListing234u34oiu3.pdf</th>
-          <td>Frank Apple</td>
-          <td>3rd Party Report</td>
-          <td>05/30/17</td>
-          <td>
-            <div class="task-panel">
-              <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel4">actions</button>
-              <div id="task-panel4" class="task-panel-content">
-                <ul class="task-panel-menu">
-                  <li class="task-panel-menu__item">
-                    <a href="#" class="task-panel-menu__link">View document</a>
-                    <a href="#" class="task-panel-menu__link--emergency">Archive this document</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </td>
+          <th><a href="#">Taxes2016.pdf</th>
+          <td>Mike Jones</td>
+          <td>Tax</td>
+          <td>06/12/17</td>
+        </tr>
+        <tr>
+          <th><a href="#">Taxes2017.pdf</th>
+          <td>Mike Jones</td>
+          <td>Tax</td>
+          <td>06/12/17</td>
+        </tr>
+        <tr>
+          <th><a href="#">ContractList.pdf</th>
+          <td>Alex Hambry</td>
+          <td>Contract List</td>
+          <td>06/10/17</td>
+        </tr>
+        <tr>
+          <th><a href="#">Balance_Sheet.pdf</th>
+          <td>Mike Jones</td>
+          <td>Financial</td>
+          <td>06/11/17</td>
+        </tr>
+        <tr>
+          <th><a href="#">ArlingtonCOGS.pdf</th>
+          <td>Alex Hambry</td>
+          <td>Certificate of Good Standing</td>
+          <td>06/10/17</td>
         </tr>
       </tbody>
     </table>
@@ -91,7 +89,33 @@ activity_log_link: activity-log.html
     <p><a href="#">View archived documents</a></p>
   </div>
 
-  <div class="usa-width-one-third">
+  <div class="usa-width-one-fourth">
     <h2>Find Documents by Person</h2>
+    <p>Select a name from the list to see documents uploaded by an owner or principle of the firm.</p>
+    <form class="usa-form">
+      <label for="options">Name</label>
+      <select name="options" id="options">
+        <option value="value1"></option>
+        <option value="Allen Hambry">Allen Hambry</option>
+        <option value="Mike Jones">Mike Jones</option>
+      </select>
+
+      <input type="submit" value="Go">
+    </form>
   </div>
 </div>
+
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('table').DataTable( {
+      "aaSorting": [],
+      "info":     false,
+      "paging":   false,
+      "searching":   false
+    } );
+
+    $("table").removeClass('dataTable');
+  });
+</script>

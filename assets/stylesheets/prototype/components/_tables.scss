@@ -37,3 +37,19 @@
     margin: 0;
   }
 }
+
+.table-header {
+  @include align-items(center);
+  @include display(flex);
+  @include justify-content(space-between);
+  margin: 0 0 -2rem;
+
+  .usa-search {
+    margin-right: 0;
+    width: 33.333%;
+  }
+
+  p {
+    margin: 0;
+  }
+}
