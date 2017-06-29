@@ -164,5 +164,12 @@ activity_log_link: activity-log.html
       $('.new-note textarea').on('focus', function(){
         $(this).parent().parent().addClass('expanded')
       });
+
+      $('.new-note textarea').on('blur', function(){
+        if (!$(this).val()){
+          $(this).parent().parent().removeClass('expanded')
+        }
+
+      });
     });
   </script>
