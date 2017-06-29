@@ -10,7 +10,15 @@ article.note,
   @include transition(all .2s ease-in-out);
   background: $color-gray-lightest;
   border: 1px solid $color-gray-lighter;
+  margin-bottom: 4rem;
   padding: 2rem;
+
+  form {
+    @include transition(all .5s ease-in-out);
+    background: $color-gray-lightest;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
   textarea {
     @include transition(all .5s ease-in-out);
@@ -31,6 +39,17 @@ article.note,
 
 .new-note.expanded,
 #new_note:target {
+  background: white;
+  border: none;
+
+  form {
+    max-width: 76rem;
+    box-shadow: 0 0px 0px 2000px rgba(0,0,0,0.75);
+    padding: 60px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 9999999;
+  }
 
   textarea {
     height: 20rem;

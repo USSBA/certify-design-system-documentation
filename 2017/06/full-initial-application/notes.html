@@ -13,6 +13,57 @@ activity_log_link: activity-log.html
 {% include _taskbar.html %}
 
 <h1>Notes</h1>
+
+<div class="new-note" id="new_note">
+  <form action="" class="new-note-form">
+    <textarea name="" id="note" placeholder="Compose a new note"></textarea>
+    <fieldset class="question tags">
+      <legend>Tags</legend>
+        <div class="usa-width-one-half">
+          <ul class="tag-selection-list">
+            <li>
+              <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
+              <label for="note-tag--BOS-Analysis">BOS Analysis</label>
+            </li>
+            <li>
+              <input id="note-tag--Ownership" type="checkbox" name="note-tags" value="Ownership">
+              <label for="note-tag--Ownership">Ownership</label>
+            </li>
+            <li>
+              <input id="note-tag--Control" type="checkbox" name="note-tags" value="Control">
+              <label for="note-tag--Control">Control</label>
+            </li>
+            <li>
+              <input id="note-tag--Size" type="checkbox" name="note-tags" value="Size">
+              <label for="note-tag--Size">Size</label>
+            </li>
+            <li>
+              <input id="note-tag--Character" type="checkbox" name="note-tags" value="Character">
+              <label for="note-tag--Character">Character</label>
+            </li>
+          </ul>
+        </div>
+        <div class="usa-width-one-half">
+          <ul class="tag-selection-list">
+            <li>
+              <input id="note-tag--Potential-for-Success" type="checkbox" name="note-tags" value="Potential for Success">
+              <label for="note-tag--Potential-for-Success">Potential for Success</label>
+            </li>
+            <li>
+              <input id="note-tag--Economic-Disadvantage" type="checkbox" name="note-tags" value="Economic Disadvantage">
+              <label for="note-tag--Economic-Disadvantage">Economic Disadvantage</label>
+            </li>
+            <li>
+              <input id="note-tag--Social-Disadvantage" type="checkbox" name="note-tags" value="Social Disadvantage">
+              <label for="note-tag--Social-Disadvantage">Social Disadvantage</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <button type="submit">Add note</button>
+  </form>
+</div>
+
 <div class="clearfix">
   <div class="usa-width-one-third">
     <form action="#" class="certify-facets">
@@ -58,55 +109,7 @@ activity_log_link: activity-log.html
   </div>
   <div class="usa-width-two-thirds">
     <div class="notes">
-      <div class="new-note" id="new_note">
-        <form action="" class="new-note-form">
-          <textarea name="" id="note" placeholder="Compose a new note"></textarea>
-          <fieldset class="question tags">
-            <legend>Tags</legend>
-              <div class="usa-width-one-half">
-                <ul class="tag-selection-list">
-                  <li>
-                    <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
-                    <label for="note-tag--BOS-Analysis">BOS Analysis</label>
-                  </li>
-                  <li>
-                    <input id="note-tag--Ownership" type="checkbox" name="note-tags" value="Ownership">
-                    <label for="note-tag--Ownership">Ownership</label>
-                  </li>
-                  <li>
-                    <input id="note-tag--Control" type="checkbox" name="note-tags" value="Control">
-                    <label for="note-tag--Control">Control</label>
-                  </li>
-                  <li>
-                    <input id="note-tag--Size" type="checkbox" name="note-tags" value="Size">
-                    <label for="note-tag--Size">Size</label>
-                  </li>
-                  <li>
-                    <input id="note-tag--Character" type="checkbox" name="note-tags" value="Character">
-                    <label for="note-tag--Character">Character</label>
-                  </li>
-                </ul>
-              </div>
-              <div class="usa-width-one-half">
-                <ul class="tag-selection-list">
-                  <li>
-                    <input id="note-tag--Potential-for-Success" type="checkbox" name="note-tags" value="Potential for Success">
-                    <label for="note-tag--Potential-for-Success">Potential for Success</label>
-                  </li>
-                  <li>
-                    <input id="note-tag--Economic-Disadvantage" type="checkbox" name="note-tags" value="Economic Disadvantage">
-                    <label for="note-tag--Economic-Disadvantage">Economic Disadvantage</label>
-                  </li>
-                  <li>
-                    <input id="note-tag--Social-Disadvantage" type="checkbox" name="note-tags" value="Social Disadvantage">
-                    <label for="note-tag--Social-Disadvantage">Social Disadvantage</label>
-                  </li>
-                </ul>
-              </div>
-            </fieldset>
-            <button type="submit">Add note</button>
-        </form>
-      </div>
+
       <article class="note">
         <header class="note__header">
           <p><strong>Frank Apple</strong> @ 2:30PM June 12, 2017</p>
