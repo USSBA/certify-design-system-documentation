@@ -13,3 +13,156 @@ activity_log_link: activity-log.html
 {% include _taskbar.html %}
 
 <h1>Notes</h1>
+<div class="clearfix">
+  <div class="usa-width-one-third">
+    <form action="#" class="certify-facets">
+      <h2 class="certify-facets__form-heading">Filter Notes</h2>
+      <fieldset class="certify-facets__set">
+        <legend class="certify-facets__heading">Tags</legend>
+        <ul class="certify-facets__list">
+          <li>
+            <input type="checkbox" name="category" id="bos_analysis" value="BOS Analysis">
+            <label for="bos_analysis">BOS Analysis</label>
+          </li>
+          <li>
+            <input type="checkbox" name="category" id="ownership" value="Ownership">
+            <label for="ownership">Ownership</label>
+          </li>
+          <li>
+            <input type="checkbox" name="category" id="control" value="Control">
+            <label for="control">Control</label>
+          </li>
+          <li>
+            <input type="checkbox" name="category" id="size" value="Size">
+            <label for="size">Size</label>
+          </li>
+          <li>
+            <input type="checkbox" name="category" id="character" value="Character">
+            <label for="character">Character</label>
+          </li>
+          <li>
+            <input type="checkbox" name="category" id="potential_for_success" value="Potential for Success">
+            <label for="potential_for_success">Potential for Success</label>
+          </li>
+          <li>
+            <input type="checkbox" name="category" id="economic_disadvantage" value="Economic Disadvantage">
+            <label for="economic_disadvantage">Economic Disadvantage</label>
+          </li>
+          <li>
+            <input type="checkbox" name="category" id="social_disadvantage" value="Social Disadvantage">
+            <label for="social_disadvantage">Social Disadvantage</label>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </div>
+  <div class="usa-width-two-thirds">
+    <div class="notes">
+      <div class="new-note" id="new_note">
+        <form action="" class="new-note-form">
+          <textarea name="" id="note" placeholder="Compose a new note"></textarea>
+          <fieldset class="question tags">
+            <legend>Tags</legend>
+              <div class="usa-width-one-half">
+                <ul class="tag-selection-list">
+                  <li>
+                    <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
+                    <label for="note-tag--BOS-Analysis">BOS Analysis</label>
+                  </li>
+                  <li>
+                    <input id="note-tag--Ownership" type="checkbox" name="note-tags" value="Ownership">
+                    <label for="note-tag--Ownership">Ownership</label>
+                  </li>
+                  <li>
+                    <input id="note-tag--Control" type="checkbox" name="note-tags" value="Control">
+                    <label for="note-tag--Control">Control</label>
+                  </li>
+                  <li>
+                    <input id="note-tag--Size" type="checkbox" name="note-tags" value="Size">
+                    <label for="note-tag--Size">Size</label>
+                  </li>
+                  <li>
+                    <input id="note-tag--Character" type="checkbox" name="note-tags" value="Character">
+                    <label for="note-tag--Character">Character</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="usa-width-one-half">
+                <ul class="tag-selection-list">
+                  <li>
+                    <input id="note-tag--Potential-for-Success" type="checkbox" name="note-tags" value="Potential for Success">
+                    <label for="note-tag--Potential-for-Success">Potential for Success</label>
+                  </li>
+                  <li>
+                    <input id="note-tag--Economic-Disadvantage" type="checkbox" name="note-tags" value="Economic Disadvantage">
+                    <label for="note-tag--Economic-Disadvantage">Economic Disadvantage</label>
+                  </li>
+                  <li>
+                    <input id="note-tag--Social-Disadvantage" type="checkbox" name="note-tags" value="Social Disadvantage">
+                    <label for="note-tag--Social-Disadvantage">Social Disadvantage</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <button type="submit">Add note</button>
+        </form>
+      </div>
+      <article class="note">
+        <header class="note__header">
+          <p><strong>Frank Apple</strong> @ 2:30PM June 12, 2017</p>
+          <p><strong>Subject:</strong> Ownership and Control</p>
+        </header>
+        <div class="note__content">
+          <p>A parturient praesent mattis scelerisque a at per cras integer malesuada auctor nam suspendisse facilisis at a eu sem erat porta adipiscing. Ut ultrices suspendisse placerat morbi ad dui a litora scelerisque vestibulum diam mi vestibulum potenti faucibus aenean lobortis ullamcorper mus cubilia nibh cursus vestibulum a augue nunc dolor. </p>
+        </div>
+        <div class="note__tags">
+          <p><strong>Tags:</strong> Ownership</p>
+        </div>
+      </article>
+      <article class="note">
+        <header class="note__header">
+          <p><strong>Frank Apple</strong> @ 2:30PM June 12, 2017</p>
+          <p><strong>Subject:</strong> Ownership and Control</p>
+        </header>
+        <div class="note__content">
+          <p>A parturient praesent mattis scelerisque a at per cras integer malesuada auctor nam suspendisse facilisis at a eu sem erat porta adipiscing. Ut ultrices suspendisse placerat morbi ad dui a litora scelerisque vestibulum diam mi vestibulum potenti faucibus aenean lobortis ullamcorper mus cubilia nibh cursus vestibulum a augue nunc dolor. </p>
+        </div>
+        <div class="note__tags">
+          <p><strong>Tags:</strong> Ownership</p>
+        </div>
+      </article>
+      <article class="note">
+        <header class="note__header">
+          <p><strong>Frank Apple</strong> @ 2:30PM June 12, 2017</p>
+          <p><strong>Subject:</strong> Ownership and Control</p>
+        </header>
+        <div class="note__content">
+          <p>A parturient praesent mattis scelerisque a at per cras integer malesuada auctor nam suspendisse facilisis at a eu sem erat porta adipiscing. Ut ultrices suspendisse placerat morbi ad dui a litora scelerisque vestibulum diam mi vestibulum potenti faucibus aenean lobortis ullamcorper mus cubilia nibh cursus vestibulum a augue nunc dolor. </p>
+        </div>
+        <div class="note__tags">
+          <p><strong>Tags:</strong> Ownership</p>
+        </div>
+      </article>
+      <article class="note">
+        <header class="note__header">
+          <p><strong>Frank Apple</strong> @ 2:30PM June 12, 2017</p>
+          <p><strong>Subject:</strong> Ownership and Control</p>
+        </header>
+        <div class="note__content">
+          <p>A parturient praesent mattis scelerisque a at per cras integer malesuada auctor nam suspendisse facilisis at a eu sem erat porta adipiscing. Ut ultrices suspendisse placerat morbi ad dui a litora scelerisque vestibulum diam mi vestibulum potenti faucibus aenean lobortis ullamcorper mus cubilia nibh cursus vestibulum a augue nunc dolor. </p>
+        </div>
+        <div class="note__tags">
+          <p><strong>Tags:</strong> Ownership</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+  <!-- This script will mimic the interaction we want to see -->
+  <script>
+    $(document).ready(function() {
+      $('.new-note textarea').on('focus', function(){
+        $(this).parent().parent().addClass('expanded')
+      });
+    });
+  </script>

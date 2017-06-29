@@ -1,0 +1,46 @@
+article.note,
+.note {
+  border-bottom: 1px solid $color-gray-lighter;
+  margin: 1rem 0;
+  min-height: 0;
+  padding: 1rem 0;
+}
+
+.new-note {
+  @include transition(all .2s ease-in-out);
+  background: $color-gray-lightest;
+  border: 1px solid $color-gray-lighter;
+  padding: 2rem;
+
+  textarea {
+    @include transition(all .5s ease-in-out);
+    height: 6rem;
+    max-width: none;
+    width: 100%;
+  }
+
+  .tags legend{
+    padding-top: 3rem;
+  }
+
+  .tags,
+  button {
+    display: none;
+  }
+}
+
+.new-note.expanded,
+#new_note:target {
+
+  textarea {
+    height: 20rem;
+  }
+
+  .tags{
+    display: block;
+  }
+
+  button {
+    display: inline-block;
+  }
+}

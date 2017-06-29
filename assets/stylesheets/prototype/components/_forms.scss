@@ -1,0 +1,28 @@
+.certify-facets__form-heading {
+  font-size: 2.3rem;
+  margin: 0 0 2rem;
+}
+
+.certify-facets__heading {
+  border-bottom: 1px solid $color-gray-lighter;
+  display: block;
+  font-size: 1.6rem;
+  font-weight: $font-normal;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.certify-facets__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    margin-bottom: .5rem;
+  }
+
+  [type=checkbox] + label,
+  [type=radio] + label {
+    margin-top: 1.5rem;
+  }
+}

@@ -38,3 +38,18 @@
     visibility: visible;
   }
 }
+
+.certify-page-header {
+  @include align-items(center);
+  @include display(flex);
+//  @include justify-content(space-between);
+  margin-top: 3rem;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.certify-page-header__secondary {
+  padding-left: 4rem;
+}
