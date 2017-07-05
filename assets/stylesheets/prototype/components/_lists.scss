@@ -100,3 +100,16 @@
     margin-top: 1rem;
   }
 }
+
+// Tags List
+.tags-list {
+  margin: 0;
+}
+
+.tag {
+  background: $color-gold-lighter;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: 1rem;
+  padding: .5rem 1rem;
+}

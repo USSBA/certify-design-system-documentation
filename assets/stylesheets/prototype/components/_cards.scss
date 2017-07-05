@@ -5,12 +5,66 @@
 }
 
 .card {
-  border: 1px solid $color-gray-light;
+  border: 1px solid $color-gray-lighter;
   border-radius: 2px;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
   margin: 0 0 6rem 0;
-  padding: 2rem;
+  min-height: 0;
   position: relative;
   width: 100%;
+}
+
+
+
+// Card Headings
+.card__header {
+  margin: 0;
+  padding: 2rem 2rem 0;
+
+  @include media($nav-width) {
+    padding: 3rem 3rem 0;
+  }
+}
+
+.card__primary-heading {
+  margin: 0;
+}
+
+.card__sub-head {
+  color: $color-gray;
+  margin: 0;
+}
+
+// Card Content
+.card__content {
+  padding: 2rem;
+
+  @include media($nav-width) {
+    padding: 3rem;
+  }
+}
+
+// Card Bulk Actions
+.card__bulk-actions {
+  position: absolute;
+  right: .5rem;
+  top: 1rem;
+
+  @include media($nav-width) {
+    right: 1rem;
+    top: 1.5rem;
+  }
+}
+
+// Card Meta Info
+.card__meta {
+  background: $color-gray-lightest;
+  border-top: 1px solid $color-gray-lighter;
+  padding: 1rem 2rem;
+
+  @include media($nav-width) {
+    padding: 1.5rem 3rem;
+  }
 }
 
 // Shows two cards in a row arranged horizontally and flows downward
@@ -19,7 +73,6 @@
 }
 
 .card-set--halves .card {
-
   @include media($nav-width) {
     width: 50%;
     width: calc(50% - 3rem);
@@ -28,15 +81,20 @@
   }
 }
 
-// Card Headings
-.card__heading {
-  margin-top: 0;
+.card-set--halves .card__header {
+  padding: 2rem 2rem 0;
 }
 
-.card__bulk-actions {
-  position: absolute;
-  right: .5rem;
-  top: 1rem;
+.card-set--halves .card__content {
+  padding: 2rem;
+}
+
+.card-set--halves .card__bulk-actions {
+
+  @include media($nav-width) {
+    right: .5rem;
+    top: 1rem;
+  }
 }
 
 // Standalone Cards
