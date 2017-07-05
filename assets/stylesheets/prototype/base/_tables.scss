@@ -1,3 +1,7 @@
+tbody th {
+  vertical-align: top;
+}
+
 tr.highlight--blue > th,
 tr.highlight--blue > td {
   background-color: $color-primary-alt-lightest;
@@ -9,6 +13,7 @@ thead .sorting {
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: auto 18px;
+  padding-right: 32px;
 }
 
 thead .sorting_asc {

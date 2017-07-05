@@ -64,7 +64,7 @@ activity_log_link: activity-log.html
   </form>
 </div>
 
-<div class="clearfix">
+<div class="certify-grid-wrap">
   <div class="usa-width-one-third">
     <form action="#" class="certify-facets">
       <h2 class="certify-facets__form-heading">Filter Notes</h2>
@@ -108,18 +108,30 @@ activity_log_link: activity-log.html
     </form>
   </div>
   <div class="usa-width-two-thirds">
-    <div class="notes">
+    <div class="card-set">
 
-      <article class="note">
-        <header class="note__header">
+      <article class="card">
+        <header class="card__header">
+          <h3>Ownership and Control</h3>
           <p><strong>Frank Apple</strong> @ 2:30PM June 12, 2017</p>
-          <p><strong>Subject:</strong> Ownership and Control</p>
         </header>
-        <div class="note__content">
+        <div class="card__content">
           <p>A parturient praesent mattis scelerisque a at per cras integer malesuada auctor nam suspendisse facilisis at a eu sem erat porta adipiscing. Ut ultrices suspendisse placerat morbi ad dui a litora scelerisque vestibulum diam mi vestibulum potenti faucibus aenean lobortis ullamcorper mus cubilia nibh cursus vestibulum a augue nunc dolor. </p>
         </div>
-        <div class="note__tags">
+        <div class="card__tags">
           <p><strong>Tags:</strong> Ownership</p>
+        </div>
+        <div class="card__bulk-actions">
+          <div class="task-panel">
+            <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel2">actions</button>
+            <div id="task-panel2" class="task-panel-content">
+              <ul class="task-panel-menu">
+                <li class="task-panel-menu__item">
+                  <a href="#" class="task-panel-menu__link--emergency">Delete this note</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </article>
       <article class="note">

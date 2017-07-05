@@ -19,12 +19,11 @@ activity_log_link: activity-log.html
   </div>
 </div>
 
-<div class="usa-grid-full">
-
+<div class="certify-grid-wrap">
   <div class="usa-width-three-fourths">
     <div class="table-header">
       <div class="table-info">
-        <p><strong>Currently showing 25 of 50 documents</strong></p>
+        <p><strong>7 documents</strong></p>
       </div>
       <form class="usa-search usa-search-small">
         <div role="search">
@@ -43,50 +42,60 @@ activity_log_link: activity-log.html
           <th>Uploaded By</th>
           <th>Type</th>
           <th>Date Uploaded</th>
+          <th>Comments</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th><a href="#">Articlesofincorporation.pdf</th>
-          <td>Mike Jones</td>
+          <th>
+            <a href="#">Articlesofincorporation.pdf</a>
+          </th>
+          <td>Mike Jones <small>(Owner)</small></td>
           <td>Articles of Incorporation</td>
           <td>06/15/17</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
         </tr>
         <tr>
-          <th><a href="#">Taxes2015.pdf</th>
-          <td>Mike Jones</td>
+          <th><a href="#">Taxes2015.pdf</a></th>
+          <td>Mike Jones <small>(Owner)</small></td>
           <td>Tax</td>
           <td>06/12/17</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
         </tr>
         <tr>
-          <th><a href="#">Taxes2016.pdf</th>
-          <td>Mike Jones</td>
+          <th><a href="#">Taxes2016.pdf</a></th>
+          <td>Mike Jones <small>(Owner)</small></td>
           <td>Tax</td>
           <td>06/12/17</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
         </tr>
         <tr>
-          <th><a href="#">Taxes2017.pdf</th>
-          <td>Mike Jones</td>
+          <th><a href="#">Taxes2017.pdf</a></th>
+          <td>Mike Jones <small>(Owner)</small></td>
           <td>Tax</td>
           <td>06/12/17</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
         </tr>
         <tr>
-          <th><a href="#">ContractList.pdf</th>
-          <td>Alex Hambry</td>
+          <th><a href="#">ContractList.pdf</a></th>
+          <td>Alex Hambry <small>(Contributor)</small></td>
           <td>Contract List</td>
           <td>06/10/17</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
         </tr>
         <tr>
-          <th><a href="#">Balance_Sheet.pdf</th>
-          <td>Mike Jones</td>
+          <th><a href="#">Balance_Sheet.pdf</a></th>
+          <td>Mike Jones <small>(Owner)</small></td>
           <td>Financial</td>
           <td>06/11/17</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
         </tr>
         <tr>
-          <th><a href="#">ArlingtonCOGS.pdf</th>
-          <td>Alex Hambry</td>
+          <th><a href="#">ArlingtonCOGS.pdf</a></th>
+          <td>Alex Hambry <small>(Contributor)</small></td>
           <td>Certificate of Good Standing</td>
           <td>06/10/17</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
         </tr>
       </tbody>
     </table>
@@ -101,8 +110,8 @@ activity_log_link: activity-log.html
       <label for="options">Name</label>
       <select name="options" id="options">
         <option value="value1"></option>
-        <option value="Allen Hambry">Allen Hambry</option>
-        <option value="Mike Jones">Mike Jones</option>
+        <option value="Allen Hambry">Allen Hambry (Contributor)</option>
+        <option value="Mike Jones">Mike Jones (Owner)</option>
       </select>
 
       <input type="submit" value="Go">
@@ -116,6 +125,13 @@ activity_log_link: activity-log.html
   $(document).ready(function() {
     $('table').DataTable( {
       "aaSorting": [],
+      "columns": [
+        null,
+        null,
+        null,
+        null,
+        { "orderable": false }
+      ],
       "info":     false,
       "paging":   false,
       "searching":   false
