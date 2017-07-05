@@ -12,21 +12,42 @@
   border-bottom: 1px solid $color-gray-lighter;
   font-size: 1.5rem;
   margin: 0 0 .5rem 0;
-  padding: .5rem 0;
+  padding: 1rem 0;
   }
 
   th {
-    font-weight: bold;
+    color: $color-gray;
+    font-weight: $font-normal;
     text-align: left;
   }
 
   td {
+    font-weight: bold;
     text-align: right;
   }
 
   tr.larger th,
   tr.larger td {
     font-size: 1.7rem;
+  }
+}
+
+.quick-details--wide {
+  margin-bottom: 8rem;
+
+  th {
+    @include media($article-max-width) {
+      font-size: 1.8rem;
+      padding: 2rem 0;
+      width: 33.3333%;
+    }
+  }
+  td {
+    @include media($article-max-width) {
+      font-size: 1.8rem;
+      padding: 2rem 0;
+      text-align: left;
+    }
   }
 }
 
