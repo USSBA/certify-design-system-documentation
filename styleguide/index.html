@@ -6,6 +6,9 @@ layout: styleguide
 
 <p>Task panels are interactive menus that contain bulk actions for items they relate to. In order for them to function properly, the toggle button must have an <code>aria-controls</code> value that corresponds to the <code>id</code> of a <code>task-panel-content</code>.</p>
 
+<h3>Example</h3>
+
+
 <div class="task-panel">
   <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">actions</button>
   <div id="task-panel1" class="task-panel-content">
@@ -35,6 +38,7 @@ layout: styleguide
   </div>
 </div>
 
+<h4>Code</h4>
 <pre><code class="language-markup">
 &lt;div class="task-panel">
   &lt;button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">actions&lt;/button>
