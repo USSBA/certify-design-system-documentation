@@ -5,6 +5,7 @@
 }
 
 .card {
+  background: white;
   border: 1px solid $color-gray-lighter;
   border-radius: 2px;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
@@ -72,14 +73,24 @@
   @include flex-direction(row);
 }
 
-.card-set--halves .card {
+.card-set--halves .card:nth-child(odd) {
   @include media($nav-width) {
     width: 50%;
-    width: calc(50% - 3rem);
+    width: calc(50% - 1.5rem);
     margin: 0 0 6rem 0;
-    margin: 0 calc(3rem) 6rem 0;
+    margin: 0 calc(1.5rem) 6rem 0;
   }
 }
+
+.card-set--halves .card:nth-child(even) {
+  @include media($nav-width) {
+    width: 50%;
+    width: calc(50% - 1.5rem);
+    margin: 0 0 6rem 0;
+    margin: 0 0 6rem calc(1.5rem);
+  }
+}
+
 
 .card-set--halves .card__header {
   padding: 2rem 2rem 0;
