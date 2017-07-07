@@ -24,10 +24,18 @@
               <a href="#" class="task-panel-menu__link"><strong>Begin processing this case</strong></a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link">Add a note</a>
+              <a href="{% if page.notes_link %}
+                {{ page.notes_link }}#new_note
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Add a note</a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link">Request info from firm</a>
+              <a href="{% if page.ad_hoc_link %}
+                {{ page.ad_hoc_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Request info from firm</a>
             </li>
             <li class="task-panel-menu__item">
               <a href="#" class="task-panel-menu__link">Send message to firm</a>

@@ -1,0 +1,71 @@
+---
+layout: analyst_application
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+ad_hoc_link: ad-hoc1.html
+---
+
+<div class="certify-page-header">
+  <div class="certify-page-header__primary">
+    <h1>Request Additional Info from Firm</h1>
+  </div>
+</div>
+
+<p class="usa-font-lead">You may request additional information from the firm if you need a question answered or you need a document without returning the entire application. The response from the firm will be included as part of this application. If the application is incomplete, please <a href="#">return for revisions</a>.</p>
+
+<form action="#">
+  <fieldset class="questions">
+    <label for="owners">Owner or contributor</label>
+    <select name="owners" id="owners" required>
+      <option value=""></option>
+      <option value="Allen Hambry">Allen Hambry (contributor)</option>
+      <option value="Mike Jones">Mike Jones (owner)</option>
+    </select>
+    <label for="question_to_firm">Question to firm</label>
+    <input type="text" id="question_to_firm" required>
+  </fieldset>
+  <fieldset class="questions">
+    <h4>Response required from firm</h4>
+    <ul id="response" class="usa-unstyled-list">
+      <li>
+        <input id="firm_response_comment" type="checkbox" name="firm_response" value="Comment required">
+        <label for="firm_response_comment">Text</label>
+      </li>
+      <li>
+        <input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required">
+        <label for="firm_response_attachment">Attachment</label>
+      </li>
+    </ul>
+  </fieldset>
+  <div class="actions">
+    <div class="actions__main">
+      <button type="submit">Request this info</button>
+      <a href="#">Cancel</a>
+    </div>
+  </div>
+</form>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else if($(':checkbox:checked').length == 0) {
+        $('#response').prepend('<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">Please select an item in the list.</span>');
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("ad-hoc2.html");
+        return false;
+      }
+    });
+  });
+</script>
