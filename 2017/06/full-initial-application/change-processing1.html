@@ -18,4 +18,24 @@ change_status_link: change-processing1.html
 
 <p class="usa-font-lead">By sending this case to pocessing, you attest that the firm has submitted all neccesary documents and information. Once in processing, the SBA will have until <strong>10/13/17</strong> to make a determination.</p>
 
-<p><a href="change-processing2.html" class="usa-button">Begin processing</a> <a href="javascript:window.history.back();">Cancel</a></p>
+<form action="#">
+  <input type="hidden" id="status" value="processing">
+  <input type="hidden" id="status_text" value="Processing">
+  <input type="hidden" id="days_due" value="(90 days)">
+  <p><button type="submit" class="usa-button">Send to processing</button> <a href="javascript:window.history.back();">Cancel</a></p>
+</form>
+
+<script>
+$(document).ready(function() {
+  $('form').on('submit', function() {
+    if (!checkValidityIfSupported($('form').get(0))) {
+      return false;
+    }
+    else {
+      updateStoredData();
+      nextPage("change-processing2.html");
+      return false;
+    }
+  });
+});
+</script>

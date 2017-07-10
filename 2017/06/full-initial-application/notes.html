@@ -71,8 +71,9 @@ change_status_link: change-processing1.html
         </div>
       </fieldset>
       <button type="submit">Add note</button>
+      <button type="button" id="new-note-close" class="new-note-close">Close</button>
   </form>
-  <button id="close_new_note" class="new-note-close" type="button">Close</button>
+
 </div>
 
 <div class="certify-grid-wrap">
@@ -272,13 +273,21 @@ change_status_link: change-processing1.html
       $('#compose-note').on('click', function(){
         $('#new_note').addClass('expanded');
         $('#note_subject').focus();
+        $('html, body').animate({
+            scrollTop: $("#new_note").offset().top
+        }, 500);
       });
 
-      $('.new-note textarea').on('blur', function(){
-        if (!$(this).val()){
-          $(this).parent().parent().removeClass('expanded')
-        }
+      if (window.location.search.indexOf('new_note=true') > -1) {
+        $('#new_note').addClass('expanded');
+        $('#note_subject').focus();
+        $('html, body').animate({
+            scrollTop: $("#new_note").offset().top
+        }, 500);
+      }
 
+      $('#new-note-close').on('click', function(){
+        $('#new_note').removeClass('expanded');
       });
     });
   </script>

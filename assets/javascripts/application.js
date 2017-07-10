@@ -11,6 +11,7 @@
   -{% include_relative components/form-validation.js %}
   -{% include_relative components/prep-storage.js %}
   -{% include_relative components/session-storage.js %}
+  -{% include_relative components/smooth_scrolling.js %}
   -{% include_relative components/table-sort.js %}
   -{% include_relative components/task_panel.js %}
   -{% include_relative components/taskbar.js %}

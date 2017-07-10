@@ -43,19 +43,24 @@ article.note,
   width: 100%;
 }
 
-.new-note-close {
+.new-note-close,
+.new-note-close:active,
+.new-note-close:hover {
+  background-color: transparent;
   background-image: url('../uswds/img/close.png');
   background-image: url('../uswds/img/close.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: 30px;
   height: 44px;
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1rem;
+  text-indent: -999em;
+  top: 1rem;
   width: 44px;
 }
 
-.new-note.expanded,
-#new_note:target {
+.new-note.expanded {
   background: white;
   border: none;
 
@@ -71,5 +76,9 @@ article.note,
 
   textarea {
     height: 20rem;
+  }
+
+  .new-note-open {
+    display: none;
   }
 }
