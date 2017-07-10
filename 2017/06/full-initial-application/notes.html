@@ -17,8 +17,16 @@ change_status_link: change-processing1.html
 <h1>Notes</h1>
 
 <div class="new-note" id="new_note">
-  <form action="" class="new-note-form">
-    <textarea name="" id="note" placeholder="Compose a new note"></textarea>
+  <button type="button" class="usa-button-unstyled new-note-open" id="compose-note">Compose a new note…</button>
+  <form action="" id="new-note-form" class="new-note-form">
+    <fieldset class="questions">
+      <legend>New Note</legend>
+      <label for="note_subject">Subject</label>
+      <input type="text" id="note_subject">
+      <label for="note">Message</label>
+      <textarea name="" id="note"></textarea>
+    </fieldset>
+
     <fieldset class="question tags">
       <legend>Tags</legend>
         <div class="usa-width-one-half">
@@ -64,6 +72,7 @@ change_status_link: change-processing1.html
       </fieldset>
       <button type="submit">Add note</button>
   </form>
+  <button id="close_new_note" class="new-note-close" type="button">Close</button>
 </div>
 
 <div class="certify-grid-wrap">
@@ -260,8 +269,9 @@ change_status_link: change-processing1.html
   <!-- This script will mimic the interaction we want to see -->
   <script>
     $(document).ready(function() {
-      $('.new-note textarea').on('focus', function(){
-        $(this).parent().parent().addClass('expanded')
+      $('#compose-note').on('click', function(){
+        $('#new_note').addClass('expanded');
+        $('#note_subject').focus();
       });
 
       $('.new-note textarea').on('blur', function(){

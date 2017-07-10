@@ -16,6 +16,7 @@ article.note,
   form {
     @include transition(all .5s ease-in-out);
     background: $color-gray-lightest;
+    display: none;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -30,11 +31,27 @@ article.note,
   .tags legend{
     padding-top: 3rem;
   }
+}
 
-  .tags,
-  button {
-    display: none;
-  }
+.new-note-open,
+.new-note-open:hover {
+  background: white;
+  border: 1px solid $color-gray;
+  color: $color-gray;
+  display: block;
+  padding: 2rem;
+  width: 100%;
+}
+
+.new-note-close {
+  background-image: url('../uswds/img/close.png');
+  background-image: url('../uswds/img/close.svg');
+  background-size: 30px;
+  height: 44px;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 44px;
 }
 
 .new-note.expanded,
@@ -43,6 +60,7 @@ article.note,
   border: none;
 
   form {
+    display: block;
     max-width: 76rem;
     box-shadow: 0 0px 0px 2000px rgba(0,0,0,0.75);
     padding: 60px;
@@ -53,13 +71,5 @@ article.note,
 
   textarea {
     height: 20rem;
-  }
-
-  .tags{
-    display: block;
-  }
-
-  button {
-    display: inline-block;
   }
 }
