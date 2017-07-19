@@ -57,6 +57,7 @@
         </div>
       </div>
 
+      <!-- DEVNOTE: The ID is only for JS purposes in prototype. DO NOT INCLUDE -->
       <div class="task-panel" id="processing_task_panel">
         <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">actions</button>
         <div id="task-panel1" class="task-panel-content">
@@ -67,6 +68,20 @@
               {% else %}
                 #
               {% endif %}" class="task-panel-menu__link"><strong>Make a recommendation</strong></a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.assign_link %}
+                {{ page.assign_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Assign case</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.upload_document_link %}
+                {{ page.upload_document_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Upload a document</a>
             </li>
             <li class="task-panel-menu__item">
               <a href="{% if page.notes_link %}
@@ -87,13 +102,20 @@
                 {{ page.refer_link }}
               {% else %}
                 #
-              {% endif %}" class="task-panel-menu__link">Refer case to (OIG, Size, OGC, etc.)… </a>
+              {% endif %}" class="task-panel-menu__link">Refer case to within SBA </a>
             </li>
             <li class="task-panel-menu__item">
               <a href="#" class="task-panel-menu__link">Send message to firm</a>
             </li>
             <li class="task-panel-menu__item">
               <a href="#" class="task-panel-menu__link">Return to firm for revisions</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.change_due_date_link %}
+                {{ page.change_due_date_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Change due date</a>
             </li>
           </ul>
           <hr>
