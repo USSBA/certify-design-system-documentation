@@ -9,6 +9,7 @@ messages_link: messages.html
 activity_log_link: activity-log.html
 ad_hoc_link: ad-hoc1.html
 change_status_link: change-processing1.html
+recommendation_link: recommendation1.html
 ---
 
 
@@ -359,38 +360,40 @@ change_status_link: change-processing1.html
       </div>
     </section>
 
-    <h2>Additional Information from Firm</h2>
-    <p><em>This section includes any information or documents requested from the firm by the SBA after the application was submitted. </em></p>
-    <section id="additional_info_cards" class="card-set card-set--halves">
-      <div class="card">
-        <div class="card__header">
-          <h3 class="card__primary-heading"><a href="#"><span data-print="question_to_firm"></span></a></h3>
+    <div class="processing-only">
+      <h2>Additional Information from Firm</h2>
+      <p><em>This section includes any information or documents requested from the firm by the SBA after the application was submitted. </em></p>
+      <section id="additional_info_cards" class="card-set card-set--halves">
+        <div class="card">
+          <div class="card__header">
+            <h3 class="card__primary-heading"><a href="#"><span data-print="question_to_firm"></span></a></h3>
+          </div>
+          <div class="card__content">
+            <table class="quick-details">
+              <tbody>
+                <tr class="larger">
+                  <th>Status:</th>
+                  <td><span class="usa-color-red">Not started</span></td>
+                </tr>
+                <tr>
+                  <th>Last Update:</th>
+                  <td>07/07/17</td>
+                </tr>
+                <tr>
+                  <th>Started:</th>
+                  <td>07/07/17</td>
+                </tr>
+                <tr>
+                  <th>Requested to:</th>
+                  <td><span data-print="owners"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="card__content">
-          <table class="quick-details">
-            <tbody>
-              <tr class="larger">
-                <th>Status:</th>
-                <td><span class="usa-color-red">Not started</span></td>
-              </tr>
-              <tr>
-                <th>Last Update:</th>
-                <td>07/07/17</td>
-              </tr>
-              <tr>
-                <th>Started:</th>
-                <td>07/07/17</td>
-              </tr>
-              <tr>
-                <th>Requested to:</th>
-                <td><span data-print="owners"></span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-    <p><a href="ad-hoc1.html" class="usa-button">Request info</a></p>
+      </section>
+      <p><a href="ad-hoc1.html" class="usa-button">Request info</a></p>
+    </div>
   </div>
   <div class="usa-width-one-third">
 
@@ -457,6 +460,10 @@ change_status_link: change-processing1.html
   $(document).ready(function() {
     if (typeof question_to_firm == "undefined") {
       $("#additional_info_cards").remove();
+    }
+
+    if (status != "processing") {
+      $('.processing-only').remove();
     }
   });
 </script>

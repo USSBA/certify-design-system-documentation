@@ -35,13 +35,6 @@
               {% endif %}" class="task-panel-menu__link">Add a note</a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="{% if page.ad_hoc_link %}
-                {{ page.ad_hoc_link }}
-              {% else %}
-                #
-              {% endif %}" class="task-panel-menu__link">Request info from firm</a>
-            </li>
-            <li class="task-panel-menu__item">
               <a href="#" class="task-panel-menu__link">Send message to firm</a>
             </li>
             <li class="task-panel-menu__item">
@@ -63,8 +56,8 @@
         <div id="task-panel1" class="task-panel-content">
           <ul class="task-panel-menu">
             <li class="task-panel-menu__item">
-              <a href="{% if page.change_status_link %}
-                {{ page.change_status_link }}
+              <a href="{% if page.recommendation_link %}
+                {{ page.recommendation_link }}
               {% else %}
                 #
               {% endif %}" class="task-panel-menu__link"><strong>Make a recommendation</strong></a>
