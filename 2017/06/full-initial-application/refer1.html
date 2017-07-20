@@ -14,7 +14,7 @@ refer_link: refer1.html
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <h1>Make a Recommendation</h1>
+    <h1>Refer Case Within SBA</h1>
   </div>
 </div>
 
@@ -22,32 +22,39 @@ refer_link: refer1.html
 
 <form action="#">
   <fieldset class="questions">
-    <h4>Would you recommend Mike’s Garage as eligible?</h4>
+    <h4>Refer case to…</h4>
     <ul id="response" class="usa-unstyled-list">
       <li>
-        <input id="reconsider_yes" type="radio" name="eligiblity" value="recommend eligible">
-        <label for="reconsider_yes"><strong>Yes</strong>, I recommend eligible</label>
+        <input id="refer_oig" type="radio" name="refer" value="OIG">
+        <label for="refer_oig">Office of Inspector General (OIG)</label>
       </li>
       <li>
-        <input id="reconsider_no" type="radio" name="eligiblity" value="recommend ineligible" data-followup="followup" data-followup-required="true">
-        <label for="reconsider_no"><strong>No</strong>, I do not recommend as eligible</label>
+        <input id="refer_ogc" type="radio" name="refer" value="OGC">
+        <label for="refer_ogc">Office of General Counsel (OGC)</label>
+      </li>
+      <li>
+        <input id="refer_size" type="radio" name="refer" value="Size">
+        <label for="refer_size">Size</label>
+      </li>
+      <li>
+        <input id="refer_cods" type="radio" name="refer" value="CODS">
+        <label for="refer_cods">CODS</label>
+      </li>
+      <li>
+        <input id="refer_consultation" type="radio" name="refer" value="Consultation">
+        <label for="refer_consultation">Consultation</label>
+      </li>
+      <li>
+        <input id="refer_other" type="radio" name="refer" value="Other Business Unit" data-followup="followup" data-followup-required="true">
+        <label for="refer_other">Other business unit</label>
 
         <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
           <fieldset class="questions">
-            <h4><label for="attachment_type">Is this application eligible for reconsideration?</label></h4>
-            <ul class="usa-unstyled-list">
-              <li>
-                <input id="reconsideration_yes" type="radio" name="reconsideration" value="yes">
-                <label for="reconsideration_yes">Yes</label>
-              </li>
-              <li>
-                <input id="reconsideration_no" type="radio" name="reconsideration" value="no">
-                <label for="reconsideration_no">No</label>
-              </li>
-            </ul>
-
-            <label for="rationale">Please briefly explain why</label>
-            <textarea name="" id="rational"></textarea>
+            <label for="other_business_unit">Select business unit</label>
+            <select name="other_business_unit" id="other_business_unit">
+              <option value=""></option>
+              <option value="">Some business unit</option>
+            </select>
           </fieldset>
         </div>
       </li>
@@ -76,7 +83,7 @@ refer_link: refer1.html
       }
       else {
         updateStoredData();
-        nextPage("recommendation2.html");
+        nextPage("refer2.html");
         return false;
       }
     });
