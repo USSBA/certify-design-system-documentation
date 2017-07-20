@@ -59,7 +59,8 @@
 }
 
 .eligible--yes,
-.eligible--no {
+.eligible--no,
+.eligible--empty {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 1.4rem;
@@ -79,4 +80,9 @@
 .eligible--no {
   background-image: url('../img/red-x.png');
   background-image: url('../img/red-x.svg');
+}
+
+.eligible--empty {
+  background-image: url('../img/gray-minus.png');
+  background-image: url('../img/gray-minus.svg');
 }
