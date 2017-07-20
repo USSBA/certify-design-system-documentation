@@ -57,3 +57,26 @@
   width: 8rem;
   vertical-align: middle;
 }
+
+.eligible--yes,
+.eligible--no {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1.4rem;
+  display: inline-block;
+  height: 1.6rem;
+  position: relative;
+  text-indent: -999rem;
+  top: .5rem;
+  width: 1.6rem;
+}
+
+.eligible--yes {
+  background-image: url('../img/green-check.png');
+  background-image: url('../img/green-check.svg');
+}
+
+.eligible--no {
+  background-image: url('../img/red-x.png');
+  background-image: url('../img/red-x.svg');
+}

@@ -12,7 +12,12 @@
     </div>
     <div class="taskbar-section hide-mobile">
       <p class="taskbar-section__text">
-        <span class="taskbar-section__subhead">Currently with</span> Chad Roberts (CODS)
+        <span class="taskbar-section__subhead">Currently with</span> <span data-print="reassignment">Chad Roberts (CODS)</span>
+      </p>
+    </div>
+    <div id="recommendations" class="taskbar-section hide-mobile">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Recommendations</span> <span class="eligible--yes">eligible</span> <span class="eligible--no">ineligible</span>
       </p>
     </div>
     <div class="taskbar-actions">
@@ -130,6 +135,18 @@ $(document).ready(function() {
   }
   else {
     $('#processing_task_panel').remove();
+  }
+
+  if (typeof recommendation_made == "undefined") {
+    $("#recommendations").remove();
+  }
+
+  if ((typeof eligiblity != "undefined") && (eligiblity === "recommend eligible")) {
+    $(".eligible--no").remove();
+  }
+
+  if ((typeof eligiblity != "undefined") && (eligiblity === "recommend ineligible")) {
+    $(".eligible--yes").remove();
   }
 });
 </script>

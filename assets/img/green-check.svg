@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="98px" viewBox="0 0 128 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>correct8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="correct8" fill-rule="nonzero" fill="#2E8540">
+            <path d="M124.86,13.966 L113.78,2.886 C112.26,1.366 110.413,0.606 108.24,0.606 C106.068,0.606 104.22,1.366 102.7,2.886 L49.254,56.414 L25.3,32.38 C23.78,30.858 21.933,30.098 19.76,30.098 C17.588,30.098 15.74,30.858 14.22,32.378 L3.14,43.46 C1.62,44.982 0.86,46.83 0.86,49.002 C0.86,51.174 1.62,53.022 3.14,54.542 L32.633,84.035 L43.713,95.115 C45.233,96.635 47.081,97.395 49.253,97.395 C51.426,97.395 53.273,96.635 54.793,95.115 L65.875,84.035 L124.86,25.05 C126.38,23.53 127.143,21.68 127.143,19.51 C127.143,17.336 126.383,15.49 124.863,13.97 L124.86,13.966 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
