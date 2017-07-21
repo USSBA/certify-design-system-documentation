@@ -25,11 +25,11 @@ refer_link: refer1.html
     <h4>Select an individual within this business unit</h4>
     <ul id="response" class="usa-unstyled-list">
       <li>
-        <input id="refer_jane" type="radio" name="refer_person" value="Jame Smith">
+        <input id="refer_jane" type="radio" name="reassignment" value="Jame Smith">
         <label for="refer_jane">Jane Smith</label>
       </li>
       <li>
-        <input id="refer_bud" type="radio" name="refer_person" value="Bud Salazar">
+        <input id="refer_bud" type="radio" name="reassignment" value="Bud Salazar">
         <label for="refer_bud">Bud Salizar</label>
       </li>
     </ul>
@@ -46,6 +46,15 @@ refer_link: refer1.html
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
+
+    $.fn.appendAttr = function(attrName, suffix) {
+        this.attr(attrName, function(i, val) {
+            return val + suffix;
+        });
+        return this;
+    };
+
+    $('input').appendAttr('value', ' ('+ refer +')');
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
