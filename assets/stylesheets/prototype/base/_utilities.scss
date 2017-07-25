@@ -13,3 +13,10 @@
 .certify-grid-wrap {
   @include clearfix;
 }
+
+.certify-width-two-thirds {
+
+  @include media($nav-width) {
+    width: 65.05695%;
+  }
+}

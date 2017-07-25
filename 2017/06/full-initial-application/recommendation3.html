@@ -10,34 +10,41 @@ ad_hoc_link: ad-hoc1.html
 change_status_link: change-processing1.html
 recommendation_link: recommendation1.html
 refer_link: refer1.html
+body_class: hide-local-nav
 ---
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
+    <span class="subheading--large">Recommendation: Step 3 of 4</span>
     <h1>Reassign This Case</h1>
   </div>
 </div>
 
 <p class="usa-font-lead">To complete your recommendation, please select who should be the next person to analyse this case.</p>
 
-<form action="#">
-  <fieldset class="questions">
-    <input type="hidden" id="recommendation_made" value="true">
-    <h4>Please select a supervisor</h4>
-    <ul id="response" class="usa-unstyled-list">
-      <li>
-        <input id="reassigned_to" type="radio" name="reassignment" value="Teresa Tynhurst (CODS)">
-        <label for="reassigned_to">Teresa Tynhurst</label>
-      </li>
-    </ul>
-  </fieldset>
-  <div class="actions">
-    <div class="actions__main">
-      <button type="submit">Complete recommendation</button>
-      <a href="javascript:window.history.back();">Cancel</a>
-    </div>
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+
+    <form action="#">
+      <fieldset class="questions">
+        <input type="hidden" id="recommendation_made" value="true">
+        <h4>Please select a supervisor</h4>
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <input id="reassigned_to" type="radio" name="reassignment" value="Teresa Tynhurst (CODS)">
+            <label for="reassigned_to">Teresa Tynhurst</label>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Next</button>
+          <a href="javascript:window.history.back();">Back</a>
+        </div>
+      </div>
+    </form>
   </div>
-</form>
+</div>
 
 
 <!-- This script will mimic the interaction we want to see -->

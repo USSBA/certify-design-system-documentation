@@ -4,7 +4,8 @@
   <head>
     {% include _head.html %}
   </head>
-  <body class="public mainscreen">
+  <body class="public mainscreen {% if page.body_class %}
+    {{ page.body_class }}{% endif %}">
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
   {% include _analyst_masthead_full.html %}

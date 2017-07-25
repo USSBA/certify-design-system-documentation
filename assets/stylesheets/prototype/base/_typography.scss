@@ -14,7 +14,8 @@
   color: $color-gray;
 }
 
-.subheading {
+.subheading,
+.subheading--large {
   font-family: $font-sans;
   font-size: 1.3rem;
   font-weight: normal;
@@ -27,6 +28,10 @@
   + h1 {
     margin-top: 0;
   }
+}
+
+.subheading--large {
+  font-size: 1.7rem;
 }
 
 

@@ -10,56 +10,64 @@ ad_hoc_link: ad-hoc1.html
 change_status_link: change-processing1.html
 recommendation_link: recommendation1.html
 refer_link: refer1.html
+body_class: hide-local-nav
 ---
+
+
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
+    <span class="subheading--large">Recommendation: Step 1 of 4</span>
     <h1>Make a Recommendation</h1>
   </div>
 </div>
 
-<p class="usa-font-lead">Upon making a recommendation, you will be required to write a note and assign the case. When your recommendation is submitted, this case will no longer appear in your workload table.</p>
+<p class="usa-font-lead">Upon making a recommendation, you will be required to write a note and reassign the case to a supervisor. When your recommendation is submitted, this case will no longer appear in your workload.</p>
 
-<form action="#">
-  <fieldset class="questions">
-    <h4>Would you recommend Mike’s Garage as eligible?</h4>
-    <ul id="response" class="usa-unstyled-list">
-      <li>
-        <input id="reconsider_yes" type="radio" name="eligiblity" value="recommend eligible">
-        <label for="reconsider_yes"><strong>Yes</strong>, I recommend eligible</label>
-      </li>
-      <li>
-        <input id="reconsider_no" type="radio" name="eligiblity" value="recommend ineligible" data-followup="followup" data-followup-required="true">
-        <label for="reconsider_no"><strong>No</strong>, I do not recommend as eligible</label>
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <form action="#">
+      <fieldset class="questions">
+        <h4>Would you recommend Mike’s Garage as eligible?</h4>
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <input id="reconsider_yes" type="radio" name="eligiblity" value="Recommend eligible">
+            <label for="reconsider_yes"><strong>Yes</strong>, I recommend eligible</label>
+          </li>
+          <li>
+            <input id="reconsider_no" type="radio" name="eligiblity" value="Recommend ineligible" data-followup="followup" data-followup-required="true">
+            <label for="reconsider_no"><strong>No</strong>, I do not recommend as eligible</label>
 
-        <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
-          <fieldset class="questions">
-            <h4><label for="attachment_type">Is this application eligible for reconsideration?</label></h4>
-            <ul class="usa-unstyled-list">
-              <li>
-                <input id="reconsideration_yes" type="radio" name="reconsideration" value="yes">
-                <label for="reconsideration_yes">Yes</label>
-              </li>
-              <li>
-                <input id="reconsideration_no" type="radio" name="reconsideration" value="no">
-                <label for="reconsideration_no">No</label>
-              </li>
-            </ul>
+            <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
+              <fieldset class="questions">
+                <h4><label for="attachment_type">Is this application eligible for reconsideration?</label></h4>
+                <ul class="usa-unstyled-list">
+                  <li>
+                    <input id="reconsideration_yes" type="radio" name="reconsideration" value="yes">
+                    <label for="reconsideration_yes">Yes</label>
+                  </li>
+                  <li>
+                    <input id="reconsideration_no" type="radio" name="reconsideration" value="no">
+                    <label for="reconsideration_no">No</label>
+                  </li>
+                </ul>
 
-            <label for="rationale">Please briefly explain why</label>
-            <textarea name="" id="rational"></textarea>
-          </fieldset>
+                <label for="rationale">Please briefly explain why</label>
+                <textarea name="" id="rational"></textarea>
+              </fieldset>
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Next</button>
+          <a href="javascript:window.history.back();">Cancel</a>
         </div>
-      </li>
-    </ul>
-  </fieldset>
-  <div class="actions">
-    <div class="actions__main">
-      <button type="submit">Next</button>
-      <a href="javascript:window.history.back();">Cancel</a>
-    </div>
+      </div>
+    </form>
   </div>
-</form>
+</div>
 
 
 <!-- This script will mimic the interaction we want to see -->

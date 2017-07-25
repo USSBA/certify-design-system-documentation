@@ -10,14 +10,48 @@ ad_hoc_link: ad-hoc1.html
 change_status_link: change-processing1.html
 recommendation_link: recommendation1.html
 refer_link: refer1.html
+body_class: hide-local-nav
 ---
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <h1>Recommendation Submitted</h1>
+    <span class="subheading--large">Recommendation: Step 4 of 4</span>
+    <h1>Review &amp; Complete</h1>
   </div>
 </div>
 
-<p class="usa-font-lead">This case has been recommended as blah and assigned to blah. There is nothing else you will need to do.</p>
+<p class="usa-font-lead">Review the information below. Once the recommendation is submitted, this case will no longer be in your workload.</p>
 
-<p><a href="application.html" class="usa-button usa-button-big">Dashboard</a></p>
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <div class="review-info">
+      <div class="review-info__item">
+        <div class="review-info__content">
+          <h2 class="review-info__heading">Recommendation</h2>
+          <p data-print="eligiblity"></p>
+        </div>
+        <div class="review-info__actions"><a href="recommendation1.html" class="usa-button usa-button-gray">Edit</a></div>
+      </div>
+      <div class="review-info__item">
+        <div class="review-info__content">
+          <h2 class="review-info__heading">Note</h2>
+          <p><strong>Topic: </strong><span data-print="note_subject"></span></p>
+          <p data-print="note"></p>
+          <p><strong>Tags: </strong><span data-print="note-tags"></span></p>
+        </div>
+        <div class="review-info__actions"><a href="recommendation2.html" class="usa-button usa-button-gray">Edit</a></div>
+      </div>
+      <div class="review-info__item">
+        <div class="review-info__content">
+          <h2 class="review-info__heading">Reassignment</h2>
+          <p data-print="reassignment"></p>
+        </div>
+        <div class="review-info__actions"><a href="recommendation3.html" class="usa-button usa-button-gray">Edit</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<p><a href="recommendation5.html" class="usa-button">Complete recommendation</a></p>

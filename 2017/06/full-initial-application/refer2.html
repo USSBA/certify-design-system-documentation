@@ -10,37 +10,43 @@ ad_hoc_link: ad-hoc1.html
 change_status_link: change-processing1.html
 recommendation_link: recommendation1.html
 refer_link: refer1.html
+body_class: hide-local-nav
 ---
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <h1>Referring case to <span data-print="refer"></span></h1>
+    <span class="subheading--large">Refer Case: Step 2 of 4</span>
+    <h1>Who in <span data-print="refer"></span> should get this case?</h1>
   </div>
 </div>
 
 <p class="usa-font-lead">[Here is some info about what happens when the case is referred here.]</p>
 
-<form action="#">
-  <fieldset class="questions">
-    <h4>Select an individual within this business unit</h4>
-    <ul id="response" class="usa-unstyled-list">
-      <li>
-        <input id="refer_jane" type="radio" name="reassignment" value="Jame Smith">
-        <label for="refer_jane">Jane Smith</label>
-      </li>
-      <li>
-        <input id="refer_bud" type="radio" name="reassignment" value="Bud Salazar">
-        <label for="refer_bud">Bud Salizar</label>
-      </li>
-    </ul>
-  </fieldset>
-  <div class="actions">
-    <div class="actions__main">
-      <button type="submit">Next</button>
-      <a href="javascript:window.history.back();">Cancel</a>
-    </div>
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <form action="#">
+      <fieldset class="questions">
+        <h4>People</h4>
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <input id="refer_jane" type="radio" name="reassignment" value="Jame Smith">
+            <label for="refer_jane">Jane Smith</label>
+          </li>
+          <li>
+            <input id="refer_bud" type="radio" name="reassignment" value="Bud Salazar">
+            <label for="refer_bud">Bud Salizar</label>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Next</button>
+          <a href="javascript:window.history.back();">Back</a>
+        </div>
+      </div>
+    </form>
   </div>
-</form>
+</div>
 
 
 <!-- This script will mimic the interaction we want to see -->

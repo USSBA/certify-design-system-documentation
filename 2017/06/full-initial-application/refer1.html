@@ -10,63 +10,70 @@ ad_hoc_link: ad-hoc1.html
 change_status_link: change-processing1.html
 recommendation_link: recommendation1.html
 refer_link: refer1.html
+body_class: hide-local-nav
 ---
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
+    <span class="subheading--large">Refer Case: Step 1 of 4</span>
     <h1>Refer Case Within SBA</h1>
   </div>
 </div>
 
 <p class="usa-font-lead">Upon making a recommendation, you will be required to write a note and assign the case. When your recommendation is submitted, this case will no longer appear in your workload table.</p>
 
-<form action="#">
-  <fieldset class="questions">
-    <h4>Refer case to…</h4>
-    <ul id="response" class="usa-unstyled-list">
-      <li>
-        <input id="refer_oig" type="radio" name="refer" value="OIG">
-        <label for="refer_oig">Office of Inspector General (OIG)</label>
-      </li>
-      <li>
-        <input id="refer_ogc" type="radio" name="refer" value="OGC">
-        <label for="refer_ogc">Office of General Counsel (OGC)</label>
-      </li>
-      <li>
-        <input id="refer_size" type="radio" name="refer" value="Size">
-        <label for="refer_size">Size</label>
-      </li>
-      <li>
-        <input id="refer_cods" type="radio" name="refer" value="CODS">
-        <label for="refer_cods">CODS</label>
-      </li>
-      <li>
-        <input id="refer_consultation" type="radio" name="refer" value="Consultation">
-        <label for="refer_consultation">Consultation</label>
-      </li>
-      <li>
-        <input id="refer_other" type="radio" name="refer" value="Other Business Unit" data-followup="followup" data-followup-required="true">
-        <label for="refer_other">Other business unit</label>
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
 
-        <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
-          <fieldset class="questions">
-            <label for="other_business_unit">Select business unit</label>
-            <select name="other_business_unit" id="other_business_unit">
-              <option value=""></option>
-              <option value="">Some business unit</option>
-            </select>
-          </fieldset>
+    <form action="#">
+      <fieldset class="questions">
+        <h4>Refer case to…</h4>
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <input id="refer_oig" type="radio" name="refer" value="OIG">
+            <label for="refer_oig">Office of Inspector General (OIG)</label>
+          </li>
+          <li>
+            <input id="refer_ogc" type="radio" name="refer" value="OGC">
+            <label for="refer_ogc">Office of General Counsel (OGC)</label>
+          </li>
+          <li>
+            <input id="refer_size" type="radio" name="refer" value="Size">
+            <label for="refer_size">Size</label>
+          </li>
+          <li>
+            <input id="refer_cods" type="radio" name="refer" value="CODS">
+            <label for="refer_cods">CODS</label>
+          </li>
+          <li>
+            <input id="refer_consultation" type="radio" name="refer" value="Consultation">
+            <label for="refer_consultation">Consultation</label>
+          </li>
+          <li>
+            <input id="refer_other" type="radio" name="refer" value="Other Business Unit" data-followup="followup" data-followup-required="true">
+            <label for="refer_other">Other business unit</label>
+
+            <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
+              <fieldset class="questions">
+                <label for="other_business_unit">Select business unit</label>
+                <select name="other_business_unit" id="other_business_unit">
+                  <option value=""></option>
+                  <option value="">Some business unit</option>
+                </select>
+              </fieldset>
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Next</button>
+          <a href="javascript:window.history.back();">Cancel</a>
         </div>
-      </li>
-    </ul>
-  </fieldset>
-  <div class="actions">
-    <div class="actions__main">
-      <button type="submit">Next</button>
-      <a href="javascript:window.history.back();">Cancel</a>
-    </div>
+      </div>
+    </form>
   </div>
-</form>
+</div>
 
 
 <!-- This script will mimic the interaction we want to see -->
