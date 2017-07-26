@@ -58,7 +58,8 @@
 }
 
 // Card Meta Info
-.card__meta {
+.card__meta,
+.card__footer {
   background: $color-gray-lightest;
   border-top: 1px solid $color-gray-lighter;
   padding: 1rem 2rem;
@@ -71,6 +72,12 @@
 // Shows two cards in a row arranged horizontally and flows downward
 .card-set--halves {
   @include flex-direction(row);
+
+  .card__footer {
+    @include media($nav-width) {
+      padding: 1rem 2rem;
+    }
+  }
 }
 
 .card-set--halves .card:nth-child(odd) {
