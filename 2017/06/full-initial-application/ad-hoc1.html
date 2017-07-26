@@ -10,6 +10,7 @@ ad_hoc_link: ad-hoc1.html
 change_status_link: change-processing1.html
 recommendation_link: recommendation1.html
 refer_link: refer1.html
+body_class: hide-local-nav
 ---
 
 <div class="certify-page-header">
@@ -25,7 +26,12 @@ refer_link: refer1.html
     <p>If the application is incomplete, please <a href="#">return the entire application for revisions</a>. </p>
 
     <form action="#">
+      <div class="form-info">
+        <p><strong>This request pertains to</strong> <br>Eligiblity</p>
+        <p><strong>It will be sent to</strong> <br>Mike Jones</p>
+      </div>
       <fieldset class="questions">
+        <!--
         <label for="owners">Owner or Individual Contributor</label>
         <select name="owners" id="owners" required>
           <option value=""></option>
@@ -45,11 +51,12 @@ refer_link: refer1.html
           <option value="">Economic Disadvantage</option>
           <option value="">Social Disadvantage</option>
         </select>
+      -->
 
         <label for="question_to_firm">Topic</label>
         <input type="text" id="question_to_firm" required>
 
-        <label for="ad_hoc_text">Message body (optional)</label>
+        <label for="ad_hoc_text">Message body</label>
         <textarea name="" id="ad_hoc_text" cols="30" rows="10"></textarea>
 
 
