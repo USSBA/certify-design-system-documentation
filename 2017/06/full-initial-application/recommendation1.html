@@ -22,21 +22,19 @@ body_class: hide-local-nav
   </div>
 </div>
 
-<p class="usa-font-lead">Upon making a recommendation, you will be required to write a note and reassign the case to a supervisor. When your recommendation is submitted, this case will no longer appear in your workload.</p>
-
 <div class="certify-grid-wrap">
   <div class="certify-width-two-thirds">
     <form action="#">
       <fieldset class="questions">
-        <h4>Would you recommend Mike’s Garage as eligible?</h4>
+        <h4>Would you recommend Mike’s Garage as eligible for participation in the 8(a) Business Development Program?</h4>
         <ul id="response" class="usa-unstyled-list">
           <li>
             <input id="reconsider_yes" type="radio" name="eligiblity" value="Recommend eligible">
-            <label for="reconsider_yes"><strong>Yes</strong>, I recommend eligible</label>
+            <label for="reconsider_yes">Yes</label>
           </li>
           <li>
             <input id="reconsider_no" type="radio" name="eligiblity" value="Recommend ineligible" data-followup="followup" data-followup-required="true">
-            <label for="reconsider_no"><strong>No</strong>, I do not recommend as eligible</label>
+            <label for="reconsider_no">No</label>
 
             <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
               <fieldset class="questions">
@@ -63,7 +61,9 @@ body_class: hide-local-nav
         <div class="actions__main">
           <button type="submit">Next</button>
           <a href="javascript:window.history.back();">Cancel</a>
+          <p><em>Next step: Add a note</em></p>
         </div>
+
       </div>
     </form>
   </div>

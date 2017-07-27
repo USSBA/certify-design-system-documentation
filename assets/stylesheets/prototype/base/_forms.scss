@@ -29,6 +29,10 @@ label a {
 
 .actions__main {
   float: left;
+
+  p {
+    color: $color-gray;
+  }
 }
 
 .actions__alt {
