@@ -43,7 +43,11 @@
               {% endif %}" class="task-panel-menu__link">Add a note</a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link">Send message to firm</a>
+              <a href="{% if page.messages_link %}
+                {{ page.messages_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Send message to firm</a>
             </li>
             <li class="task-panel-menu__item">
               <a href="#" class="task-panel-menu__link">Return to firm for revisions</a>
@@ -103,7 +107,11 @@
               {% endif %}" class="task-panel-menu__link">Refer case within SBA </a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link">Send message to firm</a>
+              <a href="{% if page.messages_link %}
+                {{ page.messages_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Send message to firm</a>
             </li>
             <li class="task-panel-menu__item">
               <a href="#" class="task-panel-menu__link">Return to firm for revisions</a>
@@ -164,7 +172,11 @@
               {% endif %}" class="task-panel-menu__link">Refer case within SBA </a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link">Send message to firm</a>
+              <a href="{% if page.messages_link %}
+                {{ page.messages_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Send message to firm</a>
             </li>
           </ul>
         </div>
@@ -201,6 +213,11 @@ $(document).ready(function() {
 
   if ((typeof eligiblity != "undefined") && (eligiblity === "recommend ineligible")) {
     $(".eligible--yes").remove();
+  }
+
+
+  if ((typeof refer != "undefined") && ((refer === "OIG") ||  (refer === "Size"))) {
+    $("#due_date_text").text("Date pending").addClass("usa-color-red-darkest");
   }
 });
 </script>
