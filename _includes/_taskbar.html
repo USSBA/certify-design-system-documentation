@@ -52,7 +52,11 @@
           <hr>
           <ul class="task-panel-menu">
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link--emergency">Close this case</a>
+              <a href="{% if page.close_case_link %}
+                {{ page.close_case_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link--emergency">Close this case</a>
             </li>
           </ul>
         </div>
@@ -115,7 +119,11 @@
           <hr>
           <ul class="task-panel-menu">
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link--emergency">Close this case</a>
+              <a href="{% if page.close_case_link %}
+                {{ page.close_case_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link--emergency">Close this case</a>
             </li>
           </ul>
         </div>
