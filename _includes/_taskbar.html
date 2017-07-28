@@ -7,7 +7,7 @@
     </div>
     <div class="taskbar-section hide-mobile">
       <p class="taskbar-section__text">
-        <span class="taskbar-section__subhead">Application is due</span> 09/13/17
+        <span class="taskbar-section__subhead">Application is due</span> <span id="due_date_text">09/13/17</span<>
       </p>
     </div>
     <div class="taskbar-section hide-mobile">
@@ -128,18 +128,68 @@
           </ul>
         </div>
       </div>
+
+
+
+      <div class="task-panel" id="sme_task_panel">
+        <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel_sme">actions</button>
+        <div id="task-panel_sme" class="task-panel-content">
+          <ul class="task-panel-menu">
+            <li class="task-panel-menu__item">
+              <a href="{% if page.recommendation_link %}
+                {{ page.recommendation_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link"><strong>Return to Case Owner</strong></a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.upload_document_link %}
+                {{ page.upload_document_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Upload a document</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.notes_link %}
+                {{ page.notes_link }}?new_note=true
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Add a note</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.refer_link %}
+                {{ page.refer_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Refer case within SBA </a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="#" class="task-panel-menu__link">Send message to firm</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <script>
 $(document).ready(function() {
-  if (status == "processing") {
+
+  if ((typeof sme_review != "undefined") && (sme_review == "true")) {
     $('#screening_task_panel').remove();
+    $('#processing_task_panel').remove();
+  }
+  else if (status == "processing") {
+    $('#screening_task_panel').remove();
+    $('#sme_task_panel').remove();
   }
   else {
     $('#processing_task_panel').remove();
+    $('#sme_task_panel').remove();
   }
+
+
 
   if (typeof recommendation_made == "undefined") {
     $("#recommendations").remove();

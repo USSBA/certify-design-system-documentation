@@ -26,6 +26,7 @@ body_class: hide-local-nav
   <div class="certify-width-two-thirds">
 
     <form action="#">
+      <input type="hidden" id="sme_review" value="true">
       <fieldset class="questions">
         <h4>Refer case to…</h4>
         <ul id="response" class="usa-unstyled-list">
@@ -40,6 +41,10 @@ body_class: hide-local-nav
           <li>
             <input id="refer_size" type="radio" name="refer" value="Size">
             <label for="refer_size">Size</label>
+          </li>
+          <li>
+            <input id="refer_character" type="radio" name="refer" value="Character">
+            <label for="refer_character">Character</label>
           </li>
           <li>
             <input id="refer_cods" type="radio" name="refer" value="CODS">
