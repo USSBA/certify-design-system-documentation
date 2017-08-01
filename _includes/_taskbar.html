@@ -216,7 +216,7 @@ $(document).ready(function() {
   }
 
 
-  if ((typeof refer != "undefined") && ((refer === "OIG") ||  (refer === "Size"))) {
+  if ((typeof refer != "undefined") && (sme_review == "true") && ((refer === "OIG") ||  (refer === "Size"))) {
     $("#due_date_text").text("Date pending").addClass("usa-color-red-darkest");
   }
 });
