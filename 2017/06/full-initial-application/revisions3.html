@@ -15,12 +15,12 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Close case: Step 4 of 4</span>
-    <h1>Finish closing this case</h1>
+    <span class="subheading--large">Return for revisions: Step 3 of 3</span>
+    <h1>Finish return for revisions</h1>
   </div>
 </div>
 
-<p class="usa-font-lead">Please review the information you’ve provided and complete closing the case below.</p>
+<p class="usa-font-lead">Please review the information you’ve provided and complete returning the case below.</p>
 
 <div class="certify-grid-wrap">
   <div class="certify-width-two-thirds">
@@ -30,19 +30,10 @@ body_class: hide-local-nav
         <div class="review-info">
           <div class="review-info__item">
             <div class="review-info__content">
-              <h2 class="review-info__heading">Reason for closing</h2>
-              <p data-print="close"></p>
+              <h2 class="review-info__heading">Description</h2>
+              <p data-print="revisions"></p>
             </div>
             <div class="review-info__actions"><a href="recommendation1.html" class="usa-button usa-button-gray">Edit</a></div>
-          </div>
-          <div class="review-info__item">
-            <div class="review-info__content">
-              <h2 class="review-info__heading">Note to SBA</h2>
-              <p><strong>Subject: </strong><span data-print="note_subject"></span></p>
-              <p data-print="note"></p>
-              <p><strong>Tags: </strong><span data-print="note-tags"></span></p>
-            </div>
-            <div class="review-info__actions"><a href="recommendation2.html" class="usa-button usa-button-gray">Edit</a></div>
           </div>
           <div class="review-info__item">
             <div class="review-info__content">
@@ -56,21 +47,12 @@ body_class: hide-local-nav
       </div>
     </div>
 
-    <h2>Confirm closing this case</h2>
 
-    <p>To finish closing this case, please enter the firms DUNS number <strong>3829438291</strong> into the box below.</p>
 
     <form action="#">
-
-      <fieldset class="questions">
-        
-        <label for="duns">DUNS Number</label>
-        <input type="text" id="duns"  required>
-      </fieldset>
-
       <div class="actions">
         <div class="actions__main">
-          <button class="usa-button-secondary" type="submit">Close this case</button>
+          <button class="usa-button" type="submit">Send for revisions</button>
           <a href="javascript:window.history.back();">Cancel</a>
         </div>
       </div>
@@ -88,7 +70,7 @@ body_class: hide-local-nav
       }
       else {
         updateStoredData();
-        nextPage("close5.html");
+        nextPage("revisions4.html");
         return false;
       }
     });

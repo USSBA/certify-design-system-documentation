@@ -13,6 +13,8 @@ recommendation_link: recommendation1.html
 refer_link: refer1.html
 close_case_link: close1.html
 return_link: return1.html
+revisions_link: revisions1.html
+close_case2_link: close1a.html
 ---
 
 
@@ -58,7 +60,7 @@ return_link: return1.html
         <div id="additional_info" class="card__footer processing-only">
           <strong><a href="#">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
         </div>
-        <div class="card__bulk-actions">
+        <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel2">actions</button>
             <div id="task-panel2" class="task-panel-content">
@@ -100,7 +102,7 @@ return_link: return1.html
             </tbody>
           </table>
         </div>
-        <div class="card__bulk-actions">
+        <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
             <div id="task-panel3" class="task-panel-content">
@@ -142,7 +144,7 @@ return_link: return1.html
             </tbody>
           </table>
         </div>
-        <div class="card__bulk-actions">
+        <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel4">actions</button>
             <div id="task-panel4" class="task-panel-content">
@@ -184,7 +186,7 @@ return_link: return1.html
             </tbody>
           </table>
         </div>
-        <div class="card__bulk-actions">
+        <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel5">actions</button>
             <div id="task-panel5" class="task-panel-content">
@@ -226,7 +228,7 @@ return_link: return1.html
             </tbody>
           </table>
         </div>
-        <div class="card__bulk-actions">
+        <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel6">actions</button>
             <div id="task-panel6" class="task-panel-content">
@@ -270,7 +272,7 @@ return_link: return1.html
             </tbody>
           </table>
         </div>
-        <div class="card__bulk-actions">
+        <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel9">actions</button>
             <div id="task-panel9" class="task-panel-content">
@@ -314,7 +316,7 @@ return_link: return1.html
             </tbody>
           </table>
         </div>
-        <div class="card__bulk-actions">
+        <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel7">actions</button>
             <div id="task-panel7" class="task-panel-content">
@@ -361,7 +363,7 @@ return_link: return1.html
         <div class="card__footer">
           <a href="#">Additional info (1 pending)</a>
         </div>
-        <div class="card__bulk-actions">
+        <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel8">actions</button>
             <div id="task-panel8" class="task-panel-content">
@@ -440,6 +442,7 @@ return_link: return1.html
 
 <script>
   $(document).ready(function() {
+
     if (typeof question_to_firm == "undefined") {
       $("#additional_info").remove();
     }

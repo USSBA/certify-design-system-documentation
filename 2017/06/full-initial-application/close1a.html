@@ -30,12 +30,16 @@ body_class: hide-local-nav
         <h4>Why is this case being closed?</h4>
         <ul id="response" class="usa-unstyled-list">
           <li>
-            <input id="close_withdrawal" type="radio" name="close" value="Firm requested withdrawal" required>
+            <input id="close_withdrawal" type="radio" name="close" value="Yes" required>
             <label for="close_withdrawal">Firm requested withdrawal</label>
           </li>
           <li>
-            <input id="close_unresponsive" type="radio" name="close" value="Firm has not been responsive" required>
+            <input id="close_unresponsive" type="radio" name="close" data-followup="followup" value="No" required >
             <label for="close_unresponsive">Firm has not been responsive</label>
+            <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
+              <p>If the firm has not been responsive, you need to follow the recommendation process to indicate the firm as ineligible. Please mention that you are closing the case in the note.</p>
+              <p><strong><a href="recommendation1.html">Continue closing this case</a></strong></p>
+            </div>
           </li>
         </ul>
       </fieldset>

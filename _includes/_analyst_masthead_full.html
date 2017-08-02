@@ -5,6 +5,16 @@
     </div>
     <button class="usa-menu-btn">Menu</button>
   </div>
+
+<div class="usa-grid-full masthead__alert-wrap hidden">
+  <div class="usa-alert usa-alert-warning">
+    <div class="usa-alert-body">
+      <h3 class="usa-alert-heading">Please close this case</h3>
+      <p class="usa-alert-text">The firm has requested to withdraw its 8(a) Ininitial Application on 00/00/0000.</p>
+    </div>
+  </div>
+</div>
+
   <div class="usa-grid-full masthead__content">
     <div class="usa-width-one-fourth masthead__content__primary">
       <h1 class="masthead__primary-heading"><a href="#">Mike’s Garage</a></h1>
@@ -103,3 +113,18 @@
     </div>
   </nav>
 </header>
+
+
+<script>
+$(document).ready(function() {
+  if (window.location.search.indexOf('withdrawal=true') > -1) {
+    var k = "withdrawal"
+    var v = "true"
+    sessionStorage.setItem(k, v);
+  }
+  updateStoredData();
+  if ((typeof withdrawal != "undefined") && (withdrawal == "true")) {
+    $('.masthead__alert-wrap').removeClass('hidden');
+  }
+});
+</script>

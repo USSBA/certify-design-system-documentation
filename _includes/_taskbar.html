@@ -50,7 +50,11 @@
               {% endif %}" class="task-panel-menu__link">Send message to firm</a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link">Return to firm for revisions</a>
+              <a href="{% if page.revisions_link %}
+                {{ page.revisions_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Return to firm for revisions</a>
             </li>
           </ul>
           <hr>
@@ -114,9 +118,6 @@
               {% endif %}" class="task-panel-menu__link">Send message to firm</a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="#" class="task-panel-menu__link">Return to firm for revisions</a>
-            </li>
-            <li class="task-panel-menu__item">
               <a href="{% if page.change_due_date_link %}
                 {{ page.change_due_date_link }}
               {% else %}
@@ -127,8 +128,8 @@
           <hr>
           <ul class="task-panel-menu">
             <li class="task-panel-menu__item">
-              <a href="{% if page.close_case_link %}
-                {{ page.close_case_link }}
+              <a href="{% if page.close_case2_link %}
+                {{ page.close_case2_link }}
               {% else %}
                 #
               {% endif %}" class="task-panel-menu__link--emergency">Close this case</a>

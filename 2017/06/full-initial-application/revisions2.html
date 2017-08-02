@@ -15,7 +15,7 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Close case: Step 2 of 4</span>
+    <span class="subheading--large">Return for revisions: Step 2 of 3</span>
     <h1>Send a message to the firm owner</h1>
   </div>
 </div>
@@ -34,7 +34,9 @@ body_class: hide-local-nav
         <label for="message_text">Message</label>
         <textarea name="" id="message_text"></textarea>
       </fieldset>
-      <p>This message will be submitted when you finish closing the case.</p>
+      <div class="certify-quick-note">
+        <p><em>This message will be submitted when you finish returning the case.</em></p>
+      </div>
       <div class="actions">
         <div class="actions__main">
           <button type="submit">Next</button>
@@ -55,7 +57,7 @@ body_class: hide-local-nav
       }
       else {
         updateStoredData();
-        nextPage("close4.html");
+        nextPage("revisions3.html");
         return false;
       }
     });

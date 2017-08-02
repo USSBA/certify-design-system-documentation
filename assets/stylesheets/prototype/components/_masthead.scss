@@ -69,3 +69,14 @@
     @include align-self(center);
   }
 }
+
+.masthead__alert-wrap {
+  @include media($nav-width) {
+    margin: 0 auto -5rem;
+    padding-top: 5rem;
+  }
+}
+
+.masthead .usa-alert-warning {
+  border: 1px solid $color-gold;
+}
