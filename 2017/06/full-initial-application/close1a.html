@@ -38,7 +38,7 @@ body_class: hide-local-nav
             <label for="close_unresponsive">Firm has not been responsive</label>
             <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
               <p>If the firm has not been responsive, you need to follow the recommendation process to indicate the firm as ineligible. Please mention that you are closing the case in the note.</p>
-              <p><strong><a href="recommendation1.html">Continue closing this case</a></strong></p>
+              <p><strong><a href="recommendation1.html" class="usa-button">Continue closing this case</a></strong></p>
             </div>
           </li>
         </ul>
@@ -58,6 +58,15 @@ body_class: hide-local-nav
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
+
+    $('input:radio').on('change', function(){
+      if ($("#close_unresponsive").is(":checked")) {
+        $('button[type="submit"]').attr('disabled', 'true');
+      }
+      else {
+        $('button[type="submit"]').removeAttr('disabled');
+      }
+    });
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
