@@ -15,3 +15,4 @@
   -{% include_relative components/table-sort.js %}
   -{% include_relative components/task_panel.js %}
   -{% include_relative components/taskbar.js %}
+  -{% include_relative components/urlparam.js %}

@@ -1,0 +1,69 @@
+---
+layout: analyst_application
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+ad_hoc_link: ad-hoc1.html
+change_status_link: change-processing1.html
+recommendation_link: recommendation1.html
+refer_link: refer1.html
+body_class: hide-local-nav
+---
+
+<div class="certify-page-header">
+  <div class="certify-page-header__primary">
+    <h1>Return the <span id="section-name"></span> Section</h1>
+  </div>
+</div>
+
+<p class="usa-font-lead">Write a message to the firm to let them know why you are returning this section. It will also be visible to the SBA.</p>
+
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <form action="" id="new-note-form" class="new-note-form">
+      <fieldset class="questions">
+        <legend class="usa-sr-only">New Message</legend>
+        <label for="message_to">To</label>
+        <input type="text" id="message_to" value="Mike Jones" disabled>
+        <label for="message_subject">Subject</label>
+        <input type="text" id="message_subject">
+        <label for="message_text">Message</label>
+        <textarea name="" id="message_text"></textarea>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Return section</button>
+          <a href="javascript:window.history.back();">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    // Print the section returned name from a URL param
+    var section_name = getUrlParameter('section');
+    $('#section-name').text(section_name);
+
+    // Save the section returned to local storage
+    sessionStorage.setItem("section_returned", section_name.replace(/\s/g, ''));
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("section-return2.html");
+        return false;
+      }
+    });
+  });
+</script>
