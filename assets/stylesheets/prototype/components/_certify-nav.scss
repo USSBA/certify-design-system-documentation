@@ -302,6 +302,13 @@
   @include media($nav-width) {
     margin-left: -5px
   }
+
+  span {
+    @include media($nav-width) {
+      position: relative;
+      top: -2px;
+    }
+  }
 }
 
 .certify-local-nav .usa-nav-primary button[aria-expanded=true],
