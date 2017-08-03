@@ -28,7 +28,7 @@ body_class: hide-local-nav
     <form action="#">
       <div class="form-info">
         <p><strong>This request pertains to</strong> <br><span class="section-name"></span></p>
-        <p><strong>It will be sent to</strong> <br>Mike Jones</p>
+        <p><strong>It will be sent to</strong> <br><span id="namey">Mike Jones</span></p>
       </div>
       <fieldset class="questions">
 
@@ -70,6 +70,11 @@ body_class: hide-local-nav
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
+
+    if (window.location.search.indexOf('send_to') > -1) {
+      var person = getUrlParameter('send_to');
+      $('#namey').text(person);
+    }
 
     // Print the section returned name from a URL param
     var ad_hoc_section = getUrlParameter('section');

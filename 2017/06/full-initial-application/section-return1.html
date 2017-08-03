@@ -48,6 +48,11 @@ body_class: hide-local-nav
 <script>
   $(document).ready(function() {
 
+    if (window.location.search.indexOf('send_to') > -1) {
+      var person = getUrlParameter('send_to');
+      $('#message_to').attr("value", person);
+    }
+
     // Print the section returned name from a URL param
     var section_name = getUrlParameter('section');
     $('#section-name').text(section_name);
