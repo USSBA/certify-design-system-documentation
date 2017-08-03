@@ -265,6 +265,7 @@
 // Local Nav ===================================*/
 .certify-local-nav {
   @include media($nav-width) {
+    margin-bottom: -1px;
     margin-top: -1rem;
   }
 }
@@ -316,6 +317,8 @@
 
   @include media($nav-width) {
     background-color: white;
+    border: 1px solid $color-gray-lighter;
+    border-bottom: none;
     color: $color-primary;
 
     &:hover {
