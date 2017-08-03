@@ -27,31 +27,10 @@ body_class: hide-local-nav
 
     <form action="#">
       <div class="form-info">
-        <p><strong>This request pertains to</strong> <br>Eligiblity</p>
+        <p><strong>This request pertains to</strong> <br><span class="section-name"></span></p>
         <p><strong>It will be sent to</strong> <br>Mike Jones</p>
       </div>
       <fieldset class="questions">
-        <!--
-        <label for="owners">Owner or Individual Contributor</label>
-        <select name="owners" id="owners" required>
-          <option value=""></option>
-          <option value="Allen Hambry">Allen Hambry (contributor)</option>
-          <option value="Mike Jones">Mike Jones (owner)</option>
-        </select>
-
-        <label for="attachment_type">Pertains to:</label>
-        <select name="attachment_type" id="">
-          <option value=""></option>
-          <option value="">Eligiblity</option>
-          <option value="">Ownership</option>
-          <option value="">Control</option>
-          <option value="">Size</option>
-          <option value="">Character</option>
-          <option value="">Potential for Success</option>
-          <option value="">Economic Disadvantage</option>
-          <option value="">Social Disadvantage</option>
-        </select>
-      -->
 
         <label for="question_to_firm">Topic</label>
         <input type="text" id="question_to_firm" required>
@@ -91,6 +70,16 @@ body_class: hide-local-nav
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
+
+    // Print the section returned name from a URL param
+    var ad_hoc_section = getUrlParameter('section');
+    $('.section-name').text(ad_hoc_section);
+
+    // Save the section returned to local storage
+    sessionStorage.setItem("ad_hoc_section", ad_hoc_section.replace(/\s/g, ''));
+    sessionStorage.setItem("ad_hoc_section_name", ad_hoc_section);
+
+    $('.ad-hoc-section').text(ad_hoc_section_name)/
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
