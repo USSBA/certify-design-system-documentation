@@ -54,6 +54,7 @@ body_class: hide-local-nav
 
     // Save the section returned to local storage
     sessionStorage.setItem("section_returned", section_name.replace(/\s/g, ''));
+    sessionStorage.setItem("section_returned_name", section_name);
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
