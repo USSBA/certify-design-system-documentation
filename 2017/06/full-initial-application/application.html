@@ -57,7 +57,7 @@ close_case2_link: close1a.html
             </tbody>
           </table>
         </div>
-        <div id="additional_info" class="card__footer processing-only">
+        <div id="additional_info" class="card__footer hidden">
           <strong><a href="ad-hoc-index.html?section=Eligiblity">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
         </div>
         <div class="card__bulk-actions processing-only">
@@ -102,6 +102,9 @@ close_case2_link: close1a.html
             </tbody>
           </table>
         </div>
+        <div id="additional_info" class="card__footer hidden">
+          <strong><a href="ad-hoc-index.html?section=Ownership">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
+        </div>
         <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
@@ -143,6 +146,9 @@ close_case2_link: close1a.html
               </tr>
             </tbody>
           </table>
+        </div>
+        <div id="additional_info" class="card__footer hidden">
+          <strong><a href="ad-hoc-index.html?section=Control">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
         </div>
         <div class="card__bulk-actions processing-only">
           <div class="task-panel">
@@ -186,6 +192,9 @@ close_case2_link: close1a.html
             </tbody>
           </table>
         </div>
+        <div id="additional_info" class="card__footer hidden">
+          <strong><a href="ad-hoc-index.html?section=Potential%20for%20Success">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
+        </div>
         <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel5">actions</button>
@@ -227,6 +236,9 @@ close_case2_link: close1a.html
               </tr>
             </tbody>
           </table>
+        </div>
+        <div id="additional_info" class="card__footer hidden">
+          <strong><a href="ad-hoc-index.html?section=Character">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
         </div>
         <div class="card__bulk-actions processing-only">
           <div class="task-panel">
@@ -272,6 +284,9 @@ close_case2_link: close1a.html
             </tbody>
           </table>
         </div>
+        <div id="additional_info" class="card__footer hidden">
+          <strong><a href="ad-hoc-index.html?section=Mike%20Jones">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
+        </div>
         <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel9">actions</button>
@@ -316,6 +331,9 @@ close_case2_link: close1a.html
             </tbody>
           </table>
         </div>
+        <div id="additional_info" class="card__footer hidden">
+          <strong><a href="ad-hoc-index.html?section=Allen%20Hambry">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
+        </div>
         <div class="card__bulk-actions processing-only">
           <div class="task-panel">
             <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel7">actions</button>
@@ -359,6 +377,9 @@ close_case2_link: close1a.html
               </tr>
             </tbody>
           </table>
+        </div>
+        <div id="additional_info" class="card__footer hidden">
+          <strong><a href="ad-hoc-index.html?section=Allison%20Jones">Additional info</a></strong> <small class="usa-color-red"> 1 pending</small>
         </div>
         <div class="card__bulk-actions processing-only">
           <div class="task-panel">
@@ -444,8 +465,8 @@ close_case2_link: close1a.html
       $("#" + section_returned).find('.usa-color-green').addClass('usa-color-red-dark').text("Firm");
     }
 
-    if (typeof question_to_firm == "undefined") {
-      $("#additional_info").remove();
+    if (typeof ad_hoc_section != "undefined") {
+      $("#" + ad_hoc_section).find('.card__footer').removeClass('hidden');
     }
 
     if (status != "processing") {

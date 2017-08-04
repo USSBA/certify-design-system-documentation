@@ -48,12 +48,8 @@ body_class: hide-local-nav
             <label for="firm_response_comment">Text</label>
           </li>
           <li>
-            <input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required" data-followup="attachment" data-followup-required="true">
+            <input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required">
             <label for="firm_response_attachment">Attachment</label>
-
-            <div id="attachment" class="usa-extend--hidden form-followup" aria-hidden="true">
-
-            </div>
           </li>
         </ul>
       </fieldset>
@@ -80,11 +76,13 @@ body_class: hide-local-nav
     var ad_hoc_section = getUrlParameter('section');
     $('.section-name').text(ad_hoc_section);
 
+    updateStoredData();
+
     // Save the section returned to local storage
     sessionStorage.setItem("ad_hoc_section", ad_hoc_section.replace(/\s/g, ''));
     sessionStorage.setItem("ad_hoc_section_name", ad_hoc_section);
 
-    $('.ad-hoc-section').text(ad_hoc_section_name)/
+    $('.ad-hoc-section').text(ad_hoc_section);
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
