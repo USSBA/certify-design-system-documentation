@@ -20,3 +20,10 @@
     width: 65.05695%;
   }
 }
+
+.certify-width-one-thirds {
+
+  @include media($nav-width) {
+    width: 65.05695%;
+  }
+}
