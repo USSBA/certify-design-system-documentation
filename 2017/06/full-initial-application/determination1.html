@@ -1,0 +1,92 @@
+---
+layout: analyst_application
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+ad_hoc_link: ad-hoc1.html
+change_status_link: change-processing1.html
+recommendation_link: recommendation1.html
+refer_link: refer1.html
+body_class: hide-local-nav
+---
+
+
+
+<div class="certify-page-header">
+  <div class="certify-page-header__primary">
+    <span class="subheading--large">Determination: Step 1 of 6 </span>
+    <h1>Make a Determination</h1>
+  </div>
+</div>
+
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <form action="#">
+      <fieldset class="questions">
+        <h4>Would you like to determine Mike’s Garage as eligible for participation in the 8(a) Business Development Program?</h4>
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <input id="reconsider_yes" type="radio" name="eligiblity" value="Determine eligible">
+            <label for="reconsider_yes">Yes</label>
+          </li>
+          <li>
+            <input id="reconsider_no" type="radio" name="eligiblity" value="Determine ineligible" data-followup="followup" data-followup-required="true">
+            <label for="reconsider_no">No</label>
+
+            <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
+              <fieldset class="questions">
+                <h4><label for="attachment_type">Is this application eligible for reconsideration?</label></h4>
+                <ul class="usa-unstyled-list">
+                  <li>
+                    <input id="reconsideration_yes" type="radio" name="reconsideration" value="yes">
+                    <label for="reconsideration_yes">Yes</label>
+                  </li>
+                  <li>
+                    <input id="reconsideration_no" type="radio" name="reconsideration" value="no">
+                    <label for="reconsideration_no">No</label>
+                  </li>
+                </ul>
+
+                <label for="rationale">Please briefly explain why</label>
+                <textarea name="" id="rational"></textarea>
+              </fieldset>
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Next</button>
+          <a href="javascript:window.history.back();">Cancel</a>
+          <p><em>Next step: Add a note</em></p>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else if($(':radio:checked').length == 0) {
+        $('#response').prepend('<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">Please choose an option.</span>');
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("determination2.html");
+        return false;
+      }
+    });
+  });
+</script>
