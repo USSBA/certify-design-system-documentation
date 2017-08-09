@@ -20,9 +20,30 @@ assign_link: assign1.html
 
 <div class="usa-grid-full">
   <h1>8(a) <span id="section-name"></span> Section</h1>
-  <article class="usa-width-two-thirds">
+  <div class="usa-width-one-fourth  questionnaire-sidenav">
+    <ul class="usa-sidenav-list">
+      <li>
+        <a id="eight_a_basic_eligibility_screen" class="completed" href="#general_assesment">General Assessment</a>
+      </li>
+      <li>
+        <a id="eight_a_basic_eligibility_involvement" class="completed" href="#prior">Prior 8(a) Involvement</a>
+      </li>
+      <li>
+        <a id="eight_a_basic_eligibility_assistance" class="completed" href="#outside">Outside Assistance</a>
+      </li>
+      <li>
+        <a id="eight_a_basic_eligibility_size" class="completed" href="#business_size">Business Size</a>
+        <ul class="usa-sidenav-sub_list">
+          <li>
+            <a id="eight_a_basic_eligibility_size_determination" class="completed" href="#size_determination">Size Determination</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <article class="usa-width-one-half">
     <div class="print-summary">
-      <div class="review_questions question-separator">
+      <div id="general_assesment" class="review_questions question-separator">
         <h3>General Assessment</h3>
         <div class="usa-one-whole" id="for_profit">
           <div class="usa-grid-full">
@@ -107,7 +128,7 @@ assign_link: assign1.html
           </div>
         </div>
       </div>
-      <div class="review_questions question-separator">
+      <div id="prior" class="review_questions question-separator">
         <h3>Prior 8(a) Involvement</h3>
         <div class="usa-one-whole" id="eighta_certified">
           <div class="usa-grid-full">
@@ -148,7 +169,7 @@ assign_link: assign1.html
           </div>
         </div>
       </div>
-      <div class="review_questions question-separator">
+      <div id="outside" class="review_questions question-separator">
         <h3>Outside Assistance</h3>
         <div class="usa-one-whole" id="outside_consultant">
           <div class="usa-grid-full">
@@ -181,7 +202,7 @@ assign_link: assign1.html
           <br>
         </div>
       </div>
-      <div class="review_questions question-separator">
+      <div id="business_size" class="review_questions question-separator">
         <h3>Business Size</h3>
         <div class="usa-one-whole" id="small_naics">
           <div class="usa-grid-full">
@@ -201,7 +222,7 @@ assign_link: assign1.html
             <br>
           </div>
         </div>
-        <div class="usa-one-whole" id="formal_determination">
+        <div id="size_determination" class="usa-one-whole" id="formal_determination">
           <div class="usa-grid-full">
             <p>Has the applicant firm or any of its affiliates received a formal SBA size determination?</p>
           </div>
@@ -214,6 +235,11 @@ assign_link: assign1.html
       </div>
     </div>
   </article>
+  <div class="usa-width-one-fourth">
+    <h2>Is information missing?</h2>
+    <p>If this section is incomplete, you may <a href="#" id="return_link">return the entire section to the firm</a>.</p>
+    <p>If you need a document or a simple question answered, you can <a href="#" id="ad_hoc_link">request additional infomation from the firm</a>.</p>
+  </div>
 </div>
 
 <!-- This script will mimic the interaction we want to see -->
@@ -222,5 +248,7 @@ assign_link: assign1.html
     // Print the section returned name from a URL param
     var section_name = getUrlParameter('section');
     $('#section-name').text(section_name);
+    $('#return_link').attr("href", "revisions1.html?section="+section_name );
+    $('#ad_hoc_link').attr("href", "ad-hoc1.html?section="+section_name );
   });
 </script>
