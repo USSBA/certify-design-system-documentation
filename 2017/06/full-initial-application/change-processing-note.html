@@ -23,9 +23,9 @@ body_class: hide-local-nav
     <form action="" id="new-note-form" class="new-note-form">
       <fieldset class="questions">
         <legend class="usa-sr-only">New Note</legend>
-        <label for="note_subject">Subject</label>
-        <input type="text" id="note_subject">
-        <label for="note">Message</label>
+        <label for="note_title">Title</label>
+        <input type="text" id="note_title">
+        <label for="note">Note</label>
         <textarea name="" id="note"></textarea>
       </fieldset>
 
@@ -34,7 +34,7 @@ body_class: hide-local-nav
           <div class="usa-width-one-half">
             <ul class="tag-selection-list">
               <li>
-                <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis" checked>
+                <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
                 <label for="note-tag--BOS-Analysis">BOS Analysis</label>
               </li>
               <li>
@@ -74,7 +74,7 @@ body_class: hide-local-nav
         </fieldset>
         <div class="actions">
           <div class="actions__main">
-            <button type="submit">Submit</button>
+            <button type="submit">Create note</button>
             <a href="javascript:window.history.back();">Back</a>
           </div>
         </div>

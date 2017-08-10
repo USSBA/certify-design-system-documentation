@@ -236,15 +236,21 @@ assign_link: assign1.html
     </div>
   </article>
   <div class="usa-width-one-fourth">
-    <h2>Is information missing?</h2>
-    <p>If this section is incomplete, you may <a href="#" id="return_link">return the entire section to the firm</a>.</p>
-    <p>If you need a document or a simple question answered, you can <a href="#" id="ad_hoc_link">request additional infomation from the firm</a>.</p>
+    <div class="processing-only">
+      <h2>Is information missing?</h2>
+      <p>If this section is incomplete, you may <a href="#" id="return_link">return the entire section to the firm</a>.</p>
+      <p>If you need a document or a simple question answered, you can <a href="#" id="ad_hoc_link">request additional infomation from the firm</a>.</p>
+    </div>
   </div>
 </div>
 
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
+    if (status != "processing") {
+      $('.processing-only').remove();
+    }
+    
     // Print the section returned name from a URL param
     var section_name = getUrlParameter('section');
     $('#section-name').text(section_name);
