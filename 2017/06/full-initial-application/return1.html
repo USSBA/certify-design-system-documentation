@@ -20,14 +20,14 @@ body_class: hide-local-nav
   </div>
 </div>
 
-<p class="usa-font-lead">You have reviewed this case and are ready to return it to Chad Roberts (CODS)</p>
+<p class="usa-font-lead">You have reviewed this case and are ready to return it to {{ site.cods_analyst }} (CODS)</p>
 
 <div class="certify-grid-wrap">
   <div class="certify-width-two-thirds">
 
     <form action="#">
       <input type="hidden" id="sme_review" value="false">
-      <input type="hidden" id="reassignment" value="Chad Roberts (CODS)">
+      <input type="hidden" id="reassignment" value="{{ site.cods_analyst }} (CODS)">
 
       <div class="actions">
         <div class="actions__main">
