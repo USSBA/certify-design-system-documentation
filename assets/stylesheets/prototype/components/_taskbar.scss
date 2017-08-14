@@ -56,6 +56,11 @@
   text-align: center;
   width: 8rem;
   vertical-align: middle;
+
+  @include media($nav-width) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .eligible--yes,
@@ -85,4 +90,27 @@
 .eligible--empty {
   background-image: url('../img/gray-minus.png');
   background-image: url('../img/gray-minus.svg');
+}
+
+.taskbar .task-panel-toggle {
+
+  @include media($nav-width) {
+    background-position: 1rem center;
+    color: $color-primary;
+    font-weight: bold;
+    text-indent: 0;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    width: auto;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.taskbar .task-panel-content {
+  @include media($nav-width) {
+    right: 2.4rem;
+  }
 }
