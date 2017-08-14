@@ -1,0 +1,57 @@
+---
+layout: vendor
+global_nav_active: Dashboard
+---
+
+<h1>Dashboard</h1>
+
+<section class="dashboard-section">
+  <header class="dashboard-section__header">
+    <h2 class="dashboard-section__heading">8(a) Business Development Program</h2>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Date Submitted</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          <a href="application.html">Initial Application</a>
+        </th>
+        <td>
+          05/21/2017
+        </td>
+        <td>
+          <strong>Processing</strong>
+        </td>
+        <td><span data-print="cods_analyst">{{ site.cods_analyst }}</span> (CODS)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('#workload').DataTable( {
+      "aaSorting": [],
+      /*
+      "columns": [
+        { "orderable": false },
+        null,
+        null,
+        null
+      ],*/
+      "info":     false,
+      "paging":   false,
+      "searching":   false
+    } );
+
+    $("#workload").removeClass('dataTable');
+  });
+</script>
