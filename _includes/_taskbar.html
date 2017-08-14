@@ -2,12 +2,17 @@
   <div class="taskbar">
     <div class="taskbar-section">
       <p class="taskbar-section__text">
-        <span class="taskbar-section__subhead">Application is in</span> <span data-print="status_text">Screening — Due 08/26/17 <small>(15 days)</small></span>
+        <span class="taskbar-section__subhead">Application is in</span> <span data-print="status_text">Screening</span>
       </p>
     </div>
-    <div class="taskbar-section hide-mobile">
+    <div class="taskbar-section hide-mobile" id="processing-due-date">
       <p class="taskbar-section__text">
-        <span class="taskbar-section__subhead">Application is due</span> <span id="due_date_text">11/09/2017</span>
+        <span class="taskbar-section__subhead">Application is due</span> <span id="due_date_text">11/09/2017 <small>(90 days left)</small></span>
+      </p>
+    </div>
+    <div class="taskbar-section hide-mobile" id="screening-due-date">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Screening is due</span> <span id="due_date_text">11/09/2017 <small>(10 days left)</small></span>
       </p>
     </div>
     <div class="taskbar-section hide-mobile">
@@ -196,10 +201,12 @@ $(document).ready(function() {
   else if (status == "processing") {
     $('#screening_task_panel').remove();
     $('#sme_task_panel').remove();
+    $("#screening-due-date").remove();
   }
   else {
     $('#processing_task_panel').remove();
     $('#sme_task_panel').remove();
+    $('#processing-due-date').remove();
   }
 
 
