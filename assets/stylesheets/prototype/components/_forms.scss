@@ -44,3 +44,10 @@
     font-size: 2rem;
   }
 }
+
+.message-form {
+  textarea {
+    height: 30rem;
+    max-width: none;
+  }
+}
