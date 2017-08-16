@@ -21,7 +21,7 @@ global_nav_active: Dashboard
       <tr>
         <th>Firm</th>
         <th>Status</th>
-        <th>Application Due</th>
+        <th>Timeline Due</th>
         <th>Currently with</th>
       </tr>
     </thead>
@@ -34,11 +34,11 @@ global_nav_active: Dashboard
         Phone: 817-121-3284</small>
         </th>
         <td>
-          <strong>Screening </strong> <br>
-          <small>Due 06/01/2017 <span class="usa-color-red">(4 days left)</span></small>
+          <strong>Screening </strong>
         </td>
         <td>
-
+           06/01/2017 <br>
+           <small class="usa-color-red">(4 days left)</small>
         </td>
         <td><span data-print="cods_analyst">{{ site.cods_analyst }}</span> (CODS)</td>
       </tr>
@@ -50,11 +50,12 @@ global_nav_active: Dashboard
           Phone: 817-231-4893</small>
         </th>
         <td>
-          <strong>Screening  </strong> <br>
-          <small>Due 06/03/2017 (6 days left)</small>
+          <strong>Screening  </strong>
+
         </td>
         <td>
-
+          06/03/2017 <br>
+          <small>(6 days left)</small>
         </td>
         <td>Firm</td>
       </tr>
@@ -66,11 +67,11 @@ global_nav_active: Dashboard
           Phone: 703-555-3232</small>
         </th>
         <td>
-          <strong>Screening</strong> <br>
-          <small>Due 08/26/17 (15 days left)</small>
+          <strong>Screening</strong>
         </td>
         <td>
-
+          08/26/17 <br>
+          <small>(15 days left)</small>
         </td>
         <td><span data-print="cods_analyst">{{ site.cods_analyst }}</span> (CODS)</td>
       </tr>
@@ -118,7 +119,8 @@ global_nav_active: Dashboard
           <strong>Processing</strong>
         </td>
         <td>
-          <span class="usa-color-red-darkest">Pending</span>
+          <span class="usa-color-red-darkest">Pending<br>
+          <small>(Clock stopped with 15 days left)</small></span>
         </td>
         <td>Frank Apple (OIG)</td>
       </tr>
