@@ -5,35 +5,96 @@ global_nav_active: Dashboard
 
 <h1>Dashboard</h1>
 
-<section class="dashboard-section">
-  <header class="dashboard-section__header">
-    <h2 class="dashboard-section__heading">8(a) Business Development Program</h2>
-  </header>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Date Submitted</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>
-          <a href="application.html">Initial Application</a>
-        </th>
-        <td>
-          05/21/2017
-        </td>
-        <td>
-          <strong>Processing</strong>
-        </td>
-        <td><span data-print="cods_analyst">{{ site.cods_analyst }}</span> (CODS)</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+
+<div class="overview-wrap">
+  <div class="usa-width-three-fourths">
+    <div class="card">
+      <div class="card__header">
+        <h3 class="card__primary-heading">You have 3 new things to do</h3>
+      </div>
+      <div class="card__content">
+        <ul>
+          <li><a href="#">The Eligibility section has been returned on your 8(a) Initial Application</a></li>
+          <li><a href="#">Additional information has been requested on Potential for Success in your 8(a) Initial Application</a></li>
+        </ul>
+      </div>
+    </div>
+    <section class="dashboard-section">
+      <header class="dashboard-section__header">
+        <h2 class="dashboard-section__heading">8(a) Business Development Program</h2>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Date Submitted</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>
+              <a href="application.html">Initial Application</a>
+            </th>
+            <td>
+              05/21/2017
+            </td>
+            <td>
+              <strong class="usa-color-red">Action required!</strong> Please go your application for details.
+            </td>
+            <td>
+              <div class="task-panel">
+                <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel2">actions</button>
+                <div id="task-panel2" class="task-panel-content">
+                  <ul class="task-panel-menu">
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link">View application</a>
+                      <a href="#" class="task-panel-menu__link--emergency">Request withdrawal</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>We can have a note about the upcoming annual updates.</p>
+    </section>
+
+    <section class="dashboard-section">
+      <header class="dashboard-section__header">
+        <h2 class="dashboard-section__heading">Women-Owned Small Business (WOSB) Program</h2>
+      </header>
+      <p>The Women-Owned Small Business (WOSB) Federal Contract Program allows set-asides for WOSBs in industries where firms are underrepresented. WOSBs must be at least 51% owned and controlled by women.</p>
+      <ul>
+        <li>Meet the small business size standard for the primary NAICS code and contract</li>
+        <li>Be at least 51% unconditionally and directly owned by women who are U.S. citizens</li>
+        <li>Women must manage the day-to-day operations</li>
+        <li>Women must make the long-term decisions for the business</li>
+        <li>A woman must the hold highest officer position in the business</li>
+        <li>This woman must work at the business full-time during normal working hours.</li>
+        <li>No minimum amount of time for the business to be operational</li>
+      </ul>
+      <p><a href="#">Read more about the Women-Owned Small Business (WOSB) Program</p>
+      <p><a href="#" class="usa-button">Start application</a></p>
+    </section>
+
+    <section class="dashboard-section">
+      <header class="dashboard-section__header">
+        <h2 class="dashboard-section__heading">Mentor Protégé</h2>
+      </header>
+      <p>The purpose of the new program is to develop strong protégé firms through mentor-provided business development assistance, and to help protégés successfully compete for government contracts.</p>
+      <p><a href="#" class="usa-button">Start application</a></p>
+    </section>
+  </div>
+  <div class="usa-width-one-fourth">
+    <div class="">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+  </div>
+</div>
+
 
 <!-- This script will mimic the interaction we want to see -->
 <script>
