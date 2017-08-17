@@ -225,7 +225,8 @@ $(document).ready(function() {
 
 
   if ((typeof refer != "undefined") && (sme_review == "true") && ((refer === "OIG") ||  (refer === "Size"))) {
-    $("#due_date_text").text("Date pending").addClass("usa-color-red-darkest");
+    $("#due_date_text").html("Pending <small>(Clock stopped with 90 days left)</small>").addClass("usa-color-red-darkest");
+    $("#screening-due-date").remove();
   }
 
   if ((typeof status_text != "undefined") && (status_text == "Draft")) {
