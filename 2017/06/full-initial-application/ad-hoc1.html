@@ -15,33 +15,30 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <h1>Request Additional Info from Firm</h1>
+    <h1>Request Additional Info on <span class="section-name"></span></h1>
   </div>
 </div>
 
-<p class="usa-font-lead">Use this form for simple requests for information or documents from the firm. Any responses from the firm will be included in this application</a>.</p>
+<p class="usa-font-lead"> Use this form for simple requests for information or documents from the firm. The firm's responses will be attached to the <span class="section-name"></span> section.</p>
 
 <div class="certify-grid-wrap">
   <div class="certify-width-two-thirds">
-    <p>If the application is incomplete, please <a href="#">return the entire application for revisions</a>. </p>
-
     <form action="#">
       <div class="form-info">
-        <p><strong>This request pertains to</strong> <br><span class="section-name"></span></p>
-        <p><strong>It will be sent to</strong> <br><span id="namey">Mike Jones</span></p>
+        <p>This request will be sent to <strong id="namey">Mike Jones</strong></p>
       </div>
       <fieldset class="questions">
 
         <label for="question_to_firm">Topic</label>
         <input type="text" id="question_to_firm" required>
 
-        <label for="ad_hoc_text">Message body</label>
+        <label for="ad_hoc_text">Message to Firm Owner</label>
         <textarea name="" id="ad_hoc_text" cols="30" rows="10"></textarea>
 
 
       </fieldset>
       <fieldset class="questions">
-        <h4>Response required from firm</h4>
+        <h4>Type of response required from firm:</h4>
         <ul id="response" class="usa-unstyled-list">
           <li>
             <input id="firm_response_comment" type="checkbox" name="firm_response" value="Comment required">
@@ -56,7 +53,7 @@ body_class: hide-local-nav
       <div class="actions">
         <div class="actions__main">
           <button type="submit">Request this info</button>
-          <a href="javascript:window.history.back();">Cancel</a>
+          <a href="javascript:window.history.back();">Back</a>
         </div>
       </div>
     </form>

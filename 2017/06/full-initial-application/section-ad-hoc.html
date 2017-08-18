@@ -1,0 +1,57 @@
+---
+layout: analyst_application
+local_nav_active: Application
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+ad_hoc_link: ad-hoc1.html
+change_status_link: change-processing1.html
+recommendation_link: recommendation1.html
+refer_link: refer1.html
+close_case_link: close1.html
+return_link: return1.html
+revisions_link: revisions1.html
+close_case2_link: close1a.html
+assign_link: assign1.html
+---
+
+<div class="usa-grid-full">
+  <p><a href="ad-hoc-index.html">« Back to additional information</a></p>
+  <h1><span id="section-name"></span></h1>
+  <article class="usa-width-one-half">
+    <div class="print-summary questionnaire--answers">
+      <div id="general_assesment" class="review_questions question-separator">
+        <h2 data-print="question_to_firm"></h2>
+        <div class="usa-one-whole" id="for_profit">
+          <div class="usa-grid-full">
+            <p data-print="ad_hoc_text">Is the firm organized for profit?</p>
+          </div>
+          <div class="usa-grid-full">
+            <div class="certify-quick-note">
+              <p><em>The firm has not yet responded to this request</em></p>
+            </div>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    if (status != "processing") {
+      $('.processing-only').remove();
+    }
+
+    // Print the section returned name from a URL param
+    var section_name = getUrlParameter('section');
+    $('#section-name').text(section_name);
+    $('#revisions_link').attr("href", "section-update.html?section="+section_name );
+  });
+</script>

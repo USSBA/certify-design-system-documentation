@@ -19,6 +19,7 @@ assign_link: assign1.html
 ---
 
 <div class="usa-grid-full">
+  <p><a href="application.html">« Back to application overview</a></p>
   <h1><span id="section-name"></span></h1>
   <div class="usa-width-one-fourth  questionnaire-sidenav">
     <ul class="usa-sidenav-list">
@@ -42,23 +43,15 @@ assign_link: assign1.html
     </ul>
   </div>
   <article class="usa-width-one-half">
-    <div class="print-summary">
+    <div class="print-summary questionnaire--answers">
       <div id="general_assesment" class="review_questions question-separator">
-        <h3>General Assessment</h3>
+        <h2>General Assessment</h2>
         <div class="usa-one-whole" id="for_profit">
           <div class="usa-grid-full">
             <p>Is the firm organized for profit?</p>
           </div>
           <div class="usa-grid-full">
             <b>Response:</b>&nbsp;Yes
-            <div class="hidden" id="disqualifier-warning" name="answers[349][value]">
-              <div class="usa-alert usa-alert-warning" role="alert">
-                <div class="usa-alert-body">
-                  <h3 class="usa-alert-heading">Warning!</h3>
-                  <p class="usa-alert-text"></p>
-                </div>
-              </div>
-            </div>
             <br>
             <br>
           </div>
@@ -72,7 +65,7 @@ assign_link: assign1.html
             <div class="hidden" id="disqualifier-warning" name="answers[350][value]" style="display: block;">
               <div class="usa-alert usa-alert-warning" role="alert">
                 <div class="usa-alert-body">
-                  <h3 class="usa-alert-heading">Warning!</h3>
+                  <h2 class="usa-alert-heading">Warning!</h2>
                   <p class="usa-alert-text">In order to participate in 8(a) Business Development Program, the applicant firm must not be a broker. Please email 8aBD@sba.gov for assistance if you are unsure about your status as a broker. Include your firm name, DUNS number and address in the email.</p>
                 </div>
               </div>
@@ -85,19 +78,6 @@ assign_link: assign1.html
           <div class="usa-grid-full">
             <p>Has the firm generated any revenue?</p>
           </div>
-          <div class="usa-grid-full">
-            <b>Response:</b>&nbsp;Yes
-            <div class="hidden" id="disqualifier-warning" name="answers[351][value]">
-              <div class="usa-alert usa-alert-warning" role="alert">
-                <div class="usa-alert-body">
-                  <h3 class="usa-alert-heading">Warning!</h3>
-                  <p class="usa-alert-text"></p>
-                </div>
-              </div>
-            </div>
-            <br>
-            <br>
-          </div>
         </div>
         <div class="usa-one-whole" id="disadvantaged_citizens">
           <div class="usa-grid-full">
@@ -105,14 +85,6 @@ assign_link: assign1.html
           </div>
           <div class="usa-grid-full">
             <b>Response:</b>&nbsp;Yes
-            <div class="hidden" id="disqualifier-warning" name="answers[352][value]">
-              <div class="usa-alert usa-alert-warning" role="alert">
-                <div class="usa-alert-body">
-                  <h3 class="usa-alert-heading">Warning!</h3>
-                  <p class="usa-alert-text"></p>
-                </div>
-              </div>
-            </div>
             <br>
             <br>
           </div>
@@ -129,21 +101,14 @@ assign_link: assign1.html
         </div>
       </div>
       <div id="prior" class="review_questions question-separator">
-        <h3>Prior 8(a) Involvement</h3>
+        <h2>Prior 8(a) Involvement</h2>
         <div class="usa-one-whole" id="eighta_certified">
           <div class="usa-grid-full">
             <p>Has the firm previously been certified as an 8(a) participant?</p>
           </div>
           <div class="usa-grid-full">
             <b>Response:</b>&nbsp;No
-            <div class="hidden" id="disqualifier-warning" name="answers[354][value]">
-              <div class="usa-alert usa-alert-warning" role="alert">
-                <div class="usa-alert-body">
-                  <h3 class="usa-alert-heading">Warning!</h3>
-                  <p class="usa-alert-text"></p>
-                </div>
-              </div>
-            </div>
+
             <br>
             <br>
           </div>
@@ -170,7 +135,7 @@ assign_link: assign1.html
         </div>
       </div>
       <div id="outside" class="review_questions question-separator">
-        <h3>Outside Assistance</h3>
+        <h2>Outside Assistance</h2>
         <div class="usa-one-whole" id="outside_consultant">
           <div class="usa-grid-full">
             <p>Did the applicant firm hire an outside consultant to assist with its 8(a) application?</p>
@@ -192,7 +157,7 @@ assign_link: assign1.html
               </thead>
               <tbody>
                 <tr>
-                  <td>MainTestUploadDoc.pdf</td>
+                  <td><a href="#">MainTestUploadDoc.pdf</a></td>
                   <td>Representative Information Form</td>
                   <td>08/09/2017</td>
                 </tr>
@@ -203,7 +168,7 @@ assign_link: assign1.html
         </div>
       </div>
       <div id="business_size" class="review_questions question-separator">
-        <h3>Business Size</h3>
+        <h2>Business Size</h2>
         <div class="usa-one-whole" id="small_naics">
           <div class="usa-grid-full">
             <p>Is the firm considered small in accordance with its primary North American Industry Classification System (NAICS) code?</p>
@@ -237,9 +202,8 @@ assign_link: assign1.html
   </article>
   <div class="usa-width-one-fourth">
     <div class="processing-only">
-      <h2>Is information missing?</h2>
-      <p>If this section is incomplete, you may <a href="#" id="return_link">return the entire section to the firm</a>.</p>
-      <p>If you need a document or a simple question answered, you can <a href="#" id="ad_hoc_link">request additional infomation from the firm</a>.</p>
+      <h4>Do you need the firm to provide revisions to this section?</h4>
+      <p>If you need the firm to make corrections or provide information that is not included in the original questionnaire, you may <a href="#" id="revisions_link">request revisions on this section</a></p>
     </div>
   </div>
 </div>
@@ -250,11 +214,10 @@ assign_link: assign1.html
     if (status != "processing") {
       $('.processing-only').remove();
     }
-    
+
     // Print the section returned name from a URL param
     var section_name = getUrlParameter('section');
     $('#section-name').text(section_name);
-    $('#return_link').attr("href", "revisions1.html?section="+section_name );
-    $('#ad_hoc_link').attr("href", "ad-hoc1.html?section="+section_name );
+    $('#revisions_link').attr("href", "section-update.html?section="+section_name );
   });
 </script>
