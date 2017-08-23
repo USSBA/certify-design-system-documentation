@@ -13,12 +13,10 @@ refer_link: refer1.html
 body_class: hide-local-nav
 ---
 
-
-
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Determination: Step 1 of 5</span>
-    <h1>Make a Determination</h1>
+    <span class="subheading--large">Determination: Step 2 of 5</span>
+    <h1>Reconsiderations</h1>
   </div>
 </div>
 
@@ -26,16 +24,15 @@ body_class: hide-local-nav
   <div class="certify-width-two-thirds">
     <form action="#">
       <fieldset class="questions">
-        <h4>What is your determination on Mike’s Garage's participation in the 8(a) Business Development Program?</h4>
-        <ul id="response" class="usa-unstyled-list">
+        <h4>Can this application be reconsidered?</h4>
+        <ul class="usa-unstyled-list">
           <li>
-            <input id="reconsider_yes" type="radio" name="determination" value="Eligible" required>
-            <label for="reconsider_yes">Eligible</label>
+            <input id="reconsideration_yes" type="radio" name="reconsideration" value="Yes">
+            <label for="reconsideration_yes">Yes</label>
           </li>
           <li>
-            <input id="reconsider_no" type="radio" name="determination" value="Ineligible" required>
-            <label for="reconsider_no">Ineligible</label>
-
+            <input id="reconsideration_no" type="radio" name="reconsideration" value="No">
+            <label for="reconsideration_no">No</label>
           </li>
         </ul>
       </fieldset>
@@ -43,7 +40,9 @@ body_class: hide-local-nav
         <div class="actions__main">
           <button type="submit">Next</button>
           <a href="javascript:window.history.back();">Cancel</a>
+          <p><em>Next step: Send message to the firm</em></p>
         </div>
+
       </div>
     </form>
   </div>
@@ -64,12 +63,7 @@ body_class: hide-local-nav
       }
       else {
         updateStoredData();
-        if (determination == "Eligible") {
-          nextPage("determination2.html");
-        }
-        else {
-          nextPage("determination2a.html");
-        }
+        nextPage("determination3.html");
         return false;
       }
     });
