@@ -82,3 +82,84 @@ article.note,
     display: none;
   }
 }
+
+
+
+
+
+
+.note-popup {
+  border: 1px solid $color-gray-light;
+  border-bottom: none;
+  display: none;
+  background: white;
+  max-height: 85%;
+  overflow-y: scroll;
+
+  &.visible {
+    display: block;
+    position: fixed;
+    right: 2%;
+    bottom: 0;
+    width: 40%;
+    z-index: 90000;
+  }
+
+  form {
+    padding: 0 2rem;
+
+    .tag-selection-list label {
+      font-size: 1.3rem;
+    }
+
+    input {
+      font-size: 1.4rem;
+      height: 4rem;
+    }
+
+    textarea {
+      font-size: 14px;
+      height: 10rem;
+    }
+  }
+}
+
+.note-popup__header {
+  color: #fff;
+  background: $color-gray-dark;
+  padding: .5rem 2rem;
+  position: relative;
+
+  h4 {
+    font-family: $font-sans;
+    margin: 0;
+  }
+}
+
+.note-popup__close,
+.note-popup__close:active,
+.note-popup__close:hover {
+  background-color: transparent;
+  background-image: url('../img/white-x.png');
+  background-image: url('../img/white-x.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  height: 32px;
+  position: absolute;
+  right: 0;
+  text-indent: -999em;
+  top: -1rem;
+  width: 32px;
+  z-index: 900;
+}
+
+.note-popup__close:hover {
+  background-color: rgba(255,255,255,.25);
+}
+
+.note-popup__toggle {
+  text-decoration: none;
+  position: relative;
+  z-index: 800;
+}
