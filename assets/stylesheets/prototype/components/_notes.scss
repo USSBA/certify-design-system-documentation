@@ -115,11 +115,13 @@ article.note,
     input {
       font-size: 1.4rem;
       height: 4rem;
+      max-width: none;
     }
 
     textarea {
       font-size: 14px;
       height: 10rem;
+      max-width: none;
     }
   }
 }
