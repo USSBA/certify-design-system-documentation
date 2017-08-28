@@ -47,6 +47,17 @@ $(document).ready(function(){
         $target.parent().removeClass(open_class);
       });
     }
+
+    // DEV Note: Please refactor this to DRY it up and incorporate into the add note feature
+    $('#add_note').on('click', function(){
+      $task_panel_toggle.attr("aria-expanded", "false");
+      $target.removeClass(transition_class);
+      $target.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+      function(e) {
+        $target.removeClass(visible_class);
+        $target.parent().removeClass(open_class);
+      });
+    });
   });
 
 
