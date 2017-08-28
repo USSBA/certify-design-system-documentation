@@ -16,6 +16,9 @@
 @import "prototype/base/tables";
 @import "prototype/base/typography";
 
+// vendor
+@import "prototype/vendor/quill";
+
 // CSS for individual components
 @import "prototype/components/alerts";
 @import "prototype/components/action-items";

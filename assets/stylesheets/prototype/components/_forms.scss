@@ -46,8 +46,13 @@
 }
 
 .message-form {
-  textarea {
+  textarea,
+  .editor-container {
     height: 30rem;
     max-width: none;
+  }
+
+  .editor-container {
+    margin-bottom: 8rem;
   }
 }
