@@ -27,3 +27,10 @@
     width: 65.05695%;
   }
 }
+
+.certify-sticky {
+  @include media($nav-width) {
+    position: sticky;
+    top: 2rem;
+  }
+}
