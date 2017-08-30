@@ -128,3 +128,36 @@
     padding: 4rem;
   }
 }
+
+// Status Cards
+.status-card,
+.status-card--warning {
+  border: 1px solid;
+  padding: 2rem;
+}
+
+.status-card__header {
+  margin-bottom: 2rem;
+}
+
+.status-card__primary-heading {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.status-card__section {
+  border-top: 1px solid;
+
+  &:last-child > p:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.status-card--warning {
+  background: $color-gold-lightest;
+  border-color: $color-gold;
+
+  .status-card__section {
+    border-color: $color-gold;
+  }
+}

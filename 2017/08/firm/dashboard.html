@@ -3,11 +3,12 @@ layout: vendor
 global_nav_active: Dashboard
 ---
 
-<h1>Dashboard</h1>
+<h1>My Dashboard</h1>
 
 
 <div class="overview-wrap">
   <div class="usa-width-three-fourths">
+    <!--
     <div class="card">
       <div class="card__header">
         <h3 class="card__primary-heading">You have 3 new things to do</h3>
@@ -19,6 +20,7 @@ global_nav_active: Dashboard
         </ul>
       </div>
     </div>
+  -->
     <section class="dashboard-section">
       <header class="dashboard-section__header">
         <h2 class="dashboard-section__heading">8(a) Business Development Program</h2>
@@ -38,15 +40,90 @@ global_nav_active: Dashboard
               <a href="application.html">Initial Application</a>
             </th>
             <td>
-              05/21/2017
+              N/A
             </td>
             <td>
-              <strong class="usa-color-red">Action required!</strong> Please go your application for details.
+              Incomplete <br>
+              <small>You must complete your application before you will be able to submit it to the SBA. </small>
             </td>
             <td>
               <div class="task-panel">
                 <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel2">actions</button>
                 <div id="task-panel2" class="task-panel-content">
+                  <ul class="task-panel-menu">
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link">View application</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href="application.html">Initial Application</a>
+            </th>
+            <td>
+              05/21/2017
+            </td>
+            <td>
+              <strong class="usa-color-red">Updates needed </strong><br>
+              <small>The SBA has returned your application. Please complete by 09/15/2017. <a href="#">View application</a> for more information.</small>
+            </td>
+            <td>
+              <div class="task-panel">
+                <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel3">actions</button>
+                <div id="task-panel3" class="task-panel-content">
+                  <ul class="task-panel-menu">
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link">View application</a>
+                      <a href="#" class="task-panel-menu__link--emergency">Request withdrawal</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href="application.html">Initial Application</a>
+            </th>
+            <td>
+              05/21/2017
+            </td>
+            <td>
+              <strong class="usa-color-red">Returned </strong><br>
+              <small>The SBA has returned your application because it is incomplete.
+            </td>
+            <td>
+              <div class="task-panel">
+                <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel4">actions</button>
+                <div id="task-panel4" class="task-panel-content">
+                  <ul class="task-panel-menu">
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link">View application</a>
+                      <a href="#" class="task-panel-menu__link--emergency">Delete application</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href="application.html">Initial Application</a>
+            </th>
+            <td>
+              05/21/2017
+            </td>
+            <td>
+              <strong class="usa-color-green">Under review </strong><br>
+              <small>The SBA is currently processing your application. This typically takes 90 days, but sometimes takes longer. There is nothing you need to do at this point.</small>
+            </td>
+            <td>
+              <div class="task-panel">
+                <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel5">actions</button>
+                <div id="task-panel5" class="task-panel-content">
                   <ul class="task-panel-menu">
                     <li class="task-panel-menu__item">
                       <a href="#" class="task-panel-menu__link">View application</a>
@@ -89,9 +166,7 @@ global_nav_active: Dashboard
     </section>
   </div>
   <div class="usa-width-one-fourth">
-    <div class="">
-      <h2>Frequently Asked Questions</h2>
-    </div>
+
   </div>
 </div>
 
