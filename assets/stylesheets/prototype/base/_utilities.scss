@@ -30,6 +30,7 @@
 
 .certify-sticky {
   @include media($nav-width) {
+    overflow-x: hidden;
     overflow-y: scroll;
     position: sticky;
     top: 2rem;
