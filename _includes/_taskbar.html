@@ -42,6 +42,13 @@
               {% endif %}" class="task-panel-menu__link"><strong>Accept for processing</strong></a>
             </li>
             <li class="task-panel-menu__item">
+              <a href="{% if page.assign_link %}
+                {{ page.assign_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Assign case</a>
+            </li>
+            <li class="task-panel-menu__item">
               <a id="add_note" href="{% if page.notes_link %}
                 {{ page.notes_link }}?new_note=true
               {% else %}
