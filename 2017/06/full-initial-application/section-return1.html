@@ -31,7 +31,10 @@ body_class: hide-local-nav
         <label for="message_subject">Subject</label>
         <input type="text" id="message_subject">
         <label for="message_text">Message</label>
-        <textarea name="" id="message_text"></textarea>
+        <textarea name="" id="message_text" class="hidden"></textarea>
+        <div class="editor-container">
+          <div id="editor"></div>
+        </div>
       </fieldset>
       <div class="actions">
         <div class="actions__main">
@@ -46,7 +49,19 @@ body_class: hide-local-nav
 
 <!-- This script will mimic the interaction we want to see -->
 <script>
+  var quill = new Quill('#editor', {
+    placeholder: 'Write your determination letter here',
+    theme: 'snow'
+  });
+</script>
+
+<script>
+
   $(document).ready(function() {
+
+    $('.ql-editor').on('keyup', function(){
+      $('#message_text').val($(this).text());
+    });
 
     if (window.location.search.indexOf('send_to') > -1) {
       var person = getUrlParameter('send_to');
