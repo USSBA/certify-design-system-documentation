@@ -19,3 +19,13 @@
   color: $color-gray;
   pointer-events: none;
 }
+
+button.usa-button-secondary[type="submit"],
+button.usa-button-secondary[type="submit"]:hover {
+  box-shadow: none;
+  color: white;
+}
+
+button.usa-button-secondary[type="submit"]:focus {
+  box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
+}
