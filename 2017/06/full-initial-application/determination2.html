@@ -15,107 +15,55 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Determination: Step 2 of 5</span>
-    <h1>Confirm field office</h1>
+    <span class="subheading--large">Determination: Step 3 of 5</span>
+    <h1>Send Message to Firm</h1>
   </div>
 </div>
 
-<p class="usa-font-lead">Please confirm the field office that will process Annual Updates for Mike’s Garage. </p>
-
-
+<p class="usa-font-lead">Please write a message to the firm to explain your determination. If the application is reconsiderable, be sure to include what criterea the firm will need to provide to become eligible for reconsideration. Your message to the firm will also be visible to the SBA.</p>
 
 <div class="certify-grid-wrap">
   <div class="certify-width-two-thirds">
-    <p>Mike’s Garage is located at <a href="https://www.google.com/maps/place/409%203rd%20St%20SW%20Washington%20DC%2020416" target="_blank">409 3rd St SW, Washington, DC 20416</a>.</p>
-    <form action="#">
+    <form action="" class="message-form">
       <fieldset class="questions">
-        <label for="field_office" class="usa-sr-only">Field offices</label>
-        <select name="field_office" id="field_office" required>
-          <option value=""></option>
-          <option value="Alabama">Alabama </option>
-          <option value="Alaska">Alaska </option>
-          <option value="Arizona">Arizona </option>
-          <option value="Arkansas">Arkansas </option>
-          <option value="Baltimore" selected>Baltimore </option>
-          <option value="Boise">Boise </option>
-          <option value="Buffalo">Buffalo </option>
-          <option value="Cleveland">Cleveland </option>
-          <option value="Colorado">Colorado </option>
-          <option value="Columbus">Columbus </option>
-          <option value="Connecticut">Connecticut </option>
-          <option value="Delaware">Delaware </option>
-          <option value="Des Moines">Des Moines </option>
-          <option value="El Paso">El Paso </option>
-          <option value="Fresno">Fresno </option>
-          <option value="Georgia">Georgia </option>
-          <option value="Hawaii">Hawaii </option>
-          <option value="Houston">Houston </option>
-          <option value="Illinois">Illinois </option>
-          <option value="Indiana">Indiana </option>
-          <option value="Kansas City">Kansas City </option>
-          <option value="Kentucky">Kentucky </option>
-          <option value="Los Angeles">Los Angeles </option>
-          <option value=">Louisiana">Louisiana </option>
-          <option value="Lower Rio G V">Lower Rio G V </option>
-          <option value="Lubbock">Lubbock </option>
-          <option value=">Maine">Maine </option>
-          <option value="Massachusetts">Massachusetts </option>
-          <option value="Michigan">Michigan </option>
-          <option value="Minnesota">Minnesota </option>
-          <option value="Mississippi">Mississippi </option>
-          <option value="Montana">Montana </option>
-          <option value=">New Hampshire">New Hampshire </option>
-          <option value=">North Carolina">North Carolina </option>
-          <option value="North Dakota ">North Dakota </option>
-          <option value="North Florida">North Florida </option>
-          <option value="Nebraska">Nebraska </option>
-          <option value=">Nevada">Nevada </option>
-          <option value="New Jersey">New Jersey </option>
-          <option value="New Mexico">New Mexico </option>
-          <option value="New York">New York </option>
-          <option value="Oklahoma">Oklahoma </option>
-          <option value="Philadelphia">Philadelphia </option>
-          <option value="Pittsburgh">Pittsburgh </option>
-          <option value="Portland">Portland </option>
-          <option value="Puerto Rico & U.S. Virgin Islands">Puerto Rico & U.S. Virgin Islands </option>
-          <option value="Rhode Island">Rhode Island </option>
-          <option value="Richmond">Richmond </option>
-          <option value="South Carolina">South Carolina </option>
-          <option value="South Dakota">South Dakota </option>
-          <option value="South Florida">South Florida </option>
-          <option value="Sacramento">Sacramento </option>
-          <option value="San Antonio">San Antonio </option>
-          <option value="San Diego">San Diego </option>
-          <option value="San Francisco">San Francisco </option>
-          <option value="Santa Ana">Santa Ana </option>
-          <option value="Seattle">Seattle </option>
-          <option value="St. Louis">St. Louis </option>
-          <option value="Syracuse">Syracuse </option>
-          <option value="Tennessee">Tennessee </option>
-          <option value="Utah">Utah </option>
-          <option value="Vermont">Vermont </option>
-          <option value="Washington">Washington </option>
-          <option value="West Virginia">West Virginia </option>
-          <option value="Wichita">Wichita </option>
-          <option value="Wisconsin">Wisconsin </option>
-          <option value="Wyoming">Wyoming </option>
-        </select>
+        <legend class="usa-sr-only">New Message</legend>
+        <label for="message_to">To</label>
+        <input type="text" id="message_to" value="Mike Jones" disabled>
+        <label for="message_subject">Subject</label>
+        <input type="text" id="message_subject">
+        <label for="message_text">Message</label>
+        <textarea name="" id="message_text" class="hidden"></textarea>
+        <div class="editor-container">
+          <div id="editor"></div>
+        </div>
       </fieldset>
+      <div class="certify-quick-note">
+        <p><em>This message will not be sent until you complete this process.</em></p>
+      </div>
       <div class="actions">
         <div class="actions__main">
           <button type="submit">Next</button>
           <a href="javascript:window.history.back();">Back</a>
-          <p><em>Next step: Review and complete</em></p>
+          <p><em>Next step: Add SBA note</em></p>
         </div>
       </div>
     </form>
   </div>
 </div>
 
+<script>
+  var quill = new Quill('#editor', {
+    placeholder: 'Write your determination letter here',
+    theme: 'snow'
+  });
+</script>
 
-<!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
+
+    $('.ql-editor').on('keyup', function(){
+      $('#message_text').val($(this).text());
+    });
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {

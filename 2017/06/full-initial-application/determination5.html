@@ -15,64 +15,14 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Determination: Step 5 of 5</span>
-    <h1>Review and Complete</h1>
+    <h1>Mike’s Garage has been determined <span data-print="determination"></span></h1>
   </div>
 </div>
 
-<p class="usa-font-lead">Once your recommendation is submitted, this case will be removed from your dashboard.</p>
 
-<div class="certify-grid-wrap">
-  <div class="certify-width-two-thirds">
-    <div class="review-info">
-      <div class="review-info__item">
-        <div class="review-info__content">
-          <h2 class="review-info__heading">Determination</h2>
-          <p data-print="determination"></p>
-        </div>
-      </div>
-      <div class="review-info__item eligible-only">
-        <div class="review-info__content">
-          <h2 class="review-info__heading">Field office</h2>
-          <p data-print="field_office"></p>
-        </div>
-      </div>
-      <div class="review-info__item ineligible-only">
-        <div class="review-info__content">
-          <h2 class="review-info__heading">Reconsiderable</h2>
-          <p data-print="reconsideration"></p>
-        </div>
-      </div>
-      <div class="review-info__item">
-        <div class="review-info__content">
-          <h2 class="review-info__heading">Message to firm owner</h2>
-          <p><strong>Subject: </strong><span data-print="message_subject"></span></p>
-          <p><span data-print="message_text"></span></p>
-        </div>
-      </div>
-      <div class="review-info__item">
-        <div class="review-info__content">
-          <h2 class="review-info__heading">Note to SBA</h2>
-          <p><strong>Topic: </strong><span data-print="note_subject"></span></p>
-          <p data-print="note"></p>
-          <p><strong>Tags: </strong><span data-print="note-tags"></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<p><a href="determination6.html" class="usa-button">Complete determination</a> <a href="#">Start over</a></p>
+<p class="usa-font-lead">You submitted your determination for Mike’s Garage at 00:00pm on DD/MM/YYYY. The firm has been notified. No other action is required.</p>
 
-<!-- This script will mimic the interaction we want to see -->
-<script>
-  $(document).ready(function() {
 
-    if (determination == "Eligible") {
-      $('.ineligible-only').remove();
-    }
-    else {
-      $('.eligible-only').remove();
-    }
+<p><a href="dashboard.html" class="usa-button usa-button-big">Dashboard</a></p>
 
-  });
-</script>
+<p class="usa-color-red">Dev note - this link should point to the dashboard. The prototype points to the overview only for continuity.</p>

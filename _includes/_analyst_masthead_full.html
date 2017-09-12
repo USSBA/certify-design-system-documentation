@@ -27,7 +27,13 @@
         703-555-3232
       </p>
     </div>
-
+    <div id="field_office" class="usa-width-one-sixth masthead__content__secondary">
+      <p>
+        <strong>Field Office</strong><br>
+        <span data-print="field_office"></span> <br>
+        <a href="select-field-office.html">Change</a>
+      </p>
+    </div>
   </div>
 
   <nav role="navigation" class="usa-nav certify-nav">
@@ -125,6 +131,10 @@ $(document).ready(function() {
   updateStoredData();
   if ((typeof withdrawal != "undefined") && (withdrawal == "true")) {
     $('.masthead__alert-wrap').removeClass('hidden');
+  }
+
+  if ((typeof field_office == "undefined") || (field_office == "")) {
+    $('#field_office').remove();
   }
 });
 </script>

@@ -1,0 +1,130 @@
+---
+layout: analyst_application
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+ad_hoc_link: ad-hoc1.html
+change_status_link: change-processing1.html
+recommendation_link: recommendation1.html
+refer_link: refer1.html
+body_class: hide-local-nav
+---
+
+<div class="certify-page-header">
+  <div class="certify-page-header__primary">
+    <h1>Select a Field Office</h1>
+  </div>
+</div>
+
+<p class="usa-font-lead">Please select the field office that will work with Mike’s Garage.</p>
+
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <p>Mike’s Garage is located at <a href="https://www.google.com/maps/place/501%20E%20Pratt%20St%20Baltimore%20MD%2021202" target="_blank">501 E Pratt St, Baltimore, MD 21202</a>.</p>
+    <form action="#">
+      <fieldset class="questions">
+        <label for="field_office" class="usa-sr-only">Field offices</label>
+        <select name="field_office" id="field_office" required>
+          <option value=""></option>
+          <option value="Alabama">Alabama </option>
+          <option value="Alaska">Alaska </option>
+          <option value="Arizona">Arizona </option>
+          <option value="Arkansas">Arkansas </option>
+          <option value="Baltimore">Baltimore </option>
+          <option value="Boise">Boise </option>
+          <option value="Buffalo">Buffalo </option>
+          <option value="Cleveland">Cleveland </option>
+          <option value="Colorado">Colorado </option>
+          <option value="Columbus">Columbus </option>
+          <option value="Connecticut">Connecticut </option>
+          <option value="Delaware">Delaware </option>
+          <option value="Des Moines">Des Moines </option>
+          <option value="El Paso">El Paso </option>
+          <option value="Fresno">Fresno </option>
+          <option value="Georgia">Georgia </option>
+          <option value="Hawaii">Hawaii </option>
+          <option value="Houston">Houston </option>
+          <option value="Illinois">Illinois </option>
+          <option value="Indiana">Indiana </option>
+          <option value="Kansas City">Kansas City </option>
+          <option value="Kentucky">Kentucky </option>
+          <option value="Los Angeles">Los Angeles </option>
+          <option value=">Louisiana">Louisiana </option>
+          <option value="Lower Rio G V">Lower Rio G V </option>
+          <option value="Lubbock">Lubbock </option>
+          <option value=">Maine">Maine </option>
+          <option value="Massachusetts">Massachusetts </option>
+          <option value="Michigan">Michigan </option>
+          <option value="Minnesota">Minnesota </option>
+          <option value="Mississippi">Mississippi </option>
+          <option value="Montana">Montana </option>
+          <option value=">New Hampshire">New Hampshire </option>
+          <option value=">North Carolina">North Carolina </option>
+          <option value="North Dakota ">North Dakota </option>
+          <option value="North Florida">North Florida </option>
+          <option value="Nebraska">Nebraska </option>
+          <option value=">Nevada">Nevada </option>
+          <option value="New Jersey">New Jersey </option>
+          <option value="New Mexico">New Mexico </option>
+          <option value="New York">New York </option>
+          <option value="Oklahoma">Oklahoma </option>
+          <option value="Philadelphia">Philadelphia </option>
+          <option value="Pittsburgh">Pittsburgh </option>
+          <option value="Portland">Portland </option>
+          <option value="Puerto Rico & U.S. Virgin Islands">Puerto Rico & U.S. Virgin Islands </option>
+          <option value="Rhode Island">Rhode Island </option>
+          <option value="Richmond">Richmond </option>
+          <option value="South Carolina">South Carolina </option>
+          <option value="South Dakota">South Dakota </option>
+          <option value="South Florida">South Florida </option>
+          <option value="Sacramento">Sacramento </option>
+          <option value="San Antonio">San Antonio </option>
+          <option value="San Diego">San Diego </option>
+          <option value="San Francisco">San Francisco </option>
+          <option value="Santa Ana">Santa Ana </option>
+          <option value="Seattle">Seattle </option>
+          <option value="St. Louis">St. Louis </option>
+          <option value="Syracuse">Syracuse </option>
+          <option value="Tennessee">Tennessee </option>
+          <option value="Utah">Utah </option>
+          <option value="Vermont">Vermont </option>
+          <option value="Washington">Washington </option>
+          <option value="West Virginia">West Virginia </option>
+          <option value="Wichita">Wichita </option>
+          <option value="Wisconsin">Wisconsin </option>
+          <option value="Wyoming">Wyoming </option>
+        </select>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Set field office</button>
+          <a href="javascript:window.history.back();">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        var confirmed = confirm('Set field office to '+ field_office +'?');
+        if (confirmed) {
+          nextPage("application.html");
+        }
+        return false;
+      }
+    });
+  });
+</script>
