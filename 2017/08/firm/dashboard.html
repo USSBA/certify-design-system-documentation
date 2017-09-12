@@ -35,7 +35,7 @@ global_nav_active: Dashboard
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr data-status-item="draft">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -60,7 +60,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr>
+          <tr data-status-item="returned-15day">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -85,7 +85,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr>
+          <tr data-status-item="returned-section adhoc">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -110,7 +110,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr>
+          <tr data-status-item="returned-incomplete">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -135,7 +135,32 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr>
+          <tr data-status-item="complete-unsubmitted">
+            <th>
+              <a href="application.html">Initial Application</a>
+            </th>
+            <td>
+              05/21/2017
+            </td>
+            <td>
+              <strong>Ready to submit </strong><br>
+              <small>Your application is ready to submit to the SBA.</small>
+            </td>
+            <td>
+              <div class="task-panel">
+                <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel5">actions</button>
+                <div id="task-panel5" class="task-panel-content">
+                  <ul class="task-panel-menu">
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link">View application</a>
+                      <a href="#" class="task-panel-menu__link--emergency">Request withdrawal</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr data-status-item="complete-submitted">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -216,4 +241,29 @@ global_nav_active: Dashboard
 
     $("#workload").removeClass('dataTable');
   });
+</script>
+
+<script>
+$(document).ready(function() {
+  var application_status = getUrlParameter('status');
+  sessionStorage.setItem("application_status", application_status);
+  updateStoredData();
+
+  $('[data-status-item').each(function(){
+    var e = $(this).attr('data-status-item');
+    console.log(e);
+    if ( e.indexOf(application_status) >= 0)  {
+
+    }
+    else {
+      $(this).remove();
+    }
+  });
+
+
+
+  $('[data-status-item*="'+!application_status+'"]').each(function(){
+
+  })
+});
 </script>

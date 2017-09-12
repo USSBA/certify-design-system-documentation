@@ -335,5 +335,16 @@ $(document).ready(function() {
     }
     return false;
   });
+
+  $('[data-status-item').each(function(){
+    var e = $(this).attr('data-status-item');
+    console.log(e);
+    if ( e.indexOf(application_status) >= 0)  {
+
+    }
+    else {
+      $(this).remove();
+    }
+  });
 });
 </script>
