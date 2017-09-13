@@ -8,6 +8,7 @@
  -{% include_relative vendor/quill.js %}
 
  // Add your JS sripts here
+  -{% include_relative components/filter-firm-status.js %}
   -{% include_relative components/followup-fields.js %}
   -{% include_relative components/form-validation.js %}
   -{% include_relative components/notes.js %}

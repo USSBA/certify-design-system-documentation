@@ -187,7 +187,7 @@ global_nav_active: Dashboard
           </tr>
         </tbody>
       </table>
-      <p>We can have a note about the upcoming annual updates.</p>
+      <p>As a reminder, the 8 (a) program is limited to nine years. Even if your company is eligible, you may choose to wait to submit your application until you are ready to pursue government contracts so that you take full advantage of the once in a lifetime nine year program.</p>
     </section>
 
     <section class="dashboard-section">
@@ -248,22 +248,6 @@ $(document).ready(function() {
   var application_status = getUrlParameter('status');
   sessionStorage.setItem("application_status", application_status);
   updateStoredData();
-
-  $('[data-status-item').each(function(){
-    var e = $(this).attr('data-status-item');
-    console.log(e);
-    if ( e.indexOf(application_status) >= 0)  {
-
-    }
-    else {
-      $(this).remove();
-    }
-  });
-
-
-
-  $('[data-status-item*="'+!application_status+'"]').each(function(){
-
-  })
+  filterPageContent("data-status-item", application_status);
 });
 </script>

@@ -171,3 +171,12 @@
     border-color: $color-green;
   }
 }
+
+.status-card--error {
+  background: $color-secondary-lightest;
+  border-color: $color-secondary;
+
+  .status-card__section {
+    border-color: $color-secondary;
+  }
+}
