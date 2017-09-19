@@ -15,7 +15,7 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Refer Case: Step 4 of 4</span>
+    <span class="subheading--large">Refer Case</span>
     <h1>Review &amp; Complete</h1>
   </div>
 </div>
@@ -31,7 +31,7 @@ body_class: hide-local-nav
           <p data-print="refer"></p>
         </div>
       </div>
-      <div class="review-info__item">
+      <div class="review-info__item" data-referral="Size">
         <div class="review-info__content">
           <h2 class="review-info__heading">Referred to</h2>
           <p data-print="reassignment"></p>
@@ -40,8 +40,8 @@ body_class: hide-local-nav
       <div class="review-info__item">
         <div class="review-info__content">
           <h2 class="review-info__heading">Note</h2>
-          <p><strong>Topic: </strong><span data-print="note_subject"></span></p>
-          <p data-print="note"></p>
+          <p><strong>Topic: </strong><span data-print="refer_note_subject"></span></p>
+          <p data-print="refer_note_text"></p>
           <p><strong>Tags: </strong><span data-print="note-tags"></span></p>
         </div>
       </div>
@@ -50,3 +50,9 @@ body_class: hide-local-nav
     <p><a href="refer5.html" class="usa-button">Complete Referral</a> <a href="#">Start over</a></p>
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    filterPageContent("data-referral", refer);
+  });
+</script>
