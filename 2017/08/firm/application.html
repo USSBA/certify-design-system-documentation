@@ -1,7 +1,8 @@
 ---
 layout: vendor_program
-global_nav_active: Dashboard
 local_nav_active: Overview
+messages_link: messages.html
+overview_link: application.html
 ---
 
 <div class="certify-page-header">
@@ -339,12 +340,12 @@ local_nav_active: Overview
         <h2 class="status-card__primary-heading">Your application has been returned to you.</h2>
       </div>
       <div class="status-card__section">
-        <p>The SBA has found your application to be incomplete. Please see <a href="#">this message</a> for details. You may resubmit your application at any time.</p>
+        <p>The SBA has found your application to be incomplete. Please see <a href="message.html?subject_line=Your%20application%20is%20not%20complete">this message</a> for details. You may resubmit your application at any time.</p>
       </div>
       <div class="status-card__section">
-        <input type="checkbox" name="update" id="update_made" value="yes">
-        <label for="update_made">I have made the requested updates</label>
-        <p><a id="resubmit-button" href="#" class="usa-button usa-button-disabled">Resubmit to SBA</a></p>
+        <input type="checkbox" name="update2" id="update_made2" value="yes">
+        <label for="update_made2">I have made the requested updates</label>
+        <p><a id="resubmit-button2" href="#" class="usa-button usa-button-disabled">Resubmit to SBA</a></p>
       </div>
     </div>
 
@@ -353,11 +354,11 @@ local_nav_active: Overview
         <h2 class="status-card__primary-heading">Your application has been returned to you.</h2>
       </div>
       <div class="status-card__section">
-        <p>Please provide the information requested in <a href="#">this message</a> by <strong>Sept. 15th, 2017</strong>.</p>
+        <p>Please provide the information requested in <a href="message.html?subject_line=Need%20info%20by%20Sept%2015">this message</a> by <strong>Sept. 15th, 2017</strong>.</p>
       </div>
       <div class="status-card__section">
         <input type="checkbox" name="update" id="update_made" value="yes">
-        <label for="bos_analysis">I have made the requested updates</label>
+        <label for="update_made">I have made the requested updates</label>
         <p><a id="resubmit-button" href="#" class="usa-button usa-button-disabled">Resubmit to SBA</a></p>
       </div>
     </div>
@@ -368,8 +369,8 @@ local_nav_active: Overview
       <div class="status-card__section">
         <p>Please take a look at the following.</p>
         <ul>
-          <li>The <strong><a href="section.html?section=Eligibility&complete=complete&editable=yes">Eligibility</a></strong> section has been returned to you. To see what the SBA is asking you to update for this section, <a href="#">read this message</a>.</li>
-          <li>The <strong><a href="section.html?section=Potential%20For%20Success&complete=complete&editable=yes">Potential for Success</a></strong> section has been returned to you. To see what the SBA is asking you to update for this section, <a href="#">read this message</a>.</li>
+          <li>The <strong><a href="section.html?section=Eligibility&complete=complete&editable=yes">Eligibility</a></strong> section has been returned to you. To see what the SBA is asking you to update for this section, <a href="message.html?subject_line=Your%20Eligibility%20section%20has%20been%20returned">read this message</a>.</li>
+          <li>The <strong><a href="section.html?section=Potential%20For%20Success&complete=complete&editable=yes">Potential for Success</a></strong> section has been returned to you. To see what the SBA is asking you to update for this section, <a href="message.html?subject_line=Your%20Potential%20For%20Success%20section%20has%20been%20returned">read this message</a>.</li>
           <li>Additional information has been requested for the <strong>Control</strong> section: <a href="adhoc-section.html?section=Tax%20Return%202018">2018 Tax Return</a></li>
           <li>Additional information has been requested for the <strong>Control</strong> section: <a href="adhoc-section.html?section=Certificate%20of%20Occupancy">Certificate of Occupancy</a></li>
         </ul>
@@ -420,6 +421,17 @@ $(document).ready(function() {
     }
     return false;
   });
+
+  $('#update_made2').on('change',function(){
+    if($(':checkbox:checked').length > 0) {
+      $('#resubmit-button2').removeClass('usa-button-disabled');
+    }
+    else {
+      $('#resubmit-button2').addClass('usa-button-disabled');
+    }
+    return false;
+  });
+
 
 
 });

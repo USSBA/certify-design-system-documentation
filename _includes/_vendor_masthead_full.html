@@ -39,17 +39,25 @@
           </h2>
           <ul class="usa-nav-primary usa-accordion">
             <li>
-              <a class="usa-nav-link {% if page.local_nav_active contains "Overview" %} current {% endif %}" href="#">
+              <a class="usa-nav-link {% if page.local_nav_active contains "Overview" %} current {% endif %}" href="{% if page.overview_link %}
+                {{ page.overview_link }}
+              {% else %}
+                #
+              {% endif %}">
                 <span>Overview</span>
               </a>
             </li>
             <li>
-              <a class="usa-nav-link {% if page.local_nav_active contains "Application" %} current {% endif %}" href="#">
+              <a class="usa-nav-link {% if page.local_nav_active contains "Documents" %} current {% endif %}" href="#">
                 <span>Documents</span>
               </a>
             </li>
             <li>
-              <a class="usa-nav-link {% if page.local_nav_active contains "Notes" %} current {% endif %}" href="#">
+              <a class="usa-nav-link {% if page.local_nav_active contains "Messages" %} current {% endif %}" href="{% if page.messages_link %}
+                {{ page.messages_link }}
+              {% else %}
+                #
+              {% endif %}">
                 <span>Messages</span>
               </a>
             </li>

@@ -1,0 +1,70 @@
+---
+layout: vendor_program
+local_nav_active: Messages
+overview_link: application.html
+messages_link: messages.html
+---
+
+<div class="certify-page-header">
+  <div class="certify-page-header__primary">
+    <h1>Messages</h1>
+  </div>
+</div>
+
+<div class="certify-grid-wrap">
+  <div class="usa-width-one-fourth">
+    <a href="messages.html">Return to inbox</a>
+  </div>
+  <div class="usa-width-three-fourths">
+    <div class="messages">
+      <div class="message">
+        <div class="message-text">
+          <h2 class="use-section-name">Your Eligibility section has been returned</h2>
+          <p><strong>Mike Jones</strong></p>
+          <p>Fusce non orci cursus, hendrerit risus efficitur, interdum erat. Suspendisse ornare tincidunt viverra. In vitae facilisis nunc, nec egestas quam. Morbi id aliquam metus. Donec pharetra nec massa eu varius. Suspendisse nec risus vestibulum, fermentum augue non, consequat arcu. Sed imperdiet urna sit amet sem volutpat, ut ullamcorper mi lobortis.</p>
+
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+          <ul>
+             <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+             <li>Aliquam tincidunt mauris eu risus.</li>
+             <li>Vestibulum auctor dapibus neque.</li>
+          </ul>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quae forte-possumus. Perge porro; Quid turpius quam sapientis vitam ex insipientium sermone pendere? Sed tamen est aliquid, quod nobis non liceat, liceat illis. Duo Reges: constructio interrete. Ita multa dicunt, quae vix intellegam.</p>
+
+          <p>Disserendi artem nullam habuit. Primum in nostrane potestate est, quid meminerimus? Quippe: habes enim a rhetoribus; Sed videbimus. Immo alio genere; Equidem e Cn. Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum.</p>
+
+          <p>An quod ita callida est, ut optime possit architectari voluptates? Theophrastus mediocriterne delectat, cum tractat locos ab Aristotele ante tractatos? Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Sed ad rem redeamus; Quia dolori non voluptas contraria est, sed doloris privatio. Quod quidem nobis non saepe contingit.</p>
+
+        </div>
+        <div class="message-date">
+          05/23/2017
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Message styling is for mockup purposes only -->
+<style>
+
+.message {
+  align-items: baseline;
+  display: flex;
+  border-bottom: 1px solid #aeb0b5;
+  justify-content: space-between;
+}
+</style>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+
+    // Print the section returned name from a URL param
+    var subject_line = getUrlParameter('subject_line');
+    updateStoredData();
+    $('.use-section-name').text(subject_line);
+  });
+</script>
