@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  filterPageContent = function(k,v) {
-    $('['+ k +']').each(function(){
-      var e = $(this).attr(k);
-      if ( e.indexOf(v) >= 0)  {
+  filterPageContent = function(key,selected_filter) {
+    $('['+ key +']').each(function(){
+      filter_list = $.makeArray($(this).attr(key).split(" "));
+      if (filter_list.indexOf(selected_filter) >= 0)  {
         /* Do Nothing */
       }
       else {
