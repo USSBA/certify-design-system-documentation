@@ -10,30 +10,37 @@ global_nav_active: Dashboard
         <a class="usa-current use-section-name" href="javascript:void(0)">Eligibility</a>
         <ul class="usa-sidenav-sub_list">
           <li>
-            <a id="eight_a_basic_eligibility_screen" class="completed usa-current" href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit">General Assessment</a>
+            <a data-complete="blank" id="eight_a_basic_eligibility_screen" class="usa-current" href="javascript:void(0)">General Assessment</a>
+            <a data-complete="incomplete" id="eight_a_basic_eligibility_screen" class="completed usa-current" href="javascript:void(0)">General Assessment</a>
+            <a data-complete="complete" id="eight_a_basic_eligibility_screen" class="completed" href="javascript:void(0)">General Assessment</a>
           </li>
           <li>
-            <a class="" href="javascript:void(0)">Prior 8(a) Involvement</a>
+            <a data-complete="incomplete blank" class="" href="javascript:void(0)">Prior 8(a) Involvement</a>
+            <a data-complete="complete" class="completed" href="javascript:void(0)">Prior 8(a) Involvement</a>
           </li>
           <li>
-            <a class="" href="javascript:void(0)">Outside Assistance</a>
+            <a data-complete="incomplete blank" class="" href="javascript:void(0)">Outside Assistance</a>
+            <a data-complete="complete" class="completed" class="" href="javascript:void(0)">Outside Assistance</a>
           </li>
           <li>
-            <a class="" href="javascript:void(0)">Business Size</a>
+            <a data-complete="incomplete blank" class="" href="javascript:void(0)">Business Size</a>
+            <a data-complete="complete" class="completed" href="javascript:void(0)">Business Size</a>
             <ul class="usa-sidenav-sub_list">
               <li>
-                <a class="" href="javascript:void(0)">Size Determination</a>
+                <a data-complete="incomplete blank" class="" href="javascript:void(0)">Size Determination</a>
+                <a data-complete="complete" class="completed" href="javascript:void(0)">Size Determination</a>
               </li>
             </ul>
           </li>
         </ul>
       </li>
       <li>
-        <a class="" href="javascript:void(0)">Review</a>
+        <a data-complete="blank incomplete" class="" href="javascript:void(0)">Review</a>
+        <a data-complete="complete" class="usa-current" href="javascript:void(0)">Review</a>
       </li>
     </ul>
   </aside>
-  <article class="usa-width-two-thirds" data-complete="incomplete">
+  <article class="usa-width-two-thirds" data-complete="incomplete blank">
     <h2>General Assessment</h2>
     <form id="questionnaire_form" class="section_form" enctype="multipart/form-data" action="#" accept-charset="UTF-8" method="post" novalidate="novalidate">
       <input name="utf8" type="hidden" value="✓">
@@ -47,7 +54,8 @@ global_nav_active: Dashboard
           <input type="hidden" name="answers[349][answered_for_type]" id="answers_349_answered_for_type">
           <input type="hidden" name="answers[349][answered_for_id]" id="answers_349_answered_for_id">
           <div id="answers[349][value]">
-            <input type="radio" name="answers[349][value]" id="answers_349_value_yes" value="yes" required="required" checked="checked" aria-required="true">
+            <input data-complete="blank" type="radio" name="answers[349][value]" id="answers_349_value_yes" value="yes" required="required" aria-required="true">
+            <input data-complete="incomplete" type="radio" name="answers[349][value]" id="answers_349_value_yes" value="yes" required="required" checked="checked" aria-required="true">
             <label class="yes" required="required" for="answers_349_value_yes" aria-required="true">Yes</label>
             <input type="radio" name="answers[349][value]" id="answers_349_value_no" value="no" required="required" aria-required="true">
             <label class="no last" for="answers_349_value_no">No</label>
@@ -76,7 +84,8 @@ global_nav_active: Dashboard
           <div id="answers[350][value]">
             <input type="radio" name="answers[350][value]" id="answers_350_value_yes" value="yes" required="required" aria-required="true">
             <label class="yes" required="required" for="answers_350_value_yes" aria-required="true">Yes</label>
-            <input type="radio" name="answers[350][value]" id="answers_350_value_no" value="no" required="required" checked="checked" aria-required="true">
+            <input data-complete="blank" type="radio" name="answers[350][value]" id="answers_350_value_no" value="no" required="required" aria-required="true">
+            <input data-complete="incomplete" type="radio" name="answers[350][value]" id="answers_350_value_no" value="no" required="required" checked="checked" aria-required="true">
             <label class="no last" for="answers_350_value_no">No</label>
           </div>
           <div class="hidden" id="disqualifier-warning" name="answers[350][value]">
@@ -101,7 +110,8 @@ global_nav_active: Dashboard
           <input type="hidden" name="answers[351][answered_for_type]" id="answers_351_answered_for_type">
           <input type="hidden" name="answers[351][answered_for_id]" id="answers_351_answered_for_id">
           <div id="answers[351][value]">
-            <input type="radio" name="answers[351][value]" id="answers_351_value_yes" value="yes" checked="checked">
+            <input data-complete="blank" type="radio" name="answers[351][value]" id="answers_351_value_yes" value="yes" >
+            <input data-complete="incomplete" type="radio" name="answers[351][value]" id="answers_351_value_yes" value="yes" checked="checked">
             <label class="yes" for="answers_351_value_yes">Yes</label>
             <input type="radio" name="answers[351][value]" id="answers_351_value_no" value="no">
             <label class="no" for="answers_351_value_no">No</label>
@@ -135,7 +145,8 @@ global_nav_active: Dashboard
           <input type="hidden" name="answers[352][answered_for_type]" id="answers_352_answered_for_type">
           <input type="hidden" name="answers[352][answered_for_id]" id="answers_352_answered_for_id">
           <div id="answers[352][value]">
-            <input type="radio" name="answers[352][value]" id="answers_352_value_yes" value="yes" required="required" checked="checked" aria-required="true">
+            <input data-complete="blank" type="radio" name="answers[352][value]" id="answers_352_value_yes" value="yes" required="required" aria-required="true">
+            <input data-complete="incomplete" type="radio" name="answers[352][value]" id="answers_352_value_yes" value="yes" required="required" checked="checked" aria-required="true">
             <label class="yes" required="required" for="answers_352_value_yes" aria-required="true">Yes</label>
             <input type="radio" name="answers[352][value]" id="answers_352_value_no" value="no" required="required" aria-required="true">
             <label class="no last" for="answers_352_value_no">No</label>
@@ -164,7 +175,8 @@ global_nav_active: Dashboard
           <div id="answers[353][value]">
             <input type="radio" name="answers[353][value]" id="answers_353_value_yes" value="yes">
             <label class="yes" for="answers_353_value_yes">Yes</label>
-            <input type="radio" name="answers[353][value]" id="answers_353_value_no" value="no" checked="checked">
+            <input data-complete="blank" type="radio" name="answers[353][value]" id="answers_353_value_no" value="no" >
+            <input data-complete="incomplete" type="radio" name="answers[353][value]" id="answers_353_value_no" value="no" checked="checked">
             <label class="no" for="answers_353_value_no">No</label>
             <input type="radio" name="answers[353][value]" id="answers_353_value_na" value="na">
             <label class="na last" for="answers_353_value_na">N/A</label>
@@ -224,7 +236,7 @@ global_nav_active: Dashboard
                         <p>Is the firm organized for profit?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit">Change answer</a></p>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit" data-editable="yes">Change answer</a></p>
                       </div>
                     </div>
                     <div class="usa-grid-full"><b>Response:</b>&nbsp;Yes
@@ -245,7 +257,7 @@ global_nav_active: Dashboard
                         <p>Is the applicant firm operating as a broker?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -270,7 +282,7 @@ global_nav_active: Dashboard
                         <p>Has the firm generated any revenue?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -293,7 +305,7 @@ global_nav_active: Dashboard
                         <p>Are all of the individual(s) claiming disadvantaged status in the applicant firm U.S. citizens?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -316,7 +328,7 @@ global_nav_active: Dashboard
                         <p>Does the applicant firm have a Doing Business As (DBA) Name?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_screen/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -333,7 +345,7 @@ global_nav_active: Dashboard
                         <p>Has the firm previously been certified as an 8(a) participant?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_involvement/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_involvement/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -358,7 +370,7 @@ global_nav_active: Dashboard
                         <p>Has the applicant firm ever submitted an application to the 8(a) Business Development Program?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_involvement/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_involvement/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -373,7 +385,7 @@ global_nav_active: Dashboard
                       </div>
                       <div class="usa-width-one-fourth">
                         <p>&nbsp;
-                          <a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_involvement/edit">Change answer</a>
+                          <a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_involvement/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -390,7 +402,7 @@ global_nav_active: Dashboard
                         <p>Did the applicant firm hire an outside consultant to assist with its 8(a) application?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_assistance/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_assistance/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -407,7 +419,7 @@ global_nav_active: Dashboard
                       </div>
                       <div class="usa-width-one-fourth">
                         <p>&nbsp;
-                          <a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size/edit">Change answer</a>
+                          <a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -431,7 +443,7 @@ global_nav_active: Dashboard
                       </div>
                       <div class="usa-width-one-fourth">
                         <p>&nbsp;
-                          <a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size/edit">Change answer</a>
+                          <a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -448,7 +460,7 @@ global_nav_active: Dashboard
                         <p>Please upload the size redetermination letter issued by SBA.</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size_determination/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size_determination/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -484,7 +496,7 @@ global_nav_active: Dashboard
                         <p>Which SBA area office sent the letter?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size_determination/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size_determination/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -498,7 +510,7 @@ global_nav_active: Dashboard
                         <p>What is the determination date stated in the letter?</p>
                       </div>
                       <div class="usa-width-one-fourth">
-                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size_determination/edit">Change answer</a>
+                        <p>&nbsp;<a href="/sba_applications/36/questionnaires/eight_a_eligibility/question_sections/eight_a_basic_eligibility_size_determination/edit" data-editable="yes">Change answer</a>
                         </p>
                       </div>
                     </div>
@@ -510,7 +522,7 @@ global_nav_active: Dashboard
               </div>
             </li>
           </ul>
-          <input type="submit" name="commit" value="Submit" class="review" data-confirm="Please verify all the information in your application, and make sure you have attached all documents required. Once you click &quot;Accept&quot; on the following Signature page, you cannot edit fields or upload additional documents.">
+          <input data-editable="yes" type="submit" name="commit" value="Submit" class="review" data-confirm="Please verify all the information in your application, and make sure you have attached all documents required. Once you click &quot;Accept&quot; on the following Signature page, you cannot edit fields or upload additional documents.">
         </form>
       </div>
     </article>
