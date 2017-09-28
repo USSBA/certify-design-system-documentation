@@ -15,90 +15,45 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Determination: Step 4 of 5</span>
-    <h1>Add SBA Note</h1>
+    <span class="subheading--large">Determination: Step 3 of 5</span>
+    <h1>Forward This Case</h1>
   </div>
 </div>
 
-<p class="usa-font-lead">Please write a note explaining your determination to SBA staff. The firm will not be able to able to view this note.</p>
+<p class="usa-font-lead">Please forward this case to a supervisor to contact the firm regarding your decision.</p>
 
 <div class="certify-grid-wrap">
   <div class="certify-width-two-thirds">
-    <form action="" id="new-note-form" class="new-note-form">
-      <fieldset class="questions">
-        <legend class="usa-sr-only">New Note</legend>
-        <label for="note_subject">Subject</label>
-        <input type="text" id="note_subject">
-        <label for="note">Message</label>
-        <textarea name="" id="note"></textarea>
-      </fieldset>
 
-      <fieldset class="question tags">
-        <h4>Tags</h4>
-          <div class="usa-width-one-half">
-            <ul class="tag-selection-list">
-              <li>
-                <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis" checked>
-                <label for="note-tag--BOS-Analysis">BOS Analysis</label>
-              </li>
-              <li>
-                <input id="note-tag--Ownership" type="checkbox" name="note-tags" value="Ownership">
-                <label for="note-tag--Ownership">Ownership</label>
-              </li>
-              <li>
-                <input id="note-tag--Control" type="checkbox" name="note-tags" value="Control">
-                <label for="note-tag--Control">Control</label>
-              </li>
-              <li>
-                <input id="note-tag--Size" type="checkbox" name="note-tags" value="Size">
-                <label for="note-tag--Size">Size</label>
-              </li>
-              <li>
-                <input id="note-tag--Character" type="checkbox" name="note-tags" value="Character">
-                <label for="note-tag--Character">Character</label>
-              </li>
-            </ul>
-          </div>
-          <div class="usa-width-one-half">
-            <ul class="tag-selection-list">
-              <li>
-                <input id="note-tag--Potential-for-Success" type="checkbox" name="note-tags" value="Potential for Success">
-                <label for="note-tag--Potential-for-Success">Potential for Success</label>
-              </li>
-              <li>
-                <input id="note-tag--Economic-Disadvantage" type="checkbox" name="note-tags" value="Economic Disadvantage">
-                <label for="note-tag--Economic-Disadvantage">Economic Disadvantage</label>
-              </li>
-              <li>
-                <input id="note-tag--Social-Disadvantage" type="checkbox" name="note-tags" value="Social Disadvantage">
-                <label for="note-tag--Social-Disadvantage">Social Disadvantage</label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-        <div class="certify-quick-note">
-          <p>This note will be created when you complete this process.</p>
+    <form action="#">
+      <fieldset class="questions">
+        <input type="hidden" id="recommendation_made" value="true">
+        <h4>Please select a supervisor</h4>
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <input id="reassigned_to" type="radio" name="reassignment_full" value="Teresa Tyhurst (CODS)">
+            <label for="reassigned_to">Teresa Tyhurst</label>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Next</button>
+          <a href="javascript:window.history.back();">Back</a>
+          <p><em>Next step: Review and complete</em></p>
         </div>
-        <div class="actions">
-          <div class="actions__main">
-            <button type="submit">Next</button>
-            <a href="javascript:window.history.back();">Back</a>
-            <p><em>Next step: Select a field office</em></p>
-          </div>
-        </div>
+      </div>
     </form>
   </div>
 </div>
 
+
+<!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
-        return false;
-      }
-      else if($(':checkbox:checked').length == 0) {
-        $('#response').prepend('<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">Please choose an option.</span>');
         return false;
       }
       else {

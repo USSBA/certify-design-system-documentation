@@ -15,36 +15,38 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Determination: Step 3 of 5</span>
-    <h1>Send Message to Firm</h1>
+    <span class="subheading--large">Determination: Step 2 of 5</span>
+    <h1>Upload Determination Letter</h1>
   </div>
 </div>
 
-<p class="usa-font-lead">Please write a message to the firm to explain your approval or decline. Your message to the firm will also be visible to the SBA.</p>
+<p class="usa-font-lead">Please attach your analysis and/or your determination letter here if you have not have done so already.</p>
+
+<p>If you have made updates to a draft letter, please attach here as a new file.</p>
 
 <div class="certify-grid-wrap">
   <div class="certify-width-two-thirds">
-    <form action="" class="message-form">
+    <form action="#">
       <fieldset class="questions">
-        <legend class="usa-sr-only">New Message</legend>
-        <label for="message_to">To</label>
-        <input type="text" id="message_to" value="Mike Jones" disabled>
-        <label for="message_subject">Subject</label>
-        <input type="text" id="message_subject">
-        <label for="message_text">Message</label>
-        <textarea name="" id="message_text" class="hidden"></textarea>
-        <div class="editor-container">
-          <div id="editor"></div>
-        </div>
+        <input type="hidden" id="recommendation_made" value="true">
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <label for="analysis_doc">Analysis (Form 1392)</label>
+            <input id="analysis_doc" type="file" name="analysis_doc" >
+
+          </li>
+          <li>
+            <label for="determination_doc">Determination Letter (Either draft or final)</label>
+            <input id="determination_doc" type="file" name="determination_doc" >
+          </li>
+        </ul>
       </fieldset>
-      <div class="certify-quick-note">
-        <p><em>This message will not be sent until you complete this process.</em></p>
-      </div>
+      <p><em>These files will placed on the Analyst Documents page.</em></p>
       <div class="actions">
         <div class="actions__main">
           <button type="submit">Next</button>
           <a href="javascript:window.history.back();">Back</a>
-          <p><em>Next step: Add SBA note</em></p>
+          <p><em>Next step: Forward case</em></p>
         </div>
       </div>
     </form>
@@ -60,10 +62,6 @@ body_class: hide-local-nav
 
 <script>
   $(document).ready(function() {
-
-    $('.ql-editor').on('keyup', function(){
-      $('#message_text').val($(this).text());
-    });
 
     $('form').on('submit', function() {
       if (!checkValidityIfSupported($('form').get(0))) {
