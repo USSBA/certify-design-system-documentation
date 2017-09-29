@@ -1,0 +1,96 @@
+---
+layout: vendor_program
+global_nav_active: Dashboard
+messages_link: messages.html
+overview_link: application.html
+---
+
+<section class="usa-width-one-whole">
+  <aside class="usa-width-one-third questionnaire-sidenav">
+    <ul class="usa-sidenav-list">
+      <li>
+        <a class="usa-current use-section-name" href="javascript:void(0)">Eligibility</a>
+      </li>
+      <li>
+        <a data-complete="blank incomplete" class="" href="javascript:void(0)">Review</a>
+        <a data-complete="complete" class="usa-current" href="javascript:void(0)">Review</a>
+      </li>
+    </ul>
+  </aside>
+  <article class="usa-width-two-thirds" data-complete="incomplete blank">
+    <h2>Reconsideration Steps</h2>
+    <form id="questionnaire_form" class="section_form" enctype="multipart/form-data" action="#" accept-charset="UTF-8" method="post" novalidate="novalidate">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="authenticity_token" value="Ld+DTnNDw6G8w8+s13clKCvZhfCqFTu0wcaxFQZ90VTn0Qc7RZssG8KVupGtXL3+3uMup+6bRA6UYRxn7b3QYA==">
+      <div class="questions answers_for_profit" id="answers_for_profit">
+        <fieldset>
+          <h4>Is the applicant firm a for-profit business?</h4>
+          <input type="file" id="file1">
+          <div class="hidden" id="disqualifier-warning" name="answers[349][value]">
+            <div class="usa-alert usa-alert-warning" role="alert">
+              <div class="usa-alert-body">
+                <h3 class="usa-alert-heading">Warning!</h3>
+                <p class="usa-alert-text"></p>
+              </div>
+            </div>
+          </div>
+          <br>
+
+        </fieldset>
+      </div>
+      <div class="questions answers_is_broker" id="answers_is_broker">
+        <fieldset>
+          <h4>Is the applicant firm operating as a broker?</h4>
+          <input type="file" id="file2">
+
+        </fieldset>
+      </div>
+      <div class="questions answers_generate_revenue" id="answers_generate_revenue">
+        <fieldset>
+          <h4>Has the firm generated any revenue?</h4>
+          <input type="file" id="file3">
+
+        </fieldset>
+      </div>
+      <div class="questions answers_disadvantaged_citizens" id="answers_disadvantaged_citizens">
+        <fieldset>
+          <h4>Are all of the individual(s) claiming disadvantaged status in the applicant firm U.S. citizens?</h4>
+          <input type="file" id="file4">
+
+      </div>
+      <div class="questions answers_have_dba" id="answers_have_dba">
+        <fieldset>
+          <h4>Does the applicant firm have a Doing Business As (DBA) Name?</h4>
+          <input type="file" id="file5">
+        </fieldset>
+      </div>
+      <input type="submit" name="commit" value="Save and continue" class="usa-button" id="section_submit_button">
+    </form>
+    </article>
+
+
+
+  </section>
+
+
+  <!-- This script will mimic the interaction we want to see -->
+  <script>
+    $(document).ready(function() {
+
+      var editable = getUrlParameter('editable');
+      sessionStorage.setItem("editable", editable);
+
+      var complete = getUrlParameter('complete');
+      sessionStorage.setItem("complete", complete);
+
+      updateStoredData();
+
+      filterPageContent("data-editable", editable);
+      filterPageContent("data-complete", complete);
+
+      // Print the section returned name from a URL param
+      var section_name = getUrlParameter('section');
+      $('.use-section-name').text(section_name);
+    });
+  </script>
