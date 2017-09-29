@@ -15,7 +15,7 @@ body_class: hide-local-nav
 
 <div class="certify-page-header">
   <div class="certify-page-header__primary">
-    <span class="subheading--large">Recommendation: Step 4 of 4</span>
+    <span class="subheading--large">Make a Recommendation</span>
     <h1>Review and Complete</h1>
   </div>
 </div>
@@ -31,6 +31,12 @@ body_class: hide-local-nav
           <p data-print="eligiblity"></p>
         </div>
       </div>
+      <div class="review-info__item ineligible-only">
+        <div class="review-info__content">
+          <h2 class="review-info__heading">Reconsideration Steps</h2>
+          <ol id="reconsideration_steps"></ol>
+        </div>
+      </div>
       <div class="review-info__item">
         <div class="review-info__content">
           <h2 class="review-info__heading">Documents</h2>
@@ -42,7 +48,7 @@ body_class: hide-local-nav
       <div class="review-info__item">
         <div class="review-info__content">
           <h2 class="review-info__heading">Forward to</h2>
-          <p data-print="reassignment"></p>
+          <p data-print="reassignment_full"></p>
         </div>
       </div>
     </div>
@@ -52,3 +58,13 @@ body_class: hide-local-nav
 
 
 <p><a href="recommendation5.html" class="usa-button">Complete recommendation</a> <a href="#">Start over</a></p>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    var reconsideration_html = $.parseHTML(reconsideration_steps);
+    $('#reconsideration_steps').prepend(reconsideration_html);
+    $('#reconsideration_steps > li p:nth-child(3)').remove();
+  });
+</script>
