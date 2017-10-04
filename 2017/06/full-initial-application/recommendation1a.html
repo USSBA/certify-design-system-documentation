@@ -61,6 +61,8 @@ body_class: hide-local-nav
 $(document).ready(function() {
 
   $('#addButton').on('click', function(){
+
+    $(this).text("+ create another step");
     var id = Math.floor(Math.random() * 100) + 1;
 
     var form = '<div class="question-wrap"><form class"reconsideration-form" action="#"><fieldset class="questions"><label for="reconsideration_criterea_text'+id+'">Information requested</label><textarea class="reconsideration-textarea"  id="reconsideration_criterea_text'+id+'" cols="30" rows="10" required></textarea></fieldset><fieldset class="questions"><h4>Type of response required from firm:</h4><ul id="response" class="usa-unstyled-list"><li><input class="text-response" id="firm_response_comment'+id+'" type="checkbox" name="firm_response'+id+'" value="Comment required"><label for="firm_response_comment'+id+'">Text</label></li><li><input id="firm_response_attachment'+id+'" type="checkbox" name="firm_response'+id+'" value="Comment required" class="attachment-response" ><label for="firm_response_attachment'+id+'">Attachment</label><div class="actions__main"><button id="addQuestionButton" type="submit">Add step</button><a href="#">Cancel</a></div></div></form></div>';
@@ -89,7 +91,7 @@ $(document).ready(function() {
         var response = "Attachment";
       }
 
-      var new_content = '<li><p>'+question+'</p><p>Response Type: '+ response +'</p><p><a id="edit-button" href="#">Edit</a> | <a id="remove-button" href="#">Remove</a></li>';
+      var new_content = '<li><p>'+question+'</p><p>Response Type: '+ response +'</p><p><a id="edit-button" href="#">Edit</a> | <a id="remove-button" href="#">Remove</a></p></li>';
 
 
 
@@ -121,29 +123,58 @@ $(document).ready(function() {
     var item = $(this).closest('li');
     var question = item.find('p:first-child').text();
     var checkboxes = item.find('p:nth-child(2)').text();
-    var textarea = '<textarea>'+question+'</textarea>';
+    var textarea = '<textarea id="edit_criterea">'+question+'</textarea>';
 
     if (checkboxes == "Response Type: Text, Attachment") {
-      var checkbox_edit = '<fieldset class="questions"><h4>Type of response required from firm:</h4><ul id="response" class="usa-unstyled-list"><li><input class="text-response" id="firm_response_comment" type="checkbox" name="firm_response" value="Comment required" checked><label for="firm_response_comment">Text</label></li><li><input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required" class="attachment-response" checked><label for="firm_response_attachment">Attachment</label></fieldset>'
+      var checkbox_edit = '<fieldset id="edit_response" class="questions"><h4>Type of response required from firm:</h4><ul id="response" class="usa-unstyled-list"><li><input class="text-response" id="firm_response_comment" type="checkbox" name="firm_response" value="Comment required" checked><label for="firm_response_comment">Text</label></li><li><input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required" class="attachment-response" checked><label for="firm_response_attachment">Attachment</label></fieldset>'
     }
 
     else if (checkboxes == "Response Type: Text") {
-      var checkbox_edit = '<fieldset class="questions"><h4>Type of response required from firm:</h4><ul id="response" class="usa-unstyled-list"><li><input class="text-response" id="firm_response_comment" type="checkbox" name="firm_response" value="Comment required" checked><label for="firm_response_comment">Text</label></li><li><input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required" class="attachment-response"><label for="firm_response_attachment">Attachment</label></fieldset>'
+      var checkbox_edit = '<fieldset id="edit_response" class="questions"><h4>Type of response required from firm:</h4><ul id="response" class="usa-unstyled-list"><li><input class="text-response" id="firm_response_comment" type="checkbox" name="firm_response" value="Comment required" checked><label for="firm_response_comment">Text</label></li><li><input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required" class="attachment-response"><label for="firm_response_attachment">Attachment</label></fieldset>'
     }
 
     else if (checkboxes == "Response Type: Attachment") {
-      var checkbox_edit = '<fieldset class="questions"><h4>Type of response required from firm:</h4><ul id="response" class="usa-unstyled-list"><li><input class="text-response" id="firm_response_comment" type="checkbox" name="firm_response" value="Comment required" ><label for="firm_response_comment">Text</label></li><li><input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required" class="attachment-response"><label for="firm_response_attachment">Attachment</label></fieldset>'
+      var checkbox_edit = '<fieldset id="edit_response" class="questions"><h4>Type of response required from firm:</h4><ul id="response" class="usa-unstyled-list"><li><input class="text-response" id="firm_response_comment" type="checkbox" name="firm_response" value="Comment required" ><label for="firm_response_comment">Text</label></li><li><input id="firm_response_attachment" type="checkbox" name="firm_response" value="Comment required" class="attachment-response"><label for="firm_response_attachment">Attachment</label></fieldset>'
     }
 
     item.find('p:first-child, p:nth-child(2), p:nth-child(3)').attr("hidden", '');
 
-    item.prepend('<p><button id="approve_edits">OK</button></p>')
+    item.prepend('<p id="button-wrap"><button id="approve_edits">OK</button></p>')
     item.prepend(checkbox_edit);
     item.prepend(textarea);
 
 
 
     return false
+  });
+
+  $('body').on('click', '#approve_edits', function(){
+
+    var text = $('#edit_criterea').val();
+    var container = $(this).closest('li');
+    if ($('.text-response').is(':checked') && $('.attachment-response').is(':checked')) {
+      var response = "Response Type: Text, Attachment"
+    }
+    else if ($('.text-response').is(':checked')){
+      var response = "Response Type: Text";
+    }
+    else if ($('.attachment-response').is(':checked')){
+      var response = "Response Type: Attachment";
+    }
+
+    $(container).find('p').remove();
+    $(container).append('<p>' + text + '</p>');
+    $(container).append('<p>' + response + '</p>');
+    $(container).append('<p><a id="edit-button" href="#">Edit</a> | <a id="remove-button" href="#">Remove</a></p>');
+
+
+    $('#edit_criterea, #edit_response, #button-wrap').remove();
+
+
+    $('#addButton').removeAttr('hidden');
+    $('#nextButton').removeAttr("disabled");
+
+
   });
 
 
