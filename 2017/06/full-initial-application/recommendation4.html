@@ -33,8 +33,8 @@ body_class: hide-local-nav
       </div>
       <div class="review-info__item ineligible-only">
         <div class="review-info__content">
-          <h2 class="review-info__heading">Reconsideration Steps</h2>
-          <ol id="reconsideration_steps"></ol>
+          <h2 class="review-info__heading">Reconsideration Items</h2>
+          <ol id="reconsideration_items"></ol>
         </div>
       </div>
       <div class="review-info__item">
@@ -63,8 +63,8 @@ body_class: hide-local-nav
 <script>
   $(document).ready(function() {
 
-    var reconsideration_html = $.parseHTML(reconsideration_steps);
-    $('#reconsideration_steps').prepend(reconsideration_html);
-    $('#reconsideration_steps > li p:nth-child(3)').remove();
+    var reconsideration_html = $.parseHTML(reconsideration_items);
+    $('#reconsideration_items').prepend(reconsideration_html);
+    $('#reconsideration_items > li p:nth-child(3)').remove();
   });
 </script>
