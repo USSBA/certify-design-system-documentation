@@ -1,0 +1,87 @@
+---
+layout: analyst_application
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+ad_hoc_link: ad-hoc1.html
+change_status_link: change-processing1.html
+recommendation_link: recommendation1.html
+refer_link: refer1.html
+body_class: hide-local-nav
+---
+
+
+<div class="certify-page-header">
+  <div class="certify-page-header__primary">
+    <span class="subheading--large">Make a Recommendation</span>
+    <h1>Your Recommendation</h1>
+  </div>
+</div>
+
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <form action="#">
+      <fieldset class="questions">
+        <h4>Would you recommend Mike’s Garage as eligible for participation in the 8(a) Business Development Program?</h4>
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <input id="reconsider_yes" type="radio" name="eligiblity" value="Recommend eligible">
+            <label for="reconsider_yes">Yes</label>
+          </li>
+          <li>
+            <input id="reconsider_no" type="radio" name="eligiblity" value="Recommend ineligible" data-followup="followup" data-followup-required="true">
+            <label for="reconsider_no">No</label>
+
+            <div id="followup" class="usa-extend--hidden form-followup" aria-hidden="true">
+              <fieldset class="questions">
+                <h4><label for="attachment_type">Does this case have appeal rights?</label></h4>
+                <ul class="usa-unstyled-list">
+                  <li>
+                    <input id="appeal_yes" type="radio" name="appeal" value="yes">
+                    <label for="appeal_yes">Yes</label>
+                  </li>
+                  <li>
+                    <input id="appeal_no" type="radio" name="appeal" value="no">
+                    <label for="appeal_no">No</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Next</button>
+          <a href="javascript:window.history.back();">Cancel</a>
+          <p><em>Next step: Upload letters</em></p>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else if($(':radio:checked').length == 0) {
+        $('#response').prepend('<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">Please choose an option.</span>');
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("recommendation-nov2.html");
+        return false;
+      }
+    });
+  });
+</script>
