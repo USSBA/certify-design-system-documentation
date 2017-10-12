@@ -1,0 +1,77 @@
+---
+layout: analyst_application
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+ad_hoc_link: ad-hoc1.html
+change_status_link: change-processing1.html
+recommendation_link: recommendation1.html
+refer_link: refer1.html
+body_class: hide-local-nav
+---
+
+<div class="certify-page-header">
+  <div class="certify-page-header__primary">
+    <span class="subheading--large">Determination: Step 2 of 5</span>
+    <h1>Upload Determination Letter</h1>
+  </div>
+</div>
+
+<p class="usa-font-lead">Please attach your analysis and/or your determination letter here if you have not have done so already.</p>
+
+<p>If you have made updates to a previous version of a letter, please attach here as a new file.</p>
+
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <form action="#">
+      <fieldset class="questions">
+        <input type="hidden" id="recommendation_made" value="true">
+        <ul id="response" class="usa-unstyled-list">
+          <li>
+            <label for="analysis_doc">Analysis (Form 1392)</label>
+            <input id="analysis_doc" type="file" name="analysis_doc" >
+
+          </li>
+          <li>
+            <label for="determination_doc">Determination Letter</label>
+            <input id="determination_doc" type="file" name="determination_doc" >
+          </li>
+        </ul>
+      </fieldset>
+      <p><em>These files will placed on the Analyst Documents page.</em></p>
+      <div class="actions">
+        <div class="actions__main">
+          <button type="submit">Next</button>
+          <a href="javascript:window.history.back();">Back</a>
+          <p><em>Next step: Send letter to firm</em></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  var quill = new Quill('#editor', {
+    placeholder: 'Write or paste your text here',
+    theme: 'snow'
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("determination-nov3.html");
+        return false;
+      }
+    });
+  });
+</script>
