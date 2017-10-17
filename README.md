@@ -8,3 +8,7 @@ This is a static prototype of SBA's [Certify](https://certify.sba.gov) built wit
 bundle install
 bundle exec jekyll s
 ```
+
+## To Navigate 
+
+Look at the GitHub repositotry to look at the folder structure and enter that in the url after the default `http://127.0.0.1:4000/` to navigate to that page. 
