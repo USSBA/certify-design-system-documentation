@@ -38,5 +38,8 @@
 @import "prototype/components/task-panel";
 @import "prototype/components/taskbar";
 
+// overrides
+@import "prototype/certify-overrides/style";
+
 // Style Guide - This is only for use in the styleguide
 @import "prototype/components/styleguide"
