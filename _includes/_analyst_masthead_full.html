@@ -128,12 +128,13 @@ $(document).ready(function() {
     var v = "true"
     sessionStorage.setItem(k, v);
   }
-  updateStoredData();
+
   if ((typeof withdrawal != "undefined") && (withdrawal == "true")) {
     $('.masthead__alert-wrap').removeClass('hidden');
   }
 
-  if ((typeof field_office == "undefined") || (field_office == "")) {
+
+  if ((typeof field_office == "undefined") || (field_office == "") || (field_office == "[object HTMLCollection]")) {
     $('#field_office').remove();
   }
 });

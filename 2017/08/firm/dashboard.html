@@ -59,7 +59,7 @@ global_nav_active: Dashboard
           </tr>
         </thead>
         <tbody>
-          <tr data-status-item="draft">
+          <tr data-filter-status="draft">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -84,7 +84,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr data-status-item="returned-15day">
+          <tr data-filter-status="returned-15day">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -109,7 +109,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr data-status-item="returned-section adhoc">
+          <tr data-filter-status="returned-section adhoc">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -134,7 +134,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr data-status-item="returned-incomplete">
+          <tr data-filter-status="returned-incomplete">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -159,7 +159,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr data-status-item="complete-unsubmitted">
+          <tr data-filter-status="complete-unsubmitted">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -185,7 +185,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr data-status-item="complete-submitted">
+          <tr data-filter-status="complete-submitted">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -210,7 +210,7 @@ global_nav_active: Dashboard
               </div>
             </td>
           </tr>
-          <tr data-status-item="declined">
+          <tr data-filter-status="declined">
             <th>
               <a href="application.html">Initial Application</a>
             </th>
@@ -291,13 +291,4 @@ global_nav_active: Dashboard
 
     $("#workload").removeClass('dataTable');
   });
-</script>
-
-<script>
-$(document).ready(function() {
-  var application_status = getUrlParameter('status');
-  sessionStorage.setItem("application_status", application_status);
-  updateStoredData();
-  filterPageContent("data-status-item", application_status);
-});
 </script>
