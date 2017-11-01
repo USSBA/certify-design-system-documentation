@@ -18,13 +18,32 @@ overview_link: application.html
     </ul>
   </aside>
   <article class="usa-width-two-thirds" data-complete="incomplete blank">
-    <h2>Reconsideration Items</h2>
+    <h2>Reconsideration and Appeal</h2>
     <p class="usa-lead-font">In accordance with 8(a) BD program regulations, you may request that this finding be reconsidered. Should you wish your application to be reconsidered, please provide the following documentation:</p>
     <form id="questionnaire_form" class="section_form" enctype="multipart/form-data" action="#" accept-charset="UTF-8" method="post" novalidate="novalidate">
       <input name="utf8" type="hidden" value="✓">
       <input type="hidden" name="_method" value="put">
       <input type="hidden" name="authenticity_token" value="Ld+DTnNDw6G8w8+s13clKCvZhfCqFTu0wcaxFQZ90VTn0Qc7RZssG8KVupGtXL3+3uMup+6bRA6UYRxn7b3QYA==">
       <div class="questions answers_have_dba" id="answers_have_dba">
+        <fieldset>
+          <h4>Do you want to file for reconsideration or appeal the SBA's decision?</h4>
+          <input type="hidden" name="answers[349][question_text]" id="answers_349_question_text" value="Is the applicant firm a for-profit business?">
+          <input type="hidden" name="answers[349][question_name]" id="answers_349_question_name" value="for_profit">
+          <input type="hidden" name="answers[349][answered_for_type]" id="answers_349_answered_for_type">
+          <input type="hidden" name="answers[349][answered_for_id]" id="answers_349_answered_for_id">
+          <div id="answers[349][value]">
+            <input data-complete="blank" type="radio" name="answers[349][value]" id="answers_349_value_yes" value="yes" required="required" aria-required="true">
+            <input data-complete="incomplete" type="radio" name="answers[349][value]" id="answers_349_value_yes" value="yes" required="required" checked="checked" aria-required="true">
+            <label class="yes" required="required" for="answers_349_value_yes" aria-required="true">Reconsideration</label>
+            <input type="radio" name="answers[349][value]" id="answers_349_value_no" value="no" required="required" aria-required="true">
+            <label class="no last" for="answers_349_value_no">Appeal</label>
+          </div>
+
+          <br>
+          <h6 class="usa-heading-alt"> Details</h6>
+          <hr>
+          <p>The applicant firm must be a for-profit business in order to qualify for the 8(a) Business Development Program. If the applicant firm is not a for-profit business, it is not eligible for program participation.</p>
+        </fieldset>
         <fieldset>
           <h4>Pease attach all items that were listed in your decision letter for reconsideration here along with anything additional that you feel might support your application.</h4>
           <input type="file" id="file9">
