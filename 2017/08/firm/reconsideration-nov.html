@@ -18,14 +18,14 @@ overview_link: application.html
     </ul>
   </aside>
   <article class="usa-width-two-thirds" data-complete="incomplete blank">
-    <h2>Reconsideration and Appeal</h2>
-    <p class="usa-lead-font">In accordance with 8(a) BD program regulations, you may request that this finding be reconsidered. Should you wish your application to be reconsidered, please provide the following documentation:</p>
+    <h2 data-filter-appeal_rights="true">Reconsideration or Appeal</h2>
+    <h2 data-filter-appeal_rights="false">Reconsideration</h2>
     <form id="questionnaire_form" class="section_form" enctype="multipart/form-data" action="#" accept-charset="UTF-8" method="post" novalidate="novalidate">
       <input name="utf8" type="hidden" value="✓">
       <input type="hidden" name="_method" value="put">
       <input type="hidden" name="authenticity_token" value="Ld+DTnNDw6G8w8+s13clKCvZhfCqFTu0wcaxFQZ90VTn0Qc7RZssG8KVupGtXL3+3uMup+6bRA6UYRxn7b3QYA==">
-      <div class="questions answers_have_dba" id="answers_have_dba">
-        <fieldset>
+      <div class="questions answers_have_dba" id="answers_have_dba" >
+        <fieldset data-filter-appeal_rights="true">
           <h4>Do you want to file for reconsideration or appeal the SBA's decision?</h4>
           <input type="hidden" name="answers[349][question_text]" id="answers_349_question_text" value="Is the applicant firm a for-profit business?">
           <input type="hidden" name="answers[349][question_name]" id="answers_349_question_name" value="for_profit">
@@ -40,13 +40,16 @@ overview_link: application.html
           </div>
 
           <br>
-          <h6 class="usa-heading-alt"> Details</h6>
+          <h6 class="usa-heading-alt">Details</h6>
           <hr>
-          <p>The applicant firm must be a for-profit business in order to qualify for the 8(a) Business Development Program. If the applicant firm is not a for-profit business, it is not eligible for program participation.</p>
+          <p>To be eligible for reconsideration, you must provide documentation requested by the SBA that proves that your firm meets the requirements of the 8(a) Business Development program. By appealing the SBA’s decision, you are disputing the SBA’s decision based on the regulation. If you choose to appeal, and the Office of Hearings and Appeals (OHA) upholds the SBA’s decision, you will not be able to apply for reconsideration.</p>
         </fieldset>
         <fieldset>
-          <h4>Pease attach all items that were listed in your decision letter for reconsideration here along with anything additional that you feel might support your application.</h4>
-          <input type="file" id="file9">
+          <h4 data-filter-appeal_rights="true">If you are applying for reconsideration, please attach all items that were listed in your decision letter for reconsideration here along with anything additional that you feel might support your application. If you are filing an appeal, please attach: (1) the basis of OHA’s jurisdiction; (2) a clear and concise statement of the factual basis of the case and applicable legal arguments; (3) the relief being sought; (4) the name, address, telephone number, facsimile number, e-mail address, and signature of the petitioner or its attorney; and (5) a certificate of service in accordance with §§134.204(d) and 134.203. Petition must also state the reasons why the determination is alleged to be arbitrary, capricious or contrary to law and should include specific references to the determination and the record supporting the determination. 13 CFR §134.402.</h4>
+          <h4 data-filter-appeal_rights="false">
+            Please attach all items that were listed in your decision letter for reconsideration here along with anything additional that you feel might support your application.
+          </h4>
+          <p class="add-req-doc" id="add-req-doc-button"><a href="javascript:void(0)"><i class="fa fa-plus-circle">&nbsp;</i>Add required documents</a></p>
         </fieldset>
 
         <h6 class="usa-heading-alt"> Details</h6>
