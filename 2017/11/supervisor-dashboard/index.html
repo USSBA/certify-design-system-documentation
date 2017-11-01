@@ -1,0 +1,138 @@
+---
+layout: analyst
+global_nav_active: Dashboard
+---
+
+<h1>Dashboard</h1>
+
+<section class="dashboard-section">
+  <header class="dashboard-section__header">
+    <h2 class="dashboard-section__heading">Unassigned Cases</h2>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th>Date Submitted</th>
+        <th>Applicant Firm</th>
+        <th>Applicant Firm Location</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08/29/17</td>
+        <td>
+          <a href="#">Televares Software Development</a> <br>
+          <small>Social Disadvantage: Preponderance of evidence<br>
+          Legal Structure: LLC <br>
+          Entity Ownership: Yes <br>
+          Owners: 2</small>
+        </td>
+        <td>Seattle, WA</td>
+        <td><a href="#">Assign</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="dashboard-section">
+  <header class="dashboard-section__header">
+    <h2 class="dashboard-section__heading">Declined Cases</h2>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th>Date Declined</th>
+        <th>Applicant Firm</th>
+        <th>Applicant Firm Location</th>
+        <th>Original Case Owner</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08/29/17</td>
+        <td>
+          <a href="#">Mitchell Holdings, LLC</a> <br>
+          <small>Social Disadvantage: Preponderance of evidence<br>
+          Legal Structure: LLC <br>
+          Entity Ownership: Yes <br>
+          Owners: 2</small>
+        </td>
+        <td>Seattle, WA</td>
+        <td>Douglas Fink (BOS)</td>
+        <td><a href="#">Assign</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="dashboard-section">
+  <header class="dashboard-section__header">
+    <h2 class="dashboard-section__heading">My Current Workload</h2>
+  </header>
+  <table id="workload">
+    <thead>
+      <tr>
+        <th>Firm</th>
+        <th>Status</th>
+        <th>Application Due</th>
+        <th>Details <!-- DEV NOTES: SORT BY NAME --></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th>
+          <a href="#">The Gravel Depot</a>
+          <br>
+          <small>Firm Owner: Rose Johnson<br>
+          Phone: 817-324-8392</small>
+        </th>
+        <td>
+          <strong>Processing</strong> <br>
+          <small><strong>BOS Recommendation: <span class="usa-color-green"> Eligible</span></strong></small> <br>
+        </td>
+        <td>
+          09/05/17 <br>
+          <small>5 days left</small>
+        </td>
+        <td><strong>Sent by:</strong> Tim Glimert (CODS)</td>
+      </tr>
+
+      <tr>
+        <th>
+          <a href="#">Hamilton Forge</a>
+          <br>
+          <small>Firm Owner: Frank Peters<br>
+          Phone: 817-324-8392</small>
+        </th>
+        <td>
+          <strong>Processing</strong> <br>
+          <small><strong>BOS Recommendation: <span class="usa-color-red"> Ineligible</span></strong></small> <br>
+        </td>
+        <td>
+          09/10/17 <br>
+          <small>10 days left</small>
+        </td>
+        <td>
+          <strong>Currently with:</strong>  Alexandra Bosh (OGC)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <a href="#" class="usa-button usa-button-big">View all cases</a>
+</section>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('#workload').DataTable( {
+      "aaSorting": [],
+      "info":     false,
+      "paging":   false,
+      "searching":   false
+    } );
+    $("#workload").removeClass('dataTable');
+  });
+</script>
