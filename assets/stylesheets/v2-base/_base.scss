@@ -1,0 +1,5 @@
+*:focus,
+.sba-focus {
+  outline: $focus-outline;
+  outline-offset: $focus-spacing;
+}

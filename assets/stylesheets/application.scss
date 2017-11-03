@@ -41,5 +41,13 @@
 // overrides
 @import "prototype/certify-overrides/style";
 
+
+// Let's start testing some of the new V2 components
+@import "v2-base/variables";
+@import "v2-utilities/layout";
+@import "v2-utilities/spacing";
+@import "v2-base/base";
+@import "v2-base/layout";
+
 // Style Guide - This is only for use in the styleguide
 @import "prototype/components/styleguide"
