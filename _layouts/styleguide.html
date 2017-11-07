@@ -11,8 +11,10 @@
 
     <header class="masthead">
       <div class="usa-navbar certify-navbar">
-        <div class="usa-logo certify-logo" id="logo">
-          <img alt="certify.SBA.gov logo" src="{{ relative }}assets/img/certify-sba-gov-logo_on-dark.png" />
+        <div class="sba-l-container sba-l-container--fullbleed">
+          <div class="usa-logo certify-logo" id="logo">
+            <img alt="certify.SBA.gov logo" src="{{ relative }}assets/img/certify-sba-gov-logo_on-dark.png" />
+          </div>
         </div>
         <button class="usa-menu-btn">Menu</button>
       </div>
@@ -24,31 +26,49 @@
           </button>
 
           <div class="certify-global-nav">
+            <div class="sba-l-container sba-l-container--fullbleed">
               <div class="certify-global-nav__primary">
                 <a href="#" class="certify-logo__link">
                   <img class="certify-logo" alt="certify.SBA.gov logo" src="{{ relative }}assets/img/certify-sba-gov-logo_on-dark.png" />
                 </a>
               </div>
+            </div>
           </div>
 
         </div>
       </nav>
     </header>
 
-
-    <div class="usa-grid">
-      <div class="usa-grid-full">
-        <article>
-          <h1>Certify Styleguide</h1>
-          <p class="usa-font-lead">Welcome to the certify.SBA.gov styleguide. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>.</p>
-
-          <p>The U.S. Web Design Standards are an excellent resource for design guidance and packaged components. The standards are meant to be built upon. </p>
-        </article>
-
+    <div class="sba-l-container sba-l-container--fullbleed">
+      <div class="sba-l-row">
+        <div class="sba-l-sm-col--12 sba-l-md-col--golden-sm sba-l-lg-col--3">
+          <ul class="usa-sidenav-list">
+            <li>
+              <a href="{{ site.baseurl }}/styleguide/components/">Components</a>
+              <ul class="usa-sidenav-sub_list">
+                <li>
+                  <a href="{{ site.baseurl }}/styleguide/components#icons">Icons</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/components/form-controls/" class="usa-current">Transitional Items</a>
+                <ul class="usa-sidenav-sub_list">
+                  <li>
+                    <a href="#text-input">Text inputs and area</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div class="sba-l-sm-col--12 sba-l-md-col--golden-lg sba-l-lg-col--9">
+      
         {{ content }}
-        
+        </div>
       </div>
     </div>
+
+
 
 
   </body>
