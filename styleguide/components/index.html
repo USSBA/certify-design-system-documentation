@@ -1582,7 +1582,7 @@ layout: styleguide
     <li>Consider user needs. There are instances where pagination could be a hinderance despite page length.</li>
     <li>If the user is either on the first or last page, the corresponding bookend links are to be disabled.</li>
     <li>
-      No matter how many pages are in a set, never use more than seven numeric buttons. If there are more than seven pages in a set, the <code>ellipses</code> is to be used. If the pagination is placed in a narrower page section, use five.
+      No matter how many pages are in a set, never use more than seven numeric buttons. If there are more than seven pages in a set, the <code>ellipses</code> is to be used. If the pagination is placed in a narrower page section, use five. <strong>Note:</strong> further testing might set the number of pages to navigate to at five rather than seven depending on design stress points.
       <ul>
         <li>
           If the user is at the beginning, the pattern is to be [<strong>1</strong>][2][3][4][5][6][…][100].
@@ -1811,7 +1811,7 @@ layout: styleguide
         <a href="" class="sba-c-pagination__link" aria-label="Page 47">47</a>
         <div class="sba-c-pagination__link" aria-label="Page 48">48</div>
         <a href="" class="sba-c-pagination__link" aria-label="Page 49">49</a>
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--current" aria-current="page" aria-label="Page 50 (current page)">50</a>
+        <div class="sba-c-pagination__link sba-c-pagination__link--current" aria-current="page" aria-label="Page 50 (current page)">50</div>
       </div>
     </nav>
   </div>
