@@ -3,6 +3,13 @@
   padding: 2rem;
 }
 
+.sample--white {
+  background-color: white;
+  border: 1px solid $color-gray;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
 .task-sample {
   @include align-items(baseline);
   @include display(flex);
