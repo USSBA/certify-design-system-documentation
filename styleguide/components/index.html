@@ -1582,16 +1582,16 @@ layout: styleguide
     <li>Consider user needs. There are instances where pagination could be a hinderance despite page length.</li>
     <li>If the user is either on the first or last page, the corresponding bookend links are to be disabled.</li>
     <li>
-      No matter how many pages are in a set, never use more than 5 numeric buttons. If there are more than 5 pages in a set, the <code>ellipses</code> is to be used.
+      No matter how many pages are in a set, never use more than seven numeric buttons. If there are more than seven pages in a set, the <code>ellipses</code> is to be used. If the pagination is placed in a narrower page section, use five.
       <ul>
         <li>
-          If the user is at the beginning, the pattern is to be [<strong>1</strong>][2][3][4][…][100].
+          If the user is at the beginning, the pattern is to be [<strong>1</strong>][2][3][4][5][6][…][100].
         </li>
         <li>
-          If user is at the end of the set, the pattern is to be [1][…][97][98][99][<strong>100</strong>].
+          If user is at the end of the set, the pattern is to be [1][…][95][96][97][98][99][<strong>100</strong>].
         </li>
         <li>
-          Otherwise, the pattern is to be [1][…][14][<strong>15</strong>][16][…][100]. The current page must be in the middle.
+          Otherwise, the pattern is to be [1][…][13][14][<strong>15</strong>][16][17][…][100]. The current page must be in the middle.
         </li>
       </ul>
     </li>
@@ -1613,14 +1613,14 @@ layout: styleguide
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link">
+        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end">
           <svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right"></use>
           </svg>
         </a>
       </div>
       <div class="sba-c-pagination__backwards">
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-label="First page" aria-disabled="true">
+        <a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled  sba-c-pagination__link--end" aria-label="First page" aria-disabled="true">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left"></use>
           </svg>
@@ -1637,6 +1637,8 @@ layout: styleguide
         <a href="" class="sba-c-pagination__link" aria-label="Page 2">2</a>
         <a href="" class="sba-c-pagination__link" aria-label="Page 3">3</a>
         <a href="" class="sba-c-pagination__link" aria-label="Page 4">4</a>
+        <a href="" class="sba-c-pagination__link" aria-label="Page 5">5</a>
+        <a href="" class="sba-c-pagination__link" aria-label="Page 6">6</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…</div>
         <a href="" class="sba-c-pagination__link" aria-label="Page 20">20</a>
       </div>
@@ -1653,14 +1655,14 @@ layout: styleguide
         &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right">&lt;/use>
       &lt;/svg>
     &lt;/a>
-    &lt;a href="" class="sba-c-pagination__link">
+    &lt;a href="" class="sba-c-pagination__link sba-c-pagination__link--end">
       &lt;svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
         &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right">&lt;/use>
       &lt;/svg>
     &lt;/a>
   &lt;/div>
   &lt;div class="sba-c-pagination__backwards">
-    &lt;a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-label="First page" aria-disabled="true">
+    &lt;a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled sba-c-pagination__link--end" aria-label="First page" aria-disabled="true">
       &lt;svg aria-hidden="true" class="sba-c-icon">
         &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left">&lt;/use>
       &lt;/svg>
@@ -1677,6 +1679,8 @@ layout: styleguide
     &lt;a href="" class="sba-c-pagination__link" aria-label="Page 2">2&lt;/a>
     &lt;a href="" class="sba-c-pagination__link" aria-label="Page 3">3&lt;/a>
     &lt;a href="" class="sba-c-pagination__link" aria-label="Page 4">4&lt;/a>
+    &lt;a href="" class="sba-c-pagination__link" aria-label="Page 5">5&lt;/a>
+    &lt;a href="" class="sba-c-pagination__link" aria-label="Page 6">6&lt;/a>
     &lt;div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…&lt;/div>
     &lt;a href="" class="sba-c-pagination__link" aria-label="Page 20">20&lt;/a>
   &lt;/div>
@@ -1694,14 +1698,14 @@ layout: styleguide
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link">
+        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end">
           <svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right"></use>
           </svg>
         </a>
       </div>
       <div class="sba-c-pagination__backwards">
-        <a href="" class="sba-c-pagination__link" aria-label="First page">
+        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end" aria-label="First page">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left"></use>
           </svg>
@@ -1713,13 +1717,15 @@ layout: styleguide
         </a>
       </div>
       <div class="sba-c-pagination__numbers">
-        <div class="sba-c-pagination__status" aria-label="Currently on page 3 of 5">3 of 5</div>
+        <div class="sba-c-pagination__status" aria-label="Currently on page 3 of 5">3 of 7</div>
         <a href="" class="sba-c-pagination__link" aria-label="Page 1">1</a>
         <a href="" class="sba-c-pagination__link" aria-label="Page 2">2</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--current" aria-current="page" aria-label="Page 3 (current page)">3</div>
 
         <a href="" class="sba-c-pagination__link" aria-label="Page 4">4</a>
         <a href="" class="sba-c-pagination__link" aria-label="Page 5">5</a>
+        <a href="" class="sba-c-pagination__link" aria-label="Page 5">6</a>
+        <a href="" class="sba-c-pagination__link" aria-label="Page 5">7</a>
       </div>
     </nav>
   </div>
@@ -1733,14 +1739,14 @@ layout: styleguide
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link">
+        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end">
           <svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right"></use>
           </svg>
         </a>
       </div>
       <div class="sba-c-pagination__backwards">
-        <a href="" class="sba-c-pagination__link" aria-label="First page">
+        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end" aria-label="First page">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left"></use>
           </svg>
@@ -1755,10 +1761,12 @@ layout: styleguide
         <div class="sba-c-pagination__status" aria-label="Currently on page 15 of 100">15 of 100</div>
         <a href="" class="sba-c-pagination__link" aria-label="Page 1">1</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…</div>
+        <a href="" class="sba-c-pagination__link" aria-label="Page 13">13</a>
         <a href="" class="sba-c-pagination__link" aria-label="Page 14">14</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--current" aria-current="page" aria-label="Page 15 (current page)">15</div>
 
         <a href="" class="sba-c-pagination__link" aria-label="Page 16">16</a>
+        <a href="" class="sba-c-pagination__link" aria-label="Page 17">17</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…</div>
         <a href="" class="sba-c-pagination__link" aria-label="Page 100">100</a>
       </div>
@@ -1775,14 +1783,14 @@ layout: styleguide
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-disabled="true">
+        <a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled sba-c-pagination__link--end" aria-disabled="true">
           <svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right"></use>
           </svg>
         </a>
       </div>
       <div class="sba-c-pagination__backwards">
-        <a href="" class="sba-c-pagination__link" aria-label="First page">
+        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end" aria-label="First page">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left"></use>
           </svg>
@@ -1797,6 +1805,8 @@ layout: styleguide
         <div class="sba-c-pagination__status" aria-label="Currently on page 15 of 100">50 of 50</div>
         <a href="" class="sba-c-pagination__link" aria-label="Page 1">1</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…</div>
+        <a href="" class="sba-c-pagination__link" aria-label="Page 45">45</a>
+        <a href="" class="sba-c-pagination__link" aria-label="Page 46">46</a>
         <a href="" class="sba-c-pagination__link" aria-label="Page 47">47</a>
         <div class="sba-c-pagination__link" aria-label="Page 48">48</div>
         <a href="" class="sba-c-pagination__link" aria-label="Page 49">49</a>

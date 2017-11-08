@@ -82,7 +82,8 @@
 }
 
 @include media($nav-width) {
-  .sba-c-pagination__status {
+  .sba-c-pagination__status,
+  .sba-c-pagination__link--end {
     display: none;
   }
 
