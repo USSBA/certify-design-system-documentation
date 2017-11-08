@@ -90,4 +90,12 @@
   .sba-c-pagination__numbers .sba-c-pagination__link {
     display: inline-block;
   }
+
+  .sba-c-pagination__forwards .sba-c-pagination__link:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .sba-c-pagination__backwards .sba-c-pagination__link:nth-child(2) {
+    margin-left: 0;
+  }
 }
