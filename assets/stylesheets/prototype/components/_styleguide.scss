@@ -91,10 +91,19 @@
   }
 }
 
-p code,
-li code {
-  background: $color-gray-lightest;
-  border-radius: 2px;
-  padding: 0 8px;
-  display: inline-block;
+
+
+.styleguide {
+
+  h1 {
+    margin-top: 0;
+  }
+
+  p code,
+  li code {
+    background: $color-gray-lightest;
+    border-radius: 2px;
+    padding: 0 8px;
+    display: inline-block;
+  }
 }
