@@ -44,25 +44,52 @@
         <div class="sba-l-sm-col--12 sba-l-md-col--golden-sm sba-l-lg-col--3">
           <ul class="usa-sidenav-list">
             <li>
-              <a href="{{ site.baseurl }}/styleguide/components/">Components</a>
-              <ul class="usa-sidenav-sub_list">
+              <a class="{% if page.sub_section contains "index" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/">Introduction</a>
+            </li>
+            <li>
+              <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "components" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "components" %}false
+              {% else %}true{% endif %}" aria-controls="sublist_components">
+                Components
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-up"></use>
+                </svg>
+              </button>
+              <ul class="usa-sidenav-sub_list" id="sublist_components">
                 <li>
-                  <a href="{{ site.baseurl }}/styleguide/components#icons">Icons</a>
+                  <a class="{% if page.sub_section contains "icons" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/components/icons.html">Icons</a>
+                </li>
+                <li>
+                  <a class="{% if page.sub_section contains "pagination" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/components/pagination.html">Pagination</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="/components/form-controls/" class="usa-current">Transitional Items</a>
-                <ul class="usa-sidenav-sub_list">
+              <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "transitional" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "transitional" %}false
+              {% else %}true{% endif %}" aria-controls="sublist_transitional">
+                Transitional
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+              <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-up"></use>
+              </svg>
+              </button>
+                <ul class="usa-sidenav-sub_list" id="sublist_transitional">
                   <li>
-                    <a href="#text-input">Text inputs and area</a>
+                    <a class="{% if page.sub_section contains "cards" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/transitional/cards.html">Cards</a>
+                  </li>
+                  <li>
+                    <a class="{% if page.sub_section contains "taskpanel" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/transitional/taskpanel.html">Task Panels</a>
                   </li>
                 </ul>
               </li>
             </ul>
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--golden-lg sba-l-lg-col--9">
-      
+
         {{ content }}
         </div>
       </div>

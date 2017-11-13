@@ -35,3 +35,60 @@
   font-size: 1.4rem;
   margin: 1.5rem 0 0;
 }
+
+.usa-sidenav-list-button {
+  background-color: transparent;
+  border-radius: 0;
+  color: $color-base;
+  display: block;
+  font-weight: normal;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background-color: $color-gray-lightest;
+    color: $color-blue;
+  }
+
+  &.usa-current {
+    font-weight: bold;
+    color: $color-blue;
+    border-left: 4px solid $color-blue;
+  }
+
+  .sba-c-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    margin-top: -10px;
+  }
+
+  .icon-when-open {
+    display: none;
+  }
+
+  + .usa-sidenav-sub_list {
+    display: none;
+  }
+
+  &.is-open {
+
+    .icon-when-open {
+      display: inline-block;
+    }
+
+    .icon-when-closed {
+      display: none;
+    }
+
+    + .usa-sidenav-sub_list {
+      display: block;
+    }
+  }
+
+
+}

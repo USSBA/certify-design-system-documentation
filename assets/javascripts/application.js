@@ -22,5 +22,8 @@
   -{% include_relative components/taskbar.js %}
   -{% include_relative components/urlparam.js %}
 
+  // Styleguide only
+  -{% include_relative components/styleguide.js %}
+
   // Add your JS sripts here
    -{% include_relative init.js %}
