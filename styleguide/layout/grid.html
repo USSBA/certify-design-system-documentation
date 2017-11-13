@@ -6,4 +6,73 @@ sub_section: grid
 
 <article>
   <h1>Grid</h1>
+
+  <p>Certify uses a 12-column, responsive, flexbox grid to provide structure and align content.</p>
+
+  <p>The grid consists of three distinct pieces:</p>
+
+  <ul>
+    <li>
+      A <strong>container</strong> adds a maximum width and centers the content
+    </li>
+    <li>
+      A <strong>row</strong> enables the flexbox layout. <strong>Columns</strong> can collapse into different lockups at different breakpoints to provide flexibility in the design across different viewports. There are a maximum of 12 columns in each row. Columns may collapse into multiple rows.
+    </li>
+  </ul>
+
+  <h2>Default Grid</h2>
+
+  <p>Columns without a set width will automatically layout with equal widths. For example, below are four instances of <code>.sba-l-col</code> which are each automatically 25% wide. The columns will automatically wrap when they don't fit a single row.</p>
+
+
+<pre><code class="language-markup">
+&lt;div class="sba-l-container">
+  &lt;div class="sba-l-row">
+    &lt;div class="sba-l-col">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col">
+      Column
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h2>Screen width breakpoints</h2>
+
+  <p>Each column class can include a breakpoint "prefix" (sm, md, lg, xl), allowing you to change the column widths based on the viewport width.</p>
+
+  <p>An element with a <code>sba-l-{breakpoint}-col--*</code> class will span * columns at viewports matching breakpoint and larger.</p>
+
+  <p>In the example below, the cells span:</p>
+
+  <ul>
+    <li>1/6 of the row on xl viewports, using <code>sba-l-xl-col--2</code></li>
+    <li>1/4 of the row on lg viewports, using <code>sba-l-lg-col--3</code></li>
+    <li>1/3 of the row on md viewports, using <code>sba-l-md-col--4</code></li>
+    <li>1/2 of the row on sm viewports, using <code>sba-l-sm-col--6</code></li>
+    <li>The entire width of the row on viewports smaller than the sm breakpoint, using <code>sba-l-col--12</code></li>
+  </ul>
+
+  <h2>Golden Ratios</h2>
+
+  <p>In addition to column widths of 1-12, the grid can also be used with golden ratios. Golden ratio columns are also enabled with breakpoint prefixes.</p>
+
+<pre><code class="language-markup">
+&lt;div class="sba-l-container">
+  &lt;div class="sba-l-row">
+    &lt;div class="sba-l-col--golden--sm">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col--golden-lg">
+      Column
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+
 </article>

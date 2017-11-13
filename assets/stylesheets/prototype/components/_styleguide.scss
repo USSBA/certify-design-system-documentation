@@ -89,6 +89,12 @@
       display: block;
     }
   }
+}
 
-
+p code,
+li code {
+  background: $color-gray-lightest;
+  border-radius: 2px;
+  padding: 0 8px;
+  display: inline-block;
 }

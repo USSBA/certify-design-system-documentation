@@ -1,0 +1,119 @@
+/* stylelint-disable declaration-no-important */
+
+/*
+Padding
+
+Use the padding utility to change an element's padding.
+
+**Format**: `sba-u-padding-[x|y|bottom|left|right|top]--[MULTIPLE]`
+
+[Read more about how the design system approaches spacing here.]({{root}}/layout/spacing)
+
+@hide-markup
+
+Markup:
+<% ['', '-x', '-y', '-bottom', '-left', '-right', '-top'].forEach(name => { -%>
+<% for (var i = 0; i < 8; i++) { %>
+<div class="ds-base--inverse sba-u-padding<%= name %>--<%= i %> sba-u-margin-bottom--2">
+  <code>sba-u-padding<%= name %>--<%= i %></code>
+</div>
+<% } -%>
+<% }) -%>
+
+Style guide: utilities.padding
+*/
+@for $i from 1 through length($spacers) {
+  $size: #{nth($spacers, $i)};
+  $scale: #{$i - 1};
+
+  // Example: sba-u-padding--0
+  .sba-u-padding--#{$scale} {
+    // Example: padding: 0 !important;
+    padding: #{$size} !important;
+  }
+
+  .sba-u-padding-top--#{$scale} {
+    padding-top: #{$size} !important;
+  }
+
+  .sba-u-padding-right--#{$scale} {
+    padding-right: #{$size} !important;
+  }
+
+  .sba-u-padding-bottom--#{$scale} {
+    padding-bottom: #{$size} !important;
+  }
+
+  .sba-u-padding-left--#{$scale} {
+    padding-left: #{$size} !important;
+  }
+
+  .sba-u-padding-x--#{$scale} {
+    padding-left: #{$size} !important;
+    padding-right: #{$size} !important;
+  }
+
+  .sba-u-padding-y--#{$scale} {
+    padding-bottom: #{$size} !important;
+    padding-top: #{$size} !important;
+  }
+}
+
+/*
+Responsive padding
+
+Use a [breakpoint prefix]({{root}}/guidelines/responsive) to change the padding at specific breakpoints.
+
+_Resize your browser to see each breakpoint in action:_
+
+Markup:
+<div class="ds-base--inverse">
+  <div class="sba-u-padding--1 sba-u-sm-padding--2 sba-u-md-padding--3 sba-u-lg-padding--4 sba-u-xl-padding--5">
+    Responsive padding
+  </div>
+</div>
+
+Style guide: utilities.padding.responsive
+*/
+@each $breakpoint in map-keys($breakpoints) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $value) {
+    @for $i from 1 through length($spacers) {
+      $size: #{nth($spacers, $i)};
+      $scale: #{$i - 1};
+
+      // Example: sba-u-sm-padding--0
+      .sba-u-#{$breakpoint}-padding--#{$scale} {
+        // Example: padding: 0 !important;
+        padding: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-padding-top--#{$scale} {
+        padding-top: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-padding-right--#{$scale} {
+        padding-right: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-padding-bottom--#{$scale} {
+        padding-bottom: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-padding-left--#{$scale} {
+        padding-left: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-padding-x--#{$scale} {
+        padding-left: #{$size} !important;
+        padding-right: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-padding-y--#{$scale} {
+        padding-bottom: #{$size} !important;
+        padding-top: #{$size} !important;
+      }
+    }
+  }
+}
