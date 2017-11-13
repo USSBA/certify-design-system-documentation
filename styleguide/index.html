@@ -5,8 +5,39 @@ sub_section: index
 ---
 
 <article>
-  <h1>Certify Styleguide</h1>
-  <p class="usa-font-lead">Welcome to the certify.SBA.gov styleguide. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>.</p>
+  <h1>Certify.SBA.gov Design System</h1>
+  <p class="usa-font-lead">Welcome to the certify.SBA.gov design system. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>. The design system was heavily influenced by <a href="https://design.cms.gov">design.cms.gov</a></p>
 
-  <p>The U.S. Web Design Standards are an excellent resource for design guidance and packaged components. The standards are meant to be built upon. </p>
+  <h2>Name spacing</h2>
+
+  <p>The certify.SBA.gov design system uses a strict naming convention. This helps identify what is part of the design system, what role it plays, and what it pertains to.</p>
+
+  <p>Every part of the design system must be namespaced with <code>sba-</code>, prefixed with its role, and a <a href="http://getbem.com/naming/">BEM syntax</a> convention.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Prefix</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><code>l-</code></th>
+        <td>Indicates layout, generally for building the grid.</td>
+      </tr>
+      <tr>
+        <th><code>c-</code></th>
+        <td>Indicates a component. Components are built specific to the needs of certify.SBA.gov</td>
+      </tr>
+      <tr>
+        <th><code>u-</code></th>
+        <td>Indicates a utility. Utilities pertain to CSS properties.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>These prefixes can sometimes be followed by a "breakpoint prefix".</p>
+
+
 </article>
