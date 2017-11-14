@@ -1,0 +1,251 @@
+/* stylelint-disable declaration-no-important */
+
+/*
+Margin
+
+Use the margin utility to change an element's margin.
+
+**Format**: `sba-u-margin-[x|y|bottom|left|right|top]--[MULTIPLE]`
+
+[Read more about how the design system approaches spacing here.]({{root}}/layout/spacing)
+
+@hide-markup
+
+Markup:
+<% var backgrounds = ['-cool-light', '-warm-light', '-lightest', '-lighter', '-light', '-medium', '', '-dark']; %>
+<% ['', '-x', '-y', '-bottom', '-left', '-right', '-top'].forEach(name => { -%>
+<% for (var i = 0; i < 8; i++) { %>
+<div class="sba-u-fill--gray<%= backgrounds[i] %>">
+  <div class="sba-u-margin<%= name %>--<%= i %> sba-u-display--inline-block">
+    <code class="sba-u-fill--background sba-u-margin--0">sba-u-margin<%= name %>--<%= i %></code>
+  </div>
+</div>
+<% } -%>
+<div class="sba-u-fill--gray<%= backgrounds[i] %>">
+  <div class="sba-u-margin<%= name %>--auto" style="width: 250px">
+    <code class="sba-u-fill--background sba-u-margin--0 sba-u-display--block">sba-u-margin<%= name %>--auto</code>
+  </div>
+</div>
+<% }) -%>
+
+Style guide: utilities.margin
+*/
+@for $i from 1 through length($spacers) {
+  $size: #{nth($spacers, $i)};
+  $scale: #{$i - 1};
+
+  // Example: sba-u-margin--0
+  .sba-u-margin--#{$scale} {
+    // Example: margin: 0 !important;
+    margin: #{$size} !important;
+  }
+
+  .sba-u-margin-top--#{$scale} {
+    margin-top: #{$size} !important;
+  }
+
+  .sba-u-margin-right--#{$scale} {
+    margin-right: #{$size} !important;
+  }
+
+  .sba-u-margin-bottom--#{$scale} {
+    margin-bottom: #{$size} !important;
+  }
+
+  .sba-u-margin-left--#{$scale} {
+    margin-left: #{$size} !important;
+  }
+
+  .sba-u-margin-x--#{$scale} {
+    margin-left: #{$size} !important;
+    margin-right: #{$size} !important;
+  }
+
+  .sba-u-margin-y--#{$scale} {
+    margin-bottom: #{$size} !important;
+    margin-top: #{$size} !important;
+  }
+
+  // Example: sba-u-margin--neg0
+  .sba-u-margin--neg#{$scale} {
+    // Example: margin: 0 !important;
+    margin: -#{$size} !important;
+  }
+
+  .sba-u-margin-top--neg#{$scale} {
+    margin-top: -#{$size} !important;
+  }
+
+  .sba-u-margin-right--neg#{$scale} {
+    margin-right: -#{$size} !important;
+  }
+
+  .sba-u-margin-bottom--neg#{$scale} {
+    margin-bottom: -#{$size} !important;
+  }
+
+  .sba-u-margin-left--neg#{$scale} {
+    margin-left: -#{$size} !important;
+  }
+
+  .sba-u-margin-x--neg#{$scale} {
+    margin-left: -#{$size} !important;
+    margin-right: -#{$size} !important;
+  }
+
+  .sba-u-margin-y--neg#{$scale} {
+    margin-bottom: -#{$size} !important;
+    margin-top: -#{$size} !important;
+  }
+}
+
+.sba-u-margin--auto {
+  margin: auto !important;
+}
+
+.sba-u-margin-top--auto {
+  margin-top: auto !important;
+}
+
+.sba-u-margin-right--auto {
+  margin-right: auto !important;
+}
+
+.sba-u-margin-bottom--auto {
+  margin-bottom: auto !important;
+}
+
+.sba-u-margin-left--auto {
+  margin-left: auto !important;
+}
+
+.sba-u-margin-x--auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.sba-u-margin-y--auto {
+  margin-bottom: auto !important;
+  margin-top: auto !important;
+}
+
+/*
+Responsive margins
+
+Use a [breakpoint prefix]({{root}}/guidelines/responsive) to change the margin at specific breakpoints.
+
+_Resize your browser to see each breakpoint in action:_
+
+Markup:
+<div class="sba-u-fill--gray-dark">
+  <div class="sba-u-margin--1 sba-u-sm-margin--2 sba-u-md-margin--3 sba-u-lg-margin--4 sba-u-xl-margin--5 sba-u-display--inline-block">
+    <span class="sba-u-fill--background">Responsive margins</span>
+  </div>
+</div>
+
+Style guide: utilities.margin.responsive
+*/
+@each $breakpoint in map-keys($breakpoints) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $value) {
+    @for $i from 1 through length($spacers) {
+      $size: #{nth($spacers, $i)};
+      $scale: #{$i - 1};
+
+      // Example: sba-u-sm-margin--0
+      .sba-u-#{$breakpoint}-margin--#{$scale} {
+        // Example: margin: 0 !important;
+        margin: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-top--#{$scale} {
+        margin-top: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-right--#{$scale} {
+        margin-right: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-bottom--#{$scale} {
+        margin-bottom: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-left--#{$scale} {
+        margin-left: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-x--#{$scale} {
+        margin-left: #{$size} !important;
+        margin-right: #{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-y--#{$scale} {
+        margin-bottom: #{$size} !important;
+        margin-top: #{$size} !important;
+      }
+
+      // Example: sba-u-sm-margin--neg1
+      .sba-u-#{$breakpoint}-margin--neg#{$scale} {
+        // Example: margin: 0 !important;
+        margin: -#{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-top--neg#{$scale} {
+        margin-top: -#{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-right--neg#{$scale} {
+        margin-right: -#{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-bottom--neg#{$scale} {
+        margin-bottom: -#{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-left--neg#{$scale} {
+        margin-left: -#{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-x--neg#{$scale} {
+        margin-left: -#{$size} !important;
+        margin-right: -#{$size} !important;
+      }
+
+      .sba-u-#{$breakpoint}-margin-y--neg#{$scale} {
+        margin-bottom: -#{$size} !important;
+        margin-top: -#{$size} !important;
+      }
+    }
+
+    .sba-u-#{$breakpoint}-margin--auto {
+      margin: auto !important;
+    }
+
+    .sba-u-#{$breakpoint}-margin-top--auto {
+      margin-top: auto !important;
+    }
+
+    .sba-u-#{$breakpoint}-margin-right--auto {
+      margin-right: auto !important;
+    }
+
+    .sba-u-#{$breakpoint}-margin-bottom--auto {
+      margin-bottom: auto !important;
+    }
+
+    .sba-u-#{$breakpoint}-margin-left--auto {
+      margin-left: auto !important;
+    }
+
+    .sba-u-#{$breakpoint}-margin-x--auto {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .sba-u-#{$breakpoint}-margin-y--auto {
+      margin-bottom: auto !important;
+      margin-top: auto !important;
+    }
+  }
+}

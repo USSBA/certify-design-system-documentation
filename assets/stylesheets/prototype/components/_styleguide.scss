@@ -24,8 +24,8 @@
   border: 1px solid $color-gray-lighter;
   border-radius: 4px;
   text-align: center;
-  padding: 16px;
-  margin-bottom: 32px;
+  padding: $multiple * 2;
+  margin-bottom: $multiple * 2;
 }
 
 .icon-box__snippet {
@@ -123,7 +123,6 @@
 .iframe-example {
   padding: $multiple * 2;
 }
-
 
 .grid-example {
   background: $color-cool-blue-lightest;

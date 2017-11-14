@@ -21,6 +21,7 @@
   -{% include_relative components/filter-content.js %}
   -{% include_relative components/taskbar.js %}
   -{% include_relative components/urlparam.js %}
+  -{% include_relative components/scale-iframe.js %}
 
   // Styleguide only
   -{% include_relative components/styleguide.js %}
