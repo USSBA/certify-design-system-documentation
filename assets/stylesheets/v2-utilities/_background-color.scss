@@ -1,0 +1,229 @@
+
+/* stylelint-disable declaration-no-important */
+
+/*
+Background color
+
+Use the background color utility to change the default background color of an element.
+
+**Format**: `sba-u-bgcolor--[COLOR NAME]-[SHADE]`
+
+@hide-markup
+
+Markup:
+<% var groups = [
+  ['primary', 'primary-darker', 'primary-darkest'],
+  ['primary-alt', 'primary-alt-dark', 'primary-alt-darkest', 'primary-alt-light', 'primary-alt-lightest'],
+  ['gray', 'gray-dark', 'gray-light', 'gray-lighter', 'gray-lightest'],
+  ['gold', 'gold-light', 'gold-lighter', 'gold-lightest'],
+  ['warn', 'warn-light', 'warn-lighter', 'warn-lightest'],
+  ['green', 'green-light', 'green-lighter', 'green-lightest'],
+  ['success', 'success-light', 'success-lighter', 'success-lightest'],
+  ['secondary', 'secondary-dark', 'secondary-darkest', 'secondary-light', 'secondary-lightest'],
+  ['error', 'error-dark', 'error-darkest', 'error-light', 'error-lighter', 'error-lightest'],
+  ['base', 'white', 'background', 'background-inverse', 'transparent']
+]; -%>
+<% groups.forEach(group => { -%>
+<div class="ds-l-row sba-u-margin-x--0 sba-u-margin-bottom--7">
+<% group.forEach(color => { -%>
+  <article class="c-swatch ds-l-col--12 ds-l-sm-col--6 sba-u-padding--0 sba-u-margin-bottom--3">
+    <div class="c-swatch__preview c-swatch__preview--condensed sba-u-bgcolor--<%= color %>"></div>
+    <code class="c-swatch__label sba-u-font-size--base">
+      .sba-u-bgcolor--<%= color %>
+    </code>
+    <span class="sba-u-color--muted js-swatch-hex">#</span>
+  </article>
+<% }) -%>
+</div>
+<% }) %>
+
+Style guide: utilities.background-color
+*/
+
+// primary
+.sba-u-bgcolor--primary {
+  background-color: $color-primary !important;
+}
+
+.sba-u-bgcolor--primary-darker {
+  background-color: $color-primary-darker !important;
+}
+
+.sba-u-bgcolor--primary-darkest {
+  background-color: $color-primary-darkest !important;
+}
+
+// primary-alt
+.sba-u-bgcolor--primary-alt {
+  background-color: $color-primary-alt !important;
+}
+
+.sba-u-bgcolor--primary-alt-dark {
+  background-color: $color-primary-alt-dark !important;
+}
+
+.sba-u-bgcolor--primary-alt-darkest {
+  background-color: $color-primary-alt-darkest !important;
+}
+
+.sba-u-bgcolor--primary-alt-light {
+  background-color: $color-primary-alt-light !important;
+}
+
+.sba-u-bgcolor--primary-alt-lightest {
+  background-color: $color-primary-alt-lightest !important;
+}
+
+// secondary
+.sba-u-bgcolor--secondary {
+  background-color: $color-secondary !important;
+}
+
+.sba-u-bgcolor--secondary-dark {
+  background-color: $color-secondary-dark !important;
+}
+
+.sba-u-bgcolor--secondary-darkest {
+  background-color: $color-secondary-darkest !important;
+}
+
+.sba-u-bgcolor--secondary-light {
+  background-color: $color-secondary-light !important;
+}
+
+.sba-u-bgcolor--secondary-lightest {
+  background-color: $color-secondary-lightest !important;
+}
+
+// gray
+.sba-u-bgcolor--gray {
+  background-color: $color-gray !important;
+}
+
+.sba-u-bgcolor--gray-dark {
+  background-color: $color-gray-dark !important;
+}
+
+.sba-u-bgcolor--gray-light {
+  background-color: $color-gray-light !important;
+}
+
+.sba-u-bgcolor--gray-lighter {
+  background-color: $color-gray-lighter !important;
+}
+
+.sba-u-bgcolor--gray-lightest {
+  background-color: $color-gray-lightest !important;
+}
+
+// gold
+.sba-u-bgcolor--gold {
+  background-color: $color-gold !important;
+}
+
+.sba-u-bgcolor--gold-light {
+  background-color: $color-gold-light !important;
+}
+
+.sba-u-bgcolor--gold-lighter {
+  background-color: $color-gold-lighter !important;
+}
+
+.sba-u-bgcolor--gold-lightest {
+  background-color: $color-gold-lightest !important;
+}
+
+// green
+.sba-u-bgcolor--green {
+  background-color: $color-green !important;
+}
+
+.sba-u-bgcolor--green-light {
+  background-color: $color-green-light !important;
+}
+
+.sba-u-bgcolor--green-lighter {
+  background-color: $color-green-lighter !important;
+}
+
+.sba-u-bgcolor--green-lightest {
+  background-color: $color-green-lightest !important;
+}
+
+// state colors
+.sba-u-bgcolor--error {
+  background-color: $color-error !important;
+}
+
+.sba-u-bgcolor--error-dark {
+  background-color: $color-error-dark !important;
+}
+
+.sba-u-bgcolor--error-darkest {
+  background-color: $color-error-darkest !important;
+}
+
+.sba-u-bgcolor--error-light {
+  background-color: $color-error-light !important;
+}
+
+.sba-u-bgcolor--error-lighter {
+  background-color: $color-error-lighter !important;
+}
+
+.sba-u-bgcolor--error-lightest {
+  background-color: $color-error-lightest !important;
+}
+
+.sba-u-bgcolor--warn {
+  background-color: $color-warn !important;
+}
+
+.sba-u-bgcolor--warn-light {
+  background-color: $color-warn-light !important;
+}
+
+.sba-u-bgcolor--warn-lighter {
+  background-color: $color-warn-lighter !important;
+}
+
+.sba-u-bgcolor--warn-lightest {
+  background-color: $color-warn-lightest !important;
+}
+
+.sba-u-bgcolor--success {
+  background-color: $color-success !important;
+}
+
+.sba-u-bgcolor--success-light {
+  background-color: $color-success-light !important;
+}
+
+.sba-u-bgcolor--success-lighter {
+  background-color: $color-success-lighter !important;
+}
+
+.sba-u-bgcolor--success-lightest {
+  background-color: $color-success-lightest !important;
+}
+
+// base colors
+.sba-u-bgcolor--base {
+  background-color: $color-base !important;
+}
+
+.sba-u-bgcolor--white {
+  background-color: $color-white !important;
+}
+
+.sba-u-bgcolor--background {
+  background-color: $color-background !important;
+}
+
+.sba-u-bgcolor--background-inverse {
+  background-color: $color-background-inverse !important;
+}
+
+.sba-u-bgcolor--transparent {
+  background-color: transparent !important;
+}

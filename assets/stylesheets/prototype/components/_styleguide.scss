@@ -108,3 +108,14 @@
     display: inline-block;
   }
 }
+
+.styleguide-masthead {
+  background: $color-blue-darkest;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.styleguide-masthead__logo {
+  height: 30px;
+}
