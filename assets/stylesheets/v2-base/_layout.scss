@@ -61,8 +61,8 @@
   box-sizing: border-box;
   min-height: 1px; // Prevent columns from collapsing when empty
   min-width: 0; // Resize columns as expected (https://css-tricks.com/flexbox-truncated-text/)
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
+  //padding-left: ($grid-gutter-width / 2);
+  //padding-right: ($grid-gutter-width / 2);
   position: relative;
   width: 100%;
 }

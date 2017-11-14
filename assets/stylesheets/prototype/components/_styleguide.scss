@@ -119,3 +119,18 @@
 .styleguide-masthead__logo {
   height: 30px;
 }
+
+.iframe-example {
+  padding: $multiple * 2;
+}
+
+
+.grid-example {
+  background: $color-cool-blue-lightest;
+  border: 1px solid $color-cool-blue;
+  padding-bottom: $multiple * 2;
+}
+
+.iframe__preview {
+  border: 1px solid $color-gray-lightest;
+}

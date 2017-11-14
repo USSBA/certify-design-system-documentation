@@ -11,7 +11,7 @@
     <header class="styleguide-masthead">
       <div class="sba-l-container sba-l-container--fullbleed">
         <div class="sba-l-row">
-          <div class="sba-l-col--12">
+          <div class="sba-l-col--12 sba-u-padding-x--2">
             <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="{{ relative }}assets/img/certify-sba-gov-logo_on-dark.png" />
           </div>
         </div>
@@ -24,7 +24,7 @@
 
     <div class="sba-l-container sba-l-container--fullbleed">
       <div class="sba-l-row">
-        <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3">
+        <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2">
           <ul class="usa-sidenav-list">
             <li>
               <a class="{% if page.sub_section contains "index" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/">Introduction</a>
@@ -105,13 +105,16 @@
                 </button>
                   <ul class="usa-sidenav-sub_list" id="sublist_transitional">
                     <li>
+                      <a class="{% if page.sub_section contains "bgcolor" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/background-color.html">Background color</a>
+                    </li>
+                    <li>
                       <a class="{% if page.sub_section contains "padding" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/padding.html">Padding</a>
                     </li>
                   </ul>
                 </li>
             </ul>
         </div>
-        <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-u-lg-padding-x--7">
+        <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         {{ content }}
         </div>
       </div>
