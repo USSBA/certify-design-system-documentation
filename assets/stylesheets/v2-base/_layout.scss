@@ -45,11 +45,6 @@
 .sba-l-row {
   @include display(flex);
   @include flex-wrap(wrap);
-
-  .sba-l-row {
-    margin-left: ($grid-gutter-width / -2);
-    margin-right: ($grid-gutter-width / -2);
-  }
 }
 
 .sba-l-row--reverse {
