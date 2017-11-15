@@ -107,6 +107,11 @@
     padding: 0 8px;
     display: inline-block;
   }
+
+  iframe {
+    border: none;
+    width: 100%;
+  }
 }
 
 .styleguide-masthead {
@@ -132,4 +137,45 @@
 
 .iframe__preview {
   border: 1px solid $color-gray-lightest;
+  text-align: center;
+}
+
+.responsive-iframe {
+  transform-origin: center left;
+}
+
+
+.sg-format-example {
+  display: table;
+  border: 1px solid $color-gray-lightest;
+  padding: $multiple * 2;
+  margin: $multiple * 2 0;
+}
+
+.sg-format-example__row {
+  display: table-row-group;
+
+  code {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  > code,
+  > div {
+    display: table-cell;
+    padding-right: $multiple * 2;
+
+    &:nth-child(1) {
+      color: $color-blue;
+    }
+    &:nth-child(2) {
+      color: $color-green;
+    }
+    &:nth-child(3) {
+      color: $color-red;
+    }
+    &:last-of-type {
+      color: $color-gray;
+    }
+  }
 }
