@@ -2,25 +2,38 @@ $('document').ready(function(){
   var $iframe = $(".responsive-iframe");
   var $iframe_box = $('.iframe__preview');
 
-  var resizeFrame = function(){
-    var display_width = $iframe.attr('data-width');
-    var viewable_width = $iframe_box.width();
+  var resizeFrame = function(frame, box){
+    var display_width = frame.attr('data-width');
+    var viewable_width = box.width();
 
 
     if ( viewable_width < display_width ) {
       var scale = viewable_width / display_width;
-      $iframe.css({'transform' : 'scale('+ viewable_width / display_width  +')', 'width' : '' + display_width + 'px'});
+      frame.css({'transform' : 'scale('+ viewable_width / display_width  +')', 'width' : '' + display_width + 'px'});
     }
 
     else {
-      $iframe.removeAttr('style');
-      $iframe.css({'width' : '' + display_width + 'px'});
+      frame.removeAttr('style');
+      frame.css({'width' : '' + display_width + 'px'});
     }
   }
 
-  resizeFrame();
+  resizeFrame($iframe, $iframe_box);
+
+  $('.sg-responsive-preview button').on('click', function(){
+    var frame = $(this).parent().parent().find('.responsive-iframe');
+    var box = $(this).parent().parent().find('.iframe__preview');
+    var new_size = $(this).attr('data-size');
+
+    $('.sg-responsive-preview button').removeClass('is-current');
+    $(this).addClass('is-current');
+
+
+    frame.attr('data-width', new_size);
+    resizeFrame(frame, box);
+  });
 
   $(window).resize(function(){
-    resizeFrame();
+    resizeFrame($iframe, $iframe_box);
   });
 });

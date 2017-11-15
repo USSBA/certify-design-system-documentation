@@ -23,8 +23,10 @@ sub_section: grid
   <h2>Default Grid</h2>
 
   <p>Columns without a set width will automatically layout with equal widths. For example, below are four instances of <code>sba-l-col</code> which are each automatically 25% wide. The columns will automatically wrap when they don't fit a single row.</p>
-  <div class="iframe__preview">
-    <iframe class="responsive-iframe" src="examples/grid-basic.html" data-width="1024"  allowfullscreen="true" allowtransparency="true"></iframe>
+  <div>
+    <div class="iframe__preview">
+      <iframe src="examples/grid-basic.html"  allowfullscreen="true" allowtransparency="true" ></iframe>
+    </div>
   </div>
 
 <pre><code class="language-markup">
@@ -60,6 +62,52 @@ sub_section: grid
     <li>1/2 of the row on sm viewports, using <code>sba-l-sm-col--6</code></li>
     <li>The entire width of the row on viewports smaller than the sm breakpoint, using <code>sba-l-col--12</code></li>
   </ul>
+
+  <div class="sg-responsive-preview">
+    <div class="sg-responsive-preview__size-buttons">
+      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
+        XS
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
+        SM
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
+        MD
+      </button>
+      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
+        LG
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
+        XL
+      </button>
+    </div>
+    <div class="iframe__preview">
+      <iframe class="responsive-iframe" src="examples/grid-responsive.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="300"></iframe>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-l-container">
+  &lt;div class="sba-l-row">
+    &lt;div class="sba-l-col--12 sba-l-md-col--6 sba-l-lg-col--4 sba-l-xl-col--2">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col--12 sba-l-md-col--6 sba-l-lg-col--4 sba-l-xl-col--2">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col--12 sba-l-md-col--6 sba-l-lg-col--4 sba-l-xl-col--2">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col--12 sba-l-md-col--6 sba-l-lg-col--4 sba-l-xl-col--2">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col--12 sba-l-md-col--6 sba-l-lg-col--4 sba-l-xl-col--2">
+      Column
+    &lt;/div>
+    &lt;div class="sba-l-col--12 sba-l-md-col--6 sba-l-lg-col--4 sba-l-xl-col--2">
+      Column
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
 
   <h2>Golden Ratios</h2>
 
