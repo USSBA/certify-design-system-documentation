@@ -22,7 +22,7 @@
 
 
 
-    <div class="sba-l-container sba-l-container--fullbleed">
+    <div class="sba-l-container sba-l-container--fullbleed sba-u-padding-bottom--7">
       <div class="sba-l-row">
         <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2">
           <ul class="usa-sidenav-list">
@@ -31,7 +31,7 @@
             </li>
             <li>
               <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "layout" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "layout" %}false
-              {% else %}true{% endif %}" aria-controls="sublist_components">
+              {% else %}true{% endif %}" aria-controls="sublist_layout">
                 Layout
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-down"></use>
@@ -40,7 +40,7 @@
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-up"></use>
                 </svg>
               </button>
-              <ul class="usa-sidenav-sub_list" id="sublist_components">
+              <ul class="usa-sidenav-sub_list" id="sublist_layout">
                 <li>
                   <a class="{% if page.sub_section contains "grid" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/layout/grid.html">Grid</a>
                 </li>
@@ -94,7 +94,7 @@
               </li>
               <li>
                 <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "utilities" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "utilities" %}false
-                {% else %}true{% endif %}" aria-controls="sublist_transitional">
+                {% else %}true{% endif %}" aria-controls="sublist_utilities">
                   Utilities
                   <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-down"></use>
@@ -103,7 +103,7 @@
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-up"></use>
                 </svg>
                 </button>
-                  <ul class="usa-sidenav-sub_list" id="sublist_transitional">
+                  <ul class="usa-sidenav-sub_list" id="sublist_utilities">
                     <li>
                       <a class="{% if page.sub_section contains "bgcolor" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/background-color.html">Background color</a>
                     </li>
@@ -124,7 +124,16 @@
     </div>
 
 
+    <footer class="usa-footer usa-footer-medium" id="footer" role="contentinfo">
 
+
+
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav"><ul class="usa-unstyled-list"><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://sba.gov/contracting" target="_blank"> SBA.gov/contracting</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://whitehouse.gov/" target="_blank"> WhiteHouse.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://regulations.gov/" target="_blank">Regulations.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="https://business.usa.gov/" target="_blank">  BusinessUSA.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://usa.gov/" target="_blank">  USA.gov</a></li></ul></nav></div></div><div class="usa-footer-secondary_section"><div class="usa-grid-full"><div class="usa-footer-logo usa-width-one-half"><a href="http://www.sba.gov" target="_blank"><img alt="U.S. Small Business Administration logo" width="180px" src="https://certify.sba.gov//assets/sba_logo-71184dd072683081eab26174ea34e79e0df016b2d30ab9b5583cbbc481b7fbeb.png"></a></div><div class="usa-footer-contact-links usa-width-one-half">
+        <a class="usa-link-facebook" href="https://www.facebook.com/SBAgov" target="_blank" title="Follow certify.SBA.gov on facebook!"><span hidden>Facebook</span></a>
+        <a class="usa-link-twitter" href="https://www.twitter.com/sbagov" target="_blank" title="Follow certify.SBA.gov on twitter!"><span hidden>Twitter</span></a>
+        <a class="usa-link-youtube" href="https://www.youtube.com/c/sbagov" target="_blank" title="Follow certify.SBA.gov on YouTube!"><span hidden>YouTube</span></a><address></address><h3 class="usa-footer-contact-heading">Contact SBA</h3><p>(800) 827-5722</p></div></div></div><div class="usa-footer-primary-section"><div class="usa-grid-full"><span class="usa-text-small usa-disclaimer-stage">Version: 3.0.1.build_1510707403_ga14f52d</span><div class="atlwdg-blanket" id="atlwdg-blanket" style="display: none;"></div><div class="atlwdg-popup atlwdg-hidden" id="atlwdg-container"></div></div></div></footer>
 
   </body>
 </html>
