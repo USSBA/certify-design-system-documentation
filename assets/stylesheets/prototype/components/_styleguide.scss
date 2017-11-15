@@ -146,6 +146,10 @@
   transform-origin: center left;
 }
 
+.sg-responsive-preview {
+  oveflow-x: hidden;
+}
+
 .sg-responsive-preview .iframe__preview {
   padding-top: $multiple * 2;
   padding-bottom: $multiple *2;
