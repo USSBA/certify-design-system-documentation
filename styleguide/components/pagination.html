@@ -9,7 +9,7 @@ sub_section: pagination
 
   <p>Use pagination for long lists of similar content, such as for search results or notifications. Pagination should always be rendered by the server, and never in the browser. Using pagination for tabular data should be deprecated.</p>
 
-  <h3>Guidance</h3>
+  <h2>Guidance</h2>
 
   <ul>
     <li>Consider user needs. There are instances where pagination could be a hinderance despite page length.</li>
@@ -31,11 +31,11 @@ sub_section: pagination
     </li>
   </ul>
 
-  <h3>Accessibility</h3>
+  <h2>Accessibility</h2>
 
   <p>Use the aria attributes in the example below. The <code>aria-label</code> attribute provides additional context to non-visual users.</p>
 
-  <h3>Example</h3>
+  <h2>Example</h2>
 
   <p>Please note the bordered container boxes are not part of the component.</p>
 
@@ -58,7 +58,7 @@ sub_section: pagination
       </button>
     </div>
     <div class="iframe__preview">
-      <iframe class="responsive-iframe" src="examples/pagination-basic.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="112"></iframe>
+      <iframe title="Pagination example" class="responsive-iframe" src="examples/pagination-basic.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="112"></iframe>
     </div>
   </div>
 
@@ -68,24 +68,24 @@ sub_section: pagination
   <pre><code class="language-markup">
 &lt;nav class="sba-c-pagination" role="navigation">
   &lt;div class="sba-c-pagination__forwards">
-    &lt;a href="" class="sba-c-pagination__link" aria-label="Next">
+    &lt;a href="#" class="sba-c-pagination__link" aria-label="Next">
       &lt;svg aria-hidden="true" class="sba-c-icon">
         &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right">&lt;/use>
       &lt;/svg>
     &lt;/a>
-    &lt;a href="" class="sba-c-pagination__link sba-c-pagination__link--end">
+    &lt;a href="#" class="sba-c-pagination__link sba-c-pagination__link--end">
       &lt;svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
         &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right">&lt;/use>
       &lt;/svg>
     &lt;/a>
   &lt;/div>
   &lt;div class="sba-c-pagination__backwards">
-    &lt;a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled sba-c-pagination__link--end" aria-label="First page" aria-disabled="true">
+    &lt;a href="#" class="sba-c-pagination__link sba-c-pagination__link--disabled sba-c-pagination__link--end" aria-label="First page" aria-disabled="true">
       &lt;svg aria-hidden="true" class="sba-c-icon">
         &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left">&lt;/use>
       &lt;/svg>
     &lt;/a>
-    &lt;a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-label="Back" aria-disabled="true">
+    &lt;a href="#" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-label="Back" aria-disabled="true">
       &lt;svg aria-hidden="true" class="sba-c-icon">
         &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-left">&lt;/use>
       &lt;/svg>
@@ -94,41 +94,41 @@ sub_section: pagination
   &lt;div class="sba-c-pagination__numbers">
     &lt;div class="sba-c-pagination__status" aria-label="Currently on page 1 of 20">1 of 20&lt;/div>
     &lt;div class="sba-c-pagination__link sba-c-pagination__link--current" aria-current="page" aria-label="Page 1 (current page)">1&lt;/div>
-    &lt;a href="" class="sba-c-pagination__link" aria-label="Page 2">2&lt;/a>
-    &lt;a href="" class="sba-c-pagination__link" aria-label="Page 3">3&lt;/a>
-    &lt;a href="" class="sba-c-pagination__link" aria-label="Page 4">4&lt;/a>
-    &lt;a href="" class="sba-c-pagination__link" aria-label="Page 5">5&lt;/a>
-    &lt;a href="" class="sba-c-pagination__link" aria-label="Page 6">6&lt;/a>
+    &lt;a href="#" class="sba-c-pagination__link" aria-label="Page 2">2&lt;/a>
+    &lt;a href="#" class="sba-c-pagination__link" aria-label="Page 3">3&lt;/a>
+    &lt;a href="#" class="sba-c-pagination__link" aria-label="Page 4">4&lt;/a>
+    &lt;a href="#" class="sba-c-pagination__link" aria-label="Page 5">5&lt;/a>
+    &lt;a href="#" class="sba-c-pagination__link" aria-label="Page 6">6&lt;/a>
     &lt;div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…&lt;/div>
-    &lt;a href="" class="sba-c-pagination__link" aria-label="Page 20">20&lt;/a>
+    &lt;a href="#" class="sba-c-pagination__link" aria-label="Page 20">20&lt;/a>
   &lt;/div>
 &lt;/nav>
   </code></pre>
 
-  <h3>More Examples</h3>
+  <h2>More Examples</h2>
 
   <h4>User is on first page</h4>
   <div class="sample--white">
     <nav class="sba-c-pagination" role="navigation">
       <div class="sba-c-pagination__forwards">
-        <a href="" class="sba-c-pagination__link" aria-label="Next">
+        <a href="#" class="sba-c-pagination__link" aria-label="Next">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end">
+        <a href="#" class="sba-c-pagination__link sba-c-pagination__link--end">
           <svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right"></use>
           </svg>
         </a>
       </div>
       <div class="sba-c-pagination__backwards">
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled  sba-c-pagination__link--end" aria-label="First page" aria-disabled="true">
+        <a href="#" class="sba-c-pagination__link sba-c-pagination__link--disabled  sba-c-pagination__link--end" aria-label="First page" aria-disabled="true">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-label="Back" aria-disabled="true">
+        <a href="#" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-label="Back" aria-disabled="true">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-left"></use>
           </svg>
@@ -137,13 +137,13 @@ sub_section: pagination
       <div class="sba-c-pagination__numbers">
         <div class="sba-c-pagination__status" aria-label="Currently on page 1 of 20">1 of 20</div>
         <div class="sba-c-pagination__link sba-c-pagination__link--current" aria-current="page" aria-label="Page 1 (current page)">1</div>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 2">2</a>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 3">3</a>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 4">4</a>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 5">5</a>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 6">6</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 2">2</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 3">3</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 4">4</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 5">5</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 6">6</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…</div>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 20">20</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 20">20</a>
       </div>
     </nav>
   </div>
@@ -152,24 +152,24 @@ sub_section: pagination
   <div class="sample--white">
     <nav class="sba-c-pagination" role="navigation">
       <div class="sba-c-pagination__forwards">
-        <a href="" class="sba-c-pagination__link" aria-label="Next">
+        <a href="#" class="sba-c-pagination__link" aria-label="Next">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end">
+        <a href="#" class="sba-c-pagination__link sba-c-pagination__link--end">
           <svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right"></use>
           </svg>
         </a>
       </div>
       <div class="sba-c-pagination__backwards">
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end" aria-label="First page">
+        <a href="#" class="sba-c-pagination__link sba-c-pagination__link--end" aria-label="First page">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link" aria-label="Back">
+        <a href="#" class="sba-c-pagination__link" aria-label="Back">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-left"></use>
           </svg>
@@ -177,16 +177,16 @@ sub_section: pagination
       </div>
       <div class="sba-c-pagination__numbers">
         <div class="sba-c-pagination__status" aria-label="Currently on page 15 of 100">15 of 100</div>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 1">1</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 1">1</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…</div>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 13">13</a>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 14">14</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 13">13</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 14">14</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--current" aria-current="page" aria-label="Page 15 (current page)">15</div>
 
-        <a href="" class="sba-c-pagination__link" aria-label="Page 16">16</a>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 17">17</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 16">16</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 17">17</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…</div>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 100">100</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 100">100</a>
       </div>
     </nav>
   </div>
@@ -196,24 +196,24 @@ sub_section: pagination
   <div class="sample--white">
     <nav class="sba-c-pagination" role="navigation">
       <div class="sba-c-pagination__forwards">
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-label="Next" aria-disabled="true">
+        <a href="#" class="sba-c-pagination__link sba-c-pagination__link--disabled" aria-label="Next" aria-disabled="true">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-right"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--disabled sba-c-pagination__link--end" aria-disabled="true">
+        <a href="#" class="sba-c-pagination__link sba-c-pagination__link--disabled sba-c-pagination__link--end" aria-disabled="true">
           <svg aria-hidden="true" class="sba-c-icon" aria-label="Last page">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-right"></use>
           </svg>
         </a>
       </div>
       <div class="sba-c-pagination__backwards">
-        <a href="" class="sba-c-pagination__link sba-c-pagination__link--end" aria-label="First page">
+        <a href="#" class="sba-c-pagination__link sba-c-pagination__link--end" aria-label="First page">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-double-left"></use>
           </svg>
         </a>
-        <a href="" class="sba-c-pagination__link" aria-label="Back">
+        <a href="#" class="sba-c-pagination__link" aria-label="Back">
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-left"></use>
           </svg>
@@ -221,13 +221,13 @@ sub_section: pagination
       </div>
       <div class="sba-c-pagination__numbers">
         <div class="sba-c-pagination__status" aria-label="Currently on page 15 of 100">50 of 50</div>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 1">1</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 1">1</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--ellipses" aria-label="Skip pages">…</div>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 45">45</a>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 46">46</a>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 47">47</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 45">45</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 46">46</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 47">47</a>
         <div class="sba-c-pagination__link" aria-label="Page 48">48</div>
-        <a href="" class="sba-c-pagination__link" aria-label="Page 49">49</a>
+        <a href="#" class="sba-c-pagination__link" aria-label="Page 49">49</a>
         <div class="sba-c-pagination__link sba-c-pagination__link--current" aria-current="page" aria-label="Page 50 (current page)">50</div>
       </div>
     </nav>

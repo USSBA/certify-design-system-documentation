@@ -9,6 +9,14 @@ sub_section: spacing
 
   <p>The design system uses multiples of 8px for all spacing values: dimensions, padding, and margins. The goal behind this is to achieve a consistent vertical rhythm and to reduce the cognitive load of fiddling with different spacing options.</p>
 
+  <h2>Sass / CSS</h2>
+  <p>When applying padding and margin to elements and components, rather than entering hard coding, use the <code>$multiple</code> variable, which is equivalent to <code>8px</code>. You can use basic math in Sass to keep the rhythm consistent.</p>
+
+  <pre><code class="language-css">.sba-c-some-component {
+    padding: $multiple;
+    margin-bottom: $multiple * 2;
+}</code></pre>
+
   <h2>Usage</h2>
 
   <p>Use the margin and padding utility classes to change a UI's spacing. These utility classes are named in a way that allows you to use the modifier to calculate the amount of spacing. For example, a margin utility class that adds 16px of spacing would be <code>sba-u-margin--2</code>. We can calculate this by looking at the class's modifier (2) and multiplying that by our multiple: 2 × 8px = 16px</p>
