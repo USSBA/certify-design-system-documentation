@@ -186,10 +186,10 @@
 }
 
 .sg-format-example {
-  display: table;
   border: 1px solid $color-gray-lightest;
   padding: $multiple * 2;
   margin: $multiple * 2 0;
+  overflow-x: scroll;
 }
 
 .sg-format-example__row {
@@ -197,7 +197,18 @@
 
   code {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 16px;
+
+    @include media($width-sm) {
+      font-size: 18px;
+    }
+
+    @include media($width-md) {
+      font-size: 20px;
+    }
+    @include media($width-xl) {
+      font-size: 24px;
+    }
   }
 
   > code,
