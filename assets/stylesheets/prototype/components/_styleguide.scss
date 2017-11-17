@@ -1,11 +1,8 @@
-.sample {
-  background: $color-cool-blue-lightest;
-  padding: 2rem;
-}
-
+.sample,
 .sample--white {
   background-color: white;
-  border: 1px solid $color-gray;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   padding: 2rem;
   margin-bottom: 2rem;
 }
