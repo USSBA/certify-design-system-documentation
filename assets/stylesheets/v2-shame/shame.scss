@@ -1,0 +1,9 @@
+/* This file has styles that address some conflicts
+   that relate to the new grid. These should be
+   removed at the appropriate time. */
+
+.sba-l-container {
+  .section-block {
+    height: auto; // Address activity log getting cut off in new grid
+  }
+}
