@@ -1,0 +1,94 @@
+---
+layout: styleguide
+main_section: components
+sub_section: badges
+---
+
+<article>
+  <h1>Badges </h1>
+
+  <p>Badges hold small amounts of information and to flag new or important content.</p>
+
+  <div class="sample">
+    <span class="sba-c-badge">5</span>
+    <span class="sba-c-badge">Badge label</span>
+    <span class="sba-c-badge ds-u-font-size--base">Badge label</span>
+  </div>
+
+  <pre><code class="language-markup">&lt;span class="sba-c-badge">5</span>
+&lt;span class="sba-c-badge">Badge label&lt;/span>
+&lt;span class="sba-c-badge ds-u-font-size--base">Badge label&lt;/span></code></pre>
+
+  <p><strong>Modifier:</strong> sba-c-badge--info</p>
+  <p>Use for providing neutral information.</p>
+
+  <div class="sample">
+    <span class="sba-c-badge sba-c-badge--info">5</span>
+    <span class="sba-c-badge sba-c-badge--info">Badge label</span>
+    <span class="sba-c-badge sba-c-badge--info ds-u-font-size--base">Badge label</span>
+  </div>
+
+  <pre><code class="language-markup">&lt;span class="sba-c-badge sba-c-badge--info">5</span>
+&lt;span class="sba-c-badge sba-c-badge--info">Badge label&lt;/span>
+&lt;span class="sba-c-badge sba-c-badge--info ds-u-font-size--base">Badge label&lt;/span></code></pre>
+
+  <p><strong>Modifier:</strong> sba-c-badge--info-alt</p>
+  <p>Use for providing neutral information, for use on darker backgrounds.</p>
+
+  <div class="sample">
+    <span class="sba-c-badge sba-c-badge--info-alt">5</span>
+    <span class="sba-c-badge sba-c-badge--info-alt">Badge label</span>
+    <span class="sba-c-badge sba-c-badge--info-alt ds-u-font-size--base">Badge label</span>
+  </div>
+
+  <pre><code class="language-markup">&lt;span class="sba-c-badge sba-c-badge--info-alt">5</span>
+&lt;span class="sba-c-badge sba-c-badge--info-alt">Badge label&lt;/span>
+&lt;span class="sba-c-badge sba-c-badge--info-alt ds-u-font-size--base">Badge label&lt;/span></code></pre>
+
+  <p><strong>Modifier:</strong> sba-c-badge--warn</p>
+  <p>Provide a warning.</p>
+
+  <div class="sample">
+    <span class="sba-c-badge sba-c-badge--warn">5</span>
+    <span class="sba-c-badge sba-c-badge--warn">Badge label</span>
+    <span class="sba-c-badge sba-c-badge--warn ds-u-font-size--base">Badge label</span>
+  </div>
+
+  <pre><code class="language-markup">&lt;span class="sba-c-badge sba-c-badge--warn">5</span>
+  &lt;span class="sba-c-badge sba-c-badge--warn">Badge label&lt;/span>
+  &lt;span class="sba-c-badge sba-c-badge--warn ds-u-font-size--base">Badge label&lt;/span></code></pre>
+
+  <p><strong>Modifier:</strong> sba-c-badge--alert</p>
+  <p>For when an error occurs or to indicate something potentially destructive.</p>
+
+  <div class="sample">
+    <span class="sba-c-badge sba-c-badge--alert">5</span>
+    <span class="sba-c-badge sba-c-badge--alert">Badge label</span>
+    <span class="sba-c-badge sba-c-badge--alert ds-u-font-size--base">Badge label</span>
+  </div>
+
+  <pre><code class="language-markup">&lt;span class="sba-c-badge sba-c-badge--alert">5</span>
+  &lt;span class="sba-c-badge sba-c-badge--alert">Badge label&lt;/span>
+  &lt;span class="sba-c-badge sba-c-badge--alert ds-u-font-size--base">Badge label&lt;/span></code></pre>
+
+  <h2>When to use</h2>
+
+  <ul>
+    <li>To draw attention to new or important content on a page that might otherwise be missed.</li>
+    <li>To filter results with one or more tags.</li>
+    <li>To indicate the number of new or unread items within a container. For example, to indicate the number of unread notifications.</li>
+    <li>To provide context to a heading that might otherwise not be understood upon a glance</li>
+  </ul>
+
+  <h2>When to considers something else</h2>
+
+  <ul>
+    <li>When users are likely to confuse a badge with a button. For example, when the badge appears in the same area of the page as buttons.</li>
+    <li>To call attention to new or updated content, consider changing the background color of the object itself or experiment with changing the font weight.</li>
+    <li>When users already expect content to be updated frequently. For example, on a site dedicated to breaking news. In this case placing the new content at the top may be enough.</li>
+  </ul>
+
+  <h2>Accessibility</h2>
+
+  <p>When badges are used to call out new content that is dynamically loaded onto a page, be sure to use <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a> to alert screen readers of the change.</p>
+</article>
