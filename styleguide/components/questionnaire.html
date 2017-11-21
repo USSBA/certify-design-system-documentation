@@ -5,9 +5,86 @@ sub_section: questionnaire
 ---
 
 <article>
-  <span class="sba-c-badge sba-c-badge--warn">Coming soon</span>
+  <span class="sba-c-badge sba-c-badge--warn">Draft</span>
   <h1>Questionnaire</h1>
 
-  <p>This page will include how to reconstruct the questionnaire to improve usability, provide clarity, and better support accessibility.</p>
+
+
+  <h2>Questionnaire pages</h2>
+  <p>A questionnaire page will have the following items:</p>
+  <ul>
+    <li>Breadcrumbs</li>
+    <li>Page title</li>
+    <li>Lead text</li>
+    <li>Questions, see below (one or multiple)</li>
+    <li>Actions
+      <ul>
+        <li>Primary (ex: Save and continue)</li>
+        <li>Secondary (ex: Cancel, Go back)</li>
+        <li>Tertiary (ex: Skip)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Questions</h2>
+
+  <p>Pertains to components and subcomponents that make up the questionnaire feature. Questionnaire components include the following:</p>
+
+  <ul>
+    <li>
+      <strong>Question</strong>
+      <p>The question is the primary ask of the user. There must be a direct relationship between the question and the response solicited from the user. Questions should be focused and direct, and should not include text such as "for example." If additional context is needed, please use the question support text.</p>
+    </li>
+    <li>
+      <strong>Quesiton support text</strong>
+      <p>Used for additional description or supporting information, such as definitions, example lists, etc., or any important information that the user <em>needs</em> know <em>before</em> providing a response. Quesiton support text will include HTML support for:</p>
+      <ul>
+        <li><code>&lt;p></code></li>
+        <li><code>&lt;ul></code></li>
+        <li><code>&lt;ol></code></li>
+        <li>Links, bold text, italicized text</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Response</strong>
+
+      <p>The response is where the user provides a response to the question being asked. The response options must relate directly to the question being asked. The response will support a broad range of inputs, including:</p>
+      <ul>
+        <li>Radio buttons</li>
+        <li>Check boxes</li>
+        <li>Text input
+          <ul>
+            <li>Text</li>
+            <li>Text area</li>
+            <li>Date</li>
+            <li>Date Range</li>
+            <li>Certify components:
+              <ul>
+                <li>Document uploader</li>
+                <li>Table</li>
+                <li>Percentage text input (coming soon)</li>
+                <li>USD text input (coming soon)</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>Question follow-up</strong>
+
+      <p>Question follow-ups remain hidden and <code>disabled</code> on the page and only appear when the user makes a specific response that triggers it to appear. The follow-up may be text or another question or set of questions. Question follow-ups use the same model as primary questions.</p>
+    </li>
+
+    <li>
+      <strong>Footnotes</strong>
+
+      <p>Think of these as a footer section for a question. It includes links to the CFR and other information that might be useful to the user if the question support text do note convey yada yada.</p>
+    </li>
+  </ul>
+
+
+
+
 
 </article>
