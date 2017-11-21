@@ -29,6 +29,42 @@ sub_section: spinners
     <span class="sba-c-spinner sba-u-color--muted" aria-valuetext="Loading" role="progressbar"></span>
   </div>
 
+  <pre><code class="language-markup">&lt;span class="sba-c-spinner sba-u-color--primary" aria-valuetext="Loading" role="progressbar">&lt;/span>
+&lt;span class="sba-c-spinner sba-u-color--success" aria-valuetext="Loading" role="progressbar">&lt;/span>
+&lt;span class="sba-c-spinner sba-u-color--muted" aria-valuetext="Loading" role="progressbar">&lt;/span></code></pre>
+
+  <h2>Spinners inside of buttons</h2>
+
+  <p>Spinners will also use the <a href="{{ site.baseurl }}/styleguide/utilities/margin.html">margin utility class</a> to provide even spacing.</p>
+
+  <div class="sample">
+    <button class="sba-c-button">
+      <span class="sba-c-spinner sba-c-spinner--small sba-u-margin-right--1" aria-valuetext="Loading" role="progressbar"></span> Loading
+    </button>
+    <button class="sba-c-button sba-c-button--inverse">
+      <span class="sba-c-spinner sba-c-spinner--small sba-c-spinner--inverse sba-u-margin-right--1" aria-valuetext="Loading" role="progressbar"></span> Loading
+    </button>
+    <button class="sba-c-button sba-c-button--outline sba-c-button--big">
+      <span class="sba-c-spinner sba-u-margin-right--1" aria-valuetext="Loading" role="progressbar"></span> Big button
+    </button>
+    <button class="sba-c-button sba-c-button--success sba-c-button--big">
+      <span class="sba-c-spinner sba-u-margin-right--1" aria-valuetext="Loading" role="progressbar"></span> Big green button
+    </button>
+  </div>
+
+  <pre><code class="language-markup">&lt;button class="sba-c-button">
+  &lt;span class="sba-c-spinner sba-c-spinner--small sba-u-margin-right--1" aria-valuetext="Loading" role="progressbar">&lt;/span> Loading
+&lt;/button>
+&lt;button class="sba-c-button sba-c-button--inverse">
+  &lt;span class="sba-c-spinner sba-c-spinner--small sba-c-spinner--inverse sba-u-margin-right--1" aria-valuetext="Loading" role="progressbar">&lt;/span> Loading
+&lt;/button>
+&lt;button class="sba-c-button sba-c-button--outline sba-c-button--big">
+  &lt;span class="sba-c-spinner sba-u-margin-right--1" aria-valuetext="Loading" role="progressbar">&lt;/span> Big button
+&lt;/button>
+&lt;button class="sba-c-button sba-c-button--success sba-c-button--big">
+  &lt;span class="sba-c-spinner sba-u-margin-right--1" aria-valuetext="Loading" role="progressbar">&lt;/span> Big green button
+&lt;/button></code></pre>
+
   <h2>When to use</h2>
 
   <p>To indicate a loading state for quick asynchronous tasks, such as a block of content on the page or after a button that performs a certain type of action has been clicked.</p>

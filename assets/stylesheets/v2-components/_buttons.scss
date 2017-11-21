@@ -78,11 +78,15 @@ Style guide: components.button
 .sba-c-button--transparent,
 .sba-c-button--transparent-inverse {
   border-color: transparent;
+  background-color: transparent;
+  color: $color-primary;
 
   &:focus,
   &:hover,
   &:active {
     border-color: transparent;
+    background-color: transparent;
+    color: $color-primary-darker;
   }
 }
 

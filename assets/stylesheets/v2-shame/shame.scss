@@ -7,3 +7,9 @@
     height: auto; // Address activity log getting cut off in new grid
   }
 }
+
+// Eliminates fixed height and margin that comes from the US Web Design Standards
+.sba-c-button {
+  height: auto;
+  margin: 0;
+}
