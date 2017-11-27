@@ -1,17 +1,15 @@
 .sba-c-question-container {
-  margin: $multiple * 6 0;
-  padding: $multiple * 6 0;
-  border-top: 4px solid $color-gray-lighter;
+  padding: $multiple * 10 0;
+  border-bottom: 4px solid $color-gray-lighter;
 
   &:first-of-type {
     border-top: 0;
-    margin-top: 0;
-    padding-top: 0;
   }
 }
 
 .sba-c-question__primary-text {
   font-size: 2.8rem;
+  margin-top: 0;
 }
 
 .sba-c-question__support-text {
@@ -36,30 +34,11 @@
   }
 }
 
-.sba-c-response__legend {
-  font-size: 2rem;
-  font-weight: $font-bold;
-  margin-bottom: $multiple * 2;
-}
-
-.sba-c-response__list {
-  list-style: none;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-
-  > li {
-
-  }
-}
-
-.sba-c-response__label-details {
+.sba-c-response__option-details {
   color: $color-gray;
   font-style: italic;
   padding-left: 3.5rem;
-  margin-top: -.5rem;
+  margin-top: -.8rem;
 }
 
 .sba-c-question-footnote {
@@ -72,6 +51,12 @@
   > *:last-child {
     margin-bottom: 0;
   }
+}
+
+.sba-c-follow-up {
+  margin-left: 3.5rem;
+  border-left: 4px solid $color-gray-light;
+  padding: $multiple 0 $multiple 3.5rem;
 }
 
 .sba-c-question-footnote__heading {

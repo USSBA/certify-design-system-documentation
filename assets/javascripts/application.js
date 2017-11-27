@@ -21,10 +21,16 @@
   -{% include_relative components/filter-content.js %}
   -{% include_relative components/taskbar.js %}
   -{% include_relative components/urlparam.js %}
-  -{% include_relative components/scale-iframe.js %}
+
+
+  // V2 Design System
+  -{% include_relative v2-components/follow-ups.js %}
 
   // Styleguide only
+  -{% include_relative components/scale-iframe.js %}
   -{% include_relative components/styleguide.js %}
+
+
 
   // Add your JS sripts here
    -{% include_relative init.js %}

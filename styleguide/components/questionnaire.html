@@ -86,7 +86,7 @@ sub_section: questionnaire
     </li>
   </ul>
 
-  <div class="samples">
+  <div class="sample">
     <div class="sba-c-question-container">
       <div class="sba-c-question" id="q1" aria-details="q1_footnote">
         <h3 class="sba-c-question__primary-text">Are you the highest paid owner at your firm?</h3>
@@ -99,108 +99,99 @@ sub_section: questionnaire
         </div>
       </div>
       <div class="sba-c-response">
-        <fieldset>
-          <legend class="sba-c-response__legend">Select your answer</legend>
-          <ul class="sba-c-response__list">
+        <fieldset class="sba-c-fieldset">
+          <legend class="sba-c-legend sba-u-sr-only">Select your answer</legend>
+          <ul class="sba-c-input-list">
             <li>
               <input id="q1_a1" type="radio" name="q1_answers" value="Yes" aria-describedby="q1">
               <label for="q1_a1">Yes</label>
             </li>
             <li>
-              <input id="q1_a2" type="radio" name="q1_answers" value="No" aria-describedby="q1">
+              <input id="q1_a2" type="radio" name="q1_answers" value="No" aria-describedby="q1" data-follow-up="q1_a2_followup" aria-controls="q1_a2_followup" aria-expanded="false">
               <label for="q1_a2">No</label>
-              <p class="sba-c-response__label-details">You will be asked some follow-up questions</p>
+              <p class="sba-c-response__option-details">You will be asked some follow-up questions</p>
+              <div class="sba-c-follow-up" id="q1_a2_followup" hidden>
+                <div class="sba-c-document-prompt">
+                  <p class="sba-c-document-prompt__header">Please add the following document(s):</p>
+                  <ul>
+                    <li><strong>Passport</strong></li>
+                  </ul>
+                  <button class="sba-c-button">
+                    <svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#file"></use>
+                    </svg>Add document(s)
+                  </button>
+                  <em>Optional</em>
+                </div>
+              </div>
             </li>
           </ul>
         </fieldset>
-      </div>
-      <div class="sba-c-question-footnote" id="q1_footnote">
-        <h4 class="sba-c-question-footnote__heading">Details</h4>
-        <p>Examples of non-8(a) work include:</p>
-        <ul>
-          <li>Non-government/commercial contracts and subcontracts</li>
-          <li>Government work outside of an 8(a) award</li>
-          <li>Multiple award schedule contracts not offered through the 8(a) program</li>
-        </ul>
-      </div>
-    </div>
-    <div class="sba-c-question-container">
-      <div class="sba-c-question" id="q1" aria-details="q1_footnote">
-        <h3 class="sba-c-question__primary-text">Are you the highest paid owner at your firm?</h3>
-        <div class="sba-c-question__support-text">
-          <p>For example, you can be one of the following:</p>
-          <ul>
-            <li>An owner</li>
-            <li>Something else</li>
-          </ul>
-        </div>
-      </div>
-      <div class="sba-c-response">
-        <fieldset>
-          <legend class="sba-c-response__legend">Select your answer</legend>
-          <ul class="sba-c-response__list">
-            <li>
-              <input id="q1_a1" type="radio" name="q1_answers" value="Yes" aria-describedby="q1">
-              <label for="q1_a1">Yes</label>
-            </li>
-            <li>
-              <input id="q1_a2" type="radio" name="q1_answers" value="No" aria-describedby="q1">
-              <label for="q1_a2">No</label>
-              <p class="sba-c-response__label-details">You will be asked some follow-up questions</p>
-            </li>
-          </ul>
-        </fieldset>
-      </div>
-      <div class="sba-c-question-footnote" id="q1_footnote">
-        <h4 class="sba-c-question-footnote__heading">Details</h4>
-        <p>Examples of non-8(a) work include:</p>
-        <ul>
-          <li>Non-government/commercial contracts and subcontracts</li>
-          <li>Government work outside of an 8(a) award</li>
-          <li>Multiple award schedule contracts not offered through the 8(a) program</li>
-        </ul>
-      </div>
-    </div>
-    <div class="sba-c-question-container">
-      <div class="sba-c-question" id="q1" aria-details="q1_footnote">
-        <h3 class="sba-c-question__primary-text">Are you the highest paid owner at your firm?</h3>
-        <div class="sba-c-question__support-text">
-          <p>For example, you can be one of the following:</p>
-          <ul>
-            <li>An owner</li>
-            <li>Something else</li>
-          </ul>
-        </div>
-      </div>
-      <div class="sba-c-response">
-        <fieldset>
-          <legend class="sba-u-sr-only">Select your answer</legend>
-          <ul class="sba-c-response__list">
-            <li>
-              <input id="q1_a1" type="radio" name="q1_answers" value="Yes" aria-describedby="q1">
-              <label for="q1_a1">Yes</label>
-            </li>
-            <li>
-              <input id="q1_a2" type="radio" name="q1_answers" value="No" aria-describedby="q1">
-              <label for="q1_a2">No</label>
-              <p class="sba-c-response__label-details">You will be asked some follow-up questions</p>
-            </li>
-          </ul>
-        </fieldset>
-      </div>
-      <div class="sba-c-question-footnote" id="q1_footnote">
-        <h4 class="sba-c-question-footnote__heading">Details</h4>
-        <p>Examples of non-8(a) work include:</p>
-        <ul>
-          <li>Non-government/commercial contracts and subcontracts</li>
-          <li>Government work outside of an 8(a) award</li>
-          <li>Multiple award schedule contracts not offered through the 8(a) program</li>
-        </ul>
-      </div>
-    </div>
 
+      </div>
+      <div class="sba-c-question-footnote" id="q1_footnote">
+        <h4 class="sba-c-question-footnote__heading">Details</h4>
+        <p>Examples of non-8(a) work include:</p>
+        <ul>
+          <li>Non-government/commercial contracts and subcontracts</li>
+          <li>Government work outside of an 8(a) award</li>
+          <li>Multiple award schedule contracts not offered through the 8(a) program</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
+  <pre><code class="language-markup">&lt;div class="sba-c-question-container">
+  &lt;div class="sba-c-question" id="q1" aria-details="q1_footnote">
+    &lt;h3 class="sba-c-question__primary-text">Are you the highest paid owner at your firm?&lt;/h3>
+    &lt;div class="sba-c-question__support-text">
+      &lt;p>For example, you can be one of the following:&lt;/p>
+      &lt;ul>
+        &lt;li>An owner&lt;/li>
+        &lt;li>Something else&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="sba-c-response">
+    &lt;fieldset class="sba-c-fieldset">
+      &lt;legend class="sba-c-legend sba-u-sr-only">Select your answer&lt;/legend>
+      &lt;ul class="sba-c-input-list">
+        &lt;li>
+          &lt;input id="q1_a1" type="radio" name="q1_answers" value="Yes" aria-describedby="q1">
+          &lt;label for="q1_a1">Yes&lt;/label>
+        &lt;/li>
+        &lt;li>
+          &lt;input id="q1_a2" type="radio" name="q1_answers" value="No" aria-describedby="q1" data-follow-up="q1_a2_followup" aria-controls="q1_a2_followup" aria-expanded="false">
+          &lt;label for="q1_a2">No&lt;/label>
+          &lt;p class="sba-c-response__option-details">You will be asked some follow-up questions&lt;/p>
+          &lt;div class="sba-c-follow-up" id="q1_a2_followup" hidden>
+            &lt;div class="sba-c-document-prompt">
+              &lt;p class="sba-c-document-prompt__header">Please add the following document(s):&lt;/p>
+              &lt;ul>
+                &lt;li>&lt;strong>Passport&lt;/strong>&lt;/li>
+              &lt;/ul>
+              &lt;button class="sba-c-button">
+                &lt;svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+                  &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#file">&lt;/use>
+                &lt;/svg>Add document(s)
+              &lt;/button>
+              &lt;em>Optional&lt;/em>
+            &lt;/div>
+          &lt;/div>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/fieldset>
+  &lt;/div>
+  &lt;div class="sba-c-question-footnote" id="q1_footnote">
+    &lt;h4 class="sba-c-question-footnote__heading">Details&lt;/h4>
+    &lt;p>Examples of non-8(a) work include:&lt;/p>
+    &lt;ul>
+      &lt;li>Non-government/commercial contracts and subcontracts&lt;/li>
+      &lt;li>Government work outside of an 8(a) award&lt;/li>
+      &lt;li>Multiple award schedule contracts not offered through the 8(a) program&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
 
 
 
