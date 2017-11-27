@@ -28,28 +28,32 @@ sub_section: questionnaire
 
   <h2>Questions</h2>
 
-  <p>Pertains to components and subcomponents that make up the questionnaire feature. Questionnaire components include the following:</p>
+  <p>A question is a set of components wrapped in a <code>sba-c-question-container</code>.</p>
 
   <ul>
     <li>Badge</li>
     <p>Use the <a href="{{ site.baseurl }}/styleguide/components/badges.html">badges</a> to add flags to questions.</p>
     <li>
       <strong>Question</strong>
-      <p>The question is the primary ask of the user. There must be a direct relationship between the question and the response solicited from the user. Questions should be focused and direct, and should not include text such as "for example." If additional context is needed, please use the question support text.</p>
-    </li>
-    <li>
-      <strong>Quesiton support text</strong>
-      <p>Used for additional description or supporting information, such as definitions, example lists, etc., or any important information that the user <em>needs</em> know <em>before</em> providing a response. Quesiton support text will include HTML support for:</p>
       <ul>
-        <li><code>&lt;p></code></li>
-        <li><code>&lt;ul></code></li>
-        <li><code>&lt;ol></code></li>
-        <li>Links, bold text, italicized text</li>
+        <li>
+          <strong>Question primary text</strong>
+          <p>The question is the primary ask of the user. There must be a direct relationship between the question and the response solicited from the user. Questions should be focused and direct, and should not include text such as "for example."</p>
+        </li>
+        <li>
+          <strong>Question support text</strong>
+          <p>This provides additional context about the nature of a question. Support text can include sample responses, in-depth descriptions, supplemental instructions, definitions, lists, etc., or any important information that the user <em>needs</em> know <em>before</em> providing a response. Quesiton support text will include HTML support for:</p>
+          <ul>
+            <li><code>&lt;p></code></li>
+            <li><code>&lt;ul></code></li>
+            <li><code>&lt;ol></code></li>
+            <li>Links, bold text, italicized text</li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li>
       <strong>Response</strong>
-
       <p>The response is where the user provides a response to the question being asked. The response options must relate directly to the question being asked. The response will support a broad range of inputs, including:</p>
       <ul>
         <li>Radio buttons</li>
@@ -71,19 +75,131 @@ sub_section: questionnaire
           </ul>
         </li>
       </ul>
+      <li>
+        <strong>Follow-ups</strong>
+        <p>Follow-ups remain hidden and <code>disabled</code> on the page and only appear when the user makes a specific response that triggers it to appear. The follow-up may be text or another question or set of questions. Question follow-ups use the same model as primary questions.</p>
+      </li>
     </li>
     <li>
-      <strong>Question follow-up</strong>
-
-      <p>Question follow-ups remain hidden and <code>disabled</code> on the page and only appear when the user makes a specific response that triggers it to appear. The follow-up may be text or another question or set of questions. Question follow-ups use the same model as primary questions.</p>
-    </li>
-
-    <li>
-      <strong>Footnotes</strong>
-
-      <p>Think of these as a footer section for a question. It includes links to the CFR and other information that might be useful to the user if the question support text do note convey yada yada.</p>
+      <strong>Question footnotes</strong>
+      <p>Think of these as a footer, or "details" section for a question. It may include links to the CFR and other information that might be useful to the user, but not the type of information that the user needs to know <em>before</em> determining a response.</p>
     </li>
   </ul>
+
+  <div class="samples">
+    <div class="sba-c-question-container">
+      <div class="sba-c-question" id="q1" aria-details="q1_footnote">
+        <h3 class="sba-c-question__primary-text">Are you the highest paid owner at your firm?</h3>
+        <div class="sba-c-question__support-text">
+          <p>For example, you can be one of the following:</p>
+          <ul>
+            <li>An owner</li>
+            <li>Something else</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sba-c-response">
+        <fieldset>
+          <legend class="sba-c-response__legend">Select your answer</legend>
+          <ul class="sba-c-response__list">
+            <li>
+              <input id="q1_a1" type="radio" name="q1_answers" value="Yes" aria-describedby="q1">
+              <label for="q1_a1">Yes</label>
+            </li>
+            <li>
+              <input id="q1_a2" type="radio" name="q1_answers" value="No" aria-describedby="q1">
+              <label for="q1_a2">No</label>
+              <p class="sba-c-response__label-details">You will be asked some follow-up questions</p>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="sba-c-question-footnote" id="q1_footnote">
+        <h4 class="sba-c-question-footnote__heading">Details</h4>
+        <p>Examples of non-8(a) work include:</p>
+        <ul>
+          <li>Non-government/commercial contracts and subcontracts</li>
+          <li>Government work outside of an 8(a) award</li>
+          <li>Multiple award schedule contracts not offered through the 8(a) program</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sba-c-question-container">
+      <div class="sba-c-question" id="q1" aria-details="q1_footnote">
+        <h3 class="sba-c-question__primary-text">Are you the highest paid owner at your firm?</h3>
+        <div class="sba-c-question__support-text">
+          <p>For example, you can be one of the following:</p>
+          <ul>
+            <li>An owner</li>
+            <li>Something else</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sba-c-response">
+        <fieldset>
+          <legend class="sba-c-response__legend">Select your answer</legend>
+          <ul class="sba-c-response__list">
+            <li>
+              <input id="q1_a1" type="radio" name="q1_answers" value="Yes" aria-describedby="q1">
+              <label for="q1_a1">Yes</label>
+            </li>
+            <li>
+              <input id="q1_a2" type="radio" name="q1_answers" value="No" aria-describedby="q1">
+              <label for="q1_a2">No</label>
+              <p class="sba-c-response__label-details">You will be asked some follow-up questions</p>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="sba-c-question-footnote" id="q1_footnote">
+        <h4 class="sba-c-question-footnote__heading">Details</h4>
+        <p>Examples of non-8(a) work include:</p>
+        <ul>
+          <li>Non-government/commercial contracts and subcontracts</li>
+          <li>Government work outside of an 8(a) award</li>
+          <li>Multiple award schedule contracts not offered through the 8(a) program</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sba-c-question-container">
+      <div class="sba-c-question" id="q1" aria-details="q1_footnote">
+        <h3 class="sba-c-question__primary-text">Are you the highest paid owner at your firm?</h3>
+        <div class="sba-c-question__support-text">
+          <p>For example, you can be one of the following:</p>
+          <ul>
+            <li>An owner</li>
+            <li>Something else</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sba-c-response">
+        <fieldset>
+          <legend class="sba-u-sr-only">Select your answer</legend>
+          <ul class="sba-c-response__list">
+            <li>
+              <input id="q1_a1" type="radio" name="q1_answers" value="Yes" aria-describedby="q1">
+              <label for="q1_a1">Yes</label>
+            </li>
+            <li>
+              <input id="q1_a2" type="radio" name="q1_answers" value="No" aria-describedby="q1">
+              <label for="q1_a2">No</label>
+              <p class="sba-c-response__label-details">You will be asked some follow-up questions</p>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="sba-c-question-footnote" id="q1_footnote">
+        <h4 class="sba-c-question-footnote__heading">Details</h4>
+        <p>Examples of non-8(a) work include:</p>
+        <ul>
+          <li>Non-government/commercial contracts and subcontracts</li>
+          <li>Government work outside of an 8(a) award</li>
+          <li>Multiple award schedule contracts not offered through the 8(a) program</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 
 
 
