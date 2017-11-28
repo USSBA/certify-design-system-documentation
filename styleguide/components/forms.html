@@ -3,3 +3,49 @@ layout: styleguide
 main_section: components
 sub_section: forms
 ---
+
+<article>
+  <h1>Forms</h1>
+
+  <h2 id="adding-documents">Adding Documents</h2>
+
+  <p>Adding documents includes two sepearate components.</p>
+
+  <ul>
+    <li>The <strong>document prompt</strong>, which describes the document to be added and to indicate if adding a document is optional.</li>
+    <li>The <strong>document selector</strong>, which allows the user to upload or attach existing documents</li>
+  </ul>
+
+  <h3 id="document-prompt">Document Prompt</h3>
+  <p>The document prompt has three main features:</p>
+
+  <ol>
+    <li>Text that describes what document(s) the user needs add. This supports basic HTML such as <code>&lt;p></code>, <code>&lt;a></code> <code>&lt;ul></code>, and <code>&lt;ol></code>. Links should open in a new browser tab.</li>
+    <li>A button to launch the document selector</li>
+    <li>An optional line of text to indicate whether an attached document is optional. Only indicate if adding documents is optional. All other cases will be required. There will be no need to indicate that a document is required since that will be the case the majority of the time.</li>
+  </ol>
+
+  <div class="sample">
+    <div class="sba-c-document-prompt">
+      <p class="sba-c-document-prompt__header">Please download and fill out <a href="#" target="_blank">SBA Form 1790</a>, then add as a PDF.</p>
+      <button class="sba-c-button" type="button" aria-controls="doc_selector1" aria-expanded="false">
+        <svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#file"></use>
+        </svg>Add document(s)
+      </button>
+      <em>Optional</em>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-document-prompt">
+  &lt;p class="sba-c-document-prompt__header">Please download and fill out &lt;a href="#" target="_blank">SBA Form 1790&lt;/a>, then add as a PDF.&lt;/p>
+  &lt;button class="sba-c-button" type="button" aria-controls="doc_selector1">
+    &lt;svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#file">&lt;/use>
+    &lt;/svg>Add document(s)
+  &lt;/button>
+  &lt;em>Optional&lt;/em>
+&lt;/div></code></pre>
+
+
+</article>
