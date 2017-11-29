@@ -8,6 +8,11 @@ input[type=number] {
 -moz-appearance: textfield;
 }
 
+.sba-c-form-hint {
+  color: $color-gray;
+  margin: 0;
+}
+
 .sba-c-document-prompt {
   border: 3px solid $color-primary;
   display: table;
