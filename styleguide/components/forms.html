@@ -89,6 +89,140 @@ sub_section: forms
   &lt;/li>
 &lt;/ul></pre></code>
 
+  <h2 id="follow-ups">Follow-ups</h2>
+  <p>Follow-ups are items that are dependent upon selecting a specific answer to another question. Those items may include additional fields, document prompts, tables, or text… or anything that can be placed inside of a <code>div</code>.</p>
+
+  <p>While a follow-up is hidden, it will be also be unavailable to screen readers or any devices for non-visual users. All fields are also <code>disabled</code> to prevent any information from being uploaded to the server.</p>
+
+  <p>In the example below, select "No" to see the follow-up.</p>
+
+  <div class="sample">
+    <fieldset class="sba-c-fieldset">
+      <legend class="sba-c-legend">Please make a selection</legend>
+      <ul class="sba-c-field-list">
+        <li>
+          <input id="q1_a1" type="radio" name="q1_answers" value="Yes">
+          <label for="q1_a1">Yes</label>
+        </li>
+        <li>
+          <input id="q1_a2" type="radio" name="q1_answers" value="No" aria-controls="followup1" data-follow-up="followup1" aria-expanded="false">
+          <label for="q1_a2">No</label>
+          <div class="sba-c-follow-up" id="followup1" hidden>
+            <ul class="sba-c-field-list">
+              <li>
+                <label for="follow_q1">Please explain why</label>
+                <input type="text" id="follow_q1" disabled>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+  </div>
+
+  <pre><code class="language-markup">&lt;fieldset class="sba-c-fieldset">
+  &lt;legend class="sba-c-legend">Please make a selection&lt;/legend>
+  &lt;ul class="sba-c-field-list">
+    &lt;li>
+      &lt;input id="q1_a1" type="radio" name="q1_answers" value="Yes">
+      &lt;label for="q1_a1">Yes&lt;/label>
+    &lt;/li>
+    &lt;li>
+      &lt;input id="q1_a2" type="radio" name="q1_answers" value="No" aria-controls="followup1" data-follow-up="followup1" aria-expanded="false">
+      &lt;label for="q1_a2">No&lt;/label>
+      &lt;div class="sba-c-follow-up" id="followup1" hidden>
+        &lt;ul class="sba-c-field-list">
+          &lt;li>
+            &lt;label for="follow_q1">Please explain why&lt;/label>
+            &lt;input type="text" id="follow_q1" disabled>
+          &lt;/li>
+        &lt;/ul>
+      &lt;/div>
+    &lt;/li>
+  &lt;/ul>
+&lt;/fieldset></pre></code>
+
+  <p>Follow-ups can be used on the following form fields:</p>
+  <ul>
+    <li>Radio buttons</li>
+    <li>Checkboxes</li>
+    <li>Select box <code>options</code></li>
+  </ul>
+
+  <div class="sample">
+    <fieldset class="sba-c-fieldset">
+      <legend class="sba-c-legend sba-u-sr-only">Please make another selection</legend>
+      <label for="select_example" class="sba-u-margin-top--0">Select example</label>
+      <select name="" id="select_example">
+        <option value="">Make a selection</option>
+        <option value="Ok" aria-controls="followup_select" data-follow-up="followup_select" aria-expanded="false">Show follow-up</option>
+      </select>
+    </fieldset>
+    <div class="sba-c-follow-up" id="followup_select" hidden>
+      <ul class="sba-c-field-list">
+        <li>
+          <label for="follow_select_q2">Please explain why</label>
+          <input type="text" id="follow_select_q2" disabled>
+        </li>
+      </ul>
+    </div>
+    <fieldset class="sba-c-fieldset sba-u-margin-top--3">
+      <legend class="sba-c-legend">Please select the last item</legend>
+      <ul class="sba-c-field-list">
+        <li>
+          <input id="check1" type="checkbox" name="checks" value="check1">
+          <label for="check1">No follow-up</label>
+        </li>
+        <li>
+          <input id="check2" type="checkbox" name="checks" value="check2" aria-controls="followup_check" data-follow-up="followup_check" aria-expanded="false">
+          <label for="check2">Show follow-up</label>
+          <div class="sba-c-follow-up" id="followup_check" hidden>
+            <ul class="sba-c-field-list">
+              <li>
+                <label for="follow_check_q2">Please explain why</label>
+                <input type="text" id="follow_check_q2" disabled>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+  </div>
+
+  <p>A Follow-up can appear anywhere in the page, however, because its design nests it to convey relationship, it should be placed as closesly as possible to the field that triggered it. Select "Yes" in the answer below.</p>
+
+  <div class="sample">
+    <fieldset class="sba-c-fieldset">
+      <legend class="sba-c-legend">Please make another selection</legend>
+      <ul class="sba-c-field-list">
+        <li>
+          <input id="q2_a1" type="radio" name="q2_answers" value="Yes" aria-controls="followup2" data-follow-up="followup2" aria-expanded="false">
+          <label for="q2_a1">Yes</label>
+          <div class="sba-c-follow-up" id="followup2" hidden>
+            <ul class="sba-c-field-list">
+              <li>
+                <label for="follow_q2">Please explain why</label>
+                <input type="text" id="follow_q2" disabled>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <input id="q2_a2" type="radio" name="q2_answers" value="No" >
+          <label for="q2_a2">No</label>
+        </li>
+      </ul>
+    </fieldset>
+  </div>
+
+  <h3>Accessibility</h3>
+
+  <ul>
+    <li>
+      If a quesiton has a follow-up that is triggered by a response, for example, selecting a specific radio button, include a reference to the follow-up's <code>id</code> with <code>aria-controls</code> and use <code>aria-expanded</code> to indicate whether or not the follow-up is visible.
+    </li>
+  </ul>
+
 
   <h2 id="adding-documents">Adding Documents</h2>
 
