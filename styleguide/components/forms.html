@@ -7,6 +7,89 @@ sub_section: forms
 <article>
   <h1>Forms</h1>
 
+
+
+  <h2>Inputs</h2>
+  <p>To avoid conflicts with legacy code and improve symantec markup, the Certify design system recommends making the writing forms differently by putting inputs into <code>sba-c-field-list</code>.</p>
+
+  <h3 id="input-ornaments">Input ornaments</h3>
+  <p>Use icons as ornaments to provide context about the type of information requested from the user.</p>
+
+  <div class="sample">
+    <ul class="sba-c-field-list">
+      <li>
+        <label for="input1">Enter dollar amount</label>
+        <div class="sba-c-input-ornament-container">
+          <div class="sba-c-input-ornament sba-c-input-ornament--left">
+            <svg aria-hidden="true" class="sba-c-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>
+            </svg>
+          </div>
+          <input type="text" id="input1" class="sba-c-input--dollar">
+        </div>
+      </li>
+      <li>
+        <label for="input2">Enter percent</label>
+        <div class="sba-c-input-ornament-container">
+          <div class="sba-c-input-ornament sba-c-input-ornament--right">
+            <svg aria-hidden="true" class="sba-c-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>
+            </svg>
+          </div>
+          <input type="number" id="input2" class="sba-u-input-width--percent">
+        </div>
+      </li>
+      <li>
+        <label for="input3">Create a tag</label>
+        <div class="sba-c-input-ornament-container">
+          <div class="sba-c-input-ornament sba-c-input-ornament--left">
+            <svg aria-hidden="true" class="sba-c-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#tag"></use>
+            </svg>
+          </div>
+          <input type="text" id="input3">
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <pre><code class="language-markup">&lt;ul class="sba-c-field-list">
+  &lt;li>
+    &lt;label for="input1">Enter dollar amount&lt;/label>
+    &lt;div class="sba-c-input-ornament-container">
+      &lt;div class="sba-c-input-ornament sba-c-input-ornament--left">
+        &lt;svg aria-hidden="true" class="sba-c-icon">
+          &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign">&lt;/use>
+        &lt;/svg>
+      &lt;/div>
+      &lt;input type="text" id="input1" class="sba-c-input--dollar">
+    &lt;/div>
+  &lt;/li>
+  &lt;li>
+    &lt;label for="input2">Enter percent&lt;/label>
+    &lt;div class="sba-c-input-ornament-container">
+      &lt;div class="sba-c-input-ornament sba-c-input-ornament--right">
+        &lt;svg aria-hidden="true" class="sba-c-icon">
+          &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent">&lt;/use>
+        &lt;/svg>
+      &lt;/div>
+      &lt;input type="number" id="input2" class="sba-u-input-width--percent">
+    &lt;/div>
+  &lt;/li>
+  &lt;li>
+    &lt;label for="input3">Create a tag&lt;/label>
+    &lt;div class="sba-c-input-ornament-container">
+      &lt;div class="sba-c-input-ornament sba-c-input-ornament--left">
+        &lt;svg aria-hidden="true" class="sba-c-icon">
+          &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#tag">&lt;/use>
+        &lt;/svg>
+      &lt;/div>
+      &lt;input type="text" id="input3">
+    &lt;/div>
+  &lt;/li>
+&lt;/ul></pre></code>
+
+
   <h2 id="adding-documents">Adding Documents</h2>
 
   <p>Adding documents includes two sepearate components.</p>
