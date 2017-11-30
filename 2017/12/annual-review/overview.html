@@ -4,11 +4,28 @@ layout: layout--fullpage
 # Page content
 application_name: Annual Review Y1
 page_h1: Application Overview
+local_nav_active: Application
+show_taskbar: true
 
 # Tab Links
+application_link: overview.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+
 
 # Taskbar Links
-show_taskbar: true
+ad_hoc_link: ad-hoc1.html
+change_status_link: change-processing1.html
+recommendation_link: recommendation1.html
+refer_link: refer1.html
+close_case_link: close1.html
+return_link: return1.html
+revisions_link: revisions1.html
+close_case2_link: close1a.html
+assign_link: assign1.html
 
 ---
 <div class="sba-l-sm-col--12 sba-l-md-col--golden-lg sba-l-lg-col--8 sba-u-padding-x--2">
@@ -236,8 +253,184 @@ show_taskbar: true
   </section>
 
   <h2>People involved with the firm</h2>
-
-
+  <section class="card-set card-set--halves">
+    <div id="Mike_Jones" class="card">
+      <div class="card__header">
+        <span class="card__sub-head">Disadvantaged individual</span>
+        <h3 class="card__primary-heading"><a href="section.html?section=Mike%20Jones">Mike Jones</a></h3>
+      </div>
+      <div class="card__content">
+        <table class="quick-details">
+          <tbody>
+            <tr class="larger">
+              <th>Section is with:</th>
+              <td><span class="usa-color-green">SBA</span></td>
+            </tr>
+            <tr>
+              <th>Last update:</th>
+              <td>05/12/17</td>
+            </tr>
+            <tr>
+              <th>Started:</th>
+              <td>05/01/17</td>
+            </tr>
+            <tr>
+              <th>Submitted by:</th>
+              <td>Mike Jones</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="additional_info" class="card__footer hidden">
+        <a href="ad-hoc-index.html">View additions to this section</a><br>
+        <small>The firm has <strong class="usa-color-red">1</strong> item left to complete.</small>
+      </div>
+      <div class="card__bulk-actions" data-filter-status="processing">
+        <div class="task-panel">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
+          <div id="task-panel3" class="task-panel-content">
+            <ul class="task-panel-menu">
+              <li class="task-panel-menu__item">
+                <a href="section-update.html?section=Mike%20Jones" class="task-panel-menu__link">Request revisions to section</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Sally_Jones" class="card">
+      <div class="card__header">
+        <span class="card__sub-head">Spouse of disadvantaged individual</span>
+        <h3 class="card__primary-heading"><a href="section.html?section=Sally%20Jones">Sally Jones</a></h3>
+      </div>
+      <div class="card__content">
+        <table class="quick-details">
+          <tbody>
+            <tr class="larger">
+              <th>Section is with:</th>
+              <td><span class="usa-color-green">SBA</span></td>
+            </tr>
+            <tr>
+              <th>Last update:</th>
+              <td>05/12/17</td>
+            </tr>
+            <tr>
+              <th>Started:</th>
+              <td>05/01/17</td>
+            </tr>
+            <tr>
+              <th>Submitted by:</th>
+              <td>Sally Jones</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="additional_info" class="card__footer hidden">
+        <a href="ad-hoc-index.html">View additions to this section</a><br>
+        <small>The firm has <strong class="usa-color-red">1</strong> item left to complete.</small>
+      </div>
+      <div class="card__bulk-actions" data-filter-status="processing">
+        <div class="task-panel">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
+          <div id="task-panel3" class="task-panel-content">
+            <ul class="task-panel-menu">
+              <li class="task-panel-menu__item">
+                <a href="section-update.html?section=Sally%20Jones" class="task-panel-menu__link">Request revisions to section</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Fred_Burger" class="card">
+      <div class="card__header">
+        <span class="card__sub-head">Disadvantaged individual</span>
+        <h3 class="card__primary-heading"><a href="section.html?section=Fred%20Burger">Fred Burger</a></h3>
+      </div>
+      <div class="card__content">
+        <table class="quick-details">
+          <tbody>
+            <tr class="larger">
+              <th>Section is with:</th>
+              <td><span class="usa-color-green">SBA</span></td>
+            </tr>
+            <tr>
+              <th>Last update:</th>
+              <td>05/12/17</td>
+            </tr>
+            <tr>
+              <th>Started:</th>
+              <td>05/01/17</td>
+            </tr>
+            <tr>
+              <th>Submitted by:</th>
+              <td>Fred Burger</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="additional_info" class="card__footer hidden">
+        <a href="ad-hoc-index.html">View additions to this section</a><br>
+        <small>The firm has <strong class="usa-color-red">1</strong> item left to complete.</small>
+      </div>
+      <div class="card__bulk-actions" data-filter-status="processing">
+        <div class="task-panel">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
+          <div id="task-panel3" class="task-panel-content">
+            <ul class="task-panel-menu">
+              <li class="task-panel-menu__item">
+                <a href="section-update.html?section=Fred%20Burger" class="task-panel-menu__link">Request revisions to section</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Brittany_Lakshire" class="card">
+      <div class="card__header">
+        <span class="card__sub-head">Non-disadvantaged individual</span>
+        <h3 class="card__primary-heading"><a href="section.html?section=Brittany%20Lakshire">Brittany Lakshire</a></h3>
+      </div>
+      <div class="card__content">
+        <table class="quick-details">
+          <tbody>
+            <tr class="larger">
+              <th>Section is with:</th>
+              <td><span class="usa-color-green">SBA</span></td>
+            </tr>
+            <tr>
+              <th>Last update:</th>
+              <td>05/12/17</td>
+            </tr>
+            <tr>
+              <th>Started:</th>
+              <td>05/01/17</td>
+            </tr>
+            <tr>
+              <th>Submitted by:</th>
+              <td>Brittany Lakshire</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="additional_info" class="card__footer hidden">
+        <a href="ad-hoc-index.html">View additions to this section</a><br>
+        <small>The firm has <strong class="usa-color-red">1</strong> item left to complete.</small>
+      </div>
+      <div class="card__bulk-actions" data-filter-status="processing">
+        <div class="task-panel">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
+          <div id="task-panel3" class="task-panel-content">
+            <ul class="task-panel-menu">
+              <li class="task-panel-menu__item">
+                <a href="section-update.html?section=Brittany%20Lakshire" class="task-panel-menu__link">Request revisions to section</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <div class="sba-l-sm-col--12 sba-l-md-col--golden-sm sba-l-lg-col--4 sba-u-padding-x--2 sba-u-lg-padding-left--4">
   <div class="section-block">
