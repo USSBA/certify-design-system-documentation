@@ -19,7 +19,19 @@
   <div class="sba-l-container">
     <div class="sba-l-row">
       <div class="sba-l-col--12 sba-u-padding-x--2">
-        <h1>{{ page.page_h1 }}</h1>
+
+        <div class="certify-page-header">
+          <div class="certify-page-header__primary">
+            <h1>{{ page.page_h1 }}</h1>
+          </div>
+          {% if page.header_button_text %}
+          <div class="certify-page-header__secondary">
+            <a href="#" class="usa-button usa-button-big" id="{% if page.header_button_id %}{{ page.header_button_id }}{% else %}header-button{% endif %}">{{ page.header_button_text }}</a>
+          </div>
+          {% endif %}
+        </div>
+
+        {% if page.lead_text %}<p class="usa-font-lead">{{ page.lead_text }}</p>{% endif %}
       </div>
     </div>
     <div class="sba-l-row">
