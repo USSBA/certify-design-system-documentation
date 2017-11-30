@@ -126,3 +126,24 @@ assign_link: assign1.html
     <input type="submit" value="Go">
   </form>
 </div>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('table').DataTable( {
+      "aaSorting": [],
+      "columns": [
+        null,
+        null,
+        null,
+        null,
+        { "orderable": false }
+      ],
+      "info":     false,
+      "paging":   false,
+      "searching":   false
+    } );
+
+    $("table").removeClass('dataTable');
+  });
+</script>
