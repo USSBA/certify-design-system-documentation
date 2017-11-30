@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    {% include _head.html %}
+  </head>
+  <body class="public mainscreen {% if page.body_class %}
+    {{ page.body_class }}{% endif %}">
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  {% include _analyst_masthead_full.html %}
+
+  <div class="sba-l-container">
+
+    <div class="sba-l-row">
+      <div class="sba-l-col--12 sba-u-padding-x--2">
+        <div class="certify-page-header">
+          <div class="certify-page-header__primary">
+            {% if page.step_text %}<span class="subheading--large">{{ page.step_text }}</span>{% endif %}
+            <h1>{{ page.page_h1}}</h1>
+          </div>
+        </div>
+        {% if page.lead_text %}<p class="usa-font-lead">{{ page.lead_text}}</p>{% endif %}
+      </div>
+    </div>
+
+    <div class="sba-l-row">
+      <div class="sba-l-sm-col--12 sba-l-md-col--golden-lg sba-l-lg-col--8 sba-u-padding-x--2">
+        <form action="#">
+          {{ content }}
+          <div class="actions">
+            <div class="actions__main">
+              <button type="submit">{% if page.cta_text %}{{ page.cta_text }}{% endif %}</button>
+              {% if page.secondary_action_text %}<a href="javascript:window.history.back();">{{ page.secondary_action_text }}</a>{% endif %}
+              <p><em>{% if page.next_action_text %}Next step: {{ page.next_action_text }}{% endif %}</em></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {% include _return_to_top.html %}
+
+  </div>
+
+  {% include _footer.html %}
+
+  {% include widgets/_note.html %}
+
+  </body>
+</html>

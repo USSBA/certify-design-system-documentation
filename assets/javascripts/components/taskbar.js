@@ -8,10 +8,10 @@ $(document).ready(function(){
 
     // This was moved to a setTimeout only becuase it was taking a long time
     // for other things on the page to load.
-    setTimeout(function(){
-      taskbar_height = $taskbar_wrap.height(),
+    //setTimeout(function(){
+      var taskbar_height = $taskbar_wrap.height(),
       placeholder = '<div class="taskbar-placeholder" style="height:'+taskbar_height+'px"></div>';
-    }, 20);
+    //}, 20);
 
     $(window).on('scroll', function () {
       var scrollTop     = $(window).scrollTop(),

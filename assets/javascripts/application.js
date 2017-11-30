@@ -19,9 +19,9 @@
   -{% include_relative components/table-sort.js %}
   -{% include_relative components/task_panel.js %}
   -{% include_relative components/filter-content.js %}
-  -{% include_relative components/taskbar.js %}
-  -{% include_relative components/urlparam.js %}
 
+  -{% include_relative components/urlparam.js %}
+  -{% include_relative components/taskbar.js %}
 
   // V2 Design System
   -{% include_relative v2-components/follow-ups.js %}

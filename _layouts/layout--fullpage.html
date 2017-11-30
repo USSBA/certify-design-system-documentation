@@ -10,7 +10,24 @@
 
   {% include _analyst_masthead_full.html %}
 
-  {{ content }}
+  {% if page.show_taskbar %}
+    <div class="sba-l-taskbar-container">
+      {% include widgets/_taskbar.html %}
+    </div>
+  {% endif %}
+
+  <div class="sba-l-container">
+    <div class="sba-l-row">
+      <div class="sba-l-col--12 sba-u-padding-x--2">
+        <h1>{{ page.page_h1 }}</h1>
+      </div>
+    </div>
+    <div class="sba-l-row">
+      {{ content }}
+    </div>
+  </div>
+
+
 
   {% include _return_to_top.html %}
 
