@@ -146,17 +146,17 @@ Style guide: components.button.disabled
 */
 .sba-c-button:disabled,
 .sba-c-button--disabled {
-  background-color: $color-gray-lighter;
-  border-color: $color-gray-lighter;
-  color: $color-gray-dark;
+  background-color: $color-gray-lightest;
+  border-color: $color-gray-lightest;
+  color: $color-gray-lighter;
   pointer-events: none;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $color-gray-lighter;
-    border-color: $color-gray-lighter;
-    color: $color-gray-dark;
+    background-color: $color-gray-lightest;
+    border-color: $color-gray-lightest;
+    color: $color-gray-lighter;
   }
 }
 
