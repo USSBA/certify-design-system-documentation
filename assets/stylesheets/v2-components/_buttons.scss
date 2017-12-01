@@ -18,7 +18,8 @@ Markup:
 
 Style guide: components.button
 */
-.sba-c-button {
+.sba-c-button,
+.sba-c-button:visited {
   appearance: none;
   background-color: $color-primary;
   border: 1px solid $color-primary;
@@ -58,7 +59,8 @@ Style guide: components.button
   padding: $spacer-half $spacer-1;
 }
 
-.sba-c-button--inverse {
+.sba-c-button--inverse,
+.sba-c-button--inverse:visited {
   background-color: transparent;
   color: $color-primary;
 
@@ -76,7 +78,9 @@ Style guide: components.button
 }
 
 .sba-c-button--transparent,
-.sba-c-button--transparent-inverse {
+.sba-c-button--transparent:visited,
+.sba-c-button--transparent-inverse,
+.sba-c-button--transparent-inverse:visited {
   border-color: transparent;
   background-color: transparent;
   color: $color-primary;
@@ -90,7 +94,8 @@ Style guide: components.button
   }
 }
 
-.sba-c-button--danger {
+.sba-c-button--danger,
+.sba-c-button--danger:visited {
   background-color: $color-error;
   border-color: $color-error;
   color: $color-white;
@@ -108,7 +113,8 @@ Style guide: components.button
   }
 }
 
-.sba-c-button--success {
+.sba-c-button--success,
+.sba-c-button--success:visited {
   background-color: $color-success;
   border-color: $color-success;
   color: $color-white;
