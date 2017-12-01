@@ -145,7 +145,8 @@ Markup:
 Style guide: components.button.disabled
 */
 .sba-c-button:disabled,
-.sba-c-button--disabled {
+.sba-c-button--disabled,
+.sba-c-button--disabled:visited {
   background-color: $color-gray-lightest;
   border-color: $color-gray-lightest;
   color: $color-gray-lighter;
