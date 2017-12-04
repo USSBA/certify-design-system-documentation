@@ -264,5 +264,91 @@ sub_section: forms
   &lt;em>Optional&lt;/em>
 &lt;/div></code></pre>
 
+  <h2>Editable tables</h2>
 
+  <div class="sample">
+    <table class="sba-c-table sba-c-table--editable">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Title</th>
+          <th scope="col">Equity Interest</th>
+          <th scope="col">Reasons for Payment</th>
+          <th scope="col">Total Payments</th>
+          <th scope="col">Actions</th>
+        </tr>
+        <tbody>
+          <tr id="tr1_data">
+            <th id="tr1_field1_text" scope="row" data-table-header="Name">Michael May</th>
+            <td id="tr1_field2_text" data-table-header="Title">Owner</td>
+            <td id="tr1_field3_text" data-table-header="Equity Interest">51%</td>
+            <td id="tr1_field4_text" data-table-header="Reasons for Payment">Bonus</td>
+            <td id="tr1_field5_text" data-table-header="Total Payments">$4,500</td>
+            <td id="tr1_field6_text" data-table-header="Actions">
+              <div class="task-panel">
+                <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">actions</button>
+                <div id="task-panel1" class="task-panel-content">
+                  <ul class="task-panel-menu">
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link" id="tr1_edit">Edit this item</a>
+                    </li>
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link--emergency" id="tr1_delete">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="sba-c-table--editable__fields" id="tr1_fields">
+            <td colspan="6">
+              <fieldset class="sba-c-fieldset">
+                <legend class="sba-c-legend">Edit this info</legend>
+                <ul class="sba-c-field-list">
+                  <li>
+                    <label for="tr1_field1">Name</label>
+                    <input type="text" id="tr1_field1" value="Michael May">
+                  </li>
+                  <li>
+                    <label for="tr1_field2">Title</label>
+                    <input type="text" id="tr1_field2" value="Owner">
+                  </li>
+                  <li>
+                    <label for="tr1_field3">Equity Interest</label>
+                    <div class="sba-c-input-ornament-container">
+                      <div class="sba-c-input-ornament sba-c-input-ornament--right">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>
+                        </svg>
+                      </div>
+                      <input type="number" id="tr1_field3" class="sba-u-input-width--percent" value="51">
+                    </div>
+                  </li>
+                  <li>
+                    <label for="tr1_field4">Reason for Payment</label>
+                    <input type="text" id="tr1_field4" value="Bonus">
+                  </li>
+                  <li>
+                    <label for="tr1_field5">Equity Interest</label>
+                    <div class="sba-c-input-ornament-container">
+                      <div class="sba-c-input-ornament sba-c-input-ornament--left">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>
+                        </svg>
+                      </div>
+                      <input type="text" id="tr1_field5" class="sba-c-input--dollar" value="4,500">
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="sba-c-table--editable__actions">
+                <button class="sba-c-button">OK</button>
+                <a href="#">Cancel</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </thead>
+    </table>
+  </div>
 </article>

@@ -24,6 +24,7 @@
   -{% include_relative components/taskbar.js %}
 
   // V2 Design System
+  -{% include_relative v2-components/editable-tables.js %}
   -{% include_relative v2-components/follow-ups.js %}
 
   // Styleguide only
