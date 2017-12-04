@@ -267,7 +267,7 @@ sub_section: forms
   <h2>Editable tables</h2>
 
   <div class="sample">
-    <table class="sba-c-table sba-c-table--editable">
+    <table class="sba-c-table sba-c-table--editable" id="table1">
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -278,77 +278,147 @@ sub_section: forms
           <th scope="col">Actions</th>
         </tr>
         <tbody>
-          <tr id="tr1_data">
-            <th id="tr1_field1_text" scope="row" data-table-header="Name">Michael May</th>
-            <td id="tr1_field2_text" data-table-header="Title">Owner</td>
-            <td id="tr1_field3_text" data-table-header="Equity Interest">51%</td>
-            <td id="tr1_field4_text" data-table-header="Reasons for Payment">Bonus</td>
-            <td id="tr1_field5_text" data-table-header="Total Payments">$4,500</td>
-            <td id="tr1_field6_text" data-table-header="Actions">
+          <tr id="table1_tr1_data">
+            <th id="table1_tr1_field1_text" scope="row" data-table-header="Name">Michael May</th>
+            <td id="table1_tr1_field2_text" data-table-header="Title">Owner</td>
+            <td id="table1_tr1_field3_text" data-table-header="Equity Interest">51%</td>
+            <td id="table1_tr1_field4_text" data-table-header="Reasons for Payment">Bonus</td>
+            <td id="table1_tr1_field5_text" data-table-header="Total Payments">$4,500</td>
+            <td id="table1_tr1_field6_text" data-table-header="Actions">
               <div class="task-panel">
                 <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">actions</button>
                 <div id="task-panel1" class="task-panel-content">
                   <ul class="task-panel-menu">
                     <li class="task-panel-menu__item">
-                      <a href="#" class="task-panel-menu__link" id="tr1_edit">Edit this item</a>
+                      <a href="#" class="task-panel-menu__link" id="table1_tr1_edit" aria-controls="table1_tr1_fields" aria-expanded="false">Edit this item</a>
                     </li>
                     <li class="task-panel-menu__item">
-                      <a href="#" class="task-panel-menu__link--emergency" id="tr1_delete">Delete</a>
+                      <a href="#" class="task-panel-menu__link--emergency" id="table1_tr1_delete">Delete</a>
                     </li>
                   </ul>
                 </div>
               </div>
             </td>
           </tr>
-          <tr class="sba-c-table--editable__fields" id="tr1_fields">
+          <tr class="sba-c-table--editable__fields" id="table1_tr1_fields">
             <td colspan="6">
               <fieldset class="sba-c-fieldset">
                 <legend class="sba-c-legend">Edit this info</legend>
                 <ul class="sba-c-field-list">
                   <li>
-                    <label for="tr1_field1">Name</label>
-                    <input type="text" id="tr1_field1" value="Michael May">
+                    <label for="table1_tr1_field1">Name</label>
+                    <input type="text" id="table1_tr1_field1" value="Michael May">
                   </li>
                   <li>
-                    <label for="tr1_field2">Title</label>
-                    <input type="text" id="tr1_field2" value="Owner">
+                    <label for="table1_tr1_field2">Title</label>
+                    <input type="text" id="table1_tr1_field2" value="Owner">
                   </li>
                   <li>
-                    <label for="tr1_field3">Equity Interest</label>
+                    <label for="table1_tr1_field3">Equity Interest</label>
                     <div class="sba-c-input-ornament-container">
                       <div class="sba-c-input-ornament sba-c-input-ornament--right">
                         <svg aria-hidden="true" class="sba-c-icon">
                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>
                         </svg>
                       </div>
-                      <input type="number" id="tr1_field3" class="sba-u-input-width--percent" value="51">
+                      <input type="number" id="table1_tr1_field3" class="sba-u-input-width--percent" value="51">
                     </div>
                   </li>
                   <li>
-                    <label for="tr1_field4">Reason for Payment</label>
-                    <input type="text" id="tr1_field4" value="Bonus">
+                    <label for="table1_tr1_field4">Reason for Payment</label>
+                    <input type="text" id="table1_tr1_field4" value="Bonus">
                   </li>
                   <li>
-                    <label for="tr1_field5">Equity Interest</label>
+                    <label for="table1_tr1_field5">Equity Interest</label>
                     <div class="sba-c-input-ornament-container">
                       <div class="sba-c-input-ornament sba-c-input-ornament--left">
                         <svg aria-hidden="true" class="sba-c-icon">
                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>
                         </svg>
                       </div>
-                      <input type="text" id="tr1_field5" class="sba-c-input--dollar" value="4,500">
+                      <input type="text" id="table1_tr1_field5" class="sba-c-input--dollar" value="4,500">
                     </div>
                   </li>
                 </ul>
               </fieldset>
               <div class="sba-c-table--editable__actions">
-                <button class="sba-c-button">OK</button>
-                <a href="#">Cancel</a>
+                <button id="table1_tr1_save" class="sba-c-button">OK</button>
+                <a id="table1_tr1_cancel"  href="#">Cancel</a>
+              </div>
+            </td>
+          </tr>
+          <tr id="table1_tr2_data">
+            <th id="table1_tr2_field1_text" scope="row" data-table-header="Name">Billy Smith</th>
+            <td id="table1_tr2_field2_text" data-table-header="Title">Manager</td>
+            <td id="table1_tr2_field3_text" data-table-header="Equity Interest">32%</td>
+            <td id="table1_tr2_field4_text" data-table-header="Reasons for Payment">Gift</td>
+            <td id="table1_tr2_field5_text" data-table-header="Total Payments">$2,123</td>
+            <td id="table1_tr2_field6_text" data-table-header="Actions">
+              <div class="task-panel">
+                <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel2">actions</button>
+                <div id="task-panel2" class="task-panel-content">
+                  <ul class="task-panel-menu">
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link" id="table1_tr2_edit" aria-controls="table1_tr2_fields" aria-expanded="false">Edit this item</a>
+                    </li>
+                    <li class="task-panel-menu__item">
+                      <a href="#" class="task-panel-menu__link--emergency" id="table1_tr2_delete">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="sba-c-table--editable__fields" id="table1_tr2_fields">
+            <td colspan="6">
+              <fieldset class="sba-c-fieldset">
+                <legend class="sba-c-legend">Info</legend>
+                <ul class="sba-c-field-list">
+                  <li>
+                    <label for="table1_tr2_field1">Name</label>
+                    <input type="text" id="table1_tr2_field1" value="Billy Smith">
+                  </li>
+                  <li>
+                    <label for="table1_tr2_field2">Title</label>
+                    <input type="text" id="table1_tr2_field2" value="Manager">
+                  </li>
+                  <li>
+                    <label for="table1_tr2_field3">Equity Interest</label>
+                    <div class="sba-c-input-ornament-container">
+                      <div class="sba-c-input-ornament sba-c-input-ornament--right">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>
+                        </svg>
+                      </div>
+                      <input type="number" id="table1_tr2_field3" class="sba-u-input-width--percent" value="32">
+                    </div>
+                  </li>
+                  <li>
+                    <label for="table1_tr2_field4">Reason for Payment</label>
+                    <input type="text" id="table1_tr2_field4" value="Gift">
+                  </li>
+                  <li>
+                    <label for="table1_tr2_field5">Equity Interest</label>
+                    <div class="sba-c-input-ornament-container">
+                      <div class="sba-c-input-ornament sba-c-input-ornament--left">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>
+                        </svg>
+                      </div>
+                      <input type="text" id="table1_tr2_field5" class="sba-c-input--dollar" value="2,123">
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="sba-c-table--editable__actions">
+                <button id="table1_tr2_save" class="sba-c-button">OK</button>
+                <a id="table1_tr2_cancel"  href="#">Cancel</a>
               </div>
             </td>
           </tr>
         </tbody>
       </thead>
     </table>
+    <button id="table1_add_item">Add item</button>
   </div>
 </article>

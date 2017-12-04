@@ -143,3 +143,11 @@
     display: table-row;
   }
 }
+
+.sba-c-table--editable__actions {
+  margin: $multiple  0 $multiple * 4;
+
+  button {
+    margin-right: $multiple * 2;
+  }
+}
