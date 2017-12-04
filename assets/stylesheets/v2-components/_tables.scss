@@ -46,12 +46,19 @@
     border: 1px solid $color-gray-light;
     display: block;
     padding: 1.5rem;
+  }
 
+  tbody th,
+  tbody td {
     &:before {
       content: attr(data-table-header)": ";
       display: block;
       font-weight: bold;
     }
+  }
+
+  tfoot td {
+    margin-top: -1px;
   }
 
   @include media($width-sm) {
@@ -71,11 +78,18 @@
       border: 1px solid $color-gray;
       display: table-cell;
       margin-top: 0;
+    }
 
+    tbody th,
+    tbody td {
       &:before {
         content: none;
         display: none;
       }
+    }
+
+    tfoot td {
+      margin-top: 0;
     }
   }
 }
