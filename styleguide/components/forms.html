@@ -264,7 +264,8 @@ sub_section: forms
   &lt;em>Optional&lt;/em>
 &lt;/div></code></pre>
 
-  <h2>Editable tables</h2>
+
+  <h2>Editable tables </h2>
 
   <div class="sample">
     <table class="sba-c-table sba-c-table--editable" id="table1">
@@ -272,12 +273,16 @@ sub_section: forms
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Title</th>
-          <th scope="col">Equity Interest</th>
+          <th scope="col" data-info-type="percent">Equity Interest</th>
           <th scope="col">Reasons for Payment</th>
-          <th scope="col">Total Payments</th>
+          <th scope="col" data-info-type="usd">Total Payments</th>
           <th scope="col">Actions</th>
         </tr>
         <tbody>
+          <tr id="table1_null">
+            <th colspan="6"><em>No items added yet</em></th>
+          </tr>
+          <!--
           <tr id="table1_tr1_data">
             <th id="table1_tr1_field1_text" scope="row" data-table-header="Name">Michael May</th>
             <td id="table1_tr1_field2_text" data-table-header="Title">Owner</td>
@@ -416,6 +421,7 @@ sub_section: forms
               </div>
             </td>
           </tr>
+        -->
         </tbody>
       </thead>
     </table>

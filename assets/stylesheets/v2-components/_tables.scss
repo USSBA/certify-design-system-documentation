@@ -57,6 +57,14 @@
     }
   }
 
+  tbody th[colspan],
+  tbody td[colspan] {
+    &:before {
+      content: none;
+      display: none;
+    }
+  }
+
   tfoot td {
     margin-top: -1px;
   }

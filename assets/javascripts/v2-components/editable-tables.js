@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   var $editable_table = $('.sba-c-table--editable'),
       $edit_button = $editable_table.find('[id$="_edit"]'),
       $delete_button = $editable_table.find('[id$="_delete"]'),
@@ -116,6 +115,14 @@ $(document).ready(function() {
             .replace('_tr','');
           row_id_arr.push(ids);
         });
+
+        // Just in case a null state has not been added
+        if (row_id_arr.length === 0) {
+          row_id_arr.push(0);
+        }
+
+        // Hide the null row
+        $(table).find('tbody tr[id$="_null"]').attr("hidden", "");
 
         // Get next ID number and number of rows needed
         var next_id = Math.max.apply(Math,row_id_arr) + 1,
