@@ -1,0 +1,160 @@
+/*
+Border
+
+Use the border utility classes to control the border size and color properties.
+
+The border utility class sets the `border-color` and `border-size`, with support for the following sizes: `0`, `1px`, or `2px`.
+
+**Format**: `sba-u-border-[x|y|bottom|left|right|top]--[SIZE]`
+
+@hide-markup
+
+Markup:
+<% ['', '-x', '-y', '-bottom', '-left', '-right', '-top'].forEach(name => { -%>
+<% for (var i = 0; i < 3; i++) { %>
+<div class="sba-u-border<%= name %>--<%= i %> sba-u-margin-y--1 sba-u-padding--1">
+  <code class="sba-u-fill--background">sba-u-border<%= name %>--<%= i %></code>
+</div>
+<% } -%>
+<% }) -%>
+
+Style guide: utilities.border
+*/
+@for $i from 1 through 2 {
+  // Example: sba-u-border--1
+  .sba-u-border--#{$i} {
+    // Example: border: 1px !important;
+    border: #{$i}px solid $border-color !important;
+  }
+
+  .sba-u-border-top--#{$i} {
+    border-top: #{$i}px solid $border-color !important;
+  }
+
+  .sba-u-border-right--#{$i} {
+    border-right: #{$i}px solid $border-color !important;
+  }
+
+  .sba-u-border-bottom--#{$i} {
+    border-bottom: #{$i}px solid $border-color !important;
+  }
+
+  .sba-u-border-left--#{$i} {
+    border-left: #{$i}px solid $border-color !important;
+  }
+
+  .sba-u-border-x--#{$i} {
+    border-left: #{$i}px solid $border-color !important;
+    border-right: #{$i}px solid $border-color !important;
+  }
+
+  .sba-u-border-y--#{$i} {
+    border-bottom: #{$i}px solid $border-color !important;
+    border-top: #{$i}px solid $border-color !important;
+  }
+}
+
+.sba-u-border--0 {
+  // Example: border: 1px !important;
+  border: 0 !important;
+}
+
+.sba-u-border-top--0 {
+  border-top: 0 !important;
+}
+
+.sba-u-border-right--0 {
+  border-right: 0 !important;
+}
+
+.sba-u-border-bottom--0 {
+  border-bottom: 0 !important;
+}
+
+.sba-u-border-left--0 {
+  border-left: 0 !important;
+}
+
+.sba-u-border-x--0 {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+.sba-u-border-y--0 {
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+}
+
+/*
+Border color
+
+**Format**: `sba-u-border--[COLOR NAME]`
+
+@hide-markup
+
+Markup:
+<% ['inverse',
+    'error', 'error-light', 'error-lighter',
+    'warn', 'warn-light', 'warn-lighter',
+    'success', 'success-light', 'success-lighter'].forEach(color => { -%>
+<div <% if (color.match(/(lighte|inverse)/)) { -%>class="sba-u-fill--primary-darkest sba-u-padding--1"<% } -%>>
+  <div class="sba-u-border--<%= color %> sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
+    <code class="sba-u-fill--background">sba-u-border--<%= color %></code>
+  </div>
+</div>
+<% }) -%>
+
+Style guide: utilities.border.color
+*/
+.sba-u-border--inverse {
+  border-color: $border-color-inverse !important;
+}
+
+.sba-u-border--error {
+  border-color: $color-error !important;
+}
+
+.sba-u-border--error-light {
+  border-color: $color-error-light !important;
+}
+
+.sba-u-border--error-lighter {
+  border-color: $color-error-lighter !important;
+}
+
+.sba-u-border--warn {
+  border-color: $color-warn !important;
+}
+
+.sba-u-border--warn-light {
+  border-color: $color-warn-light !important;
+}
+
+.sba-u-border--warn-lighter {
+  border-color: $color-warn-lighter !important;
+}
+
+.sba-u-border--success {
+  border-color: $color-success !important;
+}
+
+.sba-u-border--success-light {
+  border-color: $color-success-light !important;
+}
+
+.sba-u-border--success-lighter {
+  border-color: $color-success-lighter !important;
+}
+
+/*
+---
+
+## Theming
+
+The following Sass variables can be overridden to theme the border utility:
+
+- `$border-color`
+- `$border-color-inverse`
+
+Style guide: utilities.border.guidance
+*/

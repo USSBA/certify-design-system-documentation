@@ -26,16 +26,25 @@
 
     <div class="sba-l-row">
       <div class="sba-l-sm-col--12 sba-l-md-col--golden-lg sba-l-lg-col--8 sba-u-padding-x--2">
+        {% if page.is_a_form %}
         <form action="#">
           {{ content }}
           <div class="actions">
             <div class="actions__main">
-              <button type="submit">{% if page.cta_text %}{{ page.cta_text }}{% endif %}</button>
+              <button type="submit" class="sba-c-button">{% if page.cta_text %}{{ page.cta_text }}{% endif %}</button>
               {% if page.secondary_action_text %}<a href="javascript:window.history.back();">{{ page.secondary_action_text }}</a>{% endif %}
               <p><em>{% if page.next_action_text %}Next step: {{ page.next_action_text }}{% endif %}</em></p>
             </div>
           </div>
         </form>
+        {% else %}
+          {{ content }}
+          <div class="actions">
+            <div class="actions__main">
+              <a href="#" class="sba-c-button">{{ page.cta_text }}</a>
+            </div>
+          </div>
+        {% endif %}
       </div>
     </div>
 
