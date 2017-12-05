@@ -1,0 +1,155 @@
+.sba-c-task-panel {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  z-index: 5000;
+
+  &.open {
+    z-index: 8000;
+  }
+}
+
+.sba-c-task-panel-content {
+  @include transition(all .1s ease-in-out);
+  @include transform(translateY(-1rem));
+  background: #fff;
+  border: 1px solid $color-gray-lighter;
+  box-shadow: 0 5px 10px rgba(0,0,0,.15);
+  display: none;
+  opacity: 0;
+  position: absolute;
+  right: -1.3rem;
+  text-align: left;
+  top: 6rem;
+  width: 26rem;
+  z-index:1000000;
+}
+
+.sba-c-task-panel-content.visible {
+  display: block;
+}
+
+.sba-c-task-panel-content.in-transition {
+  @include transform(translateY(0));
+  opacity: 1;
+}
+
+// Pointer
+.sba-c-task-panel-content::before {
+    top: -32px;
+    right: 18px;
+    left: auto;
+}
+.sba-c-task-panel-content::before {
+    border: 16px solid transparent;
+    border-bottom-color: $color-gray-lighter;
+}
+.sba-c-task-panel-content::before,
+.sba-c-task-panel-content::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    pointer-events: none;
+}
+
+.sba-c-task-panel-content::after {
+    top: -28px;
+    right: 20px;
+    left: auto;
+}
+
+.sba-c-task-panel-content::after {
+    border: 14px solid transparent;
+    border-bottom-color: #fff;
+}
+.sba-c-task-panel-content::before,
+.sba-c-task-panel-content::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+}
+
+.sba-c-task-panel-menu {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.sba-c-task-panel-menu__item {
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-task-panel-menu__link,
+.sba-c-task-panel-menu__link--emergency {
+  display: block;
+  padding: .5rem 2rem;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    background-color: $color-cool-blue-lightest;
+  }
+
+  &:visited {
+    color: $color-primary;
+  }
+}
+
+.sba-c-task-panel-menu__link--emergency {
+  color: $color-secondary;
+
+  &:visited {
+    color: $color-secondary;
+  }
+
+  &:hover {
+    background-color: $color-secondary-lightest;
+    color: $color-secondary-darkest;
+  }
+}
+
+// Toggle
+.sba-c-task-panel-toggle {
+  background-image: url('../img/dots-blue.png');
+  background-image: url('../img/dots-blue.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 28px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  height: 44px;
+  position: relative;
+  text-indent: -9999em;
+  width: 44px;
+
+  &:hover {
+    background-color: $color-primary;
+    background-image: url('../img/dots-white.png');
+    background-image: url('../img/dots-white.svg');
+  }
+}
+
+.sba-c-task-panel-toggle--small {
+  background-size: 20px;
+  height: 30px;
+  width: 30px;
+}
+
+.sba-c-task-panel-toggle--small + .sba-c-task-panel-content {
+  right: -2rem;
+  top: 4.75rem;
+}
+
+.sba-c-task-panel-toggle--vertical {
+  @include transform(rotate(90deg));
+}
+
+// Task panel content
+.sba-c-task-panel-content hr {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $color-gray-lighter;
+  border-bottom: none;
+  margin: 0 2rem;
+}

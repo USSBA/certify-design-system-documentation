@@ -10,8 +10,8 @@ $(document).ready(function() {
       var previous_values = [];
       var itemID;
 
-      var $task_panel_toggle = $('.task-panel-toggle'),
-          $task_panel_content = $('.task-panel-content');
+      var $task_panel_toggle = $('.sba-c-task-panel-toggle'),
+          $task_panel_content = $('.sba-c-task-panel-content');
 
       var getItemID = function(e){
         if (typeof e.attr('id') != "undefined") {
@@ -59,7 +59,6 @@ $(document).ready(function() {
       $editable_table.on('click', '[id$="_save"]', function(e){
         e.stopPropagation();
         getItemID($(e.target));
-        console.log(itemID);
         new_values = [];
         $(itemID + "_fields").find('input').each(function(){
           input_id = "#" + $(this).attr('id');
@@ -71,7 +70,6 @@ $(document).ready(function() {
         for (var i = 0; i < new_values.length; i++)
         {
           $(new_values[i][0] + "_text").text(new_values[i][1]);
-          console.log(new_values[i][1]);
         }
 
 
@@ -128,18 +126,20 @@ $(document).ready(function() {
 
         // Add new table rows
         $(table).find('tbody')
-          .append('<tr id="' + data_row_id + '" hidden></tr>')
+          .append('<tr class="is-added" id="' + data_row_id + '" hidden></tr>')
           .append('<tr class="sba-c-table--editable__fields is-visible" id="' + fields_row_id + '"></tr>');
 
         for (var i = 0; i < table_cols; i++) {
-
+          var data_header_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
           if (i == 0) {
-            $("#" + data_row_id).append('<th>d</th>');
+            $("#" + data_row_id).append('<th scope="row" data-table-header="' + data_header_text + '">d</th>');
             //$("#" + fields_row_id).append('<th>d</th>');
           }
+          else if (i == (table_cols - 1)) {
+            $("#" + data_row_id).append('<td data-table-header="' +  data_header_text + '" ><div class="sba-c-task-panel"><button type="button" class="usa-button-unstyled sba-c-task-panel-toggle" aria-expanded="false" aria-controls="sba-c-task-panel'+ i +'">actions</button><div id="sba-c-task-panel'+ i +'" class="sba-c-task-panel-content"><ul class="sba-c-task-panel-menu"><li class="sba-c-task-panel-menu__item"><a href="#" class="sba-c-task-panel-menu__link" id="'+ row_name +'_edit" aria-controls="'+ fields_row_id +'" aria-expanded="false">Edit this item</a></li><li class="sba-c-task-panel-menu__item"><a href="#" class="sba-c-task-panel-menu__link--emergency" id="'+ row_name +'_delete">Delete</a></li></ul></div></div></td>');
+          }
           else {
-            $("#" + data_row_id).append('<td>d</td>');
-            //$("#" + fields_row_id).append('<td>d</td>');
+            $("#" + data_row_id).append('<td data-table-header="' +  data_header_text + '" >d</td>');
           }
         }
 
@@ -150,9 +150,11 @@ $(document).ready(function() {
           var field_id = table_name + '_tr' + next_id + '_field' + (i + 1);
           $("#" + fields_row_id + " td ul").append('<li><label for="' + field_id + '">' + label_text + '</label><input id="' + field_id + '" type="text"></li>');
         }
-
-
-
         return false;
+      });
+
+      $editable_table.on('click', 'tr.is-added .sba-c-task-panel-toggle', function(e){
+        toggler = $(e.target);
+        window.toggle_task_panels(toggler);
       });
 });
