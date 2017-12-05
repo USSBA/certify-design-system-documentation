@@ -9,9 +9,6 @@ $(document).ready(function() {
       var previous_values = [];
       var itemID;
 
-      var $task_panel_toggle = $('.sba-c-task-panel-toggle'),
-          $task_panel_content = $('.sba-c-task-panel-content');
-
       var getItemID = function(e){
         if (typeof e.attr('id') != "undefined") {
           itemID = "#" + e.attr('id').replace('_edit','').replace('_delete','').replace('_save','');
@@ -23,8 +20,8 @@ $(document).ready(function() {
         getItemID($(e.target));
 
         // Hide the task bar
-        $task_panel_toggle.attr("aria-expanded", "false");
-        $task_panel_content.removeClass('visible');
+        $('.sba-c-task-panel-toggle').attr("aria-expanded", "false");
+        $('.sba-c-task-panel-content').removeClass('visible');
 
         // Hide data row
         $(itemID + "_data").attr("hidden", "");
@@ -116,7 +113,6 @@ $(document).ready(function() {
           row_id_arr.push(ids);
         });
 
-        console.log(row_id_arr.length);
         // Just in case a null state has not been added
         if (row_id_arr.length === 0) {
           console.log('empty: ' + row_id_arr);
@@ -125,7 +121,7 @@ $(document).ready(function() {
         }
 
         // Hide the null row
-        $(table).find('tbody tr[id$="_null"]').attr("hidden", "");
+        $(table).find('tbody tr[id$="0_data"]').attr("hidden", "");
 
         // Get next ID number and number of rows needed
         var next_id = Math.max.apply(Math,row_id_arr) + 1,
