@@ -1,14 +1,13 @@
 ---
 layout: layout--workflow
 
-#Page Settings
+# Page Settings
 is_a_form: yes
-body_class: hide-local-nav
 
 # Page Content
-page_h1: Would you like to accept this case for processing?
+page_h1: Add SBA Note
 lead_text: By accepting this application for processing, you are confirming it is substantially complete.
-cta_text: Yes, accept for processing
+cta_text: Create note
 secondary_action_text: Cancel
 
 # Tab Links
@@ -20,12 +19,8 @@ messages_link: ../messages.html
 activity_log_link: ../activity-log.html
 ---
 
-<p>Once you begin processing, the SBA will have 30 days (11/09/2017) to make a recommendation.</p>
 
-
-<input type="hidden" id="status" value="processing">
-<input type="hidden" id="status_text" value="Processing">
-<input type="hidden" id="days_due" value="(90 days)">
+{% include widgets/_note-form--workflows.html %}
 
 <script>
 $(document).ready(function() {
