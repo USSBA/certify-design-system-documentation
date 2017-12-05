@@ -265,7 +265,10 @@ sub_section: forms
 &lt;/div></code></pre>
 
 
-  <h2>Editable tables </h2>
+
+  <h2>Editable tables <span class="sba-c-badge sba-c-badge--warn">Beta</span></h2>
+
+  <p>For the questionnaire, some tables can be edited. [documentation coming soon]</p>
 
   <div class="sample">
     <table class="sba-c-table sba-c-table--editable" id="table1">
@@ -427,4 +430,23 @@ sub_section: forms
     </table>
     <button id="table1_add_item">Add item</button>
   </div>
+
+  <pre><code class="language-markup">&lt;table class="sba-c-table sba-c-table--editable" id="table1">
+  &lt;thead>
+    &lt;tr>
+      &lt;th scope="col">Name&lt;/th>
+      &lt;th scope="col">Title&lt;/th>
+      &lt;th scope="col" data-info-type="percent">Equity Interest&lt;/th>
+      &lt;th scope="col">Reasons for Payment&lt;/th>
+      &lt;th scope="col" data-info-type="usd">Total Payments&lt;/th>
+      &lt;th scope="col">Actions&lt;/th>
+    &lt;/tr>
+    &lt;tbody>
+      &lt;tr id="table1_tr0_data">
+        &lt;th colspan="6">&lt;em>No items added yet&lt;/em>&lt;/th>
+      &lt;/tr>
+    &lt;/tbody>
+  &lt;/thead>
+&lt;/table>
+&lt;button id="table1_add_item">Add item&lt;/button></code></pre>
 </article>
