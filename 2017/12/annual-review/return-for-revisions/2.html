@@ -1,0 +1,42 @@
+---
+layout: layout--workflow
+
+#Page Settings
+is_a_form: yes
+body_class: hide-local-nav
+
+# Page Content
+step_text: Return for Revisions&#58; Step 2 of 3
+page_h1: Send a message to the firm
+lead_text: Write a message to the firm to let them know why you are returning the application. If you are sending a Deficiency Letter, write or paste the content in the box below. It will also be visible to the SBA.
+cta_text: Next
+secondary_action_text: Go back
+next_action_text: Finish Returning This Case
+
+# Tab Links
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+---
+
+{% include widgets/_message-form--workflows.html %}
+
+
+
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("3.html");
+        return false;
+      }
+    });
+  });
+</script>

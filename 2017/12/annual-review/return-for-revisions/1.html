@@ -1,0 +1,64 @@
+---
+layout: layout--workflow
+
+#Page Settings
+is_a_form: yes
+body_class: hide-local-nav
+
+# Page Content
+step_text: Return for Revisions&#58; Step 1 of 3
+page_h1: Return to Firm for Revisions
+lead_text: This application is not sufficiently complete to accept for processing.
+cta_text: Next
+secondary_action_text: Cancel
+next_action_text: Send Message to Firm
+
+# Tab Links
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+---
+
+<input type="hidden" id="master_application_with" value="Firm">
+<fieldset class="questions">
+  <h4>What would you like to do?</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="revisions_small" type="radio" name="revisions" value="Send a Deficiency Letter" required>
+      <label for="revisions_small">Send a Deficiency Letter</label>
+    </li>
+    <li>
+      <input id="revisions_large" type="radio" name="revisions" value="Application is incomplete." required>
+      <label for="revisions_large">Return the entire application to the firm and remove it from my workload</label>
+    </li>
+  </ul>
+</fieldset>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+//status_text
+    $('input:radio').on('change', function(){
+      if ($('input#revisions_large').is(':checked')) {
+        $('form').prepend('<input type="hidden" id="status_text" value="Draft">')
+      }
+      else {
+        $('form').find("input#status_text").remove();
+      }
+    });
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("2.html");
+        return false;
+      }
+    });
+  });
+</script>
