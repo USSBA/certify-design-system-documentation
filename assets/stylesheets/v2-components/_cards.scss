@@ -1,0 +1,67 @@
+$card_padding_sm: $multiple * 2;
+$card_padding_md: $multiple * 3;
+$card_padding_lg: $multiple * 6;
+
+.sba-c-card {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  background: white;
+  border: 1px solid $color-gray-light;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+  margin-bottom: $multiple * 2;
+}
+
+.sba-c-card__header {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include flex-basis(calc(100% - 14rem));
+  @include flex-direction(column);
+  padding: $card_padding_sm;
+  max-width: 100%;
+
+  @include media($width-md) {
+    padding: $card_padding_md;
+    @include align-items(center);
+    @include flex-direction(row);
+
+    > * {
+      @include flex-grow(1);
+      @include flex-basis(0);
+      max-width: 100%;
+    }
+  }
+}
+
+.sba-c-card__primary-heading {
+  margin: 0;
+}
+
+.sba-c-card__actions {
+  @include flex-basis(14rem);
+  padding: $card_padding_sm;
+  text-align: right;
+
+  @include media($width-md) {
+    padding: $card_padding_md;
+  }
+
+  .sba-c-button {
+    width: auto;
+  }
+
+  .sba-c-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.sba-c-card__content {
+  padding: $card_padding_sm;
+  width: 100%;
+
+  @include media($width-md) {
+    padding: $card_padding_md;
+  }
+}

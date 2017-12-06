@@ -27,6 +27,7 @@
   -{% include_relative v2-components/editable-tables.js %}
   -{% include_relative v2-components/follow-ups.js %}
   -{% include_relative v2-components/task-panels.js %}
+  -{% include_relative v2-components/toggle-visibility.js %}
 
   // Styleguide only
   -{% include_relative components/scale-iframe.js %}

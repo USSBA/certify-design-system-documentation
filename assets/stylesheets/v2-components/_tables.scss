@@ -39,11 +39,22 @@
     td:last-child {
       margin-bottom: $multiple * 3;
     }
+
+    tr > *:first-child {
+      border-top: 1px solid $color-gray;
+    }
+
+    tr > *:last-child {
+      border-bottom: 1px solid $color-gray;
+    }
   }
 
   th,
   td {
-    border: 1px solid $color-gray-light;
+    border-left: 1px solid $color-gray;
+    border-right: 1px solid $color-gray;
+    border-bottom: 0;
+    border-top: 0;
     display: block;
     padding: 1.5rem;
   }
@@ -90,6 +101,7 @@
 
     tbody th,
     tbody td {
+
       &:before {
         content: none;
         display: none;

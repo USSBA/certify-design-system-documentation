@@ -1,0 +1,39 @@
+---
+layout: styleguide
+main_section: components
+sub_section: cards
+---
+
+<article>
+  <h1>Cards</h1>
+
+  <p>Cards are cool</p>
+
+  <div class="sample">
+    <div class="sba-c-card">
+      <div class="sba-c-card__header">
+        <h3 class="sba-c-card__primary-heading">
+          Card heading
+        </h3>
+      </div>
+      <div class="sba-c-card__actions">
+        <button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-js-visibility-trigger" aria-controls="card1_content" aria-expanded="false" type="button">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#chevron-down"></use>
+            <span class="sba-u-visibility--screen-reader">Toggle Content</span>
+          </svg>
+        </button>
+        <button class="sba-c-button sba-c-button--small sba-c-button--transparent">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#chevron-down"></use>
+            <span class="sba-u-visibility--screen-reader">Toggle Content</span>
+          </svg>
+        </button>
+
+      </div>
+      <div class="sba-c-card__content" id="card1_content" hidden>
+        <p>I am the content</p>
+      </div>
+    </div>
+  </div>
+</article>
