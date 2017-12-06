@@ -1,0 +1,55 @@
+---
+layout: layout--workflow
+
+#Page Settings
+is_a_form: yes
+body_class: hide-local-nav
+
+# Page Content
+page_h1: Request Revisions for <span data-print="section"></span>
+cta_text: Next
+secondary_action_text: Cancel
+
+# Tab Links
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+---
+
+<fieldset class="questions">
+  <h4>What best describes the revision you are requesting?</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="revisions_small" type="radio" name="revision_type" value="corrections" required>
+      <label for="revisions_small">Corrections to existing questions <small><em>(This option will return the section to the firm)</em></small></label>
+    </li>
+    <li>
+      <input id="revisions_large" type="radio" name="revision_type" value="additional_info" required>
+      <label for="revisions_large">Additional information not included the original questionnaire</label>
+    </li>
+  </ul>
+</fieldset>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        if (revision_type == "corrections") {
+          nextPage("2--return-section.html?section=" + section);
+        }
+        else {
+          nextPage("2--ad-hoc1.html?section=" + section);
+        }
+        return false;
+      }
+    });
+  });
+</script>
