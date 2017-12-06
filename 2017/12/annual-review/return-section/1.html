@@ -43,10 +43,10 @@ activity_log_link: activity-log.html
       else {
         updateStoredData();
         if (revision_type == "corrections") {
-          nextPage("2--return-section.html?section=" + section);
+          nextPage("2--return-section.html?section_returned=" + section);
         }
         else {
-          nextPage("2--ad-hoc1.html?section=" + section);
+          nextPage("2--ad-hoc.html?ad_hoc_section=" + section);
         }
         return false;
       }

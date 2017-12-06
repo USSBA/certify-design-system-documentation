@@ -255,7 +255,7 @@ upload_document_link: analyst-documents.html
 
   <h2>People involved with the firm</h2>
   <section class="card-set card-set--halves">
-    <div id="Mike_Jones" class="card">
+    <div id="MikeJones" class="card">
       <div class="card__header">
         <span class="card__sub-head">Disadvantaged individual</span>
         <h3 class="card__primary-heading"><a href="section.html?section=Mike%20Jones">Mike Jones</a></h3>
@@ -288,8 +288,8 @@ upload_document_link: analyst-documents.html
       </div>
       <div class="card__bulk-actions" data-filter-status="processing">
         <div class="task-panel">
-          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
-          <div id="task-panel3" class="task-panel-content">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel_MikeJones">actions</button>
+          <div id="task-panel_MikeJones" class="task-panel-content">
             <ul class="task-panel-menu">
               <li class="task-panel-menu__item">
                 <a href="return-section/1.html?section=Mike%20Jones" class="task-panel-menu__link">Request revisions to section</a>
@@ -299,7 +299,7 @@ upload_document_link: analyst-documents.html
         </div>
       </div>
     </div>
-    <div id="Sally_Jones" class="card">
+    <div id="SallyJones" class="card">
       <div class="card__header">
         <span class="card__sub-head">Spouse of disadvantaged individual</span>
         <h3 class="card__primary-heading"><a href="section.html?section=Sally%20Jones">Sally Jones</a></h3>
@@ -332,8 +332,8 @@ upload_document_link: analyst-documents.html
       </div>
       <div class="card__bulk-actions" data-filter-status="processing">
         <div class="task-panel">
-          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
-          <div id="task-panel3" class="task-panel-content">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel_SallyJones">actions</button>
+          <div id="task-panel_SallyJones" class="task-panel-content">
             <ul class="task-panel-menu">
               <li class="task-panel-menu__item">
                 <a href="return-section/1.html?section=Sally%20Jones" class="task-panel-menu__link">Request revisions to section</a>
@@ -343,7 +343,7 @@ upload_document_link: analyst-documents.html
         </div>
       </div>
     </div>
-    <div id="Fred_Burger" class="card">
+    <div id="FredBurger" class="card">
       <div class="card__header">
         <span class="card__sub-head">Disadvantaged individual</span>
         <h3 class="card__primary-heading"><a href="section.html?section=Fred%20Burger">Fred Burger</a></h3>
@@ -376,8 +376,8 @@ upload_document_link: analyst-documents.html
       </div>
       <div class="card__bulk-actions" data-filter-status="processing">
         <div class="task-panel">
-          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
-          <div id="task-panel3" class="task-panel-content">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel_FredBurger">actions</button>
+          <div id="task-panel_FredBurger" class="task-panel-content">
             <ul class="task-panel-menu">
               <li class="task-panel-menu__item">
                 <a href="return-section/1.html?section=Fred%20Burger" class="task-panel-menu__link">Request revisions to section</a>
@@ -387,7 +387,7 @@ upload_document_link: analyst-documents.html
         </div>
       </div>
     </div>
-    <div id="Brittany_Lakshire" class="card">
+    <div id="BrittanyLakshire" class="card">
       <div class="card__header">
         <span class="card__sub-head">Non-disadvantaged individual</span>
         <h3 class="card__primary-heading"><a href="section.html?section=Brittany%20Lakshire">Brittany Lakshire</a></h3>
@@ -420,8 +420,8 @@ upload_document_link: analyst-documents.html
       </div>
       <div class="card__bulk-actions" data-filter-status="processing">
         <div class="task-panel">
-          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions</button>
-          <div id="task-panel3" class="task-panel-content">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel_BrittanyLakshire">actions</button>
+          <div id="task-panel_BrittanyLakshire" class="task-panel-content">
             <ul class="task-panel-menu">
               <li class="task-panel-menu__item">
                 <a href="return-section/1.html?section=Brittany%20Lakshire" class="task-panel-menu__link">Request revisions to section</a>
@@ -484,3 +484,25 @@ upload_document_link: analyst-documents.html
     <a href="#">View all activity</a>
   </div>
 </div>
+
+
+<script>
+  $(document).ready(function() {
+
+    var section_returned_trimmed = section_returned.replace(/\s+/g, ''),
+        ad_hoc_section_trimmed = ad_hoc_section.replace(/\s+/g, '');
+
+    if (typeof section_returned != "undefined") {
+      $("#" + section_returned_trimmed).find('.usa-color-green').addClass('usa-color-red-dark').text("Firm");
+    }
+
+    if (typeof ad_hoc_section != "undefined") {
+      $("#" + ad_hoc_section_trimmed).find('.card__footer').removeClass('hidden');
+    }
+
+    if (status != "processing") {
+      $('.processing-only').remove();
+    }
+
+  });
+</script>
