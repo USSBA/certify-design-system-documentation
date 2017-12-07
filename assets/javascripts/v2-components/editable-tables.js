@@ -19,7 +19,7 @@ $(document).ready(function() {
         e.stopPropagation();
         getItemID($(e.target));
 
-        // Hide the task bar
+        // Hide the task bars
         $('.sba-c-task-panel-toggle').attr("aria-expanded", "false");
         $('.sba-c-task-panel-content').removeClass('visible');
 
@@ -37,10 +37,14 @@ $(document).ready(function() {
           previous_values.push([input_id, initial_val]);
         });
 
+        // Disable adding rows while editing a rows
+        $add_button.attr("disabled", "");
+
         // Update data in fields
         return false;
       });
 
+      // Remove table row
       $editable_table.on('click', '[id$="_delete"]', function(e){
         e.stopPropagation();
         getItemID($(e.target));
@@ -75,6 +79,9 @@ $(document).ready(function() {
         // Hide fields
         $(itemID + "_fields").removeClass(visible_class);
 
+        // Re-enabled the the add button
+        $add_button.removeAttr("disabled");
+
         return false;
       });
 
@@ -94,10 +101,18 @@ $(document).ready(function() {
         // Hide fields
         $(itemID + "_fields").removeClass(visible_class);
 
+        // Re-enabled the the add button
+        $add_button.removeAttr("disabled");
+
         return false;
       });
 
+      // Add a table row
       $add_button.on('click', function(){
+
+        // Only allow adding one row at time.
+        $(this).attr("disabled", "");
+
         // Get some variables
         var table = "#" + $(this).attr('id').replace('_add_item',''),
             table_name = $(this).attr('id').replace('_add_item','');
