@@ -30,7 +30,11 @@ activity_log_link: activity-log.html
       <input id="recommendation_early_graduation" type="radio" name="recommendation" value="Early Graduation">
       <label for="recommendation_early_graduation">Early Graduation</label>
     </li>
-    <li>
+    <li data-filter-applicationstatus="Screening">
+      <input id="recommendation_withdrawal" type="radio" name="recommendation" value="Withdrawal" data-follow-up="withdrawal_follow_up" aria-controls="withdrawal_follow_up" aria-collapsed="true">
+      <label for="recommendation_withdrawal">Withdrawal</label>
+    </li>
+    <li data-filter-applicationstatus="Processing">
       <input id="recommendation_withdrawal" type="radio" name="recommendation" value="Withdrawal">
       <label for="recommendation_withdrawal">Withdrawal</label>
     </li>
@@ -44,6 +48,10 @@ activity_log_link: activity-log.html
     </li>
   </ul>
 </fieldset>
+
+<div class="sba-c-follow-up" id="withdrawal_follow_up" hidden>
+  <p><strong>Note:</strong> Before you can proceed with this option, you must <a href="../accept-for-processing/1.html">accept the case for processing</a>.</p>
+</div>
 
 <div class="sba-c-follow-up" id="intent_follow_up" hidden>
   <p><strong>Note:</strong> Before you can proceed with this option, you must <a href="../letter-of-intent/1.html">send the firm a letter of intent</a>.</p>
