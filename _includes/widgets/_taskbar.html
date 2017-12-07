@@ -55,6 +55,13 @@
                 #
               {% endif %}" class="task-panel-menu__link">Return to firm for revisions</a>
             </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.recommendation_link %}
+                {{ page.recommendation_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Make a recommendation</a>
+            </li>
           </ul>
           <hr>
           <ul class="task-panel-menu">
