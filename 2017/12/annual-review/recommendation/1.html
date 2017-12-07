@@ -1,0 +1,75 @@
+---
+layout: layout--workflow
+
+#Page Settings
+is_a_form: yes
+body_class: hide-local-nav
+
+# Page Content
+page_h1: Make a recommendation
+cta_text: Next
+secondary_action_text: Cancel
+
+# Tab Links
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+---
+
+<fieldset class="questions">
+  <h4>What do you recommend for this firm?</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li data-filter-applicationstatus="Processing">
+      <input id="recommendation_approval" type="radio" name="recommendation" value="Approval">
+      <label for="recommendation_approval">Approval</label>
+    </li>
+    <li>
+      <input id="recommendation_early_graduation" type="radio" name="recommendation" value="Early Graduation">
+      <label for="recommendation_early_graduation">Early Graduation</label>
+    </li>
+    <li>
+      <input id="recommendation_withdrawal" type="radio" name="recommendation" value="Withdrawal">
+      <label for="recommendation_withdrawal">Withdrawal</label>
+    </li>
+    <li>
+      <input id="recommendation_suspension" type="radio" name="recommendation" value="Suspension" data-follow-up="intent_follow_up" aria-controls="intent_follow_up" aria-collapsed="true">
+      <label for="recommendation_suspension">Suspension</label>
+    </li>
+    <li>
+      <input id="recommendation_termination" type="radio" name="recommendation" value="Termination" data-follow-up="intent_follow_up2" aria-controls="intent_follow_up2" aria-collapsed="true">
+      <label for="recommendation_termination">Termination</label>
+    </li>
+  </ul>
+</fieldset>
+
+<div class="sba-c-follow-up" id="intent_follow_up" hidden>
+  <p><strong>Note:</strong> Before you can proceed with this option, you must <a href="../letter-of-intent/1.html">send the firm a letter of intent</a>.</p>
+</div>
+
+<div class="sba-c-follow-up" id="intent_follow_up2" hidden>
+  <p><strong>Note:</strong> Before you can proceed with this option, you must <a href="../letter-of-intent/1.html">send the firm a letter of intent</a>.</p>
+</div>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        if (recommendation == "Withdrawal") {
+          //nextPage("2--approval.html");
+        }
+        else {
+          nextPage('docs.html')
+        }
+        return false;
+      }
+    });
+  });
+</script>
