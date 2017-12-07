@@ -11,7 +11,7 @@ $(document).ready(function() {
 
       var getItemID = function(e){
         if (typeof e.attr('id') != "undefined") {
-          itemID = "#" + e.attr('id').replace('_edit','').replace('_delete','').replace('_save','');
+          itemID = "#" + e.attr('id').replace('_edit','').replace('_delete','').replace('_save','').replace('_cancel','');
         }
       }
 
@@ -72,6 +72,7 @@ $(document).ready(function() {
           $(new_values[i][0] + "_text").text(new_values[i][1]);
         }
 
+        getItemID($(e.target));
 
         // Show the data row
         $(itemID + "_data").removeAttr("hidden");
@@ -101,6 +102,14 @@ $(document).ready(function() {
         // Hide fields
         $(itemID + "_fields").removeClass(visible_class);
 
+        // If canceling an ADD fields
+        if ($(itemID + "_data").find('> *:first-child').text().length < 1) {
+          $(e.target).closest('tr').prev('tr').remove();
+          $(e.target).closest('tr').remove();
+          //$(itemID + "_data").remove();
+          //$(itemID + "_fields").remove();
+        }
+
         // Re-enabled the the add button
         $add_button.removeAttr("disabled");
 
@@ -109,6 +118,9 @@ $(document).ready(function() {
 
       // Add a table row
       $add_button.on('click', function(){
+
+        // Get itemID for the cancel button
+        getItemID($(this));
 
         // Only allow adding one row at time.
         $(this).attr("disabled", "");
