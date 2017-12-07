@@ -14,12 +14,18 @@ $(document).ready(function() {
     filterContent = function(target_attribute, filter_key) {
       $('*['+ target_attribute +']').each(function(){
         accepted_values = $.makeArray($(this).attr(target_attribute).split(" "));
-        if (accepted_values.indexOf(eval(filter_key)) >= 0)  {
-          /* Do Nothing */
+        if (typeof window[filter_key] != "undefined") {
+          if (accepted_values.indexOf(eval(filter_key)) >= 0)  {
+            /* Do Nothing */
+          }
+          else {
+            $(this).remove();
+          }
         }
         else {
           $(this).remove();
         }
+
       });
     }
 

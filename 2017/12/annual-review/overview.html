@@ -446,14 +446,13 @@ upload_document_link: analyst-documents.html
 <script>
   $(document).ready(function() {
 
-    var section_returned_trimmed = section_returned.replace(/\s+/g, ''),
-        ad_hoc_section_trimmed = ad_hoc_section.replace(/\s+/g, '');
-
     if (typeof section_returned != "undefined") {
+      var section_returned_trimmed = section_returned.replace(/\s+/g, '');
       $("#" + section_returned_trimmed).find('.usa-color-green').addClass('usa-color-red-dark').text("Firm");
     }
 
     if (typeof ad_hoc_section != "undefined") {
+      var ad_hoc_section_trimmed = ad_hoc_section.replace(/\s+/g, '');
       $("#" + ad_hoc_section_trimmed).find('.card__footer').removeClass('hidden');
     }
 
