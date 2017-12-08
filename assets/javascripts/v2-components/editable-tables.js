@@ -60,7 +60,15 @@ $(document).ready(function() {
         new_values = [];
         $(itemID + "_fields").find('input').each(function(){
           input_id = "#" + $(this).attr('id');
-          initial_val = $(this).val();
+          if ($(this).hasClass('js-usd')) {
+            initial_val = "$" + $(this).val();
+          }
+          else if ($(this).hasClass('js-percent')) {
+            initial_val = $(this).val() + "%";
+          }
+          else {
+            initial_val = $(this).val();
+          }
           new_values.push([input_id, initial_val]);
         });
 
