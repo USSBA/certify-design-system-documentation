@@ -216,12 +216,45 @@ $(document).ready(function() {
 
         $("#" + fields_row_id).append(form_field_wrapper);
         for (var i = 0; i < table_cols - 1; i++) {
-          var label_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
+          var $table_header_th = $(table).find('thead tr th:nth-child(' + (i + 1) + ')');
+          var input_type = $table_header_th.attr("data-info-type");
+          var label_text = $table_header_th.text();
           var field_id = table_name + '_tr' + next_id + '_field' + (i + 1);
+
+          // IMPORTANT: Before creating the gem, we are going to need
+          // to fix the file path of the SVG.
+          switch (input_type) {
+            case "usd":
+              var form_input = '\
+              <div class="sba-c-input-ornament-container">\
+                <div class="sba-c-input-ornament sba-c-input-ornament--left">\
+                  <svg aria-hidden="true" class="sba-c-icon">\
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
+                  </svg>\
+                </div>\
+                <input type="text" id="'+ field_id +'" class="sba-c-input--dollar js-usd">\
+              </div>';
+              break;
+            case "percent":
+              var form_input = '\
+              <div class="sba-c-input-ornament-container">\
+                <div class="sba-c-input-ornament sba-c-input-ornament--right">\
+                  <svg aria-hidden="true" class="sba-c-icon">\
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
+                  </svg>\
+                </div>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--percent js-percent">\
+              </div>';
+              break;
+            default:
+              var form_input = '<input id="' + field_id + '" type="text">';
+          }
+
+
           var form_field = '\
             <li>\
               <label for="' + field_id + '">' + label_text + '</label>\
-              <input id="' + field_id + '" type="text">\
+              '+ form_input + '\
             </li>';
 
           $("#" + fields_row_id + " td ul").append(form_field);
