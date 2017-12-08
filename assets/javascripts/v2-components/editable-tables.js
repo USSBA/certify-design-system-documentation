@@ -222,7 +222,10 @@ $(document).ready(function() {
             </div>\
           </td>';
 
+        // Add the wrapper
         $("#" + fields_row_id).append(form_field_wrapper);
+
+        // Iterate through adding the form inputs
         for (var i = 0; i < table_cols - 1; i++) {
           var $table_header_th = $(table).find('thead tr th:nth-child(' + (i + 1) + ')');
           var input_type = $table_header_th.attr("data-info-type");
@@ -267,6 +270,10 @@ $(document).ready(function() {
 
           $("#" + fields_row_id + " td ul").append(form_field);
         }
+
+        // Focus on the first field
+        $("#" + fields_row_id).find('input:first').focus();
+
         return false;
       });
 
