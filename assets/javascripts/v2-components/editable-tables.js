@@ -204,12 +204,27 @@ $(document).ready(function() {
           }
         }
 
-        // Add the form fieldset
-        $("#" + fields_row_id).append('<td colspan="' + table_cols + '"><ul class="sba-c-field-list"></ul><div class="sba-c-table--editable__actions"><button id="'+ row_name +'_save" class="sba-c-button">OK</button><a id="' + row_name + '_cancel"  href="#">Cancel</a></div>');
+        // Add the form field container
+        var form_field_wrapper = '\
+          <td colspan="' + table_cols + '">\
+            <ul class="sba-c-field-list"></ul>\
+            <div class="sba-c-table--editable__actions">\
+              <button id="'+ row_name +'_save" class="sba-c-button">OK</button>\
+              <a id="' + row_name + '_cancel"  href="#">Cancel</a>\
+            </div>\
+          </td>';
+
+        $("#" + fields_row_id).append(form_field_wrapper);
         for (var i = 0; i < table_cols - 1; i++) {
           var label_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
           var field_id = table_name + '_tr' + next_id + '_field' + (i + 1);
-          $("#" + fields_row_id + " td ul").append('<li><label for="' + field_id + '">' + label_text + '</label><input id="' + field_id + '" type="text"></li>');
+          var form_field = '\
+            <li>\
+              <label for="' + field_id + '">' + label_text + '</label>\
+              <input id="' + field_id + '" type="text">\
+            </li>';
+
+          $("#" + fields_row_id + " td ul").append(form_field);
         }
         return false;
       });
