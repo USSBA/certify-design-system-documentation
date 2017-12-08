@@ -156,13 +156,6 @@
 
   */
 
-.sba-c-table--editable__fields {
-  display: none;
-
-  &.is-visible {
-    display: table-row;
-  }
-}
 
 .sba-c-table--editable__actions {
   margin: $multiple  0 $multiple * 4;

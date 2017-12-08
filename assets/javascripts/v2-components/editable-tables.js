@@ -1,11 +1,6 @@
 $(document).ready(function() {
   var $editable_table = $('.sba-c-table--editable'),
-      $edit_button = $editable_table.find('[id$="_edit"]'),
-      $delete_button = $editable_table.find('[id$="_delete"]'),
-      $cancel_button = $editable_table.find('[id$="_cancel"]'),
-      $save_button = $editable_table.find('[id$="_save"]'),
-      $add_button = $editable_table.next('[id$="_add_item"]'),
-      visible_class = "is-visible";
+      $add_button = $editable_table.next('[id$="_add_item"]');
       var previous_values = [];
       var itemID;
 
@@ -23,11 +18,14 @@ $(document).ready(function() {
         $('.sba-c-task-panel-toggle').attr("aria-expanded", "false");
         $('.sba-c-task-panel-content').removeClass('visible');
 
+        // Disabled task panels
+        $('.sba-c-task-panel-toggle').attr("disabled", "");
+
         // Hide data row
         $(itemID + "_data").attr("hidden", "");
 
         // Show fields
-        $(itemID + "_fields").addClass(visible_class).find('input:first').focus();
+        $(itemID + "_fields").removeAttr("hidden").find('input:first').focus();
 
         // Store data from fieldset
         previous_values = [];
@@ -78,10 +76,14 @@ $(document).ready(function() {
         $(itemID + "_data").removeAttr("hidden");
 
         // Hide fields
-        $(itemID + "_fields").removeClass(visible_class);
+        $(itemID + "_fields").attr("hidden", "");
 
         // Re-enabled the the add button
-        $add_button.removeAttr("disabled");
+        $add_button.removeAttr("disabled", "");
+
+        // Re-enable task panels
+        $('.sba-c-task-panel-toggle').removeAttr("disabled");
+
 
         return false;
       });
@@ -99,8 +101,11 @@ $(document).ready(function() {
         // Show the data row
         $(itemID + "_data").removeAttr("hidden");
 
+        // Re-enable task panels
+        $('.sba-c-task-panel-toggle').removeAttr("disabled");
+
         // Hide fields
-        $(itemID + "_fields").removeClass(visible_class);
+        $(itemID + "_fields").attr("hidden", "");
 
         // If canceling an ADD fields
         if ($(itemID + "_data").find('> *:first-child').text().length < 1) {
@@ -121,6 +126,9 @@ $(document).ready(function() {
 
         // Get itemID for the cancel button
         getItemID($(this));
+
+        // Disabled task panels
+        $('.sba-c-task-panel-toggle').attr("disabled", "");
 
         // Only allow adding one row at time.
         $(this).attr("disabled", "");
@@ -160,7 +168,7 @@ $(document).ready(function() {
         // Add new table rows
         $(table).find('tbody')
           .append('<tr class="is-added" id="' + data_row_id + '" hidden></tr>')
-          .append('<tr class="sba-c-table--editable__fields is-visible" id="' + fields_row_id + '"></tr>');
+          .append('<tr class="sba-c-table--editable__fields" id="' + fields_row_id + '"></tr>');
 
         for (var i = 0; i < table_cols; i++) {
           var data_header_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
