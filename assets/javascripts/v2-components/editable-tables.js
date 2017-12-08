@@ -165,10 +165,11 @@ $(document).ready(function() {
             data_row_id = row_name + '_data',
             fields_row_id = row_name + '_fields';
 
+
         // Add new table rows
         $(table).find('tbody')
           .append('<tr class="is-added" id="' + data_row_id + '" hidden></tr>')
-          .append('<tr class="sba-c-table--editable__fields" id="' + fields_row_id + '"></tr>');
+          .append('<tr id="' + fields_row_id + '"></tr>');
 
         for (var i = 0; i < table_cols; i++) {
           var data_header_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
