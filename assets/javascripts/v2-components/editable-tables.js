@@ -165,23 +165,42 @@ $(document).ready(function() {
             data_row_id = row_name + '_data',
             fields_row_id = row_name + '_fields';
 
-
-        // Add new table rows
+        // Create empty table rows
         $(table).find('tbody')
           .append('<tr class="is-added" id="' + data_row_id + '" hidden></tr>')
           .append('<tr id="' + fields_row_id + '"></tr>');
 
+        // Create the table cells
         for (var i = 0; i < table_cols; i++) {
           var data_header_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
+          var data_row_th = '<th scope="row" id="' + row_name + '_field' + (i + 1) + '_text" data-table-header="' + data_header_text + '"></th>';
+          var data_row_td = '<td id="' + row_name + '_field' + (i + 1) + '_text" data-table-header="' +  data_header_text + '" ></td>'
+          var data_row_actions ='\
+            <td data-table-header="' +  data_header_text + '" >\
+              <div class="sba-c-task-panel">\
+                <button type="button" class="usa-button-unstyled sba-c-task-panel-toggle" aria-expanded="false" aria-controls="'+ fields_row_id +'_panel">actions</button>\
+                <div id="'+ fields_row_id +'_panel" class="sba-c-task-panel-content">\
+                  <ul class="sba-c-task-panel-menu">\
+                    <li class="sba-c-task-panel-menu__item">\
+                      <a href="#" class="sba-c-task-panel-menu__link" id="'+ row_name +'_edit" aria-controls="'+ fields_row_id +'" aria-expanded="false">Edit this item</a>\
+                    </li>\
+                    <li class="sba-c-task-panel-menu__item">\
+                      <a href="#" class="sba-c-task-panel-menu__link--emergency" id="'+ row_name +'_delete">Delete</a>\
+                    </li>\
+                  </ul>\
+                </div>\
+              </div>\
+            </td>';
+
+          // Append the table cells
           if (i == 0) {
-            $("#" + data_row_id).append('<th scope="row" id="' + row_name + '_field' + (i + 1) + '_text" data-table-header="' + data_header_text + '"></th>');
-            //$("#" + fields_row_id).append('<th>d</th>');
+            $("#" + data_row_id).append(data_row_th); // first
           }
           else if (i == (table_cols - 1)) {
-            $("#" + data_row_id).append('<td data-table-header="' +  data_header_text + '" ><div class="sba-c-task-panel"><button type="button" class="usa-button-unstyled sba-c-task-panel-toggle" aria-expanded="false" aria-controls="'+ fields_row_id +'_panel">actions</button><div id="'+ fields_row_id +'_panel" class="sba-c-task-panel-content"><ul class="sba-c-task-panel-menu"><li class="sba-c-task-panel-menu__item"><a href="#" class="sba-c-task-panel-menu__link" id="'+ row_name +'_edit" aria-controls="'+ fields_row_id +'" aria-expanded="false">Edit this item</a></li><li class="sba-c-task-panel-menu__item"><a href="#" class="sba-c-task-panel-menu__link--emergency" id="'+ row_name +'_delete">Delete</a></li></ul></div></div></td>');
+            $("#" + data_row_id).append(data_row_actions); // last
           }
           else {
-            $("#" + data_row_id).append('<td id="' + row_name + '_field' + (i + 1) + '_text" data-table-header="' +  data_header_text + '" ></td>');
+            $("#" + data_row_id).append(data_row_td); // everything in between
           }
         }
 
