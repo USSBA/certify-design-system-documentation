@@ -14,7 +14,7 @@ $(document).ready(function() {
         e.stopPropagation();
         getItemID($(e.target));
 
-        // Hide the task bars
+        // Clase the task panels
         $('.sba-c-task-panel-toggle').attr("aria-expanded", "false");
         $('.sba-c-task-panel-content').removeClass('visible');
 
