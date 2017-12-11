@@ -77,7 +77,6 @@ $(document).ready(function() {
         var summated_cols = $(table).find('.js-sum').length;
         if ((summated_cols > 0) && ($(table).find('tfoot').length == 0)) {
           $(table).find('thead').after('<tfoot></tfoot>');
-
           var table_cols = $(table).find('thead tr th').length;
 
           for (var i = 0; i < table_cols; i++) {
@@ -94,17 +93,25 @@ $(document).ready(function() {
         for (var i = 0; i < new_values.length; i++)
         {
           $(new_values[i][0] + "_text").text(new_values[i][1]);
+          var $table_header = $(table).find('thead tr th:nth-child(' + (i+1) + ').js-sum');
           // See if there are any sum classes
-          if ($(table).find('thead tr th:nth-child(' + (i+1) + ').js-sum').length) {
+          if ($table_header.length) {
             var sum = 0;
             // Get total values
             $(table).find('tbody tr[id$="_data"] td:nth-child(' + (i+1) + ')').each(function(){
               sum += parseInt($(this).text().replace("$", ""));
             });
 
+            if ($table_header.attr("data-info-type") == "usd") {
+              sum = "$" + sum;
+            }
+            else if ($table_header.attr("data-info-type") == "percent") {
+              sum = sum + "%";
+            }
+
             $(table).find('tfoot tr td:nth-child(' + (i+1) + ')')
               .text(sum)
-              .attr("data-table-header", $(table).find('thead tr th:nth-child(' + (i+1) + ')').text());
+              .attr("data-table-header", $table_header.text());
           }
         }
 
