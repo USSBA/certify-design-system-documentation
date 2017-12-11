@@ -160,6 +160,8 @@ $(document).ready(function() {
       // Cancel Button
       $editable_table.on('click', '[id$="_cancel"]', function(e){
         e.stopPropagation();
+        var table = "#" + $(this).closest('table').attr('id');
+
         // Reset the values
         for (var i = 0; i < previous_values.length; i++)
         {
@@ -185,6 +187,11 @@ $(document).ready(function() {
 
         // Re-enabled the the add button
         $add_button.removeAttr("disabled");
+
+        // Restore the null state
+        if ($(table).find('tbody tr').length <= 2) {
+          $(table).find('tbody tr[id$="0_data"]').removeAttr("hidden");
+        }
 
         return false;
       });
@@ -249,7 +256,7 @@ $(document).ready(function() {
                 <div id="'+ fields_row_id +'_panel" class="sba-c-task-panel-content">\
                   <ul class="sba-c-task-panel-menu">\
                     <li class="sba-c-task-panel-menu__item">\
-                      <a href="#" class="sba-c-task-panel-menu__link" id="'+ row_name +'_edit" aria-controls="'+ fields_row_id +'" aria-expanded="false">Edit this item</a>\
+                      <a href="#" class="sba-c-task-panel-menu__link" id="'+ row_name +'_edit" aria-controls="'+ fields_row_id +'">Edit this item</a>\
                     </li>\
                     <li class="sba-c-task-panel-menu__item">\
                       <a href="#" class="sba-c-task-panel-menu__link--emergency" id="'+ row_name +'_delete">Delete</a>\
@@ -276,8 +283,8 @@ $(document).ready(function() {
           <td colspan="' + table_cols + '">\
             <ul class="sba-c-field-list"></ul>\
             <div class="sba-c-table--editable__actions">\
-              <button id="'+ row_name +'_save" class="sba-c-button">OK</button>\
-              <a id="' + row_name + '_cancel"  href="#">Cancel</a>\
+              <button id="'+ row_name +'_save" class="sba-c-button" aria-controls="'+ data_row_id +' ' + fields_row_id+ '">OK</button>\
+              <a id="' + row_name + '_cancel"  href="#" aria-controls="'+ data_row_id +' ' + fields_row_id+ '">Cancel</a>\
             </div>\
           </td>';
 
