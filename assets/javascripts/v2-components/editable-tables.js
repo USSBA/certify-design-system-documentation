@@ -72,10 +72,40 @@ $(document).ready(function() {
           new_values.push([input_id, initial_val]);
         });
 
+        //// See if any columns need to be summarized, then create one if not created already
+        var table = "#" + $(this).closest('table').attr('id');
+        var summated_cols = $(table).find('.js-sum').length;
+        if ((summated_cols > 0) && ($(table).find('tfoot').length == 0)) {
+          $(table).find('thead').after('<tfoot></tfoot>');
+
+          var table_cols = $(table).find('thead tr th').length;
+
+          for (var i = 0; i < table_cols; i++) {
+            if (i == 0) {
+              $(table).find('tfoot').append('<tr><th>Totals</th></tr>');
+            }
+            else {
+              $(table).find('tfoot tr').append('<td></td>');
+            }
+          }
+        }
+
         // Update the values
         for (var i = 0; i < new_values.length; i++)
         {
           $(new_values[i][0] + "_text").text(new_values[i][1]);
+          // See if there are any sum classes
+          if ($(table).find('thead tr th:nth-child(' + (i+1) + ').js-sum').length) {
+            var sum = 0;
+            // Get total values
+            $(table).find('tbody tr[id$="_data"] td:nth-child(' + (i+1) + ')').each(function(){
+              sum += parseInt($(this).text().replace("$", ""));
+            });
+
+            $(table).find('tfoot tr td:nth-child(' + (i+1) + ')')
+              .text(sum)
+              .attr("data-table-header", $(table).find('thead tr th:nth-child(' + (i+1) + ')').text());
+          }
         }
 
         getItemID($(e.target));
@@ -158,7 +188,6 @@ $(document).ready(function() {
 
         // Just in case a null state has not been added
         if (row_id_arr.length === 0) {
-          console.log('empty: ' + row_id_arr);
           row_id_arr = [];
           row_id_arr.push(0);
         }

@@ -60,16 +60,19 @@
   }
 
   tbody th,
-  tbody td {
+  tbody td,
+  tfoot td {
     &:before {
-      content: attr(data-table-header)": ";
+      content: attr(data-table-header)" ";
       display: block;
       font-weight: bold;
     }
   }
 
   tbody th[colspan],
-  tbody td[colspan] {
+  tbody td[colspan],
+  tfoot th[colspan],
+  tfoot td[colspan] {
     &:before {
       content: none;
       display: none;
@@ -100,7 +103,8 @@
     }
 
     tbody th,
-    tbody td {
+    tbody td,
+    tfoot td {
 
       &:before {
         content: none;
