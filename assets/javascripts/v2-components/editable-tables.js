@@ -10,6 +10,34 @@ $(document).ready(function() {
         }
       }
 
+      var calculateTableSummaries = function(table) {
+        var table_cols = table.find('thead tr th').length;
+
+        for (var i = 0; i < table_cols; i++) {
+          var $table_header = table.find('thead tr th:nth-child(' + (i+1) + ').js-sum');
+
+          // See if there are any sum classes
+          if ($table_header.length) {
+            var sum = 0;
+            // Get total values
+            table.find('tbody tr[id$="_data"] td:nth-child(' + (i+1) + ')').each(function(){
+              sum += parseInt($(this).text().replace("$", ""));
+            });
+
+            if ($table_header.attr("data-info-type") == "usd") {
+              sum = "$" + sum;
+            }
+            else if ($table_header.attr("data-info-type") == "percent") {
+              sum = sum + "%";
+            }
+
+            table.find('tfoot tr td:nth-child(' + (i+1) + ')')
+              .text(sum)
+              .attr("data-table-header", $table_header.text());
+          }
+        }
+      }
+
       $editable_table.on('click', '[id$="_edit"]', function(e){
         e.stopPropagation();
         getItemID($(e.target));
@@ -45,11 +73,13 @@ $(document).ready(function() {
       // Remove table row
       $editable_table.on('click', '[id$="_delete"]', function(e){
         e.stopPropagation();
+        var table = "#" + $(this).closest('table').attr('id');
         getItemID($(e.target));
         var confirmed = confirm('Are you sure you want to delete this item?');
         if (confirmed) {
           $(itemID + "_data").remove();
         }
+        calculateTableSummaries($(table));
         return false;
       });
 
@@ -93,27 +123,11 @@ $(document).ready(function() {
         for (var i = 0; i < new_values.length; i++)
         {
           $(new_values[i][0] + "_text").text(new_values[i][1]);
-          var $table_header = $(table).find('thead tr th:nth-child(' + (i+1) + ').js-sum');
-          // See if there are any sum classes
-          if ($table_header.length) {
-            var sum = 0;
-            // Get total values
-            $(table).find('tbody tr[id$="_data"] td:nth-child(' + (i+1) + ')').each(function(){
-              sum += parseInt($(this).text().replace("$", ""));
-            });
 
-            if ($table_header.attr("data-info-type") == "usd") {
-              sum = "$" + sum;
-            }
-            else if ($table_header.attr("data-info-type") == "percent") {
-              sum = sum + "%";
-            }
 
-            $(table).find('tfoot tr td:nth-child(' + (i+1) + ')')
-              .text(sum)
-              .attr("data-table-header", $table_header.text());
-          }
         }
+
+        calculateTableSummaries($(table));
 
         getItemID($(e.target));
 
