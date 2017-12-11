@@ -302,7 +302,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
-                <input type="text" id="'+ field_id +'" class="sba-c-input--dollar js-usd">\
+                <input type="text" id="'+ field_id +'" class="sba-u-input-width--10 js-usd">\
               </div>';
               break;
             case "percent":
@@ -313,7 +313,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--percent js-percent">\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent">\
               </div>';
               break;
             default:
@@ -323,7 +323,7 @@ $(document).ready(function() {
 
           var form_field = '\
             <li>\
-              <label for="' + field_id + '">' + label_text + '</label>\
+              <label for="' + field_id + '" class="sba-c-label">' + label_text + '</label>\
               '+ form_input + '\
             </li>';
 
