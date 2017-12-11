@@ -24,6 +24,10 @@ $(document).ready(function() {
               sum += parseInt($(this).text().replace("$", ""));
             });
 
+            if (isNaN(sum)) {
+              sum = 0;
+            }
+
             if ($table_header.attr("data-info-type") == "usd") {
               sum = "$" + sum;
             }
@@ -111,7 +115,7 @@ $(document).ready(function() {
 
           for (var i = 0; i < table_cols; i++) {
             if (i == 0) {
-              $(table).find('tfoot').append('<tr><th>Totals</th></tr>');
+              $(table).find('tfoot').append('<tr><th scope="row">Totals</th></tr>');
             }
             else {
               $(table).find('tfoot tr').append('<td></td>');
