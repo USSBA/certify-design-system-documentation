@@ -84,6 +84,11 @@ $(document).ready(function() {
           $(itemID + "_data").remove();
         }
         calculateTableSummaries($(table));
+
+        if ($(table).find('tbody tr').length <= 2) {
+          $(table).find('tbody tr[id$="0_data"]').removeAttr("hidden");
+          $(table).find('tfoot').remove();
+        }
         return false;
       });
 
