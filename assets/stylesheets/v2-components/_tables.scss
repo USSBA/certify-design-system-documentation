@@ -169,3 +169,29 @@
     margin-right: $multiple * 2;
   }
 }
+
+.sba-c-table--editable tbody tr {
+  display: block;
+  position: relative;
+
+  td:last-child:before {
+    display: none;
+  }
+
+  .sba-c-task-panel {
+    position: absolute;
+    top: $multiple;
+    right: $multiple;
+  }
+}
+
+@include media($width-sm) {
+  .sba-c-table--editable tbody tr {
+    display: table-row;
+    position: static;
+
+    .sba-c-task-panel {
+      position: static;
+    }
+  }
+}
