@@ -10,6 +10,13 @@ $(document).ready(function() {
         }
       }
 
+      var closeTaskPanels = function(){
+        // Clase the task panels
+        $('.sba-c-task-panel__toggle').attr("aria-expanded", "false");
+        $('.sba-c-task-panel__content').removeClass('visible');
+        $('.sba-c-task-panel__toggle').attr("disabled", "");
+      }
+
       var calculateTableSummaries = function(table) {
         var table_cols = table.find('thead tr th').length;
 
@@ -46,12 +53,8 @@ $(document).ready(function() {
         e.stopPropagation();
         getItemID($(e.target));
 
-        // Clase the task panels
-        $('.sba-c-task-panel__toggle').attr("aria-expanded", "false");
-        $('.sba-c-task-panel__content').removeClass('visible');
-
-        // Disabled task panels
-        $('.sba-c-task-panel__toggle').attr("disabled", "");
+        // Close the task panels
+        closeTaskPanels();
 
         // Hide data row
         $(itemID + "_data").attr("hidden", "");
@@ -200,8 +203,8 @@ $(document).ready(function() {
         // Get itemID for the cancel button
         getItemID($(this));
 
-        // Disabled task panels
-        $('.sba-c-task-panel__toggle').attr("disabled", "");
+        // Close the task panels
+        closeTaskPanels();
 
         // Only allow adding one row at time.
         $(this).attr("disabled", "");
