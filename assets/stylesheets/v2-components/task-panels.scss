@@ -9,7 +9,7 @@
   }
 }
 
-.sba-c-task-panel-content {
+.sba-c-task-panel__content {
   @include transition(all .1s ease-in-out);
   @include transform(translateY(-1rem));
   background: #fff;
@@ -25,63 +25,63 @@
   z-index:1000000;
 }
 
-.sba-c-task-panel-content.visible {
+.sba-c-task-panel__content.visible {
   display: block;
 }
 
-.sba-c-task-panel-content.in-transition {
+.sba-c-task-panel__content.in-transition {
   @include transform(translateY(0));
   opacity: 1;
 }
 
 // Pointer
-.sba-c-task-panel-content::before {
+.sba-c-task-panel__content::before {
     top: -32px;
     right: 18px;
     left: auto;
 }
-.sba-c-task-panel-content::before {
+.sba-c-task-panel__content::before {
     border: 16px solid transparent;
     border-bottom-color: $color-gray-lighter;
 }
-.sba-c-task-panel-content::before,
-.sba-c-task-panel-content::after {
+.sba-c-task-panel__content::before,
+.sba-c-task-panel__content::after {
     position: absolute;
     display: inline-block;
     content: "";
     pointer-events: none;
 }
 
-.sba-c-task-panel-content::after {
+.sba-c-task-panel__content::after {
     top: -28px;
     right: 20px;
     left: auto;
 }
 
-.sba-c-task-panel-content::after {
+.sba-c-task-panel__content::after {
     border: 14px solid transparent;
     border-bottom-color: #fff;
 }
-.sba-c-task-panel-content::before,
-.sba-c-task-panel-content::after {
+.sba-c-task-panel__content::before,
+.sba-c-task-panel__content::after {
     position: absolute;
     display: inline-block;
     content: "";
 }
 
-.sba-c-task-panel-menu {
+.sba-c-task-panel__menu {
   list-style: none;
   margin: 0;
   padding: 1rem 0;
 }
 
-.sba-c-task-panel-menu__item {
+.sba-c-task-panel__menu__item {
   margin: 0;
   padding: 0;
 }
 
-.sba-c-task-panel-menu__link,
-.sba-c-task-panel-menu__link--emergency {
+.sba-c-task-panel__menu__link,
+.sba-c-task-panel__menu__link--emergency {
   display: block;
   padding: .5rem 2rem;
   text-decoration: none;
@@ -96,7 +96,7 @@
   }
 }
 
-.sba-c-task-panel-menu__link--emergency {
+.sba-c-task-panel__menu__link--emergency {
   color: $color-secondary;
 
   &:visited {
@@ -110,7 +110,7 @@
 }
 
 // Toggle
-.sba-c-task-panel-toggle {
+.sba-c-task-panel__toggle {
   background-image: url('../img/dots-blue.png');
   background-image: url('../img/dots-blue.svg');
   background-repeat: no-repeat;
@@ -130,23 +130,23 @@
   }
 }
 
-.sba-c-task-panel-toggle--small {
+.sba-c-task-panel__toggle--small {
   background-size: 20px;
   height: 30px;
   width: 30px;
 }
 
-.sba-c-task-panel-toggle--small + .sba-c-task-panel-content {
+.sba-c-task-panel__toggle--small + .sba-c-task-panel__content {
   right: -2rem;
   top: 4.75rem;
 }
 
-.sba-c-task-panel-toggle--vertical {
+.sba-c-task-panel__toggle--vertical {
   @include transform(rotate(90deg));
 }
 
 // Task panel content
-.sba-c-task-panel-content hr {
+.sba-c-task-panel__content hr {
   border-style: solid;
   border-width: 1px;
   border-color: $color-gray-lighter;

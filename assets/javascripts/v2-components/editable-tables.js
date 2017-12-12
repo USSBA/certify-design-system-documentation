@@ -47,11 +47,11 @@ $(document).ready(function() {
         getItemID($(e.target));
 
         // Clase the task panels
-        $('.sba-c-task-panel-toggle').attr("aria-expanded", "false");
-        $('.sba-c-task-panel-content').removeClass('visible');
+        $('.sba-c-task-panel__toggle').attr("aria-expanded", "false");
+        $('.sba-c-task-panel__content').removeClass('visible');
 
         // Disabled task panels
-        $('.sba-c-task-panel-toggle').attr("disabled", "");
+        $('.sba-c-task-panel__toggle').attr("disabled", "");
 
         // Hide data row
         $(itemID + "_data").attr("hidden", "");
@@ -150,7 +150,7 @@ $(document).ready(function() {
         $add_button.removeAttr("disabled", "");
 
         // Re-enable task panels
-        $('.sba-c-task-panel-toggle').removeAttr("disabled");
+        $('.sba-c-task-panel__toggle').removeAttr("disabled");
 
 
         return false;
@@ -172,7 +172,7 @@ $(document).ready(function() {
         $(itemID + "_data").removeAttr("hidden");
 
         // Re-enable task panels
-        $('.sba-c-task-panel-toggle').removeAttr("disabled");
+        $('.sba-c-task-panel__toggle').removeAttr("disabled");
 
         // Hide fields
         $(itemID + "_fields").attr("hidden", "");
@@ -203,7 +203,7 @@ $(document).ready(function() {
         getItemID($(this));
 
         // Disabled task panels
-        $('.sba-c-task-panel-toggle').attr("disabled", "");
+        $('.sba-c-task-panel__toggle').attr("disabled", "");
 
         // Only allow adding one row at time.
         $(this).attr("disabled", "");
@@ -252,14 +252,14 @@ $(document).ready(function() {
           var data_row_actions ='\
             <td data-table-header="' +  data_header_text + '" >\
               <div class="sba-c-task-panel">\
-                <button type="button" class="usa-button-unstyled sba-c-task-panel-toggle" aria-expanded="false" aria-controls="'+ fields_row_id +'_panel">actions</button>\
-                <div id="'+ fields_row_id +'_panel" class="sba-c-task-panel-content">\
-                  <ul class="sba-c-task-panel-menu">\
-                    <li class="sba-c-task-panel-menu__item">\
-                      <a href="#" class="sba-c-task-panel-menu__link" id="'+ row_name +'_edit" aria-controls="'+ fields_row_id +'">Edit this item</a>\
+                <button type="button" class="usa-button-unstyled sba-c-task-panel__toggle" aria-expanded="false" aria-controls="'+ fields_row_id +'_panel">actions</button>\
+                <div id="'+ fields_row_id +'_panel" class="sba-c-task-panel__content">\
+                  <ul class="sba-c-task-panel__menu">\
+                    <li class="sba-c-task-panel__menu__item">\
+                      <a href="#" class="sba-c-task-panel__menu__link" id="'+ row_name +'_edit" aria-controls="'+ fields_row_id +'">Edit this item</a>\
                     </li>\
-                    <li class="sba-c-task-panel-menu__item">\
-                      <a href="#" class="sba-c-task-panel-menu__link--emergency" id="'+ row_name +'_delete">Delete</a>\
+                    <li class="sba-c-task-panel__menu__item">\
+                      <a href="#" class="sba-c-task-panel__menu__link--emergency" id="'+ row_name +'_delete">Delete</a>\
                     </li>\
                   </ul>\
                 </div>\
@@ -343,7 +343,7 @@ $(document).ready(function() {
         return false;
       });
 
-      $editable_table.on('click', 'tr.is-added .sba-c-task-panel-toggle', function(e){
+      $editable_table.on('click', 'tr.is-added .sba-c-task-panel__toggle', function(e){
         toggler = $(e.target);
         window.toggle_task_panels(toggler);
       });

@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Variables
-  var $task_panel_toggle = $('.sba-c-task-panel-toggle');
+  var $task_panel_toggle = $('.sba-c-task-panel__toggle');
 
 
   // Function for handling task panels
@@ -12,13 +12,13 @@ $(document).ready(function(){
     console.log("thing fired");
     // Determine which task panel we clicked on
     var $target = $("#" + panel.attr("aria-controls")),
-        $task_panel_content = $('.sba-c-task-panel-content'),
+        $task_panel_content = $('.sba-c-task-panel__content'),
         open_class = "open",
         transition_class = "in-transition",
         visible_class = "visible";
 
     // First Let's Close any open task panels
-    $('.sba-c-task-panel-toggle').not(panel)
+    $('.sba-c-task-panel__toggle').not(panel)
       .attr("aria-expanded","false")
       .parent()
         .removeClass(open_class)
