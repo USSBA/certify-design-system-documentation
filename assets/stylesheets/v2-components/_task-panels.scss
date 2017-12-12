@@ -110,28 +110,32 @@
 }
 
 // Toggle
-.sba-c-task-panel__toggle {
-  background-image: url('../img/dots-blue.png');
-  background-image: url('../img/dots-blue.svg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 28px 8px;
-  border-radius: 4px;
-  display: inline-block;
-  height: 44px;
-  position: relative;
-  text-indent: -9999em;
-  width: 44px;
+.sba-c-task-panel .sba-c-task-panel__toggle {
+  padding: 0;
+  width: 36px;
+  height: 36px;
+
+  svg {
+    fill: $color-primary;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+  }
 
   &:hover {
     background-color: $color-primary;
-    background-image: url('../img/dots-white.png');
-    background-image: url('../img/dots-white.svg');
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  &[disabled] svg {
+    fill: $color-gray-lighter;
   }
 }
 
+
 .sba-c-task-panel__toggle--small {
-  background-size: 20px;
   height: 30px;
   width: 30px;
 }

@@ -252,7 +252,12 @@ $(document).ready(function() {
           var data_row_actions ='\
             <td data-table-header="' +  data_header_text + '" >\
               <div class="sba-c-task-panel">\
-                <button type="button" class="usa-button-unstyled sba-c-task-panel__toggle" aria-expanded="false" aria-controls="'+ fields_row_id +'_panel">actions</button>\
+                <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="'+ fields_row_id +'_panel">\
+                  <svg aria-hidden="true" class="sba-c-icon">\
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#ellipsis-h"></use>\
+                  </svg>\
+                  <span class="sba-u-visibility--screen-reader">Toggle menu</span>\
+                </button>\
                 <div id="'+ fields_row_id +'_panel" class="sba-c-task-panel__content">\
                   <ul class="sba-c-task-panel__menu">\
                     <li class="sba-c-task-panel__menu__item">\

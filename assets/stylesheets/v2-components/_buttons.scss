@@ -252,6 +252,7 @@ Style guide: components.button.icons
 .sba-c-button > svg {
   @include inline-icon;
   color: currentColor;
+  pointer-events: none;
 }
 
 
