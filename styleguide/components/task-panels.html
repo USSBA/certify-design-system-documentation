@@ -157,6 +157,25 @@ sub_section: taskpanels
     </div>
   </div>
 
+  <pre><code class="language-markup">&lt;div class="sba-c-task-panel">
+  &lt;button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel3">
+    &lt;svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#ellipsis-v">&lt;/use>
+    &lt;/svg>
+    &lt;span class="sba-u-visibility--screen-reader">Toggle menu&lt;/span>
+  &lt;/button>
+  &lt;div id="panel3" class="sba-c-task-panel__content">
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
+
   <h4>Smaller buttons</h4>
   <p>Buttons can be made smaller to conserve space, such as when the task panel is used in cards and tables. This is done by adding a class name of <code>sba-c-task-panel__toggle--small</code> to the toggle</p>
 </article>
