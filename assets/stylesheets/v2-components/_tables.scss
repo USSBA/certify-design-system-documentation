@@ -199,7 +199,9 @@
     position: static;
 
     .sba-c-task-panel {
-      position: static;
+      position: relative;
+      top: auto;
+      right: auto;
     }
   }
 }
