@@ -175,6 +175,11 @@
 
   button {
     margin-right: $multiple * 2;
+    margin-bottom: $multiple * 2;
+
+    @include media($width-sm) {
+      margin-bottom: 0;
+    }
   }
 }
 
