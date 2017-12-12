@@ -9,7 +9,6 @@ $(document).ready(function(){
   });
 
   window.toggle_task_panels = function(panel){
-    console.log("thing fired");
     // Determine which task panel we clicked on
     var $target = $("#" + panel.attr("aria-controls")),
         $task_panel_content = $('.sba-c-task-panel__content'),

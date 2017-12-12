@@ -3,7 +3,6 @@ $(document).ready(function() {
 
   $trigger.on('click', function(){
     var target = "#" + $(this).attr('aria-controls');
-    console.log(target);
     if ($(this).attr("aria-expanded") === "false" ) {
       $(this).attr("aria-expanded", "true").css('transform', 'rotate(180deg)');
       $(target).removeAttr("hidden");

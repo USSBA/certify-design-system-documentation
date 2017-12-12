@@ -181,8 +181,6 @@ $(document).ready(function() {
         if ($(itemID + "_data").find('> *:first-child').text().length < 1) {
           $(e.target).closest('tr').prev('tr').remove();
           $(e.target).closest('tr').remove();
-          //$(itemID + "_data").remove();
-          //$(itemID + "_fields").remove();
         }
 
         // Re-enabled the the add button
