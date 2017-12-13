@@ -48,20 +48,6 @@
                 #
               {% endif %}" class="task-panel-menu__link">Send deficiency letter</a>
             </li>
-            <li class="task-panel-menu__item">
-              <a href="{% if page.letter_of_intent_link %}
-                {{ page.letter_of_intent_link }}
-              {% else %}
-                #
-              {% endif %}" class="task-panel-menu__link">Send letter of intent</a>
-            </li>
-            <li class="task-panel-menu__item">
-              <a href="{% if page.recommendation_link %}
-                {{ page.recommendation_link }}
-              {% else %}
-                #
-              {% endif %}" class="task-panel-menu__link">Make a recommendation</a>
-            </li>
           </ul>
           <hr>
           <ul class="task-panel-menu">
@@ -88,6 +74,13 @@
               {% else %}
                 #
               {% endif %}" class="task-panel-menu__link"><strong>Make a recommendation</strong></a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.letter_of_intent_link %}
+                {{ page.letter_of_intent_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Send letter of intent</a>
             </li>
             <li class="task-panel-menu__item">
               <a href="{% if page.assign_link %}
