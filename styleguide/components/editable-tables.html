@@ -17,7 +17,7 @@ sub_section: editable_table
           <th scope="col">Name</th>
           <th scope="col">Title</th>
           <th scope="col" class="js-sum" data-info-type="percent">Equity Interest</th>
-          <th scope="col">Reasons for Payment</th>
+          <th scope="col" data-hint-text="This is optional">Reasons for Payment</th>
           <th scope="col" class="js-sum" data-info-type="usd">Total Payments</th>
           <th scope="col">Actions</th>
         </tr>
@@ -63,7 +63,7 @@ sub_section: editable_table
       &lt;th scope="col">Name&lt;/th>
       &lt;th scope="col">Title&lt;/th>
       &lt;th scope="col" class="js-sum" data-info-type="percent">Equity Interest&lt;/th>
-      &lt;th scope="col">Reasons for Payment&lt;/th>
+      &lt;th scope="col" data-hint-text="This is optional">Reasons for Payment&lt;/th>
       &lt;th scope="col" class="js-sum" data-info-type="usd">Total Payments&lt;/th>
       &lt;th scope="col">Actions&lt;/th>
     &lt;/tr>
@@ -95,6 +95,9 @@ sub_section: editable_table
     <li>To get a text field to appear as $USD, add the attribute <code>data-info-type="usd"</code> to the corresponding <code>thead th</code>.</li>
     <li>To get a text field to appear as %, add the attribute <code>data-info-type="percent"</code> to the corresponding <code>thead th</code>.</li>
   </ul>
+
+  <h4>Hint text</h4>
+  <p>To place hint text between the form label and the input, write it the value of a <code>data-hint-text</code> data attribute on the corresponding column‘s <code>thead th</code>. Data hints are optional, but can provide necessary context.</p>
 
   <h4>Summating columns</h4>
   <p>Table columns can be summated by adding a class name of <code>js-sum</code> to the table column you would like to calculate. If an instance of <code>js-sum</code> is present, a table footer is automatically created after the first item is added after first row is created.</p>
