@@ -26,21 +26,14 @@ $alert-bar-size: $spacer-1;
 $alert-icon-size: $spacer-5;
 
 .sba-c-alert {
+  @include display(flex);
   background-color: $color-primary-alt-lightest;
-  background-image: url('#{$image-path}/info.svg');
-  background-position: $alert-padding $alert-padding;
-  background-repeat: no-repeat;
-  background-size: $alert-icon-size;
   border-left: $alert-bar-size solid $color-primary-alt;
   box-sizing: border-box;
   color: $color-base;
   min-height: $alert-icon-size + $spacer-2;
   padding: $alert-padding;
   position: relative;
-
-  &.sba-c-alert--hide-icon {
-    background-image: none;
-  }
 
   a {
     color: $color-primary-darker;
@@ -62,14 +55,6 @@ $alert-icon-size: $spacer-5;
   }
 }
 
-.sba-c-alert__body {
-  padding-left: $alert-icon-size + $alert-bar-size;
-}
-
-.sba-c-alert--hide-icon .sba-c-alert__body {
-  padding-left: 0;
-}
-
 .sba-c-alert__heading {
   font-size: $lead-font-size;
   font-weight: $font-bold;
@@ -77,26 +62,40 @@ $alert-icon-size: $spacer-5;
   margin-top: 0;
 }
 
+.sba-c-alert__icon {
+  padding-right: $alert-padding;
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem
+  }
+}
+
+.sba-c-alert__body {
+  @include flex-basis(100%);
+}
+
 .sba-c-alert__text {
   margin-bottom: 0;
   margin-top: 0;
 }
 
+.sba-c-alert__actions {
+  @include align-self(center);
+}
+
 .sba-c-alert--error {
   background-color: $color-error-lightest;
-  background-image: url('#{$image-path}/error.svg');
   border-color: $color-error;
 }
 
 .sba-c-alert--warn {
   background-color: $color-warn-lightest;
-  background-image: url('#{$image-path}/warning.svg');
   border-color: $color-warn;
 }
 
 .sba-c-alert--success {
   background-color: $color-success-lightest;
-  background-image: url('#{$image-path}/success.svg');
   border-color: $color-success;
 }
 
