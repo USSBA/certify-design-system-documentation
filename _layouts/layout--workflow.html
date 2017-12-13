@@ -26,6 +26,25 @@
 
     <div class="sba-l-row">
       <div class="sba-l-sm-col--12 sba-l-md-col--golden-lg sba-l-lg-col--8 sba-u-padding-x--2">
+
+        {% if page.alert %}
+        <div class="sba-c-alert">
+          <div class="sba-c-alert__icon">
+            <svg aria-hidden="true" class="sba-c-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#info-circle"></use>
+            </svg>
+          </div>
+          <div class="sba-c-alert__body">
+            {% if page.alert_heading %}
+            <h3 class="sba-c-alert__heading">{{ page.alert_heading }}</h3>
+            {% endif %}
+            {% if page.alert_text %}
+            <p class="sba-c-alert__text">{{ page.alert_text }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
         {% if page.is_a_form %}
         <form action="#">
           {{ content }}
