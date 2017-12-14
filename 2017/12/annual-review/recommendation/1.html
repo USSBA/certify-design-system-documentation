@@ -58,12 +58,7 @@ activity_log_link: activity-log.html
       }
       else {
         updateStoredData();
-        if (recommendation == "Withdrawal") {
-          nextPage("forward.html");
-        }
-        else {
-          nextPage('docs.html')
-        }
+        nextPage('docs.html')
         return false;
       }
     });
