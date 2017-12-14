@@ -7,7 +7,7 @@ body_class: hide-local-nav
 
 # Page Content
 page_h1: Letter of Intent
-lead_text: Let the firm know why you intend to terminate or early graduate.
+lead_text: Upload your letter and forward the case up the chain.
 cta_text: Next
 secondary_action_text: Cancel
 
@@ -24,7 +24,18 @@ messages_link: messages.html
 activity_log_link: activity-log.html
 ---
 
-{% include widgets/_message-form--workflows.html %}
+<div class="sba-c-document-prompt sba-u-margin-top--6">
+  <p class="sba-c-document-prompt__header">Please attach the following documents</p>
+  <ul>
+    <li>Letter of intent</li>
+    <li data-filter-recommendation="Approval">Sole source restriction (optional)</li>
+  </ul>
+  <button class="sba-c-button" type="button" aria-controls="doc_selector1" aria-expanded="false">
+    <svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#file"></use>
+    </svg>Add document(s)
+  </button>
+</div>
 
 
 
