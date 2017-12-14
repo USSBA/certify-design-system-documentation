@@ -17,6 +17,12 @@ $(document).ready(function() {
         $('.sba-c-task-panel__toggle').attr("disabled", "");
       }
 
+      var  numberWithCommas = function(number) {
+          var parts = number.toString().split(".");
+          parts[0] = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+          return parts.join(".");
+      }
+
       var calculateTableSummaries = function(table) {
         var table_cols = table.find('thead tr th').length;
 
@@ -28,7 +34,8 @@ $(document).ready(function() {
             var sum = 0;
             // Get total values
             table.find('tbody tr[id$="_data"] td:nth-child(' + (i+1) + ')').each(function(){
-              sum += parseInt($(this).text().replace("$", ""));
+              formatted_number = $(this).text().replace("$", "").replace(/,/g, "");
+              sum += parseInt(formatted_number);
             });
 
             if (isNaN(sum)) {
@@ -36,7 +43,7 @@ $(document).ready(function() {
             }
 
             if ($table_header.attr("data-info-type") == "usd") {
-              sum = "$" + sum;
+              sum = "$" + numberWithCommas(sum);
             }
             else if ($table_header.attr("data-info-type") == "percent") {
               sum = sum + "%";
@@ -81,6 +88,7 @@ $(document).ready(function() {
       $editable_table.on('click', '[id$="_delete"]', function(e){
         e.stopPropagation();
         var table = "#" + $(this).closest('table').attr('id');
+
         getItemID($(e.target));
         var confirmed = confirm('Are you sure you want to delete this item?');
         if (confirmed) {
@@ -99,6 +107,13 @@ $(document).ready(function() {
       $editable_table.on('click', '[id$="_save"]', function(e){
         e.stopPropagation();
         getItemID($(e.target));
+
+        //// See if any columns need to be summarized, then create one if not created already
+        var table = "#" + $(this).closest('table').attr('id');
+
+        // Make aria less annoying
+        $(table).attr('aria-live', 'polite');
+
         new_values = [];
         $(itemID + "_fields").find('input').each(function(){
           input_id = "#" + $(this).attr('id');
@@ -114,8 +129,7 @@ $(document).ready(function() {
           new_values.push([input_id, initial_val]);
         });
 
-        //// See if any columns need to be summarized, then create one if not created already
-        var table = "#" + $(this).closest('table').attr('id');
+
         var summated_cols = $(table).find('.js-sum').length;
         if ((summated_cols > 0) && ($(table).find('tfoot').length == 0)) {
           $(table).find('thead').after('<tfoot></tfoot>');
@@ -233,6 +247,9 @@ $(document).ready(function() {
         // Hide the null row
         $(table).find('tbody tr[id$="0_data"]').attr("hidden", "");
 
+        // Make aria less annoying
+        $(table).attr('aria-live', 'off');
+
         // Get next ID number and number of rows needed
         var next_id = Math.max.apply(Math,row_id_arr) + 1,
             table_cols = $(table).find('thead tr th').length,
@@ -257,7 +274,7 @@ $(document).ready(function() {
                   <svg aria-hidden="true" class="sba-c-icon">\
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#ellipsis-h"></use>\
                   </svg>\
-                  <span class="sba-u-visibility--screen-reader">Toggle menu</span>\
+                  <span class="sba-u-visibility--screen-reader">Toggle menu to edit this row</span>\
                 </button>\
                 <div id="'+ fields_row_id +'_panel" class="sba-c-task-panel__content">\
                   <ul class="sba-c-task-panel__menu">\
