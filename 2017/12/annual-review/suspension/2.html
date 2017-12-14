@@ -121,25 +121,7 @@ activity_log_link: activity-log.html
   </ul>
 </fieldset>
 
-<!-- This script will mimic the interaction we want to see -->
-<script>
-  $(document).ready(function() {
 
-    $('form').on('submit', function() {
-      if (!checkValidityIfSupported($('form').get(0))) {
-        return false;
-      }
-      else {
-        updateStoredData();
-        var confirmed = confirm('Are you sure you want to suspend this firm?');
-        if (confirmed) {
-          nextPage("review.html");
-        }
-        return false;
-      }
-    });
-  });
-</script>
 
 <!-- This script will mimic the interaction we want to see -->
 <script>
