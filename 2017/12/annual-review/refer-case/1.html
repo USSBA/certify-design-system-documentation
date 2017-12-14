@@ -1,0 +1,80 @@
+---
+layout: layout--workflow
+
+#Page Settings
+is_a_form: yes
+body_class: hide-local-nav
+
+# Page Content
+step_text: Refer case
+page_h1: Refer Case Within SBA
+lead_text: When you refer a case within the SBA, you will be changing who the case is "currently with." The case will remain in your workload.
+cta_text: Next
+secondary_action_text: Cancel
+
+# Tab Links
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+---
+
+<input type="hidden" id="sme_review" value="true">
+<fieldset class="questions">
+  <h4>Refer case to…</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="refer_cods" type="radio" name="currently_with" value="CODS">
+      <label for="refer_cods">CODS</label>
+    </li>
+    <li>
+      <input id="refer_district_office" type="radio" name="currently_with" value="District Office">
+      <label for="refer_district_office">District Office</label>
+    </li>
+    <li>
+      <input id="refer_area_office" type="radio" name="currently_with" value="Size">
+      <label for="refer_area_office">Size Review</label>
+    </li>
+    <li>
+      <input id="refer_district_council" type="radio" name="currently_with" value="District Council">
+      <label for="refer_district_council">District Council</label>
+    </li>
+    <li>
+      <input id="refer_oig" type="radio" name="currently_with" value="OIG">
+      <label for="refer_oig">Inspector General</label>
+    </li>
+    <li>
+      <input id="refer_hq" type="radio" name="currently_with" value="HQ Program">
+      <label for="refer_hq">HQ Program</label>
+    </li>
+  </ul>
+</fieldset>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else if($(':radio:checked').length == 0) {
+        $('#response').prepend('<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">Please choose an option.</span>');
+        return false;
+      }
+      else {
+        updateStoredData();
+
+        if (currently_with == "Size") {
+          nextPage("area-office.html");
+        }
+        else {
+          nextPage("2.html");
+        }
+        return false;
+      }
+    });
+  });
+</script>

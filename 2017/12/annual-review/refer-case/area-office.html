@@ -1,0 +1,73 @@
+---
+layout: layout--workflow
+
+#Page Settings
+is_a_form: yes
+body_class: hide-local-nav
+
+# Page Content
+step_text: Refer case
+page_h1: Refer Case Within SBA
+lead_text: When you refer a case within the SBA, you will be changing who the case is "currently with." The case will remain in your workload.
+cta_text: Next
+secondary_action_text: Cancel
+
+# Tab Links
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+---
+
+<fieldset class="questions">
+  <h4>Please select an Area Office</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="refer_boston" type="radio" name="reassignment" value="Boston Area Office">
+      <label for="refer_boston">Boston Area Office <small>(CT, ME, MA, NH, NJ, NY, VT, PR, USVI)</small></label>
+    </li>
+    <li>
+      <input id="refer_chicago" type="radio" name="reassignment" value="Chicago Area Office">
+      <label for="refer_chicago">Chicago Area Office <small>(IL, IN, IA, KS, MN, MO, NB, ND, OH, SD, WI)</small></label>
+    </li>
+    <li>
+      <input id="refer_philly" type="radio" name="reassignment" value="Philadelphia Area Office">
+      <label for="refer_philly">Philadelphia Area Office <small>(DE, MD, PA, VA, WV, Wash DC Metro Area)</small></label>
+    </li>
+    <li>
+      <input id="refer_dallas" type="radio" name="reassignment" value="Dallas Area Office">
+      <label for="refer_dallas">Dallas Area Office <small>(AR, CO, LA, NM, OK., TX)</small></label>
+    </li>
+    <li>
+      <input id="refer_atlanta" type="radio" name="reassignment" value="Atlanta Area Office">
+      <label for="refer_atlanta">Atlanta Area Office <small>(AL, FL, GA, KY, MS, NC, SC, TN)</small></label>
+    </li>
+    <li>
+      <input id="refer_sf" type="radio" name="reassignment" value="San Francisco Area Office">
+      <label for="refer_sf">San Francisco Area Office <small>(AK, AZ, CA, HI, ID, MT, NV, OR, UT, WA, WY, GU)</small></label>
+    </li>
+  </ul>
+</fieldset>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else if($(':radio:checked').length == 0) {
+        $('#response').prepend('<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">Please choose an option.</span>');
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("2.html");
+        return false;
+      }
+    });
+  });
+</script>

@@ -1,0 +1,52 @@
+---
+layout: layout--workflow
+
+#Page Settings
+body_class: hide-local-nav
+
+# Page Content
+step_text: Refer case
+page_h1: Review &amp; Complete
+lead_text: Once you refer this case, it will continue to show on your dashboard as being “Currently with” the person to whom you referred the case.
+cta_text: Next
+secondary_action_text: Cancel
+
+# Tab Links
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
+---
+
+Once you refer this case, it will continue to show on your dashboard as being “Currently with” the person to whom you referred the case. </p>
+
+<div class="certify-grid-wrap">
+  <div class="certify-width-two-thirds">
+    <div class="review-info">
+      <div class="review-info__item">
+        <div class="review-info__content">
+          <h2 class="review-info__heading">Business Unit</h2>
+          <p data-print="currently_with"></p>
+        </div>
+      </div>
+      <div class="review-info__item" data-referral="Size">
+        <div class="review-info__content">
+          <h2 class="review-info__heading">Area Office</h2>
+          <p data-print="reassignment"></p>
+        </div>
+      </div>
+      <div class="review-info__item">
+        <div class="review-info__content">
+          <h2 class="review-info__heading">Note</h2>
+          <p><strong>Topic: </strong><span data-print="refer_note_subject"></span></p>
+          <p data-print="refer_note_text"></p>
+          <p><strong>Tags: </strong><span data-print="note-tags"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <p><a href="4.html" class="usa-button">Complete Referral</a> <a href="#">Start over</a></p>
+  </div>
+</div>
