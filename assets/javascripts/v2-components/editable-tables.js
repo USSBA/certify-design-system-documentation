@@ -34,7 +34,7 @@ $(document).ready(function() {
             var sum = 0;
             // Get total values
             table.find('tbody tr[id$="_data"] td:nth-child(' + (i+1) + ')').each(function(){
-              formatted_number = $(this).text().replace("$", "").replace(",", "");
+              formatted_number = $(this).text().replace("$", "").replace(/,/g, "");
               sum += parseInt(formatted_number);
             });
 
