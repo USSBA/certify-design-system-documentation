@@ -54,6 +54,11 @@
               {% if page.secondary_action_text %}<a href="javascript:window.history.back();">{{ page.secondary_action_text }}</a>{% endif %}
               <p><em>{% if page.next_action_text %}Next step: {{ page.next_action_text }}{% endif %}</em></p>
             </div>
+            {% if page.skip_text %}
+            <div class="actions__secondary">
+              <a href="{{ page.skip_url }}" class="sba-c-button sba-c-button--inverse">Skip</a>
+            </div>
+            {% endif %}
           </div>
         </form>
         {% else %}
