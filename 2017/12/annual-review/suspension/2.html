@@ -2,22 +2,157 @@
 layout: layout--workflow
 
 #Page Settings
+is_a_form: yes
 body_class: hide-local-nav
-is_a_form: false
 
 # Page Content
-page_h1: This firm has been recommended for suspension
+step_text: Suspending the case
+page_h1: Forward this case
+lead_text: Please select who to forward the case to.
+cta_text: Next
+secondary_action_text: Go back
 
 # Tab Links
-application_link: ../overview.html
-firm_documents_link: ../firm-documents.html
-analyst_documents_link: ../analyst-documents.html
-notes_link: ../notes.html
-messages_link: ../messages.html
-activity_log_link: ../activity-log.html
+application_link: application.html
+firm_documents_link: firm-documents.html
+analyst_documents_link: analyst-documents.html
+notes_link: notes.html
+messages_link: messages.html
+activity_log_link: activity-log.html
 ---
 
-<p>
-  <a href="../dashboard.html" class="sba-c-button">View dashboard</a>
-  <a href="../optional-note/1.html" type="button" class="sba-c-button sba-c-button--inverse">Add SBA Note</a>
-</p>
+<fieldset class="questions">
+  <h4>BOS</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="reassigned_LaraHilton" type="radio" name="currently_with" value="Lara Hilton">
+      <label for="reassigned_LaraHilton">Lara Hilton</label>
+    </li>
+    <li>
+      <input id="reassigned_RichardSmith" type="radio" name="currently_with" value="Richard Smith">
+      <label for="reassigned_RichardSmith">Richard Smith</label>
+    </li>
+    <li>
+      <input id="reassigned_SaraZiggler" type="radio" name="currently_with" value="Sara Ziggler">
+      <label for="reassigned_SaraZiggler">Sara Ziggler</label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset class="questions sba-u-border-top--1">
+  <h4>Lead BOS</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="reassigned_BJHolkum" type="radio" name="currently_with" value="BJ Holkum">
+      <label for="reassigned_BJHolkum">BJ Holkum</label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset class="questions sba-u-border-top--1">
+  <h4>Supervisor BOS</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="reassigned_ShivaniDubey" type="radio" name="currently_with" value="Shivani Dubey">
+      <label for="reassigned_ShivaniDubey">Shivani Dubey</label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset class="questions sba-u-border-top--1">
+  <h4>Deputy District Director (DDD)</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="reassigned_DianaJohnson" type="radio" name="currently_with" value="Diana Johnson">
+      <label for="reassigned_DianaJohnson">Diana Johnson</label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset class="questions sba-u-border-top--1">
+  <h4>District Director (DD)</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="reassigned_CarltonRemedy" type="radio" name="currently_with" value="Carlton Remedy">
+      <label for="reassigned_CarltonRemedy">Carlton Remedy</label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset class="questions sba-u-border-top--1" data-filter-recommendation="EarlyGraduation Termination Withdrawal">
+  <h4>8(a) Supervisor</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="reassigned_VinceAlvarez" type="radio" name="currently_with" value="Vince Alvarez">
+      <label for="reassigned_VinceAlvarez">Vince Alvarez</label>
+    </li>
+    <li>
+      <input id="reassigned_TeresaTyhurst" type="radio" name="currently_with" value="Teresa Tyhurst">
+      <label for="reassigned_TeresaTyhurst">Teresa Tyhurst</label>
+    </li>
+    <li>
+      <input id="reassigned_RickBlum" type="radio" name="currently_with" value="Rick Blum">
+      <label for="reassigned_RickBlum">Rick Blum</label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset class="questions sba-u-border-top--1" data-filter-recommendation="EarlyGraduation Termination Withdrawal">
+  <h4>8(a) Director</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="reassigned_VanTran" type="radio" name="currently_with" value="Van Tran">
+      <label for="reassigned_VanTran">Van Tran</label>
+    </li>
+    <li>
+      <input id="reassigned_SandraBarrett" type="radio" name="currently_with" value="Sandra Barrett">
+      <label for="reassigned_SandraBarrett">Sandra Barrett</label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset class="questions sba-u-border-top--1" data-filter-recommendation="EarlyGraduation Termination Withdrawal">
+  <h4>AA/BD</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="reassigned_Ajoy Singh" type="radio" name="currently_with" value="Ajoy Singh">
+      <label for="reassigned_Ajoy Singh">Ajoy Singh</label>
+    </li>
+  </ul>
+</fieldset>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        var confirmed = confirm('Are you sure you want to suspend this firm?');
+        if (confirmed) {
+          nextPage("review.html");
+        }
+        return false;
+      }
+    });
+  });
+</script>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function() {
+      if (!checkValidityIfSupported($('form').get(0))) {
+        return false;
+      }
+      else {
+        updateStoredData();
+        nextPage("3.html");
+        return false;
+      }
+    });
+  });
+</script>
