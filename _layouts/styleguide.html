@@ -107,10 +107,11 @@
                 </li>
               </ul>
             </li>
+
             <li>
-              <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "transitional" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "transitional" %}false
-              {% else %}true{% endif %}" aria-controls="sublist_transitional">
-                Transitional
+              <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "utilities" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "utilities" %}false
+              {% else %}true{% endif %}" aria-controls="sublist_utilities">
+                Utilities
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-down"></use>
                 </svg>
@@ -118,19 +119,37 @@
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-up"></use>
               </svg>
               </button>
-                <ul class="usa-sidenav-sub_list" id="sublist_transitional">
+                <ul class="usa-sidenav-sub_list" id="sublist_utilities">
                   <li>
-                    <a class="{% if page.sub_section contains "cards" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/transitional/cards.html">Cards</a>
+                    <a class="{% if page.sub_section contains "borders" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/borders.html">Borders</a>
                   </li>
                   <li>
-                    <a class="{% if page.sub_section contains "taskpanel" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/transitional/taskpanel.html">Task Panels</a>
+                    <a class="{% if page.sub_section contains "bgcolor" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/background-color.html">Background color</a>
+                  </li>
+                  <li>
+                    <a class="{% if page.sub_section contains "color" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/color.html">Color</a>
+                  </li>
+                  <li>
+                    <a class="{% if page.sub_section contains "flexbox" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/flexbox.html">Flexbox</a>
+                  </li>
+                  <li>
+                    <a class="{% if page.sub_section contains "margin" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/inputs.html">Inputs</a>
+                  </li>
+                  <li>
+                    <a class="{% if page.sub_section contains "margin" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/margin.html">Margins</a>
+                  </li>
+                  <li>
+                    <a class="{% if page.sub_section contains "padding" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/padding.html">Padding</a>
+                  </li>
+                  <li>
+                    <a class="{% if page.sub_section contains "visibility" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/visibility.html">Visibility</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "utilities" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "utilities" %}false
-                {% else %}true{% endif %}" aria-controls="sublist_utilities">
-                  Utilities
+                <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "transitional" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "transitional" %}false
+                {% else %}true{% endif %}" aria-controls="sublist_transitional">
+                  Depricating
                   <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-down"></use>
                   </svg>
@@ -138,30 +157,12 @@
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#angle-up"></use>
                 </svg>
                 </button>
-                  <ul class="usa-sidenav-sub_list" id="sublist_utilities">
+                  <ul class="usa-sidenav-sub_list" id="sublist_transitional">
                     <li>
-                      <a class="{% if page.sub_section contains "borders" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/borders.html">Borders</a>
+                      <a class="{% if page.sub_section contains "cards" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/transitional/cards.html">Cards</a>
                     </li>
                     <li>
-                      <a class="{% if page.sub_section contains "bgcolor" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/background-color.html">Background color</a>
-                    </li>
-                    <li>
-                      <a class="{% if page.sub_section contains "color" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/color.html">Color</a>
-                    </li>
-                    <li>
-                      <a class="{% if page.sub_section contains "flexbox" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/flexbox.html">Flexbox</a>
-                    </li>
-                    <li>
-                      <a class="{% if page.sub_section contains "margin" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/inputs.html">Inputs</a>
-                    </li>
-                    <li>
-                      <a class="{% if page.sub_section contains "margin" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/margin.html">Margins</a>
-                    </li>
-                    <li>
-                      <a class="{% if page.sub_section contains "padding" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/padding.html">Padding</a>
-                    </li>
-                    <li>
-                      <a class="{% if page.sub_section contains "visibility" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/utilities/visibility.html">Visibility</a>
+                      <a class="{% if page.sub_section contains "taskpanel" %} usa-current {% endif %}" href="{{ site.baseurl }}/styleguide/transitional/taskpanel.html">Task Panels</a>
                     </li>
                   </ul>
                 </li>
