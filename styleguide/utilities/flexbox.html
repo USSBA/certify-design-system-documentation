@@ -1,0 +1,198 @@
+---
+layout: styleguide
+main_section: utilities
+sub_section: flexbox
+---
+
+<article>
+  <h1>Flexbox</h1>
+
+  <p>Use the flexbox utility classes to control various flexbox properties. These are especially useful when combined with flexbox grid classes.</p>
+
+  <p>For these utility classes to work, first create a flex container — you can use the <code>sba-u-display--flex</code> utility class, or any container that already has a <code>flex</code> display such as <code>sba-l-row</code> — then apply these utility classes to the container's direct children elements.</p>
+
+  <h2>Justify Content</h2>
+  <p>Use the <code>justify-content</code> utility class on a flexbox container to change the alignment of its child elements on the main axis (x-axis by default).</p>
+
+  <p>The classes follow the format: <code>sba-u-justify-content--{value}</code> and <code>sba-u-{breakpoint}-justify-content--{value}</code> where breakpoint is one of the breakpoint prefixes, and value is one of:</p>
+
+  <ul>
+    <li><code>start (browser default)</code></li>
+    <li><code>end</code></li>
+    <li><code>center</code></li>
+    <li><code>between</code></li>
+    <li><code>around</code></li>
+  </ul>
+
+  <div class="sample">
+    <code class="preview__label">sba-u-justify-content--start</code>
+    <div class="sba-u-justify-content--start sba-u-display--flex sba-u-bgcolor--primary-darkest">
+      <div class="sba-u-bgcolor--white sba-u-margin--1">start</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">start</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">start</div>
+    </div>
+
+    <code class="preview__label">sba-u-justify-content--end</code>
+    <div class="sba-u-justify-content--end sba-u-display--flex sba-u-bgcolor--primary-darkest">
+      <div class="sba-u-bgcolor--white sba-u-margin--1">end</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">end</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">end</div>
+    </div>
+
+    <code class="preview__label">sba-u-justify-content--center</code>
+    <div class="sba-u-justify-content--center sba-u-display--flex sba-u-bgcolor--primary-darkest">
+      <div class="sba-u-bgcolor--white sba-u-margin--1">center</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">center</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">center</div>
+    </div>
+
+    <code class="preview__label">sba-u-justify-content--between</code>
+    <div class="sba-u-justify-content--between sba-u-display--flex sba-u-bgcolor--primary-darkest">
+      <div class="sba-u-bgcolor--white sba-u-margin--1">between</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">between</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">between</div>
+    </div>
+
+    <code class="preview__label">sba-u-justify-content--around</code>
+    <div class="sba-u-justify-content--around sba-u-display--flex sba-u-bgcolor--primary-darkest">
+      <div class="sba-u-bgcolor--white sba-u-margin--1">around</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">around</div>
+      <div class="sba-u-bgcolor--white sba-u-margin--1">around</div>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;code class="preview__label">sba-u-justify-content--start&lt;/code>
+&lt;div class="sba-u-justify-content--start sba-u-display--flex sba-u-bgcolor--primary-darkest">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">start&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">start&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">start&lt;/div>
+&lt;/div>
+
+&lt;code class="preview__label">sba-u-justify-content--end&lt;/code>
+&lt;div class="sba-u-justify-content--end sba-u-display--flex sba-u-bgcolor--primary-darkest">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">end&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">end&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">end&lt;/div>
+&lt;/div>
+
+&lt;code class="preview__label">sba-u-justify-content--center&lt;/code>
+&lt;div class="sba-u-justify-content--center sba-u-display--flex sba-u-bgcolor--primary-darkest">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">center&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">center&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">center&lt;/div>
+&lt;/div>
+
+&lt;code class="preview__label">sba-u-justify-content--between&lt;/code>
+&lt;div class="sba-u-justify-content--between sba-u-display--flex sba-u-bgcolor--primary-darkest">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">between&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">between&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">between&lt;/div>
+&lt;/div>
+
+&lt;code class="preview__label">sba-u-justify-content--around&lt;/code>
+&lt;div class="sba-u-justify-content--around sba-u-display--flex sba-u-bgcolor--primary-darkest">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">around&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">around&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">around&lt;/div>
+&lt;/div></code></pre>
+
+  <h2>Align Items</h2>
+
+  <p>Use the <code>align-items</code> utility class on a flexbox container to change the alignment of its child elements on the cross axis (y-axis by default).</p>
+
+  <p>The classes follow the format: <code>sba-u-align-items--{value}</code> and <code>sba-u-{breakpoint}-align-items--{value}</code> where breakpoint is one of the breakpoint prefixes, and value is one of:</p>
+
+  <ul>
+    <li><code>start</code></li>
+    <li><code>end</code></li>
+    <li><code>center</code></li>
+    <li><code>baseline</code></li>
+    <li><code>stretch (browser default)</code></li>
+  </ul>
+
+  <div class="sample">
+     <code class="preview__label">sba-u-align-items--start</code>
+     <div class="sba-u-align-items--start sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+       <div class="sba-u-bgcolor--white sba-u-margin--1">start</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">start</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">start</div>
+     </div>
+
+     <code class="preview__label">sba-u-align-items--end</code>
+     <div class="sba-u-align-items--end sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+       <div class="sba-u-bgcolor--white sba-u-margin--1">end</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">end</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">end</div>
+     </div>
+
+     <code class="preview__label">sba-u-align-items--center</code>
+     <div class="sba-u-align-items--center sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+       <div class="sba-u-bgcolor--white sba-u-margin--1">center</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">center</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">center</div>
+     </div>
+
+     <code class="preview__label">sba-u-align-items--baseline</code>
+     <div class="sba-u-align-items--baseline sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+       <div class="sba-u-bgcolor--white sba-u-margin--1">baseline</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">baseline</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">baseline</div>
+     </div>
+
+     <code class="preview__label">sba-u-align-items--stretch</code>
+     <div class="sba-u-align-items--stretch sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+       <div class="sba-u-bgcolor--white sba-u-margin--1">stretch</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">stretch</div>
+       <div class="sba-u-bgcolor--white sba-u-margin--1">stretch</div>
+     </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;code class="preview__label">sba-u-align-items--start&lt;/code>
+&lt;div class="sba-u-align-items--start sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">start&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">start&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">start&lt;/div>
+&lt;/div>
+
+&lt;code class="preview__label">sba-u-align-items--end&lt;/code>
+&lt;div class="sba-u-align-items--end sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">end&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">end&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">end&lt;/div>
+&lt;/div>
+
+&lt;code class="preview__label">sba-u-align-items--center&lt;/code>
+&lt;div class="sba-u-align-items--center sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">center&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">center&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">center&lt;/div>
+&lt;/div>
+
+&lt;code class="preview__label">sba-u-align-items--baseline&lt;/code>
+&lt;div class="sba-u-align-items--baseline sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">baseline&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">baseline&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">baseline&lt;/div>
+&lt;/div>
+
+&lt;code class="preview__label">sba-u-align-items--stretch&lt;/code>
+&lt;div class="sba-u-align-items--stretch sba-u-display--flex sba-u-bgcolor--primary-darkest" style="height: 75px">
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">stretch&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">stretch&lt;/div>
+  &lt;div class="sba-u-bgcolor--white sba-u-margin--1">stretch&lt;/div>
+&lt;/div></code></pre>
+
+  <h2>Align Self</h2>
+
+  <p>Use the <code>align-self</code> utility class on a flexbox child to override the default alignment or the alignment specified by the align-self utility above.</p>
+
+  <p>The classes follow the format: <code>sba-u-align-self--{value}</code> and <code>sba-u-{breakpoint}-align-self--{value}</code> where breakpoint is one of the breakpoint prefixes, and value is one of:</p>
+
+  <ul>
+    <li><code>start</code></li>
+    <li><code>end</code></li>
+    <li><code>center</code></li>
+    <li><code>baseline</code></li>
+    <li><code>stretch (browser default)</code></li>
+  </ul>
+</article>
