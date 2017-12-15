@@ -14,22 +14,13 @@ $card_padding_lg: $multiple * 6;
 }
 
 .sba-c-card__header {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include flex-basis(calc(100% - 14rem));
-  @include flex-direction(column);
   padding: $card_padding_sm;
-  max-width: 100%;
+  width: 100%;
 
   @include media($width-md) {
     padding: $card_padding_md;
-    @include align-items(center);
-    @include flex-direction(row);
 
     > * {
-      @include flex-grow(1);
-      @include flex-basis(0);
-      max-width: 100%;
     }
   }
 }
@@ -38,14 +29,11 @@ $card_padding_lg: $multiple * 6;
   margin: 0;
 }
 
-.sba-c-card__actions {
+.sba-c-card__controls {
   @include flex-basis(14rem);
-  padding: $card_padding_sm;
+  @include flex-grow(0);
+  max-width: 14rem;
   text-align: right;
-
-  @include media($width-md) {
-    padding: $card_padding_md;
-  }
 
   .sba-c-button {
     width: auto;
