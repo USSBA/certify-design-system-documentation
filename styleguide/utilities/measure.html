@@ -1,0 +1,50 @@
+---
+layout: styleguide
+main_section: utilities
+sub_section: measure
+---
+
+<article>
+  <h1>Measure</h1>
+
+  <p>Line length, also called "measure", is an important part of readability.</p>
+
+  <p>The design system includes 3 measure modifiers:</p>
+
+  <ul>
+    <li><strong>narrow</strong> = line length ~45 characters</li>
+    <li><strong>base</strong> = line length ~65 characters</li>
+    <li><strong>wide</strong> = line length ~80 characters</li>
+  </ul>
+
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="bem">measure--[NAME]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
+
+  <div class="sample">
+    <h2 class="preview__label">sba-u-measure--narrow</h2>
+    <div class="sba-u-measure--narrow">We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</div>
+    <h2 class="preview__label">sba-u-measure--base</h2>
+    <div class="sba-u-measure--base sba-u-font-size--small">We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</div>
+    <h2 class="preview__label">sba-u-measure--wide</h2>
+    <div class="sba-u-measure--wide sba-u-font-size--small">We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</div>
+  </div>
+
+  <pre><code class="language-markup">&lt;h2 class="preview__label">sba-u-measure--narrow&lt;/h2>
+&lt;div class="sba-u-measure--narrow">We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.&lt;/div>
+
+&lt;h2 class="preview__label">sba-u-measure--base&lt;/h2>
+&lt;div class="sba-u-measure--base sba-u-font-size--small">We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.&lt;/div>
+
+&lt;h2 class="preview__label">sba-u-measure--wide&lt;/h2>
+&lt;div class="sba-u-measure--wide sba-u-font-size--small">We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.&lt;/div></pre></code>
+</article>
