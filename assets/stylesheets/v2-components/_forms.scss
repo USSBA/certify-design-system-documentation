@@ -87,3 +87,32 @@ input[type=number] {
     border-right: 0;
   }
 }
+
+
+// Error Messaging
+.sba-c-error-wrapper {
+  border-left: 4px solid $color-error-dark;;
+  margin-top: 3rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  padding-top: 0.8rem;
+  position: relative;
+  right: 1.9rem;
+}
+
+.sba-c-input-error-message {
+  color: $color-error-dark;
+  display: block;
+  font-size: 1.7rem;
+  font-weight: $font-bold;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+.sba-c-input--error {
+  border: 3px solid $color-error-dark;
+}
+
+.sba-c-label--error {
+  margin-top: 0;
+}

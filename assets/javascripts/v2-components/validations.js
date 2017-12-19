@@ -5,11 +5,11 @@ $(document).ready(function() {
 
 
 
-  var errorClass = "contains-error",
-      labelErrorClass = "usa-input-error-label",
+  var errorClass = "sba-c-input--error",
+      labelErrorClass = "sba-c-label--error",
       errorID = "error",
       $errorplaceholder = $('.error-placeholder'),
-      errorContainer = ('<div class="usa-input-error"></div>');
+      errorContainer = ('<div class="sba-c-error-wrapper"></div>');
 
 
     window.checkTheValidations = function(e){
@@ -45,11 +45,11 @@ $(document).ready(function() {
     var errorMessage = $el.attr('data-custom-validity') || $el[0].validationMessage,
       errorFieldName = $el.attr('id'),
       $label = $('label[for="'+errorFieldName+'"]'),
-      $container = $el.closest('.field-group');
+      $container = $el.closest('.sba-c-field-group');
 
     if (($el.attr("type") != "radio") && ($el.attr("type") != "checkbox")) {
-      var errorMessage = '<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">'+errorMessage+'</span>';
-      $el.closest('li').addClass('usa-input-error');
+      var errorMessage = '<span id="error" aria-atomic="true" class="sba-c-input-error-message" role="alert">'+errorMessage+'</span>';
+      $el.closest('li').addClass('sba-c-error-wrapper');
       $el.addClass(errorClass);
       $label.addClass(labelErrorClass);
       $el.next().remove('.form-feedback');
@@ -61,10 +61,10 @@ $(document).ready(function() {
       }
     }
     else if ($el.attr("type") == "checkbox") {
-      $el.before('<span aria-atomic="true" class="usa-input-error-message" role="alert">'+errorMessage+'</span>');
+      $el.before('<span aria-atomic="true" class="sba-c-input-error-message" role="alert">'+errorMessage+'</span>');
     }
     else {
-      $el.parent().parent().before('<span aria-atomic="true" class="usa-input-error-message" role="alert">'+errorMessage+'</span>');
+      $el.parent().parent().before('<span aria-atomic="true" class="sba-c-input-error-message" role="alert">'+errorMessage+'</span>');
     }
     $container.attr('id',  errorID).addClass(errorClass);
     location.href = "#" + errorID;
@@ -72,10 +72,10 @@ $(document).ready(function() {
 
   var clearErrors = function($el) {
     $el.removeClass(errorClass);
-    $('.usa-input-error-message').remove();
+    $('.sba-c-input-error-message').remove();
     $('label.'+ labelErrorClass).removeClass(labelErrorClass);
     $('#error').removeClass(errorClass).removeAttr('id');
-    $('.usa-input-error').removeClass('usa-input-error');
+    $('.sba-c-error-wrapper').removeClass('sba-c-error-wrapper');
   };
 
 
