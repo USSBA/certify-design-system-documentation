@@ -10,15 +10,16 @@ sub_section: editable_table
   <p>For the questionnaire, some <a href="tables.html">tables</a> can be edited. Editable tables can include any number of columns, and columns have the option to be summated.</p>
 
   <div class="sample">
+    <form action="#">
     <table class="sba-c-table sba-c-table--editable" id="table1" aria-live="polite" aria-atomic="true">
       <caption>Payments and excessive withdrawals</caption>
       <thead>
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Title</th>
-          <th scope="col" class="js-sum" data-info-type="percent">Equity Interest</th>
+          <th scope="col" data-required="true">Name</th>
+          <th scope="col" data-required="true">Title</th>
+          <th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*">Equity Interest</th>
           <th scope="col" data-hint-text="This is optional">Reasons for Payment</th>
-          <th scope="col" class="js-sum" data-info-type="usd">Total Payments</th>
+          <th scope="col" class="js-sum" data-info-type="usd" data-required="true">Total Payments</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
@@ -29,6 +30,7 @@ sub_section: editable_table
         </tbody>
     </table>
     <button type="button" class="sba-c-button" id="table1_add_item">Add item</button>
+    </form>
   </div>
 
   <p>See the same example along different breakpoints.</p>
@@ -60,11 +62,11 @@ sub_section: editable_table
   &lt;caption>Payments and excessive withdrawals&lt;/caption>
   &lt;thead>
     &lt;tr>
-      &lt;th scope="col">Name&lt;/th>
-      &lt;th scope="col">Title&lt;/th>
-      &lt;th scope="col" class="js-sum" data-info-type="percent">Equity Interest&lt;/th>
+      &lt;th scope="col" data-required="true">Name&lt;/th>
+      &lt;th scope="col" data-required="true">Title&lt;/th>
+      &lt;th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*">Equity Interest&lt;/th>
       &lt;th scope="col" data-hint-text="This is optional">Reasons for Payment&lt;/th>
-      &lt;th scope="col" class="js-sum" data-info-type="usd">Total Payments&lt;/th>
+      &lt;th scope="col" class="js-sum" data-info-type="usd" data-required="true">Total Payments&lt;/th>
       &lt;th scope="col">Actions&lt;/th>
     &lt;/tr>
   &lt;/thead>
@@ -92,8 +94,15 @@ sub_section: editable_table
   <p>Editable tables can use special <a href="forms.html#input-ornaments">input ornaments</a> when the user adds or edits a row. Input ornaments can be used for $USD or %. When using input ornaments, the script will automatically apply a '%' or '$' to the table cell.</p>
 
   <ul>
-    <li>To get a text field to appear as $USD, add the attribute <code>data-info-type="usd"</code> to the corresponding <code>thead th</code>.</li>
-    <li>To get a text field to appear as %, add the attribute <code>data-info-type="percent"</code> to the corresponding <code>thead th</code>.</li>
+    <li>To get a text field to appear as $USD, add the attribute <code>data-info-type="usd"</code> to the corresponding <code>thead th</code>. This will create a <code>number</code> input.</li>
+    <li>To get a text field to appear as %, add the attribute <code>data-info-type="percent"</code> to the corresponding <code>thead th</code>.  This will create a <code>number</code> input.</li>
+  </ul>
+
+  <h4>Validation</h4>
+  <p>It is possible to check validation on the form fields within the table. Validation can be be check upon:</p>
+  <ul>
+    <li><strong>Required fields</strong>. To use validation on required fields, add the attribute <code>data-required="true"</code> to the corresponding <code>thead th</code>.</li>
+    <li><strong>Patterns</strong>. To apply a pattern to validate against, or trigger certain keyboards on mobile devices, add the attribute <code>data-pattern</code> to the corresponding <code>thead th</code> and place the pattern you like to use as the value. Example: <code>data-pattern="[0-9]*"</code>.</li>
   </ul>
 
   <h4>Hint text</h4>

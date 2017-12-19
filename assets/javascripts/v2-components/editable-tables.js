@@ -17,7 +17,8 @@ $(document).ready(function() {
         $('.sba-c-task-panel__toggle').attr("disabled", "");
       }
 
-      var  numberWithCommas = function(number) {
+
+      var numberWithCommas = function(number) {
           var parts = number.toString().split(".");
           parts[0] = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
           return parts.join(".");
@@ -111,65 +112,70 @@ $(document).ready(function() {
         //// See if any columns need to be summarized, then create one if not created already
         var table = "#" + $(this).closest('table').attr('id');
 
-        // Make aria less annoying
-        $(table).attr('aria-live', 'polite');
+         // Run Validations on the table
+         validateFields($(table));
 
-        new_values = [];
-        $(itemID + "_fields").find('input').each(function(){
-          input_id = "#" + $(this).attr('id');
-          if ($(this).hasClass('js-usd')) {
-            initial_val = "$" + $(this).val();
-          }
-          else if ($(this).hasClass('js-percent')) {
-            initial_val = $(this).val() + "%";
-          }
-          else {
-            initial_val = $(this).val();
-          }
-          new_values.push([input_id, initial_val]);
-        });
+        // If there are no validation errors
+         if (!has_validation_errors) {
+           // Make aria less annoying
+           $(table).attr('aria-live', 'polite');
 
+           new_values = [];
+           $(itemID + "_fields").find('input').each(function(){
+             input_id = "#" + $(this).attr('id');
 
-        var summated_cols = $(table).find('.js-sum').length;
-        if ((summated_cols > 0) && ($(table).find('tfoot').length == 0)) {
-          $(table).find('thead').after('<tfoot></tfoot>');
-          var table_cols = $(table).find('thead tr th').length;
-
-          for (var i = 0; i < table_cols; i++) {
-            if (i == 0) {
-              $(table).find('tfoot').append('<tr><th scope="row">Totals</th></tr>');
-            }
-            else {
-              $(table).find('tfoot tr').append('<td></td>');
-            }
-          }
-        }
-
-        // Update the values
-        for (var i = 0; i < new_values.length; i++)
-        {
-          $(new_values[i][0] + "_text").text(new_values[i][1]);
+             if ($(this).hasClass('js-usd')) {
+               initial_val = "$" + $(this).val();
+             }
+             else if ($(this).hasClass('js-percent')) {
+               initial_val = $(this).val() + "%";
+             }
+             else {
+               initial_val = $(this).val();
+             }
+             new_values.push([input_id, initial_val]);
+           });
 
 
-        }
+           var summated_cols = $(table).find('.js-sum').length;
+           if ((summated_cols > 0) && ($(table).find('tfoot').length == 0)) {
+             $(table).find('thead').after('<tfoot></tfoot>');
+             var table_cols = $(table).find('thead tr th').length;
 
-        calculateTableSummaries($(table));
+             for (var i = 0; i < table_cols; i++) {
+               if (i == 0) {
+                 $(table).find('tfoot').append('<tr><th scope="row">Totals</th></tr>');
+               }
+               else {
+                 $(table).find('tfoot tr').append('<td></td>');
+               }
+             }
+           }
 
-        getItemID($(e.target));
-
-        // Show the data row
-        $(itemID + "_data").removeAttr("hidden");
-
-        // Hide fields
-        $(itemID + "_fields").attr("hidden", "");
-
-        // Re-enabled the the add button
-        $add_button.removeAttr("disabled", "");
-
-        // Re-enable task panels
-        $('.sba-c-task-panel__toggle').removeAttr("disabled");
+           // Update the values
+           for (var i = 0; i < new_values.length; i++)
+           {
+             $(new_values[i][0] + "_text").text(new_values[i][1]);
 
 
+           }
+
+           calculateTableSummaries($(table));
+
+           getItemID($(e.target));
+
+           // Show the data row
+           $(itemID + "_data").removeAttr("hidden");
+
+           // Hide fields
+           $(itemID + "_fields").attr("hidden", "");
+
+           // Re-enabled the the add button
+           $add_button.removeAttr("disabled", "");
+
+           // Re-enable task panels
+           $('.sba-c-task-panel__toggle').removeAttr("disabled");
+         }
         return false;
       });
 
@@ -263,6 +269,7 @@ $(document).ready(function() {
           .append('<tr id="' + fields_row_id + '"></tr>');
 
         // Create the table cells
+        // Note - change the liquid tags
         for (var i = 0; i < table_cols; i++) {
           var data_header_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
           var data_row_th = '<th scope="row" id="' + row_name + '_field' + (i + 1) + '_text" data-table-header="' + data_header_text + '"></th>';
@@ -318,18 +325,35 @@ $(document).ready(function() {
         for (var i = 0; i < table_cols - 1; i++) {
           var $table_header_th = $(table).find('thead tr th:nth-child(' + (i + 1) + ')');
 
-          var input_type = $table_header_th.attr("data-info-type");
-          var label_text = $table_header_th.text();
-          var field_id = table_name + '_tr' + next_id + '_field' + (i + 1);
+          var input_type = $table_header_th.attr("data-info-type"),
+              label_text = $table_header_th.text(),
+              field_id = table_name + '_tr' + next_id + '_field' + (i + 1);
 
           // Get the hint hint text
           if (typeof $table_header_th.attr('data-hint-text') != 'undefined') {
-            var hint_text_id = field_id + '_hint';
+            var aria_describedby_attribute = 'aria-describedby=' + field_id + '_hint';
             var hint_text = '<p class="sba-c-form-hint" id="' + field_id + '_hint">'+ $table_header_th.attr('data-hint-text') +'</p>';
           }
           else {
             var hint_text = '';
-            var hint_text_id = '';
+            var aria_describedby_attribute = '';
+          }
+
+          // Get required attribute
+          if ((typeof $table_header_th.attr('data-required') != 'undefined') && ($table_header_th.attr('data-required') == 'true')) {
+            var required_attribute = 'required'
+          }
+          else {
+            var required_attribute = '';
+          }
+
+          // Get Pattern attribute
+          if (typeof $table_header_th.attr('data-pattern') != 'undefined') {
+            var pattern_value = $table_header_th.attr('data-pattern'),
+                pattern_attribute = 'pattern="' + pattern_value + '"';
+          }
+          else {
+            var pattern_attribute = '';
           }
 
           // IMPORTANT: Before creating the gem, we are going to need
@@ -343,7 +367,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
-                <input type="text" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" aria-describedby="'+ hint_text_id +'">\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
               </div>';
               break;
             case "percent":
@@ -354,11 +378,11 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" aria-describedby="'+ hint_text_id +'">\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
               </div>';
               break;
             default:
-              var form_input = '<input id="' + field_id + '" type="text" aria-describedby="'+ hint_text_id +'">';
+              var form_input = '<input id="' + field_id + '" type="text" '+ aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute + '>';
           }
 
 
@@ -375,12 +399,6 @@ $(document).ready(function() {
         // Focus on the first field
         $("#" + fields_row_id).find('input:first').focus();
 
-        // Remove empty aria-described attributes
-        $("#" + fields_row_id).find('input').each(function(){
-          if ($(this).attr('aria-describedby').length == 0) {
-            $(this).removeAttr('aria-describedby');
-          }
-        });
 
 
         return false;

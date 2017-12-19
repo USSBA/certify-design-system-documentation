@@ -6,13 +6,6 @@
 
 $(document).ready(function() {
 
-  $('form').on( "submit", function( event ) {
-    if ( this.checkValidity && !this.checkValidity() ) {
-      $( this ).find( ":invalid" ).first().focus().addClass('input-error');
-      event.preventDefault();
-    }
-  });
-
   // Preload Data from a JSON file
   preloadData = function(src) {
     $.getJSON( src, function( data ) {

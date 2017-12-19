@@ -23,23 +23,23 @@ activity_log_link: activity-log.html
   <h4>What do you recommend for this firm?</h4>
   <ul id="response" class="usa-unstyled-list">
     <li data-filter-applicationstatus="Processing">
-      <input id="recommendation_approval" type="radio" name="recommendation" value="Approval">
+      <input id="recommendation_approval" type="radio" name="recommendation" value="Approval" required>
       <label for="recommendation_approval">Approval</label>
     </li>
     <li>
-      <input id="recommendation_early_graduation" type="radio" name="recommendation" value="EarlyGraduation">
+      <input id="recommendation_early_graduation" type="radio" name="recommendation" value="EarlyGraduation" required>
       <label for="recommendation_early_graduation">Early Graduation</label>
     </li>
     <li data-filter-applicationstatus="Screening">
-      <input id="recommendation_withdrawal" type="radio" name="recommendation" value="Withdrawal" data-follow-up="withdrawal_follow_up" aria-controls="withdrawal_follow_up" aria-collapsed="true">
+      <input id="recommendation_withdrawal" type="radio" name="recommendation" value="Withdrawal" data-follow-up="withdrawal_follow_up" aria-controls="withdrawal_follow_up" aria-collapsed="true" required>
       <label for="recommendation_withdrawal">Withdrawal</label>
     </li>
     <li data-filter-applicationstatus="Processing">
-      <input id="recommendation_withdrawal" type="radio" name="recommendation" value="Withdrawal">
+      <input id="recommendation_withdrawal" type="radio" name="recommendation" value="Withdrawal" required>
       <label for="recommendation_withdrawal">Withdrawal</label>
     </li>
     <li>
-      <input id="recommendation_termination" type="radio" name="recommendation" value="Termination">
+      <input id="recommendation_termination" type="radio" name="recommendation" value="Termination" required>
       <label for="recommendation_termination">Termination</label>
     </li>
   </ul>
@@ -52,15 +52,14 @@ activity_log_link: activity-log.html
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
-    $('form').on('submit', function() {
-      if (!checkValidityIfSupported($('form').get(0))) {
-        return false;
-      }
-      else {
+    $('button[type="submit"]').on('click', function() {
+      validateFields('form');
+      if (!has_validation_errors) {
         updateStoredData();
         nextPage('docs.html')
-        return false;
       }
+
+      return false;
     });
   });
 </script>
