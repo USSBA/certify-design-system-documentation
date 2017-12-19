@@ -68,16 +68,6 @@ $(document).ready(function(){
     });
   };
 
-  // checkValidity() will crash IE9, so we need to bypass it there.
-  var hasBrowserValidation = (typeof document.createElement('input').checkValidity == 'function');
-
-  if (hasBrowserValidation) {
-    $submit.on("click", checkValidations);
-    /*$inputs.on("keyup", function(){
-      if ($(this).val()){
-        clearErrors($(this));
-      }
-    });*/
-  }
+  
 
 });

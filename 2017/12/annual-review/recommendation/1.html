@@ -52,9 +52,13 @@ activity_log_link: activity-log.html
 <!-- This script will mimic the interaction we want to see -->
 <script>
   $(document).ready(function() {
-    $('form').on('submit', function() {
-      updateStoredData();
-      nextPage('docs.html')
+    $('button[type="submit"]').on('click', function() {
+      checkTheValidations('form');
+      if (!has_validation_errors) {
+        updateStoredData();
+        nextPage('docs.html')
+      }
+
       return false;
     });
   });

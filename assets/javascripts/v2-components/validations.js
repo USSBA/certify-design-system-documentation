@@ -82,12 +82,5 @@ $(document).ready(function() {
 
 
 
-  if (hasBrowserValidation) {
-    //$('button').on("click", checkTheValidations);
-    /*$inputs.on("keyup", function(){
-      if ($(this).val()){
-        clearErrors($(this));
-      }
-    });*/
-  }
+
 });
