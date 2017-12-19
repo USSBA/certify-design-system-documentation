@@ -347,6 +347,15 @@ $(document).ready(function() {
             var required_attribute = ''
           }
 
+          // Get Pattern attribute
+          if (typeof $table_header_th.attr('data-pattern') != 'undefined') {
+            var pattern_value = $table_header_th.attr('data-pattern'),
+                pattern_attribute = 'pattern="' + pattern_value + '"';
+          }
+          else {
+            var pattern_attribute = '';
+          }
+
           // IMPORTANT: Before creating the gem, we are going to need
           // to fix the file path of the SVG.
           switch (input_type) {
@@ -358,7 +367,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" aria-describedby="'+ hint_text_id +'" '+ required_attribute +'>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" aria-describedby="'+ hint_text_id +'" '+ required_attribute + ' ' + pattern_attribute +'>\
               </div>';
               break;
             case "percent":
@@ -369,11 +378,11 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" aria-describedby="'+ hint_text_id +'" '+ required_attribute +'>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" aria-describedby="'+ hint_text_id +'" '+ required_attribute + ' ' + pattern_attribute +'>\
               </div>';
               break;
             default:
-              var form_input = '<input id="' + field_id + '" type="text" aria-describedby="'+ hint_text_id +'" '+ required_attribute +'>';
+              var form_input = '<input id="' + field_id + '" type="text" aria-describedby="'+ hint_text_id +'" '+ required_attribute + ' ' + pattern_attribute + '>';
           }
 
 
