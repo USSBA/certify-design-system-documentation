@@ -331,12 +331,12 @@ $(document).ready(function() {
 
           // Get the hint hint text
           if (typeof $table_header_th.attr('data-hint-text') != 'undefined') {
-            var hint_text_id = field_id + '_hint';
+            var aria_describedby_attribute = 'aria-describedby=' + field_id + '_hint';
             var hint_text = '<p class="sba-c-form-hint" id="' + field_id + '_hint">'+ $table_header_th.attr('data-hint-text') +'</p>';
           }
           else {
             var hint_text = '';
-            var hint_text_id = '';
+            var aria_describedby_attribute = '';
           }
 
           // Get required attribute
@@ -344,7 +344,7 @@ $(document).ready(function() {
             var required_attribute = 'required'
           }
           else {
-            var required_attribute = ''
+            var required_attribute = '';
           }
 
           // Get Pattern attribute
@@ -367,7 +367,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" aria-describedby="'+ hint_text_id +'" '+ required_attribute + ' ' + pattern_attribute +'>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
               </div>';
               break;
             case "percent":
@@ -378,11 +378,11 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" aria-describedby="'+ hint_text_id +'" '+ required_attribute + ' ' + pattern_attribute +'>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
               </div>';
               break;
             default:
-              var form_input = '<input id="' + field_id + '" type="text" aria-describedby="'+ hint_text_id +'" '+ required_attribute + ' ' + pattern_attribute + '>';
+              var form_input = '<input id="' + field_id + '" type="text" '+ aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute + '>';
           }
 
 
@@ -399,12 +399,6 @@ $(document).ready(function() {
         // Focus on the first field
         $("#" + fields_row_id).find('input:first').focus();
 
-        // Remove empty aria-described attributes
-        $("#" + fields_row_id).find('input').each(function(){
-          if ($(this).attr('aria-describedby').length == 0) {
-            $(this).removeAttr('aria-describedby');
-          }
-        });
 
 
         return false;
