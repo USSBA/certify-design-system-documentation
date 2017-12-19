@@ -17,7 +17,8 @@ $(document).ready(function() {
         $('.sba-c-task-panel__toggle').attr("disabled", "");
       }
 
-      var  numberWithCommas = function(number) {
+
+      var numberWithCommas = function(number) {
           var parts = number.toString().split(".");
           parts[0] = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
           return parts.join(".");
@@ -111,65 +112,68 @@ $(document).ready(function() {
         //// See if any columns need to be summarized, then create one if not created already
         var table = "#" + $(this).closest('table').attr('id');
 
-        // Make aria less annoying
-        $(table).attr('aria-live', 'polite');
+         checkTheValidations();
 
-        new_values = [];
-        $(itemID + "_fields").find('input').each(function(){
-          input_id = "#" + $(this).attr('id');
-          if ($(this).hasClass('js-usd')) {
-            initial_val = "$" + $(this).val();
-          }
-          else if ($(this).hasClass('js-percent')) {
-            initial_val = $(this).val() + "%";
-          }
-          else {
-            initial_val = $(this).val();
-          }
-          new_values.push([input_id, initial_val]);
-        });
+         if (!has_validation_errors) {
+           // Make aria less annoying
+           $(table).attr('aria-live', 'polite');
 
+           new_values = [];
+           $(itemID + "_fields").find('input').each(function(){
+             input_id = "#" + $(this).attr('id');
 
-        var summated_cols = $(table).find('.js-sum').length;
-        if ((summated_cols > 0) && ($(table).find('tfoot').length == 0)) {
-          $(table).find('thead').after('<tfoot></tfoot>');
-          var table_cols = $(table).find('thead tr th').length;
-
-          for (var i = 0; i < table_cols; i++) {
-            if (i == 0) {
-              $(table).find('tfoot').append('<tr><th scope="row">Totals</th></tr>');
-            }
-            else {
-              $(table).find('tfoot tr').append('<td></td>');
-            }
-          }
-        }
-
-        // Update the values
-        for (var i = 0; i < new_values.length; i++)
-        {
-          $(new_values[i][0] + "_text").text(new_values[i][1]);
+             if ($(this).hasClass('js-usd')) {
+               initial_val = "$" + $(this).val();
+             }
+             else if ($(this).hasClass('js-percent')) {
+               initial_val = $(this).val() + "%";
+             }
+             else {
+               initial_val = $(this).val();
+             }
+             new_values.push([input_id, initial_val]);
+           });
 
 
-        }
+           var summated_cols = $(table).find('.js-sum').length;
+           if ((summated_cols > 0) && ($(table).find('tfoot').length == 0)) {
+             $(table).find('thead').after('<tfoot></tfoot>');
+             var table_cols = $(table).find('thead tr th').length;
 
-        calculateTableSummaries($(table));
+             for (var i = 0; i < table_cols; i++) {
+               if (i == 0) {
+                 $(table).find('tfoot').append('<tr><th scope="row">Totals</th></tr>');
+               }
+               else {
+                 $(table).find('tfoot tr').append('<td></td>');
+               }
+             }
+           }
 
-        getItemID($(e.target));
-
-        // Show the data row
-        $(itemID + "_data").removeAttr("hidden");
-
-        // Hide fields
-        $(itemID + "_fields").attr("hidden", "");
-
-        // Re-enabled the the add button
-        $add_button.removeAttr("disabled", "");
-
-        // Re-enable task panels
-        $('.sba-c-task-panel__toggle').removeAttr("disabled");
+           // Update the values
+           for (var i = 0; i < new_values.length; i++)
+           {
+             $(new_values[i][0] + "_text").text(new_values[i][1]);
 
 
+           }
+
+           calculateTableSummaries($(table));
+
+           getItemID($(e.target));
+
+           // Show the data row
+           $(itemID + "_data").removeAttr("hidden");
+
+           // Hide fields
+           $(itemID + "_fields").attr("hidden", "");
+
+           // Re-enabled the the add button
+           $add_button.removeAttr("disabled", "");
+
+           // Re-enable task panels
+           $('.sba-c-task-panel__toggle').removeAttr("disabled");
+         }
         return false;
       });
 
@@ -343,7 +347,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
-                <input type="text" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" aria-describedby="'+ hint_text_id +'">\
+                <input type="text" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" aria-describedby="'+ hint_text_id +'" required>\
               </div>';
               break;
             case "percent":
@@ -358,7 +362,7 @@ $(document).ready(function() {
               </div>';
               break;
             default:
-              var form_input = '<input id="' + field_id + '" type="text" aria-describedby="'+ hint_text_id +'">';
+              var form_input = '<input id="' + field_id + '" type="text" aria-describedby="'+ hint_text_id +'" required>';
           }
 
 

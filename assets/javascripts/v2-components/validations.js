@@ -1,0 +1,99 @@
+$(document).ready(function() {
+  checkClientSideValidityIfSupported = function(elem) {
+    if (typeof elem.checkValidity == 'function') {
+        return elem.checkValidity();
+    } else {
+        return true;
+    }
+  }
+
+
+
+  var $inputs = $('input:not([type="hidden"]), input:not([type="submit"]), select'),
+      $form = $('form'),
+      $submit = $('button[type="submit"]'),
+      errorClass = "contains-error",
+      labelErrorClass = "usa-input-error-label",
+      errorID = "error",
+      $errorplaceholder = $('.error-placeholder'),
+      errorContainer = ('<div class="usa-input-error"></div>');
+
+
+    window.checkTheValidations = function(){
+      console.log('running checkTheValidations');
+      // Redefine the inputs since some will be removed on page load
+      $inputs = $('input:not([type="hidden"]), input:not([type="submit"]), select');
+
+      // Validate each input
+      $inputs.each(function() {
+        var $el = $(this);
+        console.log($el);
+        if (!this.checkValidity()) {
+          window.has_validation_errors = true;
+          event.preventDefault();
+          clearErrors($el);
+          displayErrors($el);
+          return false;
+        }
+        else {
+          window.has_validation_errors = false;
+          clearErrors($el);
+        }
+      });
+    };
+
+
+  var displayErrors = function($el) {
+    console.log('running display errors');
+
+    var errorMessage = $el.attr('data-custom-validity') || $el[0].validationMessage,
+      errorFieldName = $el.attr('id'),
+      $label = $('label[for="'+errorFieldName+'"]'),
+      $container = $el.closest('.field-group');
+
+    if (($el.attr("type") != "radio") && ($el.attr("type") != "checkbox")) {
+      var errorMessage = '<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">'+errorMessage+'</span>';
+      $el.add($label).wrapAll(errorContainer);
+      $el.addClass(errorClass);
+      $label.addClass(labelErrorClass);
+      $el.next().remove('.form-feedback');
+      if ($el.parents().find($errorplaceholder).length) {
+        $errorplaceholder.html(errorMessage);
+      }
+      else {
+        $el.after(errorMessage);
+      }
+    }
+    else if ($el.attr("type") == "checkbox") {
+      $el.before('<span aria-atomic="true" class="usa-input-error-message" role="alert">'+errorMessage+'</span>');
+    }
+    else {
+      $el.parent().parent().before('<span aria-atomic="true" class="usa-input-error-message" role="alert">'+errorMessage+'</span>');
+    }
+    $el.focus();
+    $container.attr('id',  errorID).addClass(errorClass);
+    location.href = "#" + errorID;
+  };
+
+  var clearErrors = function($el) {
+    $el.removeClass(errorClass);
+    $('.usa-input-error-message').remove();
+    $('label.'+ labelErrorClass).removeClass(labelErrorClass);
+    $('#error').removeClass(errorClass).removeAttr('id');
+    $('.usa-input-error').replaceWith(function() { return $(this).contents(); });
+  };
+
+
+
+  // checkValidity() will crash IE9, so we need to bypass it there.
+  var hasBrowserValidation = (typeof document.createElement('input').checkValidity == 'function');
+
+  if (hasBrowserValidation) {
+    //$('button').on("click", checkTheValidations);
+    /*$inputs.on("keyup", function(){
+      if ($(this).val()){
+        clearErrors($(this));
+      }
+    });*/
+  }
+});
