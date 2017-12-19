@@ -1,5 +1,19 @@
-$(document).ready(function() {
+/**
+ * Check Validations
+ * checkTheValidations will valid form fields. Best to place on clicking a
+ * submit button, but can be used in other functions as well. The checkTheValidations
+ * function exists in the global scope, so it can be called on generated
+ * form fields.
+ *
+ * Usage:
+ * checkTheValidations([FORM_ID]);
+ * if (!has_validation_errors) {
+ *  // Stuff that happens when validation passes
+ * }
+ *
+ */
 
+$(document).ready(function() {
   // checkValidity() will crash IE9, so we need to bypass it there.
   var hasBrowserValidation = (typeof document.createElement('input').checkValidity == 'function');
 
