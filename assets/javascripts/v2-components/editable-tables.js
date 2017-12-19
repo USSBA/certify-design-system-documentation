@@ -113,7 +113,7 @@ $(document).ready(function() {
         var table = "#" + $(this).closest('table').attr('id');
 
          // Run Validations on the table
-         checkTheValidations($(table));
+         validateFields($(table));
 
         // If there are no validation errors
          if (!has_validation_errors) {

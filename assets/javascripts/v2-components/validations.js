@@ -1,12 +1,12 @@
 /**
  * Check Validations
- * checkTheValidations will valid form fields. Best to place on clicking a
- * submit button, but can be used in other functions as well. The checkTheValidations
+ * validateFields will valid form fields. Best to place on clicking a
+ * submit button, but can be used in other functions as well. The validateFields
  * function exists in the global scope, so it can be called on generated
  * form fields.
  *
  * Usage:
- * checkTheValidations([FORM_ID]);
+ * validateFields([FORM_ID]);
  * if (!has_validation_errors) {
  *  // Stuff that happens when validation passes
  * }
@@ -26,7 +26,7 @@ $(document).ready(function() {
       errorContainer = ('<div class="sba-c-error-wrapper"></div>');
 
 
-    window.checkTheValidations = function(e){
+    window.validateFields = function(e){
       // If the browser validation is supported, we'll run this function
       // Otherwise we hve to rely on server validation
       if (hasBrowserValidation) {
@@ -91,10 +91,4 @@ $(document).ready(function() {
     $('#error').removeClass(errorClass).removeAttr('id');
     $('.sba-c-error-wrapper').removeClass('sba-c-error-wrapper');
   };
-
-
-
-
-
-
 });

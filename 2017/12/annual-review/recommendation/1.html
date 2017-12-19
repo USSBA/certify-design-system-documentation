@@ -53,7 +53,7 @@ activity_log_link: activity-log.html
 <script>
   $(document).ready(function() {
     $('button[type="submit"]').on('click', function() {
-      checkTheValidations('form');
+      validateFields('form');
       if (!has_validation_errors) {
         updateStoredData();
         nextPage('docs.html')
