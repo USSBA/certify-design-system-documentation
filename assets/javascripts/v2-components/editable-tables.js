@@ -112,8 +112,10 @@ $(document).ready(function() {
         //// See if any columns need to be summarized, then create one if not created already
         var table = "#" + $(this).closest('table').attr('id');
 
-         checkTheValidations();
+         // Run Validations on the table
+         checkTheValidations($(table));
 
+        // If there are no validation errors
          if (!has_validation_errors) {
            // Make aria less annoying
            $(table).attr('aria-live', 'polite');

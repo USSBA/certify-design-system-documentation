@@ -9,30 +9,25 @@ $(document).ready(function() {
 
 
 
-  var $inputs = $('input:not([type="hidden"]), input:not([type="submit"]), select'),
-      $form = $('form'),
-      $submit = $('button[type="submit"]'),
-      errorClass = "contains-error",
+  var errorClass = "contains-error",
       labelErrorClass = "usa-input-error-label",
       errorID = "error",
       $errorplaceholder = $('.error-placeholder'),
       errorContainer = ('<div class="usa-input-error"></div>');
 
 
-    window.checkTheValidations = function(){
-      console.log('running checkTheValidations');
+    window.checkTheValidations = function(e){
       // Redefine the inputs since some will be removed on page load
-      $inputs = $('input:not([type="hidden"]), input:not([type="submit"]), select');
-
+      $inputs = $(e).find('input:not([type="hidden"]), input:not([type="submit"]), select');
       // Validate each input
       $inputs.each(function() {
         var $el = $(this);
-        console.log($el);
         if (!this.checkValidity()) {
           window.has_validation_errors = true;
           event.preventDefault();
           clearErrors($el);
           displayErrors($el);
+          $el.focus();
           return false;
         }
         else {
@@ -44,8 +39,6 @@ $(document).ready(function() {
 
 
   var displayErrors = function($el) {
-    console.log('running display errors');
-
     var errorMessage = $el.attr('data-custom-validity') || $el[0].validationMessage,
       errorFieldName = $el.attr('id'),
       $label = $('label[for="'+errorFieldName+'"]'),
@@ -53,7 +46,7 @@ $(document).ready(function() {
 
     if (($el.attr("type") != "radio") && ($el.attr("type") != "checkbox")) {
       var errorMessage = '<span id="error" aria-atomic="true" class="usa-input-error-message" role="alert">'+errorMessage+'</span>';
-      $el.add($label).wrapAll(errorContainer);
+      $el.closest('li').addClass('usa-input-error');
       $el.addClass(errorClass);
       $label.addClass(labelErrorClass);
       $el.next().remove('.form-feedback');
@@ -61,7 +54,7 @@ $(document).ready(function() {
         $errorplaceholder.html(errorMessage);
       }
       else {
-        $el.after(errorMessage);
+        $label.before(errorMessage);
       }
     }
     else if ($el.attr("type") == "checkbox") {
@@ -70,7 +63,6 @@ $(document).ready(function() {
     else {
       $el.parent().parent().before('<span aria-atomic="true" class="usa-input-error-message" role="alert">'+errorMessage+'</span>');
     }
-    $el.focus();
     $container.attr('id',  errorID).addClass(errorClass);
     location.href = "#" + errorID;
   };
@@ -80,7 +72,7 @@ $(document).ready(function() {
     $('.usa-input-error-message').remove();
     $('label.'+ labelErrorClass).removeClass(labelErrorClass);
     $('#error').removeClass(errorClass).removeAttr('id');
-    $('.usa-input-error').replaceWith(function() { return $(this).contents(); });
+    $('.usa-input-error').removeClass('usa-input-error');
   };
 
 
