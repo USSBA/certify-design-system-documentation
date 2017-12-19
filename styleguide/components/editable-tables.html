@@ -15,11 +15,11 @@ sub_section: editable_table
       <caption>Payments and excessive withdrawals</caption>
       <thead>
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Title</th>
-          <th scope="col" class="js-sum" data-info-type="percent">Equity Interest</th>
+          <th scope="col" data-required="true">Name</th>
+          <th scope="col" data-required="true">Title</th>
+          <th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*">Equity Interest</th>
           <th scope="col" data-hint-text="This is optional">Reasons for Payment</th>
-          <th scope="col" class="js-sum" data-info-type="usd">Total Payments</th>
+          <th scope="col" class="js-sum" data-info-type="usd" data-required="true">Total Payments</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>

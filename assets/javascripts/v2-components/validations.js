@@ -17,8 +17,6 @@ $(document).ready(function() {
   // checkValidity() will crash IE9, so we need to bypass it there.
   var hasBrowserValidation = (typeof document.createElement('input').checkValidity == 'function');
 
-
-
   var errorClass = "sba-c-input--error",
       labelErrorClass = "sba-c-label--error",
       errorID = "error",

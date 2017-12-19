@@ -325,9 +325,9 @@ $(document).ready(function() {
         for (var i = 0; i < table_cols - 1; i++) {
           var $table_header_th = $(table).find('thead tr th:nth-child(' + (i + 1) + ')');
 
-          var input_type = $table_header_th.attr("data-info-type");
-          var label_text = $table_header_th.text();
-          var field_id = table_name + '_tr' + next_id + '_field' + (i + 1);
+          var input_type = $table_header_th.attr("data-info-type"),
+              label_text = $table_header_th.text(),
+              field_id = table_name + '_tr' + next_id + '_field' + (i + 1);
 
           // Get the hint hint text
           if (typeof $table_header_th.attr('data-hint-text') != 'undefined') {
@@ -337,6 +337,14 @@ $(document).ready(function() {
           else {
             var hint_text = '';
             var hint_text_id = '';
+          }
+
+          // Get required attribute
+          if ((typeof $table_header_th.attr('data-required') != 'undefined') && ($table_header_th.attr('data-required') == 'true')) {
+            var required_attribute = 'required'
+          }
+          else {
+            var required_attribute = ''
           }
 
           // IMPORTANT: Before creating the gem, we are going to need
@@ -350,7 +358,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
-                <input type="text" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" aria-describedby="'+ hint_text_id +'" required>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" aria-describedby="'+ hint_text_id +'" '+ required_attribute +'>\
               </div>';
               break;
             case "percent":
@@ -361,11 +369,11 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" aria-describedby="'+ hint_text_id +'">\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" aria-describedby="'+ hint_text_id +'" '+ required_attribute +'>\
               </div>';
               break;
             default:
-              var form_input = '<input id="' + field_id + '" type="text" aria-describedby="'+ hint_text_id +'" required>';
+              var form_input = '<input id="' + field_id + '" type="text" aria-describedby="'+ hint_text_id +'" '+ required_attribute +'>';
           }
 
 
