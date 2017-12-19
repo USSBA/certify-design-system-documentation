@@ -1,11 +1,7 @@
 $(document).ready(function() {
-  checkClientSideValidityIfSupported = function(elem) {
-    if (typeof elem.checkValidity == 'function') {
-        return elem.checkValidity();
-    } else {
-        return true;
-    }
-  }
+
+  // checkValidity() will crash IE9, so we need to bypass it there.
+  var hasBrowserValidation = (typeof document.createElement('input').checkValidity == 'function');
 
 
 
@@ -17,24 +13,31 @@ $(document).ready(function() {
 
 
     window.checkTheValidations = function(e){
+      // If the browser validation is supported, we'll run this function
+      // Otherwise we hve to rely on server validation
+      if (hasBrowserValidation) {
       // Redefine the inputs since some will be removed on page load
-      $inputs = $(e).find('input:not([type="hidden"]), input:not([type="submit"]), select');
-      // Validate each input
-      $inputs.each(function() {
-        var $el = $(this);
-        if (!this.checkValidity()) {
-          window.has_validation_errors = true;
-          event.preventDefault();
-          clearErrors($el);
-          displayErrors($el);
-          $el.focus();
-          return false;
-        }
-        else {
-          window.has_validation_errors = false;
-          clearErrors($el);
-        }
-      });
+        $inputs = $(e).find('input:not([type="hidden"]), input:not([type="submit"]), select');
+        // Validate each input
+        $inputs.each(function() {
+          var $el = $(this);
+          if (!this.checkValidity()) {
+            window.has_validation_errors = true;
+            event.preventDefault();
+            clearErrors($el);
+            displayErrors($el);
+            $el.focus();
+            return false;
+          }
+          else {
+            window.has_validation_errors = false;
+            clearErrors($el);
+          }
+        });
+      }
+      else {
+        window.has_validation_errors = false;
+      }
     };
 
 
@@ -77,8 +80,7 @@ $(document).ready(function() {
 
 
 
-  // checkValidity() will crash IE9, so we need to bypass it there.
-  var hasBrowserValidation = (typeof document.createElement('input').checkValidity == 'function');
+
 
   if (hasBrowserValidation) {
     //$('button').on("click", checkTheValidations);

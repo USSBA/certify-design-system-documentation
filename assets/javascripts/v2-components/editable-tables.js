@@ -269,6 +269,7 @@ $(document).ready(function() {
           .append('<tr id="' + fields_row_id + '"></tr>');
 
         // Create the table cells
+        // Note - change the liquid tags
         for (var i = 0; i < table_cols; i++) {
           var data_header_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
           var data_row_th = '<th scope="row" id="' + row_name + '_field' + (i + 1) + '_text" data-table-header="' + data_header_text + '"></th>';
