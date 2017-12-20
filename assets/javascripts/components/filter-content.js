@@ -15,7 +15,7 @@ $(document).ready(function() {
       $('*['+ target_attribute +']').each(function(){
         accepted_values = $.makeArray($(this).attr(target_attribute).split(" "));
         if (typeof window[filter_key] != "undefined") {
-          if (accepted_values.indexOf(eval(filter_key)) >= 0)  {
+          if (accepted_values.indexOf(eval(filter_key).replace(/\s/g, '')) >= 0)  {
             /* Do Nothing */
           }
           else {
