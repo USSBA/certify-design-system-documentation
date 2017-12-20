@@ -369,7 +369,6 @@ $(document).ready(function() {
           };
 
           optional_attributes = optional_attributes.join(" ").toString();
-          //console.log(optional_attributes)
 
 
           // Get some more variables
@@ -388,14 +387,14 @@ $(document).ready(function() {
           }
 
           // Set input type to text if there is a min value or max value
-          //if ((min_attribute != '') || (max_attribute != '')) {
-          //  var input_type_attribute = 'number';
-          //}
-          //else {
-          //  input_type_attribute = 'text';
-          //}
+          if ((optional_attributes.indexOf('min=') > -1) || (optional_attributes.indexOf('max=') > -1)) {
+            var input_type_attribute = 'number';
+          }
+          else {
+            var input_type_attribute = 'text';
+          }
 
-          var input_type_attribute = 'text';
+
 
           // IMPORTANT: Before creating the gem, we are going to need
           // to fix the file path of the SVG.
