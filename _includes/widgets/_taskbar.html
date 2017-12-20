@@ -2,12 +2,22 @@
   <div class="taskbar">
     <div class="taskbar-section">
       <p class="taskbar-section__text">
-        <span class="taskbar-section__subhead">Application is in</span> <span data-print="applicationstatus">Screening</span>
+        <span class="taskbar-section__subhead">Annual Review is in</span> <span data-print="applicationstatus">Screening</span>
+      </p>
+    </div>
+    <div class="taskbar-section hide-mobile" data-filter-applicationstatus="Screening">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Due date is</span> <span id="due_date_text">10/28/2017 <small>(15 days left)</small></span>
       </p>
     </div>
     <div class="taskbar-section hide-mobile" data-filter-applicationstatus="Processing">
       <p class="taskbar-section__text">
         <span class="taskbar-section__subhead">Due date is</span> <span id="due_date_text">11/09/2017 <small>(30 days left)</small></span>
+      </p>
+    </div>
+    <div class="taskbar-section hide-mobile">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Case owner</span> <span>{{ site.cods_analyst }}</span>
       </p>
     </div>
     <div class="taskbar-section hide-mobile">
@@ -28,18 +38,25 @@
               {% endif %}" class="task-panel-menu__link"><strong>Accept for processing</strong></a>
             </li>
             <li class="task-panel-menu__item">
-              <a href="{% if page.assign_link %}
-                {{ page.assign_link }}
-              {% else %}
-                #
-              {% endif %}" class="task-panel-menu__link">Assign case</a>
-            </li>
-            <li class="task-panel-menu__item">
               <a id="add_note" href="{% if page.notes_link %}
                 {{ page.notes_link }}?new_note=true
               {% else %}
                 #
               {% endif %}" class="task-panel-menu__link">Add SBA note</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.assign_link %}
+                {{ page.assign_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Reassign case</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="{% if page.refer_link %}
+                {{ page.refer_link }}
+              {% else %}
+                #
+              {% endif %}" class="task-panel-menu__link">Refer case within SBA </a>
             </li>
             <li class="task-panel-menu__item">
               <a href="{% if page.revisions_link %}

@@ -27,7 +27,7 @@ activity_log_link: activity-log.html
   <ul id="response" class="usa-unstyled-list">
     <li>
       <input id="refer_district_office" type="radio" name="currently_with" value="District Office">
-      <label for="refer_district_office">District Office</label>
+      <label for="refer_district_office">Another District Office</label>
     </li>
     <li>
       <input id="refer_area_office" type="radio" name="currently_with" value="Size">
@@ -65,6 +65,9 @@ activity_log_link: activity-log.html
 
         if (currently_with == "Size") {
           nextPage("area-office.html");
+        }
+        else if (currently_with == "District Office") {
+          nextPage("district-office.html");
         }
         else {
           nextPage("2.html");
