@@ -15,11 +15,11 @@ sub_section: editable_table
       <caption>Payments and excessive withdrawals</caption>
       <thead>
         <tr>
-          <th scope="col" data-required="true">Name</th>
-          <th scope="col" data-required="true">Title</th>
-          <th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*">Equity Interest</th>
-          <th scope="col" data-hint-text="This is optional">Reasons for Payment</th>
-          <th scope="col" class="js-sum" data-info-type="usd" data-required="true">Total Payments</th>
+          <th scope="col" data-required="true" data-custom-id="Name">Name</th>
+          <th scope="col" data-required="true" data-custom-id="Title">Title</th>
+          <th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*" data-custom-id="Equity Interest">Equity Interest</th>
+          <th scope="col" data-hint-text="This is optional" data-custom-id="Reason">Reasons for Payment</th>
+          <th scope="col" class="js-sum" data-info-type="usd" data-required="true" data-custom-id="Total Payments">Total Payments</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
@@ -62,11 +62,11 @@ sub_section: editable_table
   &lt;caption>Payments and excessive withdrawals&lt;/caption>
   &lt;thead>
     &lt;tr>
-      &lt;th scope="col" data-required="true">Name&lt;/th>
-      &lt;th scope="col" data-required="true">Title&lt;/th>
-      &lt;th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*">Equity Interest&lt;/th>
-      &lt;th scope="col" data-hint-text="This is optional">Reasons for Payment&lt;/th>
-      &lt;th scope="col" class="js-sum" data-info-type="usd" data-required="true">Total Payments&lt;/th>
+      &lt;th scope="col" data-required="true" data-custom-id="Name">Name&lt;/th>
+      &lt;th scope="col" data-required="true" data-custom-id="Title">Title&lt;/th>
+      &lt;th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*" data-custom-id="Equity Interest">Equity Interest&lt;/th>
+      &lt;th scope="col" data-hint-text="This is optional" data-custom-id="Reason">Reasons for Payment&lt;/th>
+      &lt;th scope="col" class="js-sum" data-info-type="usd" data-required="true" data-custom-id="Total Payments">Total Payments&lt;/th>
       &lt;th scope="col">Actions&lt;/th>
     &lt;/tr>
   &lt;/thead>
@@ -88,6 +88,17 @@ sub_section: editable_table
     <li>A table row to show a null state with an ID following the convention <code>[TABLE_ID]_tr0_data</code>. This table row must also include a <code>th</code> with a <code>colspan</code> that matches the total number of columns in the table.</li>
     <li>An actions column</li>
     <li>A button with an ID using a naming convention of <code>[TABLE_ID]_add_item</code>.</li>
+  </ul>
+
+  <h3>Options</h3>
+  <p>The table has a few options for validation and input types.</p>
+
+  <h4>Customizing input IDs</h4>
+  <p>Form fields in the table will generally have iteratable, generic IDs, such as <code>[TABLE_ID]_tr0_field1</code>. If you'd like to add some context to an id place a <code>data-custom-id</code> attribute in the cell’s corresponding <code>thead th</code>.</p>
+
+  <ul>
+    <li>Use characters that are only valid in an ID attribute</li>
+    <li>Spaces will be converted to underscores</li>
   </ul>
 
   <h4>Using input ornaments</h4>

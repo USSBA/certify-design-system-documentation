@@ -325,9 +325,54 @@ $(document).ready(function() {
         for (var i = 0; i < table_cols - 1; i++) {
           var $table_header_th = $(table).find('thead tr th:nth-child(' + (i + 1) + ')');
 
+          // Get custom id attribute
+          if (typeof $table_header_th.attr('data-custom-id') != 'undefined') {
+            var custom_id_value = $table_header_th.attr('data-custom-id'),
+                custom_id = '_' + custom_id_value;
+            custom_id = custom_id.replace(/\s/g, "_");
+          }
+          else {
+            var custom_id = '';
+          }
+
+          // Get required attribute
+          if ((typeof $table_header_th.attr('data-required') != 'undefined') && ($table_header_th.attr('data-required') == 'true')) {
+            var required_attribute = 'required'
+          }
+          else {
+            var required_attribute = '';
+          }
+
+          // Get min attribute
+          if (typeof $table_header_th.attr('data-min') != 'undefined') {
+            var min_value = $table_header_th.attr('data-min'),
+                min_attribute = 'min="' + min_value + '"';
+          }
+          else {
+            var min_attribute = '';
+          }
+
+          // Get max attribute
+          if (typeof $table_header_th.attr('data-max') != 'undefined') {
+            var max_value = $table_header_th.attr('data-max'),
+                max_attribute = 'min="' + max_value + '"';
+          }
+          else {
+            var min_attribute = '';
+          }
+
+          // Get Pattern attribute
+          if (typeof $table_header_th.attr('data-pattern') != 'undefined') {
+            var pattern_value = $table_header_th.attr('data-pattern'),
+                pattern_attribute = 'pattern="' + pattern_value + '"';
+          }
+          else {
+            var pattern_attribute = '';
+          }
+
           var input_type = $table_header_th.attr("data-info-type"),
               label_text = $table_header_th.text(),
-              field_id = table_name + '_tr' + next_id + '_field' + (i + 1);
+              field_id = table_name + '_tr' + next_id + '_field' + (i + 1) + custom_id;
 
           // Get the hint hint text
           if (typeof $table_header_th.attr('data-hint-text') != 'undefined') {
@@ -339,22 +384,7 @@ $(document).ready(function() {
             var aria_describedby_attribute = '';
           }
 
-          // Get required attribute
-          if ((typeof $table_header_th.attr('data-required') != 'undefined') && ($table_header_th.attr('data-required') == 'true')) {
-            var required_attribute = 'required'
-          }
-          else {
-            var required_attribute = '';
-          }
 
-          // Get Pattern attribute
-          if (typeof $table_header_th.attr('data-pattern') != 'undefined') {
-            var pattern_value = $table_header_th.attr('data-pattern'),
-                pattern_attribute = 'pattern="' + pattern_value + '"';
-          }
-          else {
-            var pattern_attribute = '';
-          }
 
           // IMPORTANT: Before creating the gem, we are going to need
           // to fix the file path of the SVG.
