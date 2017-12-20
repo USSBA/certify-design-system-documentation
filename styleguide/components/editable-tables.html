@@ -17,9 +17,9 @@ sub_section: editable_table
         <tr>
           <th scope="col" data-required="true" data-custom-id="Name">Name</th>
           <th scope="col" data-required="true" data-custom-id="Title">Title</th>
-          <th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*" data-custom-id="Equity Interest">Equity Interest</th>
+          <th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*" data-custom-id="Equity Interest" data-min="0" data-max="100">Equity Interest</th>
           <th scope="col" data-hint-text="This is optional" data-custom-id="Reason">Reasons for Payment</th>
-          <th scope="col" class="js-sum" data-info-type="usd" data-required="true" data-custom-id="Total Payments">Total Payments</th>
+          <th scope="col" class="js-sum" data-info-type="usd" data-required="true" data-custom-id="Total Payments" data-min="0">Total Payments</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
@@ -64,9 +64,9 @@ sub_section: editable_table
     &lt;tr>
       &lt;th scope="col" data-required="true" data-custom-id="Name">Name&lt;/th>
       &lt;th scope="col" data-required="true" data-custom-id="Title">Title&lt;/th>
-      &lt;th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*" data-custom-id="Equity Interest">Equity Interest&lt;/th>
+      &lt;th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*" data-custom-id="Equity Interest" data-min="0" data-max="100">Equity Interest&lt;/th>
       &lt;th scope="col" data-hint-text="This is optional" data-custom-id="Reason">Reasons for Payment&lt;/th>
-      &lt;th scope="col" class="js-sum" data-info-type="usd" data-required="true" data-custom-id="Total Payments">Total Payments&lt;/th>
+      &lt;th scope="col" class="js-sum" data-info-type="usd" data-required="true" data-custom-id="Total Payments" data-min="0">Total Payments&lt;/th>
       &lt;th scope="col">Actions&lt;/th>
     &lt;/tr>
   &lt;/thead>
@@ -94,12 +94,14 @@ sub_section: editable_table
   <p>The table has a few options for validation and input types.</p>
 
   <h4>Customizing input IDs</h4>
-  <p>Form fields in the table will generally have iteratable, generic IDs, such as <code>[TABLE_ID]_tr0_field1</code>. If you'd like to add some context to an id place a <code>data-custom-id</code> attribute in the cell’s corresponding <code>thead th</code>.</p>
+  <p>Form fields in the table will generally have iteratable, generic IDs, such as <code>[TABLE_ID]_tr0_field1</code>. If you'd like to add some context to an <code>id</code>, place a <code>data-custom-id</code> attribute in the cell’s corresponding <code>thead th</code>.</p>
 
   <ul>
     <li>Use characters that are only valid in an ID attribute</li>
     <li>Spaces will be converted to underscores</li>
   </ul>
+
+  <p>When a custom id is applied, the input <code>id</code> is structured as <code>[TABLE_ID]_tr0_field1_[CUSTOM_ID]</code></p>
 
   <h4>Using input ornaments</h4>
   <p>Editable tables can use special <a href="forms.html#input-ornaments">input ornaments</a> when the user adds or edits a row. Input ornaments can be used for $USD or %. When using input ornaments, the script will automatically apply a '%' or '$' to the table cell.</p>
@@ -110,10 +112,26 @@ sub_section: editable_table
   </ul>
 
   <h4>Validation</h4>
-  <p>It is possible to check validation on the form fields within the table. Validation can be be check upon:</p>
+  <p>It is possible to check validation on the form fields within the table. Validation can be be peformed upon:</p>
   <ul>
-    <li><strong>Required fields</strong>. To use validation on required fields, add the attribute <code>data-required="true"</code> to the corresponding <code>thead th</code>.</li>
-    <li><strong>Patterns</strong>. To apply a pattern to validate against, or trigger certain keyboards on mobile devices, add the attribute <code>data-pattern</code> to the corresponding <code>thead th</code> and place the pattern you like to use as the value. Example: <code>data-pattern="[0-9]*"</code>.</li>
+    <li>
+      <strong>Required fields:</strong> <br> To use validation on required fields, add the attribute <code>data-required="true"</code> to the corresponding <code>thead th</code>.
+    </li>
+    <li>
+      <strong>Patterns:</strong> <br> To validate for a pattern / trigger certain keyboards on mobile devices, use the attribute <code>data-pattern</code> to the field’s corresponding <code>thead th</code> and place the pattern you like to use as the value. Example: <code>data-pattern="[0-9]*"</code>.
+    </li>
+    <li>
+      <strong>Min:</strong> <br> To validate for a minimum value, use the attribute <code>data-min</code> to the field’s corresponding <code>thead th</code>. Example: <code>data-min="0"</code>. This will convert the input type to <code>number</code>.
+    </li>
+    <li>
+      <strong>Max:</strong> <br> To validate for a maximum value, use the attribute <code>data-max</code> to the field’s corresponding <code>thead th</code>. Example: <code>data-max="100"</code>. This will convert the input type to <code>number</code>.
+    </li>
+    <li>
+      <strong>Minlength:</strong> <br> To validate for a minimum number of characters, use the attribute <code>data-minlength</code> to the field’s corresponding <code>thead th</code>. Example: <code>data-minlength="3"</code>.
+    </li>
+    <li>
+      <strong>Maxlength:</strong> <br> To validate for a maximum number of characters, use the attribute <code>data-maxlength</code> to the field’s corresponding <code>thead th</code>. Example: <code>data-maxlength="20"</code>.
+    </li>
   </ul>
 
   <h4>Hint text</h4>

@@ -355,10 +355,28 @@ $(document).ready(function() {
           // Get max attribute
           if (typeof $table_header_th.attr('data-max') != 'undefined') {
             var max_value = $table_header_th.attr('data-max'),
-                max_attribute = 'min="' + max_value + '"';
+                max_attribute = 'max="' + max_value + '"';
           }
           else {
-            var min_attribute = '';
+            var max_attribute = '';
+          }
+
+          // Get max attribute
+          if (typeof $table_header_th.attr('data-maxlength') != 'undefined') {
+            var maxlength_value = $table_header_th.attr('data-maxlength'),
+                maxlength_attribute = 'maxlength="' + maxlength_value + '"';
+          }
+          else {
+            var maxlength_attribute = '';
+          }
+
+          // Get max attribute
+          if (typeof $table_header_th.attr('data-minlength') != 'undefined') {
+            var minlength_value = $table_header_th.attr('data-minlength'),
+                minlength_attribute = 'minlength="' + minlength_value + '"';
+          }
+          else {
+            var minlength_attribute = '';
           }
 
           // Get Pattern attribute
@@ -370,6 +388,7 @@ $(document).ready(function() {
             var pattern_attribute = '';
           }
 
+          // Get some more variables
           var input_type = $table_header_th.attr("data-info-type"),
               label_text = $table_header_th.text(),
               field_id = table_name + '_tr' + next_id + '_field' + (i + 1) + custom_id;
@@ -384,7 +403,13 @@ $(document).ready(function() {
             var aria_describedby_attribute = '';
           }
 
-
+          // Set input type to text if there is a min value or max value
+          if ((min_attribute != '') || (max_attribute != '')) {
+            var input_type_attribute = 'number';
+          }
+          else {
+            input_type_attribute = 'text';
+          }
 
           // IMPORTANT: Before creating the gem, we are going to need
           // to fix the file path of the SVG.
@@ -397,7 +422,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + min_attribute + ' ' + max_attribute + ' ' + minlength_attribute + ' ' + maxlength_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
               </div>';
               break;
             case "percent":
@@ -408,12 +433,13 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + min_attribute + '  ' + max_attribute + ' ' + minlength_attribute + ' ' + maxlength_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
               </div>';
               break;
             default:
-              var form_input = '<input id="' + field_id + '" type="text" '+ aria_describedby_attribute + ' ' + required_attribute + ' ' + pattern_attribute + '>';
+              var form_input = '<input id="' + field_id + '" type="' + input_type_attribute + '" '+ aria_describedby_attribute + ' ' + required_attribute + ' ' + min_attribute + ' ' + max_attribute + ' ' + minlength_attribute + ' ' + maxlength_attribute + ' ' + pattern_attribute + '>';
           }
+
 
 
           var form_field = '\
