@@ -271,9 +271,22 @@ $(document).ready(function() {
         // Create the table cells
         // Note - change the liquid tags
         for (var i = 0; i < table_cols; i++) {
+
+          var $table_header_th = $(table).find('thead tr th:nth-child(' + (i + 1) + ')');
+
+          // Get custom id attribute
+          if (typeof $table_header_th.attr('data-custom-id') != 'undefined') {
+            var custom_id_value = $table_header_th.attr('data-custom-id'),
+                custom_id = '_' + custom_id_value;
+            custom_id = custom_id.replace(/\s/g, "_");
+          }
+          else {
+            var custom_id = '';
+          }
+
           var data_header_text = $(table).find('thead tr th:nth-child(' + (i + 1) + ')').text();
-          var data_row_th = '<th scope="row" id="' + row_name + '_field' + (i + 1) + '_text" data-table-header="' + data_header_text + '"></th>';
-          var data_row_td = '<td id="' + row_name + '_field' + (i + 1) + '_text" data-table-header="' +  data_header_text + '" ></td>'
+          var data_row_th = '<th scope="row" id="' + row_name + '_field' + (i + 1) + custom_id + '_text" data-table-header="' + data_header_text + '"></th>';
+          var data_row_td = '<td id="' + row_name + '_field' + (i + 1) + custom_id + '_text" data-table-header="' +  data_header_text + '" ></td>'
           var data_row_actions ='\
             <td data-table-header="' +  data_header_text + '" >\
               <div class="sba-c-task-panel">\
@@ -336,57 +349,28 @@ $(document).ready(function() {
           }
 
           // Get required attribute
-          if ((typeof $table_header_th.attr('data-required') != 'undefined') && ($table_header_th.attr('data-required') == 'true')) {
-            var required_attribute = 'required'
-          }
-          else {
-            var required_attribute = '';
-          }
+          //if ((typeof $table_header_th.attr('data-required') != 'undefined') && ($table_header_th.attr('data-required') == 'true')) {
+          //  var required_attribute = 'required'
+          //}
+          //else {
+          //  var required_attribute = '';
+          //}
 
-          // Get min attribute
-          if (typeof $table_header_th.attr('data-min') != 'undefined') {
-            var min_value = $table_header_th.attr('data-min'),
-                min_attribute = 'min="' + min_value + '"';
-          }
-          else {
-            var min_attribute = '';
-          }
+          var optional_attribute_value = {};
+          var optional_attributes = [];
+          var optional_attribute_types = ['min', 'max', 'minlength', 'maxlength', 'pattern', 'required'];
 
-          // Get max attribute
-          if (typeof $table_header_th.attr('data-max') != 'undefined') {
-            var max_value = $table_header_th.attr('data-max'),
-                max_attribute = 'max="' + max_value + '"';
-          }
-          else {
-            var max_attribute = '';
-          }
+          for (var c = 0; c < optional_attribute_types.length; c++) {
 
-          // Get max attribute
-          if (typeof $table_header_th.attr('data-maxlength') != 'undefined') {
-            var maxlength_value = $table_header_th.attr('data-maxlength'),
-                maxlength_attribute = 'maxlength="' + maxlength_value + '"';
-          }
-          else {
-            var maxlength_attribute = '';
-          }
+            if (typeof $table_header_th.attr('data-'+ optional_attribute_types[c] +'') != 'undefined') {
+              optional_attribute_value[optional_attribute_types[c]] = $table_header_th.attr('data-'  + optional_attribute_types[c]);
+              optional_attributes.push(optional_attribute_types[c] + '="' + optional_attribute_value[optional_attribute_types[c]] + '"' );
+            }
+          };
 
-          // Get max attribute
-          if (typeof $table_header_th.attr('data-minlength') != 'undefined') {
-            var minlength_value = $table_header_th.attr('data-minlength'),
-                minlength_attribute = 'minlength="' + minlength_value + '"';
-          }
-          else {
-            var minlength_attribute = '';
-          }
+          optional_attributes = optional_attributes.join(" ").toString();
+          //console.log(optional_attributes)
 
-          // Get Pattern attribute
-          if (typeof $table_header_th.attr('data-pattern') != 'undefined') {
-            var pattern_value = $table_header_th.attr('data-pattern'),
-                pattern_attribute = 'pattern="' + pattern_value + '"';
-          }
-          else {
-            var pattern_attribute = '';
-          }
 
           // Get some more variables
           var input_type = $table_header_th.attr("data-info-type"),
@@ -404,12 +388,14 @@ $(document).ready(function() {
           }
 
           // Set input type to text if there is a min value or max value
-          if ((min_attribute != '') || (max_attribute != '')) {
-            var input_type_attribute = 'number';
-          }
-          else {
-            input_type_attribute = 'text';
-          }
+          //if ((min_attribute != '') || (max_attribute != '')) {
+          //  var input_type_attribute = 'number';
+          //}
+          //else {
+          //  input_type_attribute = 'text';
+          //}
+
+          var input_type_attribute = 'text';
 
           // IMPORTANT: Before creating the gem, we are going to need
           // to fix the file path of the SVG.
@@ -422,7 +408,7 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + min_attribute + ' ' + max_attribute + ' ' + minlength_attribute + ' ' + maxlength_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + optional_attributes +'>\
               </div>';
               break;
             case "percent":
@@ -433,11 +419,11 @@ $(document).ready(function() {
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
-                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + min_attribute + '  ' + max_attribute + ' ' + minlength_attribute + ' ' + maxlength_attribute + ' ' + required_attribute + ' ' + pattern_attribute +'>\
+                <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + optional_attributes +'>\
               </div>';
               break;
             default:
-              var form_input = '<input id="' + field_id + '" type="' + input_type_attribute + '" '+ aria_describedby_attribute + ' ' + required_attribute + ' ' + min_attribute + ' ' + max_attribute + ' ' + minlength_attribute + ' ' + maxlength_attribute + ' ' + pattern_attribute + '>';
+              var form_input = '<input id="' + field_id + '" type="' + input_type_attribute + '" '+ aria_describedby_attribute + ' ' + optional_attributes + '>';
           }
 
 
