@@ -348,14 +348,7 @@ $(document).ready(function() {
             var custom_id = '';
           }
 
-          // Get required attribute
-          //if ((typeof $table_header_th.attr('data-required') != 'undefined') && ($table_header_th.attr('data-required') == 'true')) {
-          //  var required_attribute = 'required'
-          //}
-          //else {
-          //  var required_attribute = '';
-          //}
-
+          // Get optional input attributes from data-[ATTRIBUTE]
           var optional_attribute_value = {};
           var optional_attributes = [];
           var optional_attribute_types = ['min', 'max', 'minlength', 'maxlength', 'pattern', 'required'];
