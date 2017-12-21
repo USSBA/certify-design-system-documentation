@@ -13,7 +13,7 @@
  * Usage:
  * Works on any <input type="date"> in non-supporting browsers
  *
- * To format dates on a number input, use 
+ * To format dates on a number input, use
  * <input type="number" class="js-format-as-date">
  *
  */
@@ -41,7 +41,7 @@ $(document).ready(function() {
     };
 
     date.on('keyup', function(e) {
-      this.type = 'number';
+      this.type = 'text';
       var input = this.value;
       if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
       var values = input.split('/').map(function(v) {
@@ -56,7 +56,7 @@ $(document).ready(function() {
     });
 
     date.on('blur', function(e) {
-      this.type = 'number';
+      this.type = 'text';
       var input = this.value;
       var values = input.split('/').map(function(v, i) {
         return v.replace(/\D/g, '')
