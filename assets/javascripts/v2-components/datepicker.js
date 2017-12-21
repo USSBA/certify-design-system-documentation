@@ -35,7 +35,7 @@ $(document).ready(function() {
     };
 
     date.on('keyup', function(e) {
-      this.type = 'text';
+      this.type = 'number';
       var input = this.value;
       if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
       var values = input.split('/').map(function(v) {
@@ -50,7 +50,7 @@ $(document).ready(function() {
     });
 
     date.on('blur', function(e) {
-      this.type = 'text';
+      this.type = 'number';
       var input = this.value;
       var values = input.split('/').map(function(v, i) {
         return v.replace(/\D/g, '')
