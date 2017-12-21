@@ -7,6 +7,8 @@ sub_section: datepicker
 <article>
   <h1>Datepicker</h1>
 
+  <p><a href="https://github.com/USSBA/certify-prototype/blob/master/assets/javascripts/v2-components/datepicker.js" target="_blank">JS File</a></p>
+
   <p>Date picker is a way to pick dates</p>
 
   <div class="sample">
@@ -27,7 +29,7 @@ sub_section: datepicker
   <ul>
     <li>You must use a form hint with an <code>id</code>. The form input must use an <code>aria-describedby</code> attribute to refer back to the hint's <code>id</code>. This provides context in an accessible way as a fallback to browsers that do not support <code>date</code> inputs.</li>
     <li>The <code>patter</code> attribute provides client-side validation. However, you must <strong>always</strong> use server-side validation.</li>
-    <li>Avoid using <code>min</code> and <code>max</code> attributes on the date picker, as some browsers have difficulty interpreting them on <code>date</code> inputs.</li>
+    <li>Avoid using <code>min</code> and <code>max</code> attributes on the date picker, as <a href="http://html5doctor.com/the-woes-of-date-input/" target="_blank">some browsers have difficulty interpreting them</a> on <code>date</code> inputs.</li>
   </ul>
 
   <h2>Date as formatted text field</h2>
