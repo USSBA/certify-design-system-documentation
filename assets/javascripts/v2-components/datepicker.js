@@ -40,7 +40,7 @@ $(document).ready(function() {
       return str;
     };
 
-    date.on('keydown', function(e) {
+    date.on('keyup', function(e) {
       this.type = 'text';
       var input = this.value;
       if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
