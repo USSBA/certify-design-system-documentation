@@ -7,8 +7,14 @@
  * that auto formats the text box as the user enters the date
  * to a MM/DD/YYYY format.
  *
+ * Also includes a way to format number fields with a class
+ * name of js-format-as-date
+ *
  * Usage:
- * Works on any <input type="date">
+ * Works on any <input type="date"> in non-supporting browsers
+ *
+ * To format dates on a number input, use 
+ * <input type="number" class="js-format-as-date">
  *
  */
 
