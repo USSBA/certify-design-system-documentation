@@ -5,7 +5,6 @@
 // Vender JS
  -{% include_relative vendor/jquery.min.js %}
  -{% include_relative vendor/uswds.min.js %}
- -{% include_relative vendor/quill.js %}
 
  // Add your JS sripts here
   -{% include_relative components/filter-firm-status.js %}
@@ -24,6 +23,7 @@
 
   // V2 Design System
   -{% include_relative v2-components/validations.js %}
+  -{% include_relative v2-components/datepicker.js %}
   -{% include_relative v2-components/editable-tables.js %}
   -{% include_relative v2-components/follow-ups.js %}
   -{% include_relative v2-components/task-panels.js %}
