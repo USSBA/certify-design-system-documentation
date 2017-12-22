@@ -6,14 +6,10 @@ is_a_form: yes
 body_class: hide-local-nav
 
 # Page Content
-page_h1: Letter of Intent
-lead_text: Upload your letter and forward the case up the chain.
+page_h1: Send letter of intent
+lead_text:
 cta_text: Next
 secondary_action_text: Cancel
-
-# Alert
-alert: true
-alert_text: This is not your final recommendation. This letter of intent completes the case from your workflow but you still need to make a final recommendation after 30 days for termination and early graduation or as soon as desired for suspension. <br><br>If terminating for a pattern of failure, firm must recieve two messages from BOS prior to initiating the letter of intent to terminate.
 
 # Tab Links
 application_link: application.html
@@ -24,18 +20,19 @@ messages_link: messages.html
 activity_log_link: activity-log.html
 ---
 
-<div class="sba-c-document-prompt sba-u-margin-top--6">
-  <p class="sba-c-document-prompt__header">Please attach the following documents</p>
-  <ul>
-    <li>Letter of intent</li>
-    <li data-filter-recommendation="Approval">Sole source restriction (optional)</li>
+<fieldset class="questions">
+  <h4>What type of letter of intent do you need to send?</h4>
+  <ul id="response" class="usa-unstyled-list">
+    <li>
+      <input id="letter_type_early_graduation" type="radio" name="letter_type" value="Intent to early graduate" required>
+      <label for="letter_type_early_graduation">Intent to early graduate</label>
+    </li>
+    <li>
+      <input id="letter_type_early_suspend_terminate" type="radio" name="letter_type" value="Intent to suspend/terminate" required>
+      <label for="letter_type_early_suspend_terminate">Intent to suspend/terminate</label>
+    </li>
   </ul>
-  <button class="sba-c-button" type="button" aria-controls="doc_selector1" aria-expanded="false">
-    <svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#file"></use>
-    </svg>Add document(s)
-  </button>
-</div>
+</fieldset>
 
 
 
@@ -47,7 +44,12 @@ activity_log_link: activity-log.html
       }
       else {
         updateStoredData();
-        nextPage("2.html");
+        if (letter_type == "Intent to early graduate") {
+          nextPage("graduate-instructions.html");
+        }
+        else {
+          nextPage("docs.html");
+        }
         return false;
       }
     });
