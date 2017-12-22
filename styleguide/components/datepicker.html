@@ -14,14 +14,14 @@ sub_section: datepicker
   <div class="sample">
     <form action="">
       <label for="date_input" class="sba-c-label sba-u-margin-top--0">Enter a date</label>
-      <p class="sba-c-form-hint" id="date_input_hint">Format must be MM/DD/YYYY</p>
+      <p class="sba-c-form-hint" id="date_input_hint">For example, MM/DD/YYYY</p>
       <input type="date" id="date_input" class="sba-c-input" aria-describedby="date_input_hint" pattern="(0[1-9]|1[012])\s?.\s?(0[1-9]|1[0-9]|2[0-9]|3[01])\s?.\s?[0-9]{4}" required />
       <button type="submit">Validate</button>
     </form>
   </div>
 
   <pre><code class="language-markup">&lt;label for="date_input" class="sba-c-label">Enter a date&lt;/label>
-&lt;p class="sba-c-form-hint" id="date_input_hint">Format must be MM/DD/YYYY&lt;/p>
+&lt;p class="sba-c-form-hint" id="date_input_hint">For example, MM/DD/YYYY&lt;/p>
 &lt;input type="date" id="date_input" class="sba-c-input" aria-describedby="date_input_hint" pattern="(0[1-9]|1[012]).(0[1-9]|1[0-9]|2[0-9]|3[01]).[0-9]{4}" required /></pre></code>
 
   <h2>Guidance</h2>
@@ -49,13 +49,13 @@ sub_section: datepicker
   <div class="sample">
     <form action="">
       <label for="date_input2" class="sba-c-label">Enter a date</label>
-      <p class="sba-c-form-hint" id="date_input_hint2">Format must be MM/DD/YYYY</p>
+      <p class="sba-c-form-hint" id="date_input_hint2">For example, MM/DD/YYYY</p>
       <input type="text" id="date_input2" class="sba-c-input sba-u-input-width--16 js-format-as-date" aria-describedby="date_input_hint2" pattern="(0[1-9]|1[012])\s?/\s?(0[1-9]|1[0-9]|2[0-9]|3[01])\s?/\s?[0-9]{4}" required />
       <button type="submit">Validate</button>
     </form>
   </div>
   <pre><code class="language-markup">&lt;label for="date_input2" class="sba-c-label sba-u-margin-top--0">Enter a date&lt;/label>
-&lt;p class="sba-c-form-hint" id="date_input_hint2">Format must be MM/DD/YYYY&lt;/p>
+&lt;p class="sba-c-form-hint" id="date_input_hint2">For example, MM/DD/YYYY&lt;/p>
 &lt;input type="text" id="date_input2" class="sba-c-input sba-u-input-width--16 js-format-as-date" aria-describedby="date_input_hint2" pattern="(0[1-9]|1[012])\s?.\s?(0[1-9]|1[0-9]|2[0-9]|3[01])\s?.\s?[0-9]{4}" required /></pre></code>
 
 

@@ -28,7 +28,8 @@ $alert-icon-size: $spacer-5;
 .sba-c-alert {
   @include display(flex);
   background-color: $color-primary-alt-lightest;
-  border-left: $alert-bar-size solid $color-primary-alt;
+  border: 1px solid $color-primary-alt;
+  border-left-width: $alert-bar-size;
   box-sizing: border-box;
   color: $color-base;
   min-height: $alert-icon-size + $spacer-2;
