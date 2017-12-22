@@ -63,11 +63,14 @@ activity_log_link: activity-log.html
       else {
         updateStoredData();
 
-        if (currently_with == "Size") {
+        if ((currently_with == "Size") || (currently_with == "District Counsel") || (currently_with == "OIG")) {
           nextPage("area-office.html");
         }
         else if (currently_with == "District Office") {
           nextPage("district-office.html");
+        }
+        else if (currently_with == "HQ Program") {
+          nextPage("forward.html");
         }
         else {
           nextPage("2.html");
