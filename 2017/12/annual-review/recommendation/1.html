@@ -39,7 +39,7 @@ activity_log_link: activity-log.html
       <label for="recommendation_withdrawal">Withdrawal</label>
     </li>
     <li>
-      <input id="recommendation_termination" type="radio" name="recommendation" value="Termination" required>
+      <input id="recommendation_termination" type="radio" name="recommendation" value="Termination" data-follow-up="termination_follow_up" aria-controls="termination_follow_up" aria-collapsed="true" required>
       <label for="recommendation_termination">Termination</label>
     </li>
   </ul>
@@ -47,6 +47,10 @@ activity_log_link: activity-log.html
 
 <div class="sba-c-follow-up" id="withdrawal_follow_up" hidden>
   <p><strong>Note:</strong> Before you can proceed with this option, you must <a href="../accept-for-processing/1.html">accept the case for processing</a>.</p>
+</div>
+
+<div class="sba-c-follow-up" id="termination_follow_up" hidden>
+  <p><strong>Note:</strong> You must write a letter of intent before making a recommendation to terminate. <a href="../letter-of-intent/1.html">Write your letter of intent</a>.</p>
 </div>
 
 <!-- This script will mimic the interaction we want to see -->
