@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    <title>Certify Prototype</title>
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex">
+
+
+
+
+<link rel="stylesheet" href="../../../assets/stylesheets/application.css">
+<script src="../../../assets/javascripts/vendor/svg4everybody.js"></script>
+<script>svg4everybody();</script>
+<script src="../../../assets/javascripts/application.js"></script>
+<meta name="robots" content="noindex">
+
+  </head>
+  <body class="public mainscreen ">
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  
+    <header class="masthead">
+  <div class="usa-navbar certify-navbar">
+    <div class="usa-logo certify-logo" id="logo">
+      <img alt="certify.SBA.gov logo" src="../../../assets/img/certify-sba-gov-logo_on-dark.png" />
+    </div>
+    <button class="usa-menu-btn">Menu</button>
+  </div>
+
+<div class="usa-grid-full masthead__alert-wrap hidden">
+  <div class="usa-alert usa-alert-warning">
+    <div class="usa-alert-body">
+      <h3 class="usa-alert-heading">Please close this case</h3>
+      <p class="usa-alert-text">The firm has requested to withdraw its 8(a) Ininitial Application on 00/00/0000.</p>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-grid-full masthead__content">
+    <div class="usa-width-one-fourth masthead__content__primary">
+      <h1 class="masthead__primary-heading"><a href="firm-overview.html" data-print="firm_name">Mike’s Garage</a></h1>
+      <h2 class="masthead__secondary-heading" data-print="applicationname">
+        
+          Annual Review Y1
+        
+      </h2>
+    </div>
+    <div  class="usa-width-one-sixth masthead__content__secondary">
+      <p>
+        <strong>Program year</strong><br>
+        3 <br>
+        &nbsp;
+      </p>
+    </div>
+    <div class="usa-width-one-sixth masthead__content__secondary">
+      <p>
+        <strong>Firm owner</strong><br>
+        Mike Jones <br>
+        703-555-3232
+      </p>
+    </div>
+    <div id="field_office" class="usa-width-one-sixth masthead__content__secondary">
+      <p>
+        <strong>District office</strong><br>
+        <span data-print="field_office"></span> <br>
+        <a href="select-field-office.html">Change</a>
+      </p>
+    </div>
+  </div>
+
+  <nav role="navigation" class="usa-nav certify-nav">
+    <div class="usa-nav-inner">
+      <button class="usa-nav-close">
+        <img src="/assets/img/close.svg" alt="close">
+      </button>
+
+      <div class="certify-global-nav">
+  <div class="usa-grid-full">
+    <div class="certify-global-nav__primary">
+      <a href="#" class="certify-logo__link">
+        <img class="certify-logo" alt="certify.SBA.gov logo" src="../../../assets/img/certify-sba-gov-logo_on-dark.png" />
+      </a>
+      <ul class="usa-nav-primary usa-accordion">
+        <li class="">
+          <a class="usa-nav-link" href="
+            dashboard.html
+          ">
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <!--
+        <li>
+          <button class="
+          usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="side-nav-1">
+            <span>Cases</span>
+          </button>
+          <ul id="side-nav-1" class="usa-nav-submenu">
+            <li>
+              <a href="#">My Cases</a>
+            </li>
+            <li>
+              <a href="#">All Cases</a>
+            </li>
+          </ul>
+        </li>
+      -->
+        <li class="certify-case-search">
+          <form class="usa-search usa-search-small">
+            <div role="search">
+              <label class="usa-sr-only" for="search-field-small">Search small</label>
+              <input id="search-field-small" type="search" name="search">
+              <button type="submit">
+                <span class="usa-sr-only">Search</span>
+              </button>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <ul class="usa-nav-primary usa-accordion">
+      <li>
+        <a class="usa-nav-link" href="#">
+          <span>Admin</span>
+        </a>
+      </li>
+      <li>
+        <a class="usa-nav-link" href="#">
+          <span>Notifications</span>
+        </a>
+      </li>
+      <li>
+        <button class="
+        usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="side-nav-2">
+          <span>My Account</span>
+        </button>
+        <ul id="side-nav-2" class="usa-nav-submenu">
+          <li>
+            <a href="#">Settings</a>
+          </li>
+          <li>
+            <a href="#">Log Out</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="usa-nav-link" href="#">
+          <span>Help</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="certify-local-nav">
+        <div class="usa-grid-full">
+          <h2 class="certify-local-nav__heading">Mike's Gararage – 8(a) Initial Application</h2>
+          <ul class="usa-nav-primary usa-accordion">
+            <!--
+            <li>
+              <a class="usa-nav-link " href="#">
+                <span>Overview</span>
+              </a>
+            </li>
+            -->
+            <li>
+              <a class="usa-nav-link " href="
+                overview.html
+              ">
+                <span>Annual Review</span>
+              </a>
+            </li>
+            <li>
+              <button class="
+              usa-accordion-button usa-nav-link  current " aria-expanded="false" aria-controls="side-nav-3">
+                <span>Documents</span>
+              </button>
+              <ul id="side-nav-3" class="usa-nav-submenu">
+                <li>
+                  <a href="
+                    firm-documents.html
+                  ">Firm Documents</a>
+                </li>
+                <li>
+                  <a href="
+                    analyst-documents.html
+                  ">Analyst Documents</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="usa-nav-link " href="
+                notes.html
+              ">
+                <span>SBA Notes</span>
+              </a>
+            </li>
+            <li>
+              <a class="usa-nav-link " href="
+                messages.html
+              ">
+                <span>Messages</span>
+              </a>
+            </li>
+            <li>
+              <a class="usa-nav-link " href="
+                activity-log.html
+              ">
+                <span>Activity Log</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<script>
+$(document).ready(function() {
+  if (window.location.search.indexOf('withdrawal=true') > -1) {
+    var k = "withdrawal"
+    var v = "true"
+    sessionStorage.setItem(k, v);
+  }
+
+  if ((typeof withdrawal != "undefined") && (withdrawal == "true")) {
+    $('.masthead__alert-wrap').removeClass('hidden');
+  }
+
+
+  if ((typeof field_office == "undefined") || (field_office == "") || (field_office == "[object HTMLCollection]")) {
+    $('#field_office').remove();
+  }
+});
+</script>
+
+  
+
+  
+    <div class="sba-l-taskbar-container">
+      <div class="taskbar-wrap" id="taskbar-wrap">
+  <div class="taskbar">
+    <div class="taskbar-section">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Annual Review is in</span> <span data-print="applicationstatus">Screening</span>
+      </p>
+    </div>
+    <div class="taskbar-section hide-mobile" data-filter-applicationstatus="Screening">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Due date is</span> <span id="due_date_text">10/28/2017 <small>(15 days left)</small></span>
+      </p>
+    </div>
+    <div class="taskbar-section hide-mobile" data-filter-applicationstatus="Processing">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Due date is</span> <span id="due_date_text">11/09/2017 <small>(30 days left)</small></span>
+      </p>
+    </div>
+    <div class="taskbar-section hide-mobile">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Case owner</span> <span>Philip Barambani</span>
+      </p>
+    </div>
+    <div class="taskbar-section hide-mobile">
+      <p class="taskbar-section__text">
+        <span class="taskbar-section__subhead">Currently with</span> <span data-print="currently_with">Philip Barambani</span>
+      </p>
+    </div>
+    <div class="taskbar-actions">
+      <div class="task-panel" id="screening_task_panel">
+        <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">Actions</button>
+        <div id="task-panel1" class="task-panel-content">
+          <ul class="task-panel-menu">
+            <li class="task-panel-menu__item">
+              <a href="
+                accept-for-processing/1.html
+              " class="task-panel-menu__link"><strong>Accept for processing</strong></a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a id="add_note" href="
+                notes.html?new_note=true
+              " class="task-panel-menu__link">Add SBA note</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                assign-case/1.html
+              " class="task-panel-menu__link">Reassign firm</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                refer-case/1.html
+              " class="task-panel-menu__link">Refer case within SBA </a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                return-for-revisions/1.html
+              " class="task-panel-menu__link">Send deficiency letter</a>
+            </li>
+          </ul>
+          <hr>
+          <ul class="task-panel-menu">
+            <li class="task-panel-menu__item">
+              <a href="
+                exit-interview/1.html
+              " class="task-panel-menu__link">Send exit interview</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- DEVNOTE: The ID is only for JS purposes in prototype. DO NOT INCLUDE -->
+      <div class="task-panel" id="processing_task_panel">
+        <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">Actions</button>
+        <div id="task-panel1" class="task-panel-content">
+          <ul class="task-panel-menu">
+            <li class="task-panel-menu__item">
+              <a href="
+                recommendation/1.html
+              " class="task-panel-menu__link"><strong>Make a recommendation</strong></a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                letter-of-intent/1.html
+              " class="task-panel-menu__link">Send letter of intent</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                assign-case/1.html
+              " class="task-panel-menu__link">Reassign firm</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                analyst-documents.html
+              " class="task-panel-menu__link">Upload a document</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a id="add_note" href="
+                notes.html?new_note=true
+              " class="task-panel-menu__link">Add SBA note</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                refer-case/1.html
+              " class="task-panel-menu__link">Refer case within SBA </a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                #
+              " class="task-panel-menu__link">Change due date</a>
+            </li>
+          </ul>
+          <hr>
+          <ul class="task-panel-menu">
+            <li class="task-panel-menu__item">
+              <a href="
+                exit-interview/1.html
+              " class="task-panel-menu__link">Send exit interview</a>
+            </li>
+            <li class="task-panel-menu__item">
+              <a href="
+                suspension/1.html
+              " class="task-panel-menu__link--emergency">Suspend the firm</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+  if (typeof applicationstatus !== "undefined") {
+    if (applicationstatus == "Processing") {
+      $('#screening_task_panel').remove();
+    }
+    else {
+      $('#processing_task_panel').remove();
+    }
+  }
+  else {
+    $('#processing_task_panel').remove();
+  }
+
+
+});
+</script>
+
+    </div>
+  
+
+  <div class="sba-l-container">
+    <div class="sba-l-row">
+      <div class="sba-l-col--12 sba-u-padding-x--2">
+
+        <div class="certify-page-header">
+          <div class="certify-page-header__primary">
+            <h1>Firm Documents</h1>
+          </div>
+          
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="sba-l-row">
+      <div class="sba-l-sm-col--12 sba-l-md-col--golden-lg sba-l-lg-col--9 sba-u-padding-x--2 sba-u-lg-padding-right--6">
+  <div class="table-header">
+    <div class="table-info">
+      <p><strong>7 documents</strong></p>
+    </div>
+    <form class="usa-search usa-search-small">
+      <div role="search">
+        <label class="usa-sr-only" for="search-field-small">Search documents</label>
+        <input id="search-field-small" type="search" name="search" placeholder="Search documents table">
+        <button type="submit">
+          <span class="usa-sr-only">Search</span>
+        </button>
+      </div>
+    </form>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Document Name</th>
+        <th>Uploaded By</th>
+        <th>Type</th>
+        <th>Date Uploaded</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          <a href="#">attachment3.pdf</a>
+        </th>
+        <td>Mike Jones <small>(Owner)</small></td>
+        <td>Articles of incorporation</td>
+        <td>06/15/17</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
+      </tr>
+      <tr>
+        <th><a href="#">passports.pdf</a></th>
+        <td>Mike Jones <small>(Owner)</small></td>
+        <td>Unexpired passports</td>
+        <td>06/12/17</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
+      </tr>
+      <tr>
+        <th><a href="#">agreement.pdf</a></th>
+        <td>Mike Jones <small>(Owner)</small></td>
+        <td>Joint venture agreements</td>
+        <td>06/12/17</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
+      </tr>
+      <tr>
+        <th><a href="#">cogs.pdf</a></th>
+        <td>Mike Jones <small>(Owner)</small></td>
+        <td>Certificate of Good Standing</td>
+        <td>06/12/17</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
+      </tr>
+      <tr>
+        <th><a href="#">ContractList.pdf</a></th>
+        <td>Alex Hambry <small>(Contributor)</small></td>
+        <td>Contract List</td>
+        <td>06/10/17</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
+      </tr>
+      <tr>
+        <th><a href="#">tax.pdf</a></th>
+        <td>Mike Jones <small>(Owner)</small></td>
+        <td>Other Tax Document</td>
+        <td>06/11/17</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
+      </tr>
+      <tr>
+        <th><a href="#">bsa.pdf</a></th>
+        <td>Alex Hambry <small>(Contributor)</small></td>
+        <td>Buy-Sell Agreement</td>
+        <td>06/10/17</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor odio eu magna consectetur, eget posuere odio aliquet. In mattis tellus iaculis tellus vestibulum, nec lacinia nibh pretium.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a href="#">View archived documents</a></p>
+</div>
+<div class="sba-l-sm-col--12 sba-l-md-col--golden-sm sba-l-lg-col--3 sba-u-padding-x--2">
+  <h2>Find Documents by Person</h2>
+  <p>Select a name from the list to see documents uploaded by an owner or principle of the firm.</p>
+  <form class="usa-form">
+    <label for="options">Name</label>
+    <select name="options" id="options">
+      <option value="value1"></option>
+      <option value="Allen Hambry">Allen Hambry (Contributor)</option>
+      <option value="Mike Jones">Mike Jones (Owner)</option>
+    </select>
+
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<!-- This script will mimic the interaction we want to see -->
+<script>
+  $(document).ready(function() {
+    $('table').DataTable( {
+      "aaSorting": [],
+      "columns": [
+        null,
+        null,
+        null,
+        null,
+        { "orderable": false }
+      ],
+      "info":     false,
+      "paging":   false,
+      "searching":   false
+    } );
+
+    $("table").removeClass('dataTable');
+  });
+</script>
+
+    </div>
+  </div>
+
+
+
+  <script>
+  $(function() {
+    $('.expander-view-more-trigger').click(function () {
+      $(this).toggleClass("expander-view-more-hidden");
+    });
+  })
+</script>
+<div class="usa-one-whole">
+  <a class="return_to_top" href="#top">Return to top</a>
+</div>
+
+
+  <footer class="usa-footer usa-footer-medium" id="footer" role="contentinfo">
+  <div class="usa-grid"></div>
+  <div class="footer-feedback">
+    <div class="usa-grid-full">
+      <span>Your experience is important to us. Please email us at</span>&nbsp;
+      <a class="feedback" href="mailto:certify@sba.gov">certify@sba.gov</a>&nbsp;
+      <span>with comments or suggestions.</span>
+    </div>
+  </div>
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav">
+        <ul class="usa-unstyled-list">
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="http://sba.gov/contracting" target="_blank"> SBA.gov/contracting</a>
+          </li>
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="http://whitehouse.gov/" target="_blank"> WhiteHouse.gov</a>
+          </li>
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="http://regulations.gov/" target="_blank">Regulations.gov</a>
+          </li>
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="https://business.usa.gov/" target="_blank">  BusinessUSA.gov</a>
+          </li>
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="http://usa.gov/" target="_blank">  USA.gov</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="usa-footer-secondary_section">
+    <div class="usa-grid-full">
+      <div class="usa-footer-logo usa-width-one-half">
+        <a href="http://www.sba.gov" target="_blank">
+          <img alt="U.S. Small Business Administration logo" width="180px" src="../../../assets/img/sba_logo-71184dd072683081eab26174ea34e79e0df016b2d30ab9b5583cbbc481b7fbeb.png" />
+        </a>
+      </div>
+      <div class="usa-footer-contact-links usa-width-one-half">
+        <a class="usa-link-facebook" href="https://www.facebook.com/SBAgov" target="_blank" title="Follow certify.SBA.gov on facebook!"></a>
+        <a class="usa-link-twitter" href="https://www.twitter.com/sbagov" target="_blank" title="Follow certify.SBA.gov on twitter!"></a>
+        <a class="usa-link-youtube" href="https://www.youtube.com/c/sbagov" target="_blank" title="Follow certify.SBA.gov on YouTube!"></a>
+        <address></address>
+        <h3 class="usa-footer-contact-heading">Contact SBA</h3>
+        <p>&#40;800&#41; 827-5722</p>
+        <a href="mailto:answerdesk@sba.gov">answerdesk@sba.gov</a>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <span class="usa-text-small usa-disclaimer-stage">Version: 2.2.8.build_1489332101_g0926420</span>
+    </div>
+  </div>
+</footer>
+
+
+  <div class="note-popup">
+  <a href="#" id="note-popup-toggle" class="note-popup__toggle">
+    <header class="note-popup__header">
+      <h4 class="note-popup__heading">New SBA Note</h4>
+      <button type="button" id="note-popup-close" class="note-popup__close">Close</button>
+    </header>
+  </a>
+  <form action="" id="new-note-form" class="new-note-form">
+    <fieldset class="questions">
+      <legend class="usa-sr-only">New Note</legend>
+      <label for="note_subject">Title</label>
+      <input type="text" id="note_subject">
+      <label for="note">Note</label>
+      <textarea name="" id="note"></textarea>
+    </fieldset>
+
+    <fieldset class="question tags">
+      <h4>Tags</h4>
+        <div class="usa-width-one-third">
+          <ul class="tag-selection-list">
+            <li>
+              <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
+              <label for="note-tag--BOS-Analysis">BOS Analysis</label>
+            </li>
+            <li>
+              <input id="note-tag--Ownership" type="checkbox" name="note-tags" value="Ownership">
+              <label for="note-tag--Ownership">Ownership</label>
+            </li>
+            <li>
+              <input id="note-tag--Control" type="checkbox" name="note-tags" value="Control">
+              <label for="note-tag--Control">Control</label>
+            </li>
+
+          </ul>
+        </div>
+        <div class="usa-width-one-third">
+          <ul class="tag-selection-list">
+            <li>
+              <input id="note-tag--Size" type="checkbox" name="note-tags" value="Size">
+              <label for="note-tag--Size">Size</label>
+            </li>
+            <li>
+              <input id="note-tag--Business-Development" type="checkbox" name="note-tags" value="Business Development">
+              <label for="note-tag--Business-Development">Business Development</label>
+            </li>
+            </li>
+          </ul>
+        </div>
+        <div class="usa-width-one-third">
+          <ul class="tag-selection-list">
+            <li>
+              <input id="note-tag--Economic-Disadvantage" type="checkbox" name="note-tags" value="Economic Disadvantage">
+              <label for="note-tag--Economic-Disadvantage">Economic Disadvantage</label>
+            </li>
+            <li>
+              <input id="note-tag--Social-Disadvantage" type="checkbox" name="note-tags" value="Social Disadvantage">
+              <label for="note-tag--Social-Disadvantage">Social Disadvantage</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <button type="submit">Add SBA note</button>
+  </form>
+</div>
+
+
+  </body>
+</html>

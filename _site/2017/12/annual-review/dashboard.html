@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    <title>Certify Prototype</title>
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex">
+
+
+
+
+<link rel="stylesheet" href="../../../assets/stylesheets/application.css">
+<script src="../../../assets/javascripts/vendor/svg4everybody.js"></script>
+<script>svg4everybody();</script>
+<script src="../../../assets/javascripts/application.js"></script>
+<meta name="robots" content="noindex">
+
+  </head>
+  <body class="public mainscreen ">
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  
+    <header class="masthead">
+  <div class="usa-navbar certify-navbar">
+    <div class="usa-logo certify-logo" id="logo">
+      <img alt="certify.SBA.gov logo" src="../../../assets/img/certify-sba-gov-logo_on-dark.png" />
+    </div>
+    <button class="usa-menu-btn">Menu</button>
+  </div>
+
+  <nav role="navigation" class="usa-nav certify-nav">
+    <div class="usa-nav-inner">
+      <button class="usa-nav-close">
+        <img src="/assets/img/close.svg" alt="close">
+      </button>
+
+      
+        <div class="certify-global-nav">
+  <div class="usa-grid-full">
+    <div class="certify-global-nav__primary">
+      <a href="#" class="certify-logo__link">
+        <img class="certify-logo" alt="certify.SBA.gov logo" src="../../../assets/img/certify-sba-gov-logo_on-dark.png" />
+      </a>
+      <ul class="usa-nav-primary usa-accordion">
+        <li class=" current ">
+          <a class="usa-nav-link" href="
+            #
+          ">
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <!--
+        <li>
+          <button class="
+          usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="side-nav-1">
+            <span>Cases</span>
+          </button>
+          <ul id="side-nav-1" class="usa-nav-submenu">
+            <li>
+              <a href="#">My Cases</a>
+            </li>
+            <li>
+              <a href="#">All Cases</a>
+            </li>
+          </ul>
+        </li>
+      -->
+        <li class="certify-case-search">
+          <form class="usa-search usa-search-small">
+            <div role="search">
+              <label class="usa-sr-only" for="search-field-small">Search small</label>
+              <input id="search-field-small" type="search" name="search">
+              <button type="submit">
+                <span class="usa-sr-only">Search</span>
+              </button>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <ul class="usa-nav-primary usa-accordion">
+      <li>
+        <a class="usa-nav-link" href="#">
+          <span>Admin</span>
+        </a>
+      </li>
+      <li>
+        <a class="usa-nav-link" href="#">
+          <span>Notifications</span>
+        </a>
+      </li>
+      <li>
+        <button class="
+        usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="side-nav-2">
+          <span>My Account</span>
+        </button>
+        <ul id="side-nav-2" class="usa-nav-submenu">
+          <li>
+            <a href="#">Settings</a>
+          </li>
+          <li>
+            <a href="#">Log Out</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="usa-nav-link" href="#">
+          <span>Help</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      
+    </div>
+  </nav>
+</header>
+
+  
+
+  
+
+  <div class="sba-l-container">
+    <div class="sba-l-row">
+      <div class="sba-l-col--12 sba-u-padding-x--2">
+
+        <div class="certify-page-header">
+          <div class="certify-page-header__primary">
+            <h1>Dashboard</h1>
+          </div>
+          
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="sba-l-row">
+      <div class="sba-l-col--12 sba-u-padding-x--2">
+  <section class="dashboard-section">
+    <header class="dashboard-section__header sba-u-margin-bottom--6">
+      <h2 class="dashboard-section__heading">My Current Workload</h2>
+    </header>
+
+    <div class="sba-l-row sba-u-margin-x--neg2">
+      <div class="sba-l-sm-col--12 sba-l-md-col--golden-sm sba-l-lg-col--3 sba-u-padding-x--2">
+        <form action="#" class="certify-facets">
+          <h2 class="certify-facets__form-heading">Filter Cases</h2>
+          <fieldset class="certify-facets__set sba-u-margin-bottom--6">
+            <legend class="certify-facets__heading sba-u-margin-bottom--2">Sort</legend>
+            <select name="" id="">
+              <option value="" disabled>--</option>
+              <option value="">Alphabetical</option>
+              <option value="">Most recent action</option>
+              <option value="">Status</option>
+            </select>
+          </fieldset>
+          <fieldset class="certify-facets__set">
+            <legend class="certify-facets__heading">Status</legend>
+            <ul class="certify-facets__list">
+              <li>
+                <input type="checkbox" name="category" id="approval" value="Approval">
+                <label for="approval">Approval</label>
+              </li>
+              <li>
+                <input type="checkbox" name="category" id="early_graduation" value="Early Graduation">
+                <label for="early_graduation">Early Graduation</label>
+              </li>
+
+              <li>
+                <input type="checkbox" name="category" id="Incomplete" value="Incomplete">
+                <label for="Incomplete">Incomplete</label>
+              </li>
+              <li>
+                <input type="checkbox" name="category" id="not-received" value="Not Received">
+                <label for="not-received">Not Received</label>
+              </li>
+              <li>
+                <input type="checkbox" name="category" id="Suspension" value="Suspension">
+                <label for="Suspension">Suspension</label>
+              </li>
+              <li>
+                <input type="checkbox" name="category" id="Termination" value="Termination">
+                <label for="Termination">Termination</label>
+              </li>
+              <li>
+                <input type="checkbox" name="category" id="Witihdrawal" value="Withdrawal">
+                <label for="Withdrawal">Withdrawal</label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+        </div>
+        <div class="sba-l-sm-col--12 sba-l-md-col--golden-lg sba-l-lg-col--9 sba-u-padding-x--2 sba-u-lg-padding-left--6">
+          <ul class="usa-unstyled-list">
+            <li>
+              <div class="sba-c-card">
+                <div class="sba-c-card__header">
+                  <div class="sba-l-row ">
+                    <div class="sba-l-col">
+                      <div class="sba-l-row ">
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h3 class="sba-c-card__primary-heading"><a href="firm-overview.html?firm_name=TechWashCo">TechWashCo</a></h3>
+                          <p class="sba-u-margin-y--0"><strong>Program start date:</strong> June 15, 2015</p>
+                        </div>
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h4 class="sba-u-margin-y--0">Most recent action:</h4>
+                          <p class="sba-u-margin-y--0">30-day letter sent <span class="sba-u-color--muted">7/21/17</span> <br> 2017 Annual review <span class="sba-u-color--muted">(Not received)</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sba-l-col sba-c-card__controls sba-u-lg-align-self--center">
+                      <button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-js-visibility-trigger" aria-controls="cardTechWashCo_content" aria-expanded="false" type="button">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#chevron-down"></use>
+                          <span class="sba-u-visibility--screen-reader">Toggle Content</span>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sba-c-card__body" id="cardTechWashCo_content" hidden>
+                  <p class="sba-u-margin-y--0"><strong>Firm owner:</strong> Mike Jones</p>
+                  <p class="sba-u-margin-top--0"><strong>DUNS Number:</strong> 382920392</p>
+                  <table class="sba-c-table sba-c-table--borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Application</th>
+                        <th scope="col">Last Action</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Currently With</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=TechWashCo&applicationname=2017%20Annual%20Review&applicationstatus=Screening">2017 Annual Review</a></th>
+                        <td data-table-header="Last Action">Sent 60-day letter</td>
+                        <td data-table-header="Status">Not received</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=TechWashCo&applicationname=Initial%20Application&applicationstatus=Processing">Initial Application</a></th>
+                        <td data-table-header="Last Action">Approved</td>
+                        <td data-table-header="Status">Complete</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="sba-c-card">
+                <div class="sba-c-card__header">
+                  <div class="sba-l-row ">
+                    <div class="sba-l-col">
+                      <div class="sba-l-row ">
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h3 class="sba-c-card__primary-heading"><a href="firm-overview.html?firm_name=Mitchel%20Plumbing">Mitchel Plumbing</a></h3>
+                          <p class="sba-u-margin-y--0"><strong>Program start date:</strong> June 15, 2015</p>
+                        </div>
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h4 class="sba-u-margin-y--0">2017 Annual Review status:</h4>
+                          <p class="sba-u-margin-y--0">Accepted for processing 12/22/17</p>
+                          <p class="sba-u-margin-y--0">Currently with Rick Smith</p>
+                          <p class="sba-u-margin-y--0">Processing due: 1/21/18</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="sba-c-card">
+                <div class="sba-c-card__header">
+                  <div class="sba-l-row ">
+                    <div class="sba-l-col">
+                      <div class="sba-l-row ">
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h3 class="sba-c-card__primary-heading"><a href="firm-overview.html?firm_name=FBL%20Landscaping">FBL Landscaping</a></h3>
+                          <p class="sba-u-margin-y--0"><strong>Program start date:</strong> June 15, 2015</p>
+                        </div>
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h4 class="sba-u-margin-y--0">Most recent action:</h4>
+                          <p class="sba-u-margin-y--0">Accepted for processing <span class="sba-u-color--muted">07/12/18</span> | 2017 Annual Review</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sba-l-col sba-c-card__controls sba-u-lg-align-self--center">
+                      <button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-js-visibility-trigger" aria-controls="card1_content" aria-expanded="false" type="button">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#chevron-down"></use>
+                          <span class="sba-u-visibility--screen-reader">Toggle Content</span>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="sba-c-card__body" id="card1_content" hidden>
+                  <p class="sba-u-margin-y--0"><strong>Firm owner:</strong> Mike Jones</p>
+                  <p class="sba-u-margin-top--0"><strong>DUNS Number:</strong> 382920392</p>
+                  <table class="sba-c-table sba-c-table--borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Application</th>
+                        <th scope="col">Last Action</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Currently With</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=FBL%20Landscaping&applicationname=2017%20Annual%20Review&applicationstatus=Processing">2017 Annual Review</a></th>
+                        <td data-table-header="Last Action">Accepted for processing <span class="sba-u-color--muted">07/12/18</span></td>
+                        <td data-table-header="Status">Processing</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=FBL%20Landscaping&applicationname=2016%20Annual%20Review&applicationstatus=Processing">2016 Annual Review</a></th>
+                        <td data-table-header="Last Action">Approved</td>
+                        <td data-table-header="Status">Complete</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=FBL%20Landscaping&applicationname=2015%20Annual%20Review&applicationstatus=Processing">2015 Annual Review</a></th>
+                        <td data-table-header="Last Action">Approved</td>
+                        <td data-table-header="Status">Complete</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=FBL%20Landscaping&applicationname=2014%20Annual%20Review&applicationstatus=Processing">2014 Annual Review</a></th>
+                        <td data-table-header="Last Action">Approved</td>
+                        <td data-table-header="Status">Complete</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=FBL%20Landscaping&applicationname=Initial%20Application&applicationstatus=Processing">Initial Application</a></th>
+                        <td data-table-header="Last Action">Approved</td>
+                        <td data-table-header="Status">Complete</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="sba-c-card">
+                <div class="sba-c-card__header">
+                  <div class="sba-l-row ">
+                    <div class="sba-l-col">
+                      <div class="sba-l-row ">
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h3 class="sba-c-card__primary-heading"><a href="firm-overview.html?firm_name=Fink%20Technology%20Company">Fink Technology Company</a></h3>
+                          <p class="sba-u-margin-y--0"><strong>Program start date:</strong> June 15, 2015</p>
+                        </div>
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h4 class="sba-u-margin-y--0">Most recent action:</h4>
+                          <p class="sba-u-margin-y--0">Letter of intent sent <span class="sba-u-color--muted">11/12/17</span> | 2017 Annual Review <span class="sba-u-color--muted">(Suspension)</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sba-l-col sba-c-card__controls sba-u-lg-align-self--center">
+                      <button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-js-visibility-trigger" aria-controls="card2_content" aria-expanded="false" type="button">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#chevron-down"></use>
+                          <span class="sba-u-visibility--screen-reader">Toggle Content</span>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sba-c-card__body" id="card2_content" hidden>
+                  <p class="sba-u-margin-y--0"><strong>Firm owner:</strong> Bob Allen</p>
+                  <p class="sba-u-margin-top--0"><strong>DUNS Number:</strong> 382920392</p>
+                  <table class="sba-c-table sba-c-table--borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Application</th>
+                        <th scope="col">Last Action</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Currently With</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=Fink%20Technology%20Company&applicationname=2017%20Annual%20Review&applicationstatus=Processing">2017 Annual Review</a></th>
+                        <td data-table-header="Last Action">Letter of intent sent <span class="sba-u-color--muted">10/13/17</span></td>
+                        <td data-table-header="Status">Suspension</td>
+                        <td data-table-head="Currently With">HQ</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=Fink%20Technology%20Company&applicationname=Initial%20Application&applicationstatus=Processing">Initial Application</a></th>
+                        <td data-table-header="Last Action">Approved</td>
+                        <td data-table-header="Status">Complete</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="sba-c-card">
+                <div class="sba-c-card__header">
+                  <div class="sba-l-row ">
+                    <div class="sba-l-col">
+                      <div class="sba-l-row ">
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h3 class="sba-c-card__primary-heading"><a href="firm-overview.html?firm_name=MFARK%20LLC">MFARK LLC</a></h3>
+                          <p class="sba-u-margin-y--0"><strong>Program start date:</strong> June 15, 2015</p>
+                        </div>
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h4 class="sba-u-margin-y--0">Most recent action:</h4>
+                          <p class="sba-u-margin-y--0">Contents received <span class="sba-u-color--muted">11/12/17</span> | 2017 Annual Review <span class="sba-u-color--muted">(Screening)</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sba-l-col sba-c-card__controls sba-u-lg-align-self--center">
+                      <button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-js-visibility-trigger" aria-controls="card_MFARK_content" aria-expanded="false" type="button">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#chevron-down"></use>
+                          <span class="sba-u-visibility--screen-reader">Toggle Content</span>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="sba-c-card__body" id="card_MFARK_content" hidden>
+                  <p class="sba-u-margin-y--0"><strong>Firm owner:</strong> Bob Allen</p>
+                  <p class="sba-u-margin-top--0"><strong>DUNS Number:</strong> 382920392</p>
+                  <table class="sba-c-table sba-c-table--borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Application</th>
+                        <th scope="col">Last Action</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Currently With</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=MFARK%20LLC&applicationname=2017%20Annual%20Review&applicationstatus=Screening">2017 Annual Review</a></th>
+                        <td data-table-header="Last Action">Contents received <span class="sba-u-color--muted">10/13/17</span></td>
+                        <td data-table-header="Status">Screening</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=MFARK%20LLC&applicationname=Initial%20Application&applicationstatus=Processing">Initial Application</a></th>
+                        <td data-table-header="Last Action">Approved</td>
+                        <td data-table-header="Status">Complete</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="sba-c-card">
+                <div class="sba-c-card__header">
+                  <div class="sba-l-row ">
+                    <div class="sba-l-col">
+                      <div class="sba-l-row ">
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h3 class="sba-c-card__primary-heading"><a href="firm-overview.html?firm_name=Business%20Analytico">Business Analytico</a></h3>
+                          <p class="sba-u-margin-y--0"><strong>Program start date:</strong> June 15, 2015</p>
+                        </div>
+                        <div class="sba-l-col--12 sba-l-lg-col--6">
+                          <h4 class="sba-u-margin-y--0">Most recent action:</h4>
+                          <p class="sba-u-margin-y--0">Deficiency letter sent <span class="sba-u-color--muted">11/12/17</span> | 2017 Annual Review <span class="sba-u-color--muted">(Screening)</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sba-l-col sba-c-card__controls sba-u-lg-align-self--center">
+                      <button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-js-visibility-trigger" aria-controls="card_Business_Analytico_content" aria-expanded="false" type="button">
+                        <svg aria-hidden="true" class="sba-c-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#chevron-down"></use>
+                          <span class="sba-u-visibility--screen-reader">Toggle Content</span>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="sba-c-card__body" id="card_Business_Analytico_content" hidden>
+                  <p class="sba-u-margin-y--0"><strong>Firm owner:</strong> Bob Allen</p>
+                  <p class="sba-u-margin-top--0"><strong>DUNS Number:</strong> 382920392</p>
+                  <table class="sba-c-table sba-c-table--borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Application</th>
+                        <th scope="col">Last Action</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Currently With</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=Business%20Analytico&applicationname=2017%20Annual%20Review&applicationstatus=Screening">2017 Annual Review</a></th>
+                        <td data-table-header="Last Action">Deficiency letter sent <span class="sba-u-color--muted">10/13/17</span></td>
+                        <td data-table-header="Status">Screening</td>
+                        <td data-table-head="Currently With">Firm</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" data-table-header="Application"><a href="overview.html?firm_name=Business%20Analytico&applicationname=Initial%20Application&applicationstatus=Processing">Initial Application</a></th>
+                        <td data-table-header="Last Action">Approved</td>
+                        <td data-table-header="Status">Complete</td>
+                        <td data-table-head="Currently With">DO</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+
+  </section>
+
+  <p><a href="#" class="usa-button usa-button-big">View all cases in SBA</a></p>
+</div>
+
+<script>
+sessionStorage.clear();
+</script>
+
+    </div>
+  </div>
+
+
+
+  <script>
+  $(function() {
+    $('.expander-view-more-trigger').click(function () {
+      $(this).toggleClass("expander-view-more-hidden");
+    });
+  })
+</script>
+<div class="usa-one-whole">
+  <a class="return_to_top" href="#top">Return to top</a>
+</div>
+
+
+  <footer class="usa-footer usa-footer-medium" id="footer" role="contentinfo">
+  <div class="usa-grid"></div>
+  <div class="footer-feedback">
+    <div class="usa-grid-full">
+      <span>Your experience is important to us. Please email us at</span>&nbsp;
+      <a class="feedback" href="mailto:certify@sba.gov">certify@sba.gov</a>&nbsp;
+      <span>with comments or suggestions.</span>
+    </div>
+  </div>
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav">
+        <ul class="usa-unstyled-list">
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="http://sba.gov/contracting" target="_blank"> SBA.gov/contracting</a>
+          </li>
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="http://whitehouse.gov/" target="_blank"> WhiteHouse.gov</a>
+          </li>
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="http://regulations.gov/" target="_blank">Regulations.gov</a>
+          </li>
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="https://business.usa.gov/" target="_blank">  BusinessUSA.gov</a>
+          </li>
+          <li class="usa-width-one-sixth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href="http://usa.gov/" target="_blank">  USA.gov</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="usa-footer-secondary_section">
+    <div class="usa-grid-full">
+      <div class="usa-footer-logo usa-width-one-half">
+        <a href="http://www.sba.gov" target="_blank">
+          <img alt="U.S. Small Business Administration logo" width="180px" src="../../../assets/img/sba_logo-71184dd072683081eab26174ea34e79e0df016b2d30ab9b5583cbbc481b7fbeb.png" />
+        </a>
+      </div>
+      <div class="usa-footer-contact-links usa-width-one-half">
+        <a class="usa-link-facebook" href="https://www.facebook.com/SBAgov" target="_blank" title="Follow certify.SBA.gov on facebook!"></a>
+        <a class="usa-link-twitter" href="https://www.twitter.com/sbagov" target="_blank" title="Follow certify.SBA.gov on twitter!"></a>
+        <a class="usa-link-youtube" href="https://www.youtube.com/c/sbagov" target="_blank" title="Follow certify.SBA.gov on YouTube!"></a>
+        <address></address>
+        <h3 class="usa-footer-contact-heading">Contact SBA</h3>
+        <p>&#40;800&#41; 827-5722</p>
+        <a href="mailto:answerdesk@sba.gov">answerdesk@sba.gov</a>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <span class="usa-text-small usa-disclaimer-stage">Version: 2.2.8.build_1489332101_g0926420</span>
+    </div>
+  </div>
+</footer>
+
+
+  <div class="note-popup">
+  <a href="#" id="note-popup-toggle" class="note-popup__toggle">
+    <header class="note-popup__header">
+      <h4 class="note-popup__heading">New SBA Note</h4>
+      <button type="button" id="note-popup-close" class="note-popup__close">Close</button>
+    </header>
+  </a>
+  <form action="" id="new-note-form" class="new-note-form">
+    <fieldset class="questions">
+      <legend class="usa-sr-only">New Note</legend>
+      <label for="note_subject">Title</label>
+      <input type="text" id="note_subject">
+      <label for="note">Note</label>
+      <textarea name="" id="note"></textarea>
+    </fieldset>
+
+    <fieldset class="question tags">
+      <h4>Tags</h4>
+        <div class="usa-width-one-third">
+          <ul class="tag-selection-list">
+            <li>
+              <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
+              <label for="note-tag--BOS-Analysis">BOS Analysis</label>
+            </li>
+            <li>
+              <input id="note-tag--Ownership" type="checkbox" name="note-tags" value="Ownership">
+              <label for="note-tag--Ownership">Ownership</label>
+            </li>
+            <li>
+              <input id="note-tag--Control" type="checkbox" name="note-tags" value="Control">
+              <label for="note-tag--Control">Control</label>
+            </li>
+
+          </ul>
+        </div>
+        <div class="usa-width-one-third">
+          <ul class="tag-selection-list">
+            <li>
+              <input id="note-tag--Size" type="checkbox" name="note-tags" value="Size">
+              <label for="note-tag--Size">Size</label>
+            </li>
+            <li>
+              <input id="note-tag--Business-Development" type="checkbox" name="note-tags" value="Business Development">
+              <label for="note-tag--Business-Development">Business Development</label>
+            </li>
+            </li>
+          </ul>
+        </div>
+        <div class="usa-width-one-third">
+          <ul class="tag-selection-list">
+            <li>
+              <input id="note-tag--Economic-Disadvantage" type="checkbox" name="note-tags" value="Economic Disadvantage">
+              <label for="note-tag--Economic-Disadvantage">Economic Disadvantage</label>
+            </li>
+            <li>
+              <input id="note-tag--Social-Disadvantage" type="checkbox" name="note-tags" value="Social Disadvantage">
+              <label for="note-tag--Social-Disadvantage">Social Disadvantage</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <button type="submit">Add SBA note</button>
+  </form>
+</div>
+
+
+  </body>
+</html>

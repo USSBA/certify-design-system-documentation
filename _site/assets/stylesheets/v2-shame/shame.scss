@@ -1,0 +1,21 @@
+/* This file has styles that address some conflicts
+   that relate to the new grid. These should be
+   removed at the appropriate time. */
+
+.sba-l-container {
+  .section-block {
+    height: auto; // Address activity log getting cut off in new grid
+  }
+
+  .usa-font-lead {
+    font-family: $font-sans;
+    font-weight: 300;
+    font-size: 2.2rem;
+  }
+}
+
+// Eliminates fixed height and margin that comes from the US Web Design Standards
+.sba-c-button {
+  height: auto;
+  margin: 0;
+}

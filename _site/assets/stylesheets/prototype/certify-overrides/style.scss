@@ -1,0 +1,35 @@
+#homepage .welcome-block {
+  margin-bottom: 1rem;
+}
+
+.usa-button.fed-login {
+  top: -2.25rem;
+  position: relative;
+}
+
+#homepage .back-img {
+  background-image: url("../img/banner.jpg");
+}
+@media screen and (max-width: 850px){
+  #homepage .back-img {
+      background-image: none;
+      padding-top: 0;
+  }
+}
+
+#homepage .login-block {
+  height: 235px;
+  display: table-cell;
+  vertical-align: middle;
+
+  .usa-button {
+    color: white;
+  }
+
+  .mobile-only {
+    display: none;
+    @media screen and (max-width: 850px){
+      display: block;
+    }
+  }
+}

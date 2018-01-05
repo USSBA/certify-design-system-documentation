@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    <title>Certify Prototype</title>
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex">
+
+
+
+
+<link rel="stylesheet" href="../../../assets/stylesheets/application.css">
+<script src="../../../assets/javascripts/vendor/svg4everybody.js"></script>
+<script>svg4everybody();</script>
+<script src="../../../assets/javascripts/application.js"></script>
+<meta name="robots" content="noindex">
+
+  </head>
+  <body class="public">
+
+    <div class="usa-grid">
+      <div class="usa-grid-full">
+        <h1>Switching to Supervisor…</h1>
+<p class="usa-font-lead">The supervisor will receieve the request as in a "access requests" queue and a notification. Both will link to the Access Requests page where each request can be accepted or denied. </p>
+
+<p class="usa-font-lead"><strong class="usa-color-red">Important:</strong> For this section to work without breaking, you must go through requesting access to get the data into local storage. <a href="index.html">Start here</a>.</p>
+
+<p><a href="supervisor-dashboard.html" class="usa-button usa-button-big">Continue</a></p>
+
+<h2>Notes</h2>
+
+<h3>Dashboard (supervisor-dashboard.html)</h3>
+<ul>
+  <li>The alert message uses the same HTML as the U.S. Web Design standards, but is not a flash message.</li>
+  <li>The alert message will stay on the screen until all access requests are acted upon</li>
+</ul>
+
+<h3>Access Requests (supervisor-access-requests.html)</h3>
+<ul>
+  <li>On this page, you can accept or reject the applicant. The what happens to the sba user varies up on the selection made, so do both. Accepted users will turn green with the buttons replaced by the word "Accepted" and rejected users will turn red and have their buttons replaced by the word "Rejected"</li>
+  <li>The data points will only appear if that data exists. For MPP/WOSB/etc, since they won't indicate a duty station, the label for duty station will not appear.</li>
+  <li>After accepting/rejecting, refresh the page to see the null state.</li>
+</ul>
+
+      </div>
+    </div>
+
+
+  </body>
+</html>
