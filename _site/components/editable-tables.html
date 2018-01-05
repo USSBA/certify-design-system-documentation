@@ -9,14 +9,14 @@
 
 
 
-<link rel="stylesheet" href="assets/stylesheets/application.css">
-<script src="assets/javascripts/vendor/svg4everybody.js"></script>
+<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<script src="../assets/javascripts/vendor/svg4everybody.js"></script>
 <script>svg4everybody();</script>
-<script src="assets/javascripts/application.js"></script>
+<script src="../assets/javascripts/application.js"></script>
 <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="assets/stylesheets/prototype/vendor/prism.css">
-    <script src="assets/javascripts/vendor/prism.js"></script>
+    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
+    <script src="../assets/javascripts/vendor/prism.js"></script>
   </head>
   <body class="styleguide">
 
@@ -25,7 +25,7 @@
         <div class="sba-l-row">
           <div class="sba-l-col--12 sba-u-padding-x--2">
             <a href="/styleguide">
-              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="assets/img/certify-sba-gov-logo_on-dark.png" />
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
             </a>
           </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
           <ul class="usa-sidenav-list">
             <li>
-              <a class=" usa-current " href="/">Introduction</a>
+              <a class="" href="/">Introduction</a>
             </li>
             <li>
               <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_layout">
@@ -66,7 +66,8 @@
               </ul>
             </li>
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_components">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_components">
                 Components
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#angle-down"></use>
@@ -95,7 +96,7 @@
                   <a class="" href="/components/datepicker.html">Datepicker</a>
                 </li>
                 <li>
-                  <a class="" href="/components/editable-tables.html">Editable tables</a>
+                  <a class=" usa-current " href="/components/editable-tables.html">Editable tables</a>
                 </li>
                 <li>
                   <a class="" href="/components/forms.html">Forms</a>
@@ -184,67 +185,152 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Certify.SBA.gov Design System</h1>
-  <p class="usa-font-lead">Welcome to the certify.SBA.gov design system. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>. The design system was heavily influenced by <a href="https://design.cms.gov">design.cms.gov</a></p>
+<h1>
+  <h1>Editable tables </h1>
+  <p>
+  <a href="https://github.com/USSBA/certify-prototype/blob/master/assets/stylesheets/v2-components/_tables.scss">CSS file</a> | <a href="https://github.com/USSBA/certify-prototype/blob/master/assets/javascripts/v2-components/editable-tables.js">JS file</a> | <a href="https://github.com/USSBA/certify-prototype/blob/master/assets/javascripts/v2-components/validations.js">Validations</a>
+  </p>
 
-  <p>The design system is created to be used simultaneoulsy with legacy systems. For instance, you may still use components and features that are built with the U.S. Web Design Standards and existing Certify components. The goal is to get all defined platform components into the design system. Once those items are properly incorporated, their legacy versions may be removed as well as any corresponding code. This is expected to happen gradually. </p>
+  <p>For the questionnaire, some <a href="tables.html">tables</a> can be edited. Editable tables can include any number of columns, and columns have the option to be summated.</p>
 
-  <p><a class="sba-c-button sba-c-button--big" href="https://ussba.github.io/certify-prototype" target="_blank">View on GitHub</a></p>
+  <div class="sample">
+    <form action="#">
+    <table class="sba-c-table sba-c-table--editable" id="table1" aria-live="polite" aria-atomic="true">
+      <caption>Payments and excessive withdrawals</caption>
+      <thead>
+        <tr>
+          <th scope="col" data-required="true" data-custom-id="Name">Name</th>
+          <th scope="col" data-required="true" data-custom-id="Title">Title</th>
+          <th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*" data-custom-id="Equity Interest" data-min="0" data-max="100">Equity Interest</th>
+          <th scope="col" data-hint-text="This is optional" data-custom-id="Reason">Reasons for Payment</th>
+          <th scope="col" class="js-sum" data-info-type="usd" data-required="true" data-custom-id="Total Payments" data-min="0">Total Payments</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr id="table1_tr0_data">
+            <th colspan="6"><em>No items added yet</em></th>
+          </tr>
+        </tbody>
+    </table>
+    <button type="button" class="sba-c-button" id="table1_add_item">Add item</button>
+    </form>
+  </div>
 
-  <h2>Naming conventions</h2>
+  <p>See the same example along different breakpoints.</p>
 
-  <p>The certify.SBA.gov design system uses a strict naming convention. This helps identify what is part of the design system, what role it plays, and what it pertains to.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">item--modifier</code>
+  <div class="sg-responsive-preview">
+    <div class="sg-responsive-preview__size-buttons">
+      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
+        XS
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
+        SM
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
+        MD
+      </button>
+      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
+        LG
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
+        XL
+      </button>
     </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="bem">BEM syntax</div>
+    <div class="iframe__preview">
+      <iframe title="Pagination example" class="responsive-iframe" src="examples/editable-table.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="300"></iframe>
     </div>
   </div>
 
-  <p>Every part of the design system must be namespaced with <code>sba-</code>, prefixed with its role, and a <a href="http://getbem.com/naming/">BEM syntax</a> convention.</p>
+  <pre><code class="language-markup">&lt;table class="sba-c-table sba-c-table--editable" id="table1" aria-live="polite" aria-atomic="true">
+  &lt;caption>Payments and excessive withdrawals&lt;/caption>
+  &lt;thead>
+    &lt;tr>
+      &lt;th scope="col" data-required="true" data-custom-id="Name">Name&lt;/th>
+      &lt;th scope="col" data-required="true" data-custom-id="Title">Title&lt;/th>
+      &lt;th scope="col" class="js-sum" data-info-type="percent" data-required="true" data-pattern="[0-9]*" data-custom-id="Equity Interest" data-min="0" data-max="100">Equity Interest&lt;/th>
+      &lt;th scope="col" data-hint-text="This is optional" data-custom-id="Reason">Reasons for Payment&lt;/th>
+      &lt;th scope="col" class="js-sum" data-info-type="usd" data-required="true" data-custom-id="Total Payments" data-min="0">Total Payments&lt;/th>
+      &lt;th scope="col">Actions&lt;/th>
+    &lt;/tr>
+  &lt;/thead>
+  &lt;tbody>
+    &lt;tr id="table1_tr0_data">
+      &lt;th colspan="6">&lt;em>No items added yet&lt;/em>&lt;/th>
+    &lt;/tr>
+  &lt;/tbody>
+&lt;/table>
+&lt;button type="button" class="sba-c-button" id="table1_add_item">Add item&lt;/button></code></pre>
 
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Prefix</th>
-        <th scope="col">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row"><code>l-</code></th>
-        <td>Indicates layout, generally for building the grid.</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>c-</code></th>
-        <td>Indicates a component. Components are built specific to the needs of certify.SBA.gov</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>u-</code></th>
-        <td>Indicates a utility. Utilities pertain to CSS properties.</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3>Guidance</h3>
 
-  <p>These prefixes can sometimes be followed by a "breakpoint prefix".</p>
+  <p>The example shows the basic requirements for creating an editable table. Tables will need to have the following items:</p>
 
-  <h2>About using the design system</h2>
+  <ul>
+    <li>Class names of <code>sba-c-table</code> and <code>sba-c-table--editable</code></li>
+    <li>An ID</li>
+    <li>A table row to show a null state with an ID following the convention <code>[TABLE_ID]_tr0_data</code>. This table row must also include a <code>th</code> with a <code>colspan</code> that matches the total number of columns in the table.</li>
+    <li>An actions column</li>
+    <li>A button with an ID using a naming convention of <code>[TABLE_ID]_add_item</code>.</li>
+  </ul>
 
-  <p>The design system provides a large amount of flexibilty for prototype and development for production. At the moment, the design system is constructed in Jekyll, but will eventually be packaged as a gem and a node module.</p>
+  <h3>Options</h3>
+  <p>The table has a few options for performing validation, summation, form hints, and other types of customization.</p>
 
-  <h3>Contributing</h3>
+  <h4>Customizing input IDs</h4>
+  <p>Form fields in the table will generally have iteratable, generic IDs, such as <code>[TABLE_ID]_tr0_field1</code>. If you'd like to add some context to an <code>id</code>, place a <code>data-custom-id</code> attribute in the cell’s corresponding <code>thead th</code>.</p>
 
-  <p>At the moment, and while the core is still undergoing an initial buildout, the design system is to centrally owned. Please tag any GitHub issues with <strong>jaredcunha-usds</strong>.</p>
+  <ul>
+    <li>Use characters that are only valid in an ID attribute</li>
+    <li>Spaces will be converted to underscores</li>
+  </ul>
 
+  <p>When a custom id is applied, the input <code>id</code> is structured as <code>[TABLE_ID]_tr0_field1_[CUSTOM_ID]</code></p>
 
+  <h4>Using input ornaments</h4>
+  <p>Editable tables can use special <a href="forms.html#input-ornaments">input ornaments</a> when the user adds or edits a row. Input ornaments can be used for $USD or %. When using input ornaments, the script will automatically apply a '%' or '$' to the table cell.</p>
 
+  <ul>
+    <li>To get a text field to appear as $USD, add the attribute <code>data-info-type="usd"</code> to the corresponding <code>thead th</code>. This will create a <code>number</code> input.</li>
+    <li>To get a text field to appear as %, add the attribute <code>data-info-type="percent"</code> to the corresponding <code>thead th</code>.  This will create a <code>number</code> input.</li>
+  </ul>
+
+  <h4>Validation</h4>
+  <p>It is possible to check validation on the form fields within the table. While front-end validation can improve user experience, <strong>front-end validation should NEVER be a substitute for server-side validation</strong>.
+
+  <p>Validation can be be peformed upon:</p>
+  <ul>
+    <li>
+      <strong>Required fields:</strong> <br> To use validation on required fields, add the attribute <code>data-required="true"</code> to the corresponding <code>thead th</code>.
+    </li>
+    <li>
+      <strong>Patterns:</strong> <br> To validate for a pattern / trigger certain keyboards on mobile devices, use the attribute <code>data-pattern</code> to the field’s corresponding <code>thead th</code> and place the pattern you like to use as the value. Example: <code>data-pattern="[0-9]*"</code>.
+    </li>
+    <li>
+      <strong>Min:</strong> <br> To validate for a minimum value, use the attribute <code>data-min</code> to the field’s corresponding <code>thead th</code>. Example: <code>data-min="0"</code>. This will convert the input type to <code>number</code>.
+    </li>
+    <li>
+      <strong>Max:</strong> <br> To validate for a maximum value, use the attribute <code>data-max</code> to the field’s corresponding <code>thead th</code>. Example: <code>data-max="100"</code>. This will convert the input type to <code>number</code>.
+    </li>
+    <li>
+      <strong>Minlength:</strong> <br> To validate for a minimum number of characters, use the attribute <code>data-minlength</code> to the field’s corresponding <code>thead th</code>. Example: <code>data-minlength="3"</code>.
+    </li>
+    <li>
+      <strong>Maxlength:</strong> <br> To validate for a maximum number of characters, use the attribute <code>data-maxlength</code> to the field’s corresponding <code>thead th</code>. Example: <code>data-maxlength="20"</code>.
+    </li>
+  </ul>
+
+  <h4>Hint text</h4>
+  <p>To place hint text between the form label and the input, write it the value of a <code>data-hint-text</code> data attribute on the corresponding column‘s <code>thead th</code>. Data hints are optional, but can provide necessary context.</p>
+
+  <h4>Summating columns</h4>
+  <p>Table columns can be summated by adding a class name of <code>js-sum</code> to the table column you would like to calculate. If an instance of <code>js-sum</code> is present, a table footer is automatically created after the first item is added after first row is created.</p>
+
+  <h4>Other guidance</h4>
+  <ul>
+    <li>Editable tables are not to be sortable.</li>
+    <li>Tables are formatted for mobile web</li>
+  </ul>
 
 </article>
 

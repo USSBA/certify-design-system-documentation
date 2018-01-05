@@ -9,14 +9,14 @@
 
 
 
-<link rel="stylesheet" href="assets/stylesheets/application.css">
-<script src="assets/javascripts/vendor/svg4everybody.js"></script>
+<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<script src="../assets/javascripts/vendor/svg4everybody.js"></script>
 <script>svg4everybody();</script>
-<script src="assets/javascripts/application.js"></script>
+<script src="../assets/javascripts/application.js"></script>
 <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="assets/stylesheets/prototype/vendor/prism.css">
-    <script src="assets/javascripts/vendor/prism.js"></script>
+    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
+    <script src="../assets/javascripts/vendor/prism.js"></script>
   </head>
   <body class="styleguide">
 
@@ -25,7 +25,7 @@
         <div class="sba-l-row">
           <div class="sba-l-col--12 sba-u-padding-x--2">
             <a href="/styleguide">
-              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="assets/img/certify-sba-gov-logo_on-dark.png" />
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
             </a>
           </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
           <ul class="usa-sidenav-list">
             <li>
-              <a class=" usa-current " href="/">Introduction</a>
+              <a class="" href="/">Introduction</a>
             </li>
             <li>
               <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_layout">
@@ -89,7 +89,7 @@
                   <a class="" href="/components/buttons.html">Buttons</a>
                 </li>
                 <li>
-                  <a class="" href="/components/cards.html">Cards</a>
+                  <a class=" usa-current " href="/components/cards.html">Cards</a>
                 </li>
                 <li>
                   <a class="" href="/components/datepicker.html">Datepicker</a>
@@ -162,7 +162,8 @@
                 </ul>
               </li>
               <li>
-                <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_transitional">
+                <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+                " aria-controls="sublist_transitional">
                   Depricating
                   <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#angle-down"></use>
@@ -173,7 +174,7 @@
                 </button>
                   <ul class="usa-sidenav-sub_list" id="sublist_transitional">
                     <li>
-                      <a class="" href="/transitional/cards.html">Cards</a>
+                      <a class=" usa-current " href="/transitional/cards.html">Cards</a>
                     </li>
                     <li>
                       <a class="" href="/transitional/taskpanel.html">Task Panels</a>
@@ -183,69 +184,87 @@
             </ul>
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
-        <article>
-  <h1>Certify.SBA.gov Design System</h1>
-  <p class="usa-font-lead">Welcome to the certify.SBA.gov design system. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>. The design system was heavily influenced by <a href="https://design.cms.gov">design.cms.gov</a></p>
-
-  <p>The design system is created to be used simultaneoulsy with legacy systems. For instance, you may still use components and features that are built with the U.S. Web Design Standards and existing Certify components. The goal is to get all defined platform components into the design system. Once those items are properly incorporated, their legacy versions may be removed as well as any corresponding code. This is expected to happen gradually. </p>
-
-  <p><a class="sba-c-button sba-c-button--big" href="https://ussba.github.io/certify-prototype" target="_blank">View on GitHub</a></p>
-
-  <h2>Naming conventions</h2>
-
-  <p>The certify.SBA.gov design system uses a strict naming convention. This helps identify what is part of the design system, what role it plays, and what it pertains to.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">item--modifier</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="bem">BEM syntax</div>
-    </div>
+        <div class="usa-alert usa-alert-warning" >
+  <div class="usa-alert-body"><h3 class="usa-alert-heading">Notice</h3><p class="usa-alert-text">Transitional items are subject to be refactored in the future. Avoid following this pattern in future development.</p>
   </div>
+</div>
 
-  <p>Every part of the design system must be namespaced with <code>sba-</code>, prefixed with its role, and a <a href="http://getbem.com/naming/">BEM syntax</a> convention.</p>
+<br>
 
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Prefix</th>
-        <th scope="col">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row"><code>l-</code></th>
-        <td>Indicates layout, generally for building the grid.</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>c-</code></th>
-        <td>Indicates a component. Components are built specific to the needs of certify.SBA.gov</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>u-</code></th>
-        <td>Indicates a utility. Utilities pertain to CSS properties.</td>
-      </tr>
-    </tbody>
-  </table>
+<article>
+  <h1>Cards</h1>
+  <p>Cards can be used to group concepts and can link to more detailed information. They help users scan the page. </p>
 
-  <p>These prefixes can sometimes be followed by a "breakpoint prefix".</p>
+  <h3>Example</h3>
+  <div class="sample">
+    <article class="card">
+      <header class="card__header">
+        <h3 class="card__primary-heading">Ownership and Control</h3>
+        <p class="card__sub-head"><strong>Frank Apple</strong> @ 2:30PM June 12, 2017</p>
+      </header>
+      <div class="card__content">
+        <p>A parturient praesent mattis scelerisque a at per cras integer malesuada auctor nam suspendisse facilisis at a eu sem erat porta adipiscing. Ut ultrices suspendisse placerat morbi ad dui a litora scelerisque vestibulum diam mi vestibulum potenti faucibus aenean lobortis ullamcorper mus cubilia nibh cursus vestibulum a augue nunc dolor. </p>
+      </div>
+      <div class="card__meta">
+        <p class="tags-list"><strong>Tags:</strong> <span class="content-tag">Ownership</span> <span class="content-tag">Size</span></p>
+      </div>
+      <div class="card__bulk-actions">
+        <div class="task-panel">
+          <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panelc">actions</button>
+          <div id="task-panelc" class="task-panel-content">
+            <ul class="task-panel-menu">
+              <li class="task-panel-menu__item">
+                <a href="#" class="task-panel-menu__link--emergency">Delete this note</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section class="card-set card-set--halves">
+      <div class="card">
+        <div class="card__header">
+          <h3 class="card__primary-heading"><a href="#">Card Example</a></h3>
+        </div>
+        <div class="card__content">
+          <p>This is some card content</p>
+        </div>
+        <div class="card__bulk-actions">
+          <div class="task-panel">
+            <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panela">actions</button>
+            <div id="task-panela" class="task-panel-content">
+              <ul class="task-panel-menu">
+                <li class="task-panel-menu__item">
+                  <a href="#" class="task-panel-menu__link">Return this section</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <h2>About using the design system</h2>
-
-  <p>The design system provides a large amount of flexibilty for prototype and development for production. At the moment, the design system is constructed in Jekyll, but will eventually be packaged as a gem and a node module.</p>
-
-  <h3>Contributing</h3>
-
-  <p>At the moment, and while the core is still undergoing an initial buildout, the design system is to centrally owned. Please tag any GitHub issues with <strong>jaredcunha-usds</strong>.</p>
-
-
-
-
+      <div class="card">
+        <div class="card__header">
+          <h3 class="card__primary-heading"><a href="#">Card Example</a></h3>
+        </div>
+        <div class="card__content">
+          <p>This is some card content</p>
+        </div>
+        <div class="card__bulk-actions">
+          <div class="task-panel">
+            <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panelb">actions</button>
+            <div id="task-panelb" class="task-panel-content">
+              <ul class="task-panel-menu">
+                <li class="task-panel-menu__item">
+                  <a href="#" class="task-panel-menu__link">Return this section</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </article>
 
         </div>
