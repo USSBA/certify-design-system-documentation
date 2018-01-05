@@ -9,14 +9,14 @@
 
 
 
-<link rel="stylesheet" href="assets/stylesheets/application.css">
-<script src="assets/javascripts/vendor/svg4everybody.js"></script>
+<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<script src="../assets/javascripts/vendor/svg4everybody.js"></script>
 <script>svg4everybody();</script>
-<script src="assets/javascripts/application.js"></script>
+<script src="../assets/javascripts/application.js"></script>
 <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="assets/stylesheets/prototype/vendor/prism.css">
-    <script src="assets/javascripts/vendor/prism.js"></script>
+    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
+    <script src="../assets/javascripts/vendor/prism.js"></script>
   </head>
   <body class="styleguide">
 
@@ -25,7 +25,7 @@
         <div class="sba-l-row">
           <div class="sba-l-col--12 sba-u-padding-x--2">
             <a href="/styleguide">
-              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="assets/img/certify-sba-gov-logo_on-dark.png" />
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
             </a>
           </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
           <ul class="usa-sidenav-list">
             <li>
-              <a class=" usa-current " href="/">Introduction</a>
+              <a class="" href="/">Introduction</a>
             </li>
             <li>
               <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_layout">
@@ -66,7 +66,8 @@
               </ul>
             </li>
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_components">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_components">
                 Components
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#angle-down"></use>
@@ -176,7 +177,7 @@
                       <a class="" href="/transitional/cards.html">Cards</a>
                     </li>
                     <li>
-                      <a class="" href="/transitional/taskpanel.html">Task Panels</a>
+                      <a class=" usa-current " href="/transitional/taskpanel.html">Task Panels</a>
                     </li>
                   </ul>
                 </li>
@@ -184,68 +185,184 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Certify.SBA.gov Design System</h1>
-  <p class="usa-font-lead">Welcome to the certify.SBA.gov design system. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>. The design system was heavily influenced by <a href="https://design.cms.gov">design.cms.gov</a></p>
+  <h1>Task Panels</h1>
 
-  <p>The design system is created to be used simultaneoulsy with legacy systems. For instance, you may still use components and features that are built with the U.S. Web Design Standards and existing Certify components. The goal is to get all defined platform components into the design system. Once those items are properly incorporated, their legacy versions may be removed as well as any corresponding code. This is expected to happen gradually. </p>
+  <p><a href="https://github.com/USSBA/certify-prototype/blob/master/assets/stylesheets/v2-components/_task-panels.scss">CSS file</a> | <a href="https://github.com/USSBA/certify-prototype/blob/master/assets/javascripts/v2-components/task-panels.js">JS file</a></p>
 
-  <p><a class="sba-c-button sba-c-button--big" href="https://ussba.github.io/certify-prototype" target="_blank">View on GitHub</a></p>
+  <p>Task panels are interactive menus that contain bulk actions for a container. The panels are revealed by clicking the three-dot icon.  In order for them to function properly, the toggle button must have an <code>aria-controls</code> value that corresponds to the <code>id</code> of a <code>task-panel-content</code>.</p>
 
-  <h2>Naming conventions</h2>
-
-  <p>The certify.SBA.gov design system uses a strict naming convention. This helps identify what is part of the design system, what role it plays, and what it pertains to.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">item--modifier</code>
+  <div class="sample">
+    <div class="sba-c-task-panel">
+      <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel1">
+        <svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#ellipsis-h"></use>
+        </svg>
+        <span class="sba-u-visibility--screen-reader">Toggle menu</span>
+      </button>
+      <div id="panel1" class="sba-c-task-panel__content">
+        <ul class="sba-c-task-panel__menu">
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="bem">BEM syntax</div>
+
+    <div class="sba-c-task-panel">
+      <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel2">
+        <svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#ellipsis-h"></use>
+        </svg>
+        <span class="sba-u-visibility--screen-reader">Toggle menu</span>
+      </button>
+      <div id="panel2" class="sba-c-task-panel__content">
+        <ul class="sba-c-task-panel__menu">
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+        </ul>
+        <hr>
+        <ul class="sba-c-task-panel__menu">
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <p>Every part of the design system must be namespaced with <code>sba-</code>, prefixed with its role, and a <a href="http://getbem.com/naming/">BEM syntax</a> convention.</p>
+  <pre><code class="language-markup">&lt;div class="sba-c-task-panel">
+  &lt;button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel1">
+    &lt;svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#ellipsis-h">&lt;/use>
+    &lt;/svg>
+    &lt;span class="sba-u-visibility--screen-reader">Toggle menu&lt;/span>
+  &lt;/button>
+  &lt;div id="panel1" class="sba-c-task-panel__content">
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
 
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Prefix</th>
-        <th scope="col">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row"><code>l-</code></th>
-        <td>Indicates layout, generally for building the grid.</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>c-</code></th>
-        <td>Indicates a component. Components are built specific to the needs of certify.SBA.gov</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>u-</code></th>
-        <td>Indicates a utility. Utilities pertain to CSS properties.</td>
-      </tr>
-    </tbody>
-  </table>
+&lt;div class="sba-c-task-panel">
+  &lt;button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel2">
+    &lt;svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#ellipsis-h">&lt;/use>
+    &lt;/svg>
+    &lt;span class="sba-u-visibility--screen-reader">Toggle menu&lt;/span>
+  &lt;/button>
+  &lt;div id="panel2" class="sba-c-task-panel__content">
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+    &lt;hr>
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
 
-  <p>These prefixes can sometimes be followed by a "breakpoint prefix".</p>
+  <h2>Guidance</h2>
+  <p>Because task panel menus open to the left of their buttons, they should be placed on the right hand side of their parent container to prevent content from being cut off by the browser.</p>
 
-  <h2>About using the design system</h2>
+  <h3>Required Components</h3>
+  <ul>
+    <li>Toggle button</li>
+    <li>Panel</li>
+    <li>Menu</li>
+  </ul>
 
-  <p>The design system provides a large amount of flexibilty for prototype and development for production. At the moment, the design system is constructed in Jekyll, but will eventually be packaged as a gem and a node module.</p>
+  <h3>Optional Components</h3>
+  <ul>
+    <li>
+      Emergency actions
+      <p>Emergency actions are red links that involve actions such as closing or deleting.</p>
+    </li>
+    <li>
+      Horizontal rules
+      <p>If a menu has more than 3 items, and one of those items is an "emergency action," then the two menus should be used seperated by a horizontal rule.</p>
+    </li>
+  </ul>
 
-  <h3>Contributing</h3>
+  <h3>Variations</h3>
+  <p>There are variations on the toggle button available that can be applied using class names on the toggle button.</p>
 
-  <p>At the moment, and while the core is still undergoing an initial buildout, the design system is to centrally owned. Please tag any GitHub issues with <strong>jaredcunha-usds</strong>.</p>
+  <h4>Vertical dots</h4>
+  <p>The dots can be rotated vertically to save horizontal space, such as when the task panel is used on cards. This is done by adding a class name of <code>sba-c-task-panel__toggle--vertical</code> to the toggle</p>
 
+  <div class="sample">
+    <div class="sba-c-task-panel">
+      <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel3">
+        <svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#ellipsis-v"></use>
+        </svg>
+        <span class="sba-u-visibility--screen-reader">Toggle menu</span>
+      </button>
+      <div id="panel3" class="sba-c-task-panel__content">
+        <ul class="sba-c-task-panel__menu">
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <pre><code class="language-markup">&lt;div class="sba-c-task-panel">
+  &lt;button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel3">
+    &lt;svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#ellipsis-v">&lt;/use>
+    &lt;/svg>
+    &lt;span class="sba-u-visibility--screen-reader">Toggle menu&lt;/span>
+  &lt;/button>
+  &lt;div id="panel3" class="sba-c-task-panel__content">
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
 
-
+  <h4>Smaller buttons</h4>
+  <p>Buttons can be made smaller to conserve space, such as when the task panel is used in cards and tables. This is done by adding a class name of <code>sba-c-task-panel__toggle--small</code> to the toggle</p>
 </article>
 
         </div>

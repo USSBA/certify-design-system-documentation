@@ -9,14 +9,14 @@
 
 
 
-<link rel="stylesheet" href="assets/stylesheets/application.css">
-<script src="assets/javascripts/vendor/svg4everybody.js"></script>
+<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<script src="../assets/javascripts/vendor/svg4everybody.js"></script>
 <script>svg4everybody();</script>
-<script src="assets/javascripts/application.js"></script>
+<script src="../assets/javascripts/application.js"></script>
 <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="assets/stylesheets/prototype/vendor/prism.css">
-    <script src="assets/javascripts/vendor/prism.js"></script>
+    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
+    <script src="../assets/javascripts/vendor/prism.js"></script>
   </head>
   <body class="styleguide">
 
@@ -25,7 +25,7 @@
         <div class="sba-l-row">
           <div class="sba-l-col--12 sba-u-padding-x--2">
             <a href="/styleguide">
-              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="assets/img/certify-sba-gov-logo_on-dark.png" />
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
             </a>
           </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
           <ul class="usa-sidenav-list">
             <li>
-              <a class=" usa-current " href="/">Introduction</a>
+              <a class="" href="/">Introduction</a>
             </li>
             <li>
               <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_layout">
@@ -66,7 +66,8 @@
               </ul>
             </li>
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_components">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_components">
                 Components
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#angle-down"></use>
@@ -92,7 +93,7 @@
                   <a class="" href="/components/cards.html">Cards</a>
                 </li>
                 <li>
-                  <a class="" href="/components/datepicker.html">Datepicker</a>
+                  <a class=" usa-current " href="/components/datepicker.html">Datepicker</a>
                 </li>
                 <li>
                   <a class="" href="/components/editable-tables.html">Editable tables</a>
@@ -184,68 +185,72 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Certify.SBA.gov Design System</h1>
-  <p class="usa-font-lead">Welcome to the certify.SBA.gov design system. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>. The design system was heavily influenced by <a href="https://design.cms.gov">design.cms.gov</a></p>
+  <h1>Datepicker</h1>
 
-  <p>The design system is created to be used simultaneoulsy with legacy systems. For instance, you may still use components and features that are built with the U.S. Web Design Standards and existing Certify components. The goal is to get all defined platform components into the design system. Once those items are properly incorporated, their legacy versions may be removed as well as any corresponding code. This is expected to happen gradually. </p>
+  <p><a href="https://github.com/USSBA/certify-prototype/blob/master/assets/javascripts/v2-components/datepicker.js" target="_blank">JS File</a></p>
 
-  <p><a class="sba-c-button sba-c-button--big" href="https://ussba.github.io/certify-prototype" target="_blank">View on GitHub</a></p>
+  <p>Date picker is a way to pick dates</p>
 
-  <h2>Naming conventions</h2>
-
-  <p>The certify.SBA.gov design system uses a strict naming convention. This helps identify what is part of the design system, what role it plays, and what it pertains to.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">item--modifier</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="bem">BEM syntax</div>
-    </div>
+  <div class="sample">
+    <form action="">
+      <label for="date_input" class="sba-c-label sba-u-margin-top--0">Enter a date</label>
+      <p class="sba-c-form-hint" id="date_input_hint">For example, MM/DD/YYYY</p>
+      <input type="date" id="date_input" class="sba-c-input" aria-describedby="date_input_hint" pattern="(0[1-9]|1[012])\s?.\s?(0[1-9]|1[0-9]|2[0-9]|3[01])\s?.\s?[0-9]{4}" required />
+      <button type="submit">Validate</button>
+    </form>
   </div>
 
-  <p>Every part of the design system must be namespaced with <code>sba-</code>, prefixed with its role, and a <a href="http://getbem.com/naming/">BEM syntax</a> convention.</p>
+  <pre><code class="language-markup">&lt;label for="date_input" class="sba-c-label">Enter a date&lt;/label>
+&lt;p class="sba-c-form-hint" id="date_input_hint">For example, MM/DD/YYYY&lt;/p>
+&lt;input type="date" id="date_input" class="sba-c-input" aria-describedby="date_input_hint" pattern="(0[1-9]|1[012]).(0[1-9]|1[0-9]|2[0-9]|3[01]).[0-9]{4}" required /></pre></code>
 
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Prefix</th>
-        <th scope="col">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row"><code>l-</code></th>
-        <td>Indicates layout, generally for building the grid.</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>c-</code></th>
-        <td>Indicates a component. Components are built specific to the needs of certify.SBA.gov</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>u-</code></th>
-        <td>Indicates a utility. Utilities pertain to CSS properties.</td>
-      </tr>
-    </tbody>
-  </table>
+  <h2>Guidance</h2>
+  <p>The date input does not have a wide range of <a href="https://caniuse.com/#search=date" target="_blank">browser support</a>. For browsers that do not support the <code>date</code> input, the fallback is a <code>text</code> field that is recieves formatting as the user types.</p>
+  <ul>
+    <li>You must use a form hint with an <code>id</code>. The form input must use an <code>aria-describedby</code> attribute to refer back to the hint's <code>id</code>. This provides context in an accessible way as a fallback to browsers that do not support <code>date</code> inputs.</li>
+    <li>The <code>patter</code> attribute provides client-side validation. However, you must <strong>always</strong> use server-side validation.</li>
+    <li>Do not use the <code>input-width</code> utility on <code>&lt;input type="date"></code> because the spinner and calendar dropdown cuts off the date in Chrome.</li>
+    <li>Avoid using <code>min</code> and <code>max</code> attributes on the date picker, as <a href="http://html5doctor.com/the-woes-of-date-input/" target="_blank">some browsers have difficulty interpreting them</a> on <code>date</code> inputs. If you need code>min</code> and <code>max</code> attributes, see the example below.</li>
+  </ul>
 
-  <p>These prefixes can sometimes be followed by a "breakpoint prefix".</p>
+  <h3>Other considerations</h3>
+  <ul>
+    <li>See note above about code>min</code> and <code>max</code> attributes. This could make selecting a date range difficult.</li>
+    <li><code>&lt;input type="date"></code> is not supported in Safari or IE. Instead, the browser will treat as a <code>text</code> input (though formatted with JS).</li>
+    <li>Mobile browsers may have a scrollwheel implementation for <code>&lt;input type="date"></code>, and keyboard entry not be available.</li>
+  </ul>
 
-  <h2>About using the design system</h2>
+  <h2>Date as formatted text field</h2>
+  <p>If you need to have <code>min</code> and <code>max</code> attributes, an alternative is available. If that is the case, use a text input. This is also an example of how a date field would funtion on a browser that does not support the <code>date</code> input.</p>
 
-  <p>The design system provides a large amount of flexibilty for prototype and development for production. At the moment, the design system is constructed in Jekyll, but will eventually be packaged as a gem and a node module.</p>
-
-  <h3>Contributing</h3>
-
-  <p>At the moment, and while the core is still undergoing an initial buildout, the design system is to centrally owned. Please tag any GitHub issues with <strong>jaredcunha-usds</strong>.</p>
+  <p>In this instance, if you add a class name of <code>js-format-as-date</code> to a <code>text</code> field, the input will be automatically formatted as the user types.</p>
 
 
+  <div class="sample">
+    <form action="">
+      <label for="date_input2" class="sba-c-label">Enter a date</label>
+      <p class="sba-c-form-hint" id="date_input_hint2">For example, MM/DD/YYYY</p>
+      <input type="text" id="date_input2" class="sba-c-input sba-u-input-width--16 js-format-as-date" aria-describedby="date_input_hint2" pattern="(0[1-9]|1[012])\s?/\s?(0[1-9]|1[0-9]|2[0-9]|3[01])\s?/\s?[0-9]{4}" required />
+      <button type="submit">Validate</button>
+    </form>
+  </div>
+  <pre><code class="language-markup">&lt;label for="date_input2" class="sba-c-label sba-u-margin-top--0">Enter a date&lt;/label>
+&lt;p class="sba-c-form-hint" id="date_input_hint2">For example, MM/DD/YYYY&lt;/p>
+&lt;input type="text" id="date_input2" class="sba-c-input sba-u-input-width--16 js-format-as-date" aria-describedby="date_input_hint2" pattern="(0[1-9]|1[012])\s?.\s?(0[1-9]|1[0-9]|2[0-9]|3[01])\s?.\s?[0-9]{4}" required /></pre></code>
 
 
+  <script>
+    $(document).ready(function() {
+      $('button[type="submit"]').on('click', function() {
+        var form = $(this).closest('form');
+        validateFields(form);
+        if (!has_validation_errors) {
+          alert('valid')
+        }
+        return false;
+      });
+    });
+  </script>
 </article>
 
         </div>

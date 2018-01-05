@@ -9,14 +9,14 @@
 
 
 
-<link rel="stylesheet" href="assets/stylesheets/application.css">
-<script src="assets/javascripts/vendor/svg4everybody.js"></script>
+<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<script src="../assets/javascripts/vendor/svg4everybody.js"></script>
 <script>svg4everybody();</script>
-<script src="assets/javascripts/application.js"></script>
+<script src="../assets/javascripts/application.js"></script>
 <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="assets/stylesheets/prototype/vendor/prism.css">
-    <script src="assets/javascripts/vendor/prism.js"></script>
+    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
+    <script src="../assets/javascripts/vendor/prism.js"></script>
   </head>
   <body class="styleguide">
 
@@ -25,7 +25,7 @@
         <div class="sba-l-row">
           <div class="sba-l-col--12 sba-u-padding-x--2">
             <a href="/styleguide">
-              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="assets/img/certify-sba-gov-logo_on-dark.png" />
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
             </a>
           </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
           <ul class="usa-sidenav-list">
             <li>
-              <a class=" usa-current " href="/">Introduction</a>
+              <a class="" href="/">Introduction</a>
             </li>
             <li>
               <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_layout">
@@ -122,7 +122,8 @@
             </li>
 
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_utilities">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_utilities">
                 Utilities
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#angle-down"></use>
@@ -154,7 +155,7 @@
                     <a class="" href="/utilities/measure.html">Measure</a>
                   </li>
                   <li>
-                    <a class="" href="/utilities/padding.html">Padding</a>
+                    <a class=" usa-current " href="/utilities/padding.html">Padding</a>
                   </li>
                   <li>
                     <a class="" href="/utilities/visibility.html">Visibility</a>
@@ -184,22 +185,17 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Certify.SBA.gov Design System</h1>
-  <p class="usa-font-lead">Welcome to the certify.SBA.gov design system. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>. The design system was heavily influenced by <a href="https://design.cms.gov">design.cms.gov</a></p>
+  <h1>Padding</h1>
 
-  <p>The design system is created to be used simultaneoulsy with legacy systems. For instance, you may still use components and features that are built with the U.S. Web Design Standards and existing Certify components. The goal is to get all defined platform components into the design system. Once those items are properly incorporated, their legacy versions may be removed as well as any corresponding code. This is expected to happen gradually. </p>
+  <p><a href="https://github.com/USSBA/certify-prototype/blob/master/assets/stylesheets/v2-utilities/_padding.scss">CSS file</a></p>
 
-  <p><a class="sba-c-button sba-c-button--big" href="https://ussba.github.io/certify-prototype" target="_blank">View on GitHub</a></p>
-
-  <h2>Naming conventions</h2>
-
-  <p>The certify.SBA.gov design system uses a strict naming convention. This helps identify what is part of the design system, what role it plays, and what it pertains to.</p>
+  <p>Use the padding utility to change an element's padding. The [MULTIPLE] is a number 0-7.</p>
 
   <div class="sg-format-example">
     <div class="sg-format-example__row">
       <code aria-describedby="namespace">sba-</code>
       <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">item--modifier</code>
+      <code aria-describedby="bem">padding--[MULTIPLE]</code>
     </div>
     <div class="sg-format-example__row">
       <div id="namespace">Namespace</div>
@@ -208,44 +204,47 @@
     </div>
   </div>
 
-  <p>Every part of the design system must be namespaced with <code>sba-</code>, prefixed with its role, and a <a href="http://getbem.com/naming/">BEM syntax</a> convention.</p>
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace2">sba-</code>
+      <code aria-describedby="prefix2">u-</code>
+      <code aria-describedby="bem2">padding-[x|y|bottom|left|right|top]--[MULTIPLE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace2">Namespace</div>
+      <div id="prefix2">Prefix</div>
+      <div id="bem2">BEM syntax</div>
+    </div>
+  </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Prefix</th>
-        <th scope="col">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row"><code>l-</code></th>
-        <td>Indicates layout, generally for building the grid.</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>c-</code></th>
-        <td>Indicates a component. Components are built specific to the needs of certify.SBA.gov</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>u-</code></th>
-        <td>Indicates a utility. Utilities pertain to CSS properties.</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="sample">
+    <div class="sba-u-bgcolor--white sba-u-padding--0">sba-u-padding--0</div><br>
+    <div class="sba-u-bgcolor--white sba-u-padding--1">sba-u-padding--1</div><br>
+    <div class="sba-u-bgcolor--white sba-u-padding--2">sba-u-padding--2</div><br>
+    <div class="sba-u-bgcolor--white sba-u-padding--3">sba-u-padding--3</div><br>
+    <div class="sba-u-bgcolor--white sba-u-padding--4">sba-u-padding--4</div><br>
+    <div class="sba-u-bgcolor--white sba-u-padding--5">sba-u-padding--5</div><br>
+    <div class="sba-u-bgcolor--white sba-u-padding--6">sba-u-padding--6</div><br>
+    <div class="sba-u-bgcolor--white sba-u-padding--7">sba-u-padding--7</div>
+  </div>
 
-  <p>These prefixes can sometimes be followed by a "breakpoint prefix".</p>
+  <h2>Responsive padding</h2>
+  <p>The padding utility also supports breakpoint prefixes.</p>
 
-  <h2>About using the design system</h2>
-
-  <p>The design system provides a large amount of flexibilty for prototype and development for production. At the moment, the design system is constructed in Jekyll, but will eventually be packaged as a gem and a node module.</p>
-
-  <h3>Contributing</h3>
-
-  <p>At the moment, and while the core is still undergoing an initial buildout, the design system is to centrally owned. Please tag any GitHub issues with <strong>jaredcunha-usds</strong>.</p>
-
-
-
-
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="breakpoint">lg-</code>
+      <code aria-describedby="bem">padding--[MULTIPLE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="breakpoint">Breakpoint</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
 </article>
 
         </div>

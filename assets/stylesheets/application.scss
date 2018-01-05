@@ -10,72 +10,13 @@
 
 // Stylesheets here are base styles specific to the prototype
 @import "prototype/base/variables";
-@import "prototype/base/utilities";
-@import "prototype/base/buttons";
-@import "prototype/base/forms";
-@import "prototype/base/tables";
-@import "prototype/base/typography";
-
-// vendor
-@import "prototype/vendor/quill";
 
 // CSS for individual components
-@import "prototype/components/alerts";
-@import "prototype/components/action-items";
 @import "prototype/components/cards";
-@import "prototype/components/boxed-group";
-@import "prototype/components/certify-nav";
-@import "prototype/components/dashboard-sections";
-@import "prototype/components/forms";
-@import "prototype/components/lists";
-@import "prototype/components/masthead";
-@import "prototype/components/notes";
-@import "prototype/components/notifications";
-@import "prototype/components/review-info";
-@import "prototype/components/section-blocks";
-@import "prototype/components/status-summary";
-@import "prototype/components/tables";
 @import "prototype/components/task-panel";
-@import "prototype/components/taskbar";
-
-// overrides
-@import "prototype/certify-overrides/style";
-
-
-// Let's start testing some of the new V2 components
-@import "v2-base/variables";
-@import "v2-utilities/spacing";
-@import "v2-utilities/background-color";
-@import "v2-utilities/borders";
-@import "v2-utilities/color";
-@import "v2-utilities/flexbox";
-@import "v2-utilities/inputs";
-@import "v2-utilities/layout";
-@import "v2-utilities/measure";
-@import "v2-utilities/margins";
-@import "v2-utilities/padding";
-@import "v2-utilities/visibility";
-@import "v2-base/base";
-@import "v2-layouts/layout";
-@import "v2-components/alerts";
-@import "v2-components/badges";
-@import "v2-components/breadcrumbs";
-@import "v2-components/buttons";
-@import "v2-components/cards";
-@import "v2-components/forms";
-@import "v2-components/icons";
-@import "v2-components/lists";
-@import "v2-components/pagination";
-@import "v2-components/questionnaire";
-@import "v2-components/spinners";
-@import "v2-components/tables";
-@import "v2-components/taskbar";
-@import "v2-components/task-panels";
-
-// Shame
-@import "v2-shame/shame";
 
 // Style Guide - This is only for use in the styleguide
 @import "prototype/components/styleguide";
 
+// Styles from the gem
 @import "{{ site.theme }}";

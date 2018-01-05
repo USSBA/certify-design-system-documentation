@@ -9,14 +9,14 @@
 
 
 
-<link rel="stylesheet" href="assets/stylesheets/application.css">
-<script src="assets/javascripts/vendor/svg4everybody.js"></script>
+<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<script src="../assets/javascripts/vendor/svg4everybody.js"></script>
 <script>svg4everybody();</script>
-<script src="assets/javascripts/application.js"></script>
+<script src="../assets/javascripts/application.js"></script>
 <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="assets/stylesheets/prototype/vendor/prism.css">
-    <script src="assets/javascripts/vendor/prism.js"></script>
+    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
+    <script src="../assets/javascripts/vendor/prism.js"></script>
   </head>
   <body class="styleguide">
 
@@ -25,7 +25,7 @@
         <div class="sba-l-row">
           <div class="sba-l-col--12 sba-u-padding-x--2">
             <a href="/styleguide">
-              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="assets/img/certify-sba-gov-logo_on-dark.png" />
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
             </a>
           </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
           <ul class="usa-sidenav-list">
             <li>
-              <a class=" usa-current " href="/">Introduction</a>
+              <a class="" href="/">Introduction</a>
             </li>
             <li>
               <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_layout">
@@ -122,7 +122,8 @@
             </li>
 
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_utilities">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_utilities">
                 Utilities
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#angle-down"></use>
@@ -184,22 +185,19 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Certify.SBA.gov Design System</h1>
-  <p class="usa-font-lead">Welcome to the certify.SBA.gov design system. Here you will find guidance on components used in the certify.SBV.gov application. These components are built with the <a href="http://standards.usa.gov/">U.S. Web Design Standards</a>. The design system was heavily influenced by <a href="https://design.cms.gov">design.cms.gov</a></p>
+  <h1>Visibility</h1>
 
-  <p>The design system is created to be used simultaneoulsy with legacy systems. For instance, you may still use components and features that are built with the U.S. Web Design Standards and existing Certify components. The goal is to get all defined platform components into the design system. Once those items are properly incorporated, their legacy versions may be removed as well as any corresponding code. This is expected to happen gradually. </p>
+  <p><a href="https://github.com/USSBA/certify-prototype/blob/master/assets/stylesheets/v2-utilities/_visibility.scss">CSS file</a></p>
 
-  <p><a class="sba-c-button sba-c-button--big" href="https://ussba.github.io/certify-prototype" target="_blank">View on GitHub</a></p>
+  <p>Use the <code>display</code> and <code>visibility</code> utility classes to show and hide elements.</p>
 
-  <h2>Naming conventions</h2>
-
-  <p>The certify.SBA.gov design system uses a strict naming convention. This helps identify what is part of the design system, what role it plays, and what it pertains to.</p>
+  <h2>Display</h2>
 
   <div class="sg-format-example">
     <div class="sg-format-example__row">
       <code aria-describedby="namespace">sba-</code>
       <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">item--modifier</code>
+      <code aria-describedby="bem">display--[VALUE]</code>
     </div>
     <div class="sg-format-example__row">
       <div id="namespace">Namespace</div>
@@ -208,43 +206,102 @@
     </div>
   </div>
 
-  <p>Every part of the design system must be namespaced with <code>sba-</code>, prefixed with its role, and a <a href="http://getbem.com/naming/">BEM syntax</a> convention.</p>
+  <h3>Available <code>display</code> utilities:</h3>
 
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Prefix</th>
-        <th scope="col">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row"><code>l-</code></th>
-        <td>Indicates layout, generally for building the grid.</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>c-</code></th>
-        <td>Indicates a component. Components are built specific to the needs of certify.SBA.gov</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>u-</code></th>
-        <td>Indicates a utility. Utilities pertain to CSS properties.</td>
-      </tr>
-    </tbody>
-  </table>
+  <ul>
+    <li><code>sba-u-display--block</code></li>
+    <li><code>sba-u-display--inline-block</code></li>
+    <li><code>sba-u-display--flex</code></li>
+    <li>
+      <code>sba-u-display--none</code> - Hides content from all users. Alternatively, you also use the HTML5 <code>hidden</code> attribute.
+    </li>
+  </ul>
 
-  <p>These prefixes can sometimes be followed by a "breakpoint prefix".</p>
+  <h2>Visibility</h2>
 
-  <h2>About using the design system</h2>
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="bem">visibility--[VALUE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
 
-  <p>The design system provides a large amount of flexibilty for prototype and development for production. At the moment, the design system is constructed in Jekyll, but will eventually be packaged as a gem and a node module.</p>
+  <h3>Available <code>visibility</code> utilities</h3>
 
-  <h3>Contributing</h3>
+  <ul>
+    <li><code>sba-u-visibility--hidden</code> - Hides an element while leaving the space where it would have been.</li>
+    <li><code>sba-u-visibility--visible</code></li>
+    <li><code>sba-u-visibility--screen-reader</code></li>
+  </ul>
 
-  <p>At the moment, and while the core is still undergoing an initial buildout, the design system is to centrally owned. Please tag any GitHub issues with <strong>jaredcunha-usds</strong>.</p>
+  <h4>Accessibility</h4>
 
+  <p>There may be times when you want to hide an element, but still want its text to be read by a screen reader. The <code<>sba-u-visibility--screen-reader</code> class will hide the content visually, but provide the content to screen readers.</p>
 
+  <h2>Responsive Visibility</h2>
 
+  <p>Use a breakpoint prefix to show/hide content at specific breakpoints.</p>
+
+  <p>A breakpoint prefix is supported on all of the utility classes mentioned above, except for <code>sba-u-visibility--screen-reader</code>.</p>
+
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="breakpoint">lg-</code>
+      <code aria-describedby="bem">display--[VALUE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="breakpoint">Breakpoint</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
+
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="breakpoint">lg-</code>
+      <code aria-describedby="bem">visibility--[VALUE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="breakpoint">Breakpoint</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
+
+  <div class="sg-responsive-preview">
+    <div class="sg-responsive-preview__size-buttons">
+      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
+        XS
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
+        SM
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
+        MD
+      </button>
+      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
+        LG
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
+        XL
+      </button>
+    </div>
+    <div class="iframe__preview">
+      <iframe title="Pagination example" class="responsive-iframe" src="examples/visibility.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="500"></iframe>
+    </div>
+  </div>
 
 </article>
 
