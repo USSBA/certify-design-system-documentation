@@ -12334,6 +12334,10 @@ Style guide: layout.spacing
     .sg-format-example__row > div:last-of-type {
       color: #5b616b; }
 
+.usa-sr-only {
+  position: absolute;
+  left: -999em; }
+
 /*
 Color
 
