@@ -12,13 +12,3 @@ h5,
 h6 {
   font-family: $font-sans;
 }
-
-
-// testing
-@font-face {
-  font-family: 'FontAwesome';
-  src: font('fa-brands-400.eot?v=4.7.0');
-  src: font('fa-brands-400.eot?#iefix&v=4.7.0') format('embedded-opentype'), font('fa-brands-400.woff2?v=4.7.0') format('woff2'), font('fa-brands-400.woff?v=4.7.0') format('woff'), font('fa-brands-400.ttf?v=4.7.0') format('truetype'), font('fa-brands-400.svg?v=4.7.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
