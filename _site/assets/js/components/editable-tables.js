@@ -291,7 +291,7 @@ $(document).ready(function() {
             <td data-table-header="' +  data_header_text + '" >\
               <div class="sba-c-task-panel">\
                 <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="'+ fields_row_id +'_panel">\
-                  <svg class="sba-c-icon" viewBox="0 0 512 512">\
+                  <svg class="sba-c-icon" aria-hidden="true" viewBox="0 0 512 512">\
                     <title >Horizontal Ellipsis</title>\
                     <path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path>\
                   </svg>\
@@ -397,8 +397,9 @@ $(document).ready(function() {
               var form_input = '\
               <div class="sba-c-input-ornament-container">\
                 <div class="sba-c-input-ornament sba-c-input-ornament--left">\
-                  <svg aria-hidden="true" class="sba-c-icon">\
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
+                  <svg aria-hidden="true" class="sba-c-icon" viewBox="0 0 320 512">\
+                    <title>Dollar Sign</title>\
+                    <path d="M113.411 169.375c0-23.337 21.536-38.417 54.865-38.417 26.726 0 54.116 12.263 76.461 28.333 5.88 4.229 14.13 2.354 17.575-4.017l23.552-43.549c2.649-4.898 1.596-10.991-2.575-14.68-24.281-21.477-59.135-34.09-91.289-37.806V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v49.832c-58.627 13.29-97.299 55.917-97.299 108.639 0 123.533 184.765 110.81 184.765 169.414 0 19.823-16.311 41.158-52.124 41.158-30.751 0-62.932-15.88-87.848-35.887-5.31-4.264-13.082-3.315-17.159 2.14l-30.389 40.667c-3.627 4.854-3.075 11.657 1.302 15.847 24.049 23.02 59.249 41.255 98.751 47.973V500c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12v-47.438c65.72-10.215 106.176-59.186 106.176-116.516.001-119.688-184.764-103.707-184.764-166.671z"></path>\
                   </svg>\
                 </div>\
                 <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + optional_attributes +'>\
@@ -408,8 +409,9 @@ $(document).ready(function() {
               var form_input = '\
               <div class="sba-c-input-ornament-container">\
                 <div class="sba-c-input-ornament sba-c-input-ornament--right">\
-                  <svg aria-hidden="true" class="sba-c-icon">\
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/img/svg-sprite/sprite.svg#percent"></use>\
+                  <svg aria-hidden="true" class="sba-c-icon" viewBox="0 0 448 512">\
+                    <title>Percent</title>\
+                    <path d="M112 224c61.9 0 112-50.1 112-112S173.9 0 112 0 0 50.1 0 112s50.1 112 112 112zm0-160c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zm224 224c-61.9 0-112 50.1-112 112s50.1 112 112 112 112-50.1 112-112-50.1-112-112-112zm0 160c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zM392.3.2l31.6-.1c19.4-.1 30.9 21.8 19.7 37.8L77.4 501.6a23.95 23.95 0 0 1-19.6 10.2l-33.4.1c-19.5 0-30.9-21.9-19.7-37.8l368-463.7C377.2 4 384.5.2 392.3.2z"></path>\
                   </svg>\
                 </div>\
                 <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + optional_attributes +'>\
