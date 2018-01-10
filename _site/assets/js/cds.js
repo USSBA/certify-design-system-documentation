@@ -587,7 +587,7 @@ $(document).ready(function() {
               <div class="sba-c-input-ornament-container">\
                 <div class="sba-c-input-ornament sba-c-input-ornament--left">\
                   <svg aria-hidden="true" class="sba-c-icon">\
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
                 <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + optional_attributes +'>\
@@ -598,7 +598,7 @@ $(document).ready(function() {
               <div class="sba-c-input-ornament-container">\
                 <div class="sba-c-input-ornament sba-c-input-ornament--right">\
                   <svg aria-hidden="true" class="sba-c-icon">\
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#percent"></use>\
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
                 <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + optional_attributes +'>\
