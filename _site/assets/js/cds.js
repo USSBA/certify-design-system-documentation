@@ -480,8 +480,9 @@ $(document).ready(function() {
             <td data-table-header="' +  data_header_text + '" >\
               <div class="sba-c-task-panel">\
                 <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="'+ fields_row_id +'_panel">\
-                  <svg aria-hidden="true" class="sba-c-icon">\
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/img/svg-sprite/sprite.svg#ellipsis-h"></use>\
+                  <svg class="sba-c-icon" viewBox="0 0 512 512">\
+                    <title >Horizontal Ellipsis</title>\
+                    <path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path>\
                   </svg>\
                   <span class="sba-u-visibility--screen-reader">Toggle menu to edit this row</span>\
                 </button>\
@@ -586,7 +587,7 @@ $(document).ready(function() {
               <div class="sba-c-input-ornament-container">\
                 <div class="sba-c-input-ornament sba-c-input-ornament--left">\
                   <svg aria-hidden="true" class="sba-c-icon">\
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#dollar-sign"></use>\
                   </svg>\
                 </div>\
                 <input type="number" id="'+ field_id +'" class="sba-u-input-width--10 js-usd" '+ aria_describedby_attribute + ' ' + optional_attributes +'>\
@@ -597,7 +598,7 @@ $(document).ready(function() {
               <div class="sba-c-input-ornament-container">\
                 <div class="sba-c-input-ornament sba-c-input-ornament--right">\
                   <svg aria-hidden="true" class="sba-c-icon">\
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/img/svg-sprite/sprite.svg#percent"></use>\
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/svg-sprite/sprite.svg#percent"></use>\
                   </svg>\
                 </div>\
                 <input type="number" id="'+ field_id +'" class="sba-u-input-width--3 js-percent" ' + aria_describedby_attribute + ' ' + optional_attributes +'>\
