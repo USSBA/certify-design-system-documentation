@@ -149,6 +149,11 @@
   @include transform(rotate(90deg));
 }
 
+.sba-c-task-panel__menu-header {
+  margin: .8rem 2rem;
+  text-transform: none;
+}
+
 // Task panel content
 .sba-c-task-panel__content hr {
   border-style: solid;
