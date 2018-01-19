@@ -19108,16 +19108,16 @@ Style guide: components.spinner.guidance
   -o-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-.sba-c-task-panel__menu-header {
-  margin: .8rem 2rem;
-  text-transform: none; }
-
 .sba-c-task-panel__content hr {
   border-style: solid;
   border-width: 1px;
   border-color: #d6d7d9;
   border-bottom: none;
   margin: 0 2rem; }
+
+.sba-c-task-panel__menu-header {
+  margin: .8rem 2rem;
+  text-transform: none; }
 
 /* This file has styles that address some conflicts
    that relate to the new grid. These should be
