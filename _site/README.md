@@ -1,6 +1,6 @@
-# Certify Prototype
+# Certify Design System Documentation
 
-This is a static prototype of SBA's [Certify](https://certify.sba.gov) built with [USWDS + Jekyll](http://www.jaredcunha.com/uswds-jekyll/). For full documentation, visit the [USWDS + Jekyll repo](http://www.jaredcunha.com/uswds-jekyll/).
+This is the documentation site for certify.sba.gov. If you are looking for the design system codebase, you can find it [here]("https://github.com/USSBA/cds-gem-prototype").
 
 ## To Run
 
@@ -9,6 +9,10 @@ bundle install
 bundle exec jekyll s
 ```
 
-## To Navigate 
-
-Look at the GitHub repositotry to look at the folder structure and enter that in the url after the default `http://127.0.0.1:4000/` to navigate to that page for example: `http://127.0.0.1:4000/2017/06/full-initial-application/`.
+## To Deploy
+```
+bundle exec jekyll build
+git add -A
+git commit -m "Build for delpoy"
+git subtree push --prefix _site origin gh-pages
+```
