@@ -45,3 +45,11 @@ exclude:
   - /css
   - /screenshots
   - /sketch-files
+  - /.asset-cache
+
+assets:
+  sources:
+    - app/assets/javascripts
+    - app/assets/stylesheets
+    - app/assets/fonts
+    - app/assets/images

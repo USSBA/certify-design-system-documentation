@@ -11955,8 +11955,6 @@ $(document).ready(function(){
 
 
 
-
-
   // Styleguide only
   -$('document').ready(function(){
   var $iframe = $(".responsive-iframe");
@@ -12017,8 +12015,6 @@ $(document).ready(function(){
     }
   });
 });
-
-
 
 
   // Add your JS sripts here
