@@ -22,5 +22,6 @@ gem 'jekyll-babel'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
+   gem 'jekyll-assets'
    gem 'cds', :path => "/Users/jaredcunha/work/cds-gem-prototype"
 end
