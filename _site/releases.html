@@ -9,15 +9,15 @@
 
 
 
-<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<link rel="stylesheet" href="assets/stylesheets/application.css">
 
-<script src="../assets/javascripts/application.js"></script>
-<script src="../assets/cds.js"></script>
+<script src="assets/javascripts/application.js"></script>
+<script src="assets/cds.js"></script>
 
 <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
-    <script src="../assets/javascripts/vendor/prism.js"></script>
+    <link rel="stylesheet" href="assets/stylesheets/prototype/vendor/prism.css">
+    <script src="assets/javascripts/vendor/prism.js"></script>
   </head>
   <body class="styleguide">
 
@@ -26,7 +26,7 @@
         <div class="sba-l-row">
           <div class="sba-l-col--12 sba-u-padding-x--2">
             <a href="/">
-              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="assets/img/certify-sba-gov-logo_on-dark.png" />
             </a>
           </div>
         </div>
@@ -164,8 +164,7 @@
                 </ul>
               </li>
               <li>
-                <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
-                " aria-controls="sublist_transitional">
+                <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_transitional">
                   Depricating
                   <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -179,180 +178,28 @@
                       <a class="" href="/transitional/cards.html">Cards</a>
                     </li>
                     <li>
-                      <a class=" usa-current " href="/transitional/taskpanel.html">Task Panels</a>
+                      <a class="" href="/transitional/taskpanel.html">Task Panels</a>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a class="" href="/releases.html">Release notes</a>
+                  <a class=" usa-current " href="/releases.html">Release notes</a>
                 </li>
             </ul>
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
-        <div class="usa-alert usa-alert-warning" >
-  <div class="usa-alert-body"><h3 class="usa-alert-heading">Notice</h3><p class="usa-alert-text">Transitional items are subject to be refactored in the future. Avoid following this pattern in future development.</p>
-  </div>
-</div>
-
-<br>
-
-<article>
-  <h1>Task Panels</h1>
-
-  <p>Task panels are interactive menus that contain bulk actions for items they relate to. The panels are revealed by clicking the three-dot icon.  In order for them to function properly, the toggle button must have an <code>aria-controls</code> value that corresponds to the <code>id</code> of a <code>task-panel-content</code>.</p>
-
-  <h3>Example</h3>
-
-  <div class="sample">
-    <div class="task-sample">
-      <div class="">8(a) Initial Application</div>
-      <div>
-        <div class="task-panel">
-          <button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">actions</button>
-          <div id="task-panel1" class="task-panel-content">
-            <ul class="task-panel-menu">
-              <li class="task-panel-menu__item">
-                <a href="#" class="task-panel-menu__link"><strong>Begin processing this case</strong></a>
-              </li>
-              <li class="task-panel-menu__item">
-                <a href="#" class="task-panel-menu__link">Add a note</a>
-              </li>
-              <li class="task-panel-menu__item">
-                <a href="#" class="task-panel-menu__link">Request info from firm</a>
-              </li>
-              <li class="task-panel-menu__item">
-                <a href="#" class="task-panel-menu__link">Send message to firm</a>
-              </li>
-              <li class="task-panel-menu__item">
-                <a href="#" class="task-panel-menu__link">Return to firm for revisions</a>
-              </li>
-            </ul>
-            <hr>
-            <ul class="task-panel-menu">
-              <li class="task-panel-menu__item">
-                <a href="#" class="task-panel-menu__link--emergency">Close this case</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h4>Code</h4>
-  <pre><code class="language-markup">
-  &lt;div class="task-panel">
-    &lt;button type="button" class="usa-button-unstyled task-panel-toggle" aria-expanded="false" aria-controls="task-panel1">actions&lt;/button>
-    &lt;div id="task-panel1" class="task-panel-content">
-      &lt;ul class="task-panel-menu">
-        &lt;li class="task-panel-menu__item">
-          &lt;a href="#" class="task-panel-menu__link">&lt;strong>Begin processing this case&lt;/strong>&lt;/a>
-        &lt;/li>
-        &lt;li class="task-panel-menu__item">
-          &lt;a href="#" class="task-panel-menu__link">Add a note&lt;/a>
-        &lt;/li>
-        &lt;li class="task-panel-menu__item">
-          &lt;a href="#" class="task-panel-menu__link">Request info from firm&lt;/a>
-        &lt;/li>
-        &lt;li class="task-panel-menu__item">
-          &lt;a href="#" class="task-panel-menu__link">Send message to firm</a>
-        &lt;/li>
-        &lt;li class="task-panel-menu__item">
-          &lt;a href="#" class="task-panel-menu__link">Return to firm for revisions&lt;/a>
-        &lt;/li>
-      &lt;/ul>
-      &lt;hr>
-      &lt;ul class="task-panel-menu">
-        &lt;li class="task-panel-menu__item">
-          &lt;a href="#" class="task-panel-menu__link--emergency">Close this case&lt;/a>
-        &lt;/li>
-      &lt;/ul>
-    &lt;/div>
-  &lt;/div>
-  </code></pre>
-
-  <h3>Required Compents</h3>
+        <article>
+  <h1>Release notes</h1>
+  <h2>Version 0.2.2</h2>
+  <p>February 5, 2018</p>
+  <h3>Added</h3>
   <ul>
-    <li>Toggle</li>
-    <li>Panel</li>
-    <li>Menu</li>
+    <li>Release notes page</li>
   </ul>
-
-  <h3>Optional Components</h3>
+  <h3>Removed</h3>
   <ul>
-    <li>
-      Emergency actions
-      <p>Emergency actions are red links that involve actions such as closing or deleting.</p>
-    </li>
-    <li>
-      Horizontal rules
-      <p>If a menu has more than 3 items, and one of those items is an "emergency action," then the two menus should be used seperated by a horizontal rule.</p>
-    </li>
+    <li>Fontawesome 5 Pro Icons</li>
   </ul>
-
-  <h3>Variations</h3>
-  <p>There are variations on the toggle button available that can be applied using class names on the toggle button.</p>
-
-  <h4>Vertical dots</h4>
-  <p>The dots can be rotated vertically to save horizontal space, such as when the task panel is used on cards. This is done by adding a class name of <code>task-panel-toggle--vertical</code> to the toggle</p>
-
-  <pre><code class="language-markup">&lt;button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panel3">actions&lt;/button>
-  </code></pre>
-
-  <h4>Smaller buttons</h4>
-  <p>Buttons can be made smaller to conserve space, such as when the task panel is used in cards and tables. This is done by adding a class name of <code>task-panel-toggle--small</code> to the toggle</p>
-
-  <pre><code class="language-markup">&lt;button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small" aria-expanded="false" aria-controls="task-panel3">actions&lt;/button>
-  </code></pre>
-
-  <p>The example below shows a task panel that combines both a rotated icon and a smaller button.</p>
-
-  <h3>Examples of Variations</h3>
-  <div class="sample">
-    <section class="card-set card-set--halves">
-      <div class="card">
-        <div class="card__header">
-          <h3 class="card__primary-heading"><a href="#">Card Example</a></h3>
-        </div>
-        <div class="card__content">
-          <p>This is some card content</p>
-        </div>
-        <div class="card__bulk-actions">
-          <div class="task-panel">
-            <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panela">actions</button>
-            <div id="task-panela" class="task-panel-content">
-              <ul class="task-panel-menu">
-                <li class="task-panel-menu__item">
-                  <a href="#" class="task-panel-menu__link">Return this section</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__header">
-          <h3 class="card__primary-heading"><a href="#">Card Example</a></h3>
-        </div>
-        <div class="card__content">
-          <p>This is some card content</p>
-        </div>
-        <div class="card__bulk-actions">
-          <div class="task-panel">
-            <button type="button" class="usa-button-unstyled task-panel-toggle task-panel-toggle--small task-panel-toggle--vertical" aria-expanded="false" aria-controls="task-panelb">actions</button>
-            <div id="task-panelb" class="task-panel-content">
-              <ul class="task-panel-menu">
-                <li class="task-panel-menu__item">
-                  <a href="#" class="task-panel-menu__link">Return this section</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
 </article>
 
         </div>
