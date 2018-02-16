@@ -23,5 +23,5 @@ gem 'jekyll-babel'
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem 'jekyll-assets'
-   gem 'cds', :path => "/Users/jaredcunha/work/cds-gem-prototype"
+   gem 'certify_design_system', :path => "/Users/jaredcunha/work/certify_design_system_gem"
 end

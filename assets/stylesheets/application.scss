@@ -18,7 +18,4 @@
 // Style Guide - This is only for use in the styleguide
 @import "prototype/components/styleguide";
 
-// Styles from the gem
-@import "{{ site.theme }}";
-
 $output-bourbon-deprecation-warnings: false !default;

@@ -3,7 +3,8 @@
 
 
 
-if (typeof jQuery=="undefined") { console.warn("CDS requires jQuery.")};
+if (typeof jQuery=="undefined") { console.warn("Certify Design System requires jQuery.")};
+var certifyDesignSystem = true; 
 /**
  * Date picker
  * Date picker script is a fallback for any browser that
