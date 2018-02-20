@@ -69,7 +69,8 @@
               </ul>
             </li>
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_components">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_components">
                 Components
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -105,7 +106,7 @@
                   <a class="" href="/components/forms.html">Forms</a>
                 </li>
                 <li>
-                  <a class="" href="/components/guidances.html">Guidances</a>
+                  <a class=" usa-current " href="/components/guidances.html">Guidances</a>
                 </li>
                 <li>
                   <a class="" href="/components/icons.html">Icons</a>
@@ -129,8 +130,7 @@
             </li>
 
             <li>
-              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
-              " aria-controls="sublist_utilities">
+              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_utilities">
                 Utilities
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -162,7 +162,7 @@
                     <a class="" href="/utilities/measure.html">Measure</a>
                   </li>
                   <li>
-                    <a class=" usa-current " href="/utilities/padding.html">Padding</a>
+                    <a class="" href="/utilities/padding.html">Padding</a>
                   </li>
                   <li>
                     <a class="" href="/utilities/visibility.html">Visibility</a>
@@ -195,66 +195,117 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Padding</h1>
+  <h1>Guidances</h1>
+  <p>Guidances are components that appear on an application overview whose purpose is to inform a firm owner, contributor, or delegate the status of their case and what, if anything, they will need to do next.</p>
+  <p>This component, in all instances, needs to answer the following quesitons:</p>
+  <ol>
+    <li>What is the status of my case? (in a conversational tone)</li>
+    <li>What actions do I need to do in order to proceed?</li>
+  </ol>
+  <p>Guidances should also use color in order to convey emergencies, warnings, and success. There is also a neutral option. The color also helps the component stand out from the cards that comprise of application sections.</p>
+  <p>Guiances can accept open text, such as paragraphs, unordered lists, ordered lists, links, and bold or italic text.</p>
 
-  <p><a href="https://github.com/USSBA/cds-gem-prototype/blob/master/assets/stylesheets/utilities/_padding.scss">CSS file</a></p>
-
-  <p>Use the padding utility to change an element's padding. The [MULTIPLE] is a number 0-7.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">padding--[MULTIPLE]</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="bem">BEM syntax</div>
-    </div>
-  </div>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace2">sba-</code>
-      <code aria-describedby="prefix2">u-</code>
-      <code aria-describedby="bem2">padding-[x|y|bottom|left|right|top]--[MULTIPLE]</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace2">Namespace</div>
-      <div id="prefix2">Prefix</div>
-      <div id="bem2">BEM syntax</div>
-    </div>
-  </div>
-
+  <h2>Examples</h2>
+  <p>Here are examples of different types</p>
+  <h3>Neutral example</h3>
   <div class="sample">
-    <div class="sba-u-bgcolor--white sba-u-padding--0">sba-u-padding--0</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--1">sba-u-padding--1</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--2">sba-u-padding--2</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--3">sba-u-padding--3</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--4">sba-u-padding--4</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--5">sba-u-padding--5</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--6">sba-u-padding--6</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--7">sba-u-padding--7</div>
-  </div>
-
-  <h2>Responsive padding</h2>
-  <p>The padding utility also supports breakpoint prefixes.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="breakpoint">lg-</code>
-      <code aria-describedby="bem">padding--[MULTIPLE]</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="breakpoint">Breakpoint</div>
-      <div id="bem">BEM syntax</div>
+    <div class="sba-c-guidance">
+      <div class="sba-c-guidance__header">
+        <h2 class="sba-c-guidance__primary-heading">Your application package is ready to submit!</h2>
+      </div>
+      <div class="sba-c-guidance__section">
+        <p>All sections for you and your contributors are complete. Once you submit your application package, you will not be able to make changes.</p>
+        <p><a href="#" class="usa-button">Sign and submit</a></p>
+      </div>
     </div>
   </div>
+  <pre><code class="language-markup">&lt;div class="sba-c-guidance">
+  &lt;div class="sba-c-guidance__header">
+    &lt;h2 class="sba-c-guidance__primary-heading">Your application package is ready to submit!&lt;/h2>
+  &lt;/div>
+  &lt;div class="sba-c-guidance__section">
+    &lt;p>All sections for you and your contributors are complete. Once you submit your application package, you will not be able to make changes.&lt;/p>
+    &lt;p>&lt;a href="#" class="usa-button">Sign and submit&lt;/a>&lt;/p>
+  &lt;/div>
+&lt;/div></pre></code>
+
+  <h3>Positive example</h3>
+  <div class="sample">
+    <div class="sba-c-guidance sba-c-guidance--success">
+      <div class="sba-c-guidance__header">
+        <h2 class="sba-c-guidance__primary-heading">Your application is being processed by the SBA!</h2>
+      </div>
+      <div class="sba-c-guidance__section">
+        <p>Applications usually take about 90 days to process. There is nothing that you are required to do at this time. Please be available in the event that SBA may contact you or your contributors to request additional information.</p>
+      </div>
+    </div>
+  </div>
+  <pre><code class="language-markup">&lt;div class="sba-c-guidance sba-c-guidance--success">
+  &lt;div class="sba-c-guidance__header">
+    &lt;h2 class="sba-c-guidance__primary-heading">Your application is being processed by the SBA!&lt;/h2>
+  &lt;/div>
+  &lt;div class="sba-c-guidance__section">
+    &lt;p>Applications usually take about 90 days to process. There is nothing that you are required to do at this time. Please be available in the event that SBA may contact you or your contributors to request additional information.&lt;/p>
+  &lt;/div>
+&lt;/div></pre></code>
+
+  <h3>Warning example</h3>
+  <div class="sample">
+    <div class="sba-c-guidance sba-c-guidance--warning">
+      <div class="sba-c-guidance__header">
+        <h2 class="sba-c-guidance__primary-heading">Your application has been returned to you.</h2>
+      </div>
+      <div class="sba-c-guidance__section">
+        <p>Please provide the information requested in <a href="#">this message</a> by <strong>Sept. 15th, 2017</strong>.</p>
+      </div>
+      <div class="sba-c-guidance__section">
+        <input type="checkbox" name="update" id="update_made" value="yes">
+        <label for="update_made">I have made the requested updates</label>
+        <p><a id="resubmit-button" href="#" class="usa-button usa-button-disabled">Resubmit to SBA</a></p>
+      </div>
+    </div>
+  </div>
+  <pre><code class="language-markup">&lt;div class="sba-c-guidance sba-c-guidance--warning">
+  &lt;div class="sba-c-guidance__header">
+    &lt;h2 class="sba-c-guidance__primary-heading">Your application has been returned to you.&lt;/h2>
+  &lt;/div>
+  &lt;div class="sba-c-guidance__section">
+    &lt;p>Please provide the information requested in &lt;a href="#">this message&lt;/a> by &lt;strong>Sept. 15th, 2017&lt;/strong>.&lt;/p>
+  &lt;/div>
+  &lt;div class="sba-c-guidance__section">
+    &lt;input type="checkbox" name="update" id="update_made" value="yes">
+    &lt;label for="update_made">I have made the requested updates&lt;/label>
+    &lt;p>&lt;a id="resubmit-button" href="#" class="usa-button usa-button-disabled">Resubmit to SBA&lt;/a>&lt;/p>
+  &lt;/div>
+&lt;/div></pre></code>
+
+
+  <h3>Emergency example</h3>
+  <div class="sample">
+    <div class="sba-c-guidance sba-c-guidance--emergency">
+      <div class="sba-c-guidance__header">
+        <h2 class="sba-c-guidance__primary-heading">Your application has unfortunately been declined.</h2>
+      </div>
+      <div class="sba-c-guidance__section">
+        <p>SBA's <a href="#">decision letter</a> explains this decision.</p>
+        <p>If you don't <a href="#">respond</a> by December 17, 2017 you can't reapply to the 8(a) Business Development program until November 2, 2018.</p>
+      </div>
+    </div>
+  </div>
+  <pre><code class="language-markup">&lt;div class="sba-c-guidance sba-c-guidance--emergency">
+  &lt;div class="sba-c-guidance__header">
+    &lt;h2 class="sba-c-guidance__primary-heading">Your application has unfortunately been declined.&lt;/h2>
+  &lt;/div>
+  &lt;div class="sba-c-guidance__section">
+    &lt;p>SBA's <a href="#">decision letter&lt;/a> explains this decision.&lt;/p>
+    &lt;p>If you don't <a href="#">respond&lt;/a> by December 17, 2017 you can't reapply to the 8(a) Business Development program until November 2, 2018.&lt;/p>
+  &lt;/div>
+&lt;/div></pre></code>
+
+  <h2>Guidance</h2>
+  <ul>
+    <li>Use margin utilities to provide top or bottom margins if needed.</li>
+  </ul>
 </article>
 
         </div>
