@@ -69,7 +69,8 @@
               </ul>
             </li>
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_components">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_components">
                 Components
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -111,7 +112,7 @@
                   <a class="" href="/components/icons.html">Icons</a>
                 </li>
                 <li>
-                  <a class="" href="/components/lists.html">Lists</a>
+                  <a class=" usa-current " href="/components/lists.html">Lists</a>
                 </li>
                 <li>
                   <a class="" href="/components/questionnaire.html">Questionnaire</a>
@@ -132,8 +133,7 @@
             </li>
 
             <li>
-              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
-              " aria-controls="sublist_utilities">
+              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_utilities">
                 Utilities
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -144,7 +144,7 @@
               </button>
                 <ul class="usa-sidenav-sub_list" id="sublist_utilities">
                   <li>
-                    <a class=" usa-current " href="/utilities/borders.html">Borders</a>
+                    <a class="" href="/utilities/borders.html">Borders</a>
                   </li>
                   <li>
                     <a class="" href="/utilities/background-color.html">Background color</a>
@@ -198,180 +198,106 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Borders</h1>
+  <h1>Lists</h1>
+    <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_lists.scss">CSS file</a></p>
 
-  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/utilities/_borders.scss">CSS file</a></p>
+    <p class="usa-font-lead">
+      The following are the list styles available in the design system.
+    </p>
 
-  <p>Use the border utility classes to control the border size and color properties.</p>
-
-  <p>The border utility class sets the <code>border-color</code> and border-size, with support for the following sizes: <code>0</code>, <code>1px</code>, or <code>2px</code>.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">border-[x|y|bottom|left|right|top]--[SIZE]</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="bem">BEM syntax</div>
-    </div>
-  </div>
-
-  <div class="sample">
-    <div class="sba-u-border--0 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border--0</code>
+    <h2>Unstyled list</h2>
+    <p>Resets the base styling applyed to any list</p>
+    <div class="sample">
+      <ul class="sba-c-unstyled-list">
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+      </ul>
     </div>
 
-    <div class="sba-u-border--1 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border--1</code>
-    </div>
+    <pre><code class="language-markup">&lt;ul class="sba-c-unstyled-list">
+  &lt;li>List item&lt;/li>
+  &lt;li>List item&lt;/li>
+  &lt;li>List item&lt;/li>
+  &lt;li>List item&lt;/li>
+&lt;/ul></code></pre>
 
-    <div class="sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border--2</code>
-    </div>
+    <h2>Timelines</h2>
+    <p>Timelines visually connect items in an ordered list. </p>
 
-    <div class="sba-u-border-x--0 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-x--0</code>
-    </div>
-
-    <div class="sba-u-border-x--1 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-x--1</code>
-    </div>
-
-    <div class="sba-u-border-x--2 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-x--2</code>
-    </div>
-
-    <div class="sba-u-border-y--0 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-y--0</code>
-    </div>
-
-    <div class="sba-u-border-y--1 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-y--1</code>
-    </div>
-
-    <div class="sba-u-border-y--2 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-y--2</code>
-    </div>
-
-    <div class="sba-u-border-bottom--0 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-bottom--0</code>
-    </div>
-
-    <div class="sba-u-border-bottom--1 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-bottom--1</code>
-    </div>
-
-    <div class="sba-u-border-bottom--2 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-bottom--2</code>
-    </div>
-
-    <div class="sba-u-border-left--0 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-left--0</code>
-    </div>
-
-    <div class="sba-u-border-left--1 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-left--1</code>
-    </div>
-
-    <div class="sba-u-border-left--2 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-left--2</code>
-    </div>
-
-    <div class="sba-u-border-right--0 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-right--0</code>
-    </div>
-
-    <div class="sba-u-border-right--1 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-right--1</code>
-    </div>
-
-    <div class="sba-u-border-right--2 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-right--2</code>
-    </div>
-
-    <div class="sba-u-border-top--0 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-top--0</code>
-    </div>
-
-    <div class="sba-u-border-top--1 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-top--1</code>
-    </div>
-
-    <div class="sba-u-border-top--2 sba-u-margin-y--1 sba-u-padding--1">
-      <code class="sba-u-bgcolor--background">sba-u-border-top--2</code>
-    </div>
-  </div>
-
-  <h2>Border color</h2>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">border--[COLOR NAME]</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="bem">BEM syntax</div>
-    </div>
-  </div>
-
-  <div class="sample">
-    <div class="sba-u-bgcolor--primary-darkest sba-u-padding--1">
-      <div class="sba-u-border--inverse sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--inverse</code>
+    <div class="sample">
+      <div class="sba-c-timeline">
+        <div class="sba-c-timeline__group">
+          <h4 class="sba-c-timeline__header">August 2017</h4>
+          <ol class="sba-c-timeline__list">
+            <li class="sba-c-timeline__list__item">
+              <span class="sba-c-timeline__timestamp">08/24 at 4:12pm</span>
+              <p>Jane Doe change the status to In Progress</p>
+            </li>
+            <li class="sba-c-timeline__list__item">
+              <span class="timeline__timestamp">08/23 at 12:18pm</span>
+              <p>Karen Smith changed the review status to Assigned</p>
+            </li>
+            <li class="sba-c-timeline__list__item">
+              <span class="sba-c-timeline__timestamp">08/19 at 9:52am</span>
+              <p>Karen Smith changed the review status to Assigned</p>
+            </li>
+          </ol>
+        </div>
+        <div class="sba-c-timeline__group">
+          <h4 class="sba-c-timeline__header">June 2017</h4>
+          <ol class="sba-c-timeline__list">
+            <li class="sba-c-timeline__list__item">
+              <span class="sba-c-timeline__timestamp">07/24 at 4:12pm</span>
+              <p>Jane Doe change the status to In Progress</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
-    <div>
-      <div class="sba-u-border--error sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--error</code>
-      </div>
-    </div>
-    <div>
-      <div class="sba-u-border--error-light sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--error-light</code>
-      </div>
-    </div>
-    <div class="sba-u-bgcolor--primary-darkest sba-u-padding--1">
-      <div class="sba-u-border--error-lighter sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--error-lighter</code>
-      </div>
-    </div>
-    <div>
-      <div class="sba-u-border--warn sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--warn</code>
-      </div>
-    </div>
-    <div>
-      <div class="sba-u-border--warn-light sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--warn-light</code>
-      </div>
-    </div>
-    <div class="sba-u-bgcolor--primary-darkest sba-u-padding--1">
-      <div class="sba-u-border--warn-lighter sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--warn-lighter</code>
-      </div>
-    </div>
-    <div>
-      <div class="sba-u-border--success sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--success</code>
-      </div>
-    </div>
-    <div>
-      <div class="sba-u-border--success-light sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--success-light</code>
-      </div>
-    </div>
-    <div class="sba-u-bgcolor--primary-darkest sba-u-padding--1">
-      <div class="sba-u-border--success-lighter sba-u-border--2 sba-u-margin-y--1 sba-u-padding--1">
-        <code class="sba-u-bgcolor--background">sba-u-border--success-lighter</code>
-      </div>
-    </div>
-  </div>
+
+    <pre><code class="language-markup">&lt;div class="sba-c-timeline">
+  &lt;div class="sba-c-timeline__group">
+    &lt;h4 class="sba-c-timeline__header">August 2017&lt;/h4>
+    &lt;ol class="sba-c-timeline__list">
+      &lt;li class="sba-c-timeline__list__item">
+        &lt;span class="sba-c-timeline__timestamp">08/24 at 4:12pm&lt;/span>
+        &lt;p>Jane Doe change the status to In Progress&lt;/p>
+      &lt;/li>
+      &lt;li class="sba-c-timeline__list__item">
+        &lt;span class="timeline__timestamp">08/23 at 12:18pm&lt;/span>
+        &lt;p>Karen Smith changed the review status to Assigned&lt;/p>
+      &lt;/li>
+      &lt;li class="sba-c-timeline__list__item">
+        &lt;span class="sba-c-timeline__timestamp">08/19 at 9:52am&lt;/span>
+        &lt;p>Karen Smith changed the review status to Assigned&lt;/p>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="sba-c-timeline__group">
+    &lt;h4 class="sba-c-timeline__header">June 2017&lt;/h4>
+    &lt;ol class="sba-c-timeline__list">
+      &lt;li class="sba-c-timeline__list__item">
+        &lt;span class="sba-c-timeline__timestamp">07/24 at 4:12pm&lt;/span>
+        &lt;p>Jane Doe change the status to In Progress&lt;/p>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+&lt;/div></code></pre>
+
+<h3>Guidance</h3>
+
+<ul>
+  <li>Always use <code>ol</code> instead of <code>ul</code> for the list since the pattern establishes a specific order.</li>
+  <li>Timeline sets can be grouped in a <code>sba-c-timeline__group</code> to break up sets visually.</li>
+</ul>
+
+<h4>When to consider something else</h4>
+<ul>
+  <li>When there is no ordered, linear relationship from one list item to the other</li>
+</ul>
+
 
 </article>
 
