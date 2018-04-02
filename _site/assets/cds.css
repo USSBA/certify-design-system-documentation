@@ -5837,6 +5837,14 @@ Style guide: components.button.guidance
     .sba-c-card__body {
       padding: 2.4rem; } }
 
+.sba-c-doc-upload-container {
+  max-width: 80rem;
+  margin: 0 0 1em 0; }
+
+.sba-c-doc-upload--completed {
+  border: 1px solid #4aa564;
+  background: #e7f4e4; }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;

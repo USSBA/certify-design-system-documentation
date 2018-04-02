@@ -69,7 +69,8 @@
               </ul>
             </li>
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_components">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_components">
                 Components
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -99,7 +100,7 @@
                   <a class="" href="/certify-design-system-documentation/components/datepicker.html">Datepicker</a>
                 </li>
                 <li>
-                  <a class="" href="/certify-design-system-documentation/components/document-upload.html">Document Upload</a>
+                  <a class="usa-current" href="/certify-design-system-documentation/components/document-upload.html">Document upload</a>
                 </li>
                 <li>
                   <a class="" href="/certify-design-system-documentation/components/editable-tables.html">Editable tables</a>
@@ -135,8 +136,7 @@
             </li>
 
             <li>
-              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
-              " aria-controls="sublist_utilities">
+              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_utilities">
                 Utilities
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -168,7 +168,7 @@
                     <a class="" href="/certify-design-system-documentation/utilities/measure.html">Measure</a>
                   </li>
                   <li>
-                    <a class=" usa-current " href="/certify-design-system-documentation/utilities/padding.html">Padding</a>
+                    <a class="" href="/certify-design-system-documentation/utilities/padding.html">Padding</a>
                   </li>
                   <li>
                     <a class="" href="/certify-design-system-documentation/utilities/visibility.html">Visibility</a>
@@ -201,66 +201,108 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Padding</h1>
+  <span class="sba-c-badge sba-c-badge--warn">Draft</span>
+  <h1>Document upload</h1>
+  <p>
+  <!-- <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_breadcrumbs.scss">CSS file</a> -->
+</p>
+  <p>Document upload is for uploading files of various types</p>
 
-  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/utilities/_padding.scss">CSS file</a></p>
+  <div class="sample sample--white">
+    <!-- Example component -->
 
-  <p>Use the padding utility to change an element's padding. The [MULTIPLE] is a number 0-7.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="bem">padding--[MULTIPLE]</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="bem">BEM syntax</div>
-    </div>
-  </div>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace2">sba-</code>
-      <code aria-describedby="prefix2">u-</code>
-      <code aria-describedby="bem2">padding-[x|y|bottom|left|right|top]--[MULTIPLE]</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace2">Namespace</div>
-      <div id="prefix2">Prefix</div>
-      <div id="bem2">BEM syntax</div>
-    </div>
-  </div>
-
-  <div class="sample">
-    <div class="sba-u-bgcolor--white sba-u-padding--0">sba-u-padding--0</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--1">sba-u-padding--1</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--2">sba-u-padding--2</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--3">sba-u-padding--3</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--4">sba-u-padding--4</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--5">sba-u-padding--5</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--6">sba-u-padding--6</div><br>
-    <div class="sba-u-bgcolor--white sba-u-padding--7">sba-u-padding--7</div>
-  </div>
-
-  <h2>Responsive padding</h2>
-  <p>The padding utility also supports breakpoint prefixes.</p>
-
-  <div class="sg-format-example">
-    <div class="sg-format-example__row">
-      <code aria-describedby="namespace">sba-</code>
-      <code aria-describedby="prefix">u-</code>
-      <code aria-describedby="breakpoint">lg-</code>
-      <code aria-describedby="bem">padding--[MULTIPLE]</code>
-    </div>
-    <div class="sg-format-example__row">
-      <div id="namespace">Namespace</div>
-      <div id="prefix">Prefix</div>
-      <div id="breakpoint">Breakpoint</div>
-      <div id="bem">BEM syntax</div>
+<div class="sba-c-doc-upload-container">
+  <!-- expandable -->
+  <div class="sba-c-doc-upload card">
+    <div class="sba-c-card__header">
+      <div class="sba-l-row ">
+        <div class="sba-l-col--10">
+          <h3 class="sba-c-card__primary-heading">Drivers License</h3>
+          <p class="sba-u-margin-y--0">Issued by state. May include non-drivers’ ID</p>
+          <p class="sba-u-margin-y--0"><em>Required</em></p>
+          <div class="sba-c-doc-upload--add">
+            1.) Attach a file
+            <div class="sba-c-doc-upload--options__new">
+              New file
+            </div>
+            <div class="sba-c-doc-upload--options__existing">
+              Existing file
+            </div>
+          </div>
+        </div>
+        <div class="sba-l-col--2 sba-u-lg-align-self--center">
+          <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
+            add file
+          </button>
+        </div>
+      </div>
     </div>
   </div>
+  <!-- completed example -->
+  <div class="sba-c-doc-upload sba-c-doc-upload--completed card">
+    <div class="sba-c-card__header">
+      <div class="sba-l-row ">
+        <div class="sba-l-col--10">
+          <h3 class="sba-c-card__primary-heading">
+            <svg aria-hidden="true" class="sba-c-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#check"></use>
+            </svg>LPR Card
+          </h3><span>already on file</span>
+          <p class="sba-u-margin-y--0">This is also known as a green card</p>
+          <p class="sba-u-margin-y--0"><em>Required</em></p>
+        </div>
+        <div class="sba-l-col--2 sba-u-lg-align-self--center">
+          <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
+            change
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- third example -->
+  <div class="sba-c-doc-upload card">
+    <div class="sba-c-card__header">
+      <div class="sba-l-row ">
+        <div class="sba-l-col--10">
+          <h3 class="sba-c-card__primary-heading">Passport</h3><span>file1.pdf</span>
+          <p class="sba-u-margin-y--0">Scan page with passport number from book</p>
+          <p class="sba-u-margin-y--0"><em>Required</em></p>
+        </div>
+        <div class="sba-l-col--2 sba-u-lg-align-self--center">
+          <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
+            add file
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <pre><code class="language-markup">
+    <!-- Markup example -->
+  </code></pre>
+
+<!--   <pre><code class="language-markup">&lt;ul class="sba-c-breadcrumbs" role="menubar">
+  &lt;li class="sba-c-breadcrumbs__item">
+    &lt;a href="#" class="sba-c-breadcrumbs__link">Application overview&lt;/a>
+  &lt;/li>
+  &lt;li class="sba-c-breadcrumbs__item">
+    &lt;a href="#" class="sba-c-breadcrumbs__link">Eligibility&lt;/a>
+  &lt;/li>
+  &lt;li class="sba-c-breadcrumbs__item">
+    Update your info
+  &lt;/li>
+&lt;/ul></code></pre> -->
+
+<h2>Guidance</h2>
+
+<!-- <ul>
+  <li>Do not use breadcrumbs on index pages</li>
+  <li>Do not link the current page</li>
+</ul> -->
+
 </article>
 
         </div>

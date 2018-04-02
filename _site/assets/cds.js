@@ -99,6 +99,13 @@ $(document).ready(function() {
   formatDates($('.js-format-as-date'));
 
 });
+$(document).ready(function(){
+  // Variables
+  var $task_panel_toggle = $('.sba-c-task-panel__toggle');
+
+  // Hooks
+
+});
 $(document).ready(function() {
   var $editable_table = $('.sba-c-table--editable'),
       $add_button = $editable_table.next('[id$="_add_item"]');
