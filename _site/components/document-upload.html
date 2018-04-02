@@ -37,8 +37,6 @@
     </header>
 
 
-
-
     <div class="sba-l-container sba-l-container--fullbleed sba-u-padding-bottom--7">
       <div class="sba-l-row">
         <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
@@ -208,77 +206,105 @@
 </p>
   <p>Document upload is for uploading files of various types</p>
 
+  <h4>Example</h4>
   <div class="sample sample--white">
-    <!-- Example component -->
+    <div class="sba-c-doc-upload-container">
+      <!-- START - Doc Upload Component -->
+      <div class="sba-c-doc-upload">
 
-<div class="sba-c-doc-upload-container">
-  <!-- expandable -->
-  <div class="sba-c-doc-upload card">
-    <div class="sba-c-card__header">
-      <div class="sba-l-row ">
-        <div class="sba-l-col--10">
-          <h3 class="sba-c-card__primary-heading">Drivers License</h3>
-          <p class="sba-u-margin-y--0">Issued by state. May include non-drivers’ ID</p>
-          <p class="sba-u-margin-y--0"><em>Required</em></p>
-          <div class="sba-c-doc-upload--add">
-            1.) Attach a file
-            <div class="sba-c-doc-upload--options__new">
-              New file
+            <!-- Primary heading content...visible stuff when closed -->
+            <div class="sba-c-doc-upload__primary-heading">
+              <h3>Drivers License</h3>
+              <span>already on file</span>
+              <p>Issued by state. May include non-drivers’ ID</p>
+              <em>Required</em>
+              <!-- Button to toggle the doc upload content -->
+              <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload1">add file</button>
             </div>
-            <div class="sba-c-doc-upload--options__existing">
-              Existing file
+
+            <!-- Primary contents of doc upload. Shown when expanded -->
+            <div id="doc-upload1" class="sba-c-doc-upload__content">
+              <p>1.) Attach a file</p>
+
+              <input id="new-file" type="radio" name="tabs" checked>
+              <label for="new-file">New file</label>
+
+              <input id="existing-file" type="radio" name="tabs">
+              <label for="existing-file">Existing file</label>
+
+              <section id="new-file">
+                <div class="sba-c-doc-upload__file-input">
+                  Drag file into this space or choose a file
+                </div>
+              </section>
+
+              <section id="existing-file">
+                <div class="sba-c-doc-upload__file-list">
+                  <p>Existing file #1</p>
+                  <p>Existing file #2</p>
+                  <p>Existing file #3</p>
+                </div>
+              </section>
+
+              2) Write a brief description (optional)
+              You can add anything information you feel might be helpful to the SBA or use this space to ask questions about the document.
+              <textarea name="textarea" maxlength="200"></textarea>
+              <em class="sba-u-margin-bottom--3">200 characters remaining</em>
+              <button class="sba-c-button" type="button" title="add-file">Add file</button>
+              <button class="sba-c-button sba-c-button--transparent" type="button" title="cancel">Cancel</button>
             </div>
+
+      </div>
+      <!-- END - Doc Upload Component -->
+    </div>
+  </div>
+
+  <h4>Completed example</h4>
+  <div class="sample sample--white">
+    <!-- completed example -->
+<!--     <div class="sba-c-doc-upload sba-c-doc-upload--completed card">
+      <div class="sba-c-card__header">
+        <div class="sba-l-row ">
+          <div class="sba-l-col--10">
+            <h3 class="sba-c-card__primary-heading">
+              <svg aria-hidden="true" class="sba-c-icon">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#check"></use>
+              </svg>LPR Card
+            </h3><span>already on file</span>
+            <p class="sba-u-margin-y--0">This is also known as a green card</p>
+            <p class="sba-u-margin-y--0"><em>Required</em></p>
+          </div>
+          <div class="sba-l-col--2 sba-u-lg-align-self--center">
+            <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
+              change
+            </button>
           </div>
         </div>
-        <div class="sba-l-col--2 sba-u-lg-align-self--center">
-          <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
-            add file
-          </button>
-        </div>
       </div>
-    </div>
+    </div> -->
   </div>
-  <!-- completed example -->
-  <div class="sba-c-doc-upload sba-c-doc-upload--completed card">
-    <div class="sba-c-card__header">
-      <div class="sba-l-row ">
-        <div class="sba-l-col--10">
-          <h3 class="sba-c-card__primary-heading">
-            <svg aria-hidden="true" class="sba-c-icon">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#check"></use>
-            </svg>LPR Card
-          </h3><span>already on file</span>
-          <p class="sba-u-margin-y--0">This is also known as a green card</p>
-          <p class="sba-u-margin-y--0"><em>Required</em></p>
-        </div>
-        <div class="sba-l-col--2 sba-u-lg-align-self--center">
-          <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
-            change
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- third example -->
-  <div class="sba-c-doc-upload card">
-    <div class="sba-c-card__header">
-      <div class="sba-l-row ">
-        <div class="sba-l-col--10">
-          <h3 class="sba-c-card__primary-heading">Passport</h3><span>file1.pdf</span>
-          <p class="sba-u-margin-y--0">Scan page with passport number from book</p>
-          <p class="sba-u-margin-y--0"><em>Required</em></p>
-        </div>
-        <div class="sba-l-col--2 sba-u-lg-align-self--center">
-          <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
-            add file
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
+  <h4>Another example</h4>
+  <div class="sample sample--white">
+    <!-- third example -->
+<!--     <div class="sba-c-doc-upload card">
+      <div class="sba-c-card__header">
+        <div class="sba-l-row ">
+          <div class="sba-l-col--10">
+            <h3 class="sba-c-card__primary-heading">Passport</h3><span>file1.pdf</span>
+            <p class="sba-u-margin-y--0">Scan page with passport number from book</p>
+            <p class="sba-u-margin-y--0"><em>Required</em></p>
+          </div>
+          <div class="sba-l-col--2 sba-u-lg-align-self--center">
+            <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
+              add file
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </div>
+
 
   <pre><code class="language-markup">
     <!-- Markup example -->
