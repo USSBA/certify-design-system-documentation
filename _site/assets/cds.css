@@ -5838,7 +5838,7 @@ Style guide: components.button.guidance
       padding: 2.4rem; } }
 
 .sba-c-doc-upload-container {
-  max-width: 80rem; }
+  max-width: 75rem; }
 
 .sba-c-doc-upload {
   background: white;
@@ -5886,20 +5886,34 @@ Style guide: components.button.guidance
 
 .sba-c-doc-upload__content textarea {
   width: 100%;
+  max-width: 100%;
   border: 1px solid #d6d7d9; }
 
 .sba-c-doc-upload__file-input {
+  display: flex;
   background: #ffffff;
   min-width: 80%;
-  min-height: 8rem;
+  min-height: 12rem;
   text-align: center;
   border: 1px dashed #d6d7d9; }
+
+.sba-c-doc-upload__file-input span {
+  margin: auto; }
+
+.sba-c-doc-upload__file-input > span > label {
+  cursor: pointer;
+  background: transparent;
+  color: #0071bc;
+  text-decoration: underline;
+  border: none;
+  margin: 0;
+  padding: 0; }
 
 .sba-c-doc-upload__content label {
   display: inline-block;
   font-weight: 700;
   color: #5b616b;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #d6d7d9;
   border-bottom: none;
   background: #d6d7d9;
   padding: 15px;
@@ -5924,7 +5938,7 @@ Style guide: components.button.guidance
   display: none;
   margin: -1px 0 5rem 0;
   padding: 2em;
-  border: 1px solid #f1f1f1; }
+  border: 1px solid #d6d7d9; }
 
 #new-file:checked ~ #new-file,
 #existing-file:checked ~ #existing-file {
