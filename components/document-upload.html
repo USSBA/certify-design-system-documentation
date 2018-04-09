@@ -205,6 +205,12 @@
   <!-- <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_breadcrumbs.scss">CSS file</a> -->
 </p>
   <p>Document upload is for uploading files of various types</p>
+  <h2>Concerns</h2>
+  <ul>
+    <li>Is each doc type considered a "doc upload" component? ie. "Passport Document Upload Component" and "Drivers License Document Upload Component" ...Possibly with a generic "Doc Upload" component</li>
+    <li>The "Existing File" tab only makes sense if there are scenarios where a previously uploaded document for another doc type could be re-used. I don't think we should allow this. Each document type should satisfy a specific need and if they have already provided a document to specify that need, the UI should note that it's already satisfied</li>
+    <li>Is there no need for a doc type to require multiple files?</li>
+  </ul>
   <h4>Example</h4>
   <div class="sample sample--white">
     <div class="sba-c-doc-upload-container">
@@ -221,7 +227,7 @@
             </div>
             <!-- Primary contents of doc upload. Shown when expanded -->
             <div id="doc-upload1" class="sba-c-doc-upload__content">
-              <p>1.) Attach a file</p>
+              <p>1) Attach a file</p>
               <input id="new-file" type="radio" name="tabs" checked>
               <label for="new-file">New file</label>
               <input id="existing-file" type="radio" name="tabs">
@@ -256,48 +262,76 @@
 
   <h4>Completed example</h4>
   <div class="sample sample--white">
-    <!-- completed example -->
-<!--     <div class="sba-c-doc-upload sba-c-doc-upload--completed card">
-      <div class="sba-c-card__header">
-        <div class="sba-l-row ">
-          <div class="sba-l-col--10">
-            <h3 class="sba-c-card__primary-heading">
-              <svg aria-hidden="true" class="sba-c-icon">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#check"></use>
-              </svg>LPR Card
-            </h3><span>already on file</span>
-            <p class="sba-u-margin-y--0">This is also known as a green card</p>
-            <p class="sba-u-margin-y--0"><em>Required</em></p>
+    <div class="sba-c-doc-upload-container">
+      <!-- START - Doc Upload Component -->
+      <div class="sba-c-doc-upload sba-c-doc-upload__completed">
+          <!-- Primary heading content...visible stuff when closed -->
+          <div class="sba-c-doc-upload__primary-heading">
+            <svg aria-hidden="true" class="sba-c-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#check"></use>
+            </svg>
+            <h3>Passport</h3>
+            <!-- <span>already on file</span> -->
+            <p>Scan page with passport number from book</p>
+            <em>Required</em>
+            <!-- Button to toggle the doc upload content -->
+            <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload2">change</button>
           </div>
-          <div class="sba-l-col--2 sba-u-lg-align-self--center">
-            <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
-              change
-            </button>
+          <!-- Primary contents of doc upload. Shown when expanded -->
+          <div id="doc-upload2" class="sba-c-doc-upload__content">
+            <p>1) Attach a file</p>
+            <div class="change-file">
+              <div class="sba-c-doc-upload__file-input">
+                <span>
+                  Drag file into this space or
+                  <label for="file-picker1">choose a file</label>
+                  <input type="file" id="file-picker1" accept=".pdf" style="display: none" />
+                </span>
+              </div>
+            </div>
+            <p>2) Write a brief description (optional)
+            You can add anything information you feel might be helpful to the SBA or use this space to ask questions about the document.</p>
+            <textarea maxlength="200"></textarea>
+            <em class="sba-u-margin-bottom--3">200 characters remaining</em>
+            <button class="sba-c-button" type="button" title="add-file">Add file</button>
+            <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__cancel" type="button" title="cancel">Cancel</button>
           </div>
-        </div>
       </div>
-    </div> -->
+      <!-- END - Doc Upload Component -->
+    </div>
   </div>
 
   <h4>Another example</h4>
   <div class="sample sample--white">
-    <!-- third example -->
-<!--     <div class="sba-c-doc-upload card">
-      <div class="sba-c-card__header">
-        <div class="sba-l-row ">
-          <div class="sba-l-col--10">
-            <h3 class="sba-c-card__primary-heading">Passport</h3><span>file1.pdf</span>
-            <p class="sba-u-margin-y--0">Scan page with passport number from book</p>
-            <p class="sba-u-margin-y--0"><em>Required</em></p>
+    <div class="sba-c-doc-upload-container">
+      <div id="generic-doc-upload" aria-controls="doc-upload3">Attach additional document</div>
+      <!-- START - Doc Upload Component -->
+      <!-- Primary contents of doc upload. Shown when expanded -->
+      <div class="sba-c-doc-upload" id="doc-upload3">
+        <div class="sba-c-doc-upload__primary-heading">
+          <h3>Add new document</h3>
+        </div>
+        <div class="sba-c-doc-upload__content generic-doc">
+          <p>1) Add a title</p>
+          <input type="text" id="doc-title">
+          <p>2) Add the file</p>
+          <div class="sba-c-doc-upload__file-input">
+            <span>
+              Drag file into this space or
+              <label for="file-picker1">choose a file</label>
+              <input type="file" id="file-picker1" accept=".pdf" style="display: none" />
+            </span>
           </div>
-          <div class="sba-l-col--2 sba-u-lg-align-self--center">
-            <button class="sba-c-button sba-c-button--transparent"  type="button" title="remove">
-              add file
-            </button>
-          </div>
+          <p>3) Write a brief description (optional)
+          You can add anything information you feel might be helpful to the SBA or use this space to ask questions about the document.</p>
+          <textarea maxlength="200"></textarea>
+          <em class="sba-u-margin-bottom--3">200 characters remaining</em>
+          <button class="sba-c-button" type="button" title="add-file">Add file</button>
+          <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__cancel" type="button" title="cancel">Cancel</button>
         </div>
       </div>
-    </div> -->
+      <!-- END - Doc Upload Component -->
+    </div>
   </div>
 
 
@@ -361,6 +395,7 @@
 <h2>Guidance</h2>
 
 <ul>
+  <li>Each component uses a unique id via the "aria-controls" tag that corresponds to a div with matching id</li>
   <li>Use the input `accept` attribute to limit types of files that can be uploaded</li>
 </ul>
 
