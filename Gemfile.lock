@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/Tbolt/Developer/certify_design_system_gem
+GIT
+  remote: git@github.com:USSBA/certify_design_system_gem.git
+  revision: 6c26a731f8d1d942faccb4a1cbd9ce84d3ad7d38
   specs:
     certify_design_system (1.4.1)
       bourbon (~> 4.3, <= 5)
