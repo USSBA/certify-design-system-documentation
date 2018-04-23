@@ -102,10 +102,9 @@ $(document).ready(function() {
 $(document).ready(function(){
   // Variables
   var $doc_upload_toggle = $('.sba-c-doc-upload__toggle'),
-      $doc_upload_cancel = $('.sba-c-doc-upload__cancel'),
+      hidden_class = "hidden";
       open_class = "open",
       visible_class = "visible",
-      hidden_class = "hidden";
 
   // Function for handling doc upload
   $doc_upload_toggle.on('click', function() {
@@ -113,6 +112,7 @@ $(document).ready(function(){
     // Determine which task panel we clicked on
     elem = $(this).attr("aria-controls")
     var $toggle = $('button[aria-controls=' + elem + ']');
+    var $cancel = $('button[aria-controls=' + elem + '-cancel]');
     var $target = $("#" + elem);
 
     // Toggle doc uploader
@@ -124,21 +124,13 @@ $(document).ready(function(){
     }
 
     // Toggle cancel
-    $doc_upload_cancel.on('click', function() {
+    $cancel.on('click', function() {
       $toggle.attr("aria-expanded", "false");
       $toggle.removeClass(hidden_class);
       $target.parent().removeClass(open_class);
       $target.removeClass(visible_class);
     })
-
   });
-
-  // Function for handling generic doc upload
-  $('#generic-doc-upload').on('click', function() {
-    $('#doc-upload3').addClass(open_class);
-    $('#doc-upload3 sba-c-doc-upload__content').addClass(open_class);
-  })
-
 });
 $(document).ready(function() {
   var $editable_table = $('.sba-c-table--editable'),
