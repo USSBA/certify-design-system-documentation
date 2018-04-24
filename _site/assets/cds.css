@@ -6143,7 +6143,7 @@ Style guide: components.button.guidance
   min-width: 80%;
   min-height: 12rem;
   text-align: center;
-  border: 1px dashed #d6d7d9; }
+  border: 1.5px dashed #5b616b; }
 
 .sba-c-doc-upload__file-input span {
   margin: auto; }
