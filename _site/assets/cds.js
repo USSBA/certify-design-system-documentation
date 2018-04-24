@@ -102,9 +102,9 @@ $(document).ready(function() {
 $(document).ready(function(){
   // Variables
   var $doc_upload_toggle = $('.sba-c-doc-upload__toggle'),
-      hidden_class = "hidden";
-      open_class = "open",
-      visible_class = "visible",
+      hidden_class = "hidden",
+      open_class = "is-open",
+      visible_class = "is-visible";
 
   // Function for handling doc upload
   $doc_upload_toggle.on('click', function() {
