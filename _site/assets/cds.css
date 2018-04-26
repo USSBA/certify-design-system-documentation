@@ -229,6 +229,9 @@ Style guide: utilities.background-color
 .sba-u-bgcolor--primary-darkest {
   background-color: #112e51 !important; }
 
+.sba-u-bgcolor--primary-muted {
+  background-color: #F8FCFF !important; }
+
 .sba-u-bgcolor--primary-alt {
   background-color: #02bfe7 !important; }
 
@@ -6089,6 +6092,70 @@ Style guide: components.button.guidance
   @media screen and (min-width: 768px) {
     .sba-c-card__body {
       padding: 2.4rem; } }
+
+.sba-c-doc-upload-container {
+  max-width: 75rem; }
+
+.sba-c-doc-upload {
+  background: white;
+  border: 1px solid #d6d7d9;
+  border-radius: 2px;
+  position: relative;
+  padding: 1.5em 2.25em; }
+  .sba-c-doc-upload.is-open {
+    background: #F8FCFF; }
+
+.sba-c-doc-upload__primary-heading h3 {
+  display: inline; }
+
+.sba-c-doc-upload__primary-heading p {
+  margin: 0;
+  padding: 0; }
+
+.sba-c-doc-upload__toggle {
+  position: absolute;
+  right: 0;
+  top: 2em; }
+
+.sba-c-doc-upload__content {
+  display: none;
+  margin-top: 3rem; }
+
+.sba-c-doc-upload__content.is-visible {
+  display: block; }
+
+.sba-c-doc-upload__content p {
+  margin-bottom: .5em; }
+
+.sba-c-doc-upload__uploader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #ffffff;
+  min-height: 12rem;
+  text-align: center;
+  border: 1.5px dashed #5b616b; }
+
+.sba-c-doc-upload__uploader--input {
+  display: inline-block;
+  cursor: pointer;
+  color: #0071bc;
+  text-decoration: underline;
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+.sba-c-doc-upload--completed {
+  border: 1px solid #4aa564;
+  background-color: #e7f4e4; }
+
+.sba-c-doc-upload--completed svg.sba-c-icon {
+  transform: scale(0.75);
+  fill: #4aa564;
+  margin-left: -25px; }
+
+.sba-c-doc-upload.sba-c-doc-upload--completed.is-open {
+  background-color: #e7f4e4; }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
