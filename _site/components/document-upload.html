@@ -100,7 +100,7 @@
                   <a class="" href="/certify-design-system-documentation/components/datepicker.html">Datepicker</a>
                 </li>
                 <li>
-                  <a class="" href="/certify-design-system-documentation/components/document-upload.html">Document upload</a>
+                  <a class=" usa-current " href="/certify-design-system-documentation/components/document-upload.html">Document upload</a>
                 </li>
                 <li>
                   <a class="" href="/certify-design-system-documentation/components/editable-tables.html">Editable tables</a>
@@ -127,7 +127,7 @@
                   <a class="" href="/certify-design-system-documentation/components/spinners.html">Spinners</a>
                 </li>
                 <li>
-                  <a class=" usa-current " href="/certify-design-system-documentation/components/tables.html">Tables</a>
+                  <a class="" href="/certify-design-system-documentation/components/tables.html">Tables</a>
                 </li>
                 <li>
                   <a class="" href="/certify-design-system-documentation/components/task-panels.html">Task Panels</a>
@@ -201,150 +201,114 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Tables</h1>
-
-  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_tables.scss">CSS file</a></p>
-
-  <p>Tables show tabular data in columns and rows.</p>
-
-  <div class="sg-responsive-preview">
-    <div class="sg-responsive-preview__size-buttons">
-      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
-        XS
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
-        SM
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
-        MD
-      </button>
-      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
-        LG
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
-        XL
-      </button>
-    </div>
-    <div class="iframe__preview">
-      <iframe title="Pagination example" class="responsive-iframe" src="examples/tables.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="500"></iframe>
-    </div>
-  </div>
-
-  <div class="sg-responsive-preview">
-    <div class="sg-responsive-preview__size-buttons">
-      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
-        XS
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
-        SM
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
-        MD
-      </button>
-      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
-        LG
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
-        XL
-      </button>
-    </div>
-    <div class="iframe__preview">
-      <iframe title="Pagination example" class="responsive-iframe" src="examples/borderless-table.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="500"></iframe>
+  <span class="sba-c-badge sba-c-badge--warn">Draft</span>
+  <h1>Document upload</h1>
+  <p>
+    <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_doc-upload.scss">CSS file</a> |
+    <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/doc-upload.js">JS file</a>
+  </p>
+  <p>Document upload is for uploading files of various types</p>
+  <h4>Example</h4>
+  <div class="sample sample--white">
+    <div class="sba-c-doc-upload-container">
+      <!-- START - Doc Upload Component -->
+      <div class="sba-c-doc-upload">
+        <!-- Primary heading content...visible stuff when closed -->
+        <div class="sba-c-doc-upload__primary-heading">
+          <h3>Drivers License</h3>
+          <p class="sba-c-doc-upload__doc-description">Issued by state. May include non-drivers’ ID</p>
+          <p class="sba-c-doc-upload__doc-comment">MD State License expires 2018</p>
+          <!-- Button to toggle the doc upload content -->
+          <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload1">add file</button>
+        </div>
+        <!-- Primary contents of doc upload. Shown when expanded -->
+        <div id="doc-upload1" class="sba-c-doc-upload__content">
+          <p>1) Attach a file</p>
+          <div class="sba-c-doc-upload__uploader">
+            <div class="sba-c-doc-upload__uploader--title">Drag file into this space or
+              <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label>
+              <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
+            </div>
+          </div>
+          <label for="file-comment">2) Brief comment (optional)</label>
+          <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+          <div class="sba-c-doc-upload__actions">
+            <button class="sba-c-button" type="button">Add file</button>
+            <button class="sba-c-button sba-c-button--transparent" type="button" aria-controls="doc-upload1-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <!-- END - Doc Upload Component -->
     </div>
   </div>
-
-  <pre><code class="language-markup">&lt;table class="sba-c-table">
-  &lt;caption>Bordered table&lt;/caption>
-  &lt;thead>
-    &lt;tr>
-      &lt;th scope="col">Document title&lt;/th>
-      &lt;th scope="col">Description&lt;/th>
-      &lt;th scope="col">Year&lt;/th>
-    &lt;/tr>
-  &lt;/thead>
-  &lt;tbody>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Declaration of Independence&lt;/th>
-      &lt;td data-table-header="Description">Statement adopted by the Continental Congress declaring independence from the British Empire.&lt;/td>
-      &lt;td data-table-header="Year">1776&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Bill of Rights&lt;/th>
-      &lt;td data-table-header="Description">The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.&lt;/td>
-      &lt;td data-table-header="Year">1791&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Declaration of Sentiments&lt;/th>
-      &lt;td data-table-header="Description">A document written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.&lt;/td>
-      &lt;td data-table-header="Year">1848&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Emancipation Proclamation&lt;/th>
-      &lt;td data-table-header="Description">An executive order granting freedom to slaves in designated southern states.&lt;/td>
-      &lt;td data-table-header="Year">1863&lt;/td>
-    &lt;/tr>
-  &lt;/tbody>
-&lt;/table>
-
-&lt;table class="sba-c-table sba-c-table--borderless">
-  &lt;caption>Borderless table: A borderless table can be useful when you want the information to feel more a part of the text it accompanies and extends.&lt;/caption>
-  &lt;thead>
-    &lt;tr>
-      &lt;th scope="col">Document title&lt;/th>
-      &lt;th scope="col">Description&lt;/th>
-      &lt;th scope="col">Year&lt;/th>
-    &lt;/tr>
-  &lt;/thead>
-  &lt;tbody>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Declaration of Independence&lt;/th>
-      &lt;td data-table-header="Description">Statement adopted by the Continental Congress declaring independence from the British Empire.&lt;/td>
-      &lt;td data-table-header="Year">1776&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Bill of Rights&lt;/th>
-      &lt;td data-table-header="Description">The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.&lt;/td>
-      &lt;td data-table-header="Year">1791&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Declaration of Sentiments&lt;/th>
-      &lt;td data-table-header="Description">A document written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.&lt;/td>
-      &lt;td data-table-header="Year">1848&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Emancipation Proclamation&lt;/th>
-      &lt;td data-table-header="Description">An executive order granting freedom to slaves in designated southern states.&lt;/td>
-      &lt;td data-table-header="Year">1863&lt;/td>
-    &lt;/tr>
-  &lt;/tbody>
-&lt;/table></code></pre>
-
-  <h2>Note about mobile web</h2>
-  <p>All table styles collapse into a single column for mobile devices. This requires adding a <code>data-table-header</code> attribute with a value that matches its corresponding column header in the <code>thead</code>. If you wish avoid this behavior on mobile web, do not apply the <code>sba-c-table</code> class name or the <code>data-table-header</code> attributes.</p>
-
-  <h2>Accessibility</h2>
-
+  <h4>Completed example</h4>
+  <div class="sample sample--white">
+    <div class="sba-c-doc-upload-container">
+      <!-- START - Doc Upload Component -->
+      <div class="sba-c-doc-upload sba-c-doc-upload--completed">
+        <!-- Primary heading content...visible stuff when closed -->
+        <div class="sba-c-doc-upload__primary-heading">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#check"></use>
+          </svg>
+          <h3>Passport</h3>
+          <p class="sba-c-doc-upload__doc-description">Scan page with passport number from book</p>
+          <!-- Button to toggle the doc upload content -->
+          <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload2">change</button>
+        </div>
+        <!-- Primary contents of doc upload. Shown when expanded -->
+        <div id="doc-upload2" class="sba-c-doc-upload__content">
+          <p>1) Replace existing file</p>
+          <div class="sba-c-doc-upload__uploader">
+            <div class="sba-c-doc-upload__uploader--title">Drag file into this space or
+                <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label>
+                <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
+            </div>
+          </div>
+          <label for="file-comment">2) Brief comment (optional)</label>
+          <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+          <div class="sba-c-doc-upload__actions">
+            <button class="sba-c-button" type="button" title="add-file">Add file</button>
+            <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__cancel" type="button" title="cancel" aria-controls="doc-upload2-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <!-- END - Doc Upload Component -->
+    </div>
+  </div>
+  <pre><code class="language-markup">
+  <!-- Markup example -->
+  &lt;div class="sba-c-doc-upload">
+    &lt;!-- Primary heading content...visible stuff when closed -->
+    &lt;div class="sba-c-doc-upload__primary-heading">
+      &lt;h3>Drivers License&lt;/h3>
+      &lt;p>Issued by state. May include non-drivers’ ID&lt;/p>
+      &lt;!-- Button to toggle the doc upload content -->
+      &lt;button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload1">add file&lt;/button>
+    &lt;/div>
+    &lt;!-- Primary contents of doc upload. Shown when expanded -->
+    &lt;div id="doc-upload1" class="sba-c-doc-upload__content">
+      &lt;p>1) Attach a file&lt;/p>
+      &lt;div class="sba-c-doc-upload__file-input">
+        &lt;span>
+          Drag file into this space or
+          &lt;label for="file-picker1">choose a file&lt;/label>
+          &lt;input type="file" id="file-picker1" accept=".pdf" style="display: none" />
+        &lt;/span>
+      &lt;/div>
+      &lt;label for="file-comment">2) Brief comment (optional)&lt;/label>
+      &lt;input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+      &lt;button class="sba-c-button" type="button" title="add-file">Add file&lt;/button>
+      &lt;button class="sba-c-button sba-c-button--transparent" type="button" title="cancel" aria-controls="doc-upload1-cancel">Cancel&lt;/button>
+    &lt;/div>
+  &lt;/div>
+  </code></pre>
+  <h2>Guidance</h2>
   <ul>
-    <li>Simple tables can have two levels of headers. Each header cell should have <code>scope="col"</code> or <code>scope="row"</code>.</li>
-    <li>Complex tables are tables with more than two levels of headers. Each header should be given a unique <code>id</code> and each data cell should have a headers attribute with each related header cell’s id listed.</li>
-    <li>When adding a title to a table, include it in a <code>&lt;caption></code> tag inside of the <code>&lt;table></code>  element.</li>
-  </ul>
-
-  <h2>Usability</h2>
-
-  <h3>When to use</h3>
-  <ul>
-    <li>When you need tabular information, such as statistical data.</li>
-  </ul>
-
-  <h3>When to consider something else</h3>
-  <ul>
-    <li>Depending on the type of content, consider using other presentation formats such as definition lists or hierarchical lists.</li>
-  </ul>
-
-  <h3>Guidance</h3>
-  <ul>
-    <li>Tables are great at displaying tabular data. Minimal visual styling helps surface this information more easily.</li>
+    <li>Each component uses a unique <code>id</code> via an <code>aria-controls</code> tag that corresponds to a div with matching <code>id</code> and a matching cancel <code>aria-controls</code></li>
+    <li>Use the input <code>accept</code> attribute to limit types of files that can be uploaded</li>
+    <li>It's best to keep it in a container no wider than <code>75rem</code></li>
+    <li>This component does not include any library for handling drag-and-drop or direct-upload to S3</li>
   </ul>
 </article>
 
