@@ -116,9 +116,46 @@ sub_section: doc_upload
         </section>
         <section id="existing-file">
           <div class="sba-c-doc-upload__file-list">
-            <p>Existing file #1</p>
-            <p>Existing file #2</p>
-            <p>Existing file #3</p>
+            <fieldset class="sba-c-fieldset">
+              <legend class="sba-c-legend">Which previously added document you would like to use?</legend>
+              <ul class="sba-c-field-list">
+                <li>
+                  <input id="q1_a1" type="radio" name="q1_answers" value="Affidavit">
+                  <label for="q1_a1">Affidavit</label>
+                </li>
+                <li>
+                  <input id="q1_a2" type="radio" name="q1_answers" value="Legal attachment">
+                  <label for="q1_a2">Legal attachment</label>
+                </li>
+                <li>
+                  <input id="q1_a3" type="radio" name="q1_answers" value="2011 w-2">
+                  <label for="q1_a4">2011 w-2</label>
+                </li>
+                <li>
+                  <input id="q1_a5" type="radio" name="q1_answers" value="old license">
+                  <label for="q1_a5">old license</label>
+                </li>
+                <li>
+                  <input id="q1_a1" type="radio" name="q1_answers" value="2011 tax file">
+                  <label for="q1_a1">2011 tax file</label>
+                </li>
+                <li>
+                  <input id="q1_a2" type="radio" name="q1_answers" value="Requested doc">
+                  <label for="q1_a2">Requested doc</label>
+                </li>
+                <li>
+                  <input id="q1_a3" type="radio" name="q1_answers" value="passport">
+                  <label for="q1_a4">passport</label>
+                </li>
+                <li>
+                  <input id="q1_a5" type="radio" name="q1_answers" value="record">
+                  <label for="q1_a5">record</label>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="sba-c-doc-upload__actions">
+              <button class="sba-c-button" type="button" title="add-file">Use document</button>
+            </div>
           </div>
         </section>
       </div>

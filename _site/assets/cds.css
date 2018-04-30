@@ -6174,11 +6174,21 @@ Style guide: components.button.guidance
   color: #212121;
   background-color: #ffffff; }
 
-.sba-c-doc-upload--custom label::before {
+.sba-c-doc-upload--custom label.sba-c-doc-upload__tab::before {
   display: none; }
 
-.sba-c-doc-upload--custom label:hover {
+.sba-c-doc-upload--custom label.sba-c-doc-upload__tab:hover {
   cursor: pointer; }
+
+.sba-c-doc-upload__file-list .sba-c-field-list {
+  max-height: 25rem;
+  overflow: scroll; }
+
+.sba-c-doc-upload__file-list .sba-c-field-list li {
+  margin-left: 5px; }
+
+.sba-c-doc-upload__file-list label {
+  margin-top: .5rem; }
 
 .sba-c-doc-upload__file-list p {
   margin: 0;
