@@ -80,6 +80,56 @@ sub_section: doc_upload
       <!-- END - Doc Upload Component -->
     </div>
   </div>
+
+
+
+<h4>Add custom document example</h4>
+<div class="sample sample--white">
+  <div class="sba-c-doc-upload-container">
+    <!-- START - Doc Upload Component -->
+    <div class="sba-c-doc-upload sba-c-doc-upload--custom">
+      <!-- Primary heading content...visible stuff when closed -->
+      <div class="sba-c-doc-upload__primary-heading">
+        <h3>Add additional document</h3>
+        <!-- user-provided custom title would go here -->
+      </div>
+      <div class="sba-c-doc-upload__tab-content">
+        <input id="new-file" type="radio" name="tabs" checked>
+        <label for="new-file" class="sba-c-doc-upload__tab">New document</label>
+        <input id="existing-file" type="radio" name="tabs">
+        <label for="existing-file" class="sba-c-doc-upload__tab">Previously uploaded</label>
+        <section id="new-file">
+          <label for="custom-document-name" class="sba-u-margin-top--0">1) Title</label>
+          <input id="custom-document-name" type="text" class="sba-u-margin-bottom--3">
+          <p>2) Add file</p>
+          <div class="sba-c-doc-upload__uploader">
+            <div class="sba-c-doc-upload__uploader--title">Drag file into this space or
+                <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label>
+                <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
+            </div>
+          </div>
+          <label for="file-comment">3) Brief comment (optional)</label>
+          <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+          <div class="sba-c-doc-upload__actions">
+            <button class="sba-c-button" type="button" title="add-file">Add file</button>
+          </div>
+        </section>
+        <section id="existing-file">
+          <div class="sba-c-doc-upload__file-list">
+            <p>Existing file #1</p>
+            <p>Existing file #2</p>
+            <p>Existing file #3</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- END - Doc Upload Component -->
+</div>
+
+
+
   <pre><code class="language-markup">
   <!-- Markup example -->
   &lt;div class="sba-c-doc-upload">

@@ -1,7 +1,7 @@
 PATH
-  remote: /Users/jaredcunha/work/certify_design_system_gem
+  remote: /Users/Tbolt/Developer/certify_design_system_gem
   specs:
-    certify_design_system (1.4.1)
+    certify_design_system (1.5.0)
       bourbon (~> 4.3, <= 5)
       sass (~> 3.5)
 
@@ -126,7 +126,7 @@ DEPENDENCIES
   minima (~> 2.0)
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.4.3p205
 
 BUNDLED WITH
    1.16.1
