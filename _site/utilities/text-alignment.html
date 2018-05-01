@@ -69,8 +69,7 @@
               </ul>
             </li>
             <li>
-              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
-              " aria-controls="sublist_components">
+              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_components">
                 Components
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -130,7 +129,7 @@
                   <a class="" href="/components/spinners.html">Spinners</a>
                 </li>
                 <li>
-                  <a class=" usa-current " href="/components/tables.html">Tables</a>
+                  <a class="" href="/components/tables.html">Tables</a>
                 </li>
                 <li>
                   <a class="" href="/components/task-panels.html">Task Panels</a>
@@ -139,7 +138,8 @@
             </li>
 
             <li>
-              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_utilities">
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_utilities">
                 Utilities
                 <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg-sprite/sprite.svg#angle-down"></use>
@@ -180,7 +180,7 @@
                     <a class="" href="/utilities/separators.html">Separators</a>
                   </li>
                   <li>
-                    <a class="" href="/utilities/text-alignment.html">Text alignment</a>
+                    <a class=" usa-current " href="/utilities/text-alignment.html">Text alignment</a>
                   </li>
                   <li>
                     <a class="" href="/utilities/visibility.html">Visibility</a>
@@ -213,32 +213,56 @@
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
         <article>
-  <h1>Tables</h1>
+  <h1>Text alignment</h1>
 
-  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_tables.scss">CSS file</a></p>
+  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/utilities/_text-alignment.scss">CSS file</a></p>
 
-  <p>Tables show tabular data in columns and rows.</p>
+  <p>Change the <code>text-align</code> property</p>
 
-  <div class="sg-responsive-preview">
-    <div class="sg-responsive-preview__size-buttons">
-      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
-        XS
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
-        SM
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
-        MD
-      </button>
-      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
-        LG
-      </button>
-      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
-        XL
-      </button>
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="bem">text-align--[VALUE]</code>
     </div>
-    <div class="iframe__preview">
-      <iframe title="Pagination example" class="responsive-iframe" src="examples/tables.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="500"></iframe>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><code>left (browser default)</code></li>
+    <li><code>center</code></li>
+    <li><code>right</code></li>
+  </ul>
+
+  <div class="sample">
+    <div class="sba-u-margin-y--2 sba-u-text-align--left">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-text-align--center">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-text-align--right">U.S. Small Business Administration</div>
+  </div>
+
+<pre><code class="language-markup">&lt;div class="sba-u-margin-y--2 sba-u-text-align--left">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-text-align--center">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-text-align--right">U.S. Small Business Administration&lt;/div></pre></code>
+
+
+  <h2>Responsive text alignment</h2>
+
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="breakpoint">lg-</code>
+      <code aria-describedby="bem">text-align--[VALUE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="breakpoint">Breakpoint</div>
+      <div id="bem">BEM syntax</div>
     </div>
   </div>
 
@@ -261,103 +285,13 @@
       </button>
     </div>
     <div class="iframe__preview">
-      <iframe title="Pagination example" class="responsive-iframe" src="examples/borderless-table.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="500"></iframe>
+      <iframe title="Pagination example" class="responsive-iframe" src="examples/text-alignment.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="100"></iframe>
     </div>
   </div>
 
-  <pre><code class="language-markup">&lt;table class="sba-c-table">
-  &lt;caption>Bordered table&lt;/caption>
-  &lt;thead>
-    &lt;tr>
-      &lt;th scope="col">Document title&lt;/th>
-      &lt;th scope="col">Description&lt;/th>
-      &lt;th scope="col">Year&lt;/th>
-    &lt;/tr>
-  &lt;/thead>
-  &lt;tbody>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Declaration of Independence&lt;/th>
-      &lt;td data-table-header="Description">Statement adopted by the Continental Congress declaring independence from the British Empire.&lt;/td>
-      &lt;td data-table-header="Year">1776&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Bill of Rights&lt;/th>
-      &lt;td data-table-header="Description">The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.&lt;/td>
-      &lt;td data-table-header="Year">1791&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Declaration of Sentiments&lt;/th>
-      &lt;td data-table-header="Description">A document written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.&lt;/td>
-      &lt;td data-table-header="Year">1848&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Emancipation Proclamation&lt;/th>
-      &lt;td data-table-header="Description">An executive order granting freedom to slaves in designated southern states.&lt;/td>
-      &lt;td data-table-header="Year">1863&lt;/td>
-    &lt;/tr>
-  &lt;/tbody>
-&lt;/table>
+  <pre><code class="language-markup">&lt;div class="sba-u-text-align--left sba-u-sm-text-align--center sba-u-md-text-align--right sba-u-lg-text-align--left sba-u-xl-text-align--center">U.S. Small Business Administration&lt;/div></pre></code>
 
-&lt;table class="sba-c-table sba-c-table--borderless">
-  &lt;caption>Borderless table: A borderless table can be useful when you want the information to feel more a part of the text it accompanies and extends.&lt;/caption>
-  &lt;thead>
-    &lt;tr>
-      &lt;th scope="col">Document title&lt;/th>
-      &lt;th scope="col">Description&lt;/th>
-      &lt;th scope="col">Year&lt;/th>
-    &lt;/tr>
-  &lt;/thead>
-  &lt;tbody>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Declaration of Independence&lt;/th>
-      &lt;td data-table-header="Description">Statement adopted by the Continental Congress declaring independence from the British Empire.&lt;/td>
-      &lt;td data-table-header="Year">1776&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Bill of Rights&lt;/th>
-      &lt;td data-table-header="Description">The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.&lt;/td>
-      &lt;td data-table-header="Year">1791&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Declaration of Sentiments&lt;/th>
-      &lt;td data-table-header="Description">A document written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.&lt;/td>
-      &lt;td data-table-header="Year">1848&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th scope="row" data-table-header="Document title">Emancipation Proclamation&lt;/th>
-      &lt;td data-table-header="Description">An executive order granting freedom to slaves in designated southern states.&lt;/td>
-      &lt;td data-table-header="Year">1863&lt;/td>
-    &lt;/tr>
-  &lt;/tbody>
-&lt;/table></code></pre>
 
-  <h2>Note about mobile web</h2>
-  <p>All table styles collapse into a single column for mobile devices. This requires adding a <code>data-table-header</code> attribute with a value that matches its corresponding column header in the <code>thead</code>. If you wish avoid this behavior on mobile web, do not apply the <code>sba-c-table</code> class name or the <code>data-table-header</code> attributes.</p>
-
-  <h2>Accessibility</h2>
-
-  <ul>
-    <li>Simple tables can have two levels of headers. Each header cell should have <code>scope="col"</code> or <code>scope="row"</code>.</li>
-    <li>Complex tables are tables with more than two levels of headers. Each header should be given a unique <code>id</code> and each data cell should have a headers attribute with each related header cell’s id listed.</li>
-    <li>When adding a title to a table, include it in a <code>&lt;caption></code> tag inside of the <code>&lt;table></code>  element.</li>
-  </ul>
-
-  <h2>Usability</h2>
-
-  <h3>When to use</h3>
-  <ul>
-    <li>When you need tabular information, such as statistical data.</li>
-  </ul>
-
-  <h3>When to consider something else</h3>
-  <ul>
-    <li>Depending on the type of content, consider using other presentation formats such as definition lists or hierarchical lists.</li>
-  </ul>
-
-  <h3>Guidance</h3>
-  <ul>
-    <li>Tables are great at displaying tabular data. Minimal visual styling helps surface this information more easily.</li>
-  </ul>
 </article>
 
         </div>

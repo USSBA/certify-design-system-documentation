@@ -1,0 +1,107 @@
+---
+layout: styleguide
+main_section: components
+sub_section: faceting
+---
+
+<article>
+  <h1>Faceting</h1>
+
+  <p>
+    <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_faceting.scss">CSS file</a>
+  </p>
+
+  <h2>Facet sets</h2>
+
+  <div class="sample">
+    <fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+      <legend class="sba-c-facet-set__legend">Review type</legend>
+      <ul class="sba-c-unstyled-list">
+        <li>
+          <input class="sba-c-checkbox" id="refer_someone_else" type="checkbox" name="review_type" aria-controls="followup1" data-follow-up="followup1" aria-expanded="false">
+          <label class="sba-c-label" for="refer_someone_else">Annual Review</label>
+          <div class="sba-c-follow-up sba-c-follow-up--sm" id="followup1" hidden>
+            <fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+              <legend class="sba-c-facet-set__legend sba-c-facet-set__legend--l2">Status</legend>
+              <ul class="sba-c-unstyled-list">
+                <li>
+                  <input class="sba-c-checkbox sba-c-checkbox--child" id="ar-1" type="checkbox" name="ar">
+                  <label class="sba-c-label" for="ar-1">Screening</label>
+                </li>
+                <li>
+                  <input class="sba-c-checkbox sba-c-checkbox--child" id="ar-2" type="checkbox" name="ar">
+                  <label class="sba-c-label" for="ar-2">Processing</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </li>
+        <li>
+          <input class="sba-c-checkbox sba-c-checkbox--parent" id="initial_application" type="checkbox" name="review_type" aria-controls="followup2" data-follow-up="followup2" aria-expanded="false">
+          <label class="sba-c-label" for="initial_application">Initial Application</label>
+          <div class="sba-c-follow-up sba-c-follow-up--sm" id="followup2" hidden>
+            <fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+              <legend class="sba-c-facet-set__legend sba-c-facet-set__legend--l2">Status</legend>
+              <ul class="sba-c-unstyled-list">
+                <li>
+                  <input class="sba-c-checkbox sba-c-checkbox--child" id="ia-1" type="checkbox" name="ia">
+                  <label class="sba-c-label" for="ia-1">Draft</label>
+                </li>
+                <li>
+                  <input class="sba-c-checkbox sba-c-checkbox--child" id="ia-2" type="checkbox" name="ia">
+                  <label class="sba-c-label" for="ia-2">Submitted</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+  </div>
+
+
+
+  <h2>Facet pills</h2>
+
+  <p>Facet pills are a list of pills that represent applied facets to a list.  </p>
+
+  <div class="sample">
+    <div class="sba-c-facet-pills">
+      <span class="sba-c-facet-pill">
+        Baltimore
+        <button class="sba-c-facet-pill__close-button" type="button" title="Close">X</button>
+      </span>
+      <span class="sba-c-facet-pill">
+        Inital Application - Screening
+        <button class="sba-c-facet-pill__close-button" type="button" title="Close">X</button>
+      </span>
+      <span class="sba-c-facet-pill">
+        HubZone
+        <button class="sba-c-facet-pill__close-button" type="button" title="Close">X</button>
+      </span>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-facet-pills">
+  &lt;span class="sba-c-facet-pill">
+    Baltimore
+    &lt;button class="sba-c-facet-pill__close-button" type="button" title="Close">X&lt;/button>
+  &lt;/span>
+  &lt;span class="sba-c-facet-pill">
+    Inital Application - Screening
+    &lt;button class="sba-c-facet-pill__close-button" type="button" title="Close">X&lt;/button>
+  &lt;/span>
+  &lt;span class="sba-c-facet-pill">
+    HubZone
+    &lt;button class="sba-c-facet-pill__close-button" type="button" title="Close">X&lt;/button>
+  &lt;/span>
+&lt;/div></code></pre>
+
+  <h3>Guidance</h3>
+  <ul>
+    <li>Facet pills should be grouped on the page close to results.</li>
+    <li>With each filter selector selected, a URL parameter that corresponds with the facet should be added to the URL so that the user may bookmark a particular search.</li>
+    <li>Clicking the close "X" removes the applied facet, the item clicked, and the corresponding URL parameter</li>
+  </ul>
+
+</article>
