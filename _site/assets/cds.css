@@ -6542,6 +6542,19 @@ input[type=number] {
   left: 0;
   top: 0.2rem; }
 
+.sba-c-checkbox--indeterminate + .sba-c-label:before {
+  background-image: none !important; }
+
+.sba-c-checkbox--indeterminate + .sba-c-label:after {
+  content: "";
+  display: block;
+  width: 10px;
+  position: absolute;
+  height: 3px;
+  background: white;
+  left: 4px;
+  top: 9.5px; }
+
 .sba-c-form-hint {
   color: #5b616b;
   margin: 0; }
