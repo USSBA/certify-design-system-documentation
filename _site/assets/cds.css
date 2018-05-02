@@ -6182,7 +6182,7 @@ Style guide: components.button.guidance
 
 .sba-c-doc-upload__file-list .sba-c-field-list {
   max-height: 25rem;
-  overflow: scroll; }
+  overflow-y: scroll; }
 
 .sba-c-doc-upload__file-list .sba-c-field-list li {
   margin-left: 5px; }
