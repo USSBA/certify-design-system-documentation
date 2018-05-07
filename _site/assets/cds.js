@@ -102,6 +102,7 @@ $(document).ready(function() {
 $(document).ready(function(){
   // Variables
   var $doc_upload_toggle = $('.sba-c-doc-upload__toggle'),
+      $doc_upload_use_toggle = $('.sba-c-doc-upload__use-toggle'),
       hidden_class = "hidden",
       open_class = "is-open",
       visible_class = "is-visible";
@@ -129,6 +130,26 @@ $(document).ready(function(){
       $toggle.removeClass(hidden_class);
       $target.parent().removeClass(open_class);
       $target.removeClass(visible_class);
+    })
+  });
+
+  // Function for handling previously uploaded custom docs
+  $doc_upload_use_toggle.on('click', function() {
+    elem = $(this).attr("aria-controls");
+    var $container = $(this).parent().parent();
+    var $cancel = $('button[aria-controls=' + elem + '-cancel]');
+    var $target = $("#" + elem);
+
+    // Toggle next step
+    $container.toggle();
+    $target.toggle();
+
+    // Toggle cancel
+    $cancel.on('click', function() {
+      if ( $container.is(':visible') == false ){
+        $container.toggle();
+        $target.toggle();
+      }
     })
   });
 });
@@ -579,6 +600,36 @@ $(document).ready(function() {
         toggler = $(e.target);
         window.toggle_task_panels(toggler);
       });
+});
+$(document).ready(function() {
+  var $parent_facet = $('.sba-c-facet-set input[type="checkbox"][data-follow-up]'),
+      $child_facet = $parent_facet.siblings('.sba-c-follow-up').find('input[type="checkbox"]'),
+      indeterminate_class = "sba-c-checkbox--indeterminate";
+
+
+  // Check for applying 'indeterminate' class
+  $child_facet.on('change', function() {
+    var $the_parent = $(this).closest('.sba-c-follow-up').prevAll('input[type="checkbox"]'),
+        $the_siblings = $the_parent.siblings('.sba-c-follow-up').find('input[type="checkbox"]'),
+        $the_siblings_checked = $the_siblings.filter(':checked');
+
+    if ( ($the_siblings_checked.length > 0) && ($the_siblings_checked.length < $the_siblings.length)) {
+      $the_parent.addClass(indeterminate_class);
+    }
+    else {
+      $the_parent.removeClass(indeterminate_class);
+    }
+  });
+
+  // Uncheck all children if a parent is unchecked
+  $parent_facet.on('change',function(){
+    var $these_children = $(this).siblings('.sba-c-follow-up').find('input[type="checkbox"]');
+    if ($(this).prop('checked') == false ) {
+      $these_children.prop('checked', false);
+    }
+    $(this).removeClass(indeterminate_class);
+  });
+
 });
 /*
 

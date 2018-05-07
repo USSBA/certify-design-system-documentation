@@ -1820,6 +1820,205 @@ The classes follow the format: `sba-u-flex-direction--{value}` and `sba-u-{break
     -moz-flex-direction: row-reverse !important;
     flex-direction: row-reverse !important;
     -ms-flex-direction: row-reverse !important; } }
+/*
+Font size
+
+Use the font size utility to make the text larger or smaller.
+
+**Format**: `.sba-u-font-size--[SIZE]`
+
+Markup:
+<% ['display','title','h1','h2','h3', 'h4', 'lead','base','small'].forEach(size => { -%>
+<article class="iujjvt-u-font-size--<%= size %> sba-u-padding-y--3 sba-u-truncate sba-u-border-bottom--1">
+  {{lorem-s}}
+  <h2 class="preview__label sba-u-margin-y--0">
+    <code class="sba-u-font-weight--bold">sba-u-font-size--<%= size %></code><br/>
+    <code>$<%= size %>-font-size</code>
+  </h2>
+</article>
+<% }) -%>
+
+Style guide: utilities.font-size
+*/
+.sba-u-font-size--small {
+  font-size: 1.4rem !important; }
+
+.sba-u-font-size--base {
+  font-size: 1.7rem !important; }
+
+.sba-u-font-size--lead {
+  font-size: 2rem !important; }
+
+.sba-u-font-size--display {
+  font-size: 60px !important; }
+
+.sba-u-font-size--title {
+  font-size: 5.2rem !important; }
+
+.sba-u-font-size--h1 {
+  font-size: 4rem !important; }
+
+.sba-u-font-size--h2 {
+  font-size: 3rem !important; }
+
+.sba-u-font-size--h3 {
+  font-size: 2rem !important; }
+
+.sba-u-font-size--h4 {
+  font-size: 1.7rem !important; }
+
+.sba-u-font-size--h5 {
+  font-size: 1.5rem !important; }
+
+.sba-u-font-size--h6 {
+  font-size: 1.3rem !important; }
+
+/*
+Responsive font sizes
+
+Use a [breakpoint prefix]({{root}}/guidelines/responsive) to change the font size at specific breakpoints.
+
+_Resize your browser to see each breakpoint in action:_
+
+Markup:
+<div class="sba-u-font-size--base sba-u-sm-font-size--h4 sba-u-md-font-size--h3 sba-u-lg-font-size--h2 sba-u-xl-font-size--h1">
+  {{ lorem-m }}
+</div>
+
+Style guide: utilities.font-size.responsive
+*/
+@media (min-width: 544px) {
+  .sba-u-sm-font-size--small {
+    font-size: 1.4rem !important; }
+
+  .sba-u-sm-font-size--base {
+    font-size: 1.7rem !important; }
+
+  .sba-u-sm-font-size--lead {
+    font-size: 2rem !important; }
+
+  .sba-u-sm-font-size--display {
+    font-size: 60px !important; }
+
+  .sba-u-sm-font-size--title {
+    font-size: 5.2rem !important; }
+
+  .sba-u-sm-font-size--h1 {
+    font-size: 4rem !important; }
+
+  .sba-u-sm-font-size--h2 {
+    font-size: 3rem !important; }
+
+  .sba-u-sm-font-size--h3 {
+    font-size: 2rem !important; }
+
+  .sba-u-sm-font-size--h4 {
+    font-size: 1.7rem !important; }
+
+  .sba-u-sm-font-size--h5 {
+    font-size: 1.5rem !important; }
+
+  .sba-u-sm-font-size--h6 {
+    font-size: 1.3rem !important; } }
+@media (min-width: 768px) {
+  .sba-u-md-font-size--small {
+    font-size: 1.4rem !important; }
+
+  .sba-u-md-font-size--base {
+    font-size: 1.7rem !important; }
+
+  .sba-u-md-font-size--lead {
+    font-size: 2rem !important; }
+
+  .sba-u-md-font-size--display {
+    font-size: 60px !important; }
+
+  .sba-u-md-font-size--title {
+    font-size: 5.2rem !important; }
+
+  .sba-u-md-font-size--h1 {
+    font-size: 4rem !important; }
+
+  .sba-u-md-font-size--h2 {
+    font-size: 3rem !important; }
+
+  .sba-u-md-font-size--h3 {
+    font-size: 2rem !important; }
+
+  .sba-u-md-font-size--h4 {
+    font-size: 1.7rem !important; }
+
+  .sba-u-md-font-size--h5 {
+    font-size: 1.5rem !important; }
+
+  .sba-u-md-font-size--h6 {
+    font-size: 1.3rem !important; } }
+@media (min-width: 1024px) {
+  .sba-u-lg-font-size--small {
+    font-size: 1.4rem !important; }
+
+  .sba-u-lg-font-size--base {
+    font-size: 1.7rem !important; }
+
+  .sba-u-lg-font-size--lead {
+    font-size: 2rem !important; }
+
+  .sba-u-lg-font-size--display {
+    font-size: 60px !important; }
+
+  .sba-u-lg-font-size--title {
+    font-size: 5.2rem !important; }
+
+  .sba-u-lg-font-size--h1 {
+    font-size: 4rem !important; }
+
+  .sba-u-lg-font-size--h2 {
+    font-size: 3rem !important; }
+
+  .sba-u-lg-font-size--h3 {
+    font-size: 2rem !important; }
+
+  .sba-u-lg-font-size--h4 {
+    font-size: 1.7rem !important; }
+
+  .sba-u-lg-font-size--h5 {
+    font-size: 1.5rem !important; }
+
+  .sba-u-lg-font-size--h6 {
+    font-size: 1.3rem !important; } }
+@media (min-width: 1280px) {
+  .sba-u-xl-font-size--small {
+    font-size: 1.4rem !important; }
+
+  .sba-u-xl-font-size--base {
+    font-size: 1.7rem !important; }
+
+  .sba-u-xl-font-size--lead {
+    font-size: 2rem !important; }
+
+  .sba-u-xl-font-size--display {
+    font-size: 60px !important; }
+
+  .sba-u-xl-font-size--title {
+    font-size: 5.2rem !important; }
+
+  .sba-u-xl-font-size--h1 {
+    font-size: 4rem !important; }
+
+  .sba-u-xl-font-size--h2 {
+    font-size: 3rem !important; }
+
+  .sba-u-xl-font-size--h3 {
+    font-size: 2rem !important; }
+
+  .sba-u-xl-font-size--h4 {
+    font-size: 1.7rem !important; }
+
+  .sba-u-xl-font-size--h5 {
+    font-size: 1.5rem !important; }
+
+  .sba-u-xl-font-size--h6 {
+    font-size: 1.3rem !important; } }
 /* Input widths */
 .sba-u-input-width--1 {
   width: 3.5rem; }
@@ -4857,6 +5056,137 @@ Style guide: utilities.padding.responsive
     padding-bottom: 5.6rem !important;
     padding-top: 5.6rem !important; } }
 /*
+Separators
+
+Use the padding utility to change an element's padding.
+
+**Format**: `sba-u-separator--[MULTIPLE]`
+
+[Read more about how the design system approaches spacing here.]({{root}}/layout/spacing)
+
+@hide-markup
+
+Markup:
+  <code>sba-u-separator--<%= i %></code>
+</div>
+<% } -%>
+<% }) -%>
+*/
+.sba-u-separator--0 {
+  display: inline-block;
+  padding: 0 0 !important; }
+
+.sba-u-separator--1 {
+  display: inline-block;
+  padding: 0 0.8rem !important; }
+
+.sba-u-separator--2 {
+  display: inline-block;
+  padding: 0 1.6rem !important; }
+
+.sba-u-separator--3 {
+  display: inline-block;
+  padding: 0 2.4rem !important; }
+
+.sba-u-separator--4 {
+  display: inline-block;
+  padding: 0 3.2rem !important; }
+
+.sba-u-separator--5 {
+  display: inline-block;
+  padding: 0 4rem !important; }
+
+.sba-u-separator--6 {
+  display: inline-block;
+  padding: 0 4.8rem !important; }
+
+.sba-u-separator--7 {
+  display: inline-block;
+  padding: 0 5.6rem !important; }
+
+/*
+Text alignment
+
+Align text using the `text-align` utility.
+
+**Format**: `sba-u-text-align--[VALUE]`
+
+Markup:
+<div class="sba-u-text-align--center">
+  <code class="preview__label">sba-u-text-align--center</code>
+  Center
+</div>
+<div class="sba-u-text-align--left">
+  <code class="preview__label">sba-u-text-align--left</code>
+  Left
+</div>
+<div class="sba-u-text-align--right">
+  <code class="preview__label">sba-u-text-align--right</code>
+  Right
+</div>
+
+Style guide: utilities.text-align
+*/
+.sba-u-text-align--center {
+  text-align: center !important; }
+
+.sba-u-text-align--left {
+  text-align: left !important; }
+
+.sba-u-text-align--right {
+  text-align: right !important; }
+
+/*
+Responsive text alignment
+
+@responsive
+
+Use a [breakpoint prefix]({{root}}/guidelines/responsive) to change the text alignment at specific breakpoints.
+
+Markup:
+<div class="sba-u-sm-text-align--center sba-u-md-text-align--left sba-u-lg-text-align--right">
+  {{lorem-s}}
+</div>
+
+Style guide: utilities.text-align.responsive
+*/
+@media (min-width: 544px) {
+  .sba-u-sm-text-align--center {
+    text-align: center !important; }
+
+  .sba-u-sm-text-align--left {
+    text-align: left !important; }
+
+  .sba-u-sm-text-align--right {
+    text-align: right !important; } }
+@media (min-width: 768px) {
+  .sba-u-md-text-align--center {
+    text-align: center !important; }
+
+  .sba-u-md-text-align--left {
+    text-align: left !important; }
+
+  .sba-u-md-text-align--right {
+    text-align: right !important; } }
+@media (min-width: 1024px) {
+  .sba-u-lg-text-align--center {
+    text-align: center !important; }
+
+  .sba-u-lg-text-align--left {
+    text-align: left !important; }
+
+  .sba-u-lg-text-align--right {
+    text-align: right !important; } }
+@media (min-width: 1280px) {
+  .sba-u-xl-text-align--center {
+    text-align: center !important; }
+
+  .sba-u-xl-text-align--left {
+    text-align: left !important; }
+
+  .sba-u-xl-text-align--right {
+    text-align: right !important; } }
+/*
 Display/Visibility
 
 Use the `display` and `visibility` utility classes to show and hide elements.
@@ -6180,17 +6510,17 @@ Style guide: components.button.guidance
 .sba-c-doc-upload--custom label.sba-c-doc-upload__tab:hover {
   cursor: pointer; }
 
-.sba-c-doc-upload__file-list .sba-c-field-list {
+.sba-c-doc-upload__document-list .sba-c-field-list {
   max-height: 25rem;
   overflow-y: scroll; }
 
-.sba-c-doc-upload__file-list .sba-c-field-list li {
+.sba-c-doc-upload__document-list .sba-c-field-list li {
   margin-left: 5px; }
 
-.sba-c-doc-upload__file-list label {
+.sba-c-doc-upload__document-list label {
   margin-top: .5rem; }
 
-.sba-c-doc-upload__file-list p {
+.sba-c-doc-upload__document-list p {
   margin: 0;
   padding: 0; }
 
@@ -6201,9 +6531,56 @@ Style guide: components.button.guidance
   padding: 2em;
   border: 1px solid #d6d7d9; }
 
-#new-file:checked ~ #new-file,
-#existing-file:checked ~ #existing-file {
+#new-document:checked ~ #new-document,
+#existing-document:checked ~ #existing-document {
   display: block; }
+
+.sba-c-doc-upload__document-confirm {
+  display: none; }
+
+.sba-c-doc-upload__document-confirm label:first-child {
+  margin-top: 0; }
+
+.sba-c-doc-upload__previously-uploaded input[type="text"] {
+  background-color: #ffffff; }
+
+.sba-c-facet-set {
+  margin-bottom: 1.6rem; }
+
+.sba-c-facet-set__legend {
+  border-bottom: 1px solid #d6d7d9;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 0.4rem;
+  width: 100%; }
+
+.sba-c-facet-set__legend--l2 {
+  border-bottom: 0;
+  color: #5b616b;
+  padding: 0; }
+
+.sba-c-facet-pill {
+  background: #e1f3f8;
+  border-radius: 4px;
+  color: #046b99;
+  display: inline-block;
+  margin-right: 0.8rem;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  padding: 8px 0 8px 8px;
+  font-size: 1.3rem;
+  line-height: 1; }
+
+.sba-c-facet-pill__close-button,
+.sba-c-facet-pill__close-button:hover {
+  background: transparent;
+  border-left: 1px solid #046b99;
+  border-radius: 0;
+  color: #046b99;
+  margin: 0 0 0 8px;
+  padding: 0 8px;
+  font-size: 1.3rem;
+  width: auto; }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -6221,6 +6598,19 @@ input[type=number] {
   position: absolute;
   left: 0;
   top: 0.2rem; }
+
+.sba-c-checkbox--indeterminate + .sba-c-label:before {
+  background-image: none !important; }
+
+.sba-c-checkbox--indeterminate + .sba-c-label:after {
+  content: "";
+  display: block;
+  width: 10px;
+  position: absolute;
+  height: 3px;
+  background: white;
+  left: 4px;
+  top: 9.5px; }
 
 .sba-c-form-hint {
   color: #5b616b;
@@ -6360,6 +6750,12 @@ input[type=number] {
 
 .sba-c-label--error {
   margin-top: 0; }
+
+.sba-c-search--large {
+  width: 30rem; }
+  @media screen and (min-width: 768px) {
+    .sba-c-search--large {
+      width: 75rem; } }
 
 .sba-c-guidance {
   background: #e1f3f8;
@@ -6773,6 +7169,11 @@ input[type=number] {
   border-left: 4px solid #aeb0b5;
   margin: 2.4rem 0 2.4rem 3.5rem;
   padding: 0.8rem 0 0.8rem 3.5rem; }
+
+.sba-c-follow-up--sm {
+  border-left-width: 2px;
+  margin: 0.8rem 0 2.4rem 3.5rem;
+  padding: 0 0 0 1.5rem; }
 
 .sba-c-question-footnote__heading {
   margin: 0; }

@@ -230,7 +230,7 @@
               <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
             </div>
           </div>
-          <label for="file-comment">2) Brief comment (optional)</label>
+          <label for="file-comment">2) Brief description (optional)</label>
           <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
           <div class="sba-c-doc-upload__actions">
             <button class="sba-c-button" type="button">Add file</button>
@@ -251,8 +251,8 @@
           <svg aria-hidden="true" class="sba-c-icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#check"></use>
           </svg>
-          <h3>Passport</h3>
-          <p class="sba-c-doc-upload__doc-description">Scan page with passport number from book</p>
+          <h3>Driver's License</h3>
+          <p class="sba-c-doc-upload__doc-description">Issued by state. May include non-drivers’ ID</p>
           <!-- Button to toggle the doc upload content -->
           <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload2">change</button>
         </div>
@@ -265,7 +265,7 @@
                 <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
             </div>
           </div>
-          <label for="file-comment">2) Brief comment (optional)</label>
+          <label for="file-comment">2) Brief description (optional)</label>
           <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
           <div class="sba-c-doc-upload__actions">
             <button class="sba-c-button" type="button" title="add-file">Add file</button>
@@ -290,11 +290,11 @@
         <!-- user-provided custom title would go here -->
       </div>
       <div class="sba-c-doc-upload__tab-content">
-        <input id="new-file" type="radio" name="tabs" checked>
-        <label for="new-file" class="sba-c-doc-upload__tab">New document</label>
-        <input id="existing-file" type="radio" name="tabs">
-        <label for="existing-file" class="sba-c-doc-upload__tab">Previously uploaded</label>
-        <section id="new-file">
+        <input id="new-document" type="radio" name="tabs" checked>
+        <label for="new-document" class="sba-c-doc-upload__tab">New document</label>
+        <input id="existing-document" type="radio" name="tabs">
+        <label for="existing-document" class="sba-c-doc-upload__tab">Previously uploaded</label>
+        <section id="new-document">
           <label for="custom-document-name" class="sba-u-margin-top--0">1) Title</label>
           <input id="custom-document-name" type="text" class="sba-u-margin-bottom--3">
           <p>2) Add file</p>
@@ -304,16 +304,16 @@
                 <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
             </div>
           </div>
-          <label for="file-comment">3) Brief comment (optional)</label>
+          <label for="file-comment">3) Brief description (optional)</label>
           <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
           <div class="sba-c-doc-upload__actions">
             <button class="sba-c-button" type="button" title="add-file">Add file</button>
           </div>
         </section>
-        <section id="existing-file">
-          <div class="sba-c-doc-upload__file-list">
+        <section id="existing-document">
+          <div class="sba-c-doc-upload__document-list">
             <fieldset class="sba-c-fieldset">
-              <legend class="sba-c-legend">Which previously added document you would like to use?</legend>
+              <legend class="sba-c-legend">Select a previously added document</legend>
               <ul class="sba-c-field-list">
                 <li>
                   <input id="q1_a1" type="radio" name="q1_answers" value="Affidavit">
@@ -350,7 +350,34 @@
               </ul>
             </fieldset>
             <div class="sba-c-doc-upload__actions">
+              <button class="sba-c-button sba-c-doc-upload__use-toggle" type="button" title="use-document" aria-controls="doc-select1">Use document</button>
+            </div>
+          </div>
+          <div id="doc-select1" class="sba-c-doc-upload__document-confirm">
+            <label for="custom-document-name">1) Title</label>
+            <input id="custom-document-name" type="text" class="sba-u-margin-bottom--3" value="Affidavit">
+            <p>2) Confirm attached file</p>
+            <div class="sba-c-doc-upload__previously-uploaded">
+
+              <div class="sba-c-input-ornament-container">
+                <div class="sba-c-input-ornament sba-c-input-ornament--left">
+                  <svg aria-hidden="true" class="sba-c-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#file-alt"></use>
+                  </svg>
+                </div>
+                <div class="sba-c-input-ornament sba-c-input-ornament--right">
+                  <button class="sba-c-button sba-c-button--inverse sba-c-button--small">choose new</button>
+                </div>
+                <input type="text" id="input1" value="my_affidavit123.pdf" disabled="true">
+              </div>
+              <!-- <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label> -->
+              <!-- <input type="file" id="file-picker1" accept=".pdf" hidden="true" /> -->
+            </div>
+            <label for="file-comment">3) Brief description (optional)</label>
+            <input id="file-comment" type="text" class="sba-u-margin-bottom--3" value="valid business affidavit">
+            <div class="sba-c-doc-upload__actions">
               <button class="sba-c-button" type="button" title="add-file">Use document</button>
+              <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__cancel" type="button" title="cancel" aria-controls="doc-select1-cancel">Cancel</button>
             </div>
           </div>
         </section>
@@ -359,6 +386,41 @@
   </div>
 </div>
   <!-- END - Doc Upload Component -->
+
+  <h4>Add custom - Completed example</h4>
+  <div class="sample sample--white">
+    <div class="sba-c-doc-upload-container">
+      <!-- START - Doc Upload Component -->
+      <div class="sba-c-doc-upload">
+        <!-- Primary heading content...visible stuff when closed -->
+        <div class="sba-c-doc-upload__primary-heading">
+          <h3>note for SBA</h3>
+          <p class="sba-c-doc-upload__doc-description">note that was requested</p>
+          <!-- Button to toggle the doc upload content -->
+          <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload3">change</button>
+        </div>
+        <!-- Primary contents of doc upload. Shown when expanded -->
+        <div id="doc-upload3" class="sba-c-doc-upload__content">
+          <label for="custom-document-name">1) Title</label>
+          <input id="custom-document-name" type="text" class="sba-u-margin-bottom--3">
+          <p>2) Replace existing file</p>
+          <div class="sba-c-doc-upload__uploader">
+            <div class="sba-c-doc-upload__uploader--title">Drag file into this space or
+                <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label>
+                <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
+            </div>
+          </div>
+          <label for="file-comment">3) Brief description (optional)</label>
+          <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+          <div class="sba-c-doc-upload__actions">
+            <button class="sba-c-button" type="button" title="add-file">Add file</button>
+            <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__cancel" type="button" title="cancel" aria-controls="doc-upload3-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <!-- END - Doc Upload Component -->
+    </div>
+  </div>
 
 
 
@@ -382,7 +444,7 @@
           &lt;input type="file" id="file-picker1" accept=".pdf" style="display: none" />
         &lt;/span>
       &lt;/div>
-      &lt;label for="file-comment">2) Brief comment (optional)&lt;/label>
+      &lt;label for="file-comment">2) Brief description (optional)&lt;/label>
       &lt;input id="file-comment" type="text" class="sba-u-margin-bottom--3">
       &lt;button class="sba-c-button" type="button" title="add-file">Add file&lt;/button>
       &lt;button class="sba-c-button sba-c-button--transparent" type="button" title="cancel" aria-controls="doc-upload1-cancel">Cancel&lt;/button>
@@ -395,6 +457,7 @@
     <li>Use the input <code>accept</code> attribute to limit types of files that can be uploaded</li>
     <li>It's best to keep it in a container no wider than <code>75rem</code></li>
     <li>This component does not include any library for handling drag-and-drop or direct-upload to S3</li>
+    <li>The custom document component does not provide a "starting state." Instead, it's expected to be used with either an "Add additional document" link or radio button which would reveal the component</li>
   </ul>
 </article>
 
