@@ -5392,7 +5392,8 @@ h6 {
 .sba-l-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1318px; }
+  max-width: 1318px;
+  width: 100%; }
   @media (min-width: 544px) {
     .sba-l-container {
       padding-left: 3.2rem;
@@ -5401,7 +5402,8 @@ h6 {
 .sba-l-container--fullbleed {
   max-width: 100%;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  width: 100%; }
   @media (min-width: 544px) {
     .sba-l-container--fullbleed {
       padding-left: 0;
