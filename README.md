@@ -12,9 +12,7 @@ bundle exec jekyll s
 ```
 
 ## To Deploy
+Run the following script
 ```
-bundle exec jekyll build
-git add -A
-git commit -m "Build for delpoy"
-git subtree push --prefix _site origin gh-pages
+./update-jekyll.sh
 ```
