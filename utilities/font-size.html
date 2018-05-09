@@ -1,0 +1,97 @@
+---
+layout: styleguide
+main_section: utilities
+sub_section: fontsize
+title: Font size
+---
+
+<article>
+  <h1>Font-size</h1>
+
+  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/utilities/_font-size.scss">CSS file</a></p>
+
+  <p>Use the font size utility to make the text larger or smaller.</p>
+
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="bem">font-size--[VALUE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
+
+  <div class="sample">
+    <div class="sba-u-margin-y--2 sba-u-font-size--small">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--base">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--lead">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--display">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--title">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--h1">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--h2">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--h3">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--h4">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--h5">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-font-size--h6">U.S. Small Business Administration</div>
+  </div>
+
+<pre><code class="language-markup">&lt;div class="sba-u-margin-y--2 sba-u-font-size--small">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--base">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--lead">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--display">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--title">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--h1">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--h2">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--h3">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--h4">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--h5">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-font-size--h6">U.S. Small Business Administration&lt;/div></pre></code>
+
+
+  <h2>Responsive font sizes</h2>
+
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="breakpoint">lg-</code>
+      <code aria-describedby="bem">font-size--[VALUE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="breakpoint">Breakpoint</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
+
+  <div class="sg-responsive-preview">
+    <div class="sg-responsive-preview__size-buttons">
+      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
+        XS
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
+        SM
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
+        MD
+      </button>
+      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
+        LG
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
+        XL
+      </button>
+    </div>
+    <div class="iframe__preview">
+      <iframe title="Pagination example" class="responsive-iframe" src="examples/font-size.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="150"></iframe>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-u-font-size--small sba-u-sm-font-size--h4 sba-u-md-font-size--h3 sba-u-lg-font-size--h2 sba-u-xl-font-size--display">U.S. Small Business Administration&lt;/div></pre></code>
+
+</article>

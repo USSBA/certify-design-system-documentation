@@ -2,6 +2,7 @@
 layout: styleguide
 main_section: components
 sub_section: questionnaire
+title: Questionnaire
 ---
 
 <article>
@@ -204,7 +205,7 @@ sub_section: questionnaire
     <li>If there is a footnote, reference its <code>id</code> with <code>aria-details</code> on the <code>sba-c-question</code> so that the primary text of the question and the supporting text reference the details.</li>
     <li>For each <code>input</code> in a <code>sba-c-response</code>, use <code>aria-details</code> to reference the <code>id</code> of it’s <code>sba-c-question</code>.</li>
     <li>Every <code>fieldset</code> must include a <code>legend</code>. If the legend does not need to appear visually, apply the class name of <code>sba-u-visibility--screen-reader</code> to hide it, but make available to screen readers.</li>
-    <li>If a quesiton has a follow-up that is triggered by a response, for example, selecting a specific radio button, include a reference to the follow-up's <code>id</code> with <code>aria-controls</code> and use <code>aria-expanded</code> to indicate whether or not the follow-up is visible.</li>
+    <li>If a question has a follow-up that is triggered by a response, for example, selecting a specific radio button, include a reference to the follow-up's <code>id</code> with <code>aria-controls</code> and use <code>aria-expanded</code> to indicate whether or not the follow-up is visible.</li>
   </ul>
 
 

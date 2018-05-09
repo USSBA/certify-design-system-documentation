@@ -1,0 +1,88 @@
+---
+layout: styleguide
+main_section: utilities
+sub_section: text_alignment
+title: Text alignment
+---
+
+<article>
+  <h1>Text alignment</h1>
+
+  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/utilities/_text-alignment.scss">CSS file</a></p>
+
+  <p>Change the <code>text-align</code> property</p>
+
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="bem">text-align--[VALUE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><code>left (browser default)</code></li>
+    <li><code>center</code></li>
+    <li><code>right</code></li>
+  </ul>
+
+  <div class="sample">
+    <div class="sba-u-margin-y--2 sba-u-text-align--left">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-text-align--center">U.S. Small Business Administration</div>
+    <div class="sba-u-margin-y--2 sba-u-text-align--right">U.S. Small Business Administration</div>
+  </div>
+
+<pre><code class="language-markup">&lt;div class="sba-u-margin-y--2 sba-u-text-align--left">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-text-align--center">U.S. Small Business Administration&lt;/div>
+&lt;div class="sba-u-margin-y--2 sba-u-text-align--right">U.S. Small Business Administration&lt;/div></pre></code>
+
+
+  <h2>Responsive text alignment</h2>
+
+  <div class="sg-format-example">
+    <div class="sg-format-example__row">
+      <code aria-describedby="namespace">sba-</code>
+      <code aria-describedby="prefix">u-</code>
+      <code aria-describedby="breakpoint">lg-</code>
+      <code aria-describedby="bem">text-align--[VALUE]</code>
+    </div>
+    <div class="sg-format-example__row">
+      <div id="namespace">Namespace</div>
+      <div id="prefix">Prefix</div>
+      <div id="breakpoint">Breakpoint</div>
+      <div id="bem">BEM syntax</div>
+    </div>
+  </div>
+
+  <div class="sg-responsive-preview">
+    <div class="sg-responsive-preview__size-buttons">
+      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
+        XS
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
+        SM
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
+        MD
+      </button>
+      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
+        LG
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
+        XL
+      </button>
+    </div>
+    <div class="iframe__preview">
+      <iframe title="Pagination example" class="responsive-iframe" src="examples/text-alignment.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="100"></iframe>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-u-text-align--left sba-u-sm-text-align--center sba-u-md-text-align--right sba-u-lg-text-align--left sba-u-xl-text-align--center">U.S. Small Business Administration&lt;/div></pre></code>
+
+
+</article>

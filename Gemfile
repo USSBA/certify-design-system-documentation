@@ -23,5 +23,5 @@ gem 'jekyll-babel'
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem 'jekyll-assets'
-   gem 'certify_design_system', :path => "/Users/jaredcunha/work/certify_design_system_gem"
+   gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git'
 end
