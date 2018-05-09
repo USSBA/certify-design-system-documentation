@@ -4,4 +4,4 @@
 node_modules
 .asset-cache
 .jekyll-cache
-/_site
+_site
