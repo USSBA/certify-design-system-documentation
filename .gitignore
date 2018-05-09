@@ -5,3 +5,4 @@ node_modules
 .asset-cache
 .jekyll-cache
 _site/feed.xml
+_site
