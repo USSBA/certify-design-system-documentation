@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    <title>Task panels | Certify Design System Documentation</title>
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex">
+
+
+
+
+
+<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<link rel="stylesheet" href="../assets/cds.css">
+
+<script src="../assets/javascripts/application.js"></script>
+<script src="../assets/cds.js"></script>
+
+<meta name="robots" content="noindex">
+
+    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
+    <script src="../assets/javascripts/vendor/prism.js"></script>
+  </head>
+  <body class="styleguide">
+
+    <header class="styleguide-masthead">
+      <div class="sba-l-container sba-l-container--fullbleed">
+        <div class="sba-l-row">
+          <div class="sba-l-col--12 sba-u-padding-x--2">
+            <a href="/certify-design-system-documentation/">
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+
+
+
+    <div class="sba-l-container sba-l-container--fullbleed sba-u-padding-bottom--7">
+      <div class="sba-l-row">
+        <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
+          <ul class="usa-sidenav-list">
+            <li>
+              <a class="" href="/certify-design-system-documentation/">Introduction</a>
+            </li>
+            <li>
+              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_layout">
+                Layout
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-up"></use>
+                </svg>
+              </button>
+              <ul class="usa-sidenav-sub_list" id="sublist_layout">
+                <li>
+                  <a class="" href="/certify-design-system-documentation/layout/grid.html">Grid</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/layout/page-templates.html">Page templates</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/layout/spacing.html">Spacing</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_components">
+                Components
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-up"></use>
+                </svg>
+              </button>
+              <ul class="usa-sidenav-sub_list" id="sublist_components">
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/alerts.html">Alerts</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/badges.html">Badges</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/breadcrumbs.html">Breadcrumbs</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/buttons.html">Buttons</a>
+                </li>
+                <!--
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/cards.html">Cards</a>
+                </li>-->
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/datepicker.html">Datepicker</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/document-upload.html">Document upload</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/editable-tables.html">Editable tables</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/faceting.html">Faceting</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/forms.html">Forms</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/guidances.html">Guidances</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/icons.html">Icons</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/lists.html">Lists</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/questionnaire.html">Questionnaire</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/pagination.html">Pagination</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/spinners.html">Spinners</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/tables.html">Tables</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/task-panels.html">Task Panels</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_utilities">
+                Utilities
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+              <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-up"></use>
+              </svg>
+              </button>
+                <ul class="usa-sidenav-sub_list" id="sublist_utilities">
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/borders.html">Borders</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/background-color.html">Background color</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/color.html">Color</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/flexbox.html">Flexbox</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/font-size.html">Font size</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/inputs.html">Inputs</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/margin.html">Margins</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/measure.html">Measure</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/padding.html">Padding</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/separators.html">Separators</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/text-alignment.html">Text alignment</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/visibility.html">Visibility</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_transitional">
+                  Depricating
+                  <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
+                  </svg>
+                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-up"></use>
+                </svg>
+                </button>
+                  <ul class="usa-sidenav-sub_list" id="sublist_transitional">
+                    <li>
+                      <a class="" href="/certify-design-system-documentation/transitional/cards.html">Cards</a>
+                    </li>
+                    <li>
+                      <a class=" usa-current " href="/certify-design-system-documentation/transitional/taskpanel.html">Task Panels</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/releases.html">Release notes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
+        <article>
+  <h1>Task Panels</h1>
+
+  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_task-panels.scss">CSS file</a> | <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/task-panels.js">JS file</a></p>
+
+  <p>Task panels are interactive menus that contain bulk actions for a container. The panels are revealed by clicking the three-dot icon.  In order for them to function properly, the toggle button must have an <code>aria-controls</code> value that corresponds to the <code>id</code> of a <code>task-panel-content</code>.</p>
+
+  <div class="sample">
+    <div class="sba-c-task-panel">
+      <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel1">
+        <svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#ellipsis-h"></use>
+        </svg>
+        <span class="sba-u-visibility--screen-reader">Toggle menu</span>
+      </button>
+      <div id="panel1" class="sba-c-task-panel__content">
+        <ul class="sba-c-task-panel__menu">
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sba-c-task-panel">
+      <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel2">
+        <svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#ellipsis-h"></use>
+        </svg>
+        <span class="sba-u-visibility--screen-reader">Toggle menu</span>
+      </button>
+      <div id="panel2" class="sba-c-task-panel__content">
+        <ul class="sba-c-task-panel__menu">
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+        </ul>
+        <hr>
+        <ul class="sba-c-task-panel__menu">
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-task-panel">
+  &lt;button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel1">
+    &lt;svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#ellipsis-h">&lt;/use>
+    &lt;/svg>
+    &lt;span class="sba-u-visibility--screen-reader">Toggle menu&lt;/span>
+  &lt;/button>
+  &lt;div id="panel1" class="sba-c-task-panel__content">
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+
+&lt;div class="sba-c-task-panel">
+  &lt;button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel2">
+    &lt;svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#ellipsis-h">&lt;/use>
+    &lt;/svg>
+    &lt;span class="sba-u-visibility--screen-reader">Toggle menu&lt;/span>
+  &lt;/button>
+  &lt;div id="panel2" class="sba-c-task-panel__content">
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+    &lt;hr>
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h2>Guidance</h2>
+  <p>Because task panel menus open to the left of their buttons, they should be placed on the right hand side of their parent container to prevent content from being cut off by the browser.</p>
+
+  <h3>Required Components</h3>
+  <ul>
+    <li>Toggle button</li>
+    <li>Panel</li>
+    <li>Menu</li>
+  </ul>
+
+  <h3>Optional Components</h3>
+  <ul>
+    <li>
+      Emergency actions
+      <p>Emergency actions are red links that involve actions such as closing or deleting.</p>
+    </li>
+    <li>
+      Horizontal rules
+      <p>If a menu has more than 3 items, and one of those items is an "emergency action," then the two menus should be used separated by a horizontal rule.</p>
+    </li>
+  </ul>
+
+  <h3>Variations</h3>
+  <p>There are variations on the toggle button available that can be applied using class names on the toggle button.</p>
+
+  <h4>Vertical dots</h4>
+  <p>The dots can be rotated vertically to save horizontal space, such as when the task panel is used on cards. This is done by adding a class name of <code>sba-c-task-panel__toggle--vertical</code> to the toggle</p>
+
+  <div class="sample">
+    <div class="sba-c-task-panel">
+      <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel3">
+        <svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#ellipsis-v"></use>
+        </svg>
+        <span class="sba-u-visibility--screen-reader">Toggle menu</span>
+      </button>
+      <div id="panel3" class="sba-c-task-panel__content">
+        <ul class="sba-c-task-panel__menu">
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link">Do some action</a>
+          </li>
+          <li class="sba-c-task-panel__menu__item">
+            <a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-task-panel">
+  &lt;button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="panel3">
+    &lt;svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#ellipsis-v">&lt;/use>
+    &lt;/svg>
+    &lt;span class="sba-u-visibility--screen-reader">Toggle menu&lt;/span>
+  &lt;/button>
+  &lt;div id="panel3" class="sba-c-task-panel__content">
+    &lt;ul class="sba-c-task-panel__menu">
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link">Do some action&lt;/a>
+      &lt;/li>
+      &lt;li class="sba-c-task-panel__menu__item">
+        &lt;a href="#" class="sba-c-task-panel__menu__link sba-c-task-panel__menu__link--emergency">Delete&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h4>Smaller buttons</h4>
+  <p>Buttons can be made smaller to conserve space, such as when the task panel is used in cards and tables. This is done by adding a class name of <code>sba-c-task-panel__toggle--small</code> to the toggle</p>
+</article>
+
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="usa-footer usa-footer-medium" id="footer" role="contentinfo">
+
+
+
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav"><ul class="usa-unstyled-list"><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://sba.gov/contracting" target="_blank"> SBA.gov/contracting</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://whitehouse.gov/" target="_blank"> WhiteHouse.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://regulations.gov/" target="_blank">Regulations.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="https://business.usa.gov/" target="_blank">  BusinessUSA.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://usa.gov/" target="_blank">  USA.gov</a></li></ul></nav></div></div><div class="usa-footer-secondary_section"><div class="usa-grid-full"><div class="usa-footer-logo usa-width-one-half"><a href="http://www.sba.gov" target="_blank"><img alt="U.S. Small Business Administration logo" width="180px" src="https://certify.sba.gov//assets/sba_logo-71184dd072683081eab26174ea34e79e0df016b2d30ab9b5583cbbc481b7fbeb.png"></a></div><div class="usa-footer-contact-links usa-width-one-half">
+        <a class="usa-link-facebook" href="https://www.facebook.com/SBAgov" target="_blank" title="Follow certify.SBA.gov on facebook!"><span hidden>Facebook</span></a>
+        <a class="usa-link-twitter" href="https://www.twitter.com/sbagov" target="_blank" title="Follow certify.SBA.gov on twitter!"><span hidden>Twitter</span></a>
+        <a class="usa-link-youtube" href="https://www.youtube.com/c/sbagov" target="_blank" title="Follow certify.SBA.gov on YouTube!"><span hidden>YouTube</span></a><address></address><h3 class="usa-footer-contact-heading">Contact SBA</h3><p>(800) 827-5722</p></div></div></div><div class="usa-footer-primary-section"><div class="usa-grid-full"><span class="usa-text-small usa-disclaimer-stage">Version: 3.0.1.build_1510707403_ga14f52d</span><div class="atlwdg-blanket" id="atlwdg-blanket" style="display: none;"></div><div class="atlwdg-popup atlwdg-hidden" id="atlwdg-container"></div></div></div></footer>
+
+  </body>
+</html>
