@@ -14,5 +14,5 @@ bundle exec jekyll s
 ## To Deploy
 Run the following script
 ```
-./update-jekyll.sh
+./update_jekyll.sh
 ```
