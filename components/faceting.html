@@ -105,6 +105,130 @@ title: Faceting
   &lt;/ul>
 &lt;/fieldset></code></pre>
 
+  <h2>Faceting with accordions</h2>
+
+  <p>Sets of facets can also be controlled by accordions.</p>
+
+  <p><em>Note: This is mix of components from the U.S. Web Design Standards and Certify utility classes. This pattern should be cleaned up in the near future.</em></p>
+
+  <div class="sample">
+    <fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+      <legend class="sba-c-facet-set__legend">Review type</legend>
+      <ul class="sba-c-unstyled-list sba-u-margin-top--1">
+        <li>
+          <ul class="usa-accordion">
+            <li class="sba-u-bgcolor--transparent">
+              <button class="usa-accordion-button sba-u-padding--0 sba-u-padding-y--1 sba-u-bgcolor--transparent"
+                aria-expanded="false"
+                aria-controls="a1" style="background-position: right center">
+                Annual Review
+              </button>
+              <div id="a1" aria-hidden="true" class="usa-accordion-content sba-u-padding--0" style="overflow: visible">
+                <fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+                  <legend class="sba-c-facet-set__legend sba-c-facet-set__legend--l2">Status</legend>
+                  <ul class="sba-c-unstyled-list">
+                    <li>
+                      <input class="sba-c-checkbox" id="ar2-1" type="checkbox" name="ar">
+                      <label class="sba-c-label" for="ar2-1">Screening</label>
+                    </li>
+                    <li>
+                      <input class="sba-c-checkbox" id="ar2-2" type="checkbox" name="ar">
+                      <label class="sba-c-label" for="ar2-2">Processing</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="usa-accordion">
+            <li class="sba-u-bgcolor--transparent">
+              <button class="usa-accordion-button sba-u-padding--0 sba-u-padding-y--1 sba-u-bgcolor--transparent"
+                aria-expanded="false"
+                aria-controls="a2" style="background-position: right center">
+                Initial Application
+              </button>
+              <div id="a2" aria-hidden="true" class="usa-accordion-content sba-u-padding--0" style="overflow: visible">
+                <fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+                  <legend class="sba-c-facet-set__legend sba-c-facet-set__legend--l2">Status</legend>
+                  <ul class="sba-c-unstyled-list">
+                    <li>
+                      <input class="sba-c-checkbox" id="ar3-1" type="checkbox" name="ar">
+                      <label class="sba-c-label" for="ar3-1">Screening</label>
+                    </li>
+                    <li>
+                      <input class="sba-c-checkbox" id="ar3-2" type="checkbox" name="ar">
+                      <label class="sba-c-label" for="ar3-2">Processing</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </fieldset>
+  </div>
+
+  <pre><code class="language-markup">&lt;fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+  &lt;legend class="sba-c-facet-set__legend">Review type&lt;/legend>
+  &lt;ul class="sba-c-unstyled-list sba-u-margin-top--1">
+    &lt;li>
+      &lt;ul class="usa-accordion">
+        &lt;li class="sba-u-bgcolor--transparent">
+          &lt;button class="usa-accordion-button sba-u-padding--0 sba-u-padding-y--1 sba-u-bgcolor--transparent"
+            aria-expanded="false"
+            aria-controls="a1" style="background-position: right center">
+            Annual Review
+          &lt;/button>
+          &lt;div id="a1" aria-hidden="true" class="usa-accordion-content sba-u-padding--0" style="overflow: visible">
+            &lt;fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+              &lt;legend class="sba-c-facet-set__legend sba-c-facet-set__legend--l2">Status&lt;/legend>
+              &lt;ul class="sba-c-unstyled-list">
+                &lt;li>
+                  &lt;input class="sba-c-checkbox" id="ar2-1" type="checkbox" name="ar">
+                  &lt;label class="sba-c-label" for="ar2-1">Screening&lt;/label>
+                &lt;/li>
+                &lt;li>
+                  &lt;input class="sba-c-checkbox" id="ar2-2" type="checkbox" name="ar">
+                  &lt;label class="sba-c-label" for="ar2-2">Processing&lt;/label>
+                &lt;/li>
+              &lt;/ul>
+            &lt;/fieldset>
+          &lt;/div>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/li>
+    &lt;li>
+      &lt;ul class="usa-accordion">
+        &lt;li class="sba-u-bgcolor--transparent">
+          &lt;button class="usa-accordion-button sba-u-padding--0 sba-u-padding-y--1 sba-u-bgcolor--transparent"
+            aria-expanded="false"
+            aria-controls="a2" style="background-position: right center">
+            Initial Application
+          &lt;/button>
+          &lt;div id="a2" aria-hidden="true" class="usa-accordion-content sba-u-padding--0" style="overflow: visible">
+            &lt;fieldset class="sba-c-facet-set sba-c-fieldset sba-c-fieldset--inputs">
+              &lt;legend class="sba-c-facet-set__legend sba-c-facet-set__legend--l2">Status&lt;/legend>
+              &lt;ul class="sba-c-unstyled-list">
+                &lt;li>
+                  &lt;input class="sba-c-checkbox" id="ar3-1" type="checkbox" name="ar">
+                  &lt;label class="sba-c-label" for="ar3-1">Screening&lt;/label>
+                &lt;/li>
+                &lt;li>
+                  &lt;input class="sba-c-checkbox" id="ar3-2" type="checkbox" name="ar">
+                  &lt;label class="sba-c-label" for="ar3-2">Processing&lt;/label>
+                &lt;/li>
+              &lt;/ul>
+            &lt;/fieldset>
+          &lt;/div>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/li>
+  &lt;/ul>
+&lt;/fieldset></pre></code>
+
 
 
   <h2>Facet pills</h2>
