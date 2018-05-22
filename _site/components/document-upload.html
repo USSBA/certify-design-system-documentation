@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    <title>Document upload | Certify Design System Documentation</title>
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex">
+
+
+
+
+
+<link rel="stylesheet" href="../assets/stylesheets/application.css">
+<link rel="stylesheet" href="../assets/cds.css">
+
+<script src="../assets/javascripts/application.js"></script>
+<script src="../assets/cds.js"></script>
+
+<meta name="robots" content="noindex">
+
+    <link rel="stylesheet" href="../assets/stylesheets/prototype/vendor/prism.css">
+    <script src="../assets/javascripts/vendor/prism.js"></script>
+  </head>
+  <body class="styleguide">
+
+    <header class="styleguide-masthead">
+      <div class="sba-l-container sba-l-container--fullbleed">
+        <div class="sba-l-row">
+          <div class="sba-l-col--12 sba-u-padding-x--2">
+            <a href="/certify-design-system-documentation/">
+              <img class="styleguide-masthead__logo" alt="certify.SBA.gov logo" src="../assets/img/certify-sba-gov-logo_on-dark.png" />
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+
+
+
+    <div class="sba-l-container sba-l-container--fullbleed sba-u-padding-bottom--7">
+      <div class="sba-l-row">
+        <div class="sba-l-sm-col--12 sba-l-md-col--4 sba-l-lg-col--3 sba-l-xl-col--2 sba-u-padding-x--2 sba-u-margin-bottom--5 sba-u-md-margin-bottom--0">
+          <ul class="usa-sidenav-list">
+            <li>
+              <a class="" href="/certify-design-system-documentation/">Introduction</a>
+            </li>
+            <li>
+              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_layout">
+                Layout
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-up"></use>
+                </svg>
+              </button>
+              <ul class="usa-sidenav-sub_list" id="sublist_layout">
+                <li>
+                  <a class="" href="/certify-design-system-documentation/layout/grid.html">Grid</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/layout/page-templates.html">Page templates</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/layout/spacing.html">Spacing</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button type="button" class="usa-sidenav-list-button  is-open usa-current " aria-collapsed="false
+              " aria-controls="sublist_components">
+                Components
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-up"></use>
+                </svg>
+              </button>
+              <ul class="usa-sidenav-sub_list" id="sublist_components">
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/alerts.html">Alerts</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/badges.html">Badges</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/breadcrumbs.html">Breadcrumbs</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/buttons.html">Buttons</a>
+                </li>
+                <!--
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/cards.html">Cards</a>
+                </li>-->
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/datepicker.html">Datepicker</a>
+                </li>
+                <li>
+                  <a class=" usa-current " href="/certify-design-system-documentation/components/document-upload.html">Document upload</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/editable-tables.html">Editable tables</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/faceting.html">Faceting</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/forms.html">Forms</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/guidances.html">Guidances</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/icons.html">Icons</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/lists.html">Lists</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/messages.html">Messages</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/questionnaire.html">Questionnaire</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/pagination.html">Pagination</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/spinners.html">Spinners</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/tables.html">Tables</a>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/components/task-panels.html">Task Panels</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_utilities">
+                Utilities
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+              <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-up"></use>
+              </svg>
+              </button>
+                <ul class="usa-sidenav-sub_list" id="sublist_utilities">
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/borders.html">Borders</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/background-color.html">Background color</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/color.html">Color</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/flexbox.html">Flexbox</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/font-size.html">Font size</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/inputs.html">Inputs</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/margin.html">Margins</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/measure.html">Measure</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/padding.html">Padding</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/separators.html">Separators</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/text-alignment.html">Text alignment</a>
+                  </li>
+                  <li>
+                    <a class="" href="/certify-design-system-documentation/utilities/visibility.html">Visibility</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <button type="button" class="usa-sidenav-list-button " aria-collapsed="true" aria-controls="sublist_transitional">
+                  Depricating
+                  <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-down"></use>
+                  </svg>
+                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#angle-up"></use>
+                </svg>
+                </button>
+                  <ul class="usa-sidenav-sub_list" id="sublist_transitional">
+                    <li>
+                      <a class="" href="/certify-design-system-documentation/transitional/cards.html">Cards</a>
+                    </li>
+                    <li>
+                      <a class="" href="/certify-design-system-documentation/transitional/taskpanel.html">Task Panels</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="" href="/certify-design-system-documentation/releases.html">Release notes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
+        <article>
+  <span class="sba-c-badge sba-c-badge--warn">Draft</span>
+  <h1>Document upload</h1>
+  <p>
+    <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_doc-upload.scss">CSS file</a> |
+    <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/doc-upload.js">JS file</a>
+  </p>
+  <p>Document upload is for uploading files of various types</p>
+  <h4>Example</h4>
+  <div class="sample sample--white">
+    <div class="sba-c-doc-upload-container">
+      <!-- START - Doc Upload Component -->
+      <div class="sba-c-doc-upload">
+        <!-- Primary heading content...visible stuff when closed -->
+        <div class="sba-c-doc-upload__primary-heading">
+          <h3>Drivers License</h3>
+          <p class="sba-c-doc-upload__doc-description">Issued by state. May include non-drivers’ ID</p>
+          <!-- <p class="sba-c-doc-upload__doc-comment">MD State License expires 2018</p> -->
+          <!-- Button to toggle the doc upload content -->
+          <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload1">add file</button>
+        </div>
+        <!-- Primary contents of doc upload. Shown when expanded -->
+        <div id="doc-upload1" class="sba-c-doc-upload__content">
+          <p>1) Attach a file</p>
+          <div class="sba-c-doc-upload__uploader">
+            <div class="sba-c-doc-upload__uploader--title">Drag file into this space or
+              <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label>
+              <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
+            </div>
+          </div>
+          <label for="file-comment">2) Brief description (optional)</label>
+          <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+          <div class="sba-c-doc-upload__actions">
+            <button class="sba-c-button" type="button">Add file</button>
+            <button class="sba-c-button sba-c-button--transparent" type="button" aria-controls="doc-upload1-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <!-- END - Doc Upload Component -->
+    </div>
+  </div>
+  <h4>Completed example</h4>
+  <div class="sample sample--white">
+    <div class="sba-c-doc-upload-container">
+      <!-- START - Doc Upload Component -->
+      <div class="sba-c-doc-upload sba-c-doc-upload--completed">
+        <!-- Primary heading content...visible stuff when closed -->
+        <div class="sba-c-doc-upload__primary-heading">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#check"></use>
+          </svg>
+          <h3>Driver's License</h3>
+          <p class="sba-c-doc-upload__doc-description">Issued by state. May include non-drivers’ ID</p>
+          <!-- Button to toggle the doc upload content -->
+          <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload2">change</button>
+        </div>
+        <!-- Primary contents of doc upload. Shown when expanded -->
+        <div id="doc-upload2" class="sba-c-doc-upload__content">
+          <p>1) Replace existing file</p>
+          <div class="sba-c-doc-upload__uploader">
+            <div class="sba-c-doc-upload__uploader--title">Drag file into this space or
+                <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label>
+                <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
+            </div>
+          </div>
+          <label for="file-comment">2) Brief description (optional)</label>
+          <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+          <div class="sba-c-doc-upload__actions">
+            <button class="sba-c-button" type="button" title="add-file">Add file</button>
+            <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__cancel" type="button" title="cancel" aria-controls="doc-upload2-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <!-- END - Doc Upload Component -->
+    </div>
+  </div>
+
+
+
+<h4>Add custom document example</h4>
+<div class="sample sample--white">
+  <div class="sba-c-doc-upload-container">
+    <!-- START - Doc Upload Component -->
+    <div class="sba-c-doc-upload sba-c-doc-upload--custom">
+      <!-- Primary heading content...visible stuff when closed -->
+      <div class="sba-c-doc-upload__primary-heading">
+        <h3>Add additional document</h3>
+        <!-- user-provided custom title would go here -->
+      </div>
+      <div class="sba-c-doc-upload__tab-content">
+        <input id="new-document" type="radio" name="tabs" checked>
+        <label for="new-document" class="sba-c-doc-upload__tab">New document</label>
+        <input id="existing-document" type="radio" name="tabs">
+        <label for="existing-document" class="sba-c-doc-upload__tab">Previously uploaded</label>
+        <section id="new-document">
+          <label for="custom-document-name" class="sba-u-margin-top--0">1) Title</label>
+          <input id="custom-document-name" type="text" class="sba-u-margin-bottom--3">
+          <p>2) Add file</p>
+          <div class="sba-c-doc-upload__uploader">
+            <div class="sba-c-doc-upload__uploader--title">Drag file into this space or
+                <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label>
+                <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
+            </div>
+          </div>
+          <label for="file-comment">3) Brief description (optional)</label>
+          <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+          <div class="sba-c-doc-upload__actions">
+            <button class="sba-c-button" type="button" title="add-file">Add file</button>
+          </div>
+        </section>
+        <section id="existing-document">
+          <div class="sba-c-doc-upload__document-list">
+            <fieldset class="sba-c-fieldset">
+              <legend class="sba-c-legend">Select a previously added document</legend>
+              <ul class="sba-c-field-list">
+                <li>
+                  <input id="q1_a1" type="radio" name="q1_answers" value="Affidavit">
+                  <label for="q1_a1">Affidavit</label>
+                </li>
+                <li>
+                  <input id="q1_a2" type="radio" name="q1_answers" value="Legal attachment">
+                  <label for="q1_a2">Legal attachment</label>
+                </li>
+                <li>
+                  <input id="q1_a3" type="radio" name="q1_answers" value="2011 w-2">
+                  <label for="q1_a4">2011 w-2</label>
+                </li>
+                <li>
+                  <input id="q1_a5" type="radio" name="q1_answers" value="old license">
+                  <label for="q1_a5">old license</label>
+                </li>
+                <li>
+                  <input id="q1_a1" type="radio" name="q1_answers" value="2011 tax file">
+                  <label for="q1_a1">2011 tax file</label>
+                </li>
+                <li>
+                  <input id="q1_a2" type="radio" name="q1_answers" value="Requested doc">
+                  <label for="q1_a2">Requested doc</label>
+                </li>
+                <li>
+                  <input id="q1_a3" type="radio" name="q1_answers" value="passport">
+                  <label for="q1_a4">passport</label>
+                </li>
+                <li>
+                  <input id="q1_a5" type="radio" name="q1_answers" value="record">
+                  <label for="q1_a5">record</label>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="sba-c-doc-upload__actions">
+              <button class="sba-c-button sba-c-doc-upload__use-toggle" type="button" title="use-document" aria-controls="doc-select1">Use document</button>
+            </div>
+          </div>
+          <div id="doc-select1" class="sba-c-doc-upload__document-confirm">
+            <label for="custom-document-name">1) Title</label>
+            <input id="custom-document-name" type="text" class="sba-u-margin-bottom--3" value="Affidavit">
+            <p>2) Confirm attached file</p>
+            <div class="sba-c-doc-upload__previously-uploaded">
+
+              <div class="sba-c-input-ornament-container">
+                <div class="sba-c-input-ornament sba-c-input-ornament--left">
+                  <svg aria-hidden="true" class="sba-c-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#file-alt"></use>
+                  </svg>
+                </div>
+                <div class="sba-c-input-ornament sba-c-input-ornament--right">
+                  <button class="sba-c-button sba-c-button--inverse sba-c-button--small">choose new</button>
+                </div>
+                <input type="text" id="input1" value="my_affidavit123.pdf" disabled="true">
+              </div>
+              <!-- <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label> -->
+              <!-- <input type="file" id="file-picker1" accept=".pdf" hidden="true" /> -->
+            </div>
+            <label for="file-comment">3) Brief description (optional)</label>
+            <input id="file-comment" type="text" class="sba-u-margin-bottom--3" value="valid business affidavit">
+            <div class="sba-c-doc-upload__actions">
+              <button class="sba-c-button" type="button" title="add-file">Use document</button>
+              <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__cancel" type="button" title="cancel" aria-controls="doc-select1-cancel">Cancel</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- END - Doc Upload Component -->
+
+  <h4>Add custom - Completed example</h4>
+  <div class="sample sample--white">
+    <div class="sba-c-doc-upload-container">
+      <!-- START - Doc Upload Component -->
+      <div class="sba-c-doc-upload">
+        <!-- Primary heading content...visible stuff when closed -->
+        <div class="sba-c-doc-upload__primary-heading">
+          <h3>note for SBA</h3>
+          <p class="sba-c-doc-upload__doc-description">note that was requested</p>
+          <!-- Button to toggle the doc upload content -->
+          <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload3">change</button>
+        </div>
+        <!-- Primary contents of doc upload. Shown when expanded -->
+        <div id="doc-upload3" class="sba-c-doc-upload__content">
+          <label for="custom-document-name">1) Title</label>
+          <input id="custom-document-name" type="text" class="sba-u-margin-bottom--3">
+          <p>2) Replace existing file</p>
+          <div class="sba-c-doc-upload__uploader">
+            <div class="sba-c-doc-upload__uploader--title">Drag file into this space or
+                <label class="sba-c-doc-upload__uploader--input" for="file-picker1">choose a file</label>
+                <input type="file" id="file-picker1" accept=".pdf" hidden="true" />
+            </div>
+          </div>
+          <label for="file-comment">3) Brief description (optional)</label>
+          <input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+          <div class="sba-c-doc-upload__actions">
+            <button class="sba-c-button" type="button" title="add-file">Add file</button>
+            <button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__cancel" type="button" title="cancel" aria-controls="doc-upload3-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <!-- END - Doc Upload Component -->
+    </div>
+  </div>
+
+
+
+  <pre><code class="language-markup">
+  <!-- Markup example -->
+  &lt;div class="sba-c-doc-upload">
+    &lt;!-- Primary heading content...visible stuff when closed -->
+    &lt;div class="sba-c-doc-upload__primary-heading">
+      &lt;h3>Drivers License&lt;/h3>
+      &lt;p>Issued by state. May include non-drivers’ ID&lt;/p>
+      &lt;!-- Button to toggle the doc upload content -->
+      &lt;button class="sba-c-button sba-c-button--transparent sba-c-doc-upload__toggle" type="button" title="remove" aria-expanded="false" aria-controls="doc-upload1">add file&lt;/button>
+    &lt;/div>
+    &lt;!-- Primary contents of doc upload. Shown when expanded -->
+    &lt;div id="doc-upload1" class="sba-c-doc-upload__content">
+      &lt;p>1) Attach a file&lt;/p>
+      &lt;div class="sba-c-doc-upload__file-input">
+        &lt;span>
+          Drag file into this space or
+          &lt;label for="file-picker1">choose a file&lt;/label>
+          &lt;input type="file" id="file-picker1" accept=".pdf" style="display: none" />
+        &lt;/span>
+      &lt;/div>
+      &lt;label for="file-comment">2) Brief description (optional)&lt;/label>
+      &lt;input id="file-comment" type="text" class="sba-u-margin-bottom--3">
+      &lt;button class="sba-c-button" type="button" title="add-file">Add file&lt;/button>
+      &lt;button class="sba-c-button sba-c-button--transparent" type="button" title="cancel" aria-controls="doc-upload1-cancel">Cancel&lt;/button>
+    &lt;/div>
+  &lt;/div>
+  </code></pre>
+  <h2>Guidance</h2>
+  <ul>
+    <li>Each component uses a unique <code>id</code> via an <code>aria-controls</code> tag that corresponds to a div with matching <code>id</code> and a matching cancel <code>aria-controls</code></li>
+    <li>Use the input <code>accept</code> attribute to limit types of files that can be uploaded</li>
+    <li>It's best to keep it in a container no wider than <code>75rem</code></li>
+    <li>This component does not include any library for handling drag-and-drop or direct-upload to S3</li>
+    <li>The custom document component does not provide a "starting state." Instead, it's expected to be used with either an "Add additional document" link or radio button which would reveal the component</li>
+  </ul>
+</article>
+
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="usa-footer usa-footer-medium" id="footer" role="contentinfo">
+
+
+
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav"><ul class="usa-unstyled-list"><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://sba.gov/contracting" target="_blank"> SBA.gov/contracting</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://whitehouse.gov/" target="_blank"> WhiteHouse.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://regulations.gov/" target="_blank">Regulations.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="https://business.usa.gov/" target="_blank">  BusinessUSA.gov</a></li><li class="usa-width-one-sixth usa-footer-primary-content"><a class="usa-footer-primary-link" href="http://usa.gov/" target="_blank">  USA.gov</a></li></ul></nav></div></div><div class="usa-footer-secondary_section"><div class="usa-grid-full"><div class="usa-footer-logo usa-width-one-half"><a href="http://www.sba.gov" target="_blank"><img alt="U.S. Small Business Administration logo" width="180px" src="https://certify.sba.gov//assets/sba_logo-71184dd072683081eab26174ea34e79e0df016b2d30ab9b5583cbbc481b7fbeb.png"></a></div><div class="usa-footer-contact-links usa-width-one-half">
+        <a class="usa-link-facebook" href="https://www.facebook.com/SBAgov" target="_blank" title="Follow certify.SBA.gov on facebook!"><span hidden>Facebook</span></a>
+        <a class="usa-link-twitter" href="https://www.twitter.com/sbagov" target="_blank" title="Follow certify.SBA.gov on twitter!"><span hidden>Twitter</span></a>
+        <a class="usa-link-youtube" href="https://www.youtube.com/c/sbagov" target="_blank" title="Follow certify.SBA.gov on YouTube!"><span hidden>YouTube</span></a><address></address><h3 class="usa-footer-contact-heading">Contact SBA</h3><p>(800) 827-5722</p></div></div></div><div class="usa-footer-primary-section"><div class="usa-grid-full"><span class="usa-text-small usa-disclaimer-stage">Version: 3.0.1.build_1510707403_ga14f52d</span><div class="atlwdg-blanket" id="atlwdg-blanket" style="display: none;"></div><div class="atlwdg-popup atlwdg-hidden" id="atlwdg-container"></div></div></div></footer>
+
+  </body>
+</html>
