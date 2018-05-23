@@ -5983,6 +5983,14 @@ Style guide: components.badge
 .sba-c-badge--alert {
   background-color: #e31c3d; }
 
+.sba-c-badge--generic {
+  height: .8rem;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -999em;
+  width: .8rem; }
+
 /*
 ---
 ## When to use
