@@ -1,7 +1,6 @@
 rm -rf _site
 bundle exec jekyll build
 cd _site
-touch .nojekyll
 git init
 git remote add origin https://github.com/USSBA/certify-design-system-documentation.git
 git checkout -b gh-pages
