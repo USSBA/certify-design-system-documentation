@@ -2,7 +2,7 @@ rm -rf _site
 bundle exec jekyll build
 cd _site
 git init
-git remote add origin https://github.com/USSBA/certify-design-system-documentation.git
+git remote add origin git@github.com:USSBA/certify-design-system-documentation.git
 git checkout -b gh-pages
 git add -A
 git commit -m "update site"
