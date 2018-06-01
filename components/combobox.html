@@ -1,0 +1,124 @@
+---
+layout: styleguide
+main_section: components
+sub_section: combobox
+title: Combo box
+---
+
+<article>
+  <span class="sba-c-badge sba-c-badge--warn">Draft</span>
+  <h1>Combo box</h1>
+
+  <p>
+  <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_combobox.scss">CSS file</a> | <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/combobox.js">JS file</a>
+  </p>
+
+  <div class="sba-c-alert">
+    <div class="sba-c-alert__icon">
+      <svg aria-hidden="true" class="sba-c-icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#info-circle"></use>
+      </svg>
+    </div>
+    <div class="sba-c-alert__body">
+      <h3 class="sba-c-alert__heading">Dependency</h3>
+      <p class="sba-c-alert__text">This component requires <a href="https://jqueryui.com/">jQuery UI</a>. Cerify.sba.gov uses version 1.11.4</p>
+    </div>
+  </div>
+
+  <p>The combo box is a <code>&lt;select></code> box that provides auto suggestions based on user input. You can either type something into the field to get filtered suggestions based on your input, or use the button to get the full list of selections.</p>
+
+  <p>The input is read from an existing select-element for progressive enhancement.</p>
+
+  <div class="sample">
+    <label for="combobox">Select a BOS</label>
+    <div class="ui-widget sba-c-combobox">
+      <select id="combobox">
+        <option value="">Select one...</option>
+        <option value="Aaron Rogers">Aaron Rogers</option>
+        <option value="Arlene Baker">Arlene Baker</option>
+        <option value="Barrett Foster">Barrett Foster</option>
+        <option value="Bernice Jones">Bernice Jones</option>
+        <option value="Catherine Masterson">Catherine Masterson</option>
+        <option value="Christine Amici">Christine Amici</option>
+        <option value="Connor Fitzpatrick">Connor Fitzpatrick</option>
+        <option value="David Masterson">David Masterson</option>
+        <option value="Don Huffman">Don Huffman</option>
+        <option value="Erin Botz">Erin Botz</option>
+        <option value="Freddie McDaniel">Freddie McDaniel</option>
+        <option value="Gertrude Polanter">Gertrude Polanter</option>
+        <option value="Henry Nichols">Henry Nichols</option>
+        <option value="Jamie Ngo">Jamie Ngo</option>
+        <option value="Jennifer Vollaley">Jennifer Vollaley</option>
+        <option value="Liz Redman">Liz Redman</option>
+        <option value="Paul Stevenson">Paul Stevenson</option>
+        <option value="Penelope Martin">Penelope Martin</option>
+        <option value="Rachel Walton">Rachel Walton</option>
+        <option value="Richard Engleton">Richard Engleton</option>
+        <option value="Steven Greymore">Steven Greymore</option>
+        <option value="Timothy Grant">Timothy Grant</option>
+      </select>
+    </div>
+    <p>Th button below is not part of the component.</p>
+    <button id="toggle" type="button">Show underlying select</button>
+    <script>
+      $(function() {
+        // instantiate combobox
+        $( "#combobox" ).combobox({
+          select: function(event, ui) {
+                $( "#combobox" ).trigger("change");
+             } // selected
+        });
+        $( "#toggle" ).on( "click", function() {
+          $( "#combobox" ).toggle();
+        });
+        $('#combobox').on('change', function(){
+          alert('change event');
+        })
+      });
+    </script>
+  </div>
+
+  <pre><code class="language-markup">&lt;label for="combobox">Select a BOS&lt;/label>
+&lt;div class="ui-widget sba-c-combobox">
+  &lt;select id="combobox">
+    &lt;option value="">Select one...&lt;/option>
+    &lt;option value="Aaron Rogers">Aaron Rogers&lt;/option>
+    &lt;option value="Arlene Baker">Arlene Baker&lt;/option>
+    &lt;option value="Barrett Foster">Barrett Foster&lt;/option>
+    &lt;option value="Bernice Jones">Bernice Jones&lt;/option>
+    &lt;option value="Catherine Masterson">Catherine Masterson&lt;/option>
+    &lt;option value="Christine Amici">Christine Amici&lt;/option>
+    &lt;option value="Connor Fitzpatrick">Connor Fitzpatrick&lt;/option>
+    &lt;option value="David Masterson">David Masterson&lt;/option>
+    &lt;option value="Don Huffman">Don Huffman&lt;/option>
+    &lt;option value="Erin Botz">Erin Botz&lt;/option>
+    &lt;option value="Freddie McDaniel">Freddie McDaniel&lt;/option>
+    &lt;option value="Gertrude Polanter">Gertrude Polanter&lt;/option>
+    &lt;option value="Henry Nichols">Henry Nichols&lt;/option>
+    &lt;option value="Jamie Ngo">Jamie Ngo&lt;/option>
+    &lt;option value="Jennifer Vollaley">Jennifer Vollaley&lt;/option>
+    &lt;option value="Liz Redman">Liz Redman&lt;/option>
+    &lt;option value="Paul Stevenson">Paul Stevenson&lt;/option>
+    &lt;option value="Penelope Martin">Penelope Martin&lt;/option>
+    &lt;option value="Rachel Walton">Rachel Walton&lt;/option>
+    &lt;option value="Richard Engleton">Richard Engleton&lt;/option>
+    &lt;option value="Steven Greymore">Steven Greymore&lt;/option>
+    &lt;option value="Timothy Grant">Timothy Grant&lt;/option>
+  &lt;/select>
+&lt;/div>
+&lt;script>
+  $(function() {
+    $( "#combobox" ).combobox({
+      select: function(event, ui) {
+            $( "#combobox" ).trigger("change");
+         }
+    });
+  });
+&lt;/script></code></pre>
+
+  <h2>Guidance</h2>
+  <ul>
+    <li>This componenent is based on the <a href="https://jqueryui.com/autocomplete/#combobox">jQuery UI Autosuggest Combobox</a>. </li>
+    <li>Selecting an item from the list triggers <code>change</code> event on the underlying <code>&lt;select></code> box.</li>
+  </ul>
+</article>

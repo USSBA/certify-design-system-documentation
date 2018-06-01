@@ -4,6 +4,7 @@
 
 // Vender JS
  -{% include_relative vendor/jquery.min.js %}
+ -{% include_relative vendor/jqueryui.js %}
  -{% include_relative vendor/uswds.min.js %}
  -{% include_relative vendor/quill.js %}
 
