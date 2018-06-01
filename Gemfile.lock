@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:USSBA/certify_design_system_gem.git
-  revision: b76c8c8029118852d9388c43184cd6bf707b016c
+  revision: e20c625fe451cf7c95a04f49ce57120192141dba
   branch: bin-task
   specs:
     certify_design_system (1.9.0)
