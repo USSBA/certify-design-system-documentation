@@ -1,0 +1,281 @@
+---
+layout: styleguide
+main_section: components
+sub_section: messages
+title: Messages
+---
+
+<article>
+  <span class="sba-c-badge sba-c-badge--warn">Draft</span>
+  <h1>Messages</h1>
+
+  <p>There are two views in the messages page. One is the index, which is a list of all messages within an inbox. The second is the thread view, which displays all messages within a thread in their entirety.</p>
+
+  <h2>Thread view</h2>
+
+  <ul>
+    <li>Messages are displayed newest first</li>
+  </ul>
+
+  <h2>Thread header</h2>
+
+  <h3>Conversation</h3>
+  <p>Conversations are messages that take between two parties. </p>
+  <div class="sample">
+    <div class="sba-c-thread-header">
+      <div class="sba-c-thread__icon">
+        <svg aria-hidden="true" class="sba-c-icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#comments"></use>
+        </svg>
+      </div>
+      <h2 class="sba-c-thread-header__subject">Hi, I have a question about my application</h2>
+      <div class="sba-c-thread-header__actions">
+        <button class="sba-c-button" type="button">Reply</button>
+      </div>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-thread-header">
+  &lt;div class="sba-c-thread__icon">
+    &lt;svg aria-hidden="true" class="sba-c-icon">
+      &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#comments">&lt;/use>
+    &lt;/svg>
+  &lt;/div>
+  &lt;h2 class="sba-c-thread-header__subject">Hi, I have a question about my application&lt;/h2>
+  &lt;div class="sba-c-thread-header__actions">
+    &lt;button class="sba-c-button" type="button">Reply&lt;/button>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h3>Official letter</h3>
+  <p>Official letters are to be used on any official notice from the SBA. This includes determination letters, 15-day letters, letters of intent, etc. Official letters cannot be replied to.</p>
+  <div class="sample">
+    <div class="sba-c-thread-header">
+      <div class="sba-c-thread__icon">
+        <img src="{{site.baseurl}}/assets/img/sba_round_logo.png" alt="">
+      </div>
+      <h2 class="sba-c-thread-header__subject">Decision Letter</h2>
+      <div class="sba-c-thread-header__actions">
+        <p>Replies are disabled on this message</p>
+      </div>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-thread-header">
+  &lt;div class="sba-c-thread__icon">
+    &lt;img src="{{site.baseurl}}/assets/img/sba_round_logo.png" alt="">
+  &lt;/div>
+  &lt;h2 class="sba-c-thread-header__subject">Decision Letter&lt;/h2>
+  &lt;div class="sba-c-thread-header__actions">
+    &lt;p>Replies are disabled on this message&lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h2>Read status</h2>
+  <p>The read status provides feedback to the sender about whether or not a message was opened. Note, it cannot be determined whether or not a message was read.</p>
+  <div class="sample">
+    <p class="sba-c-message__read-status">
+      <svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#envelope-open"></use>
+      </svg> This message was opened on Sept. 15 2017 at 11:30am
+    </p>
+    <p class="sba-c-message__read-status">
+      <svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#envelope"></use>
+      </svg> This message has not been opened
+    </p>
+  </div>
+
+  <pre><code class="language-markup">&lt;!-- Opened message -->
+&lt;p class="sba-c-message__read-status">
+  &lt;svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+    &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#envelope-open">&lt;/use>
+  &lt;/svg> This message was opened on Sept. 15 2017 at 11:30am
+&lt;/p>
+
+&lt;!-- Unopened message -->
+&lt;p class="sba-c-message__read-status">
+  &lt;svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+    &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#envelope">&lt;/use>
+  &lt;/svg> This message has not been opened
+&lt;/p></code></pre>
+
+  <h2>Avatars</h2>
+  <p>Avatars help users quickly scan a page. SBA users can be highlighted using a blue background color.</p>
+
+  <div class="sample">
+    <svg class="sba-c-avatar sba-c-avatar--sba-user" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="50"/>
+      <text x="50" y="50" text-anchor="middle" alignment-baseline="central">SA</text>
+    </svg>
+    <svg class="sba-c-avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="50"/>
+      <text x="50" y="50" text-anchor="middle" alignment-baseline="central">AS</text>
+    </svg>
+  </div>
+
+  <pre><code class="language-markup"> &lt;!-- SBA User -->
+&lt;div class="sample">
+  &lt;svg class="sba-c-avatar sba-c-avatar--sba-user" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    &lt;circle cx="50" cy="50" r="50"/>
+    &lt;text x="50" y="50" text-anchor="middle" alignment-baseline="central">SA&lt;/text>
+  &lt;/svg>
+
+  &lt;!-- Firm User -->
+  &lt;svg class="sba-c-avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    &lt;circle cx="50" cy="50" r="50"/>
+    &lt;text x="50" y="50" text-anchor="middle" alignment-baseline="central">AS&lt;/text>
+  &lt;/svg>
+&lt;/div></code></pre>
+
+  <h2>Putting everything together</h2>
+
+  <h3>Conversation</h3>
+
+  <ul>
+    <li>The most recent message has a reply button below the last paragraph. It triggers the same action as the reply button in the header</li>
+  </ul>
+
+  <div class="sample">
+
+    <div class="sba-c-thread-header">
+      <div class="sba-c-thread__icon">
+        <svg aria-hidden="true" class="sba-c-icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#comments"></use>
+        </svg>
+      </div>
+      <h2 class="sba-c-thread-header__subject">Hi, I have a question about my application</h2>
+      <div class="sba-c-thread-header__actions">
+        <button class="sba-c-button" type="button">Reply</button>
+      </div>
+    </div>
+    <!-- Maybe work on this later
+    <div class="message-reply">
+      <form action="#">
+        <div class="editor-container">
+          <div id="editor"></div>
+        </div>
+        <input type="checkbox" name="priority_read_receipt" id="priority_read_receipt" value="true">
+        <label for="priority_read_receipt"><span class="translation_missing" title="translation missing: en.messages.new.notify-when-read">Notify When Read</span></label>
+        <div class="message-reply-box-options"><button name="button" type="button" class="usa-button-gray" id="cancel-reply">Cancel</button><input type="submit" name="commit" value="Send Message" data-disable-with="Send Message"></div>
+      </form>
+    </div>
+  -->
+    <ol class="sba-c-thread">
+      <li class="sba-c-thread__item">
+        <div class="sba-c-message">
+          <div class="sba-c-message__header">
+            <div class="sba-c-message__avatar">
+              <svg class="sba-c-avatar sba-c-avatar--sba-user" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="50" cy="50" r="50"/>
+                <text x="50" y="50" text-anchor="middle" alignment-baseline="central">BS</text>
+              </svg>
+            </div>
+            <div class="sba-c-message__participants">
+              <h3 class="sba-c-message__sender">Bill Simpson</h3>
+              <div class="sba-c-message__recipient">To: Allen Hayes</div>
+            </div>
+            <div class="sba-c-message__timestamp">
+              <p>June 15, 2018</p>
+            </div>
+          </div>
+          <div class="sba-c-message__body">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <ul>
+               <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+               <li>Aliquam tincidunt mauris eu risus.</li>
+               <li>Vestibulum auctor dapibus neque.</li>
+            </ul>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+          <p class="sba-u-margin-top--7"><a href="">Reply to this message</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="sba-c-thread__item">
+        <div class="sba-c-message">
+          <div class="sba-c-message__header">
+            <div class="sba-c-message__avatar">
+              <svg class="sba-c-avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="50" cy="50" r="50"/>
+                <text x="50" y="50" text-anchor="middle" alignment-baseline="central">AH</text>
+              </svg>
+            </div>
+            <div class="sba-c-message__participants">
+              <h3 class="sba-c-message__sender">Allen Hayes</h3>
+              <div class="sba-c-message__recipient">To: Bill Simpson</div>
+            </div>
+            <div class="sba-c-message__timestamp">
+              <p>June 10, 2018</p>
+            </div>
+          </div>
+          <div class="sba-c-message__body">
+            <p>Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. </p>
+
+            <p class="sba-c-message__read-status">
+              <svg aria-hidden="true" class="sba-c-icon sba-u-margin-right--1">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#envelope-open"></use>
+              </svg> This message was opened on Sept. 15 2017 at 11:30am
+            </p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <h3>Official letter</h3>
+
+  <div class="sample">
+    <div class="sba-c-thread-header">
+      <div class="sba-c-thread__icon">
+        <img src="{{site.baseurl}}/assets/img/sba_round_logo.png" alt="">
+      </div>
+      <h2 class="sba-c-thread-header__subject">Decision Letter</h2>
+      <div class="sba-c-thread-header__actions">
+        <p>Replies are disabled on this message</p>
+      </div>
+    </div>
+
+    <ol class="sba-c-thread">
+      <li class="sba-c-thread__item">
+        <div class="sba-c-message">
+          <div class="sba-c-message__header">
+            <div class="sba-c-message__avatar">
+              <svg class="sba-c-avatar sba-c-avatar--sba-user" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="50" cy="50" r="50"/>
+                <text x="50" y="50" text-anchor="middle" alignment-baseline="central">BS</text>
+              </svg>
+            </div>
+            <div class="sba-c-message__participants">
+              <h3 class="sba-c-message__sender">Bill Simpson</h3>
+              <div class="sba-c-message__recipient">To: Allen Hayes</div>
+            </div>
+            <div class="sba-c-message__timestamp">
+              <p>June 15, 2018</p>
+            </div>
+          </div>
+          <div class="sba-c-message__body">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <ul>
+               <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+               <li>Aliquam tincidunt mauris eu risus.</li>
+               <li>Vestibulum auctor dapibus neque.</li>
+            </ul>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+            <p class="sba-u-color--muted sba-u-margin-top--3">If you have a question about this notice, please contact your Business Opportunity Specialist.</p>
+
+          </div>
+        </div>
+      </li>
+    </ol>
+
+  </div>
+</article>
+
+<script>
+  var quill = new Quill('#editor', {
+    placeholder: 'Write your reply here',
+    theme: 'snow'
+  });
+</script>
