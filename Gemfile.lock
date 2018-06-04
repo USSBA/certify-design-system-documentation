@@ -1,6 +1,7 @@
 GIT
   remote: git@github.com:USSBA/certify_design_system_gem.git
-  revision: 60724eb891fb634cd5b30b95833e81c5c24ce637
+  revision: 599c6aa3ee4e56ae157bf9657da5cc382b0447a0
+  branch: doc-list-item
   specs:
     certify_design_system (1.9.0)
       bourbon (~> 4.3, <= 5)
@@ -127,7 +128,7 @@ DEPENDENCIES
   minima (~> 2.0)
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.4.3p205
 
 BUNDLED WITH
    1.16.2
