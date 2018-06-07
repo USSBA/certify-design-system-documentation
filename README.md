@@ -14,5 +14,5 @@ bundle exec jekyll s
 ## To Deploy
 Run the following script
 ```
-./update_jekyll.sh
+bundle exec cds-gh-pages
 ```
