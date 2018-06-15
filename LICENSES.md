@@ -6,25 +6,21 @@ The Merriweather font files are from [Google Web Fonts](https://fonts.google.com
 
 The Source Sans Pro font files are from [Google Web Fonts](https://fonts.google.com/specimen/Source+Sans+Pro), licensed under the [Open Font License](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web).
 
-### Licensed Under BSD 3-Clause "New" or "Revised" License
-The Quill JavaScript is from [Quill](https://quilljs.com/), licensed under [Under BSD 3-Clause "New" or "Revised" License](https://github.com/quilljs/quill/blob/develop/LICENSE).
+### Licencsed Under Creative Commons 
 
-### Licensed under MIT License
-The jQuery is from [jQuery](https://plugins.jquery.com/), licensed under [MIT License](https://github.com/jquery/jquery/blob/master/LICENSE.txt).
+The SVG Sprite Icons are from [Font Awesome (version 5)](https://fontawesome.com/), license under the [Creative Commons: Attribution v4.0](https://creativecommons.org/licenses/by/4.0/).
 
-The Prism JavaScript is from [Prism](https://prismjs.com/), licensed under [MIT License](https://github.com/PrismJS/prism/blob/master/LICENSE).
+### Public Domain Under Creative Commons Zero
 
-Jekyll is from [Jekyll](https://jekyllrb.com/), licensed under [MIT License](https://github.com/jekyll/jekyll/blob/master/LICENSE).
-
-### Other files
-
-Files listed in the `Gemfile` and `gemspec` files and installed via bundler are externally maintained libraries used by this software which have their own licenses; we recommend you read them, as their terms may differ from the terms listed here.
+The [svg4everybody](https://github.com/jonathantneal/svg4everybody) is public domain under creative commons's public doman zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). Here is a [human readable summary](https://creativecommons.org/publicdomain/zero/1.0/). 
 
 ## The rest of this project is in the worldwide public domain
 
 This project is in the public domain within the United States.
 
 Additionally, we waive copyright and related rights in the work worldwide through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+
+This does not include external sources which have different licenses. 
 
 ### CC0 1.0 Universal Summary
 
@@ -44,6 +40,23 @@ Unless expressly stated otherwise, the person who associated a work with this de
 
 ### Contributions to this project
 
-Contributions to Jekyll will be covered by the MIT license.
+Contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
 
-All other contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
+
+### External Sources
+
+This project uses external sources that have different licenses. 
+One should refer to those repositories for the approriate licenses.
+
+1. [Certify Design System Gem](https://github.com/USSBA/certify_design_system_gem/blob/master/LICENSES.md) includes:
+1. [JQuery](https://github.com/jquery/jquery)
+3. [JQueryUI](https://github.com/jquery/jquery-ui)
+4. [Quill](https://github.com/quilljs/quill/blob/develop/LICENSE)
+5. [Prism](https://github.com/PrismJS/prism) 
+6. [Bourbon](https://github.com/thoughtbot/bourbon/) 
+7. [SaSS](https://github.com/sass/sass)
+8. Open Fonts (Merriweather and SourceSansPro)
+9. [Font Awesome](https://fontawesome.com) (SVG sprites)
+
+
+  
