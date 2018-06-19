@@ -36,7 +36,7 @@ Please refer to the [Licenses file](LICENSES.md).
 
 Please refer to the project wiki for contributing information.
 
-We strive for a welcoming and inclusive environment for {{repo}} project.
+We strive for a welcoming and inclusive environment for the certify design system documentation project.
 Please follow this guidelines in all interactions:
 1. Be Respectful: use welcoming and inclusive language.
 2. Assume best intentions: seek to understand other's opinions.
