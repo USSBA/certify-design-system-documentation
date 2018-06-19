@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:USSBA/certify_design_system_gem.git
-  revision: 281a5e8ddc73d7d4d8367be0941be4088000bbf6
+  revision: 4b7adf9a8fa4cf580fa4481d1f7d0d9ec9d94a80
   branch: calendar
   specs:
     certify_design_system (1.11.0)
