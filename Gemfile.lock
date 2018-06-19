@@ -1,8 +1,7 @@
-GIT
-  remote: git@github.com:USSBA/certify_design_system_gem.git
-  revision: b032d09e22c2e37dff564e18310aedf9a188034b
+PATH
+  remote: ../certify_design_system_gem
   specs:
-    certify_design_system (1.10.2)
+    certify_design_system (1.11.0)
       bourbon (~> 4.3, <= 5)
       sass (~> 3.5)
 
@@ -90,7 +89,7 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     minitest (5.11.3)
-    nokogiri (1.8.2)
+    nokogiri (1.8.3)
       mini_portile2 (~> 2.3.0)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
@@ -127,7 +126,7 @@ DEPENDENCIES
   minima (~> 2.0)
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.4.3p205
 
 BUNDLED WITH
    1.16.2
