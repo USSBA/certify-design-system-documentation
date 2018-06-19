@@ -6,13 +6,21 @@ The Merriweather font files are from [Google Web Fonts](https://fonts.google.com
 
 The Source Sans Pro font files are from [Google Web Fonts](https://fonts.google.com/specimen/Source+Sans+Pro), licensed under the [Open Font License](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web).
 
-### Licencsed Under Creative Commons 
+### Licensed Under Creative Commons 
 
 The SVG Sprite Icons are from [Font Awesome (version 5)](https://fontawesome.com/), license under the [Creative Commons: Attribution v4.0](https://creativecommons.org/licenses/by/4.0/).
 
+### Licensed Under BSD3
+[Quill JS](https://github.com/quilljs/quill) is licensed under the [BSD3](https://github.com/quilljs/quill/blob/develop/LICENSE) license.
+
+### Licensed under MIT
+[Bourbon](https://github.com/thoughtbot/bourbon/), [JQuery](https://github.com/jquery/jquery), [Prism](https://github.com/PrismJS/prism)  and [SaSS](https://github.com/sass/sass) libraries are all licensed under the [MIT](https://opensource.org/licenses/MIT) license. 
+
 ### Public Domain Under Creative Commons Zero
 
-The [svg4everybody](https://github.com/jonathantneal/svg4everybody) is public domain under creative commons's public doman zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). Here is a [human readable summary](https://creativecommons.org/publicdomain/zero/1.0/). 
+The [svg4everybody](https://github.com/jonathantneal/svg4everybody) is public domain under creative commons's public domain zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). Here is a [human readable summary](https://creativecommons.org/publicdomain/zero/1.0/). 
+
+The [JQueryUI](https://github.com/jquery/jquery-ui) is licenced under creative commons's public domain zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). 
 
 ## The rest of this project is in the worldwide public domain
 
@@ -20,7 +28,7 @@ This project is in the public domain within the United States.
 
 Additionally, we waive copyright and related rights in the work worldwide through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 
-This does not include external sources which have different licenses. 
+This does not include external sources which have different licenses nor images which are covered by their respective licenses and copyrights. 
 
 ### CC0 1.0 Universal Summary
 
@@ -48,7 +56,7 @@ Contributions to this project will be released under the CC0 dedication. By subm
 This project uses external sources that have different licenses. 
 One should refer to those repositories for the approriate licenses.
 
-1. [Certify Design System Gem](https://github.com/USSBA/certify_design_system_gem/blob/master/LICENSES.md) includes:
+1. [Certify Design System Gem](https://github.com/USSBA/certify_design_system_gem/blob/master/LICENSES.md)
 1. [JQuery](https://github.com/jquery/jquery)
 3. [JQueryUI](https://github.com/jquery/jquery-ui)
 4. [Quill](https://github.com/quilljs/quill/blob/develop/LICENSE)
@@ -57,6 +65,7 @@ One should refer to those repositories for the approriate licenses.
 7. [SaSS](https://github.com/sass/sass)
 8. Open Fonts (Merriweather and SourceSansPro)
 9. [Font Awesome](https://fontawesome.com) (SVG sprites)
+10. [USWDS, US Web Design System](https://github.com/uswds/uswds)
 
 
   
