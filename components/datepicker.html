@@ -12,6 +12,45 @@ title: Datepicker
 
   <p>Date picker is a way to pick dates</p>
 
+  <h2>Calendar picker <div class="sba-c-badge sba-c-badge--warn">Draft</div></h2>
+
+  <div class="sba-c-alert">
+    <div class="sba-c-alert__icon">
+      <svg aria-hidden="true" class="sba-c-icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#info-circle"></use>
+      </svg>
+    </div>
+    <div class="sba-c-alert__body">
+      <h3 class="sba-c-alert__heading">Dependency</h3>
+      <p class="sba-c-alert__text">This component requires <a href="https://jqueryui.com/">jQuery UI</a>. Cerify.sba.gov uses version 1.11.4</p>
+    </div>
+  </div>
+
+  <p>Calendar picker allows user to select a date from calendar view or enter a date with text. </p>
+
+  <div class="sample">
+    <label for="date_input" class="sba-c-label sba-u-margin-top--0">Enter a date</label>
+    <p class="sba-c-form-hint" id="date_input_hint">For example, MM/DD/YYYY</p>
+    <input type="number" id="date_input" class="sba-c-input js-calendar-picker js-format-as-date" aria-describedby="date_input_hint"/>
+  </div>
+
+  <pre><code class="language-markup">&lt;label for="date_input" class="sba-c-label sba-u-margin-top--0">Enter a date&lt;/label>
+&lt;p class="sba-c-form-hint" id="date_input_hint">For example, MM/DD/YYYY&lt;/p>
+&lt;input type="number" id="date_input" class="sba-c-input js-calendar-picker js-format-as-date" aria-describedby="date_input_hint" /> </code></pre>
+
+  <h2>Guidance</h2>
+
+  <ul>
+    <li>Calendar picker calendar is built with jQuery UI</li>
+    <li>The class name <code>js-calendar-picker</code> is used to create the calendar picker</li>
+    <li>Adding <code>js-format-as-date</code> class name formats date properly as user types. Also prevents user from entering invalid date</li>
+    <li>Calendar pickers should be used for all date fields</li>
+  </ul>
+
+  <h2>Text only date pickers and HTM5 native field</h2>
+
+  <p>These items will be deprecated once the calendar picker has been accepted.f</p>
+
   <div class="sample">
     <form action="">
       <label for="date_input" class="sba-c-label sba-u-margin-top--0">Enter a date</label>
@@ -29,7 +68,7 @@ title: Datepicker
   <p>The date input does not have a wide range of <a href="https://caniuse.com/#search=date" target="_blank">browser support</a>. For browsers that do not support the <code>date</code> input, the fallback is a <code>text</code> field that is recieves formatting as the user types.</p>
   <ul>
     <li>You must use a form hint with an <code>id</code>. The form input must use an <code>aria-describedby</code> attribute to refer back to the hint's <code>id</code>. This provides context in an accessible way as a fallback to browsers that do not support <code>date</code> inputs.</li>
-    <li>The <code>patter</code> attribute provides client-side validation. However, you must <strong>always</strong> use server-side validation.</li>
+    <li>The <code>pattern</code> attribute provides client-side validation. However, you must <strong>always</strong> use server-side validation.</li>
     <li>Do not use the <code>input-width</code> utility on <code>&lt;input type="date"></code> because the spinner and calendar dropdown cuts off the date in Chrome.</li>
     <li>Avoid using <code>min</code> and <code>max</code> attributes on the date picker, as <a href="http://html5doctor.com/the-woes-of-date-input/" target="_blank">some browsers have difficulty interpreting them</a> on <code>date</code> inputs. If you need code>min</code> and <code>max</code> attributes, see the example below.</li>
   </ul>
