@@ -5,6 +5,10 @@
 {% asset svg-sprite/sprite.svg %}
 {% asset arrow-down.png %}
 {% asset arrow-down.svg %}
+{% asset arrow-left.png %}
+{% asset arrow-left.svg %}
+{% asset arrow-right.png %}
+{% asset arrow-right.svg %}
 
 {% asset ui-bg_flat_0_aaaaaa_40x100.png %}
 {% asset ui-bg_flat_75_ffffff_40x100.png %}
