@@ -29,7 +29,17 @@ bundle exec cds-gh-pages
 
 The certify-design-system gem provides this script. 
 
+## License
+Please refer to the [Licenses file](LICENSES.md). 
 
+## Contributing 
 
+Please refer to the project wiki for contributing information.
 
+We strive for a welcoming and inclusive environment for {{repo}} project.
+Please follow this guidelines in all interactions:
+1. Be Respectful: use welcoming and inclusive language.
+2. Assume best intentions: seek to understand other's opinions.
+All contributions are subject to the license and in no way imply compensation for contributions.
 
+<sub>The agency reserves the right to change this policy at any time.</sub>
