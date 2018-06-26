@@ -1,0 +1,76 @@
+---
+layout: styleguide
+main_section: components
+sub_section: tooltips
+title: Tooltips
+---
+
+<article>
+  <h1>Tooltips</h1>
+
+  <p>Tooltips provide brief contextual descriptions when the user hovers over an element.</p>
+
+  <div class="sample">
+    <!-- Button example -->
+    <button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-u-color--error-dark " type="submit" data-tooltip-text="Remove item">
+      <svg aria-hidden="true" class="sba-c-icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#trash">
+    </button>
+    <!-- Link example -->
+    <a href="javascript:void()" data-tooltip-text="Next">
+      <svg aria-hidden="true" class="sba-c-icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#arrow-alt-circle-right"></use>
+      </svg>
+    </a>
+    <!-- Text link-->
+    <span data-tooltip-text="Eligible: Jane Smith (BOS)">
+      <svg aria-hidden="true" class="sba-c-icon sba-c-icon--green">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle"></use>
+      </svg>
+    </span>
+  </div>
+
+  <pre><code class="language-markup">&lt;!-- Button example -->
+&lt;button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-u-color--error-dark " type="submit" data-tooltip-text="Remove item">
+  &lt;svg aria-hidden="true" class="sba-c-icon">
+    &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#trash">
+&lt;/button>
+&lt;!-- Link example -->
+&lt;a href="javascript:void()" data-tooltip-text="Next">
+  &lt;svg aria-hidden="true" class="sba-c-icon">
+    &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#arrow-alt-circle-right">&lt;/use>
+  &lt;/svg>
+&lt;/a>
+&lt;!-- Text link-->
+&lt;span data-tooltip-text="Eligible: Jane Smith (BOS)">
+  &lt;svg aria-hidden="true" class="sba-c-icon sba-c-icon--green">
+    &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle">&lt;/use>
+  &lt;/svg>
+&lt;/span></code></pre>
+
+
+
+  <h2>How it works</h2>
+  <ul>
+    <li>Adding the attribute <code>data-tooltip-text</code> to an element will create the tooltip</li>
+    <li>When the tooltip is created, the button will be wrapped in a <code>&lt;span></code>. Be aware of this just in case this appears in `flexbox` container.</li>
+  </ul>
+
+  <h2>Guidance</h2>
+  <ul>
+    <li>Label text should be brief, maximum of five words</li>
+    <li>Should always be used for icon-only buttons</li>
+  </ul>
+
+  <h2>Accessibility</h2>
+  <ul>
+    <li>Accessibility features, such are <code>aria</code> attributes are generated with javascript.</li>
+    <li>When using tooltips, avoid using <code>title</code> attributes.</li>
+  </ul>
+
+  <h2>When to consider something else</h2>
+  <ul>
+    <li>Consider making the text visible on the page or using an accordion if text is longer than five words.</li>
+  </ul>
+
+</article>
