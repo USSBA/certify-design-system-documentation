@@ -1,5 +1,7 @@
-PATH
-  remote: ../certify_design_system_gem
+GIT
+  remote: git@github.com:USSBA/certify_design_system_gem.git
+  revision: e88667ecb3bf0af589d4fc5f52c667cc44537e1e
+  branch: master
   specs:
     certify_design_system (1.13.0)
       bourbon (~> 4.3, <= 5)
