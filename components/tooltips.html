@@ -8,11 +8,15 @@ title: Tooltips
 <article>
   <h1>Tooltips</h1>
 
+  <p>
+  <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_tooltips.scss">CSS file</a> | <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/tooltips.js">JS file</a>
+  </p>
+
   <p>Tooltips provide brief contextual descriptions when the user hovers over an element.</p>
 
   <div class="sample">
     <!-- Button example -->
-    <button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-u-color--error-dark " type="submit" data-tooltip-text="Remove item">
+    <button class="sba-c-button sba-c-button--icon-only sba-c-button--transparent sba-u-color--error-dark " type="button" data-tooltip-text="Remove item">
       <svg aria-hidden="true" class="sba-c-icon">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#trash">
     </button>
@@ -31,7 +35,7 @@ title: Tooltips
   </div>
 
   <pre><code class="language-markup">&lt;!-- Button example -->
-&lt;button class="sba-c-button sba-c-button--small sba-c-button--transparent sba-u-color--error-dark " type="submit" data-tooltip-text="Remove item">
+&lt;button class="sba-c-button sba-c-button--icon-only sba-c-button--transparent sba-u-color--error-dark " type="button" data-tooltip-text="Remove item">
   &lt;svg aria-hidden="true" class="sba-c-icon">
     &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#trash">
 &lt;/button>
