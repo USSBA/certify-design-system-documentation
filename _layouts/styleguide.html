@@ -137,6 +137,24 @@
             </li>
 
             <li>
+              <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "patterns" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "patterns" %}false
+              {% else %}true{% endif %}" aria-controls="sublist_patterns">
+                Patterns
+                <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#angle-down"></use>
+                </svg>
+                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#angle-up"></use>
+                </svg>
+              </button>
+              <ul class="usa-sidenav-sub_list" id="sublist_patterns">
+                <li>
+                  <a class="{% if page.sub_section contains "recommendations" %} usa-current {% endif %}" href="{{ site.baseurl }}/patterns/recommendations.html">Recommendations / Determinations</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
               <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "utilities" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "utilities" %}false
               {% else %}true{% endif %}" aria-controls="sublist_utilities">
                 Utilities

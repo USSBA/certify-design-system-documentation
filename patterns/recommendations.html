@@ -1,0 +1,301 @@
+---
+layout: styleguide
+main_section: patterns
+sub_section: recommendations
+title: Recommendations and Determinations
+---
+
+<articles>
+  <h1>Recommendations and Determinations</h1>
+
+  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_lists.scss">CSS file</a></p>
+  <p>Lsts of recommendations/determinations made by analysts on a particular case.</p>
+
+  <h2>Full Recommendation Lists</h2>
+  <div class="sample">
+    <h5 class="sba-c-recommendation-list-header">Reconsideration submitted 08/19/2018</h5>
+    <ol class="sba-c-recommendation-list">
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--final-positive">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Determined eligible</div>
+          <div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/25/2018</div>
+        </div>
+      </li>
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--positive">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Recommended eligible</div>
+          <div class="sba-c-recommendation-list__data">John Doe (Role) on 09/20/2018</div>
+        </div>
+      </li>
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--positive">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Recommended eligible</div>
+          <div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/18/2018</div>
+        </div>
+      </li>
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--positive">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Recommended eligible</div>
+          <div class="sba-c-recommendation-list__data">John Doe (Role) on 09/12/2018</div>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <pre><code class="language-markup">&lt;h5 class="sba-c-recommendation-list-header">Reconsideration submitted 08/19/2018&lt;/h5>
+&lt;ol class="sba-c-recommendation-list">
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--final-positive">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Determined eligible&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/25/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--positive">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Recommended eligible&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">John Doe (Role) on 09/20/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--positive">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Recommended eligible&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/18/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--positive">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Recommended eligible&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">John Doe (Role) on 09/12/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+&lt;/ol></code></pre>
+
+  <h3>Guidance</h3>
+  <ul>
+    <li>Include date for reconsiderations</li>
+    <li>Recommendations will have a lighter background</li>
+    <li>Determinations will have a solid background</li>
+  </ul>
+
+  <h3>Positive actions</h3>
+  <p>Positive actions apply to any action that accepts or retains a firm into a program.</p>
+
+  <div class="sample">
+    <ol class="sba-c-recommendation-list">
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--final-positive">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Determined eligible</div>
+          <div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/25/2018</div>
+        </div>
+      </li>
+    </ol>
+
+    <ol class="sba-c-recommendation-list">
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--positive">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Recommended retained</div>
+          <div class="sba-c-recommendation-list__data">John Doe (Role) on 09/20/2018</div>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <pre><code class="language-markup">&lt;ol class="sba-c-recommendation-list">
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--final-positive">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Determined eligible&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/25/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+&lt;/ol>
+
+&lt;ol class="sba-c-recommendation-list">
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--positive">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#check-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Recommended retained&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">John Doe (Role) on 09/20/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+&lt;/ol></code></pre>
+
+  <h3>Warning actions</h3>
+  <p>To be used for suspensions or any negative actions that would not remove a firm from a program</p>
+  <div class="sample">
+    <ol class="sba-c-recommendation-list">
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--final-warn">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#exclamation-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Determined suspended</div>
+          <div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/25/2018</div>
+        </div>
+      </li>
+    </ol>
+
+    <ol class="sba-c-recommendation-list">
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--warn">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#exclamation-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Recommended for suspension</div>
+          <div class="sba-c-recommendation-list__data">John Doe (Role) on 09/20/2018</div>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <pre><code class="language-markup">&lt;ol class="sba-c-recommendation-list">
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--final-warn">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#exclamation-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Determined suspended&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/25/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+&lt;/ol>
+
+&lt;ol class="sba-c-recommendation-list">
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--warn">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#exclamation-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Recommended for suspension&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">John Doe (Role) on 09/20/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+&lt;/ol></code></pre>
+
+  <h3>Negative actions</h3>
+  <p>To be used on any action that would remove a firm from a program</p>
+
+  <div class="sample">
+    <ol class="sba-c-recommendation-list">
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--final-negative">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#times-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Determined voluntary withdrawal</div>
+          <div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/25/2018</div>
+        </div>
+      </li>
+    </ol>
+
+    <ol class="sba-c-recommendation-list">
+      <li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--negative">
+        <div class="sba-c-recommendation-list__icon">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#times-circle"></use>
+          </svg>
+        </div>
+        <div class="sba-c-recommendation-list__content">
+          <div class="sba-c-recommendation-list__recommendation">Recommended for early graduation</div>
+          <div class="sba-c-recommendation-list__data">John Doe (Role) on 09/20/2018</div>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <pre><code class="language-markup">&lt;ol class="sba-c-recommendation-list">
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--final-negative">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#times-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Determined voluntary withdrawal&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">Jane Doe (Role) on 09/25/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+&lt;/ol>
+
+&lt;ol class="sba-c-recommendation-list">
+  &lt;li class="sba-c-recommendation-list__item sba-c-recommendation-list__item--negative">
+    &lt;div class="sba-c-recommendation-list__icon">
+      &lt;svg aria-hidden="true" class="sba-c-icon">
+        &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#times-circle">&lt;/use>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="sba-c-recommendation-list__content">
+      &lt;div class="sba-c-recommendation-list__recommendation">Recommended for early graduation&lt;/div>
+      &lt;div class="sba-c-recommendation-list__data">John Doe (Role) on 09/20/2018&lt;/div>
+    &lt;/div>
+  &lt;/li>
+&lt;/ol></code></pre>
+</articles>
