@@ -24,5 +24,5 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem 'jekyll-assets'
    # gem 'certify_design_system', path: '../certify_design_system_gem'
-   gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git', branch: 'master'
+   gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git', branch: 'card-update'
 end
