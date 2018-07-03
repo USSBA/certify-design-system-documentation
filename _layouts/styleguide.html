@@ -92,9 +92,6 @@
                   <a class="{% if page.sub_section contains "doc_upload" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/document-upload.html">Document upload</a>
                 </li>
                 <li>
-                  <a class="{% if page.sub_section contains "doc_card" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/document-card.html">Document card</a>
-                </li>
-                <li>
                   <a class="{% if page.sub_section contains "editable_table" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/editable-tables.html">Editable tables</a>
                 </li>
                 <li>
@@ -148,6 +145,9 @@
                 </svg>
               </button>
               <ul class="usa-sidenav-sub_list" id="sublist_patterns">
+                <li>
+                  <a class="{% if page.sub_section contains "card_patterns" %} usa-current {% endif %}" href="{{ site.baseurl }}/patterns/card-patterns.html">Card Patterns</a>
+                </li>
                 <li>
                   <a class="{% if page.sub_section contains "recommendations" %} usa-current {% endif %}" href="{{ site.baseurl }}/patterns/recommendations.html">Recommendations / Determinations</a>
                 </li>
