@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:USSBA/certify_design_system_gem.git
-  revision: de12bbe53986b981e5a028c35de3b6fb6921f00c
+  revision: ca415eac363c154937d3cba2acf9c334f5a6b96c
   branch: card-update
   specs:
     certify_design_system (1.13.2)
