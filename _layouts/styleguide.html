@@ -17,12 +17,8 @@
             </a>
           </div>
         </div>
-
       </div>
     </header>
-
-
-
 
     <div class="sba-l-container sba-l-container--fullbleed sba-u-padding-bottom--7">
       <div class="sba-l-row">
@@ -43,15 +39,13 @@
                 </svg>
               </button>
               <ul class="usa-sidenav-sub_list" id="sublist_layout">
-                <li>
-                  <a class="{% if page.sub_section contains "grid" %} usa-current {% endif %}" href="{{ site.baseurl }}/layout/grid.html">Grid</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "pages" %} usa-current {% endif %}" href="{{ site.baseurl }}/layout/page-templates.html">Page templates</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "spacing" %} usa-current {% endif %}" href="{{ site.baseurl }}/layout/spacing.html">Spacing</a>
-                </li>
+                {% for p in site.layout  %}
+                  {% if p.layout == 'styleguide' %}
+                  <li>
+                      <a class="{% if p.url == page.url %} usa-current {% endif %}" href="{{ site.baseurl }}/{{ p.path | remove: '_' }}">{{p.title}}</a>
+                  </li>
+                  {% endif %}
+                {% endfor %}
               </ul>
             </li>
             <li>
@@ -66,66 +60,13 @@
                 </svg>
               </button>
               <ul class="usa-sidenav-sub_list" id="sublist_components">
-                <li>
-                  <a class="{% if page.sub_section contains "alerts" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/alerts.html">Alerts</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "badges" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/badges.html">Badges</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "breadcrumbs" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/breadcrumbs.html">Breadcrumbs</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "buttons" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/buttons.html">Buttons</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "combobox" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/combobox.html">Combo box</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "datepicker" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/datepicker.html">Datepicker</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "doc_upload" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/document-upload.html">Document upload</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "editable_table" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/editable-tables.html">Editable tables</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "faceting" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/faceting.html">Faceting</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "forms" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/forms.html">Forms</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "guidances" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/guidances.html">Guidances</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "icons" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/icons.html">Icons</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "lists" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/lists.html">Lists</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "messages" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/messages.html">Messages</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "questionnaire" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/questionnaire.html">Questionnaire</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "pagination" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/pagination.html">Pagination</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "spinners" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/spinners.html">Spinners</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "tables" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/tables.html">Tables</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "task_panels" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/task-panels.html">Task Panels</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "tooltips" %} usa-current {% endif %}" href="{{ site.baseurl }}/components/tooltips.html">Tooltips</a>
-                </li>
+                {% for p in site.components  %}
+                  {% if p.layout == 'styleguide' %}
+                  <li>
+                      <a class="{% if p.url == page.url %} usa-current {% endif %}" href="{{ site.baseurl }}/{{ p.path | remove: '_' }}">{{p.title}}</a>
+                  </li>
+                  {% endif %}
+                {% endfor %}
               </ul>
             </li>
 
@@ -141,12 +82,13 @@
                 </svg>
               </button>
               <ul class="usa-sidenav-sub_list" id="sublist_patterns">
-                <li>
-                  <a class="{% if page.sub_section contains "card_patterns" %} usa-current {% endif %}" href="{{ site.baseurl }}/patterns/card-patterns.html">Card Patterns</a>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "recommendations" %} usa-current {% endif %}" href="{{ site.baseurl }}/patterns/recommendations.html">Recommendations / Determinations</a>
-                </li>
+                {% for p in site.patterns  %}
+                  {% if p.layout == 'styleguide' %}
+                  <li>
+                      <a class="{% if p.url == page.url %} usa-current {% endif %}" href="{{ site.baseurl }}/{{ p.path | remove: '_' }}">{{p.title}}</a>
+                  </li>
+                  {% endif %}
+                {% endfor %}
               </ul>
             </li>
 
@@ -162,45 +104,13 @@
               </svg>
               </button>
                 <ul class="usa-sidenav-sub_list" id="sublist_utilities">
-                  <li>
-                    <a class="{% if page.sub_section contains "borders" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/borders.html">Borders</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "bgcolor" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/background-color.html">Background color</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "color" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/color.html">Color</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "flexbox" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/flexbox.html">Flexbox</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "fontsize" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/font-size.html">Font size</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "fontweight" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/font-weight.html">Font weight</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "inputs" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/inputs.html">Inputs</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "margin" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/margin.html">Margins</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "measure" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/measure.html">Measure</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "padding" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/padding.html">Padding</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "Separators" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/separators.html">Separators</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "text_alignment" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/text-alignment.html">Text alignment</a>
-                  </li>
-                  <li>
-                    <a class="{% if page.sub_section contains "visibility" %} usa-current {% endif %}" href="{{ site.baseurl }}/utilities/visibility.html">Visibility</a>
-                  </li>
+                  {% for p in site.utilities  %}
+                    {% if p.layout == 'styleguide' %}
+                    <li>
+                        <a class="{% if p.url == page.url %} usa-current {% endif %}" href="{{ site.baseurl }}/{{ p.path | remove: '_' }}">{{p.title}}</a>
+                    </li>
+                    {% endif %}
+                  {% endfor %}
                 </ul>
               </li>
               <li>
@@ -215,12 +125,13 @@
                 </svg>
                 </button>
                   <ul class="usa-sidenav-sub_list" id="sublist_transitional">
-                    <li>
-                      <a class="{% if page.sub_section contains "cards" %} usa-current {% endif %}" href="{{ site.baseurl }}/transitional/cards.html">Cards</a>
-                    </li>
-                    <li>
-                      <a class="{% if page.sub_section contains "taskpanel" %} usa-current {% endif %}" href="{{ site.baseurl }}/transitional/taskpanel.html">Task Panels</a>
-                    </li>
+                    {% for p in site.transitional  %}
+                      {% if p.layout == 'styleguide' %}
+                      <li>
+                          <a class="{% if p.url == page.url %} usa-current {% endif %}" href="{{ site.baseurl }}/{{ p.path | remove: '_' }}">{{p.title}}</a>
+                      </li>
+                      {% endif %}
+                    {% endfor %}
                   </ul>
                 </li>
                 <li>

@@ -29,6 +29,19 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+# Collections
+collections:
+  layout:
+    output: true
+  components:
+    output: true
+  patterns:
+    output: true
+  transitional:
+    output: true
+  utilities:
+    output: true
+
 # We specify the directory for Jekyll so we can use @imports.
 sass:
   sass_dir: assets/stylesheets/
