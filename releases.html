@@ -7,150 +7,37 @@ sub_section: release notes
 <article>
   <h1>Release notes</h1>
 
-  <h2>Version 1.14.2</h2>
-  <p>July 26</p>
-  <h3>Changed</h3>
-  <ul>
-    <li>Fixed bug in grid when columns contain minimal content</li>
-  </ul>
 
-  <h2>Version 1.14.0</h2>
-  <p>July 24</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Font-weight utility</li>
-  </ul>
-
-  <h2>Version 1.13.4</h2>
-  <p>July 2</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Modifier for displaying recommendation lists horizontally</li>
-  </ul>
-
-  <h2>Version 1.13.2</h2>
-  <p>July 2</p>
-  <h3>Changed</h3>
-  <ul>
-    <li>Toggling on document cards has been updated with a generic name for better reuse</li>
-  </ul>
-
-  <h2>Version 1.13.1</h2>
-  <p>June 26</p>
-  <h3>Changed</h3>
-  <ul>
-    <li>Provided <code>max-width</code> to the recommendation list patter</li>
-  </ul>
-
-  <h2>Version 1.13.0</h2>
-  <p>June 26</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Icon-only buttons</li>
-  </ul>
-
-  <h2>Version 1.12.0</h2>
-  <p>June 26</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Tooltip component</li>
-  </ul>
-
-  <h2>Version 1.11.0</h2>
-  <p>May 24, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Calendar UI for datepicker</li>
-  </ul>
-
-  <h2>Version 1.9.0</h2>
-  <p>May 24, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Combobox component</li>
-  </ul>
-
-  <h2>Version 1.8.3</h2>
-  <p>May 24, 2018</p>
-  <h3>Changed</h3>
-  <ul>
-    <li>CSS overrides for USWDS accordions when used in faceting menu</li>
-  </ul>
-
-  <h2>Version 1.8.2</h2>
-  <p>May 24, 2018</p>
-  <h3>Changed</h3>
-  <ul>
-    <li>Added clear all facets to the facet pills</li>
-  </ul>
-
-  <h2>Version 1.8.0</h2>
-  <p>May 22, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Messages component</li>
-  </ul>
-
-  <h2>Version 1.6.1</h2>
-  <p>April 26, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Patch for indeterminate class in faceted checkboxes</li>
-  </ul>
-
-  <h2>Version 1.6.0</h2>
-  <p>April 26, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Faceting components</li>
-    <li>Font-size utility</li>
-    <li>Separator utility</li>
-    <li>Text-alignment utility</li>
-  </ul>
-
-  <h2>Version 1.5.0</h2>
-  <p>April 26, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Added document uploader</li>
-  </ul>
-
-  <h2>Version 1.4.0</h2>
-  <p>April 12, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Added <code>flex-direction</code> utility</li>
-  </ul>
-
-  <h2>Version 1.3.0</h2>
-  <p>March 23, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Timelines</li>
-  </ul>
-
-  <h2>Version 1.2.0</h2>
-  <p>March 7, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Checkboxes</li>
-  </ul>
-
-  <h2>Version 1.1.0</h2>
-  <p>February 20, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Guidance component</li>
-  </ul>
-
-  <h2>Version 0.2.2</h2>
-  <p>February 5, 2018</p>
-  <h3>Added</h3>
-  <ul>
-    <li>Release notes page</li>
-  </ul>
-  <h3>Removed</h3>
-  <ul>
-    <li>Fontawesome 5 Pro Icons</li>
-  </ul>
+  {% if site.data.releases.releases[0] %}
+    {% for release in site.data.releases.releases %}
+    <div class="sba-u-border-bottom--1 sba-u-padding-y--3">
+      <h2 class="sba-u-margin--0">Verion {{ release.version }}</h2>
+      <p class="sba-u-margin-top--0 sba-u-color--muted">{{ release.date }}</p>
+      {% if release.additions %}
+        <h3 class="sba-u-margin--0 sba-u-font-size--h4">Added</h3>
+        <ul>
+          {% for note in release.additions %}
+            <li>{{ note.item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if release.changes %}
+        <h3 class="sba-u-margin--0 sba-u-font-size--h4">Changed</h3>
+        <ul>
+          {% for note in release.changes %}
+            <li>{{ note.item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if release.deletions %}
+        <h3 class="sba-u-margin--0 sba-u-font-size--h4">Removed</h3>
+        <ul>
+          {% for note in release.deletions %}
+            <li>{{ note.item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      </div>
+    {% endfor %}
+  {% endif %}
 </article>

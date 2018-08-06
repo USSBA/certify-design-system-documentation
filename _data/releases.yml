@@ -1,0 +1,116 @@
+releases:
+
+  - version: 1.14.3
+    date: July 26, 2018
+    changes:
+      - item: Prevent icons from shinking in small flexbox child
+
+  - version: 1.14.2
+    date: July 26, 2018
+    changes:
+      - item: Fixed bug in grid when columns contain minimal content
+
+  - version: 1.14.1
+    date: July 26, 2018
+    changes:
+      - item: Force grid rows are full width
+
+  - version: 1.14.0
+    date: July 24, 2018
+    additions:
+      - item: Font-weight utility
+
+  - version: 1.13.4
+    date: July 2, 2018
+    additions:
+      - item: Modifier for displaying recommendation lists horizontally
+
+  - version: 1.13.2
+    date: July 2, 2018
+    changes:
+      - item: Toggling on document cards has been updated with a generic name for better reuse
+
+  - version: 1.13.1
+    date: June 26, 2018
+    changes:
+      - item: Provided <code>max-width</code> to the recommendation list pattern
+
+  - version: 1.13.0
+    date: June 26, 2018
+    additions:
+      - item: Icon-only buttons
+
+  - version: 1.12.0
+    date: June 26, 2018
+    additions:
+      - item: Tooltip component
+
+  - version: 1.11.0
+    date: May 24, 2018
+    additions:
+      - item: Calendar UI for datepicker
+
+  - version: 1.9.0
+    date: May 24, 2018
+    additions:
+      - item: Combobox component
+
+  - version: 1.8.3
+    date: May 24, 2018
+    changes:
+      - item: CSS overrides for USWDS accordions when used in faceting menu
+
+  - version: 1.8.2
+    date: May 24, 2018
+    changes:
+      - item: Added clear all facets to the facet pills
+
+  - version: 1.8.0
+    date: May 22, 2018
+    changes:
+      - item: Messages component
+
+  - version: 1.6.1
+    date: April 26, 2018
+    additions:
+      - item: Patch for indeterminate class in faceted checkboxes
+
+  - version: 1.6.0
+    date: April 26, 2018
+    additions:
+      - item: Faceting components
+      - item: Font-size utility
+      - item: Separator utility
+      - item: Text-alignment utility
+
+  - version: 1.5.0
+    date: April 26, 2018
+    additions:
+      - item: Added document uploader
+
+  - version: 1.4.0
+    date: April 12, 2018
+    additions:
+      - item: Added <code>flex-direction</code> utility
+
+  - version: 1.3.0
+    date: March 23, 2018
+    additions:
+      - item: Timeline component
+
+  - version: 1.2.0
+    date: March 7, 2018
+    additions:
+      - item: Checkbox component
+
+  - version: 1.1.0
+    date: February 20, 2018
+    additions:
+      - item: Guidance component
+      
+  - version: 0.2.2
+    date: February 5, 2018
+    additions:
+      - item: Release notes page
+    deletions:
+      - item: Fontawesome 5 Pro Icons
