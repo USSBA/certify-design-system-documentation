@@ -14,7 +14,7 @@ sub_section: release notes
       <h2 class="sba-u-margin--0">Verion {{ release.version }}</h2>
       <p class="sba-u-margin-top--0 sba-u-color--muted">{{ release.date }}</p>
       {% if release.additions %}
-        <h3 class="sba-u-margin--0 sba-u-font-size--h4">Added</h3>
+        <h3 class="sba-u-margin--0 sba-u-font-size--h4 sba-u-color--success">Added</h3>
         <ul>
           {% for note in release.additions %}
             <li>{{ note.item }}</li>
@@ -22,7 +22,7 @@ sub_section: release notes
         </ul>
       {% endif %}
       {% if release.changes %}
-        <h3 class="sba-u-margin--0 sba-u-font-size--h4">Changed</h3>
+        <h3 class="sba-u-margin--0 sba-u-font-size--h4 sba-u-color--muted">Changed</h3>
         <ul>
           {% for note in release.changes %}
             <li>{{ note.item }}</li>
@@ -30,7 +30,7 @@ sub_section: release notes
         </ul>
       {% endif %}
       {% if release.deletions %}
-        <h3 class="sba-u-margin--0 sba-u-font-size--h4">Removed</h3>
+        <h3 class="sba-u-margin--0 sba-u-font-size--h4 sba-u-color--error">Removed</h3>
         <ul>
           {% for note in release.deletions %}
             <li>{{ note.item }}</li>
