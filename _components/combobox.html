@@ -32,7 +32,7 @@ title: Combo box
   <div class="sample">
     <label for="combobox">Select a BOS</label>
     <div class="ui-widget sba-c-combobox">
-      <select id="combobox">
+      <select id="combobox" name="combobox">
         <option value="">Select one...</option>
         <option value="Aaron Rogers">Aaron Rogers</option>
         <option value="Arlene Baker">Arlene Baker</option>
@@ -80,7 +80,7 @@ title: Combo box
 
   <pre><code class="language-markup">&lt;label for="combobox">Select a BOS&lt;/label>
 &lt;div class="ui-widget sba-c-combobox">
-  &lt;select id="combobox">
+  &lt;select id="combobox" name="combobox">
     &lt;option value="">Select one...&lt;/option>
     &lt;option value="Aaron Rogers">Aaron Rogers&lt;/option>
     &lt;option value="Arlene Baker">Arlene Baker&lt;/option>
@@ -120,5 +120,6 @@ title: Combo box
   <ul>
     <li>This componenent is based on the <a href="https://jqueryui.com/autocomplete/#combobox">jQuery UI Autosuggest Combobox</a>. </li>
     <li>Selecting an item from the list triggers <code>change</code> event on the underlying <code>&lt;select></code> box.</li>
+    <li>If the combobox is required, the <code>required</code> attribute will convey if applied to the source <code>&lt;select></code> box.</li>
   </ul>
 </article>

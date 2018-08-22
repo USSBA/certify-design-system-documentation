@@ -1,5 +1,15 @@
 releases:
 
+  - version: 1.14.5
+    date: August 22, 2018
+    changes:
+      - item: Adds <code>required</code> to the combobox compobox component.
+
+  - version: 1.14.4
+    date: August 22, 2018
+    changes:
+      - item: Adds <code>name</code> and <code>id</code> attributes to the combobox compobox component. Combobox component CSS updates.
+
   - version: 1.14.3
     date: July 26, 2018
     changes:
@@ -107,7 +117,7 @@ releases:
     date: February 20, 2018
     additions:
       - item: Guidance component
-      
+
   - version: 0.2.2
     date: February 5, 2018
     additions:
