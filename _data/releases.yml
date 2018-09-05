@@ -1,5 +1,12 @@
 releases:
 
+  - version: 1.15.0
+    date: September 5, 2018
+    additions:
+      - item: Adds masthead component to the design system
+    changes:
+      - item: Creates universal visibility toggle, functions as one-to-one toggle, not one-to-many.
+
   - version: 1.14.5
     date: August 22, 2018
     changes:
