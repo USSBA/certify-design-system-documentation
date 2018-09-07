@@ -11,7 +11,7 @@ sub_section: release notes
   {% if site.data.releases.releases[0] %}
     {% for release in site.data.releases.releases %}
     <div class="sba-u-border-bottom--1 sba-u-padding-y--3">
-      <h2 class="sba-u-margin--0">Verion {{ release.version }}</h2>
+      <h2 class="sba-u-margin--0">Version {{ release.version }}</h2>
       <p class="sba-u-margin-top--0 sba-u-color--muted">{{ release.date }}</p>
       {% if release.additions %}
         <h3 class="sba-u-margin--0 sba-u-font-size--h4 sba-u-color--success">Added</h3>
