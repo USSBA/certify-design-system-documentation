@@ -1,0 +1,114 @@
+---
+layout: styleguide
+main_section: components
+sub_section: tabs
+title: Tabs
+---
+
+<article>
+  <h1>Tabs</h1>
+
+  <p>
+  <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_tabs.scss">CSS file</a> | <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/priority-nav-tabs.js">JS file</a>
+  </p>
+
+  <p>Tabs are UI pattern where content is separated into different sections, where only one section is viewable at a time. They can also be used for navigating between different pages, where all of the page fall under a common high-level heading.</p>
+
+  <div class="sample">
+    <div class="sba-c-tabs-wrapper" role="navigation">
+      <ul class="sba-c-tabs__list">
+        <!-- List items are not closed to avoid spacing issues with inline-block display -->
+        <li class="sba-c-tabs__item">
+          <a class="sba-c-tabs__link  current " href="#">Overview</a>
+        <li class="sba-c-tabs__item">
+          <button class="sba-c-tabs__link sba-js-visibility-trigger " type="button" aria-expanded="false" aria-controls="dropdown-Documents">
+            <span>Documents</span>
+          </button>
+          <ul id="dropdown-Documents" class="sba-c-tabs__submenu" hidden>
+            <li class="sba-c-tabs__submenu__item">
+              <a class="sba-c-tabs__submenu__link" href="#">Firm Documents</a>
+            </li>
+            <li class="sba-c-tabs__submenu__item">
+              <a class="sba-c-tabs__submenu__link" href="#">Analyst Documents</a>
+            </li>
+          </ul>
+        <li class="sba-c-tabs__item">
+          <a class="sba-c-tabs__link " href="#">SBA Notes</a>
+        <li class="sba-c-tabs__item">
+          <a class="sba-c-tabs__link " href="#">Messages</a>
+        <li class="sba-c-tabs__item">
+          <a class="sba-c-tabs__link " href="#">Activity Log</a>
+      </ul>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-tabs-wrapper" role="navigation">
+  &lt;ul class="sba-c-tabs__list">
+    &lt;!-- List items are not closed to avoid spacing issues with inline-block display -->
+    &lt;li class="sba-c-tabs__item">
+      &lt;a class="sba-c-tabs__link  current " href="#">Overview&lt;/a>
+    &lt;li class="sba-c-tabs__item">
+      &lt;button class="sba-c-tabs__link sba-js-visibility-trigger " type="button" aria-expanded="false" aria-controls="dropdown-Documents">
+        &lt;span>Documents&lt;/span>
+      &lt;/button>
+      &lt;ul id="dropdown-Documents" class="sba-c-tabs__submenu" hidden>
+        &lt;li class="sba-c-tabs__submenu__item">
+          &lt;a class="sba-c-tabs__submenu__link" href="#">Firm Documents&lt;/a>
+        &lt;/li>
+        &lt;li class="sba-c-tabs__submenu__item">
+          &lt;a class="sba-c-tabs__submenu__link" href="#">Analyst Documents&lt;/a>
+        &lt;/li>
+      &lt;/ul>
+    &lt;li class="sba-c-tabs__item">
+      &lt;a class="sba-c-tabs__link " href="#">SBA Notes&lt;/a>
+    &lt;li class="sba-c-tabs__item">
+      &lt;a class="sba-c-tabs__link " href="#">Messages&lt;/a>
+    &lt;li class="sba-c-tabs__item">
+      &lt;a class="sba-c-tabs__link " href="#">Activity Log&lt;/a>
+  &lt;/ul>
+&lt;/div></code></pre>
+
+  <h2>Guidance</h2>
+
+  <ul>
+    <li>The current tab is highlighted with a class name of <code>current</code> on the tab’s link, or, if there is a submenu, a button. Both would have a <code>sba-c-tabs__link</code> class name.</li>
+    <li>Tabs can appear against any background color</li>
+  </ul>
+
+  <h2>Tabs with a Priority+ navigation pattern</h2>
+
+  <p>The [Priority+ pattern](https://css-tricks.com/the-priority-navigation-pattern/) will show as many horizontal navigation items as will fit in view and hiding the rest behind a "more" button rather than hiding the entire menu. This pattern can, and should most likely be used on any set of tabs.</p>
+
+  <p>Use the example below to see the Priority+ pattern in action.</p>
+
+  <div class="sg-responsive-preview">
+    <div class="sg-responsive-preview__size-buttons">
+      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
+        XS
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
+        SM
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
+        MD
+      </button>
+      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
+        LG
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
+        XL
+      </button>
+    </div>
+    <div class="iframe__preview">
+      <iframe title="Pagination example" class="responsive-iframe" src="examples/tabs.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="150"></iframe>
+    </div>
+  </div>
+
+  <p>To activate the Priority+ patter to a tabset:</p>
+
+  <ul>
+    <li>Add the class name <code>sba-js-priority-nav-tabs</code> to the wrapper <code>sba-c-tabs-wrapper</code></li>
+  </ul>
+
+  <p>The Priority+ JavaScript uses <a href="http://gijsroge.github.io/priority-nav.js/">PriorityNav.js</a>, which is included in the Certify Design System gem.</p>
+</article>
