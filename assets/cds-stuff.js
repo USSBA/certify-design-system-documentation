@@ -9,6 +9,14 @@
 {% asset arrow-left.svg %}
 {% asset arrow-right.png %}
 {% asset arrow-right.svg %}
+{% asset angle-arrow-down.png %}
+{% asset angle-arrow-down.svg %}
+{% asset angle-arrow-down-hover.png %}
+{% asset angle-arrow-down-hover.svg %}
+{% asset plus-alt.png %}
+{% asset plus-alt.svg %}
+{% asset minus-alt.png %}
+{% asset minus-alt.svg %}
 
 {% asset ui-bg_flat_0_aaaaaa_40x100.png %}
 {% asset ui-bg_flat_75_ffffff_40x100.png %}
