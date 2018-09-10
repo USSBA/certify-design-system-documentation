@@ -1,5 +1,10 @@
 releases:
 
+  - version: 1.15.1
+    date: September 10, 2018
+    changes:
+      - item: Fixes extra spacing issue in masthead primary heading link when followed by l2 heading
+
   - version: 1.15.0
     date: September 5, 2018
     additions:
