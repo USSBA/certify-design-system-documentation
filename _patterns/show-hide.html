@@ -1,0 +1,48 @@
+---
+layout: styleguide
+main_section: patterns
+sub_section: show-hide
+title: Show/Hide content
+---
+
+<article>
+  <h1>Show/Hide Content</h1>
+
+  <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/toggle-visibility.js">JS file</a>
+  </p>
+  <p>This interaction allows user to toggle hidden on the page. It uses a <strong>one-to-one</strong> relationship to the toggle button and the content, meaning it does not currently support toggling multiple panes of content at the same time.</p>
+
+  <div class="sample">
+    <button type="button" aria-controls="the_content" aria-expanded="false" class="sba-c-button sba-js-visibility-trigger">Toggle content</button>
+    <p id="the_content" hidden>I am the content!</p>
+  </div>
+
+  <pre><code class="language-markup">&lt;button type="button" aria-controls="the_content" aria-expanded="false" class="sba-c-button sba-js-visibility-trigger">Toggle content&lt;/button>
+&lt;p id="the_content" hidden>I am the content!&lt;/p></code></pre>
+
+  <h2>Guidance</h2>
+  <ul>
+    <li>The button must have attributes for <code>aria-controls</code> and <code>aria-expanded</code>, as well as the class name <code>sba-js-visibility-trigger</code>.</li>
+    <li>The content must have an <code>id</code> that matches the toggle button’s <code>aria-controls</code> attribute.</li>
+    <li>The content must also have a binary <code>hidden</code> attribute that corresponds to the toggle button’s <code>aria-expanded</code> attribute</li>
+  </ul>
+
+  <h3>When to use</h3>
+  <ul>
+    <li>When content needs to be easily shown or hidden</li>
+    <li>Navigation dropdowns</li>
+    <li>Nonessential content</li>
+  </ul>
+
+  <h3>When to consider something else</h3>
+  <ul>
+    <li>You need to toggle multiple content areas simultaneously (example, show one and hide another)</li>
+    <li>Content to be toggled applies to most users (in this case, do not hide this content OR make the default state visible)</li>
+    <li>An accordion would be a better application</li>
+  </ul>
+
+  <h3>Accessibility considerations</h3>
+  <ul>
+    <li>Consider using <code>&lt;button type="button"></code> for the toggle</li>
+  </ul>
+</article>

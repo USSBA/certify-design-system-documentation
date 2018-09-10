@@ -114,29 +114,8 @@
                 </ul>
               </li>
               <li>
-                <button type="button" class="usa-sidenav-list-button {% if page.main_section contains "transitional" %} is-open usa-current {% endif %}" aria-collapsed="{% if page.main_section contains "transitional" %}false
-                {% else %}true{% endif %}" aria-controls="sublist_transitional">
-                  Depricating
-                  <svg aria-hidden="true" class="sba-c-icon icon-when-closed">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#angle-down"></use>
-                  </svg>
-                <svg aria-hidden="true" class="sba-c-icon icon-when-open">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#angle-up"></use>
-                </svg>
-                </button>
-                  <ul class="usa-sidenav-sub_list" id="sublist_transitional">
-                    {% for p in site.transitional  %}
-                      {% if p.layout == 'styleguide' %}
-                      <li>
-                          <a class="{% if p.url == page.url %} usa-current {% endif %}" href="{{ site.baseurl }}/{{ p.path | remove: '_' }}">{{p.title}}</a>
-                      </li>
-                      {% endif %}
-                    {% endfor %}
-                  </ul>
-                </li>
-                <li>
-                  <a class="{% if page.sub_section contains "release notes" %} usa-current {% endif %}" href="{{ site.baseurl }}/releases.html">Release notes</a>
-                </li>
+                <a class="{% if page.sub_section contains "release notes" %} usa-current {% endif %}" href="{{ site.baseurl }}/releases.html">Release notes</a>
+              </li>
             </ul>
         </div>
         <div class="sba-l-sm-col--12 sba-l-md-col--8 sba-u-md-padding-x--4 sba-l-lg-col--9 sba-l-xl-col--10 sba-u-padding-x--2 sba-u-lg-padding-x--7">
