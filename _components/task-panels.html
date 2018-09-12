@@ -117,14 +117,14 @@ title: Task panels
   <h2>Guidance</h2>
   <p>Because task panel menus open to the left of their buttons, they should be placed on the right hand side of their parent container to prevent content from being cut off by the browser.</p>
 
-  <h3>Required Components</h3>
+  <h3>Required components</h3>
   <ul>
     <li>Toggle button</li>
     <li>Panel</li>
     <li>Menu</li>
   </ul>
 
-  <h3>Optional Components</h3>
+  <h3>Optional components</h3>
   <ul>
     <li>
       Emergency actions
@@ -135,6 +135,60 @@ title: Task panels
       <p>If a menu has more than 3 items, and one of those items is an "emergency action," then the two menus should be used separated by a horizontal rule.</p>
     </li>
   </ul>
+
+  <h3>Task panes with tabs</h3>
+
+  <p><a href="tabs.html">Tabs</a> are permissible inside of a task panel.</p>
+
+  <div class="sample">
+    <div class="sba-c-task-panel">
+      <button type="button" class="sba-c-button sba-c-button--transparent sba-c-task-panel__toggle" aria-expanded="false" aria-controls="paneltabs">
+        <svg aria-hidden="true" class="sba-c-icon sba-c-icon--lg">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg-sprite/sprite.svg#ellipsis-h"></use>
+        </svg>
+        <span class="sba-u-visibility--screen-reader">Toggle menu</span>
+      </button>
+      <div id="paneltabs" class="sba-c-task-panel__content">
+        <div class="sba-c-tabs sba-js-tabs">
+          <div class="sba-c-tabs-wrapper">
+            <ul class="sba-c-tabs__list">
+              <li class="sba-c-tabs__item">
+                <button class="sba-c-tabs__link" type="button" aria-expanded="true">Application actions</button>
+              <li class="sba-c-tabs__item">
+                <button class="sba-c-tabs__link" type="button" aria-expanded="false">HUBZone actions</button>
+            </ul>
+          </div>
+
+          <div class="sba-c-tabs__tab-content">
+            <ul class="sba-c-task-panel__menu">
+              <li class="sba-c-task-panel__menu__item">
+                <a href="#" class="sba-c-task-panel__menu__link">Application action 1</a>
+              </li>
+              <li class="sba-c-task-panel__menu__item">
+                <a href="#" class="sba-c-task-panel__menu__link">Application action 2</a>
+              </li>
+              <li class="sba-c-task-panel__menu__item">
+                <a href="#" class="sba-c-task-panel__menu__link">Application action 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sba-c-tabs__tab-content">
+            <ul class="sba-c-task-panel__menu">
+              <li class="sba-c-task-panel__menu__item">
+                <a href="#" class="sba-c-task-panel__menu__link">HUBZone action 1</a>
+              </li>
+              <li class="sba-c-task-panel__menu__item">
+                <a href="#" class="sba-c-task-panel__menu__link">HUBZone action 2</a>
+              </li>
+              <li class="sba-c-task-panel__menu__item">
+                <a href="#" class="sba-c-task-panel__menu__link">HUBZone action 3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <h3>Variations</h3>
   <p>There are variations on the toggle button available that can be applied using class names on the toggle button.</p>

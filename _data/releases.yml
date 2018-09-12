@@ -1,5 +1,12 @@
 releases:
 
+  - version: 1.15.2
+    date: September 12, 2018
+    additions:
+      - item: In-page tabs
+    changes:
+      - item: Styles to support using tabs inside a task-panel.
+
   - version: 1.15.1
     date: September 10, 2018
     changes:

@@ -9,63 +9,67 @@ title: Tabs
   <h1>Tabs</h1>
 
   <p>
-  <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_tabs.scss">CSS file</a> | <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/priority-nav-tabs.js">JS file</a>
+  <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_tabs.scss">CSS file</a> | <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/tabs.js">Tabs JS file</a> | <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/priority-nav-tabs.js">Priority Nav JS file</a>
   </p>
 
   <p>Tabs are UI pattern where content is separated into different sections, where only one section is viewable at a time. They can also be used for navigating between different pages, where all of the page fall under a common high-level heading.</p>
 
   <div class="sample">
-    <div class="sba-c-tabs-wrapper" role="navigation">
-      <ul class="sba-c-tabs__list">
-        <!-- List items are not closed to avoid spacing issues with inline-block display -->
-        <li class="sba-c-tabs__item">
-          <a class="sba-c-tabs__link  current " href="#">Overview</a>
-        <li class="sba-c-tabs__item">
-          <button class="sba-c-tabs__link sba-js-visibility-trigger " type="button" aria-expanded="false" aria-controls="dropdown-Documents">
-            <span>Documents</span>
-          </button>
-          <ul id="dropdown-Documents" class="sba-c-tabs__submenu" hidden>
-            <li class="sba-c-tabs__submenu__item">
-              <a class="sba-c-tabs__submenu__link" href="#">Firm Documents</a>
-            </li>
-            <li class="sba-c-tabs__submenu__item">
-              <a class="sba-c-tabs__submenu__link" href="#">Analyst Documents</a>
-            </li>
-          </ul>
-        <li class="sba-c-tabs__item">
-          <a class="sba-c-tabs__link " href="#">SBA Notes</a>
-        <li class="sba-c-tabs__item">
-          <a class="sba-c-tabs__link " href="#">Messages</a>
-        <li class="sba-c-tabs__item">
-          <a class="sba-c-tabs__link " href="#">Activity Log</a>
-      </ul>
+    <div class="sba-c-tabs">
+      <div class="sba-c-tabs-wrapper" role="navigation">
+        <ul class="sba-c-tabs__list">
+          <!-- List items are not closed to avoid spacing issues with inline-block display -->
+          <li class="sba-c-tabs__item">
+            <a class="sba-c-tabs__link  current " href="#">Overview</a>
+          <li class="sba-c-tabs__item">
+            <button class="sba-c-tabs__link sba-js-visibility-trigger " type="button" aria-expanded="false" aria-controls="dropdown-Documents">
+              <span>Documents</span>
+            </button>
+            <ul id="dropdown-Documents" class="sba-c-tabs__submenu" hidden>
+              <li class="sba-c-tabs__submenu__item">
+                <a class="sba-c-tabs__submenu__link" href="#">Firm Documents</a>
+              </li>
+              <li class="sba-c-tabs__submenu__item">
+                <a class="sba-c-tabs__submenu__link" href="#">Analyst Documents</a>
+              </li>
+            </ul>
+          <li class="sba-c-tabs__item">
+            <a class="sba-c-tabs__link " href="#">SBA Notes</a>
+          <li class="sba-c-tabs__item">
+            <a class="sba-c-tabs__link " href="#">Messages</a>
+          <li class="sba-c-tabs__item">
+            <a class="sba-c-tabs__link " href="#">Activity Log</a>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <pre><code class="language-markup">&lt;div class="sba-c-tabs-wrapper" role="navigation">
-  &lt;ul class="sba-c-tabs__list">
-    &lt;!-- List items are not closed to avoid spacing issues with inline-block display -->
-    &lt;li class="sba-c-tabs__item">
-      &lt;a class="sba-c-tabs__link  current " href="#">Overview&lt;/a>
-    &lt;li class="sba-c-tabs__item">
-      &lt;button class="sba-c-tabs__link sba-js-visibility-trigger " type="button" aria-expanded="false" aria-controls="dropdown-Documents">
-        &lt;span>Documents&lt;/span>
-      &lt;/button>
-      &lt;ul id="dropdown-Documents" class="sba-c-tabs__submenu" hidden>
-        &lt;li class="sba-c-tabs__submenu__item">
-          &lt;a class="sba-c-tabs__submenu__link" href="#">Firm Documents&lt;/a>
-        &lt;/li>
-        &lt;li class="sba-c-tabs__submenu__item">
-          &lt;a class="sba-c-tabs__submenu__link" href="#">Analyst Documents&lt;/a>
-        &lt;/li>
-      &lt;/ul>
-    &lt;li class="sba-c-tabs__item">
-      &lt;a class="sba-c-tabs__link " href="#">SBA Notes&lt;/a>
-    &lt;li class="sba-c-tabs__item">
-      &lt;a class="sba-c-tabs__link " href="#">Messages&lt;/a>
-    &lt;li class="sba-c-tabs__item">
-      &lt;a class="sba-c-tabs__link " href="#">Activity Log&lt;/a>
-  &lt;/ul>
+  <pre><code class="language-markup">&lt;div class="sba-c-tabs">
+  &lt;div class="sba-c-tabs-wrapper" role="navigation">
+    &lt;ul class="sba-c-tabs__list">
+      &lt;!-- List items are not closed to avoid spacing issues with inline-block display -->
+      &lt;li class="sba-c-tabs__item">
+        &lt;a class="sba-c-tabs__link  current " href="#">Overview&lt;/a>
+      &lt;li class="sba-c-tabs__item">
+        &lt;button class="sba-c-tabs__link sba-js-visibility-trigger " type="button" aria-expanded="false" aria-controls="dropdown-Documents">
+          &lt;span>Documents&lt;/span>
+        &lt;/button>
+        &lt;ul id="dropdown-Documents" class="sba-c-tabs__submenu" hidden>
+          &lt;li class="sba-c-tabs__submenu__item">
+            &lt;a class="sba-c-tabs__submenu__link" href="#">Firm Documents&lt;/a>
+          &lt;/li>
+          &lt;li class="sba-c-tabs__submenu__item">
+            &lt;a class="sba-c-tabs__submenu__link" href="#">Analyst Documents&lt;/a>
+          &lt;/li>
+        &lt;/ul>
+      &lt;li class="sba-c-tabs__item">
+        &lt;a class="sba-c-tabs__link " href="#">SBA Notes&lt;/a>
+      &lt;li class="sba-c-tabs__item">
+        &lt;a class="sba-c-tabs__link " href="#">Messages&lt;/a>
+      &lt;li class="sba-c-tabs__item">
+        &lt;a class="sba-c-tabs__link " href="#">Activity Log&lt;/a>
+    &lt;/ul>
+  &lt;/div>
 &lt;/div></code></pre>
 
   <h2>Guidance</h2>
@@ -111,4 +115,83 @@ title: Tabs
   </ul>
 
   <p>The Priority+ JavaScript uses <a href="http://gijsroge.github.io/priority-nav.js/">PriorityNav.js</a>, which is included in the Certify Design System gem.</p>
+
+  <h2>In-page tabs</h2>
+
+  <p>Tabs can also be used to toggle content on the same page.</p>
+
+  <div class="sample">
+    <div class="sba-c-tabs sba-js-tabs">
+      <div class="sba-c-tabs-wrapper">
+        <ul class="sba-c-tabs__list" aria-role="tablist">
+          <li class="sba-c-tabs__item">
+            <button class="sba-c-tabs__link" aria-role="tab" type="button">Tab 1</button>
+          <li class="sba-c-tabs__item">
+            <button class="sba-c-tabs__link" aria-role="tab" type="button">Tab 2</button>
+          <li class="sba-c-tabs__item">
+            <button class="sba-c-tabs__link" aria-role="tab" type="button">Tab 3</button>
+        </ul>
+      </div>
+      <div class="sba-c-tabs__tab-content">
+        <div class="sba-u-padding--2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend quam sit amet ante sollicitudin dictum. Mauris vulputate elit nec porttitor posuere. Aenean sit amet sapien tristique, tincidunt urna sit amet, luctus est.</p>
+        </div>
+      </div>
+      <div class="sba-c-tabs__tab-content">
+        <div class="sba-u-padding--2">
+          <p>Praesent id sem eget ipsum faucibus iaculis. Nullam nec dapibus nulla, eget mattis orci. </p>
+          <p></p>
+        </div>
+      </div>
+      <div class="sba-c-tabs__tab-content">
+        <div class="sba-u-padding--2">
+          <p>Nulla congue enim risus, at semper turpis pharetra hendrerit. Nunc vehicula fringilla quam, at vestibulum dolor consectetur sit amet. Curabitur mi neque, facilisis ac ultrices quis, tempor quis felis. Cras at nulla velit. Cras tempor purus neque, ut rhoncus leo fringilla id.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-tabs sba-js-tabs">
+  &lt;div class="sba-c-tabs-wrapper">
+    &lt;ul class="sba-c-tabs__list" aria-role="tablist">
+      &lt;!-- List items are not closed to avoid spacing issues with inline-block display -->
+      &lt;li class="sba-c-tabs__item">
+        &lt;button class="sba-c-tabs__link" aria-role="tab" type="button">Tab 1&lt;/button>
+      &lt;li class="sba-c-tabs__item">
+        &lt;button class="sba-c-tabs__link" aria-role="tab" type="button">Tab 2&lt;/button>
+      &lt;li class="sba-c-tabs__item">
+        &lt;button class="sba-c-tabs__link" aria-role="tab" type="button">Tab 3&lt;/button>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="sba-c-tabs__tab-content">
+    &lt;div class="sba-u-padding--2">
+      &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend quam sit amet ante sollicitudin dictum. Mauris vulputate elit nec porttitor posuere. Aenean sit amet sapien tristique, tincidunt urna sit amet, luctus est.&lt;/p>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="sba-c-tabs__tab-content">
+    &lt;div class="sba-u-padding--2">
+      &lt;p>Praesent id sem eget ipsum faucibus iaculis. Nullam nec dapibus nulla, eget mattis orci. &lt;/p>
+      &lt;p>&lt;/p>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="sba-c-tabs__tab-content">
+    &lt;div class="sba-u-padding--2">
+      &lt;p>Nulla congue enim risus, at semper turpis pharetra hendrerit. Nunc vehicula fringilla quam, at vestibulum dolor consectetur sit amet. Curabitur mi neque, facilisis ac ultrices quis, tempor quis felis. Cras at nulla velit. Cras tempor purus neque, ut rhoncus leo fringilla id.&lt;/p>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h3>Guidance</h3>
+  <ul>
+    <li>Add the class name <code>sba-js-tabs</code> to main tab block element and the Javascript will create the <code>id</code>, <code>aria-controls</code>, <code>aria-expanded</code>, and any CSS classes needed for tab interactions.</li>
+    <li>Use padding utility inside the tab content, otherwise content will align with the edge of that tab block. This is done to maintain flexibility of the content.</li>
+    <li>In-page tabs <strong>may not</strong> have a submenu</li>
+  </ul>
+
+  <h4>When to consider something else</h4>
+  <ul>
+    <li>Content is tabs is important where a user could overlook</li>
+    <li>Content in tabs is very long where the user needs to continuously scroll up and down</li>
+    <li>Tabs should to be used to describe steps</li>
+  </ul>
 </article>
