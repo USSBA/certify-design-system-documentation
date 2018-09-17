@@ -1,5 +1,10 @@
 releases:
 
+  - version: 1.15.3
+    date: September 17, 2018
+    changes:
+      - item: Upadated masthead notification pip class to include js- prefix
+
   - version: 1.15.2
     date: September 12, 2018
     additions:
