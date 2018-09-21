@@ -1,0 +1,63 @@
+---
+layout: styleguide
+main_section: components
+sub_section: table-of-contents
+title: Table of contents
+---
+
+<article>
+  <h1>Table of contents</h1>
+  <p>The table of contents pattern is used in multi-step forms such as application sections or workflows to indicate location and provide the ability to jump back to a specific chapter.</p>
+
+  <div class="sample">
+    <div class="sba-c-table-of-contents">
+      <p class="sba-c-table-of-contents__heading">Basic Eligibility</p>
+      <ol class="sba-c-table-of-contents__list">
+        <li class="sba-c-table-of-contents__list-item"><a href="#">Steps of Application</a></li>
+        <li class="sba-c-table-of-contents__list-item current"><span class="sba-u-visibility--screen-reader">Current location:</span> Update Your Info</li>
+        <li class="sba-c-table-of-contents__list-item">Is Your Firm Small?</li>
+        <li class="sba-c-table-of-contents__list-item">Your Firm’s Size
+          <ul>
+            <li>Sub-item 1</li>
+            <li>Sub item 2</li>
+          </ul>
+        </li>
+        <li class="sba-c-table-of-contents__list-item">About Your Firm</li>
+      </ol>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-table-of-contents">
+  &lt;p class="sba-c-table-of-contents__heading">Basic Eligibility&lt;/p>
+  &lt;ol class="sba-c-table-of-contents__list">
+    &lt;li class="sba-c-table-of-contents__list-item">&lt;a href="#">Steps of Application&lt;/a>&lt;/li>
+    &lt;li class="sba-c-table-of-contents__list-item current">&lt;span class="sba-u-visibility--screen-reader">Current location:&lt;/span> Update Your Info&lt;/li>
+    &lt;li class="sba-c-table-of-contents__list-item">Is Your Firm Small?&lt;/li>
+    &lt;li class="sba-c-table-of-contents__list-item">Your Firm’s Size
+      &lt;ul>
+        &lt;li>Sub-item 1&lt;/li>
+        &lt;li>Sub item 2&lt;/li>
+      &lt;/ul>
+    &lt;/li>
+    &lt;li class="sba-c-table-of-contents__list-item">About Your Firm&lt;/li>
+  &lt;/ol>
+&lt;/div></code></pre>
+
+  <h2>Guidance</h2>
+  <ul>
+    <li>User may not skip ahead of current position</li>
+    <li>Lists can be ordered or unordered</li>
+    <li>The current location is indicated with class name of <code>current</code></li>
+  </ul>
+
+  <h2>Accessibility considerations</h2>
+  <ul>
+    <li>Provide a non-visual alternative to indicate current location</li>
+  </ul>
+
+  <h2>When to consider something else</h2>
+  <ul>
+    <li>When breadcrumbs would be more appropriate</li>
+    <li>When items following any current location cannot be determined</li>
+  </ul>
+</article>

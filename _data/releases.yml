@@ -1,5 +1,16 @@
 releases:
 
+  - version: 1.16.0
+    date: September 21, 2018
+    additions:
+     - item: Content wrappers
+     - item: Table of contents component
+     - item: New list classes for sets of form elements
+     - item: Button group component
+    changes:
+     - item: Changes visual presentation to the question footnote, background color is now gray and the box extends to the full width
+     - item: Moves footnote CSS into component CSS file
+
   - version: 1.15.3
     date: September 17, 2018
     changes:

@@ -103,8 +103,100 @@ title: Lists
 
 <h4>When to consider something else</h4>
 <ul>
-  <li>When there is no ordered, linear relationship from one list item to the other</li>
+  <li>When there is no ordered, linear relationship from one list item to the next</li>
 </ul>
+
+<h2>Lists of form fields</h2>
+
+<p>These lists are only useful when placed within the <code>sba-l-content-wrapper--form</code> content wrapper.</p>
+
+<div class="sample">
+  <h3 class="sba-u-color--muted">Text inputs</h3>
+  <div class="sba-l-content-wrapper--form">
+    <ul class="sba-c-fields-list">
+      <li>
+        <div class="sba-c-field-wrap">
+          <label class="sba-c-label" for="s1_1">First Name</label>
+          <input class="sba-c-input" id="s1_1" type="text" />
+        </div>
+      </li>
+      <li>
+        <div class="sba-c-field-wrap">
+          <label class="sba-c-label" for="s1_2">Last name</label>
+          <input class="sba-c-input" id="s1_2" type="text" />
+        </div>
+      </li>
+      <li>
+        <div class="sba-c-field-wrap">
+          <label class="sba-c-label" for="s1_3">Nickname</label>
+          <input class="sba-c-input" id="s1_3" type="text" />
+        </div>
+      </li>
+    </ul>
+  </div>
+  <h3 class="sba-u-color--muted">Radios and checkboxes</h3>
+  <div class="sba-l-content-wrapper--form">
+    <div class="sba-c-field-wrap">
+      <ul class="sba-c-fields-list sba-c-fields-list--condensed">
+        <li>
+          <input class="sba-c-radio" id="s2_1" type="checkbox" name="s2" value="v" >
+          <label class="sba-c-label" for="s2_1">Option 1</label>
+        </li>
+        <li>
+          <input class="sba-c-radio" id="s2_2" type="checkbox" name="s2" value="v" >
+          <label class="sba-c-label" for="s2_2">Option 2</label>
+        </li>
+        <li>
+          <input class="sba-c-radio" id="s2_3" type="checkbox" name="s2" value="v" >
+          <label class="sba-c-label" for="s2_3">Option 3</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<pre><code class="language-markup">&lt;h3 class="sba-u-color--muted">Text inputs&lt;/h3>
+&lt;div class="sba-l-content-wrapper--form">
+  &lt;ul class="sba-c-fields-list">
+    &lt;li>
+      &lt;div class="sba-c-field-wrap">
+        &lt;label class="sba-c-label" for="s1_1">First Name&lt;/label>
+        &lt;input class="sba-c-input" id="s1_1" type="text" />
+      &lt;/div>
+    &lt;/li>
+    &lt;li>
+      &lt;div class="sba-c-field-wrap">
+        &lt;label class="sba-c-label" for="s1_2">Last name&lt;/label>
+        &lt;input class="sba-c-input" id="s1_2" type="text" />
+      &lt;/div>
+    &lt;/li>
+    &lt;li>
+      &lt;div class="sba-c-field-wrap">
+        &lt;label class="sba-c-label" for="s1_3">Nickname&lt;/label>
+        &lt;input class="sba-c-input" id="s1_3" type="text" />
+      &lt;/div>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div>
+&lt;h3 class="sba-u-color--muted">Radios and checkboxes&lt;/h3>
+&lt;div class="sba-l-content-wrapper--form">
+  &lt;div class="sba-c-field-wrap">
+    &lt;ul class="sba-c-fields-list sba-c-fields-list--condensed">
+      &lt;li>
+        &lt;input class="sba-c-radio" id="s2_1" type="checkbox" name="s2" value="v" >
+        &lt;label class="sba-c-label" for="s2_1">Option 1&lt;/label>
+      &lt;/li>
+      &lt;li>
+        &lt;input class="sba-c-radio" id="s2_2" type="checkbox" name="s2" value="v" >
+        &lt;label class="sba-c-label" for="s2_2">Option 2&lt;/label>
+      &lt;/li>
+      &lt;li>
+        &lt;input class="sba-c-radio" id="s2_3" type="checkbox" name="s2" value="v" >
+        &lt;label class="sba-c-label" for="s2_3">Option 3&lt;/label>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
 
 
 </article>

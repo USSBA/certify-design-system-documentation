@@ -1,0 +1,330 @@
+---
+layout: styleguide
+main_section: patterns
+sub_section: questions
+title: Questions
+---
+
+<article>
+  <h1>Questions</h1>
+
+
+  <p>Questions patterns can be used in application sections or workflows.</p>
+
+  <h2>Guidance</h2>
+  <ul>
+    <li>Must always be contained in the <code>sba-l-content-wrapper--form</code> content wrapper</li>
+    <li>Should include table of contents component</li>
+    <li><strong>Do not</strong> use breadcrumbs on workflows</li>
+    <li>The <code>&lt;h1></code> on the page should always be the title of the page. It should never be a question.</li>
+  </ul>
+
+  <h3>Support text</h3>
+  <p>Support is placed between the <code>&lt;label></code> or the <code>&lt;legend></code> (depending on input type is text or checkbox/radio). This text should contain info that users would most like need to read <strong>before</strong> providing an answer to the quetsion.</p>
+
+  <div class="sample">
+    <div class="sba-u-padding-x--2">
+      <div class="sba-l-content-wrapper--form">
+        <div class="sba-c-field-wrap">
+          <label for="dnsnd">Your DUNS number</label>
+          <p>This is the support text</p>
+          <input id="dnsnd" type="text" required />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Footnotes</h3>
+
+  <p>Footnotes contain helpful information, links to CFR, and information that might not be relevant to 80% of users. Mostly, they are used to provide some additional background on a question.</p>
+
+  <div class="sample">
+    <div class="sba-u-padding-x--2">
+      <div class="sba-l-content-wrapper--form">
+        <div class="sba-c-field-wrap">
+          <label for="dnsdkjsd">Non-8(a) work #1</label>
+          <input id="dnsdkjsd" type="text" required />
+        </div>
+        <div class="sba-c-question-footnote" id="q1_footnote">
+            <h4 class="sba-c-question-footnote__heading">More information</h4>
+            <p>Examples of non-8(a) work include:</p>
+            <ul>
+              <li>Non-government/commercial contracts and subcontracts</li>
+              <li>Government work outside of an 8(a) award</li>
+              <li>Multiple award schedule contracts not offered through the 8(a) program</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Actions</h3>
+
+  <ul>
+    <li>The back button should be at the top of the page since that is where users would mostly likely need to find it.</li>
+    <li>Use consistent actions throughout the form</li>
+    <li>Only use the skip button when skipping is allowed</li>
+    <li>Primary actions can be the default button design, as well as <code>sba-c-button--success</code> or <code>sba-c-button--danger</code></li>
+    <li>Cancel actions should use <code>sba-c-button--transparent</code></li>
+    <li>Skip actions should use <code>sba-c-button--inverse</code></li>
+  </ul>
+
+  <h3>Required vs. optional fields</h3>
+
+  <p>All fields are required by default. If a field is optional, add "(Optional)" to the label.</p>
+
+  <div class="sample">
+    <div class="sba-u-padding-x--2">
+      <div class="sba-l-content-wrapper--form">
+        <ul class="sba-c-fields-list">
+          <li>
+            <div class="sba-c-field-wrap">
+              <label for="fna">First name</label>
+              <input id="fna" type="text" required />
+            </div>
+          </li>
+          <li>
+            <div class="sba-c-field-wrap">
+              <label for="lna">Last name</label>
+              <input id="lna" type="text" value="Smith" required />
+            </div>
+          </li>
+          <li>
+            <div class="sba-c-field-wrap">
+              <label for="nna">Nickname (Optional)</label>
+              <input id="nna" type="text" value="Smith"/>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h3>Fieldsets</h3>
+
+  <p>Form fields do not always need to be contained within a <code>&lt;fieldset></code>. However, it is often recommended to group related fields on any page within a form.</p>
+
+  <ul>
+    <li>Fieldsets should always contain a <code>&lt;legend></code>.</li>
+    <li>Always use with checkboxes or radios. The <code>&lt;legend></code> will contain the question.</li>
+    <li>Fieldsets may be nested</li>
+  </ul>
+
+  <div class="sample">
+    <div class="sba-u-padding-x--2">
+      <div class="sba-l-content-wrapper--form">
+        <fieldset>
+          <legend>What is your address?</legend>
+          <p>Use the address of your primary residence as indicated in your income tax.</p>
+          <ul class="sba-c-fields-list">
+            <li>
+              <div class="sba-c-field-wrap">
+                <label for="street1">Street address 1</label>
+                <input id="street1" type="text">
+              </div>
+            </li>
+            <li>
+              <div class="sba-c-field-wrap">
+                <label for="street2">Street address 2</label>
+                <input id="street2" type="text">
+              </div>
+            </li>
+            <li>
+              <div class="sba-c-field-wrap">
+                <label for="zip">Zip code</label>
+                <input id="zip" type="text" class="sba-u-input-width--5">
+              </div>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <h3>Follow-up questions</h3>
+
+  <p>
+    <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/follow-ups.js">JS file</a>
+  </p>
+
+  <p>Sometimes follow-up questions might be needed if the user selects a particular answer.</p>
+
+  <div class="sample">
+    <div class="sba-u-padding-x--2">
+      <div class="sba-l-content-wrapper--form">
+        <div class="sba-c-field-wrap">
+          <fieldset>
+            <legend>What option would like to select? (For radios and checkboxes)</legend>
+            <ul class="sba-c-fields-list sba-c-fields-list--condensed">
+              <li>
+                <input class="sba-c-radio" id="asdfesde" type="radio" name="s2asdd" value="" >
+                <label class="sba-c-label" for="asdfesde">Without a follow-up</label>
+              </li>
+              <li>
+                <input class="sba-c-radio" id="adfekd" type="radio" name="s2asdd" value=" " data-follow-up="q1_a2_followup" aria-controls="q1_a2_followup" aria-expanded="false">
+                <label class="sba-c-label" for="adfekd">With a follow-up</label>
+
+                <div class="sba-c-follow-up" id="q1_a2_followup" hidden>
+                  <div class="sba-c-field-wrap">
+                    <ul class="sba-c-unstyled-list">
+                      <li>
+                        <label for="">Please tell us why</label>
+                        <textarea disabled></textarea>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Select box</legend>
+            <label for="additional_field">Show additional field?</label>
+            <select name="additional_field" id="additional_field">
+              <option value=""></option>
+              <option value="no">No</option>
+              <option value="yes" data-followup="additional_field_q" aria-controls="additional_field_q" aria-expanded="false">Yes</option>
+            </select>
+            <div id="additional_field_q" class="sba-c-follow-up" hidden>
+              <div class="sba-c-field-wrap">
+                <label for="g">What is it?</label>
+                <input id="g" name="g" disabled type="text">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-l-content-wrapper--form">
+  &lt;div class="sba-c-field-wrap">
+    &lt;fieldset>
+      &lt;legend>What option would like to select? (For radios and checkboxes)&lt;/legend>
+      &lt;ul class="sba-c-fields-list sba-c-fields-list--condensed">
+        &lt;li>
+          &lt;input class="sba-c-radio" id="asdfesde" type="radio" name="s2asdd" value="" >
+          &lt;label class="sba-c-label" for="asdfesde">Without a follow-up&lt;/label>
+        &lt;/li>
+        &lt;li>
+          &lt;input class="sba-c-radio" id="adfekd" type="radio" name="s2asdd" value=" " data-follow-up="q1_a2_followup" aria-controls="q1_a2_followup" aria-expanded="false">
+          &lt;label class="sba-c-label" for="adfekd">With a follow-up&lt;/label>
+
+          &lt;div class="sba-c-follow-up" id="q1_a2_followup" hidden>
+            &lt;div class="sba-c-field-wrap">
+              &lt;ul class="sba-c-unstyled-list">
+                &lt;li>
+                  &lt;label for="">Please tell us why&lt;/label>
+                  &lt;textarea disabled>&lt;/textarea>
+                &lt;/li>
+              &lt;/ul>
+            &lt;/div>
+          &lt;/div>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/fieldset>
+    &lt;fieldset>
+      &lt;legend>Select box&lt;/legend>
+      &lt;label for="additional_field">Show additional field?&lt;/label>
+      &lt;select name="additional_field" id="additional_field">
+        &lt;option value="">&lt;/option>
+        &lt;option value="no">No&lt;/option>
+        &lt;option value="yes" data-followup="additional_field_q" aria-controls="additional_field_q" aria-expanded="false">Yes&lt;/option>
+      &lt;/select>
+      &lt;div id="additional_field_q" class="sba-c-follow-up" hidden>
+        &lt;div class="sba-c-field-wrap">
+          &lt;label for="g">What is it?&lt;/label>
+          &lt;input id="g" name="g" disabled type="text">
+        &lt;/div>
+      &lt;/div>
+    &lt;/fieldset>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h3>Error handling</h3>
+
+  <p>Validations should be performed on both the front-end and the back-end of the system. The front-end validation enhances user experience, where the page can scroll directly to the error.</p>
+
+  <p>The error indication should be as specific as possible, with the errant field marked, rather than the entire set of fields in which it is located.</p>
+
+  <p>In general, each form field should be wrapped in a class name of <code>sba-c-field-wrap</code>. When an error occurs, a div is created inside <code>sba-c-field-wrap</code> wrapping all of its contents. The error message becomes the first child of the generated <code>sba-c-form-error</code>.</p>
+
+  <h4>For text inputs</h4>
+
+  <div class="sample">
+    <div class="sba-u-padding-x--2">
+      <div class="sba-l-content-wrapper--form">
+        <ul class="sba-c-fields-list">
+          <li>
+            <div class="sba-c-field-wrap">
+              <div class="sba-c-form-error">
+                <p class="sba-c-form-error__message">Please provide your first name</p>
+                <label for="fn">First name</label>
+                <input id="fn" type="text" required />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="sba-c-field-wrap">
+              <label for="ln">Last name</label>
+              <input id="ln" type="text" value="Smith" required />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-l-content-wrapper--form">
+  &lt;ul class="sba-c-fields-list">
+    &lt;li>
+      &lt;div class="sba-c-field-wrap">
+        &lt;div class="sba-c-form-error">
+          &lt;p class="sba-c-form-error__message">Please provide your first name&lt;/p>
+          &lt;label for="fn">First name&lt;/label>
+          &lt;input id="fn" type="text" required />
+        &lt;/div>
+      &lt;/div>
+    &lt;/li>
+    &lt;li>
+      &lt;div class="sba-c-field-wrap">
+        &lt;label for="ln">Last name&lt;/label>
+        &lt;input id="ln" type="text" value="Smith" required />
+      &lt;/div>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div></code></pre>
+
+  <h4>For checkboxes and radios</h4>
+
+  <div class="sample">
+    <div class="sba-u-padding-x--2">
+      <div class="sba-l-content-wrapper--form">
+        <fieldset>
+          <div class="sba-c-field-wrap">
+            <div class="sba-c-form-error">
+              <p class="sba-c-form-error__message">Please select an option</p>
+              <legend>Which option above does your firm choose?</legend>
+              <p>If you choose Option 1, then XYZ. If you choose Option 2, then ABC.</p>
+              <ul class="sba-c-fields-list sba-c-fields-list--condensed">
+                <li>
+                  <input class="sba-c-radio" id="s2_1" type="radio" name="s2" value="" required >
+                  <label class="sba-c-label" for="s2_1">Option 1</label>
+                </li>
+                <li>
+                  <input class="sba-c-radio" id="s2_2" type="radio" name="s2" value="" required >
+                  <label class="sba-c-label" for="s2_2">Option 2</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</article>

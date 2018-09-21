@@ -1,0 +1,68 @@
+---
+layout: styleguide
+main_section: components
+sub_section: button-group
+title: Button group
+---
+
+<article>
+  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_button-group.scss">CSS file</a></p>
+
+
+  <h1>Button group</h1>
+
+  <p>Button groups are used for displaying groups of buttons that perform related actions in a horizontal row. On mobile devices, the buttons are stacked vertically.</p>
+
+  <div class="sg-responsive-preview">
+    <div class="sg-responsive-preview__size-buttons">
+      <button class="sg-responsive-preview__size-button" type="button" data-size="320">
+        XS
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="544">
+        SM
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="768">
+        MD
+      </button>
+      <button class="sg-responsive-preview__size-button is-current" type="button" data-size="1024">
+        LG
+      </button>
+      <button class="sg-responsive-preview__size-button" type="button" data-size="1280">
+        XL
+      </button>
+    </div>
+    <div class="iframe__preview">
+      <iframe title="Pagination example" class="responsive-iframe" src="examples/button-groups.html" data-width="1024"  allowfullscreen="true" allowtransparency="true" height="300"></iframe>
+    </div>
+  </div>
+
+  <pre><code class="language-markup">&lt;div class="sba-c-button-group">
+  &lt;button type="button" class="sba-c-button sba-c-button--transparent sba-c-button--big">
+    Cancel
+  &lt;/button>
+  &lt;button type="submit" class="sba-c-button sba-c-button--big">
+    Add note &amp; continue
+  &lt;/button>
+  &lt;button type="submit" class="sba-c-button sba-c-button--inverse sba-c-button--big">
+    Skip
+  &lt;/button>
+&lt;/div></code></pre>
+
+  <h2>Guidance</h2>
+  <ul>
+    <li>Space buttons evenly</li>
+    <li>Create a clear distinction between a primary action and secondary action</li>
+    <li>Consider icons in buttons for extra affordance</li>
+    <li>Back buttons should be placed towards the top of the page since that is when users would most likely want to go back</li>
+    <li>If a skip button is present, avoid using verbs such as "Continue" by itself ("Add note &amp; continue" is acceptable) as well as any icons that convey forward motion on the primary action.</li>
+    <li>Button groups may contain a single button</li>
+    <li>Primary actions can be the default button design, as well as <code>sba-c-button--success</code> or <code>sba-c-button--danger</code></li>
+    <li>Cancel actions should use <code>sba-c-button--transparent</code></li>
+    <li>Skip actions should use <code>sba-c-button--inverse</code></li>
+  </ul>
+
+  <h2>When to consider something else</h2>
+  <ul>
+    <li>More than three buttons are needed</li>
+  </ul>
+</article>

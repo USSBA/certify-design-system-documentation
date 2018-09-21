@@ -1,0 +1,44 @@
+---
+layout: styleguide
+main_section: layout
+sub_section: content-wrappers
+title: Content wrappers
+---
+
+<article>
+  <h1>Content wrappers</h1>
+
+  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/layouts/_content-wrappers.scss">CSS file</a></p>
+
+  <p>Content wrappers are wrapping elements that contain content that needs to be styled in a specific way. This is done to avoid a heavy reliance on utility classes when the nature of the content tends to be dynamic, relies on handling in a way conflict with base styles such as font sizes, margins, padding, etc..</p>
+
+  <p>Content wrappers break a little bit with our application of BEM syntax in that block class is not needed in the element’s class list. We just want to indicate that the element is a content wrapper and the type of content wrapper.</p>
+
+  <h2>When to use</h2>
+  <ul>
+    <li>You need strict styling on base elements that differ from certain base styles, such as margins and padding</li>
+    <li>Applying design system utilities is difficult to implement, or not realist because the content is dynamic</li>
+    <li>If the alternative would be creating parallel or single-use components that do not align with the system at large</li>
+    <li>There is a strong rationale. This should be communicated here in the documentation for any content wrapper that is created.</li>
+  </ul>
+
+  <h2>When to consider something else</h2>
+  <ul>
+    <li>If you are simply making visual changes to components in the design system if they can be reused in other contexts. Consider creating variants of those components with modifier classes.</li>
+    <li>You are wrapping only a small number of elements. Consider creating a component.</li>
+    <li>Using design system utilities is easier to do</li>
+    <li>There is no strong rationale.</li>
+  </ul>
+
+  <h2>Types of content wrappers</h2>
+
+  <h3>Content wrapper for forms</h3>
+
+  <p>The forms in Certify tend to be complex because of the nearly unlimited combination of how form fields and text can be organized and nested. The base styles, which are derived from a legacy codebase do not permit a clear hierarchy or elegant presentation of content within a form.</p>
+
+  <p>One of the key shifts in visual presentation appears on radio buttons and checkboxes, in that they provide a much clearer affordances than the base elements.</p>
+
+  <pre><code class="language-markup">&lt;div class="sba-l-content-wrapper--form">
+  &lt;!-- Content here -->
+&lt;/div></code></pre>
+</article>

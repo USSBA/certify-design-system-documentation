@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:USSBA/certify_design_system_gem.git
-  revision: aa01b0c6e55bebeb3bb7cd759642f36651168c99
+  revision: 99ef5c1000e6ace326643abfe28d6f03f09cbb47
   branch: master
   specs:
-    certify_design_system (1.15.3)
+    certify_design_system (1.16.0)
       bourbon (~> 4.3, <= 5)
       sass (~> 3.5)
 
@@ -103,7 +103,7 @@ GEM
     rouge (3.2.1)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
-    sass (3.5.7)
+    sass (3.6.0)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
