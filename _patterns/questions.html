@@ -179,12 +179,14 @@ title: Questions
           </fieldset>
           <fieldset>
             <legend>Select box</legend>
-            <label for="additional_field">Show additional field?</label>
-            <select name="additional_field" id="additional_field">
-              <option value=""></option>
-              <option value="no">No</option>
-              <option value="yes" data-followup="additional_field_q" aria-controls="additional_field_q" aria-expanded="false">Yes</option>
-            </select>
+            <div class="sba-c-field-wrap">
+              <label for="additional_field">Show additional field?</label>
+              <select name="additional_field" id="additional_field">
+                <option value=""></option>
+                <option value="no">No</option>
+                <option value="yes" data-followup="additional_field_q" aria-controls="additional_field_q" aria-expanded="false">Yes</option>
+              </select>
+            </div>
             <div id="additional_field_q" class="sba-c-follow-up" hidden>
               <div class="sba-c-field-wrap">
                 <label for="g">What is it?</label>
@@ -225,12 +227,14 @@ title: Questions
     &lt;/fieldset>
     &lt;fieldset>
       &lt;legend>Select box&lt;/legend>
-      &lt;label for="additional_field">Show additional field?&lt;/label>
-      &lt;select name="additional_field" id="additional_field">
-        &lt;option value="">&lt;/option>
-        &lt;option value="no">No&lt;/option>
-        &lt;option value="yes" data-followup="additional_field_q" aria-controls="additional_field_q" aria-expanded="false">Yes&lt;/option>
-      &lt;/select>
+      &lt;div class="sba-c-field-wrap">
+        &lt;label for="additional_field">Show additional field?&lt;/label>
+        &lt;select name="additional_field" id="additional_field">
+          &lt;option value="">&lt;/option>
+          &lt;option value="no">No&lt;/option>
+          &lt;option value="yes" data-followup="additional_field_q" aria-controls="additional_field_q" aria-expanded="false">Yes&lt;/option>
+        &lt;/select>
+      &lt;div>
       &lt;div id="additional_field_q" class="sba-c-follow-up" hidden>
         &lt;div class="sba-c-field-wrap">
           &lt;label for="g">What is it?&lt;/label>
