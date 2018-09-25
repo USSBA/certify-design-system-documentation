@@ -1,5 +1,21 @@
 releases:
 
+  - version: 1.16.3
+    date: September 25, 2018
+    changes:
+     - item: Changes list style of table of contents component
+     - item: Fixes display issues on editable tables
+
+  - version: 1.16.2
+    date: September 24, 2018
+    additions:
+     - item: Big style taskbar button
+
+  - version: 1.16.1
+    date: September 23, 2018
+    changes:
+     - item: Fixes extra large button issues in forms
+
   - version: 1.16.0
     date: September 21, 2018
     additions:
