@@ -1,4 +1,30 @@
 releases:
+  - version: 1.17.2
+    date: October 2, 2018
+    changes:
+      - item: Fixes typo in text-decoration utility
+
+  - version: 1.17.1
+    date: September 28, 2018
+    changes:
+      - item: Fixes subquestionnaire summary to handle labels better
+    deletions:
+     - item: Progress indicator component. Maybe another time.
+
+  - version: 1.17.0
+    date: September 28, 2018
+    additions:
+      - item: text-decoration utility
+      - item: progress meter component
+      - item: subquestionnaire summary component
+    changes:
+     - item: Adds 3px capability to border utility
+     - item: Adds classes to flexbox utility to mirror full CSS property name. Previous version still in place for backwards compatability.
+
+  - version: 1.16.4
+    date: September 27, 2018
+    changes:
+     - item: Fixes bug where invalid styling on combobox in Firefox was appearing by default.
 
   - version: 1.16.3
     date: September 25, 2018
