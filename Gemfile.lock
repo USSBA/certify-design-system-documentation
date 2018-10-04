@@ -39,7 +39,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jekyll (3.7.2)
+    jekyll (3.8.4)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -121,7 +121,7 @@ PLATFORMS
 
 DEPENDENCIES
   certify_design_system!
-  jekyll (= 3.7.2)
+  jekyll (= 3.8.4)
   jekyll-assets
   jekyll-babel
   jekyll-feed (~> 0.6)
