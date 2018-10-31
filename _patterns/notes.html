@@ -1,0 +1,175 @@
+---
+layout: styleguide
+main_section: patterns
+sub_section: notes pop-up
+title: Notes Pop-up
+---
+
+<article>
+  <span class="sba-c-badge sba-c-badge--warn">Draft</span>
+  <h1>Notes Pop-up</h1>
+
+  <p><a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/stylesheets/components/_pop-ups.scss">CSS file</a> | <a href="https://github.com/USSBA/certify_design_system_gem/blob/master/app/assets/javascripts/components/pop-ups.js">JS file</a></p>
+
+  <p>A pop-up can be used to create and submit a new note. A page can include a "New Note" button to open a new pop-up component so a user can add a note in it.</p>
+
+  <h4>Example</h4>
+  <div class="sample">
+    <button class="sba-c-button new-popup">New Note</button>
+  </div>
+  <div class="sba-c-popup">
+    <a href="#" id="sba-c-popup-toggle" class="sba-c-popup__toggle">
+      <header class="sba-c-popup__header">
+        <h4 class="sba-c-popup__heading">New SBA Note</h4>
+        <button type="button" id="sba-c-popup-close" class="sba-c-popup__close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#white-x"></use>Close</button>
+      </header>
+    </a>
+    <div class="sba-l-container sba-c-popup__contents">
+      <form action="" id="new-note-form">
+        <fieldset class="sba-c-fieldset">
+          <label for="note_subject">Title</label>
+          <input type="text" id="note_subject" class="sba-l-col--12">
+          <label for="note">Note</label>
+          <textarea id="note" class="sba-l-col--12"></textarea>
+        </fieldset>
+
+        <fieldset class="sba-c-fieldset sba-c-fieldset--inputs sba-u-font-size--small tags">
+          <h4>Tags</h4>
+          <div class ="sba-l-row">
+            <div class="sba-l-col--4">
+              <ul class="sba-c-unstyled-list">
+                <li>
+                  <input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
+                  <label for="note-tag--BOS-Analysis">BOS Analysis</label>
+                </li>
+                <li>
+                  <input id="note-tag--Ownership" type="checkbox" name="note-tags" value="Ownership">
+                  <label for="note-tag--Ownership">Ownership</label>
+                </li>
+                <li>
+                  <input id="note-tag--Control" type="checkbox" name="note-tags" value="Control">
+                  <label for="note-tag--Control">Control</label>
+                </li>
+
+              </ul>
+            </div>
+            <div class="sba-l-col--4">
+              <ul class="sba-c-unstyled-list">
+                <li>
+                  <input id="note-tag--Size" type="checkbox" name="note-tags" value="Size">
+                  <label for="note-tag--Size">Size</label>
+                </li>
+                <li>
+                  <input id="note-tag--Business-Development" type="checkbox" name="note-tags" value="Business Development">
+                  <label for="note-tag--Business-Development">Business Development</label>
+                </li>
+                <li>
+                  <input id="note-tag--Character" type="checkbox" name="note-tags" value="Character">
+                  <label for="note-tag--Character">Character</label>
+                </li>
+              </ul>
+            </div>
+            <div class="sba-l-col--4">
+              <ul class="sba-c-unstyled-list">
+                <li>
+                  <input id="note-tag--Economic-Disadvantage" type="checkbox" name="note-tags" value="Economic Disadvantage">
+                  <label for="note-tag--Economic-Disadvantage">Economic Disadvantage</label>
+                </li>
+                <li>
+                  <input id="note-tag--Social-Disadvantage" type="checkbox" name="note-tags" value="Social Disadvantage">
+                  <label for="note-tag--Social-Disadvantage">Social Disadvantage</label>
+                </li>
+                <li>
+                  <input id="note-tag--Potential-for-Success" type="checkbox" name="note-tags" value="Potential for Success">
+                  <label for="note-tag--Potential-for-Success">Potential for Success</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit">Add SBA note</button>
+      </form>
+    </div>
+
+
+
+  </div>
+
+  <pre><code class="language-markup">&lt;button class="sba-c-button new-popup">New Note&lt;/button>
+    &lt;div class="sba-c-popup">
+      &lt;a href="#" id="sba-c-popup-toggle" class="sba-c-popup__toggle">
+        &lt;header class="sba-c-popup__header">
+          &lt;h4 class="sba-c-popup__heading">New SBA Note&lt;/h4>
+          &lt;button type="button" id="sba-c-popup-close" class="sba-c-popup__close">&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#white-x">&lt;/use>Close&lt;/button>
+        &lt;/header>
+      &lt;/a>
+      &lt;div class="sba-l-container sba-c-popup__contents">
+        &lt;form action="" id="new-note-form">
+          &lt;fieldset class="sba-c-fieldset">
+            &lt;label for="note_subject">Title&lt;/label>
+            &lt;input type="text" id="note_subject" class="sba-l-col--12">
+            &lt;label for="note">Note&lt;/label>
+            &lt;textarea id="note" class="sba-l-col--12">&lt;/textarea>
+          &lt;/fieldset>
+
+          &lt;fieldset class="sba-c-fieldset sba-c-fieldset--inputs sba-u-font-size--small tags">
+            &lt;h4>Tags&lt;/h4>
+            &lt;div class ="sba-l-row">
+              &lt;div class="sba-l-col--4">
+                &lt;ul class="sba-c-unstyled-list">
+                  &lt;li>
+                    &lt;input id="note-tag--BOS-Analysis" type="checkbox" name="note-tags" value="BOS Analysis">
+                    &lt;label for="note-tag--BOS-Analysis">BOS Analysis&lt;/label>
+                  &lt;/li>
+                  &lt;li>
+                    &lt;input id="note-tag--Ownership" type="checkbox" name="note-tags" value="Ownership">
+                    &lt;label for="note-tag--Ownership">Ownership&lt;/label>
+                  &lt;/li>
+                  &lt;li>
+                    &lt;input id="note-tag--Control" type="checkbox" name="note-tags" value="Control">
+                    &lt;label for="note-tag--Control">Control&lt;/label>
+                  &lt;/li>
+
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="sba-l-col--4">
+                &lt;ul class="sba-c-unstyled-list">
+                  &lt;li>
+                    &lt;input id="note-tag--Size" type="checkbox" name="note-tags" value="Size">
+                    &lt;label for="note-tag--Size">Size&lt;/label>
+                  &lt;/li>
+                  &lt;li>
+                    &lt;input id="note-tag--Business-Development" type="checkbox" name="note-tags" value="Business Development">
+                    &lt;label for="note-tag--Business-Development">Business Development&lt;/label>
+                  &lt;/li>
+                  &lt;li>
+                    &lt;input id="note-tag--Character" type="checkbox" name="note-tags" value="Character">
+                    &lt;label for="note-tag--Character">Character&lt;/label>
+                  &lt;/li>
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="sba-l-col--4">
+                &lt;ul class="sba-c-unstyled-list">
+                  &lt;li>
+                    &lt;input id="note-tag--Economic-Disadvantage" type="checkbox" name="note-tags" value="Economic Disadvantage">
+                    &lt;label for="note-tag--Economic-Disadvantage">Economic Disadvantage&lt;/label>
+                  &lt;/li>
+                  &lt;li>
+                    &lt;input id="note-tag--Social-Disadvantage" type="checkbox" name="note-tags" value="Social Disadvantage">
+                    &lt;label for="note-tag--Social-Disadvantage">Social Disadvantage&lt;/label>
+                  &lt;/li>
+                  &lt;li>
+                    &lt;input id="note-tag--Potential-for-Success" type="checkbox" name="note-tags" value="Potential for Success">
+                    &lt;label for="note-tag--Potential-for-Success">Potential for Success&lt;/label>
+                  &lt;/li>
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+          &lt;/fieldset>
+          &lt;button type="submit">Add SBA note&lt;/button>
+        &lt;/form>
+      &lt;/div>
+    &lt;/div>
+  </code></pre>
+
+</article>

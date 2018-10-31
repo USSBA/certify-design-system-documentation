@@ -11,7 +11,6 @@
  // Add your JS sripts here
   -{% include_relative components/filter-firm-status.js %}
   -{% include_relative components/followup-fields.js %}
-  -{% include_relative components/notes.js %}
   -{% include_relative components/prep-storage.js %}
   -{% include_relative components/session-storage.js %}
   -{% include_relative components/smooth_scrolling.js %}
