@@ -1,0 +1,59 @@
+---
+layout: styleguide
+main_section: components
+sub_section: pop-ups
+title: Pop-ups
+---
+
+<article>
+  <span class="sba-c-badge sba-c-badge--warn">Draft</span>
+  <h1>Pop-ups</h1>
+
+  <p>A pop-up is a component that displays content in a view at the bottom right corner of the page. Users can minimize and close the popup.</p>
+
+  <h4>Example</h4>
+  <div class="sample">
+    <button class="sba-c-button new-popup">A Pop-up</button>
+  </div>
+  <div id="popup" class="sba-c-popup">
+    <a href="#" id="sba-c-popup-toggle" class="sba-c-popup__toggle">
+      <header class="sba-c-popup__header">
+        <h4 class="sba-c-popup__heading">Popup Title</h4>
+        <button type="button" id="sba-c-popup-close" class="sba-c-popup__close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#white-x"></use>Close</button>
+      </header>
+    </a>
+    <div class="sba-l-container sba-c-popup__contents">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus ornare augue, sed varius tortor posuere vitae. Proin vel quam et lectus imperdiet rutrum quis at risus. Praesent non ante vitae lectus lobortis vestibulum sit amet a lacus. Fusce quam erat, molestie vel cursus semper, rutrum eu nibh. Etiam condimentum efficitur bibendum. Quisque vel ex elit. Morbi fringilla, lectus quis sagittis porttitor, urna neque pretium lacus, sed condimentum mi dui ac nulla. Maecenas dictum interdum est, sit amet lobortis mi rhoncus vitae. Vivamus id finibus tellus. Aliquam erat volutpat. </p>
+
+      <label for="note_subject">Name</label>
+      <input type="text" id="note_subject">
+      <label for="note">Comment</label>
+      <textarea id="note" class="sba-u-margin-bottom--3"></textarea>
+      <button type="button" class="sba-c-button sba-u-margin-bottom--3">Submit</button>
+    </div>
+
+  </div>
+
+  <pre><code class="language-markup">&lt;button class="sba-c-button new-popup">New Note&lt;/button>
+    &lt;div class="sba-c-popup">
+    &lt;a href="#" id="sba-c-popup-toggle" class="sba-c-popup__toggle">
+      &lt;header class="sba-c-popup__header">
+        &lt;h4 class="sba-c-popup__heading">New SBA Note&lt;/h4>
+        &lt;button type="button" id="sba-c-popup-close" class="sba-c-popup__close">&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#white-x">&lt;/use>Close&lt;/button>
+      &lt;/header>
+    &lt;/a>
+    &lt;div class="sba-l-container sba-c-popup__contents">
+    [CONTENT]
+    &lt;/div>
+  &lt;/div>
+  </code></pre>
+
+  <h2>Guidance</h2>
+  <ul>
+    <li>The pop-up component has not yet been tested on mobile.</li>
+    <li>The pop-up area is scrollable.</li>
+    <li>Clicking the header will toggle the visibility of the content area in the popup, maintaining the state of the contents and scroll position.</li>
+    <li>Clicking the close button will hide the entire pop-up view.</li>
+  </ul>
+</article>
