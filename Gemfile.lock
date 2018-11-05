@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:USSBA/certify_design_system_gem.git
-  revision: d6a15609a5e64707392a8e5668539e8a6d0b3f85
+  revision: a84a19df41ef412901181057b094a8e4f371846e
   branch: master
   specs:
-    certify_design_system (1.17.2)
+    certify_design_system (1.18.0)
       bourbon (~> 4.3, <= 5)
       sass (~> 3.5)
 
@@ -120,7 +120,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  certify_design_system!
+  certify_design_system (~> 1.18.0)!
   jekyll (= 3.8.4)
   jekyll-assets
   jekyll-babel
