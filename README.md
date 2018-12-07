@@ -1,15 +1,16 @@
 # Certify Design System Documentation
+#### A robust and accessible design system in support of [certify.SBA.gov](https://certify.sba.gov)
 
-This is the documentation site for certify.sba.gov. If you are looking for the design system codebase, you can find it [here]("https://github.com/USSBA/certify_design_system_gem").
+The system consists of two parts: The documentation(this repo) which can be viewed at [https://ussba.github.io/certify-design-system-documentation/](https://ussba.github.io/certify-design-system-documentation/), and the supporting [certify_design_system_gem](https://github.com/USSBA/certify_design_system_gem).
 
 ## Installation
 
 ### Requirements
 
-This is a jekyll site that can be hosted on GitHub Pages. 
+This is a jekyll site that can be hosted on GitHub Pages.
 To run locally you'll need the following requirements:
     1. Ruby 2.3.3 or higher.
-    2. Bundler Gem installed. 
+    2. Bundler Gem installed.
 
 ### Building
 
@@ -27,12 +28,12 @@ To Deploy on GitHub pages of this repository, run the following script:
 bundle exec cds-gh-pages
 ```
 
-The certify-design-system gem provides this script. 
+The certify-design-system gem provides this script.
 
 ## License
-Please refer to the [Licenses file](LICENSES.md). 
+Please refer to the [Licenses file](LICENSES.md).
 
-## Contributing 
+## Contributing
 
 Please refer to the project wiki for contributing information.
 
