@@ -1,4 +1,9 @@
 releases:
+  - version: 1.19.0
+    date: December 20, 2018
+    additions:
+      - item: Adds footer as component
+
   - version: 1.18.0
     date: November 5, 2018
     additions:
