@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    <title>Government User | Certify Design System Documentation</title>
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex">
+
+
+
+
+
+<link rel="stylesheet" href="../../assets/stylesheets/application.css">
+<link rel="stylesheet" href="../../assets/cds.css">
+
+<script src="../../assets/javascripts/application.js"></script>
+<script src="../../assets/cds.js"></script>
+
+<meta name="robots" content="noindex">
+
+  </head>
+  <body class="iframe-example">
+    <header class="sba-c-masthead ">
+  <div class="sba-c-mobile-header">
+    <div class="sba-c-mobile-header__logo-container">
+      <a href="/">
+        <img alt="certify.SBA.gov logo" class="sba-c-mobile-header__logo" src="/certify-design-system-documentation/assets/img/certify-sba-gov-logo_on-dark.png" />
+      </a>
+    </div>
+    <ul class="sba-c-mobile-header__list">
+      <li class="sba-c-mobile-header__list-item">
+        <button class="sba-c-button sba-c-button--icon-only sba-c-button--transparent sba-js-visibility-trigger sba-js-search-button" type="button" aria-expanded="false" aria-controls="topnav-search" title="Search">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="sba-c-mobile-header__list-item">
+        <span class="sba-c-badge sba-c-badge--warn sba-c-badge--generic sba-js-notifications-pip"></span>
+        <button class="sba-c-mobile-header__toggle sba-c-button sba-c-button--icon-only sba-c-button--transparent sba-js-visibility-trigger sba-js-notifications-toggle" id="" type="button" aria-expanded="false" aria-controls="topnav-notifications-drawer" title="Notifications">
+          <svg aria-hidden="true" class="sba-c-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#bell"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <button type="button" class="sba-c-mobile-header__button" id="mobile_menu_button" aria-controls="top_navigation">Menu</button>
+  </div>
+  <nav id="top_navigation" class="sba-c-topnav" role="navigation">
+    <div class="sba-c-topnav__inner">
+      <a href="#" class="sba-c-topnav__logo-link">
+        <img class="sba-c-topnav__logo" alt="certify.SBA.gov logo" src="/certify-design-system-documentation/assets/img/certify-sba-gov-logo_on-dark.png" />
+      </a>
+      <button class="sba-c-button sba-c-button--transparent sba-c-topnav__close" id="close_menu_button">
+        <svg aria-hidden="true" class="sba-c-icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#times"></use>
+        </svg><span class="sba-u-visibility--screen-reader">Close menu</span>
+      </button>
+      <ul class="sba-c-topnav__list sba-c-topnav__list--left-side">
+        <li class="sba-c-topnav__list-item ">
+          <a class="sba-c-topnav__link" href="dashboard.html">Dashboard</a>
+        </li>
+        <li class="sba-c-topnav__list-item ">
+          <a class="sba-c-topnav__link" href="all-cases.html">Cases</a>
+        </li>
+        <li class="sba-c-topnav__list-item ">
+          <button class="sba-c-topnav__subnav-toggle sba-js-visibility-trigger" type="button" aria-expanded="false" aria-controls="topnav-Requirements">
+            <span>Requirements</span>
+          </button>
+          <ul id="topnav-Requirements" class="sba-c-topnav__subnav" hidden>
+            <li class="sba-c-topnav__subnav-item">
+              <a href="new-requirement.html" class="sba-c-topnav__subnav__link">New Requirement(s)</a>
+            </li>
+            <li class="sba-c-topnav__subnav-item">
+              <a href="all-requirements.html" class="sba-c-topnav__subnav__link">All Requirements</a>
+            </li>
+            <li class="sba-c-topnav__subnav-item">
+              <a href="my-requirements.html" class="sba-c-topnav__subnav__link">My Requirements</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="sba-c-topnav__list sba-c-topnav__list--right-side">
+        <li class="sba-c-topnav__list-item sba-c-topnav__list-item--search">
+          <button class="sba-c-topnav__subnav-toggle sba-c-button sba-c-button--icon-only sba-c-button--transparent sba-js-visibility-trigger sba-js-search-button" type="button" aria-expanded="false" aria-controls="topnav-search" title="Search">
+            <svg aria-hidden="true" class="sba-c-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="sba-c-topnav__list-item sba-c-topnav__list-item--notifications " aria-role="region" aria-live="polite">
+          <span class="sba-c-badge sba-c-badge--warn sba-c-badge--generic sba-js-notifications-pip" title="You have new notifications"></span>
+          <button class="sba-c-topnav__subnav-toggle sba-c-button sba-c-button--icon-only sba-c-button--transparent sba-js-visibility-trigger sba-js-notifications-toggle" type="button" aria-expanded="false" aria-controls="topnav-notifications-drawer" title="Notifications">
+            <svg aria-hidden="true" class="sba-c-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/certify-design-system-documentation/assets/svg-sprite/sprite.svg#bell"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="sba-c-topnav__list-item ">
+          <button class="sba-c-topnav__subnav-toggle sba-js-visibility-trigger" type="button" aria-expanded="false" aria-controls="topnav-MyAccount">
+            <span>My Account</span>
+          </button>
+          <ul id="topnav-MyAccount" class="sba-c-topnav__subnav" hidden>
+            <li class="sba-c-topnav__subnav-item">
+              <a href="my-account.html" class="sba-c-topnav__subnav__link">My Account</a>
+            </li>
+            <li class="sba-c-topnav__subnav-item">
+              <a href="javascript:void(0);" class="sba-c-topnav__subnav__link">Log Out</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sba-c-topnav__list-item ">
+          <a class="sba-c-topnav__link" href="training.html">Training</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="sba-c-top-nav__search-outer-container" id="topnav-search" hidden>
+    <div class="sba-c-top-nav__search-container" >
+      <div class="sba-l-container">
+        <form class="sba-c-top-nav__search-form" role="search">
+          <label class="sba-u-visibility--screen-reader" for="topnav_search_query">Search</label>
+          <input class="sba-c-input" id="topnav_search_query" type="search" name="topnav_search_query" placeholder="Search firms">
+          <button class="sba-c-button sba-c-button--transparent" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="topnav-notifications-drawer" hidden>
+    <div class="sba-c-top-nav__notifications-drawer-outer-container sba-l-container">
+      <div class="sba-c-top-nav__notifications-drawer-container">
+        <div class="sba-c-top-nav__notifications-drawer">
+          <ul class="sba-c-top-nav__notifications-drawer__list" tabindex="0">
+            <li class="sba-c-top-nav__notifications-drawer__list-item">
+              <a href="#" class="sba-c-top-nav__notifications-drawer__link">
+                <p class="sba-c-top-nav__notifications-drawer__message">Mike’s Garage added a contributor to its 8(a) Initial Application.</p>
+                <p class="sba-c-top-nav__notifications-drawer__timestamp">July 13, 2018 2:18pm</p>
+              </a>
+            </li>
+            <li class="sba-c-top-nav__notifications-drawer__list-item">
+              <a href="#" class="sba-c-top-nav__notifications-drawer__link">
+                <p class="sba-c-top-nav__notifications-drawer__message">Terrycloth, LLC submitted information for its 8(a) Initial Application.</p>
+                <p class="sba-c-top-nav__notifications-drawer__timestamp">July 13, 2018 2:15pm</p>
+              </a>
+            </li>
+            <li class="sba-c-top-nav__notifications-drawer__list-item">
+              <a href="#" class="sba-c-top-nav__notifications-drawer__link">
+                <p class="sba-c-top-nav__notifications-drawer__message">Please review the 8(a) Initial Application for Hammertime, LLC. </p>
+                <p class="sba-c-top-nav__notifications-drawer__timestamp">July 13, 2018 2:03pm</p>
+              </a>
+            </li>
+            <li class="sba-c-top-nav__notifications-drawer__list-item">
+              <a href="#" class="sba-c-top-nav__notifications-drawer__link">
+                <p class="sba-c-top-nav__notifications-drawer__message">Please review the 8(a) Initial Application for MASTERWERKS. </p>
+                <p class="sba-c-top-nav__notifications-drawer__timestamp">July 13, 2018 1:11pm</p>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="sba-c-top-nav__notifications-drawer__view-all">View all notifications</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </body>
+</html>
